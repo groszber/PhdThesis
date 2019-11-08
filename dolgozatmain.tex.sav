@@ -1,0 +1,152 @@
+\documentclass[12pt, a4paper, oneside]{report}
+%%%<
+\usepackage{verbatim}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[UTF8]{ctex}     %% kínai karakterekhez
+\usepackage{anysize}
+\usepackage[left=4cm,top=3cm, bottom=3cm, right=3cm]{geometry}
+\usepackage{cite}
+%\usepackage[square,numbers]{natbib}
+%\bibliographystyle{abbrvnat}
+
+
+
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{eurosym}
+\usepackage{graphicx}      % include this line if your document contains figures
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\usepackage{pgfpages}
+\usepackage{soul}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+\usepackage{color}
+\usepackage{gensymb}
+\usepackage{setspace}
+\usepackage{circuitikz}
+\usepackage{indentfirst}
+\usepackage{pgfplotstable}
+\usepackage{siunitx}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\usetikzlibrary{external}
+%\tikzexternalize % activate!
+\usepackage{breqn}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{transparent}
+\usepackage{eso-pic}
+\usetikzlibrary{calc}
+\usepackage{lscape}
+\usetikzlibrary{circuits.logic.US,circuits.logic.IEC}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{textpos}
+
+\usepackage{mfirstuc}
+\usepackage{longtable}
+
+
+\def\myuni{Universiy of Pannonia}
+\def\myfaculty{Department of Electrical Engineering and Information Systems}
+\def\myschool{Doctoral School of Information Science}
+\def\mytitle{Optimal Current Control for Domestic Power converters}
+%\def\mymytitle{ Energia management tervez\'ese fogyaszt\'oi \'es naper\H{o}m\H{u} modell seg\'its\'eg\'evel }
+\def\myauthor{L\'aszlo Richard Neukirchner}
+\def\mydate{2019}
+\def\mysupervisor{dr. Magyar Attila}
+
+
+%\rhead{Bálint Roland (BPRATZ) 2017/18/II.}
+\renewcommand{\contentsname}{List of contets}
+\renewcommand{\figurename}{Figure}
+\renewcommand{\tablename}{Table}
+\renewcommand{\chaptername}{Chapter}
+\renewcommand{\bibname}{Bibliography}
+
+\newcommand{\sig}[1]{\begin{tikzpicture} \draw[ultra thick, densely dotted, color=white] (0,0)--(8,0) ;\draw[ultra thick, dotted] (10,0)--(14,0) (12,0) node[below]{#1};  \end{tikzpicture}}
+
+
+\setcounter{secnumdepth}{2}
+\input{subtex/nominations_commmands.tex}          %%
+
+
+\begin{document}
+
+ \pagenumbering{Roman}
+
+        %% első üres oldal
+ \null
+ \thispagestyle{empty}%
+ \addtocounter{page}{-1}%
+ \newpage
+
+        %% Címoldal
+ \input{subtex/0_cimoldal.tex}
+
+        %% harmadik oldal
+ \input{subtex/00_thirdpage.tex}
+
+        %% Köszönetnyilvánítás
+ \chapter*{Acknowledgement}
+ \input{subtex/000_acknowledgments.tex}
+
+
+        %% Tartalmi kivonatok címfordítással
+ \chapter*{Abstract}
+ \input{subtex/0000_abstracts.tex}
+
+        %% Tartalomjegyzék
+ \thispagestyle{plain}
+ \tableofcontents
+ \newpage
+
+ \pagenumbering{arabic}
+        %% 1 - Bevezetés
+\chapter{Introduction}
+ \input{subtex/1_introduction.tex}
+
+        %% 2 - Motiváció és cél
+ \chapter{Motivations}
+ \input{subtex/2_motivation.tex}
+
+        %% 3 - Irodalmi összefoglalás
+ \chapter{Literature overview}
+ \input{subtex/3_literature.tex}
+
+        %% 4 - Kísérleti rész
+ \chapter{Saj\'at eredm\'enyek}
+ \input{subtex/4_discussion_results.tex}
+
+        %% 5 - Összefoglalás
+ \chapter{Összefoglal\'as}
+ \input{subtex/5_conculsion.tex}
+
+        %% 6 - Tézispontok magyarul és angolul
+ \chapter{T\'ezispontok}
+ \input{subtex/6_thesis.tex}
+
+ \chapter*{Jel\"{o}l\'esjegyz\'ek}
+ \input{subtex/7_nomenclature.tex}
+
+ \chapter*{R\"{o}vid\'it\'esjegyz\'ek}
+ \input{subtex/8_abbreviations}
+
+
+%%        %% Hivatkozások
+ \newpage
+ \pagestyle{plain}
+ \bibliographystyle{plain}
+ \bibliography{dolgozat}
+
+
+
+\end{document}

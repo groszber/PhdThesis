@@ -1,0 +1,26 @@
+\thispagestyle{plain}
+\begin{center}
+    {\fontsize{14}{8}\textbf{\textsc{\mytitle}}} \\[1cm]
+    Értekezés doktori (PhD) fokozat elnyerése érdekében\\[0.3cm]
+    Írta:\\
+    {\textbf \myauthor}\\[0.3cm]
+    Készült a \myuni \myschool keretében \\[0.3cm]
+\end{center}
+Témavezető: \mysupervisor \\
+Elfogadásra javaslom: igen / nem\\
+\sig{aláírás}\\[0.7cm]
+A jelölt a doktori szigorlaton ........... \%-ot ért el. \\[1cm]
+Az értekezést bírálóként elfogadásra javaslom: \\[0.3cm]
+Bíráló neve: ........................................ : igen / nem\\
+\sig{aláírás}\\[0.7cm]
+Bíráló neve: ........................................ : igen / nem\\
+\sig{aláírás}\\[0.7cm]
+A jelölt az értekezés nyilvános vitáján ........... \%-ot ért el.\\
+Veszprém, ...................\\[0.5cm]
+\sig{a Bíráló Bizottság elnöke}\\[1cm]
+A doktori (PhD) oklevél minősítése: ..................................\\[1cm]
+\sig{az  \textcolor{red}{EDT} elnöke}\\
+
+
+
+\newpage 

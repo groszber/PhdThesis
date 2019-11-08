@@ -1,0 +1,17 @@
+\thispagestyle{empty}%
+\begin{center}
+    \myuni \\
+    \myfaculty \\
+    \myschool \\[0.6cm]
+    \includegraphics[width=4cm]{img/MIK_cimer.jpg}\\[1.2cm]
+    \begin{spacing}{2} \fontsize{25}{15}\textbf{ \textsc{\mytitle} }\end{spacing} %\\[1cm]
+    DOI:.................... \\[1.5cm]
+    Doktori (PhD) Disszertáció \\
+    Szerző: \myauthor \\[1cm]
+    Témavezető: \mysupervisor \\[1.5cm]
+    Készült a \myuni \myschool keretében \\[1.5cm]
+    Veszprém \\
+    \mydate
+\end{center}
+
+\newpage 

@@ -1,0 +1,36 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.10)  27 SEP 2019 11:46
+entering extended mode
+**"D:/clouds/nextcloud/Roland/PHD dolgozat/latex code/subtex/8_abbreviations.te
+x"
+("D:/clouds/nextcloud/Roland/PHD dolgozat/latex code/subtex/8_abbreviations.tex
+"
+LaTeX2e <2018-12-01>
+
+! LaTeX Error: Environment longtabel undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{longtabel}
+                     {r l}
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.1 \begin{longtabel}
+                     {r l}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ 
+Here is how much of TeX's memory you used:
+ 9 strings out of 492895
+ 503 string characters out of 3133465
+ 57117 words of memory out of 3000000
+ 4023 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 5i,0n,4p,114b,16s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

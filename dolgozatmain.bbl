@@ -1,0 +1,334 @@
+\begin{thebibliography}{10}
+
+\bibitem{MVM2013}
+M.~Hackl %A.~F\'abi\'an.
+\newblock Statistical data of the hungarian electricity system.
+
+\bibitem{ahmed2014model}
+Syed~Faiz Ahmed, Ch~Fahad Azim, Hazry Desa, and Abadal-Salam~T Hussain.
+\newblock Model predictive controller-based single phase pulse width modulation
+  (pwm) inverter for ups systems.
+\newblock {\em Acta Polytechnica Hungarica}, 11(6):23--38, 2014.
+
+\bibitem{araujo2013three}
+Leandro~Ramos Araujo, DRR Penido, Sandoval Carneiro, and Jos{\'e} Luiz~R
+  Pereira.
+\newblock A three-phase optimal power-flow algorithm to mitigate voltage
+  unbalance.
+\newblock {\em IEEE Transactions on Power Delivery}, 28(4):2394--2402, 2013.
+
+\bibitem{ates2016}
+Yavuz Ates, Mehmet Uzunoglu, Arif Karakas, Ali~Rifat Boynuegri, Abdullah Nadar,
+  and Bulent Dag.
+\newblock Implementation of adaptive relay coordination in distribution systems
+  including distributed generation.
+\newblock {\em Journal of cleaner production}, 112:2697--2705, 2016.
+
+\bibitem{bina2011three}
+M~Tavakoli Bina and A~Kashefi.
+\newblock Three-phase unbalance of distribution systems: Complementary analysis
+  and experimental case study.
+\newblock {\em International Journal of Electrical Power \& Energy Systems},
+  33(4):817--826, 2011.
+
+\bibitem{chatterjee2008augmented}
+Amitava Chatterjee, Ranajit Chatterjee, Fumitoshi Matsuno, and Takahiro Endo.
+\newblock Augmented stable fuzzy control for flexible robotic arm using lmi
+  approach and neuro-fuzzy state space modeling.
+\newblock {\em IEEE transactions on industrial electronics}, 55(3):1256--1270,
+  2008.
+
+\bibitem{chebre2011speed}
+M’hamed Chebre, Abdelkader Meroufel, and Yessema Bendaha.
+\newblock Speed control of induction motor using genetic algorithm-based pi
+  controller.
+\newblock {\em Acta Polytechnica Hungarica}, 8(6):141--153, 2011.
+
+\bibitem{chen2016single}
+Daolian Chen, Jiahui Jiang, Yanhui Qiu, Jie Zhang, and Fusong Huang.
+\newblock Single-stage three-phase current-source photovoltaic grid-connected
+  inverter high voltage transmission ratio.
+\newblock {\em IEEE Transactions on Power Electronics}, 32(10):7591--7601,
+  2016.
+
+\bibitem{cucchiella2013environmental}
+Federica Cucchiella, Idiano D'Adamo, and SC~Lenny Koh.
+\newblock Environmental and economic analysis of building integrated
+  photovoltaic systems in italian regions.
+\newblock {\em Journal of Cleaner Production}, 98:241--252, 2015.
+
+\bibitem{exposto2015predictive}
+Bruno Exposto, Rui Rodrigues, JG~Pinto, V{\'\i}tor Monteiro, Delfim Pedrosa,
+  and Jo{\~a}o~L Afonso.
+\newblock Predictive control of a current-source inverter for solar
+  photovoltaic grid interface.
+\newblock In {\em 2015 9th International Conference on Compatibility and Power
+  Electronics (CPE)}, pages 113--118. IEEE, 2015.
+
+\bibitem{feroura2017finite}
+Hamza Feroura, Fateh Krim, Billel Tabli, and Abdelbaset Laib.
+\newblock Finite-set model predictive voltage control for islanded three phase
+  current source inverter.
+\newblock In {\em 2017 5th International Conference on Electrical
+  Engineering-Boumerdes (ICEE-B)}, pages 1--5. IEEE, 2017.
+
+\bibitem{gao2017model}
+Hang Gao, Dewei Xu, Bin Wu, and Navid~R Zargari.
+\newblock Model predictive control for five-level current source converter with
+  dc current balancing capability.
+\newblock In {\em IECON 2017-43rd Annual Conference of the IEEE Industrial
+  Electronics Society}, pages 8230--8235. IEEE, 2017.
+
+\bibitem{ghalem2010six}
+Bachir Ghalem and Bendiabdellah Azeddine.
+\newblock Six-phase matrix converter fed double star induction motor.
+\newblock {\em Acta Polytechnica Hungarica}, 7(3):163--176, 2010.
+
+\bibitem{godlewska2015predictive}
+Agata Godlewska and Andrzej Sikorski.
+\newblock Predictive control of current source rectifier.
+\newblock In {\em 2015 Selected Problems of Electrical Engineering and
+  Electronics (WZEE)}, pages 1--6. IEEE, 2015.
+
+\bibitem{Gorbe2014experimental}
+Peter G{\"o}rbe, Attila Fodor, Attila Magyar, and Katalin~M Hangos.
+\newblock Experimental study of the nonlinear distortion caused by domestic
+  power plants.
+\newblock {\em Applied Thermal Engineering}, 70(2):1288--1293, 2014.
+
+\bibitem{gorbe2012reduction}
+P{\'e}ter G{\"o}rbe, Attila Magyar, and Katalin~M Hangos.
+\newblock Reduction of power losses with smart grids fueled with renewable
+  sources and applying ev batteries.
+\newblock {\em Journal of cleaner production}, 34:125--137, 2012.
+
+\bibitem{gupta2014two}
+Sandeep Gupta and Ramesh~Kumar Tripathi.
+\newblock Two-area power system stability improvement using a robust
+  controller-based csc-statcom.
+\newblock {\em Acta Polytechnica Hungarica}, 11(7):135--155, 2014.
+
+\bibitem{haidegger2012simulation}
+Tam{\'a}s Haidegger, Levente Kov{\'a}cs, Radu-Emil Precup, Bal{\'a}zs
+  Beny{\'o}, Zolt{\'a}n Beny{\'o}, and Stefan Preitl.
+\newblock Simulation and control for telerobots in space medicine.
+\newblock {\em Acta Astronautica}, 81(1):390--402, 2012.
+
+\bibitem{han2010control}
+Yang Han, Lin Xu, Muhammad~Mansoor Khan, and Chen Chen.
+\newblock Control strategies, robustness analysis, digital simulation and
+  practical implementation for a hybrid apf with a resonant ac-link.
+\newblock {\em Acta polytechnica hungarica}, 7(5), 2010.
+
+\bibitem{Hu2016264}
+Junjie Hu, Mattia Marinelli, Massimiliano Coppo, Antonio Zecchino, and Henrik~W
+  Bindner.
+\newblock Coordinated voltage control of a decoupled three-phase on-load tap
+  changer transformer and photovoltaic inverters for managing unbalanced
+  networks.
+\newblock {\em Electric Power Systems Research}, 131:264--274, 2016.
+
+\bibitem{kaldellis2009optimum}
+JK~Kaldellis, M~Simotas, D~Zafirakis, and E~Kondili.
+\newblock Optimum autonomous photovoltaic solution for the greek islands on the
+  basisof energy pay-back analysis.
+\newblock {\em Journal of Cleaner Production}, 17(15):1311--1323, 2009.
+
+\bibitem{kelemen2010constrained}
+Andr{\'a}s Kelemen, Nimr{\'o}d Kutasi, M{\'a}ria Imecs, and Ioan~Iov Incze.
+\newblock Constrained optimal direct power control of voltage-source pwm
+  rectifiers.
+\newblock In {\em 2010 IEEE 14th International Conference on Intelligent
+  Engineering Systems}, pages 249--254. IEEE, 2010.
+
+\bibitem{kini2007novel}
+P~Giridhar Kini, Ramesh~C Bansal, and Radhakrishna~S Aithal.
+\newblock A novel approach toward interpretation and application of voltage
+  unbalance factor.
+\newblock {\em IEEE transactions on industrial electronics}, 54(4):2315--2322,
+  2007.
+
+\bibitem{uimethod}
+NV~Korovkin, QS~Vu, and RA~Yazenin.
+\newblock A method for minimization of unbalanced mode in three-phase power
+  systems.
+\newblock In {\em 2016 IEEE NW Russia Young Researchers in Electrical and
+  Electronic Engineering Conference (EIConRusNW)}, pages 611--614. IEEE, 2016.
+
+\bibitem{kutasi2010constrained}
+Nimr{\'o}d Kutasi, Andr{\'a}s Kelemen, and M{\'a}ria Imecs.
+\newblock Constrained optimal control of three-phase ac-dc boost converters.
+\newblock In {\em 2010 IEEE International Conference on Automation, Quality and
+  Testing, Robotics (AQTR)}, volume~1, pages 1--6. IEEE, 2010.
+
+\bibitem{lee1998effects}
+Ching-Yin Lee, Bin-Kwie Chen, Wei-Jen Lee, and Yen-Feng Hsu.
+\newblock Effects of various unbalanced voltages on the operation performance
+  of an induction motor under the same voltage unbalance factor condition.
+\newblock {\em Electric Power Systems Research}, 47(3):153--163, 1998.
+
+\bibitem{li2005microgrid}
+Yunwei Li, D~Mahinda Vilathgamuwa, and Poh~Chiang Loh.
+\newblock Microgrid power quality enhancement using a three-phase four-wire
+  grid-interfacing compensator.
+\newblock {\em IEEE transactions on industry applications}, 41(6):1707--1719,
+  2005.
+
+\bibitem{martin2015unbalance}
+Aranzazu~D Martin, Reyes~S Herrera, Jesus~R Vazquez, Paul Crolla, and Graeme~M
+  Burt.
+\newblock Unbalance and harmonic distortion assessment in an experimental
+  distribution network.
+\newblock {\em Electric Power Systems Research}, 127:271--279, 2015.
+
+\bibitem{meersman2011three}
+Bart Meersman, Bert Renders, Lieven Degroote, Tine Vandoorn, and Lieven
+  Vandevelde.
+\newblock Three-phase inverter-connected dg-units and voltage unbalance.
+\newblock {\em Electric Power Systems Research}, 81(4):899--906, 2011.
+
+\bibitem{muthukumar2016adaptive}
+N~Muthukumar, Seshadhri Srinivasan, K~Ramkumar, K~Kannan, and Valentina~Emilia
+  Balas.
+\newblock Adaptive model predictive controller for web transport systems.
+\newblock {\em Acta Polytechnica Hungarica}, 13(3):181--194, 2016.
+
+\bibitem{Neukirchner2015}
+L{\'a}szl{\'o} Neukirchner, Attila G{\"o}llei, P{\'e}ter G{\"o}rbe, and Attila
+  Magyar.
+\newblock Carbon footprint reduction via voltage asymmetry compensation of
+  three-phase low voltage grid utilizing small domestic power plants.
+\newblock {\em Chemical Engineering Transactions}, 45:283--288, 2015.
+
+\bibitem{neukirchner2015examination}
+L{\'a}szl{\'o} Neukirchner, P{\'e}ter G{\"o}rbe, and Attila Magyar.
+\newblock Examination of different voltage asymmetry norms under transient
+  behavior of three-phase low voltage power systems containing small domestic
+  power plants.
+\newblock In {\em PowerTech, 2015 IEEE Eindhoven}, pages 1--6. IEEE, 2015.
+
+\bibitem{neukirchner2017voltage}
+L{\'a}szl{\'o} Neukirchner, P{\'e}ter G{\"o}rbe, and Attila Magyar.
+\newblock Voltage unbalance reduction in the domestic distribution area using
+  asymmetric inverters.
+\newblock {\em Journal of cleaner production}, 142:1710--1720, 2017.
+
+\bibitem{Ninad2014control}
+Nayeem~Ahmed Ninad and Luiz Lopes.
+\newblock Per-phase vector control strategy for a four-leg voltage source
+  inverter operating with highly unbalanced loads in stand-alone hybrid
+  systems.
+\newblock {\em International Journal of Electrical Power \& Energy Systems},
+  55:449--459, 2014.
+
+\bibitem{ortega2013measurement}
+MJ~Ortega, JC~Hern{\'a}ndez, and OG~Garc{\'\i}a.
+\newblock Measurement and assessment of power quality characteristics for
+  photovoltaic systems: harmonics, flicker, unbalance, and slow voltage
+  variations.
+\newblock {\em Electric Power Systems Research}, 96:23--35, 2013.
+
+\bibitem{Patnaik2013topologies}
+Sushree~Sangita Patnaik and Anup~Kumar Panda.
+\newblock Three-level h-bridge and three h-bridges-based three-phase four-wire
+  shunt active power filter topologies for high voltage applications.
+\newblock {\em International Journal of Electrical Power \& Energy Systems},
+  51:298--306, 2013.
+
+\bibitem{regaya2014new}
+Chiheb~Ben Regaya, Abderrahmen Zaafouri, and Abdelkader Chaari.
+\newblock A new sliding mode speed observer of electric motor drive based on
+  fuzzy-logic.
+\newblock {\em Acta Polytechnica Hungarica}, 11(3):219--232, 2014.
+
+\bibitem{rivera2013predictive}
+M~Rivera, S~Kouro, J~Rodriguez, B~Wu, V~Yaramasu, J~Espinoza, and P~Melila.
+\newblock Predictive current control in a current source inverter operating
+  with low switching frequency.
+\newblock In {\em 4th International Conference on Power Engineering, Energy and
+  Electrical Drives}, pages 334--339. IEEE, 2013.
+
+\bibitem{salloum2014robust}
+Rafik Salloum, Bijan Moaveni, and Mohammad~Reza Arvan.
+\newblock Robust pid controller design for a real electromechanical actuator.
+\newblock {\em Acta Polytechnica Hungarica}, 11(5):125--144, 2014.
+
+\bibitem{huat2015integration}
+Lip~Huat Saw, Yonghuang Ye, and Andrew~AO Tay.
+\newblock Integration issues of lithium-ion battery into electric vehicles
+  battery pack.
+\newblock {\em Journal of Cleaner Production}, 113:1032--1045, 2016.
+
+\bibitem{segui2007approach}
+S~Segui-Chilet, FJ~Gimeno-Sales, S~Orts, G~Garcera, E~Figueres, M~Alcaniz, and
+  R~Masot.
+\newblock Approach to unbalance power active compensation under linear load
+  unbalances and fundamental voltage asymmetries.
+\newblock {\em International Journal of Electrical Power \& Energy Systems},
+  29(7):526--539, 2007.
+
+\bibitem{shezan2016}
+SK~A Shezan, S~Julai, MA~Kibria, KR~Ullah, R~Saidur, WT~Chong, and RK~Akikur.
+\newblock Performance analysis of an off-grid wind-pv
+  (photovoltaic)-diesel-battery hybrid energy system feasible for remote areas.
+\newblock {\em Journal of Cleaner Production}, 125:121--132, 2016.
+
+\bibitem{szell2014mathematical}
+K{\'a}roly Sz{\'e}ll and P{\'e}ter Korondi.
+\newblock Mathematical basis of sliding mode control of an uninterruptible
+  power supply.
+\newblock {\em Acta Polytechnica Hungarica}, 11(03):87--106, 2014.
+
+\bibitem{tahri2012digital}
+Fatima Tahri, Ali Tahri, Ahmed Allali, and Samir Flazi.
+\newblock The digital self-tuning control of step a down dc-dc converter.
+\newblock {\em Acta Polytechnica Hungarica}, 9(6):49--64, 2012.
+
+\bibitem{urmos2017application}
+Antal {\"U}rm{\"o}s, Zolt{\'a}n Farkas, M{\'a}rk Farkas, Tam{\'a}s S{\'a}ndor,
+  L{\'a}szl{\'o}~T K{\'o}czy, and {\'A}kos Nemcsics.
+\newblock Application of self-organizing maps for technological support of
+  droplet epitaxy.
+\newblock {\em Acta Polytechnica Hungarica}, 14(4):207--224, 2017.
+
+\bibitem{vajda2017limiting}
+Istvan Vajda, Yury~N Dementyev, Kirill~N Negodin, Nikolay~V Kojain, Leonid~S
+  Udut, Irina~A Chesnokova, et~al.
+\newblock Limiting static and dynamic characteristics of an induction motor
+  under frequency vector control.
+\newblock {\em Acta Polytechnica Hungarica}, 14(6):7--27, 2017.
+
+\bibitem{venkatraman2018multilevel}
+Thiyagarajan Venkatraman and Somasundaram Periasamy.
+\newblock Multilevel inverter topology with modified pulse width modulation and
+  reduced switch count.
+\newblock {\em Acta Polytechnica Hungarica}, 15(2), 2018.
+
+\bibitem{vrkalovic2018model}
+Sasa Vrkalovic, Elena-Cristina Lunca, and Ioan-Daniel Borlea.
+\newblock Model-free sliding mode and fuzzy controllers for reverse osmosis
+  desalination plants.
+\newblock {\em Int. J. Artif. Intell}, 16(2):208--222, 2018.
+
+\bibitem{wen2014approximate}
+He~Wen, Da~Cheng, Zhaosheng Teng, Siyu Guo, and Fuhai Li.
+\newblock Approximate algorithm for fast calculating voltage unbalance factor
+  of three-phase power system.
+\newblock {\em IEEE Transactions on Industrial Informatics}, 10(3):1799--1805,
+  2014.
+
+\bibitem{xu2010voltage}
+Yan Xu, Leon~M Tolbert, John~D Kueck, and Dwight~T Rizy.
+\newblock Voltage and current unbalance compensation using a static var
+  compensator.
+\newblock {\em IET Power Electronics}, 3(6):977--988, 2010.
+
+\bibitem{yan2015study}
+Zhaoyang Yan, Xiaomeng Xu, Zhenxing Yang, Xiaoyu Wu, and Yuepeng Wang.
+\newblock Study of effective vector synthesis sequence for three-phase current
+  rectifier.
+\newblock In {\em 2015 Fifth International Conference on Instrumentation and
+  Measurement, Computer, Communication and Control (IMCCC)}, pages 1065--1070.
+  IEEE, 2015.
+
+\end{thebibliography}
