@@ -1,0 +1,22 @@
+%\thispagestyle{plain}
+%%\chapter*{Compendiary}
+% (max 2500 karakter)
+%
+%\newpage
+
+\thispagestyle{plain}
+%\chapter*{Abstarct}
+ (max 8-10 sor)
+     Voltage unbalance is a major yet often overlooked power quality problem in low voltage residential feeders due to the random location and rating of single-phase renewable sources and uneven distribution of household loads. This paper proposes a new indicator of voltage \textcolor{red}{deviation} that may serve as a basis of analysis and compensation methods in this dimension of power quality. The paper proposes three main results. First of all a novel voltage norm capable of indicating unbalance and \textcolor{red}{under-voltage in a single value. Afterwards,} a three phase unbalance reduction controller structure is given. As the third main result, the proposed controller structure is integrated with an optimization based control algorithm that uses asynchronous parallel pattern search as its engine. The suggested structure and the underlying three phase power grid model has been implemented in a dynamical simulation environment and tested against engineering expectations.
+    The simulation based experiments served as a proof of concept for the proposed complex control structure. The experiments included performance and robustness analysis, both of them concluded that the proposed control and inverter structure is promising.
+    The proposed three phase inverter structure together with the control algorithm connected with a renewable source (photovoltaic panel or wind turbine) is capable of an asymmetric power injection \textcolor{magenta}{or rerouting the energy flow} to the grid so that the voltage unbalance decrease. This is also important from the environmental point of view since the achieved power loss reduction can easily be translated to $\textnormal{CO}_2$ emission reduction and carbon footprint - these indicators has also been calculated.\\%
+     $==============================$
+    This Thesis is consisted about optimal control of power converters. The firs part is consisting of a constrained optimal control of a current source rectifier (CSR) is presented, based on a mathematical model developed in Park's frame. To comply with the system constraints an explicit model-based predictive controller was established. To simplify the control design, a disjointed model was utilised due to the significant time constant differences between the AC and DC side dynamics. As a result, active damping was used on the AC side, and explicit Model Predictive Control (MPC) on the DC side. The results are compared by simulation with the performance of a state feedback control. This is followed by developing a cost function for mitigating voltage asymmetry on a domestic network, which requires only measuring the voltage whist only current interventions are required. Lastly an asymmetric inverter structure was developed to serve the const function minimizing compensational needs. Results were implemented and validated with Matlab simulations.\\
+
+%\newpage
+%
+%\thispagestyle{plain}
+%\chapter*{ (3. nyelven) \normalfont{抽象}}
+%(max 8-10 sor)
+
+

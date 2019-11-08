@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper, oneside]{report}
+\documentclass[12pt, a4paper, oneside, table]{report}
 %%%<
 \usepackage{verbatim}
 \usepackage[T1]{fontenc}
@@ -12,11 +12,17 @@
 
 
 
-\usepackage{xcolor}
+%\usepackage{xcolor}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{eurosym}
-\usepackage{graphicx}      % include this line if your document contains figures
+\usepackage{graphics}
+\usepackage{graphicx} %===!!!=== Ezt én adtam hozzá
+\usepackage{caption} %===!!!=== Ezt én adtam hozzá
+\usepackage{subcaption} %===!!!=== Ezt én adtam hozzá
+%\usepackage{subfig}
+%\usepackage{subfigure}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.9}
@@ -35,8 +41,9 @@
 \usepackage{indentfirst}
 \usepackage{pgfplotstable}
 \usepackage{siunitx}
-\usepackage{subfigure}
+%\usepackage{subfigure}
 \usepackage{fancyhdr}
+\usepackage{multirow}
 \pagestyle{fancy}
 %\usetikzlibrary{external}
 %\tikzexternalize % activate!
@@ -50,9 +57,17 @@
 \usepackage{multirow}
 \usepackage{hhline}
 \usepackage{textpos}
+\usepackage{textcomp} %===!!!=== Ezt én adtam hozzá
 
 \usepackage{mfirstuc}
 \usepackage{longtable}
+\usepackage{textcomp} %===!!!=== Ezt én adtam hozzá
+%\usepackage{ulem}
+%\newcommand{\soutthick}[1]{%
+%    \renewcommand{\ULthickness}{2.4pt}%
+%       \sout{#1}%
+%    \renewcommand{\ULthickness}{.4pt}% Resetting to ulem default
+% \usepackage{MnSymbol,wasysym}
 
 
 \def\myuni{Universiy of Pannonia}
@@ -99,10 +114,13 @@
  \chapter*{Acknowledgement}
  \input{subtex/000_acknowledgments.tex}
 
+%\chapter*{Compendiary}
+% \input{subtex/0000_compendiary.tex}
+%% (max 2500 karakter)
 
         %% Tartalmi kivonatok címfordítással
  \chapter*{Abstract}
- \input{subtex/0000_abstracts.tex}
+ \input{subtex/00000_abstracts.tex}
 
         %% Tartalomjegyzék
  \thispagestyle{plain}
@@ -113,31 +131,40 @@
         %% 1 - Bevezetés
 \chapter{Introduction}
  \input{subtex/1_introduction.tex}
+ \input{subtex/2_motivation.tex}
+ \input{subtex/0000_compendiary.tex}
 
         %% 2 - Motiváció és cél
- \chapter{Motivations}
- \input{subtex/2_motivation.tex}
+ %\chapter{Motivations}
+ 
 
         %% 3 - Irodalmi összefoglalás
- \chapter{Literature overview}
- \input{subtex/3_literature.tex}
+ \chapter{Baic notions}
+
+ \input{subtex/3_1_basics_unbalance.tex}
+ \input{subtex/3_3_basics_inverter.tex}
+ \input{subtex/3_3_basics_empc.tex}
 
         %% 4 - Kísérleti rész
- \chapter{Saj\'at eredm\'enyek}
- \input{subtex/4_discussion_results.tex}
+ \chapter{Constrained, explicit predictive control for current source buck-type rectifiers}
+ \input{subtex/4_1_discussion_results.tex}
+ \chapter{Geometrical indicator for voltage asymmetry in three phase networks}
+ \input{subtex/4_2_discussion_results.tex}
+ \chapter{Voltage unbalance compensation with optimization based control algorithm and asymmetrical inverter structure}
+ \input{subtex/4_3_discussion_results.tex}
 
         %% 5 - Összefoglalás
- \chapter{Összefoglal\'as}
+ \chapter{Summary}
  \input{subtex/5_conculsion.tex}
 
         %% 6 - Tézispontok magyarul és angolul
- \chapter{T\'ezispontok}
+ \chapter{Thesis}
  \input{subtex/6_thesis.tex}
 
- \chapter*{Jel\"{o}l\'esjegyz\'ek}
+ \chapter*{List of notations}
  \input{subtex/7_nomenclature.tex}
 
- \chapter*{R\"{o}vid\'it\'esjegyz\'ek}
+ \chapter*{Abbrevations}
  \input{subtex/8_abbreviations}
 
 

@@ -17,6 +17,12 @@ Leandro~Ramos Araujo, DRR Penido, Sandoval Carneiro, and Jos{\'e} Luiz~R
   unbalance.
 \newblock {\em IEEE Transactions on Power Delivery}, 28(4):2394--2402, 2013.
 
+\bibitem{arn1997under-voltage}
+Stefan Arnborg, G{\"o}ran Andersson, David~J Hill, and Ian~A Hiskens.
+\newblock On undervoltage load shedding in power systems.
+\newblock {\em International Journal of Electrical Power \& Energy Systems},
+  19(2):141--149, 1997.
+
 \bibitem{ates2016}
 Yavuz Ates, Mehmet Uzunoglu, Arif Karakas, Ali~Rifat Boynuegri, Abdullah Nadar,
   and Bulent Dag.
@@ -167,12 +173,25 @@ Ching-Yin Lee, Bin-Kwie Chen, Wei-Jen Lee, and Yen-Feng Hsu.
   of an induction motor under the same voltage unbalance factor condition.
 \newblock {\em Electric Power Systems Research}, 47(3):153--163, 1998.
 
+\bibitem{lee2009new}
+Kevin Lee, Thomas~M Jahns, Thomas~A Lipo, and Vladimir Blasko.
+\newblock New control method including state observer of voltage unbalance for
+  grid voltage-source converters.
+\newblock {\em IEEE Transactions on Industrial Electronics}, 57(6):2054--2065,
+  2009.
+
 \bibitem{li2005microgrid}
 Yunwei Li, D~Mahinda Vilathgamuwa, and Poh~Chiang Loh.
 \newblock Microgrid power quality enhancement using a three-phase four-wire
   grid-interfacing compensator.
 \newblock {\em IEEE transactions on industry applications}, 41(6):1707--1719,
   2005.
+
+\bibitem{lund2015smart}
+Peter~D Lund, Jani Mikkola, and J~Ypy{\"a}.
+\newblock Smart energy system design for large clean power schemes in urban
+  areas.
+\newblock {\em Journal of Cleaner Production}, 103:437--445, 2015.
 
 \bibitem{martin2015unbalance}
 Aranzazu~D Martin, Reyes~S Herrera, Jesus~R Vazquez, Paul Crolla, and Graeme~M
@@ -212,6 +231,14 @@ L{\'a}szl{\'o} Neukirchner, P{\'e}ter G{\"o}rbe, and Attila Magyar.
 \newblock Voltage unbalance reduction in the domestic distribution area using
   asymmetric inverters.
 \newblock {\em Journal of cleaner production}, 142:1710--1720, 2017.
+
+\bibitem{neukirchner2019linkedmodel}
+L{\'a}szl{\'o} Neukirchner, Nimr{\'o}d Kutasi, Andr{\'a}s Kelemen, Attila
+  Fodor, and Attila Magyar.
+\newblock Constrained predictive control of three-phase buck rectifiers
+  simulation details.
+\newblock In {\em
+  http://virt.uni-pannon.hu/ver/index.php/en/projects/30-empc-csr}.
 
 \bibitem{Ninad2014control}
 Nayeem~Ahmed Ninad and Luiz Lopes.

@@ -9,13 +9,22 @@ Repeated entry---line 330 of file dolgozat.bib
  : @inproceedings{kutasi2010constrained
  :                                     ,
 I'm skipping whatever remains of this entry
-You're missing a field name---line 628 of file dolgozat.bib
+You're missing a field name---line 362 of file dolgozat.bib
+ :   
+ :   %pages={993--998},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 631 of file dolgozat.bib
  :   
  :   %journal={Electric Power Systems Research},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Lund2015"
+Repeated entry---line 774 of file dolgozat.bib
+ : @article{lund2015smart
+ :                       ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "lee2010new"
 Warning--empty journal in MVM2013
 Warning--empty year in MVM2013
-(There were 3 error messages)
+Warning--empty year in neukirchner2019linkedmodel
+(There were 5 error messages)

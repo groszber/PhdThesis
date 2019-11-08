@@ -17,7 +17,12 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{eurosym}
-\usepackage{graphicx}      % include this line if your document contains figures
+\usepackage{graphics}
+\usepackage{graphicx} %===!!!=== Ezt én adtam hozzá
+\usepackage{caption} %===!!!=== Ezt én adtam hozzá
+\usepackage{subcaption} %===!!!=== Ezt én adtam hozzá
+%\usepackage{subfig}
+%\usepackage{subfigure}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.9}
@@ -36,7 +41,7 @@
 \usepackage{indentfirst}
 \usepackage{pgfplotstable}
 \usepackage{siunitx}
-\usepackage{subfigure}
+%\usepackage{subfigure}
 \usepackage{fancyhdr}
 \usepackage{multirow}
 \pagestyle{fancy}
@@ -52,9 +57,16 @@
 \usepackage{multirow}
 \usepackage{hhline}
 \usepackage{textpos}
+\usepackage{textcomp} %===!!!=== Ezt én adtam hozzá
 
 \usepackage{mfirstuc}
 \usepackage{longtable}
+\usepackage{textcomp} %===!!!=== Ezt én adtam hozzá
+%\usepackage{ulem}
+%\newcommand{\soutthick}[1]{%
+%    \renewcommand{\ULthickness}{2.4pt}%
+%       \sout{#1}%
+%    \renewcommand{\ULthickness}{.4pt}% Resetting to ulem default
 % \usepackage{MnSymbol,wasysym}
 
 
@@ -63,7 +75,7 @@
 \def\myschool{Doctoral School of Information Science}
 \def\mytitle{Optimal Current Control for Domestic Power converters}
 %\def\mymytitle{ Energia management tervez\'ese fogyaszt\'oi \'es naper\H{o}m\H{u} modell seg\'its\'eg\'evel }
-\def\myauthor{L\'aszlo Richard Neukirchner}hjic
+\def\myauthor{L\'aszlo Richard Neukirchner}
 \def\mydate{2019}
 \def\mysupervisor{dr. Magyar Attila}
 
@@ -71,7 +83,7 @@
 %\rhead{Bálint Roland (BPRATZ) 2017/18/II.}
 \renewcommand{\contentsname}{List of contets}
 \renewcommand{\figurename}{Figure}
-\renewcommand{\tablename}{Table}du2011appliance
+\renewcommand{\tablename}{Table}
 \renewcommand{\chaptername}{Chapter}
 \renewcommand{\bibname}{Bibliography}
 
@@ -102,10 +114,13 @@
  \chapter*{Acknowledgement}
  \input{subtex/000_acknowledgments.tex}
 
+%\chapter*{Compendiary}
+% \input{subtex/0000_compendiary.tex}
+%% (max 2500 karakter)
 
         %% Tartalmi kivonatok címfordítással
  \chapter*{Abstract}
- \input{subtex/0000_abstracts.tex}
+ \input{subtex/00000_abstracts.tex}
 
         %% Tartalomjegyzék
  \thispagestyle{plain}
@@ -116,14 +131,19 @@
         %% 1 - Bevezetés
 \chapter{Introduction}
  \input{subtex/1_introduction.tex}
+ \input{subtex/1_1_motivation.tex}
+ \input{subtex/1_2_compendiary.tex}
 
         %% 2 - Motiváció és cél
- \chapter{Motivations}
- \input{subtex/2_motivation.tex}
+ %\chapter{Motivations}
+ 
 
         %% 3 - Irodalmi összefoglalás
- \chapter{Literature overview}
- \input{subtex/3_literature.tex}
+ \chapter{Baic notions}
+
+ \input{subtex/3_1_basics_unbalance.tex}
+ %\input{subtex/3_2_basics_inverter.tex}
+ \input{subtex/3_3_basics_empc.tex}
 
         %% 4 - Kísérleti rész
  \chapter{Constrained, explicit predictive control for current source buck-type rectifiers}

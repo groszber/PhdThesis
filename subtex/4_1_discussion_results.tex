@@ -1,8 +1,8 @@
-\section{Explicit predictive control for current source buck-type rectifiers.}
+%\section{Explicit predictive control for current source buck-type rectifiers.}
+%
+%First half with MPC goodies!
 
-First half with MPC goodies!
-
-\subsection{Mathematical Modeling of the CSR}
+\section{Mathematical Modeling of the CSR}
 
     The structure of the classical three phase buck-type current source rectifier (CSR) is presented in \ref{EMPC:fig:network}. In continuous current mode, the differential equations corresponding to the CRS’s inductor currents and capacitor voltages are the following:
 
@@ -65,7 +65,7 @@ First half with MPC goodies!
 
     where $\omega_s$ represents the network voltage vector’s angular velocity.
 
-    \subsection{Model simplification}
+    \section{Model simplification}
 
     Notice, that the sixth-order ODE model (4) is bilinear in its states and
     inputs because of the product terms (e.g.: $\delta_di_{dc}$). As such, using design methods for linear systems is not straightforward. The high complexity given by the system’s order is another problem to tackle. For designing classic MPC, linear, low-order equation systems are favorable. Hence simplification of the model would bring noteworthy benefits, making the MPC design more straightforward, when a linear system resulted.
@@ -172,7 +172,7 @@ First half with MPC goodies!
         \label{EMPC:tbl:params}
     \end{table}
 
-\subsection{Control structure}
+\section{Control structure}
 
     Relying on the possibility of separation of the AC-side and DC-side controllers, the control structure from Fig. \ref{EMPC:fig:ControlStruct}. is proposed.
 
@@ -198,7 +198,7 @@ First half with MPC goodies!
 
     In \ref{EMPC:equ:sync_ctrl}, $i_{rcontrol_d}$ represents the output of the DC voltage controller, while $i_{rHF_d}$ represents the damping current, proportional with the high frequency component of the filter capacitor voltage (the fundamental component of the capacitor voltage in the stationary frame becomes a DC component in the synchronous frame). The DC and AC side control units are explained in more detail in the following sections, and the performance of the control structure is evaluated.
 
-\subsection{DC-side explicit model predictive control}
+\section{DC-side explicit model predictive control}
 
     Model predictive control (MPC) is an efficient and systematic method for solving complex multi-variable constrained optimal control problems \cite{vajda2017limiting}. The MPC control law is based on the “receding horizon formulation”, where the model’s assumed behavior is calculated for a number of N steps, where N stands for the horizon’s length. Only the first step of the computed optimal input is applied in each iteration. The remaining steps of the optimal control input are discarded and a new optimal control problem is solved at the next sample time. Using this approach, the receding horizon policy provides the controller with the desired feedback characteristics, although with high order systems the computational effort is considerably demanding since all the steps should be taken in to account on the specified horizon in every iteration. With Explicit MPC (EMPC), the discrete time constrained optimal control problem is reformulated as multi-parametric linear or quadratic programming. Using this approach, the problem of optimization can be solved offline, making it much more feasible from the perspective of the optimal control task. The optimum control law is a piecewise affine function of the states, and the resulting solution is stored in a pre-calculated lookup table. The parameter space, or the state-space is partitioned into critical regions. The real-time implementation consists in searching for the active critical region, where the measured state variables lie, and in applying the corresponding piecewise affine control law to achieve the desired dynamics.
     In order to introduce the MPC implementation from this paper, let us consider a linear discrete time system \ref{EMPC:equ:DiscreteStateSpace} derived with the discretisation of system \ref{EMPC:equ:mtx_DC} with zero-order hold method, where control inputs are assumed piecewise constant over the simulation sample time $T_s=\frac{1}{f_s}$ :
@@ -347,7 +347,7 @@ First half with MPC goodies!
         \label{EMPC:fig:MPCStructure}
     \end{figure}
 
-\subsection{Active AC-side damping}
+\section{Active AC-side damping}
 
     The CSR requires a voltage supply on the AC side. Taking into consideration the inductive character of the mains, the presence of a three-phase capacitor tank at the input of the CSR is a must. The most convenient is to use three-phase LC filtering with inductors on the lines and star connected capacitors resembling those in Fig. \ref{EMPC:fig:network}, although the resonance phenomena between these components can still cause difficult problems. The simplest way to dampen the resonance on the AC side LC filter is to add a damping resistor across the capacitor \cite{regaya2014new}. Because these resistors result in high losses, active damping methods have been proposed, which emulate damping resistors by control. This makes the CSR bridge produce an additional high frequency current, equivalent to the presence of virtual damping resistors connected in parallel with the AC capacitors. The resonance of the AC side LC filter produces harmonics in the capacitor voltage with frequency close to $\omega_{ac}=\frac{1}{\sqrt{L_{ac}C_{ac}}}$, which appears as $\omega_{ac}-\omega$ component in $u_{c_d}$, where $\omega=2\pi f$. The fundamental component of the capacitor voltage represents a DC component in the synchronous reference frame. Therefore, a high-pass filter (HPF) is applied to filter out this DC component, with the transfer function:
 
@@ -360,7 +360,7 @@ First half with MPC goodies!
 
     A virtual damping resistance $R_H$ has been defined for calculation of the damping current component $i_{HPF}$ from the HPF component of the capacitor voltage.
 
-\subsection{Space vector modulation strategy}
+\section{Space vector modulation strategy}
 
     The chosen modulation strategy is developed in the $"\alpha\beta"$ stationary reference frame. The structure requires simultaneous conduction of the upper and lower transistors of the bridge, since the current of the $L_{dc}$  choke must not be interrupted. Additionally, the switching devices are considered as ideal.
 
@@ -470,11 +470,11 @@ First half with MPC goodies!
         \label{EMPC:equ:refconstraint}
     \end{equation}
 
-\subsection{Performance evaluation}
+\section{Performance evaluation}
 
     From the continuous AC \ref{EMPC:equ:mtx_AC}, and DC \ref{EMPC:equ:mtx_DC} model equations described in Ch.X., the controller is formulated form discretised system \ref{EMPC:equ:DiscreteStateSpace}, and it is described via the cost function and control problem of \ref{EMPC:equ:optim_problem}, and \ref{EMPC:equ:optim_problem_constr} in Ch.X$+$1. The evaluated model and control structure are shown on Fig.4. In the following section said EMPC’s computational requirements are evaluated, and the Matlab/Simulink simulation results are compared to a classic state feedback controller’s dynamic performance.
 
-    \subsubsection{Computational effort}
+    \subsection{Computational effort}
 
     The binary search tree generated for the control problem presented in Fig. \ref{EMPC:fig:SearchTree}. The depth of the search tree is 5 and it has a total number of 29 nodes. It is utilized with the MPT toolbox \cite{muthukumar2016adaptive}, \cite{kutasi2010constrained}, and it can be used for the computationally optimal real-time implementation of the proposed algorithm on low-cost hardware.
 
@@ -494,7 +494,7 @@ First half with MPC goodies!
         \label{EMPC:fig:Memory}
     \end{figure}
 
-    \subsubsection{Horizon performance}
+    \subsection{Horizon performance}
 
     With the cost function (\ref{EMPC:equ:optim_problem}) employed using (\ref{EMPC:equ:quadratic_mtx_set}), changing the length of the horizon ($N$) affects the system's complexity illustrated by the partition in the state space shown in Fig. \ref{EMPC:fig:regions}., and Fig. \ref{EMPC:fig:MultiHorizon} presents the step response of the controlled system for different lengths of the horizon. It shows, that the response is not affected by the increase of the horizon above $N=2$, supporting the choice of this value for Matlab Simulink implementation.
 
@@ -505,7 +505,7 @@ First half with MPC goodies!
         \label{EMPC:fig:MultiHorizon}
     \end{figure}
 
-    \subsubsection{Simulation results}
+    \subsection{Simulation results}
 
     The simulation results are produced with Matlab/Simulik. The discrete model's (\ref{EMPC:equ:DiscreteStateSpace}) simulation frequency was 1 MHz, with the model parameters represented in Table \ref{EMPC:tbl:params}., and with the control structure shown on Fig. \ref{EMPC:fig:ControlStruct}. The EMPC performance is shown below:
 
@@ -525,7 +525,7 @@ First half with MPC goodies!
 
     More details about the Matlab simulation are presented in \cite{neukirchner2019linkedmodel}.
 
-    \subsubsection{Comparison with a state feedback control}
+    \subsection{Comparison with a state feedback control}
 
     On the DC side, not only the output voltage $u_0$ but also the inductor current $i_{dc}$ needs to be controlled. Described in [28], a state feedback control with optimal parameters can be used as a reference based on the model properties listed in Table \ref{EMPC:tbl:params}, with output voltage $u_0$ and DC bus current $i_{dc}$ chosen as the state variables. Since $u_0$ is a DC quantity in steady state, an integrator signal is introduced to diminish the steady-state error. The structure of the controller is represented in Fig. \ref{EMPC:fig:SFeedbackDC}.
 
@@ -557,6 +557,6 @@ First half with MPC goodies!
         \label{EMPC:fig:Result_EMPCfinal}
     \end{figure}
 
-\subsection{Conclusion}
+\section{Conclusion}
 
     The constrained, model-based optimal control of a current source rectifier has been presented in this paper. The dynamic model of a three-phase current source rectifier has been developed in Park frame. The proposed model has been examined from the design and implementation points of view with the purpose of explicit model-based predictive control. It proved to be the case that the regular set of differential equations of the CSR appears to be too complex, and contains non-linearity for such a design approach. To address this issue the usage of separated AC and DC equation sets was suggested to avoid linearization and complexity reduction. This solution eliminates bilinearity and enables the application of linear control design techniques. Current-based SVPWM of the three-phase converter has been used with an emphasis on the reduction of switching losses. Throughout the article the explicit model predictive control method is described and the method's effectiveness compared to conventional state feedback control is show. The implementation and simulation experiments have been performed in Matlab/Simulink environment. Moreover, the proper implementation of the system in a modern DSP chip will result in real-time operation. 
