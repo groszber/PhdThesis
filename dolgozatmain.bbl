@@ -3,6 +3,8 @@
 \bibitem{MVM2013}
 M.~Hackl %A.~F\'abi\'an.
 \newblock Statistical data of the hungarian electricity system.
+\newblock {\em Mavir Hungarian Independent Transmission Operator Company,
+  Ltd.}, pages 899--906, 2011.
 
 \bibitem{ahmed2014model}
 Syed~Faiz Ahmed, Ch~Fahad Azim, Hazry Desa, and Abadal-Salam~T Hussain.
@@ -238,7 +240,8 @@ L{\'a}szl{\'o} Neukirchner, Nimr{\'o}d Kutasi, Andr{\'a}s Kelemen, Attila
 \newblock Constrained predictive control of three-phase buck rectifiers
   simulation details.
 \newblock In {\em
-  http://virt.uni-pannon.hu/ver/index.php/en/projects/30-empc-csr}.
+  http://virt.uni-pannon.hu/ver/index.php/en/projects/30-empc-csr}. University
+  of Pannonia, 2019.
 
 \bibitem{Ninad2014control}
 Nayeem~Ahmed Ninad and Luiz Lopes.

@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {3.8}Conclusion}{22}% 
 \contentsline {chapter}{\numberline {4}Geometrical indicator for voltage asymmetry in three phase networks}{23}% 
 \contentsline {section}{\numberline {4.1}Network structure}{23}% 
-\contentsline {section}{\numberline {4.2}\leavevmode {\color {red}Voltage deviations}}{23}% 
+\contentsline {section}{\numberline {4.2}Voltage deviations}{23}% 
 \contentsline {subsection}{\numberline {4.2.1}Standard indicators of unbalance}{24}% 
 \contentsline {subsection}{\numberline {4.2.2}Proposed geometrical indicator}{25}% 
 \contentsline {subsubsection}{\leavevmode {\color {red}The geometrical method's additional content compared to the regulated method}}{26}% 
