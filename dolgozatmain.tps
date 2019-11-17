@@ -12,13 +12,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=604
+NormalPos.bottom=540
 Class=LaTeXView
-Document=dolgozatmain.tex
+Document=subtex\8_abbreviations.tex
 
 [Frame0_View0,0]
-TopLine=153
-Cursor=4539
+TopLine=0
+Cursor=704
 
 [Frame1]
 Flags=0
@@ -30,13 +30,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=604
-Class=BibTeXView
-Document=dolgozat.bib
+NormalPos.bottom=540
+Class=LaTeXView
+Document=subtex\3_3_basics_empc.tex
 
 [Frame1_View0,0]
-TopLine=567
-Cursor=21302
+TopLine=200
+Cursor=8671
 
 [Frame2]
 Flags=0
@@ -48,13 +48,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=604
+NormalPos.bottom=540
 Class=LaTeXView
-Document=subtex\1_1_motivation.tex
+Document=dolgozatmain.tex
 
 [Frame2_View0,0]
-TopLine=0
-Cursor=109
+TopLine=130
+Cursor=3862
 
 [Frame3]
 Flags=0
@@ -66,13 +66,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=604
+NormalPos.bottom=540
 Class=LaTeXView
-Document=subtex\3_1_basics_unbalance.tex
+Document=subtex\6_thesis.tex
 
 [Frame3_View0,0]
 TopLine=0
-Cursor=24
+Cursor=0
 
 [Frame4]
 Flags=0
@@ -84,69 +84,15 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=604
+NormalPos.bottom=540
 Class=LaTeXView
-Document=subtex\1_introduction.tex
+Document=subtex\4_1_discussion_results.tex
 
 [Frame4_View0,0]
-TopLine=49
-Cursor=10885
-
-[Frame5]
-Flags=0
-ShowCmd=1
-MinPos.x=-1
-MinPos.y=-1
-MaxPos.x=-1
-MaxPos.y=-1
-NormalPos.left=4
-NormalPos.top=32
-NormalPos.right=1562
-NormalPos.bottom=604
-Class=LaTeXView
-Document=subtex\4_3_discussion_results.tex
-
-[Frame5_View0,0]
-TopLine=676
-Cursor=38541
-
-[Frame6]
-Flags=0
-ShowCmd=1
-MinPos.x=-1
-MinPos.y=-1
-MaxPos.x=-1
-MaxPos.y=-1
-NormalPos.left=4
-NormalPos.top=32
-NormalPos.right=1562
-NormalPos.bottom=604
-Class=LaTeXView
-Document=subtex\6_thesis.tex
-
-[Frame6_View0,0]
-TopLine=0
-Cursor=697
-
-[Frame7]
-Flags=0
-ShowCmd=1
-MinPos.x=-1
-MinPos.y=-1
-MaxPos.x=-1
-MaxPos.y=-1
-NormalPos.left=4
-NormalPos.top=32
-NormalPos.right=1562
-NormalPos.bottom=604
-Class=LaTeXView
-Document=subtex\8_abbreviations.tex
-
-[Frame7_View0,0]
-TopLine=0
-Cursor=704
+TopLine=267
+Cursor=14806
 
 [SessionInfo]
-FrameCount=8
-ActiveFrame=6
+FrameCount=5
+ActiveFrame=4
 

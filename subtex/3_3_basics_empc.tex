@@ -3,8 +3,200 @@
 	\subsection{Usage of current source rectifiers}
 
 	\subsection{Basis of quadratic optimization and model predictive control}
+	
+	Predictive control methods based on a model are optimal regulators, with a defined cost function on a defined and encompassed  	prediction horizon with restrictions [N9], [N25], [N4], [N16], [N55]. The control signal is calculated over a defined horizon, but from the sequence of applicable control signals only the first one is used in the next sample. This procedure is repeated according to the principle of the moving horizon, using new iterations, as such provides the reaction in each sample. This method was developed for systems with physical restrictions, in the first stage for the control of chemical processes in the oil industry, then it was applied to various rapid processes from automotive or power electronics industry [N1] , [N13]. By default the optimization problem can be solved, for each sample, or explicitly using the multi-parameter programming techniques (mp-LP, mp-QP) presented in [N-ANNEX 1], over a well-defined parameter space.
+	MPC example
+	
+	\subsubsection{Constained optimal control}
+	
+	Let the us assume that the system is linear and time-invariant (LTI):
+	
+	    \begin{equation}
+        \begin{array}{rcl}
+            x(t+1)&=&Ax(t)+Bu(t)\\
+						y(t)&=&Cx(t)
+        \end{array}
+        \label{BASIC:equ:basic_LTI}
+    \end{equation}
+		
+	with the restrictions:
+	
+	\begin{equation}
+        \begin{array}{rcl}
+            Ex(t)+Lu(t)\leq M\\
+        \end{array}
+        \label{BASIC:equ:restrict_LTI}
+    \end{equation}
+		
+		where $t\geq0$ defines the time instance and $\textbf{x}\in \mathbb{R}^n$, $\textbf{u}\in \mathbb{R}^m$, $\textbf{y}\in \mathbb{R}^p$ are the states, inputs and uotputs of the system respectively. We define the following cost function to optimize:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				%&&\norm{asd}
+         J(U_n,x(0))&=&\norm{{Px_N}}_p+\sum^{N-1}_{k=0}\norm{Qx_k}_p+\norm{Ru_k}_p\\
+        \end{array}
+        \label{BASIC:equ:cost_function}
+    \end{equation}
+		
+		The optimization problem \ref{BASIC:equ:cost_function} applies with restrictions as follows:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				J^*(x(0))&=&min_{U_N}J(U_n,x(0))\\
+					&&Ex_k+Luk\leq M,k=0,\dots,N-1\\
+					&&x\in X_f\\
+					&&x_{k+1}=Ax_k+Bu_k,k\geq0\\
+					&&x_0=x(0)\\
+        \end{array}
+        \label{BASIC:equ:optim_problem}
+    \end{equation}
+		%
+		where $N$ is the defined horizon, $x\in X_f$ is the set if terminal states, $U_N=[u_0,u_1,\dots,u_{N-1}]\in\mathbb{R}^s,s=m*N$. In case of $p=2$ (Euclidean norm) $Q=Q'\geq0$, $R=R'\geq0$, $P\geq0$ and in case of $p=1$, $Q$,$R$, and $P$ shall be on maximum rank.
+		From \ref{BASIC:equ:cost_function} and \ref{BASIC:equ:optim_problem} a classical linear quadratic regulator (LQR) structure can be formulated with finite or infinite horison [N3], [N20], [N21].
+		Let us consider the following:
+		
+		\begin{equation}
+        \begin{array}{c}
+         p=2, \left\{(x,u)\in\mathbb{R}^n+m:Ex+Lu\leq M\right\}=\mathbb{R},X_f=\mathbb{R}^n\\
+        \end{array}
+        \label{BASIC:equ:quadratic_case}
+    \end{equation}
+		
+		In this case the problem can be reduced to an unconstrained optimization with finite horizon with the control law: 
+		
+		\begin{equation}
+        \begin{array}{rcl}
+         u^*(k)&=&K_kx(k), k=0,\dots,N-1\\
+        \end{array}
+        \label{BASIC:equ:control_law}
+    \end{equation}
+		
+		Where the control coefficient of the $k^th$ instance is $K_k$ can be given in the following form:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+         K_k&=&-(B'P_{k+1}B+R)^-1B'P_{k+1}A\\
+        \end{array}
+        \label{BASIC:equ:control_coefficient}
+    \end{equation}
+		
+		The positive semi-definite matrix $P_k$ is the solution of the Riccati equation:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+        P_N&=&P\\
+				P_k&=&A'(P_{k+1}-P{k+1}B(B'P_{k+1}B+R)^-1B'P_{k+1})A+Q\\
+        \end{array}
+        \label{BASIC:equ:Riccati}
+    \end{equation}
+		
+		whith the initial condition:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				J^*(x(0))&=&x(0)'P_0x(0)\\
+        \end{array}
+        \label{BASIC:equ:Riccati_initial}
+    \end{equation}
+		
+		If we choose $N\longrightarrow\infty$ and assume that $(A,B)$ are controllable and $(A,B)$ are observable, the optimization problem becomes an infinite horizon LQR whose solution can be written as:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+         u^*(k)&=&K_kx(k), k=0,\dots,\infty\\
+        \end{array}
+        \label{BASIC:equ:control_law_infinite}
+    \end{equation}
+		
+		As such:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+         K_k&=&-(B'P_\infty B+R)^-1B'P_\infty A\\
+        \end{array}
+        \label{BASIC:equ:control_coefficient_infinite}
+    \end{equation}
+		
+		with P as the unique solution of the Riccati equiation:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				P_\infty&=&A'(P_\infty-P\infty B(B'P_\infty B+R)^-1B'P_\infty)A+Q\\
+        \end{array}
+        \label{BASIC:equ:Riccati_infinite}
+    \end{equation}
+		
+		These are the basis of model predictive control (MPC). For introduction let us consider the principle of moving horizon (Receding Horizon). Optimization over a finite horizon has the following disadvantages:
+		
+		\begin{itemize}
+			\item Unforeseen problems may occur after the fixed optimization horizon, which may cancel the sequence of order for the 		calculated finished horizon.
+		\item After reaching the time defined by the horizon, the law of command is no longer optimal.
+		\item Finite horizon optimization is usually used because of the limited computing power is available, and not for theoretical reasons 
+		\end{itemize}
+		
+		To prevent this problem, the notion of optimization is introduced on a moving horizon. In each sample $k$ , an optimization problem is solved over a defined horizon $k,\dots,k+N$ to calculate the appropriate command sequence, and only the first command is applied. This results in a moving optimization horizon, which eliminates the issues listed before. The Formulation of the optimal control problem with moving horizon [N14] in the system \ref{BASIC:equ:basic_LTI} with input and output constraints follows:
+		
+		\begin{equation}
+        \begin{array}{c}
+				y_{min}\leq y(t)\leq y_{max},u_{min}\leq u(t)\leq u_{max},\\
+        \end{array}
+        \label{BASIC:equ:receiding_horison_constraints}
+    \end{equation}
+		
+		
+with the cost function to minimize:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				J(U,x(t)&=&x'_{t+N_y|t}Px_{t+N_y|t}+\sum^{N_y-1}_{k=0}x'_{t+k|t}Qx_{t+k|t}+u'_{t+k}Ru_{t+k},\\
+				&&y_{min}\leq y_{t+k|t}\leq y_{max},k=1,\dots,N_c-1,\\
+				&&u_{min}\leq u_{t+k}\leq u_{max},k=0,1,\dots,N_c-1,\\
+				&&x_{t|t}=x(t),\\
+				&&x_{t+k+1|t}=Ax_{t+k|t}+Bu_{t+k},\\
+				&&y_{t+k|t}=Cx_{t+k|t}, k\geq0,\\
+				&&u_{t+k}=-Kx_{t+k|t}, N_u\leq k\leq N_y,\\
+        \end{array}
+        \label{BASIC:equ:receiding_horison_problem}
+    \end{equation}
+		
+		where $Q=Q'\geq0$, $R=R'\geq0$, $P\geq0$, $(C,A)$ is observable, [missing text] and $N_u\leq N_y$, $N_c\leq N_y-1$. One trivial possibility to choose $K=0$ and $P$ to satisfy the Lyapunov equation:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				P&=&A'PA+Q\\
+        \end{array}
+        \label{BASIC:equ:receiding_horison_Lyapunov}
+    \end{equation}
+		
+		This means that after $N_u$ samples the control stops and the system is evolving to an open loop form. It is obvious that the choice only makes sense if the open loop system is stable. The second option would as described in \ref{BASIC:equ:control_coefficient_infinite}, and \ref{BASIC:equ:Riccati_infinite}, but this involves to use an unconstrained control for $N_u$ LQR samples. As a result, the MPC law calculates the optimal command sequence:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				U^*(t)&=&\left\{u^*_t,\dots,u^*_{t+N_u-1}\right\},\\
+        \end{array}
+        \label{BASIC:equ:receiding_optimal_sequence}
+    \end{equation}
+		
+		and only the first control input is applied:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				u(t)=u^*_t.\\
+        \end{array}
+        \label{BASIC:equ:receiding_optimal_first}
+    \end{equation}
+		
+		The optimal control inputs estimated for future samples are not taken into account and the algorithm is
+repeated on the basis of new measurements or a new estimation of the states.
+
+\subsubsection{Stablilty of MPC}		
+		
+			%\item 
+		%\end{itemize}
 
 	\subsection{Formulating explicit model predictive control structures}
+	
+	asd
 
 
 

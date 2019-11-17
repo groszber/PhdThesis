@@ -245,7 +245,7 @@
         \label{EMPC:equ:optim_problem_constr}
     \end{equation}
 
-    This problem is solved at each time instant $t$, where $\textbf{x}_{t+k\vert t}$ denotes the state vector predicted at time $t+k$, obtained by applying the input sequence $\textbf{u}_{t|t}...\textbf{u}_{t|t+1}$ to model \ref{EMPC:equ:quadratic_regions}, starting from the state $\textbf{x}_{t|t}$. Further, it is assumed that $Q$ and $R$, are symmetric positive semidefinite $(Q_w=Q_w^t\geq0,\_R_w=R_w^t>0)$ and $K$ is a feedback gain. Further, $N_y,N_u,N_c$ are the output, input and constraint horizons, respectively.
+    This problem is solved at each time instant $t$, where $\textbf{x}_{t+k\vert t}$ denotes the state vector predicted at time $t+k$, obtained by applying the input sequence $\textbf{u}_{t|t}...\textbf{u}_{t|t+1}$ to model \ref{EMPC:equ:quadratic_regions}, starting from the state $\textbf{x}_{t|t}$. Further, it is assumed that $Q$ and $R$, are symmetric positive semidefinite $(Q_w=Q_w^T\geq0,\_R_w=R_w^T>0)$ and $K$ is a feedback gain. Further, $N_y,N_u,N_c$ are the output, input and constraint horizons, respectively.
     Using the model for predicting the future behavior of the system and with some appropriate substitution and variable manipulation, the problem \ref{EMPC:equ:optim_problem},\ref{EMPC:equ:optim_problem_constr} can be transformed to the standard multi parametric quadratic programming (mp-QP) form, as described in \cite{rivera2013predictive}:
 
     \begin{equation}
