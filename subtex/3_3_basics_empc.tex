@@ -2,7 +2,7 @@
 
 	\subsection{Usage of current source rectifiers}
 
-	\subsection{Basis of quadratic optimization and model predictive control}
+	\subsection{Basis of quadratic optimization and model predictive control (MPC)}
 	
 	Predictive control methods based on a model are optimal regulators, with a defined cost function on a defined and encompassed  	prediction horizon with restrictions [N9], [N25], [N4], [N16], [N55]. The control signal is calculated over a defined horizon, but from the sequence of applicable control signals only the first one is used in the next sample. This procedure is repeated according to the principle of the moving horizon, using new iterations, as such provides the reaction in each sample. This method was developed for systems with physical restrictions, in the first stage for the control of chemical processes in the oil industry, then it was applied to various rapid processes from automotive or power electronics industry [N1] , [N13]. By default the optimization problem can be solved, for each sample, or explicitly using the multi-parameter programming techniques (mp-LP, mp-QP) presented in [N-ANNEX 1], over a well-defined parameter space.
 	MPC example
@@ -28,7 +28,7 @@
         \label{BASIC:equ:restrict_LTI}
     \end{equation}
 		
-		where $t\geq0$ defines the time instance and $\textbf{x}\in \mathbb{R}^n$, $\textbf{u}\in \mathbb{R}^m$, $\textbf{y}\in \mathbb{R}^p$ are the states, inputs and uotputs of the system respectively. We define the following cost function to optimize:
+		where $t\geq0$ defines the time instance and $\textbf{x}\in \mathbb{R}^n$, $\textbf{u}\in \mathbb{R}^m$, $\textbf{y}\in \mathbb{R}^p$ are the states, inputs and outputs of the system respectively. We define the following cost function to optimize:
 		
 		\begin{equation}
         \begin{array}{rcl}
@@ -43,7 +43,7 @@
 		\begin{equation}
         \begin{array}{rcl}
 				J^*(x(0))&=&min_{U_N}J(U_n,x(0))\\
-					&&Ex_k+Luk\leq M,k=0,\dots,N-1\\
+					&a.i.&Ex_k+Luk\leq M,k=0,\dots,N-1\\
 					&&x\in X_f\\
 					&&x_{k+1}=Ax_k+Bu_k,k\geq0\\
 					&&x_0=x(0)\\
@@ -149,7 +149,7 @@ with the cost function to minimize:
 		\begin{equation}
         \begin{array}{rcl}
 				J(U,x(t)&=&x'_{t+N_y|t}Px_{t+N_y|t}+\sum^{N_y-1}_{k=0}x'_{t+k|t}Qx_{t+k|t}+u'_{t+k}Ru_{t+k},\\
-				&&y_{min}\leq y_{t+k|t}\leq y_{max},k=1,\dots,N_c-1,\\
+				&a.i.&y_{min}\leq y_{t+k|t}\leq y_{max},k=1,\dots,N_c-1,\\
 				&&u_{min}\leq u_{t+k}\leq u_{max},k=0,1,\dots,N_c-1,\\
 				&&x_{t|t}=x(t),\\
 				&&x_{t+k+1|t}=Ax_{t+k|t}+Bu_{t+k},\\
@@ -190,13 +190,125 @@ with the cost function to minimize:
 repeated on the basis of new measurements or a new estimation of the states.
 
 \subsubsection{Stablilty of MPC}		
-		
-			%\item 
-		%\end{itemize}
-
-	\subsection{Formulating explicit model predictive control structures}
 	
-	asd
+	The problem of closed system stability with the predictive control has been extensively studied e.g. in [N97], [N54]. In the first generation of model based controllers, stability was achieved more experimentally by choosing parameters based on previous studies and experiences. In 1988 Keerthi and Gilbert introduced the Lyapunov stability method for discrete systems [N65] , and in 1990 Mayne and Michalska for continuous systems [N96]. In this fashion, by using cost function, as a candidate for Lyapunov function, several methods of analysis have been developed, guaranteeing stability. 
+	As basis the unconstrained LQR \ref{BASIC:equ:cost_function} is serving to create the Lypunov function such as:
+	
+\begin{equation}
+        \begin{array}{rcl}
+				V(x)&=&x'Px, P\succ 0.\\
+        \end{array}
+        \label{BASIC:equ:stability_Lyapunov_1}
+    \end{equation}
+		
+	In order to test this lets make the following calculation:
+	
+	\begin{equation}
+        \begin{array}{rcl}
+				V(x_{k+1})-V(x_{k})&=&x'_{k+1}Px_{k+1}-x'_{k}Px_{k}=\\
+				&=&k'_kA'PAx_k-x'_kPx_k=\\
+				&=&x'_k(A'PA-P)x_k,\\
+        \end{array}
+        \label{BASIC:equ:stability_Lyapunov_2}
+    \end{equation}
+		
+		where, in order to satisfy the Lyapunov theorem:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				A'PA-P&=&-Q, Q\succ 0.\\
+        \end{array}
+        \label{BASIC:equ:stability_Lyapunov_3}
+    \end{equation}
+		
+	This is referred to as discrete-time Lyapunov equation, where  according to \cite{borrelli2017predictive} iff $P$ satisfying \ref{BASIC:equ:stability_Lyapunov_3}, then the system is asymptotically stable. From an optimisation point of view problem \ref{BASIC:equ:optim_problem} in compact form:
+	
+\begin{equation}
+        \begin{array}{rcl}
+				min_UJ(U,x)&=&F(x_N)+\sum^{N-1}_{k=0}L(x_k,u_k) \\
+					&a.i.&x_{k+1}=f(x_k,u_k) \\
+					&&x\in X, u\in U\\
+					&&x_0=x(t)\\
+        \end{array}
+        \label{BASIC:equ:optim_stability}
+    \end{equation}
 
+Assuming that the function cost $J(U,x)$ is a Lyapunov candidate, the MPC would be asymptotically make the system stable, if the following conditions are met:
+\begin{enumerate}
+	\item There is a terminal set $\Omega\subset X$ so that $\Omega$ is also marginalized $0\in\Omega$ (contstraints of states are satisfied in $\Omega$).
+	\item There is a terminal controller $K(x_k)\in U, \forall x\in\Omega,k=N,\dots,\infty$ (contstraints of inputs are satisfied in $\Omega$)
+	\item The set $\Omega$ is invariant for the function $f(x_k,K(x_k)$ which needs to be optimized, so for every $x_0\in\Omega$, all subsequent $x_{k+1}=f(x_k,K(x_k)$ would remain in $\Omega$.
+	\item $F(f(x_k,K(x_k)))-F(x)+L(x_k,K(x_k))\leq 0$, then $F()$ is the Lyapunov function in $\Omega$.
+\end{enumerate}
 
+Based on these conditions above, there are several methods of stabilizing the systems with MPC regulators, some of these are presented below [N16].
 
+\begin{itemize}
+	\item \textbf{MPC with final state constraint}: Stability is ensured by $x_N=0$. This imposes that $\Omega=\{0\}$, as such $K(x_k)=0$ maintains the state of origin. The advantage of the method is that we have a simple constraint, but imposing an equality constraint can to lead to difficulties in obtaining the solution.
+	\item \textbf{MPC with terminal cost}: This method imposes a zero terminal cost, without imposing restrictions
+for the final states. This method guarantees stability for large prediction horizons
+of unrestricted systems.
+	\item \textbf{MPC with permissible set restrictions of final states}: For this, it is required to $x_N\in\Omega$. This equality constraint ensures that the controller $K(x_k)$ remains in $\Omega$. This method is also called dual predictive controller, because two regulators are used, one with a moving horizon and one with stabilization of $K(x_k)$.
+	\item \textbf{MPC with permissible set restrictions on final states and terminal cost}: Combined method, and widely used because it encompasses the advantages of previous methods.
+\end{itemize}
+
+There are also stabilization methods such as infinite horizon MPCs or suboptimal MPC regulators, but we do not detail these methods because they are not used in the thesis.
+
+\subsection{Basics of explicit model predictive control (EMPC)}
+
+The problem \ref{BASIC:equ:receiding_horison_problem} can be transformed into a multi-parametric quadratic programming (mp-QP) problem. Such an approach involves solving the problem "offline", i.e. explicitly for the defined state-space with considering given constraints. By solving the optimization offline, critical regions are obtained, where each region corresponds to an optimal command that can be expressed as a function tuned by system states. Therefore the real-time regulation of the system is reduced to the identification of the critical regions corresponding to the measured state and the application of the optimal control input stored in a table. This method has revolutionized the use of the MPC method for systems with high dynamics, in particular for reduced order systems. The disadvantage of the method is that the number of critical regions increases exponentially with an increasing system order. The following shows the transformation of MPC into
+mp-QP.
+Let us assume an optimization problem described by \ref{BASIC:equ:receiding_horison_problem} The evolution of the subsequent states is calculated based on a mathematical of the system, according to the relation:
+
+\begin{equation}
+        \begin{array}{rcl}
+				x_{t+k|t}&=&A^kx(t)+\sum^{k-1}_{j=0}A^jBu_{t+k-1-j}
+        \end{array}
+        \label{BASIC:equ:EMPC_evolution}
+    \end{equation}
+
+Based on \ref{BASIC:equ:receiding_horison_problem}, and \ref{BASIC:equ:EMPC_evolution} the optimization problem becomes:
+
+\begin{equation}
+        \begin{array}{rcl}
+				V(x(t))&=&\frac{1}{2}x'(t)Yx(t)+min\left\{\frac{1}{2}U'HU+x'(t)FU\right\}\\
+				&with\,restrictions:&GU\leq W+Ex(t)\\
+        \end{array}
+        \label{BASIC:equ:EMPC_transformed}
+    \end{equation}
+		
+		where $U=\{u'_t,\dots,u'_{t+N_u-1}\}\in\mathbb{R}'s,\,s=m\cdot N_u$, $H$ is the optimization vector where $H=H'>0$, and $H,F,Y,G,W,E$ can be directly obtained from $A,B,Q,R,P$. Let the transfotmation variable be:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				z&=&U+H^{-1}F'x(t)
+        \end{array}
+        \label{BASIC:equ:EMPC_trans_var}
+    \end{equation}
+		
+		the cost function \ref{BASIC:equ:EMPC_transformed} becomes:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				V(x)&=&V_z(x)+\frac{1}{2}x'\left(Y-FH^{-1}F'\right)x,
+        \end{array}
+        \label{BASIC:equ:EMPC_trans_var}
+    \end{equation}
+		
+		where $V_z(x)$ is defined as:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				V_z(x)&=&min\frac{1}{2}z'Hz\\
+				&s.t.&Gz\leq W+Sx(t)\\
+				&with\,restrictions:&S=E+GH^{-1}F'.\\
+        \end{array}
+        \label{BASIC:equ:EMPC_transformed}
+    \end{equation}
+		
+		From \ref{BASIC:equ:EMPC_transformed} the standartd mp-QP problem can be defined according to \cite{borrelli2017predictive}, and thorugh this transformation the MPC problem can be explicitly obtained. 
+		
+
+\subsubsection{Storage of critical regions}
+
+The issue of iterative model based controllers is that they require a lot of computational resource. The CPU load and required ROM consumption could increase exponentially the longer the more steps the control horizon is calculated. For this reason explicit model bssed predictive controllers (EMPC) were developed, where only the storage the critical regions and the signal coefficients for each critical region, so the matrices $H$, $K$, $M$, $G$ are required. The on-line part of control consists of searching the critical region for the current states and calculating the necessary inputs for them.

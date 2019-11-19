@@ -39,6 +39,11 @@ M~Tavakoli Bina and A~Kashefi.
 \newblock {\em International Journal of Electrical Power \& Energy Systems},
   33(4):817--826, 2011.
 
+\bibitem{borrelli2017predictive}
+Francesco Borrelli, Alberto Bemporad, and Manfred Morari.
+\newblock {\em Predictive control for linear and hybrid systems}.
+\newblock Cambridge University Press, 2017.
+
 \bibitem{chatterjee2008augmented}
 Amitava Chatterjee, Ranajit Chatterjee, Fumitoshi Matsuno, and Takahiro Endo.
 \newblock Augmented stable fuzzy control for flexible robotic arm using lmi

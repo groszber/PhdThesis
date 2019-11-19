@@ -12,7 +12,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=540
+NormalPos.bottom=508
 Class=LaTeXView
 Document=subtex\8_abbreviations.tex
 
@@ -30,13 +30,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=540
+NormalPos.bottom=508
 Class=LaTeXView
 Document=subtex\3_3_basics_empc.tex
 
 [Frame1_View0,0]
-TopLine=200
-Cursor=8671
+TopLine=340
+Cursor=15514
 
 [Frame2]
 Flags=0
@@ -48,13 +48,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=540
+NormalPos.bottom=508
 Class=LaTeXView
 Document=dolgozatmain.tex
 
 [Frame2_View0,0]
-TopLine=130
-Cursor=3862
+TopLine=155
+Cursor=4703
 
 [Frame3]
 Flags=0
@@ -66,7 +66,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=540
+NormalPos.bottom=508
 Class=LaTeXView
 Document=subtex\6_thesis.tex
 
@@ -84,15 +84,33 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=540
+NormalPos.bottom=508
 Class=LaTeXView
 Document=subtex\4_1_discussion_results.tex
 
 [Frame4_View0,0]
-TopLine=267
+TopLine=349
 Cursor=14806
 
+[Frame5]
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-1
+MaxPos.y=-1
+NormalPos.left=4
+NormalPos.top=32
+NormalPos.right=1562
+NormalPos.bottom=508
+Class=BibTeXView
+Document=dolgozat.bib
+
+[Frame5_View0,0]
+TopLine=342
+Cursor=12701
+
 [SessionInfo]
-FrameCount=5
-ActiveFrame=4
+FrameCount=6
+ActiveFrame=2
 
