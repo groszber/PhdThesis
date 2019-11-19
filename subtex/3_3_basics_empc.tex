@@ -312,3 +312,16 @@ Based on \ref{BASIC:equ:receiding_horison_problem}, and \ref{BASIC:equ:EMPC_evol
 \subsubsection{Storage of critical regions}
 
 The issue of iterative model based controllers is that they require a lot of computational resource. The CPU load and required ROM consumption could increase exponentially the longer the more steps the control horizon is calculated. For this reason explicit model bssed predictive controllers (EMPC) were developed, where only the storage the critical regions and the signal coefficients for each critical region, so the matrices $H$, $K$, $M$, $G$ are required. The on-line part of control consists of searching the critical region for the current states and calculating the necessary inputs for them.
+One method of storing entire critical regions in order to calculate them, and that is in the order in which the MP-LP or MP-QP problem is resolved. It has the disadvantage, that the search time can be high, as such starting from the top of the list, a linear search is not effective. The efficient method is to store critical regions already in a binary tree [N64], [N111], [N23], [N113]. The method of generating the binary tree is shown in (Fig.\ref{BASIC:fig:searchtree}.). The basic idea is to sort the critical regions
+depending on their adjacent sides. For example, in (Fig.\ref{BASIC:fig:searchtree}.a.) side $j_1$ divides the state space into two, at the right of it are the regions $X_{2,3,4,5}$ and to the left are the regions $X_{1,2,6}$. They make up the nodes adjacent to the base node $I_1$ of the binary tree. Next the another side from the space is choosen defined by each node $I_2$ respectively $I_3$, and the algorithm is continued until all the regions in the current node correspond to the same control signal, denoted by $F$ on the shaft in fig. (Fig.\ref{BASIC:fig:searchtree}.b.) Thus with this search pattern logarithmic search time can be achieved.
+
+ \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/BasicSearchTree.png}
+        \caption{Basic search three of an EMPC where, a) are the critical regions for a space of 2D parameters,
+b) the related binary tree.}
+        \label{BASIC:fig:searchtree}
+    \end{figure}
+
+The implementation of MPC in explicit form is very efficient up to a certain number of critical regions, because they do not require calculations but only search in a table. For more complex problems or fast systems the method requires longer search time.
+
