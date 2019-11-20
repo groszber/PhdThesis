@@ -32,6 +32,22 @@ Yavuz Ates, Mehmet Uzunoglu, Arif Karakas, Ali~Rifat Boynuegri, Abdullah Nadar,
   including distributed generation.
 \newblock {\em Journal of cleaner production}, 112:2697--2705, 2016.
 
+\bibitem{baumannnew}
+M~Baumann, U~Drofenik, and JW~Kolar.
+\newblock New wide input range three-phase unity power factor rectifier formed
+  by integration of a three-switch buck-derived front-end and a dc/dc boost
+  converter output stage.
+\newblock In {\em Proceedings of the 22th IEEE International Telecommunications
+  Energy Conference}, pages 10--14.
+
+\bibitem{baumann2005novel}
+Martina Baumann and Johann~W Kolar.
+\newblock A novel control concept for reliable operation of a three-phase
+  three-switch buck-type unity-power-factor rectifier with integrated boost
+  output stage under heavily unbalanced mains condition.
+\newblock {\em IEEE Transactions on Industrial Electronics}, 52(2):399--409,
+  2005.
+
 \bibitem{bina2011three}
 M~Tavakoli Bina and A~Kashefi.
 \newblock Three-phase unbalance of distribution systems: Complementary analysis
@@ -141,6 +157,13 @@ Junjie Hu, Mattia Marinelli, Massimiliano Coppo, Antonio Zecchino, and Henrik~W
   networks.
 \newblock {\em Electric Power Systems Research}, 131:264--274, 2016.
 
+\bibitem{itoh1989steady}
+R~Itoh.
+\newblock Steady-state and transient characteristics of a single-way step-down
+  pwm gto voltage-source convertor with sinusoidal supply currents.
+\newblock In {\em IEE Proceedings B (Electric Power Applications)}, volume 136,
+  pages 168--175. IET, 1989.
+
 \bibitem{kaldellis2009optimum}
 JK~Kaldellis, M~Simotas, D~Zafirakis, and E~Kondili.
 \newblock Optimum autonomous photovoltaic solution for the greek islands on the
@@ -160,6 +183,14 @@ P~Giridhar Kini, Ramesh~C Bansal, and Radhakrishna~S Aithal.
   unbalance factor.
 \newblock {\em IEEE transactions on industrial electronics}, 54(4):2315--2322,
   2007.
+
+\bibitem{kolar1996design}
+Johann~W Kolar, Hans Ertl, and Franz~C Zach.
+\newblock Design and experimental investigation of a three-phase high power
+  density high efficiency unity power factor pwm (vienna) rectifier employing a
+  novel integrated power semiconductor module.
+\newblock In {\em Proceedings of Applied Power Electronics Conference.
+  APEC'96}, volume~2, pages 514--523. IEEE, 1996.
 
 \bibitem{uimethod}
 NV~Korovkin, QS~Vu, and RA~Yazenin.
@@ -200,6 +231,12 @@ Peter~D Lund, Jani Mikkola, and J~Ypy{\"a}.
   areas.
 \newblock {\em Journal of Cleaner Production}, 103:437--445, 2015.
 
+\bibitem{malesani1987three}
+Luigi Malesani and Paolo Tenti.
+\newblock Three-phase ac/dc pwm converter with sinusoidal ac currents and
+  minimum filter requirements.
+\newblock {\em IEEE Transactions on Industry Applications}, (1):71--77, 1987.
+
 \bibitem{martin2015unbalance}
 Aranzazu~D Martin, Reyes~S Herrera, Jesus~R Vazquez, Paul Crolla, and Graeme~M
   Burt.
@@ -212,6 +249,13 @@ Bart Meersman, Bert Renders, Lieven Degroote, Tine Vandoorn, and Lieven
   Vandevelde.
 \newblock Three-phase inverter-connected dg-units and voltage unbalance.
 \newblock {\em Electric Power Systems Research}, 81(4):899--906, 2011.
+
+\bibitem{moussaoui2005open}
+Leila Moussaoui and Ammar Moussi.
+\newblock An open loop space vector pwm control for csi-fed field-oriented
+  induction motor drive with improved performances and reduced pulsating
+  torque.
+\newblock {\em WSEAS Trans.-Circuits and Systems}, (2):71--77, 2005.
 
 \bibitem{muthukumar2016adaptive}
 N~Muthukumar, Seshadhri Srinivasan, K~Ramkumar, K~Kannan, and Valentina~Emilia
@@ -256,6 +300,12 @@ Nayeem~Ahmed Ninad and Luiz Lopes.
 \newblock {\em International Journal of Electrical Power \& Energy Systems},
   55:449--459, 2014.
 
+\bibitem{nussbaumer2007comprehensive}
+Thomas Nussbaumer, Martina Baumann, and Johann~W Kolar.
+\newblock Comprehensive design of a three-phase three-switch buck-type pwm
+  rectifier.
+\newblock {\em IEEE Transactions on Power Electronics}, 22(2):551--562, 2007.
+
 \bibitem{ortega2013measurement}
 MJ~Ortega, JC~Hern{\'a}ndez, and OG~Garc{\'\i}a.
 \newblock Measurement and assessment of power quality characteristics for
@@ -288,6 +338,19 @@ Rafik Salloum, Bijan Moaveni, and Mohammad~Reza Arvan.
 \newblock Robust pid controller design for a real electromechanical actuator.
 \newblock {\em Acta Polytechnica Hungarica}, 11(5):125--144, 2014.
 
+\bibitem{salo2005three}
+Mika Salo.
+\newblock A three-switch current-source pwm rectifier with active filter
+  function.
+\newblock In {\em 2005 IEEE 36th Power Electronics Specialists Conference},
+  pages 2230--2236. IEEE, 2005.
+
+\bibitem{sato1993state}
+Yukihiko Sato and Teruo Kataoka.
+\newblock State feedback control of current-type pwm ac-to-dc converters.
+\newblock {\em IEEE transactions on industry applications}, 29(6):1090--1097,
+  1993.
+
 \bibitem{huat2015integration}
 Lip~Huat Saw, Yonghuang Ye, and Andrew~AO Tay.
 \newblock Integration issues of lithium-ion battery into electric vehicles
@@ -318,6 +381,13 @@ K{\'a}roly Sz{\'e}ll and P{\'e}ter Korondi.
 Fatima Tahri, Ali Tahri, Ahmed Allali, and Samir Flazi.
 \newblock The digital self-tuning control of step a down dc-dc converter.
 \newblock {\em Acta Polytechnica Hungarica}, 9(6):49--64, 2012.
+
+\bibitem{tooth2000effects}
+Daniel~John Tooth, Stephen~Jon Finney, and Barry~Wayne Williams.
+\newblock Effects of using dc-side average current-mode control on a
+  three-phase converter with an input filter and distorted supply.
+\newblock {\em IEE Proceedings-Electric Power Applications}, 147(6):459--468,
+  2000.
 
 \bibitem{urmos2017application}
 Antal {\"U}rm{\"o}s, Zolt{\'a}n Farkas, M{\'a}rk Farkas, Tam{\'a}s S{\'a}ndor,
@@ -365,5 +435,12 @@ Zhaoyang Yan, Xiaomeng Xu, Zhenxing Yang, Xiaoyu Wu, and Yuepeng Wang.
 \newblock In {\em 2015 Fifth International Conference on Instrumentation and
   Measurement, Computer, Communication and Control (IMCCC)}, pages 1065--1070.
   IEEE, 2015.
+
+\bibitem{zargari1993current}
+NR~Zargari and G~Joos.
+\newblock A current-controlled current source type unity power factor pwm
+  rectifier.
+\newblock In {\em Conference Record of the 1993 IEEE Industry Applications
+  Conference Twenty-Eighth IAS Annual Meeting}, pages 793--799. IEEE, 1993.
 
 \end{thebibliography}

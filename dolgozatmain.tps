@@ -35,8 +35,8 @@ Class=LaTeXView
 Document=subtex\3_3_basics_empc.tex
 
 [Frame1_View0,0]
-TopLine=349
-Cursor=15514
+TopLine=372
+Cursor=17625
 
 [Frame2]
 Flags=0
@@ -53,8 +53,8 @@ Class=LaTeXView
 Document=dolgozatmain.tex
 
 [Frame2_View0,0]
-TopLine=156
-Cursor=4703
+TopLine=141
+Cursor=4701
 
 [Frame3]
 Flags=0
@@ -89,8 +89,8 @@ Class=LaTeXView
 Document=subtex\4_1_discussion_results.tex
 
 [Frame4_View0,0]
-TopLine=390
-Cursor=14806
+TopLine=6
+Cursor=441
 
 [Frame5]
 Flags=0
@@ -112,5 +112,5 @@ Cursor=12701
 
 [SessionInfo]
 FrameCount=6
-ActiveFrame=2
+ActiveFrame=1
 
