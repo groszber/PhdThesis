@@ -1,23 +1,134 @@
-%\thispagestyle{plain}
-\section{Basic notions for voltage unbalance reduction}
-
-	\subsection{Definition of voltage unbalance}
-
-	\subsection{Effects of voltage unbalance}
-
-	\subsection{Literature overview of voltage unbalance reduction}
-%
-%\newpage
-
-%\thispagestyle{plain}
-%%\chapter*{Abstarct}
-% (max 8-10 sor)
 
 
-%\newpage
-%
-%\thispagestyle{plain}
-%\chapter*{ (3. nyelven) \normalfont{抽象}}
-%(max 8-10 sor)
+	\section{Definition of voltage unbalance}
+	
+	Voltage unbalance is such a phenomena where the three phase voltages differ in amplitude normal 120 degree phase relationship, but mot cases both are happening at the same time. This includes unequal voltage magnitudes at the fundamental frequency, either under, or over voltage, at the fundamental phase angle deviation. This is observed as a frequently cited power quality issue in low-voltage domestic distribution networks and in systems that supply large single phase loads unevenly distributed. Effects of voltage unbalance are complex, but can be categorized as structural or functional. The former refers to the asymmetry in the three- phase impedances of transmission lines, cables, transformers, etc. It occurs because it is neither economical nor necessary to maintain distribution system with perfectly symmetrical impedances. The latter refers to uneven distribution of power consumption over the three phases. Although the term voltage unbalance is unambiguous, the root phenomenon may be various as well as the standard norms used to measure unbalance. All of these different indicators measure voltage unbalance but each of them does it in a different way (\ref{equ:regular}). In this section a detailed explanation is presented about the types of currently used method for indication.
+	
+	\subsection{Non standardised approximations formulas}
+	
+	Up to now, the following definitions have not been adopted by any standard or rule to indicate the degree of voltage unbalance, but used by various manufacturers. Firstly based on \cite{eugene1986new} recommended by CIGRE, the voltage unbalance is determined with the following \ref{BASICUNB:equ:CIRGE}:
+	
+	\begin{equation}
+        \begin{array}{rcl}
+            VUFactor&=&\frac{\sqrt{{1-\sqrt{3-6\upsilon}}}}{1+\sqrt{3-6\upsilon}}\\
+						\textnormal{where},&&\\
+						\upsilon&=&\frac{V_{ab}^4+V_{bc}^4+V_{ca}^4}{\left(V_{ab}^2+V_{bc}^2+V_{ca}^2\right)^2},					
+        \end{array}
+        \label{BASICUNB:equ:CIRGE}
+    \end{equation}
+		
+		where, $\{V_{ab},V_{bc},V_{ca}\}$ are the line-to-line voltages. Note, that the CIRGE variant has no distinct notation, as such it would be indicated as $VUFactor$ in this thesis. Moreover, the autor of \cite{robert1992assessing} recommends two more variants, based on manufacturer recommended"standards": 
+		
+		\begin{equation}
+        \begin{array}{rcl}
+            VU&=&\frac{82\cdot\sqrt{(V_{ab}-V_{avg_{line}})^2+(V_{bc}-V_{avg_{line}})^2+(V_{ca}-V_{avg_{line}})^2}}{V_{avg_{line}}}\times100\\					
+        \end{array}
+        \label{BASICUNB:equ:VU}
+    \end{equation}
+		
+		\begin{equation}
+        \begin{array}{rcl}
+            VUR&=&\frac{max\left( |V_{ab}-V_{bc}|,|V_{bc}-V_{ca}|,|V_{ca}-V_{ab}| \right)}{V_{avg_{line}}}\times100,\\				
+        \end{array}
+        \label{BASICUNB:equ:VUR}
+    \end{equation}
+		
+		where the line voltage mean is noted by and $V_{avg_{line}}=\frac{V_{ab}+V_{bc}+V_{ca}}{3}$.
+		This formulas were created with the intention to avoid the use of the complex algebra in symmetrical components and give
+a good approximation of the later described $VUF$ standard. With the indicator of \ref{BASICUNB:equ:VU}, and \ref{BASICUNB:equ:VUR} only the voltage magnitude unbalance is reflected, however, the voltage angle is not considered. 
 
+	
+	\subsection{LVUR}
+	
+	One of the first voltage unbalance in percent is defined by the National Electrical Manufacturers Association (NEMA) \cite{bonnett1997understanding} is defined  as the ratio of the maximum voltage deviation from the average line voltage magnitude to the average line-voltage magnitude.
+	
+\begin{equation}
+        \begin{array}{rcl}
+            LVUR&=&\frac{max\left( |V_{ab}-V_{avg_{line}}|,|V_{bc}-V_{avg_{line}}|,|V_{ca}-V_{avg_{line}}| \right)}{V_{avg_{line}}}\times100\\			
+        \end{array}
+        \label{BASICUNB:equ:LVUR}
+    \end{equation}
+		
+		The LVUR assumes that the average voltage is always equal to the rated value, which is 480 volts for the US three-phase systems, and it works only with magnitudes. Phase angles are not considered in this definition.
+	
+	\subsection{PVUR}
+	
+	The next phase voltage unbalance in percent described in IEEE standard $141.$ \cite{IEEE_141_35071} (derived from \cite{IEEE_112_8635630}), is $PVUR_{IEEE-141}$. It is defined as the ratio of the maximum voltage deviation of phase voltages from the average phase-voltage magnitude to the average phase voltage magnitude. In various fields, LVUR and $PVUR_{IEEE-141}$ are commonly used to estimate the degree of voltage unbalance due to simplicity of calculation. The two unbalance factors mentioned above cannot completely reflect system voltage unbalance effects, such as the phase displacements of unbalanced voltages.
+	
+	\begin{equation}
+        \begin{array}{rcl}
+            PVUR_{IEEE-141}&=&\frac{max\left( |V_{a}-V_{avg_{phase}}|,|V_{b}-V_{avg_{phase}}|,|V_{c}-V_{avg_{phase}}| \right)}{V_{avg_{phase}}}\times100,\\
+        \end{array}
+        \label{BASICUNB:equ:PVUR-141}
+    \end{equation}
+
+where the voltages $\{V_{a},V_{b},V_{c}\}$ denotes the phase-to-neutral voltages, and $V_{avg_{phase}}=\frac{V_{a}+V_{b}+V_{c}}{3}$.
+The second variant is, $PVUR_{IEEE-936}$, mentioned in \cite{IEEE_936_29053} is defined as the ratio of the difference between the highest and the lowest phase-voltage magnitude to the average phase-voltage magnitude. Therefore, the numerical values of voltage balance quantified by $PVUR_{IEEE-936}$ are generally larger than those of $PVUR_{IEEE-141}$ and LVUR. 
+
+\begin{equation}
+        \begin{array}{rcl}
+            PVUR_{IEEE-936}&=&\frac{max\left( |V_a|,|V_b|,|V_c| \right)-min\left( |V_a|,|V_b|,|V_c| \right)}{V_{avg_{phase}}}\times100,\\					
+        \end{array}
+        \label{BASICUNB:equ:PVUR141}
+    \end{equation}
+		
+The number of possible combinations of three phase or line volt- ages that satisfy the definitions of voltage unbalance mentioned above will become infinite as only the magnitudes of voltages are considered.	
+		
+	
+	\subsection{VUF and CVUF}
+	
+	The voltage unbalance factor ($VUF$) was defined by the International Electrotechnical Commission \cite{pillay2001definitions}, \cite{dugan1996electrical}. From the theorem of symmetrical components \cite{fortescue1918method}, voltage unbalance can be considered as a phenomenon that positive sequence voltage  ($V_p$) is disturbed by negative  ($V_n$) and zero-sequence ($V_0$) voltages:
+	
+	\begin{equation}
+        \begin{array}{rcl}
+            \begin{bmatrix}
+						V_0\\
+						V_p\\
+						V_n\\
+						\end{bmatrix}&=&
+						\frac{1}{3}\begin{bmatrix}
+						1&1&1\\
+						1&a&a^2\\
+						1&a^2&a\\
+						\end{bmatrix}\cdot
+						\begin{bmatrix}
+						V_a\\
+						V_b\\
+						V_c\\
+						\end{bmatrix},\\
+        \end{array}
+        \label{BASICUNB:equ:symmetry}
+    \end{equation}
+	
+	Where $a=e^{2j\pi/3}$ is the Fortesque operator. From that the formulat of $VUF$ can be formulated:
+	
+	
+	\begin{equation}
+        \begin{array}{rcl}
+            VUF&=&\left|\frac{V_n}{V_p}\right|\times100,\\					
+        \end{array}
+        \label{BASICUNB:equ:VUF}
+    \end{equation}
+	
+	
+	The zero-sequence components never present in the line-to-tine voltages regardless of the level of unbalance, only phase-to-neutral voltages. As such, three-phase electric loads without path through the neutral, negative-sequence voltage is the primary cause of voltage unbalance. Normally, positive-sequence component of three-phase voltages is very close to rated value. If expressed in per-unit quantities, the positive-sequence voltage will be very close to $1.0$ p.u., and the corresponding negative-sequence voltage will be very close to the $VUF$. Thus, the $VUF$ can indeed be considered as the negative-sequence component in per-unit.	This explains the advantage of using the VUF as an index for analyzing the effects of voltage unbalance considering the phase deviations.
+	An extension of the VUF is the complex voltage unbalance factor ($CVUF$) that is defined by the ratio of the negative-
+sequence voltage phasor to the positive-sequence voltage phasor studied in \cite{wang2000analytical}, and \cite{pierrat1987unbalance}. The CVUF is a complex quantity having the magnitude and the angle. Although the CVUF has not yet been widely used by practicing engineers, it has been proposed in some studies (e.g., \cite{wang2001analysis},\cite{singh2007some},\cite{chen2013examination}) due to its richness of information on unbalance. The formula of $CVUF$ is similar to $VUF$:
+
+\begin{equation}
+        \begin{array}{rcl}
+            k_v&=&\frac{V_n}{V_p}=k_v\cdot e^{j\theta_v}=k_v\angle\theta_v,\\					
+        \end{array}
+        \label{BASICUNB:equ:CVUF}
+    \end{equation}
+		
+		where $k_v$ is the magnitude and $\theta_v$ is the angle of $CVUF$.
+	
+            
+
+	\section{Effects of voltage unbalance}
+
+	\section{Summary}
+	
+	It can be observed, that the previously mentioned [REF] norms indicate different values for a single case with various correlations. The first two standard indicators, $PVUR_{936}$ and $PVUR_{141}$ (ETC..), ignore the $\pm120$ degree phase difference unbalance and only take the amplitudes into account. The last two definitions, $MDV$ and $TDV$, are sensitive to the phase difference unbalance. Lastly $CVUF$ considers also phase and magnutude of the voltage unbalance, but the two units are hard to merge together as the omptimization cost of a cost function. Moreover, these definitions ignore zero sequence components and harmonic distortion that are always present in three-phase four-wire systems \cite{bina2011three}.
 

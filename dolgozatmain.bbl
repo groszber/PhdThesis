@@ -1,5 +1,19 @@
 \begin{thebibliography}{10}
 
+\bibitem{IEEE_141_35071}
+Ieee recommended practice for electric power distribution for industrial plants
+  (ieee red book).
+\newblock pages 1--609, Oct 1986.
+
+\bibitem{IEEE_936_29053}
+Ieee guide for self-commutated converters.
+\newblock pages 0_1--, 1987.
+
+\bibitem{IEEE_112_8635630}
+Ieee standard for inverse-time characteristics equations for overcurrent
+  relays.
+\newblock pages 1--25, Feb 2019.
+
 \bibitem{MVM2013}
 M.~Hackl %A.~F\'abi\'an.
 \newblock Statistical data of the hungarian electricity system.
@@ -55,6 +69,14 @@ M~Tavakoli Bina and A~Kashefi.
 \newblock {\em International Journal of Electrical Power \& Energy Systems},
   33(4):817--826, 2011.
 
+\bibitem{bonnett1997understanding}
+Austin~H Bonnett and GC~Soukup.
+\newblock Understanding the nema motor-generator standards of section
+  mg-1-1993, revision 3, three-phase induction motors.
+\newblock In {\em Record of Conference Papers. IEEE Industry Applications
+  Society 44th Annual Petroleum and Chemical Industry Conference}, pages
+  225--238. IEEE, 1997.
+
 \bibitem{borrelli2017predictive}
 Francesco Borrelli, Alberto Bemporad, and Manfred Morari.
 \newblock {\em Predictive control for linear and hybrid systems}.
@@ -80,11 +102,28 @@ Daolian Chen, Jiahui Jiang, Yanhui Qiu, Jie Zhang, and Fusong Huang.
 \newblock {\em IEEE Transactions on Power Electronics}, 32(10):7591--7601,
   2016.
 
+\bibitem{chen2013examination}
+Tsai-Hsiang Chen, Cheng-Han Yang, and Nien-Che Yang.
+\newblock Examination of the definitions of voltage unbalance.
+\newblock {\em International Journal of Electrical Power \& Energy Systems},
+  49:380--385, 2013.
+
 \bibitem{cucchiella2013environmental}
 Federica Cucchiella, Idiano D'Adamo, and SC~Lenny Koh.
 \newblock Environmental and economic analysis of building integrated
   photovoltaic systems in italian regions.
 \newblock {\em Journal of Cleaner Production}, 98:241--252, 2015.
+
+\bibitem{dugan1996electrical}
+Roger~C Dugan, Mark~F McGranaghan, and H~Wayne Beaty.
+\newblock Electrical power systems quality.
+\newblock {\em New York, NY: McGraw-Hill,| c1996}, 1996.
+
+\bibitem{eugene1986new}
+C~Eugene.
+\newblock A new simple and effective approximate formulation for determination
+  of three-phase unbalance by the voltmeter method.
+\newblock In {\em CIGRE 1986}, page~11, 1986.
 
 \bibitem{exposto2015predictive}
 Bruno Exposto, Rui Rodrigues, JG~Pinto, V{\'\i}tor Monteiro, Delfim Pedrosa,
@@ -100,6 +139,13 @@ Hamza Feroura, Fateh Krim, Billel Tabli, and Abdelbaset Laib.
   current source inverter.
 \newblock In {\em 2017 5th International Conference on Electrical
   Engineering-Boumerdes (ICEE-B)}, pages 1--5. IEEE, 2017.
+
+\bibitem{fortescue1918method}
+Charles~L Fortescue.
+\newblock Method of symmetrical co-ordinates applied to the solution of
+  polyphase networks.
+\newblock {\em Transactions of the American Institute of Electrical Engineers},
+  37(2):1027--1140, 1918.
 
 \bibitem{gao2017model}
 Hang Gao, Dewei Xu, Bin Wu, and Navid~R Zargari.
@@ -320,6 +366,17 @@ Sushree~Sangita Patnaik and Anup~Kumar Panda.
 \newblock {\em International Journal of Electrical Power \& Energy Systems},
   51:298--306, 2013.
 
+\bibitem{pierrat1987unbalance}
+L~Pierrat and JP~Meyer.
+\newblock Unbalance factor it is as simple as abc.
+\newblock {\em Revue G{\'e}n{\'e}rale de l’{\'E}lectricit{\'e}}, (6):18--26,
+  1987.
+
+\bibitem{pillay2001definitions}
+P~Pillay and M~Manyage.
+\newblock Definitions of voltage unbalance.
+\newblock {\em IEEE Power Engineering Review}, 21(5):50--51, 2001.
+
 \bibitem{regaya2014new}
 Chiheb~Ben Regaya, Abderrahmen Zaafouri, and Abdelkader Chaari.
 \newblock A new sliding mode speed observer of electric motor drive based on
@@ -332,6 +389,13 @@ M~Rivera, S~Kouro, J~Rodriguez, B~Wu, V~Yaramasu, J~Espinoza, and P~Melila.
   with low switching frequency.
 \newblock In {\em 4th International Conference on Power Engineering, Energy and
   Electrical Drives}, pages 334--339. IEEE, 2013.
+
+\bibitem{robert1992assessing}
+A~Robert and J~Marquet.
+\newblock Assessing voltage quality with relation to harmonics, flicker and
+  unbalance.
+\newblock In {\em International Conference on Large High Voltage Electric
+  Systems}, volume~2, pages 36--203, 1992.
 
 \bibitem{salloum2014robust}
 Rafik Salloum, Bijan Moaveni, and Mohammad~Reza Arvan.
@@ -370,6 +434,12 @@ SK~A Shezan, S~Julai, MA~Kibria, KR~Ullah, R~Saidur, WT~Chong, and RK~Akikur.
 \newblock Performance analysis of an off-grid wind-pv
   (photovoltaic)-diesel-battery hybrid energy system feasible for remote areas.
 \newblock {\em Journal of Cleaner Production}, 125:121--132, 2016.
+
+\bibitem{singh2007some}
+Asheesh~K Singh, GK~Singh, and R~Mitra.
+\newblock Some observations on definitions of voltage unbalance.
+\newblock In {\em 2007 39th North American Power Symposium}, pages 473--479.
+  IEEE, 2007.
 
 \bibitem{szell2014mathematical}
 K{\'a}roly Sz{\'e}ll and P{\'e}ter Korondi.
@@ -414,6 +484,20 @@ Sasa Vrkalovic, Elena-Cristina Lunca, and Ioan-Daniel Borlea.
 \newblock Model-free sliding mode and fuzzy controllers for reverse osmosis
   desalination plants.
 \newblock {\em Int. J. Artif. Intell}, 16(2):208--222, 2018.
+
+\bibitem{wang2000analytical}
+Yaw-Juen Wang.
+\newblock An analytical study on steady-state performance of an induction motor
+  connected to unbalanced three-phase voltage.
+\newblock In {\em 2000 IEEE Power Engineering Society Winter Meeting.
+  Conference Proceedings (Cat. No. 00CH37077)}, volume~1, pages 159--164. IEEE,
+  2000.
+
+\bibitem{wang2001analysis}
+Yaw-Juen Wang.
+\newblock Analysis of effects of three-phase voltage unbalance on induction
+  motors with emphasis on the angle of the complex voltage unbalance factor.
+\newblock {\em IEEE Transactions on energy conversion}, 16(3):270--275, 2001.
 
 \bibitem{wen2014approximate}
 He~Wen, Da~Cheng, Zhaosheng Teng, Siyu Guo, and Fuhai Li.

@@ -1,8 +1,18 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: dolgozatmain.aux
 The style file: plain.bst
 Database file #1: dolgozat.bib
+Warning--to sort, need author or key in IEEE_141_35071
+Warning--to sort, need author or key in IEEE_112_8635630
+Warning--to sort, need author or key in IEEE_936_29053
+Warning--empty author in IEEE_141_35071
+Warning--empty booktitle in IEEE_141_35071
+Warning--empty author in IEEE_936_29053
+Warning--empty booktitle in IEEE_936_29053
+Warning--empty author in IEEE_112_8635630
+Warning--empty booktitle in IEEE_112_8635630
 Warning--empty year in baumannnew
 Warning--can't use both volume and number fields in itoh1989steady
 Warning--there's a number but no volume in malesani1987three
 Warning--there's a number but no volume in moussaoui2005open
-(There were 4 warnings)
+Warning--there's a number but no volume in pierrat1987unbalance
+(There were 14 warnings)

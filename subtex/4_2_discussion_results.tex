@@ -28,23 +28,7 @@
         \end{description}
         An indicator of the voltage unbalance is supposed to measure the extent of unbalance but it is not expected to classify between the above types.
 
-        \subsection{Standard indicators of unbalance}
-
-            Although the term voltage unbalance is unambiguous, the root phenomenon may be various as well as the standard norms used to measure unbalance. All of these different indicators measure voltage unbalance but each of them does it in a different way (\ref{equ:regular}).
-
-            \begin{equation}
-                \begin{array}{rcl}
-              V_{936}&=&\frac{\max\{V_{an},V_{bn},V_{cn}\}-\min\{V_{an},V_{bn},V_{cn}\}}{\textnormal{mean}\{V_{an},V_{bn},V_{cn}\}}\times100\\
-              V_{112}&=&\frac{\textnormal{max deviation from mean of}\{V_{an},V_{bn},V_{cn}\}}{\textnormal{mean}\{V_{an},V_{bn},V_{cn}\}}\times100\\
-              MDV&=&\frac{\textnormal{max deviation from mean of}\{V_{ab},V_{bc},V_{ca}\}}{\textnormal{mean}\{V_{ab},V_{bc},V_{ca}\}}\times100\\
-              TDV&=&\frac{\textnormal{negative seq.voltage}}{\textnormal{positive seq.voltage}}\times100
-              \end{array}
-              \label{equ:regular}
-              \end{equation}
-
-            The voltages $\{V_{an},V_{bn},V_{cn}\}$ denotes the phase-to-neutral voltages, while $\{V_{ab},V_{bc},V_{ca}\}$ are the line-to-line voltages, $V_1$ is equal to the voltage amplitude of the fundamental frequency and $V_n$ is the voltage amplitude of the $n$-th upper harmonic voltage \cite{bina2011three}  (current unbalance formulations are simply obtained by replacing voltage with current components). Although the harmonic distortion does not relate closely to the asymmetry phenomenon, it might cause a variety of problems like dropping efficiency of electric motors.
-
-            The above four norms measure different values for a single case. The first two standard indicators, $V_{936}$ and $V_{112}$, ignore the $\pm120$ degree phase difference unbalance and only take the amplitudes into account. The last two definitions, $MDV$ and $TDV$, are sensitive to the phase difference unbalance. Nevertheless, these definitions ignore zero sequence components and harmonic distortion that are always present in three-phase four-wire systems \cite{bina2011three}.
+        
 
         \subsection{Proposed geometrical indicator}
 
