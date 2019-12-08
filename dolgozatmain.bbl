@@ -82,6 +82,13 @@ Francesco Borrelli, Alberto Bemporad, and Manfred Morari.
 \newblock {\em Predictive control for linear and hybrid systems}.
 \newblock Cambridge University Press, 2017.
 
+\bibitem{brekken2005control}
+Ted Brekken, Ned Mohan, and Tore Undeland.
+\newblock Control of a doubly-fed induction wind generator under unbalanced
+  grid voltage conditions.
+\newblock In {\em 2005 European Conference on Power Electronics and
+  Applications}, pages 10--pp. IEEE, 2005.
+
 \bibitem{chatterjee2008augmented}
 Amitava Chatterjee, Ranajit Chatterjee, Fumitoshi Matsuno, and Takahiro Endo.
 \newblock Augmented stable fuzzy control for flexible robotic arm using lmi
@@ -158,6 +165,13 @@ Hang Gao, Dewei Xu, Bin Wu, and Navid~R Zargari.
 Bachir Ghalem and Bendiabdellah Azeddine.
 \newblock Six-phase matrix converter fed double star induction motor.
 \newblock {\em Acta Polytechnica Hungarica}, 7(3):163--176, 2010.
+
+\bibitem{gnacinski2019induction}
+Piotr Gnaci{\'n}ski, Marcin Pepli{\'n}ski, Damian Hallmann, and Piotr
+  Jankowski.
+\newblock Induction cage machine thermal transients under lowered voltage
+  quality.
+\newblock {\em IET Electric Power Applications}, 13(4):479--486, 2019.
 
 \bibitem{godlewska2015predictive}
 Agata Godlewska and Andrzej Sikorski.
@@ -415,6 +429,12 @@ Yukihiko Sato and Teruo Kataoka.
 \newblock {\em IEEE transactions on industry applications}, 29(6):1090--1097,
   1993.
 
+\bibitem{savaghebi2012secondary}
+Mehdi Savaghebi, Alireza Jalilian, Juan~C Vasquez, and Josep~M Guerrero.
+\newblock Secondary control scheme for voltage unbalance compensation in an
+  islanded droop-controlled microgrid.
+\newblock {\em IEEE Transactions on Smart Grid}, 3(2):797--807, 2012.
+
 \bibitem{huat2015integration}
 Lip~Huat Saw, Yonghuang Ye, and Andrew~AO Tay.
 \newblock Integration issues of lithium-ion battery into electric vehicles
@@ -434,6 +454,12 @@ SK~A Shezan, S~Julai, MA~Kibria, KR~Ullah, R~Saidur, WT~Chong, and RK~Akikur.
 \newblock Performance analysis of an off-grid wind-pv
   (photovoltaic)-diesel-battery hybrid energy system feasible for remote areas.
 \newblock {\em Journal of Cleaner Production}, 125:121--132, 2016.
+
+\bibitem{siddique2004effects}
+Arfat Siddique, GS~Yadava, and Bhim Singh.
+\newblock Effects of voltage unbalance on induction motors.
+\newblock In {\em Conference Record of the 2004 IEEE International Symposium on
+  Electrical Insulation}, pages 26--29. IEEE, 2004.
 
 \bibitem{singh2007some}
 Asheesh~K Singh, GK~Singh, and R~Mitra.

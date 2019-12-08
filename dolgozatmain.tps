@@ -12,13 +12,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=508
+NormalPos.bottom=554
 Class=LaTeXView
 Document=subtex\8_abbreviations.tex
 
 [Frame0_View0,0]
 TopLine=0
-Cursor=704
+Cursor=560
 
 [Frame1]
 Flags=0
@@ -30,13 +30,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=508
+NormalPos.bottom=554
 Class=LaTeXView
 Document=dolgozatmain.tex
 
 [Frame1_View0,0]
-TopLine=141
-Cursor=3991
+TopLine=79
+Cursor=2774
 
 [Frame2]
 Flags=0
@@ -48,7 +48,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=508
+NormalPos.bottom=554
 Class=LaTeXView
 Document=subtex\6_thesis.tex
 
@@ -66,13 +66,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=508
+NormalPos.bottom=554
 Class=BibTeXView
 Document=dolgozat.bib
 
 [Frame3_View0,0]
-TopLine=360
-Cursor=12701
+TopLine=536
+Cursor=18690
 
 [Frame4]
 Flags=0
@@ -84,13 +84,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1562
-NormalPos.bottom=508
+NormalPos.bottom=554
 Class=LaTeXView
 Document=subtex\3_1_basics_unbalance.tex
 
 [Frame4_View0,0]
-TopLine=60
-Cursor=3994
+TopLine=168
+Cursor=9993
 
 [SessionInfo]
 FrameCount=5

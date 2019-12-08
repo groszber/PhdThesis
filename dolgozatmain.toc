@@ -11,12 +11,12 @@
 \contentsline {section}{\numberline {2.3}Summary}{9}% 
 \contentsline {section}{\numberline {2.4}Three-phase buck-type rectifiers}{9}% 
 \contentsline {subsection}{\numberline {2.4.1}Basic operation principles}{10}% 
-\contentsline {section}{\numberline {2.5}Basis of quadratic optimization and model predictive control (MPC)}{11}% 
+\contentsline {section}{\numberline {2.5}Basis of quadratic optimization and model predictive control (MPC)}{12}% 
 \contentsline {subsection}{\numberline {2.5.1}Constained optimal control}{12}% 
 \contentsline {subsection}{\numberline {2.5.2}Stablilty of MPC}{14}% 
 \contentsline {section}{\numberline {2.6}Explicit model predictive control (EMPC)}{16}% 
 \contentsline {subsection}{\numberline {2.6.1}Storage of critical regions}{17}% 
-\contentsline {section}{\numberline {2.7}Summary}{18}% 
+\contentsline {section}{\numberline {2.7}Summary}{17}% 
 \contentsline {chapter}{\numberline {3}Geometrical indicator for voltage asymmetry in three phase networks}{19}% 
 \contentsline {section}{\numberline {3.1}Network structure}{19}% 
 \contentsline {section}{\numberline {3.2}Voltage deviations}{19}% 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  8 DEC 2019 17:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  8 DEC 2019 19:46
 entering extended mode
 **./dolgozatmain.tex
 (dolgozatmain.tex
@@ -1540,13 +1540,16 @@ LaTeX Warning: Reference `equ:regular' on page 6 undefined on input line 5.
 
 ] [7]
 
-LaTeX Warning: Citation `wang2001analysis' on page 8 undefined on input line 116.
+LaTeX Warning: Citation `gnacinski2019induction' on page 8 undefined on input line 130.
 
 
-LaTeX Warning: Citation `singh2007some' on page 8 undefined on input line 116.
+LaTeX Warning: Citation `savaghebi2012secondary' on page 8 undefined on input line 130.
 
 
-LaTeX Warning: Citation `chen2013examination' on page 8 undefined on input line 116.
+LaTeX Warning: Citation `siddique2004effects' on page 8 undefined on input line 130.
+
+
+LaTeX Warning: Citation `brekken2005control' on page 8 undefined on input line 130.
 
 [8]) (subtex/3_3_basics_empc.tex [9]
 
@@ -1570,20 +1573,20 @@ LaTeX Warning: Command \textendash invalid in math mode on input line 32.
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 32.
 
-[10]
+[10] [11 <./EMPC_PNG_Pics/Waves.png>]
 
 Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
 Make it at least 27.11469pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[11 <./EMPC_PNG_Pics/Waves.png>] [12] [13] [14] [15] [16]
+[12] [13] [14] [15] [16]
 <EMPC_PNG_Pics/BasicSearchTree.png, id=103, 985.88326pt x 359.54324pt>
 File: EMPC_PNG_Pics/BasicSearchTree.png Graphic file (type png)
 <use EMPC_PNG_Pics/BasicSearchTree.png>
 Package pdftex.def Info: EMPC_PNG_Pics/BasicSearchTree.png  used on input line 378.
 (pdftex.def)             Requested size: 398.3386pt x 145.26859pt.
-) [17 <./EMPC_PNG_Pics/BasicSearchTree.png>] [18]
+) [17] [18 <./EMPC_PNG_Pics/BasicSearchTree.png>]
 Chapter 3.
 (subtex/4_2_discussion_results.tex
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/network_gray.eps>
@@ -1995,27 +1998,32 @@ Overfull \hbox (57.33714pt too wide) in alignment at lines 106--109
 ] (dolgozatmain.bbl [60
 
 ]
-Underfull \hbox (badness 2020) in paragraph at lines 86--91
+Underfull \hbox (badness 2020) in paragraph at lines 93--98
 []\T1/cmr/m/n/12 Amitava Chat-ter-jee, Rana-jit Chat-ter-jee, Fu-mi-toshi Mat-suno, and
  []
 
-[61] [62] [63]
-Underfull \hbox (badness 10000) in paragraph at lines 333--340
+[61]
+Underfull \hbox (badness 2088) in paragraph at lines 170--175
+[]\T1/cmr/m/n/12 Piotr Gnaci«ski, Marcin Pepli«ski, Damian Hall-mann, and Pi-otr
+ []
+
+[62] [63]
+Underfull \hbox (badness 10000) in paragraph at lines 347--354
 []\T1/cmr/m/n/12 László Neukirch-ner, Nim-ród Ku-tasi, An-drás Kele-men, At-tila
  []
 
 
-Underfull \hbox (badness 4429) in paragraph at lines 333--340
+Underfull \hbox (badness 4429) in paragraph at lines 347--354
 \T1/cmr/m/n/12 Fodor, and At-tila Mag-yar.  Con-strained pre-dic-tive con-trol of
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 333--340
+Underfull \hbox (badness 2310) in paragraph at lines 347--354
 \T1/cmr/m/n/12 three-phase buck rec-ti-fiers sim-u-la-tion de-tails.  In \T1/cmr/m/it/12 http://virt.uni-
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 333--340
+Underfull \hbox (badness 1226) in paragraph at lines 347--354
 \T1/cmr/m/it/12 pannon.hu/ver/index.php/en/projects/30-empc-csr\T1/cmr/m/n/12 . Uni-ver-sity of Pan-
  []
 
@@ -2028,10 +2036,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 52061 strings out of 492897
- 1300709 string characters out of 3133501
- 1525223 words of memory out of 3000000
- 55179 multiletter control sequences out of 15000+200000
+ 52065 strings out of 492897
+ 1300798 string characters out of 3133501
+ 1525235 words of memory out of 3000000
+ 55183 multiletter control sequences out of 15000+200000
  556469 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,17n,96p,4404b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2053,9 +2061,9 @@ fonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb>
-Output written on dolgozatmain.pdf (75 pages, 2645774 bytes).
+Output written on dolgozatmain.pdf (75 pages, 2647723 bytes).
 PDF statistics:
- 959 PDF objects out of 1000 (max. 8388607)
+ 960 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
