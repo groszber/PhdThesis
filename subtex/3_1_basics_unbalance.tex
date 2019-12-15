@@ -4,7 +4,19 @@
 	
 	Voltage unbalance is such a phenomena where the three phase voltages differ in amplitude normal 120 degree phase relationship, but mot cases both are happening at the same time. This includes unequal voltage magnitudes at the fundamental frequency, either under, or over voltage, at the fundamental phase angle deviation. This is observed as a frequently cited power quality issue in low-voltage domestic distribution networks and in systems that supply large single phase loads unevenly distributed. Effects of voltage unbalance are complex, but can be categorized as structural or functional. The former refers to the asymmetry in the three- phase impedances of transmission lines, cables, transformers, etc. It occurs because it is neither economical nor necessary to maintain distribution system with perfectly symmetrical impedances. The latter refers to uneven distribution of power consumption over the three phases. Although the term voltage unbalance is unambiguous, the root phenomenon may be various as well as the standard norms used to measure unbalance. All of these different indicators measure voltage unbalance but each of them does it in a different way (\ref{equ:regular}). In this section a detailed explanation is presented about the types of currently used method for indication.
 	
-	\subsection{Non standardised approximations formulas}
+	\section{Types of voltage deviations}
+
+        \textcolor{red}{The paper focuses on three types of voltage deviations. The first fall in to the category of unbalance, namely any kind of phase deviations, and unbalanced amplitude deviations, and balanced amplitude deviations, like under-voltage.} There are many different technological causes with more or less practical importance. The following conditions are examined and tested in the sequel:
+        \begin{description}
+        \item[Single phase under-voltage unbalance]  If there is a single phase uncompensated overload in the system, the voltage in the overloaded phase will be lower than the other two.
+        \item[Two phase under-voltage unbalance]  Two of the three phases are overloaded without compensation, the two overloaded phases will have higher voltage drop than the third phase.
+        Balanced three phase under-voltage]  The loads of all three phases are overloaded in an unbalanced manner.
+        \item[Unbalanced single phase angle]  If the three phase voltage amplitudes are balanced but the relative angles between them (ideally it should be equal to $\pm120$ degree). It is assumed, that phase A would be the reference. If one of the other two phase angles is deflected, unequal displacement.
+        \item[Unbalanced two phase angles displacement] Similar to the single phase angle unbalance, if the other two phase angles are both deflected, then unequal angle displacement in two phase angles occurs.
+        \end{description}
+        An indicator of the voltage unbalance is supposed to measure the extent of unbalance but it is not expected to classify between the above types.
+	
+	\subsection{Non standardized approximations formulas}
 	
 	Up to now, the following definitions have not been adopted by any standard or rule to indicate the degree of voltage unbalance, but used by various manufacturers. Firstly based on \cite{eugene1986new} recommended by CIGRE, the voltage unbalance is determined with the following \ref{BASICUNB:equ:CIRGE}:
 	
@@ -123,13 +135,13 @@ sequence voltage phasor to the positive-sequence voltage phasor studied in \cite
     \end{equation}
 		
 		where $k_v$ is the magnitude and $\theta_v$ is the angle of $CVUF$.
-	
-            
+		
+			It can be observed, that the previously mentioned [REF] norms indicate different values for a single case with various correlations. The first two standard indicators, $PVUR_{936}$ and $PVUR_{141}$ (ETC..), ignore the $\pm120$ degree phase difference unbalance and only take the amplitudes into account. The current state of the art definition in use, $VUF$, is sensitive to the phase difference unbalance. Lastly $CVUF$ considers also phase and magnitude of the voltage unbalance, but the two units are hard to merge together as the optimization cost of a cost function. Moreover, these definitions ignore zero sequence components and harmonic distortion that are always present in three-phase four-wire systems \cite{bina2011three}.
+		          
 	\section{Effects of voltage unbalance}
 	
 	Many power systems, voltage parameters change over time. Variation of power quality disturbances leads to thermal transients in electrical machines. This problem can be especially important in the case of low-power machines, because they have shorter time constants than high-power ones. The rate of thermal responses of a machine also significantly depends on the type of power quality disturbances. Voltage unbalance can cause  machine  overheating  within  a  mere  few  minutes. Furthermore,  fluctuating  unbalance  could  cause  an  extraordinary rise  in  windings  temperature  and  additional  thermo-mechanical stress.  Consequently,  voltage  unbalance  is  found  to  be  more harmful to induction motors than the results from previous works \cite{gnacinski2019induction}. Additionally beside the heat factor, voltage unbalance can cause increased reactive power \cite{savaghebi2012secondary}, various copper loss \cite{siddique2004effects} torque pulsation in electric motors \cite{brekken2005control} have been studied.
 
-	\section{Summary}
+%	\section{Summary}
 	
-	It can be observed, that the previously mentioned [REF] norms indicate different values for a single case with various correlations. The first two standard indicators, $PVUR_{936}$ and $PVUR_{141}$ (ETC..), ignore the $\pm120$ degree phase difference unbalance and only take the amplitudes into account. The last two definitions, $MDV$ and $TDV$, are sensitive to the phase difference unbalance. Lastly $CVUF$ considers also phase and magnutude of the voltage unbalance, but the two units are hard to merge together as the omptimization cost of a cost function. Moreover, these definitions ignore zero sequence components and harmonic distortion that are always present in three-phase four-wire systems \cite{bina2011three}.
 
