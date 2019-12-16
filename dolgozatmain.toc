@@ -1,4 +1,5 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}% 
+\contentsline {section}{\numberline {1.1}Literature overview}{2}% 
 \contentsline {chapter}{\numberline {2}Basic notions}{6}% 
 \contentsline {section}{\numberline {2.1}Definition of voltage unbalance}{6}% 
 \contentsline {section}{\numberline {2.2}Types of voltage deviations}{6}% 
@@ -10,31 +11,30 @@
 \contentsline {section}{\numberline {2.4}Three-phase buck-type rectifiers}{10}% 
 \contentsline {subsection}{\numberline {2.4.1}Basic operation principles}{10}% 
 \contentsline {section}{\numberline {2.5}Basis of quadratic optimization and model predictive control (MPC)}{12}% 
-\contentsline {subsection}{\numberline {2.5.1}Constained optimal control}{12}% 
+\contentsline {subsection}{\numberline {2.5.1}Constained optimal control}{13}% 
 \contentsline {subsection}{\numberline {2.5.2}Stablilty of MPC}{15}% 
-\contentsline {section}{\numberline {2.6}Explicit model predictive control (EMPC)}{16}% 
+\contentsline {section}{\numberline {2.6}Explicit model predictive control (EMPC)}{17}% 
 \contentsline {subsection}{\numberline {2.6.1}Storage of critical regions}{17}% 
 \contentsline {chapter}{\numberline {3}Voltage unbalance compensation with optimization based control algorithm and asymmetrical inverter structure}{19}% 
 \contentsline {section}{\numberline {3.1}Thesis: Geometrical indicator for voltage unbalance in three phase networks}{19}% 
-\contentsline {section}{\numberline {3.2}Introduction}{19}% 
-\contentsline {section}{\numberline {3.3}Network structure}{20}% 
-\contentsline {section}{\numberline {3.4}Proposed geometrical indicator}{20}% 
-\contentsline {section}{\numberline {3.5}The method's additional content compared to VUF}{21}% 
-\contentsline {section}{\numberline {3.6}Thesis: Voltage unbalance compensation with optimization based control algorithm and asymmetrical inverter structure}{25}% 
-\contentsline {section}{\numberline {3.7}Unbalance compensation}{26}% 
-\contentsline {subsection}{\numberline {3.7.1}Problem statement}{26}% 
-\contentsline {subsection}{\numberline {3.7.2}Control problem}{26}% 
-\contentsline {subsection}{\numberline {3.7.3}Asymmetrical inverter structure}{27}% 
-\contentsline {subsubsection}{Measurements from a real unbalanced network}{29}% 
-\contentsline {subsection}{\numberline {3.7.4}Optimization based control algorithm}{30}% 
-\contentsline {section}{\numberline {3.8}Discussion}{32}% 
-\contentsline {subsection}{\numberline {3.8.1}Dynamical simulation based experiments}{32}% 
-\contentsline {subsection}{\numberline {3.8.2}Performance analysis}{32}% 
-\contentsline {subsubsection}{Robustness analysis}{32}% 
-\contentsline {subsection}{\numberline {3.8.3}Environmental effect}{33}% 
+\contentsline {section}{\numberline {3.2}Network structure}{19}% 
+\contentsline {section}{\numberline {3.3}Proposed geometrical indicator}{20}% 
+\contentsline {section}{\numberline {3.4}The method's additional content compared to VUF}{21}% 
+\contentsline {section}{\numberline {3.5}Thesis: Voltage unbalance compensation with optimization based control algorithm and asymmetrical inverter structure}{25}% 
+\contentsline {section}{\numberline {3.6}Unbalance compensation}{25}% 
+\contentsline {subsection}{\numberline {3.6.1}Problem statement}{25}% 
+\contentsline {subsection}{\numberline {3.6.2}Control problem}{26}% 
+\contentsline {subsection}{\numberline {3.6.3}Asymmetrical inverter structure}{26}% 
+\contentsline {subsubsection}{Measurements from a real unbalanced network}{28}% 
+\contentsline {subsection}{\numberline {3.6.4}Optimization based control algorithm}{29}% 
+\contentsline {section}{\numberline {3.7}Discussion}{31}% 
+\contentsline {subsection}{\numberline {3.7.1}Dynamical simulation based experiments}{31}% 
+\contentsline {subsection}{\numberline {3.7.2}Performance analysis}{32}% 
+\contentsline {subsubsection}{Robustness analysis}{33}% 
+\contentsline {subsection}{\numberline {3.7.3}Environmental effect}{33}% 
 \contentsline {subsubsection}{Power loss reduction on the network}{33}% 
 \contentsline {subsubsection}{CO2 footprint}{34}% 
-\contentsline {section}{\numberline {3.9}Conclusion}{34}% 
+\contentsline {section}{\numberline {3.8}Conclusion}{35}% 
 \contentsline {chapter}{\numberline {4}Constrained, explicit predictive control for current source buck-type rectifiers}{37}% 
 \contentsline {section}{\numberline {4.1}Thesis: Constrained, explicit predictive control for current source buck-type rectifiers}{37}% 
 \contentsline {section}{\numberline {4.2}Modeling}{37}% 
