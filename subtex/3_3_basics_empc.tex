@@ -60,7 +60,7 @@ space vector $\vec{i}_{ref}$.
 
 The modulation methods were evaluated in and choosen for this paper based on \cite{moussaoui2005open}, which ensures minimum switching-losses, minimum ripple values of the input capacitor voltages and of the output inductor current. According to this modulation, each pulse interval comprises two active states and a freewheeling state, arranged symmetrically about the middle of the pulse interval (see Table \ref{EMPC:tbl:sequence}). For more in depth functional description see Chapter 5.
 
-\section{Basis of quadratic optimization and model predictive control (MPC)}
+\section{Quadratic optimization and model predictive control (MPC)}
 	
 	Predictive control methods based on a model are optimal regulators, with a defined cost function on a defined and encompassed  	prediction horizon with restrictions [N9], [N25], [N4], [N16], [N55]. The control signal is calculated over a defined horizon, but from the sequence of applicable control signals only the first one is used in the next sample. This procedure is repeated according to the principle of the moving horizon, using new iterations, as such provides the reaction in each sample. This method was developed for systems with physical restrictions, in the first stage for the control of chemical processes in the oil industry, then it was applied to various rapid processes from automotive or power electronics industry [N1] , [N13]. By default the optimization problem can be solved, for each sample, or explicitly using the multi-parameter programming techniques (mp-LP, mp-QP) presented in [N-ANNEX 1], over a well-defined parameter space.
 	MPC example
@@ -247,7 +247,10 @@ with the cost function to minimize:
 		The optimal control inputs estimated for future samples are not taken into account and the algorithm is
 repeated on the basis of new measurements or a new estimation of the states.
 
-\subsection{Stablilty of MPC}		
+\subsection{Stability of MPC}		
+
+\textbf{Lyapunov stability}\\
+\\
 	
 	The problem of closed system stability with the predictive control has been extensively studied e.g. in [N97], [N54]. In the first generation of model based controllers, stability was achieved more experimentally by choosing parameters based on previous studies and experiences. In 1988 Keerthi and Gilbert introduced the Lyapunov stability method for discrete systems [N65] , and in 1990 Mayne and Michalska for continuous systems [N96]. In this fashion, by using cost function, as a candidate for Lyapunov function, several methods of analysis have been developed, guaranteeing stability. 
 	As basis the unconstrained LQR \ref{BASICMPC:equ:cost_function} is serving to create the Lypunov function such as:
