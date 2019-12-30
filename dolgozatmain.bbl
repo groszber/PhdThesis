@@ -191,6 +191,13 @@ P{\'e}ter G{\"o}rbe, Attila Magyar, and Katalin~M Hangos.
   sources and applying ev batteries.
 \newblock {\em Journal of cleaner production}, 34:125--137, 2012.
 
+\bibitem{guo2018advanced}
+Xiaoqiang Guo, Yong Yang, and Xue Zhang.
+\newblock Advanced control of grid-connected current source converter under
+  unbalanced grid voltage conditions.
+\newblock {\em IEEE Transactions on Industrial Electronics}, 65(12):9225--9233,
+  2018.
+
 \bibitem{gupta2014two}
 Sandeep Gupta and Ramesh~Kumar Tripathi.
 \newblock Two-area power system stability improvement using a robust
@@ -499,6 +506,12 @@ Istvan Vajda, Yury~N Dementyev, Kirill~N Negodin, Nikolay~V Kojain, Leonid~S
   under frequency vector control.
 \newblock {\em Acta Polytechnica Hungarica}, 14(6):7--27, 2017.
 
+\bibitem{vekhande2015control}
+Vishal Vekhande, VK~Kanakesh, and Baylon~G Fernandes.
+\newblock Control of three-phase bidirectional current-source converter to
+  inject balanced three-phase currents under unbalanced grid voltage condition.
+\newblock {\em IEEE Transactions on power electronics}, 31(9):6719--6737, 2015.
+
 \bibitem{venkatraman2018multilevel}
 Thiyagarajan Venkatraman and Somasundaram Periasamy.
 \newblock Multilevel inverter topology with modified pulse width modulation and
@@ -510,6 +523,13 @@ Sasa Vrkalovic, Elena-Cristina Lunca, and Ioan-Daniel Borlea.
 \newblock Model-free sliding mode and fuzzy controllers for reverse osmosis
   desalination plants.
 \newblock {\em Int. J. Artif. Intell}, 16(2):208--222, 2018.
+
+\bibitem{wang2014virtual}
+Xiongfei Wang, Yun~Wei Li, Frede Blaabjerg, and Poh~Chiang Loh.
+\newblock Virtual-impedance-based control for voltage-source and current-source
+  converters.
+\newblock {\em IEEE Transactions on Power Electronics}, 30(12):7019--7037,
+  2014.
 
 \bibitem{wang2000analytical}
 Yaw-Juen Wang.
@@ -524,6 +544,13 @@ Yaw-Juen Wang.
 \newblock Analysis of effects of three-phase voltage unbalance on induction
   motors with emphasis on the angle of the complex voltage unbalance factor.
 \newblock {\em IEEE Transactions on energy conversion}, 16(3):270--275, 2001.
+
+\bibitem{wang2016dc}
+Zheng Wang, Bin Wu, Dewei Xu, Ming Cheng, and Liang Xu.
+\newblock Dc-link current ripple mitigation for current-source grid-connected
+  converters under unbalanced grid conditions.
+\newblock {\em IEEE Transactions on Industrial Electronics}, 63(8):4967--4977,
+  2016.
 
 \bibitem{wen2014approximate}
 He~Wen, Da~Cheng, Zhaosheng Teng, Siyu Guo, and Fuhai Li.
