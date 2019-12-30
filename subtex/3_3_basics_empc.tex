@@ -1,5 +1,77 @@
+\section{Current source inverters}
+
+Single-phase inverter's operating principles are different in each converter. The main features of the different approaches are reviewed and presented in the following. Although these converters cover the low-power range, they are widely used in power supplies or single-phase supplies. For this thesis a domestic current source inverter is considered, which fits into this category.\\
+A current source inverter is composed of capacitors, switches, and diodes, where an array of two switches is called inverter leg shown in Fig.\ref{BASICCSR:fig:SingleCSI}. The capacitors required to provide a neutral point, such that each capacitor maintains a constant voltage.
+
+\begin{figure}[!ht]
+        \centering
+        \includegraphics[width=0.6\textwidth]{EMPC_PNG_Pics/CurrentSourceInverter.png}
+        \caption{Topology of a singly phase current source inverter, where $V_i$, and $V_o$ are the input and output voltages, $i_i$, and $i_o$ are the input and output currents respectively. $L_+$ and $L_-$ are current filter inductances, $S_{1+}$, $S_{2+}$, $D_{1+}$, and $D_{2+}$ are the higher switches (controlled IGBTs for instance) and diodes, and $S_{1-}$, $S_{2-}$, $D_{1-}$, and $D_{2-}$ are the lower switches and diodes respectively.}
+        \label{BASICCSR:fig:SingleCSI}
+    \end{figure}
+
+The inductors required are large, such that the inductors
+maintain a constant current $i_i$. Current-source topologies feature a low switching $\frac{dV}{dt}$ and reliable over-current or short-circuit protection. In order to operate properly the current-source inverter, we need to adhere to the following rules:
+\begin{itemize}
+\item Top or bottom switches of the different legs cannot be off simultaneously, because no current path is provided to the input inductors.
+\item Diode in series to each switch must be placed, because a short circuit across the output voltage $V_o$ would be produced. If the commercial switch does not include anti- parallel diodes, then the circuit is already complete.
+\item In practical implementation, an overlapping time must be considered in the control signals of the top or bottom switches of the different legs.
+\end{itemize}
+
+According to the previous rules, it should be noticed that both switches of the inverter leg can be turned on at the same time, and this is not possible in voltage source inverters. There are four ($1^{st}$ to $4^{th}$) defined states of the switches and one not permitted switching state ($5^{th}$ state) as shown in Table \ref{BASICCSR:table:CSIstates}. The modulating technique should always ensure that at any instant, at least one of the top and bottom switch of the inverter legs is on, otherwise the inverter will be damaged.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\centering
+\begin{tabu}{|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Components conducting} & \multirow{2}{*}{State} & \multicolumn{3}{c|}{Output voltages}                \\ \cline{1-4} \cline{6-8} 
+$S_{1+}$       & $S_{2+}$       & $S_{1-}$      & $S_{2-}$      &                        & $V_{an}$              & $V_{bn}$              & $V_{o}$           \\ \tabucline[2pt]{-}
+1         & 0         & 0        & 1        & 1                      & $V_{i}/2$            & -$V_{i}/2$           & $V_{i}$           \\ \hline
+0         & 1         & 1        & 0        & 2                      & -$V_{i}/2$          & $V_{i}/2$            & -$V_{i}$          \\ \hline
+1         & 1         & 0        & 0        & 3                      & $V_{i}/2$             & $V_{i}/2$            & 0             \\ \hline
+0         & 0         & 1        & 1        & 4                      & -$V_{i}/2$           & -$V_{i}/2$          & 0             \\ \hline
+0         & -         & 0        & -        & \multirow{2}{*}{5}     & \multicolumn{3}{c|}{\multirow{2}{*}{Not permitted}} \\ \cline{1-4}
+-         & 0         & -        & 0        &                        & \multicolumn{3}{c|}{}                               \\ \hline
+\end{tabu}
+\caption{Switching states of the current source inverter, where $V_{an}$, $V_{bn}$ are the $a$ and $b$ point's potential to ground.}
+\label{BASICCSR:table:CSIstates}
+\end{table}
+
+The ideal waveforms are shown in Fig.\ref{BASICCSR:fig:CSIwave}. 
+
+\begin{figure}[!ht]
+        \centering
+        \includegraphics[width=0.7\textwidth]{EMPC_PNG_Pics/CSIwaves.png}
+        \caption{The CSI, ideal waveforms for the unipolar modulation: (A) carrier and modulating signals, (B) switch $S_{1+}$'s state, (C) switch $S_{2+}$'s state, and (D) AC output current.}
+        \label{BASICCSR:fig:CSIwave}
+    \end{figure}
+
+The states for the switches are defined by the modulating technique, which in this case is a carrier-based PWM, but unipolar output is considered. For the CSIs, different output filters may be employed, in order to provide the fundamental component of the output waveform. Depending on the application, it would be desirable to provide a voltage or current output.
+
+
 \section{Three-phase buck-type rectifiers}
-	
+
+Three-phase controlled rectifiers have a wide range of applications, from small rectifiers to large high-voltage direct-current
+transmission systems. They are used for electrochemical processes, many kinds of motor drives, traction equipment, controlled power supplies, and many other applications. In this thesis only force commuted rectifiers are examined, which are built with semiconductors (IGBTs in this case) with gate-turn-off capability. The gate-turn-off capability allows full control of the converter, because valves can be switched ON and OFF whenever is required. This allows the commutation of the valves, hundreds of times in one period that is not possible with line-commutated rectifiers, where IGBTs are switched ON and OFF only once a cycle. This has the following advantages:
+\begin{itemize}
+\item The current or voltage can be (pulse width) modulated, generating less harmonic contamination.
+\item The power factor can be controlled and even it can be made leading.
+\item They can be built as voltage-source or current-source based on the required application.
+\item The reversal of power in switching rectifiers is by reversal of voltage at the DC link. This allows force commutated rectifiers can be implemented for both, reversal of voltage or reversal of current.
+\end{itemize}
+
+There are two ways to implement force commutated three phase rectifiers (Fig.\ref{BASICCSR:fig:topologies}), as a current-source rectifier, where power reversal is by dc voltage reversal, and as a voltage-source rectifier, where power reversal is by current reversal at the dc link.
+
+\begin{figure}[!ht]
+        \centering
+        \includegraphics[width=0.9\textwidth]{EMPC_PNG_Pics/CurrentVoltageRectifiers.png}
+        \caption{Basic topologies of force commuted rectifiers.}
+        \label{BASICCSR:fig:topologies}
+    \end{figure}
+
+
 As  general case a front-end  converter power supply (e.g. lighting or telecommunications) shall designed that should have approximately these general characteristics: sinusoidal main currents, unity power factor, high power density and simplicity of the power circuit structure. Two structures are most fitted for the task. First a boost-type input rectifier (e.g., Vienna rectifier, \cite{kolar1996design}), that typically features two $400V$ output voltages with a three-level isolated  DC-DC  converter  or  two  isolated  DC-DC  output  stage (see Fig. \ref{EMPC:fig:network} in Ch.5.). The second candidate is the buck-type  input  rectifier (or current source rectifier (CSR))  (conventionally  six-switch topologies as proposed in \cite{zargari1993current}, \cite{sato1993state}) with only one two-level isolated  DC-DC  converter  output  stage.  Also the  input  stage  can be realized as a three-switch topology with considerably  lower  system  complexity  as  compared  to  the boost-type structure. In particular, the number of utilized active and passive components is much lower. Furthermore, there is no middle-point that has to be stabilized, as this is the case for the boost-type structures, making control and active filter design less complex. Further system advantages are the potential of direct start-up and the implicit over current protection in case of an output short circuit. Therefore, this topologies of high interest for many safety critical applications as such future electric aircraft, or automotive applications or as power supplies for process technology \cite{nussbaumer2007comprehensive}.
 The three-switch buck rectifier topology was first proposed in \cite{malesani1987three}. In \cite{itoh1989steady} and \cite{tooth2000effects}, aspects of the system modulation and control have been treated. The application of the topology used as an active filter is discussed in \cite{salo2005three}.  The addition of a DC-DC output boost-stage has been proposed in \cite{baumannnew} in order to main- tain 400-V output voltage for a wide input voltage range and for the case of unbalanced mains as, e.g., the loss of one phase.
 
