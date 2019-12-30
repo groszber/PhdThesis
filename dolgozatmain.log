@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  30 DEC 2019 11:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  30 DEC 2019 13:17
 entering extended mode
 **./dolgozatmain.tex
 (dolgozatmain.tex
@@ -1607,7 +1607,14 @@ LaTeX Warning: Reference `equ:regular' on page 8 undefined on input line 5.
 
 [8
 
-] [9] [10]) (subtex/3_3_basics_empc.tex [11]
+] [9] [10]
+
+LaTeX Warning: Citation `betz2006symmetry' on page 11 undefined on input line 139.
+
+
+LaTeX Warning: Citation `hang2015online' on page 11 undefined on input line 139.
+
+[11]) (subtex/3_3_basics_empc.tex [12]
 
 LaTeX Warning: Command \textdegree invalid in math mode on input line 27.
 
@@ -1616,15 +1623,13 @@ LaTeX Warning: Command \textdegree invalid in math mode on input line 27.
 
 Missing character: There is no ° in font cmr12!
 
-LaTeX Warning: Reference `nussbaumer2007comprehensive' on page 12 undefined on input line 27.
+LaTeX Warning: Reference `nussbaumer2007comprehensive' on page 13 undefined on input line 27.
 
-[12]
 <EMPC_PNG_Pics/Waves.png, id=87, 832.91174pt x 440.24475pt>
 File: EMPC_PNG_Pics/Waves.png Graphic file (type png)
 <use EMPC_PNG_Pics/Waves.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Waves.png  used on input line 31.
 (pdftex.def)             Requested size: 398.3386pt x 210.54256pt.
-
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 32.
 
@@ -2081,36 +2086,36 @@ Overfull \hbox (57.33714pt too wide) in alignment at lines 107--110
 ] (dolgozatmain.bbl [62
 
 ]
-Underfull \hbox (badness 2020) in paragraph at lines 93--98
+Underfull \hbox (badness 2020) in paragraph at lines 101--106
 []\T1/cmr/m/n/12 Amitava Chat-ter-jee, Rana-jit Chat-ter-jee, Fu-mi-toshi Mat-suno, and
  []
 
 [63]
-Underfull \hbox (badness 2088) in paragraph at lines 170--175
+Underfull \hbox (badness 2088) in paragraph at lines 178--183
 []\T1/cmr/m/n/12 Piotr Gnaci«ski, Marcin Pepli«ski, Damian Hall-mann, and Pi-otr
  []
 
-[64] [65]
-Underfull \hbox (badness 10000) in paragraph at lines 354--361
+[64] [65] [66]
+Underfull \hbox (badness 10000) in paragraph at lines 369--376
 []\T1/cmr/m/n/12 László Neukirch-ner, Nim-ród Ku-tasi, An-drás Kele-men, At-tila
  []
 
 
-Underfull \hbox (badness 4429) in paragraph at lines 354--361
+Underfull \hbox (badness 4429) in paragraph at lines 369--376
 \T1/cmr/m/n/12 Fodor, and At-tila Mag-yar.  Con-strained pre-dic-tive con-trol of
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 354--361
+Underfull \hbox (badness 2310) in paragraph at lines 369--376
 \T1/cmr/m/n/12 three-phase buck rec-ti-fiers sim-u-la-tion de-tails.  In \T1/cmr/m/it/12 http://virt.uni-
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 354--361
+Underfull \hbox (badness 1226) in paragraph at lines 369--376
 \T1/cmr/m/it/12 pannon.hu/ver/index.php/en/projects/30-empc-csr\T1/cmr/m/n/12 . Uni-ver-sity of Pan-
  []
 
-[66] [67] [68] [69]) [70] (dolgozatmain.aux)
+[67] [68] [69]) [70] (dolgozatmain.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -2119,10 +2124,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 52063 strings out of 492897
- 1300600 string characters out of 3133501
+ 52065 strings out of 492897
+ 1300635 string characters out of 3133501
  1523276 words of memory out of 3000000
- 55187 multiletter control sequences out of 15000+200000
+ 55189 multiletter control sequences out of 15000+200000
  556469 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,17n,96p,2567b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2144,7 +2149,7 @@ fonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb>
-Output written on dolgozatmain.pdf (78 pages, 2652445 bytes).
+Output written on dolgozatmain.pdf (78 pages, 2653829 bytes).
 PDF statistics:
  972 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

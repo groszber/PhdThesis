@@ -6,13 +6,13 @@
 \contentsline {subsection}{\numberline {2.2.1}Non standardized approximations formulas}{9}% 
 \contentsline {subsection}{\numberline {2.2.2}LVUR}{10}% 
 \contentsline {subsection}{\numberline {2.2.3}PVUR}{10}% 
-\contentsline {subsection}{\numberline {2.2.4}VUF and CVUF}{10}% 
-\contentsline {section}{\numberline {2.3}Three-phase buck-type rectifiers}{11}% 
+\contentsline {subsection}{\numberline {2.2.4}VUF and CVUF}{11}% 
+\contentsline {section}{\numberline {2.3}Three-phase buck-type rectifiers}{12}% 
 \contentsline {subsection}{\numberline {2.3.1}Basic operation principles}{12}% 
 \contentsline {section}{\numberline {2.4}Quadratic optimization and model predictive control (MPC)}{14}% 
 \contentsline {subsection}{\numberline {2.4.1}Constained optimal control}{14}% 
 \contentsline {subsection}{\numberline {2.4.2}Stability of MPC}{17}% 
-\contentsline {section}{\numberline {2.5}Explicit model predictive control (EMPC)}{18}% 
+\contentsline {section}{\numberline {2.5}Explicit model predictive control (EMPC)}{19}% 
 \contentsline {subsection}{\numberline {2.5.1}Storage of critical regions}{19}% 
 \contentsline {chapter}{\numberline {3}Voltage unbalance compensation}{21}% 
 \contentsline {section}{\numberline {3.1}Thesis: Geometrical indicator for voltage unbalance in three phase networks}{21}% 
