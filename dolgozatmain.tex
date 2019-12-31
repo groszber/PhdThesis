@@ -65,12 +65,22 @@
 \usepackage{longtable}
 \usepackage{textcomp} %===!!!=== Ezt én adtam hozzá
 \usepackage{tabu} %===!!!=== Ezt én adtam hozzá
+\usepackage[shortlabels]{enumitem} %===!!!=== Ezt én adtam hozzá
 %\usepackage{ulem}
 %\newcommand{\soutthick}[1]{%
 %    \renewcommand{\ULthickness}{2.4pt}%
 %       \sout{#1}%
 %    \renewcommand{\ULthickness}{.4pt}% Resetting to ulem default
 % \usepackage{MnSymbol,wasysym}
+%\DeclareSourcemap{
+  %\maps[datatype=bibtex]{
+    %\map{
+      %\step[fieldsource=issue, match=\regexp{\A(\d+)\Z}, final]
+      %\step[fieldset=number, fieldvalue={$1}]
+      %\step[fieldset=issue, null]
+    %}
+  %}
+%}
 
 
 \def\myuni{Universiy of Pannonia}

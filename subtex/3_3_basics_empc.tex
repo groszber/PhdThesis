@@ -156,15 +156,34 @@ According to the actual switch combination the DC link current shaped by the cho
 		The resulting discrete space vectors can be used to synthesize desired current
 space vector $\vec{i}_{ref}$. 
 
-The modulation methods were evaluated in and choosen for this paper based on \cite{moussaoui2005open}, which ensures minimum switching-losses, minimum ripple values of the input capacitor voltages and of the output inductor current. According to this modulation, each pulse interval comprises two active states and a freewheeling state, arranged symmetrically about the middle of the pulse interval (see Table \ref{EMPC:tbl:sequence}). For more in depth functional description see Chapter 5.
+The modulation methods were evaluated in and choosen for this paper based on \cite{moussaoui2005open}, which ensures minimum switching-losses, minimum ripple values of the input capacitor voltages and of the output inductor current. According to this modulation, each pulse interval comprises two active states and a freewheeling state, arranged symmetrically about the middle of the pulse interval (see Table \ref{EMPC:tbl:sequence}). For more in depth functional description see Chapter X.
 
 \section{Quadratic optimization and model predictive control (MPC)}\label{BASICCSR:sec:MPC}
-	
-	Predictive control methods based on a model are optimal regulators, with a defined cost function on a defined and encompassed  	prediction horizon with restrictions [N9], [N25], [N4], [N16], [N55]. The control signal is calculated over a defined horizon, but from the sequence of applicable control signals only the first one is used in the next sample. This procedure is repeated according to the principle of the moving horizon, using new iterations, as such provides the reaction in each sample. This method was developed for systems with physical restrictions, in the first stage for the control of chemical processes in the oil industry, then it was applied to various rapid processes from automotive or power electronics industry [N1] , [N13]. By default the optimization problem can be solved, for each sample, or explicitly using the multi-parameter programming techniques (mp-LP, mp-QP) presented in [N-ANNEX 1], over a well-defined parameter space.
+
+Philosophically MPC reflects human behavior whereby we select control actions which we think will lead to the best predicted outcome (or output)over some limited horizon. To make this selection we use an internal model of the process in question. We constantly update our decisions as new observations become available. Hence a predictive control law has the following components:
+\begin{itemize}
+\item The control law depends on predicted behavior.
+\item The output predictions are computed using a process model.
+\item The current input is determined by optimizing some measure of predicted performance.
+\item The receding horizon: the control input is updated at every sampling instant.
+\end{itemize}
+
+\subsection{Overview on predictive control}\label{BASICCSR:sec:MPCOverview}
+
+Most control laws, say PID (proportional, integral and derivative), do not explicitly consider the future implication of current control actions. To some extent this is only accounted for by the expected closed-loop dynamics. MPC on the other hand
+implicitly (or explicitly) computes the predicted behavior over some horizon. One can therefore restrict the choice of the current proposed input trajectories to those that do not lead to difficulties in the future.\\
+In order to predict the future behavior of a process,we must have a model of how the process behaves. In particular, this model must show the dependence of the output on the current measured variable and the current/future inputs. This model does not
+have to be linear (e.g. transfer function, state-space) and in fact can be just about anything. A precise model is not always required to get tight control, because the decisions are updated regularly. This will deal with some model uncertainty in a fairly
+fast time scale. The decision on the best control is thus continually updated using information from this comparison \cite{rossiter2017model}.\\
+This way, predictive control methods based on a model are optimal regulators, with a defined cost function on a defined and encompassed  	prediction horizon with restrictions [N9], [N25], [N4], [N16], [N55]. The control signal is calculated over a defined horizon, but from the sequence of applicable control signals only the first one is used in the next sample. This procedure is repeated according to the principle of the moving horizon, using new iterations, as such provides the reaction in each sample. This method was developed for systems with physical restrictions, in the first stage for the control of chemical processes in the oil industry, then it was applied to various rapid processes from automotive or power electronics industry [N1] , [N13]. By default the optimization problem can be solved, for each sample, or explicitly using the multi-parameter programming techniques (mp-LP, mp-QP) presented in [N-ANNEX 1], over a well-defined parameter space.
 	MPC example
 	
 	\subsection{Constained optimal control}\label{BASICCSR:sec:OptimalControl}
 	
+	In practice most MPC algorithms use linear models because the dependence of the predictions on future control choices is then linear and this facilitates optimization as well as off-line analysis of expected closed-loop behavior. However, nonlinear
+models can be used where the implied computational burden is not a problem and linear approximations are not accurate enough.
+It is also important to note here the comment fit for purpose. In predictive control, the model is used solely to compute system output predictions, so the model is fit for purpose if it gives accurate enough predictions. The effort and detail put into
+modelling stage should reflect this
 	Let the us assume that the system is linear and time-invariant (LTI):
 	
 	    \begin{equation}
@@ -184,7 +203,8 @@ The modulation methods were evaluated in and choosen for this paper based on \ci
         \label{BASICMPC:equ:restrict_LTI}
     \end{equation}
 		
-		where $t\geq0$ defines the time instance and $\textbf{x}\in \mathbb{R}^n$, $\textbf{u}\in \mathbb{R}^m$, $\textbf{y}\in \mathbb{R}^p$ are the states, inputs and outputs of the system respectively. We define the following cost function to optimize:
+		where $t\geq0$ defines the time instance and $\textbf{x}\in \mathbb{R}^n$, $\textbf{u}\in \mathbb{R}^m$, $\textbf{y}\in \mathbb{R}^p$ are the states, inputs and outputs of the system respectively. \\
+	 We define the following cost function to optimize:
 		
 		\begin{equation}
         \begin{array}{rcl}
@@ -207,8 +227,8 @@ The modulation methods were evaluated in and choosen for this paper based on \ci
         \label{BASICMPC:equ:optim_problem}
     \end{equation}
 		%
-		where $N$ is the defined horizon, $x\in X_f$ is the set if terminal states, $U_N=[u_0,u_1,\dots,u_{N-1}]\in\mathbb{R}^s,s=m*N$. In case of $p=2$ (Euclidean norm) $Q=Q'\geq0$, $R=R'\geq0$, $P\geq0$ and in case of $p=1$, $Q$,$R$, and $P$ shall be on maximum rank.
-		From \ref{BASICMPC:equ:cost_function} and \ref{BASICMPC:equ:optim_problem} a classical linear quadratic regulator (LQR) structure can be formulated with finite or infinite horison [N3], [N20], [N21].
+		where $N$ is the defined horizon, $x\in X_f$ is the set if terminal states, $U_N=[u_0,u_1,\dots,u_{N-1}]\in\mathbb{R}^s,s=m*N$. In case of $p=2$ (Euclidean norm) $Q=Q'\geq0$, $R=R'\geq0$, $P\geq0$ and in case of $p=1$, $Q$,$R$, and $P$ shall be on maximum rank. As displayed, the MPC approach requires a numerical definition so that a precise calculation can be made, that is, which predicted input trajectory gives the lowest numerical value to the cost. The main requirement is that the cost depends on the future controls and that low values of cost imply good closed-loop performance good being defined for the process. Of course the choice of the cost affects the complexity of the implied optimization and this is also a consideration. For this reason 2-norm (square norm) measures are popular, as optimization is straightforward.\\
+		Based on the latter and on \ref{BASICMPC:equ:cost_function} and \ref{BASICMPC:equ:optim_problem} a classical linear quadratic regulator (LQR) structure can be formulated with finite or infinite horison [N3], [N20], [N21].
 		Let us consider the following:
 		
 		\begin{equation}
@@ -347,11 +367,54 @@ repeated on the basis of new measurements or a new estimation of the states.
 
 \subsection{Stability of MPC}\label{BASICCSR:sec:MPCStability}		
 
-\textbf{Lyapunov stability}\\
-\\
+	The problem of closed system stability with the predictive control has been extensively studied e.g. in [N97], [N54]. In the first generation of model based controllers, stability was achieved more experimentally by choosing parameters based on previous studies and experiences. In 1988 Keerthi and Gilbert introduced the Lyapunov stability method for discrete systems [N65] , and in 1990 Mayne and Michalska for continuous systems [N96]. \\
+	Let $U\subset\mathbb{R}^n$ be an open set where $0\in U$. A function $V:U\longrightarrow\mathbb{R}$ is called positive (or negative) definite if $V(0)=0$ and $V(\boldsymbol{x})>0$ (or $V(\boldsymbol{x})<0$), when $\boldsymbol{x}\neq0$, and $\boldsymbol{x}\in U$. Also said function called positive (or negative) semidefinite if $V(0)=0$ and $V(\boldsymbol{x})\geq 0$ (or $V(\boldsymbol{x})\leq 0$), when $\boldsymbol{x}\neq 0$, and $\boldsymbol{x}\in U$. Clearly $V$ is a negative (semi-)definite function if $-V$ is a positive (semi-)definite function. So, in many applications the domain of $V$ is $U=\mathbb{R}^n$.\\
+	Also it can be said (according to the Sylvester theorem \cite{horn2012matrix}) that the quadratic function:
 	
-	The problem of closed system stability with the predictive control has been extensively studied e.g. in [N97], [N54]. In the first generation of model based controllers, stability was achieved more experimentally by choosing parameters based on previous studies and experiences. In 1988 Keerthi and Gilbert introduced the Lyapunov stability method for discrete systems [N65] , and in 1990 Mayne and Michalska for continuous systems [N96]. In this fashion, by using cost function, as a candidate for Lyapunov function, several methods of analysis have been developed, guaranteeing stability. 
-	As basis the unconstrained LQR \ref{BASICMPC:equ:cost_function} is serving to create the Lypunov function such as:
+	\begin{equation}
+        \begin{array}{rcl}
+				V(\boldsymbol{x})&=&\boldsymbol{x}^T\boldsymbol{A}\boldsymbol{x},\\
+        \end{array}
+        \label{BASICMPC:equ:LyapunovTheory_0}
+    \end{equation}
+	
+	is positive definite iff all the leading principal minors if the matrix $A$ are positive. As such consider the nonlinear system \ref{BASICMPC:equ:LyapunovTheory_1}:
+	
+	\begin{equation}
+        \begin{array}{rcl}
+				\boldsymbol{\dot{x}}&=&f(\boldsymbol{x}),\\
+        \end{array}
+        \label{BASICMPC:equ:LyapunovTheory_1}
+    \end{equation}
+	
+	where we assume that $f(0)=0$ is a (trivial) equilibrium point of the system. The component functions of $f$ are denoted by $f(\boldsymbol{x})=f_1(\boldsymbol{x},\dots,f_n(\boldsymbol{x}))^T$. Let $V:\mathbb{R}^n\longrightarrow\mathbb{R}$ be continuously partially differentiable, with respect to all variables. By computing the derivative of the composite function $V(\boldsymbol{x}(t))$, where $\boldsymbol{x}(t)=(x_1(t),\dots,x_n(t)))^T$ is solution of \ref{BASICMPC:equ:LyapunovTheory_1}:
+	
+	\begin{equation}
+        \begin{array}{rcl}
+				\frac{dV}{dt}(\boldsymbol{x}(t))&=&\frac{\partial V}{\partial x_1}(\boldsymbol{x}(t)f_1(\boldsymbol{x}(t)))+\dots+\frac{\partial V}{\partial x_n}(\boldsymbol{x}(t)f_n(\boldsymbol{x}(t))),\\
+        \end{array}
+        \label{BASICMPC:equ:LyapunovTheory_2}
+    \end{equation}
+		
+		where the derivative of $V$ with respect to \ref{BASICMPC:equ:LyapunovTheory_1} follows:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				\dot{V}(\boldsymbol{x})&=&\frac{\partial V}{\partial x_1}(\boldsymbol{x}f_1(\boldsymbol{x}))+\dots+\frac{\partial V}{\partial x_n}(\boldsymbol{x}f_n(\boldsymbol{x})).\\
+        \end{array}
+        \label{BASICMPC:equ:LyapunovTheory_3}
+    \end{equation}
+		
+		If this function is negative definite then for every solution $\boldsymbol{x}(t)$ the composite function $V(\boldsymbol{x}(t))$ is monotone decreasing. Moreover, if  $V(\boldsymbol{x}(t))\longrightarrow 0$ as $t\longrightarrow \infty$, then $\boldsymbol{x}(t)\longrightarrow 0$ holds. This is the background of the next Lyapunov theorem:\\
+		Suppose $f(0)=0$, $U\subset\mathbb{R}^n$, is an open set with $0\in U$. Let $V:U\longrightarrow\mathbb{R}$ continuously differentiable with respect to all variables.
+		\begin{enumerate}[a)] % a), b), c), ...
+		\item If $V$ is positive definite and $\dot{V}$ is negative semidefinite, then the equlibrium $0$ of \ref{BASICMPC:equ:LyapunovTheory_1} is stable.
+		\item If $V$ is positive definite and $\dot{V}$ is negative definite, then the equlibrium $0$ of \ref{BASICMPC:equ:LyapunovTheory_1} is asymptotically stable.
+		\item If in every neighborhood of $0$ there exsists $\boldsymbol{x}$ such that $V(\boldsymbol{x})>0$ and $\dot{V}$ is positive definite, then the equlibrium $0$ of \ref{BASICMPC:equ:LyapunovTheory_1} is unstable.
+\end{enumerate}
+
+This way $V$ is called Lyapunov function if its positive definite and its derivative $\dot{V}$ with respect to \ref{BASICMPC:equ:LyapunovTheory_1} is negative semidefinite.\\
+	In this fashion, by using cost function, as a candidate for Lyapunov function, several methods of analysis have been developed, guaranteeing stability.	As basis the unconstrained LQR \ref{BASICMPC:equ:cost_function} is serving to create the Lypunov function such as:
 	
 \begin{equation}
         \begin{array}{rcl}

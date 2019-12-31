@@ -47,12 +47,12 @@ Yavuz Ates, Mehmet Uzunoglu, Arif Karakas, Ali~Rifat Boynuegri, Abdullah Nadar,
 \newblock {\em Journal of cleaner production}, 112:2697--2705, 2016.
 
 \bibitem{baumannnew}
-M~Baumann, U~Drofenik, and JW~Kolar.
-\newblock New wide input range three-phase unity power factor rectifier formed
-  by integration of a three-switch buck-derived front-end and a dc/dc boost
-  converter output stage.
-\newblock In {\em Proceedings of the 22th IEEE International Telecommunications
-  Energy Conference}, pages 10--14.
+Martina Baumann, Uwe Drofenik, and Johann~W Kolar.
+\newblock New wide input voltage range three-phase unity power factor rectifier
+  formed by integration of a three-switch buck-derived front-end and a dc/dc
+  boost converter output stage.
+\newblock In {\em INTELEC. Twenty-Second International Telecommunications
+  Energy Conference (Cat. No. 00CH37131)}, pages 461--470. IEEE, 2000.
 
 \bibitem{baumann2005novel}
 Martina Baumann and Johann~W Kolar.
@@ -231,6 +231,11 @@ Jun Hang, Jianzhong Zhang, Ming Cheng, and Jin Huang.
 \newblock {\em IEEE Transactions on Power Electronics}, 30(12):6731--6741,
   2015.
 
+\bibitem{horn2012matrix}
+Roger~A Horn and Charles~R Johnson.
+\newblock {\em Matrix analysis}.
+\newblock Cambridge university press, 2012.
+
 \bibitem{Hu2016264}
 Junjie Hu, Mattia Marinelli, Massimiliano Coppo, Antonio Zecchino, and Henrik~W
   Bindner.
@@ -350,7 +355,7 @@ Leila Moussaoui and Ammar Moussi.
 \newblock An open loop space vector pwm control for csi-fed field-oriented
   induction motor drive with improved performances and reduced pulsating
   torque.
-\newblock {\em WSEAS Trans.-Circuits and Systems}, (2):71--77, 2005.
+\newblock {\em WSEAS Trans.-Circuits and Systems}, 1(2):71--77, 2005.
 
 \bibitem{muthukumar2016adaptive}
 N~Muthukumar, Seshadhri Srinivasan, K~Ramkumar, K~Kannan, and Valentina~Emilia
@@ -418,7 +423,7 @@ Sushree~Sangita Patnaik and Anup~Kumar Panda.
 \bibitem{pierrat1987unbalance}
 L~Pierrat and JP~Meyer.
 \newblock Unbalance factor it is as simple as abc.
-\newblock {\em Revue G{\'e}n{\'e}rale de l’{\'E}lectricit{\'e}}, (6):18--26,
+\newblock {\em Revue G{\'e}n{\'e}rale de l’{\'E}lectricit{\'e}}, 1(6):18--26,
   1987.
 
 \bibitem{pillay2001definitions}
@@ -445,6 +450,11 @@ A~Robert and J~Marquet.
   unbalance.
 \newblock In {\em International Conference on Large High Voltage Electric
   Systems}, volume~2, pages 36--203, 1992.
+
+\bibitem{rossiter2017model}
+J~Anthony Rossiter.
+\newblock {\em Model-based predictive control: a practical approach}.
+\newblock CRC press, 2017.
 
 \bibitem{salloum2014robust}
 Rafik Salloum, Bijan Moaveni, and Mohammad~Reza Arvan.
