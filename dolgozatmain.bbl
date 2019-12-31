@@ -239,6 +239,12 @@ Junjie Hu, Mattia Marinelli, Massimiliano Coppo, Antonio Zecchino, and Henrik~W
   networks.
 \newblock {\em Electric Power Systems Research}, 131:264--274, 2016.
 
+\bibitem{inoue2007bidirectional}
+Shigenori Inoue and Hirofumi Akagi.
+\newblock A bidirectional dc--dc converter for an energy storage system with
+  galvanic isolation.
+\newblock {\em IEEE Transactions on Power Electronics}, 22(6):2299--2306, 2007.
+
 \bibitem{itoh1989steady}
 R~Itoh.
 \newblock Steady-state and transient characteristics of a single-way step-down
@@ -258,6 +264,13 @@ Andr{\'a}s Kelemen, Nimr{\'o}d Kutasi, M{\'a}ria Imecs, and Ioan~Iov Incze.
   rectifiers.
 \newblock In {\em 2010 IEEE 14th International Conference on Intelligent
   Engineering Systems}, pages 249--254. IEEE, 2010.
+
+\bibitem{kheraluwala1992performance}
+MN~Kheraluwala, Randal~W Gascoigne, Deepakraj~M Divan, and Eric~D Baumann.
+\newblock Performance characterization of a high-power dual active bridge
+  dc-to-dc converter.
+\newblock {\em IEEE Transactions on industry applications}, 28(6):1294--1301,
+  1992.
 
 \bibitem{kini2007novel}
 P~Giridhar Kini, Ramesh~C Bansal, and Radhakrishna~S Aithal.
