@@ -158,6 +158,63 @@ space vector $\vec{i}_{ref}$.
 
 The modulation methods were evaluated in and choosen for this paper based on \cite{moussaoui2005open}, which ensures minimum switching-losses, minimum ripple values of the input capacitor voltages and of the output inductor current. According to this modulation, each pulse interval comprises two active states and a freewheeling state, arranged symmetrically about the middle of the pulse interval (see Table \ref{EMPC:tbl:sequence}). For more in depth functional description see Chapter X.
 
+
+\section{Asynchronous paralell pattern search}\label{BASICUNB:sec:APPS}
+
+Parallel variants of pattern search to solve nonlinear unconstrained problems of the form of:
+
+\begin{equation}
+        \begin{array}{rcl}
+            \min_{x\in\mathbb{R}^n}f(x),\\
+        \end{array}
+        \label{BASICCSR:eqn:currents}
+    \end{equation}
+		
+		where $f:\mathbb{R}^n\longrightarrow\mathbb{R}$. We assume that the evaluation of $f$ is computationally expensive, hence our interest in using either distributed or parallel computing environments to solve the problem. It needs to be concentrated on the parallelization of the search strategy, rather than on the evaluation of $f$, though the techniques we discuss here can be adapted to handle problems for which the computation of $f$ also can be distributed. Additionally is is assumed that $f$ is continuously differentiable, we further assume that $\nabla f$ is unavailable
+and not reliable. For such problems, pattern search methods are one possible solution technique since they neither require nor explicitly estimate derivatives.\\
+
+\subsection{Parallel pattern search}
+
+Lets adopt an infinite sequence of iterations $k=0,1,2,\dots$, with the last iteration noted as $k-1$ and initialization at $0$. It is assumed that the process knows the best point so far as $x^{k-1}$, where $f(x^{k-1})$ has the global minima of $f$. Associated with $x^{k-1}$ there is a step-length control parameter namely $\Delta^{k-1}$. Each $i\in\mathcal{P}$, where $\mathcal{P}=\{1,\dots,p\}$ process ends iteration at $k-1$ by constructing it's trial point and initiating an evaluation of $f(x^{k-1}_i+\Delta^{k-1}_id_i)$, where $\mathcal{D}=\{d_1,\dots,d_p\}$ is the finite set of directions applied by each individual process. The simultaneous start of the function evaluations at the trial points on each of the $p$ processes signals the start of iteration $k$. When all of the participating processes are finished with their evaluation of $f$, they communicate these values to each other and determine the new values of $x^k$, and $\Delta^k$. If there exsists an $i\in\mathcal{P}$, such that $f(x^{k-1}_i+\Delta^{k-1}_id_i)<f(x^{k-1})$, then $k\in\mathcal{S}$, where $\mathcal{S}$ denotes the sucessful iterations.
+
+\subsection{Adding asynchronity}
+
+ With said above, the general strategy for asynchronous parallel pattern search, from the perspective of a single process $i\in\mathcal{P}$ can be outlined:
+		\begin{enumerate}
+		\item Evaluate $f(x^{best}_i+\Delta^{best}_id_i)$.
+		\item If $f(x^{best}_i+\Delta^{best}_id_i) <f(x^{best}_i)$, then broadcast result to all other processes.
+		\item Update local values $x^{best}_i$ and $\Delta^{best}_i$ based on the current local information.
+		\item Repeat.
+		\end{enumerate}
+	The price payed is that each process has its own notion of the best known point seen so far, as well as its own value for	$\Delta^i$. Any success on one process is communicated to all other processes participating in the search, but the successful process carries on from its new best point without waiting for a response from the other processes. By adding a few mild conditions, the global convergence of the search can be still ensured \cite{}.  Instead of indexing based on a notion of iterations, we switch to indexing based on time step, letting the set $\mathcal{Q}=\{1,2,\dots,q\}$ denote the index if steps. Thus $x_i^q$ s used for the best point known to process $i$ at time step $q$, and similarly, $\Delta_i^q$.  So if process $i$ starts a function evaluation at time step $q$, the trial point at which the function evaluation will be made at $x^{q}_i+\Delta^{q}_id_i$. Further worth mention, that time steps are assumed to be of fine enough resolution so that at most one function evaluation finishes per process per time step.\\
+	Lets define two sets that satisfy $\mathcal{Q}=\mathcal{S}_i\cup\mathcal{U}_i$, , and $\mathcal{S}_i=\mathcal{I}_i\cup\mathcal{E}_i$, where $\mathcal{S}_i$ is the set of all time successful steps on process $i$, $\mathcal{I}_i$ is the set if internal successes, $\mathcal{E}_i$ is the set of external successes,   and $\mathcal{U}_i$ consists the unsuccessful steps respectfully. An internal success, where the process finds itself the minima, the external sucess is where the process is updated externally by the minima. Further  $\mathcal{C}_i\in\mathcal{U}_i$ is defined as the set of time steps where $\Delta^t_i$ is reduced. All the above cases ($\mathcal{U}_i\textbackslash\mathcal{C}_i$) no action is performed.\\
+	The updating functions allow us to give the following general definitions for $x_i^q$ and $\Delta^q_i$. For every $q\in\mathcal{Q}$, $q>0$, the best pont for the $i^{th}$ process defined to be:
+	
+	\begin{equation}
+        \begin{array}{rcl}
+            x_i^q&=&\begin{Bmatrix}
+                x_{\omega_i(q)}^{\tau_i(q)}+\Delta_{\omega_i(q)}^{\tau_i(q)}d_{\omega_i(q)},&\textnormal{if }q\in\mathcal{S}_i\\
+                x_i^{q-1},&\textnormal{otherwise}\\
+            \end{Bmatrix},\\
+        \end{array}
+        \label{BSIC:equ:APPS_x}
+    \end{equation}
+		
+		with the initialisation $x^0_i=x^0$, where $\omega_i(q)$ is the generating process index fir the update time at step $q$ on process $i$, and $\tau_i(q)$ is the time index for initialization of the function evaluation, that produced the update at time $q$ on process $i$. For every $q$ the step lenght control parameter $\Delta_i^q$ defined to be:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+            \Delta_i^q&=&\begin{Bmatrix}
+                \lambda_{\omega_i(q)}^{\nu_i(q)}\Delta_{\omega_i(q)}^{\tau_i(q)},&\textnormal{if }q\in\mathcal{S}_i\\
+								\theta_{i}^{q}\Delta_{\omega_i(q)}^{\tau_i(q)},&\textnormal{if }q\in\mathcal{C}_i\\
+                \Delta_i^{q-1},&\textnormal{otherwise}\\
+            \end{Bmatrix},\\
+        \end{array}
+        \label{BSIC:equ:APPS_Delta}
+    \end{equation}
+		
+		with the initialization $\Delta^0_i=\Delta^0$, where $\nu_i(q)$ is  time index for the completion of the function evaluation that produced the update at time step $q$ on process $i$, and $\theta_i^q$ and $\lambda_i^q$ are choosen. With the following pattern followed, the minima of $f$ shall eventually reached, in an undetermined steps \cite{kolda2003understanding}.
+
 \section{Quadratic optimization and model predictive control (MPC)}\label{BASICCSR:sec:MPC}
 
 Philosophically MPC reflects human behavior whereby we select control actions which we think will lead to the best predicted outcome (or output)over some limited horizon. To make this selection we use an internal model of the process in question. We constantly update our decisions as new observations become available. Hence a predictive control law has the following components:

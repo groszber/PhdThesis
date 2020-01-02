@@ -236,6 +236,11 @@ Roger~A Horn and Charles~R Johnson.
 \newblock {\em Matrix analysis}.
 \newblock Cambridge university press, 2012.
 
+\bibitem{hough2001asynchronous}
+Patricia~D Hough, Tamara~G Kolda, and Virginia~J Torczon.
+\newblock Asynchronous parallel pattern search for nonlinear optimization.
+\newblock {\em SIAM Journal on Scientific Computing}, 23(1):134--156, 2001.
+
 \bibitem{Hu2016264}
 Junjie Hu, Mattia Marinelli, Massimiliano Coppo, Antonio Zecchino, and Henrik~W
   Bindner.
@@ -291,6 +296,12 @@ Johann~W Kolar, Hans Ertl, and Franz~C Zach.
   novel integrated power semiconductor module.
 \newblock In {\em Proceedings of Applied Power Electronics Conference.
   APEC'96}, volume~2, pages 514--523. IEEE, 1996.
+
+\bibitem{kolda2003understanding}
+Tamara~G Kolda and Virginia~J Torczon.
+\newblock Understanding asynchronous parallel pattern search.
+\newblock In {\em High Performance Algorithms and Software for Nonlinear
+  Optimization}, pages 323--342. Springer, 2003.
 
 \bibitem{uimethod}
 NV~Korovkin, QS~Vu, and RA~Yazenin.

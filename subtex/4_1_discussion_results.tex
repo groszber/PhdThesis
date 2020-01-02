@@ -1,14 +1,10 @@
 \chapter[Predictive control of a CSR]{Constrained, explicit predictive control for current source buck-type rectifiers}\label{EMPC:sec:main}
 
-\textbf{Write here free text why this is noteworthy.}\\
-
-\section{Thesis: Constrained, explicit predictive control for current source buck-type rectifiers}
-
-    I proposed a simplified CSR model, which was derived from the well known CSR structure and was examined from design and implementation points of view with the purpose of explicit model-based predictive control. The regular set of differential equations of the CSR appeared to be too complex for my a design approach, for applying explicit predictive control. I adressed this issue with the separation AC and DC equation sets was of the CSR to decrease complexity and easy controller design. With this solution I eliminated bi-linearity and enabled the application of linear control design techniques. I used current-based SVPWM the modulation, what has been used with an emphasis on the reduction of switching losses. For DC side control I implemented explicit model predictive control (EMPC) and I compared this method's effectiveness to conventional state feedback control (SFC). I implemented the CSR structure and the proposed controller with EMPC on DC and active damping on the AC side in Matlab/Simulink environment and tested by simulation. Additionally, I tested the proper implementation's computational requirements in a modern DSP chip, which would serve in real-time operation.
+As mentioned in section \ref{BASICCSR:sec:CSR} current source rectifiers (CSR) play a major rule in industrial instrumentation. The are invaluable, where driect powe control, torque control, or power injection is required. In this chapter, the modeling and control of such CSR (or buck-type rectifiers), in a model based predictive manner, with explicit partitioning of the state space. The reason of the regular MPC's insufficiency is that power electronic systems require very low time constant to operate smoothly. As such pre-mapping the state-space with applicable control rules gives a great leverage, thus making the possible computational unit much cheaper.
 		
 \section{Modeling}\label{EMPC:sec:Modeling}
 
- write stuff here
+Understandably, model based controllers require the system's model the ought to control, or supervise. In this case the most common structure of a CSR is choosen, with inductive and capacitive filtering on both ends. The differential equations are constructed via Kirchoff's law and then presented as a state space model for further examination.
 
 \subsection{Mathematical Modeling of the CSR}\label{EMPC:sec:ModelofCSR}
 
@@ -213,7 +209,8 @@ write stuff here
 
 \subsection{DC-side explicit model predictive control} \label{EMPC:sec:DCside}
 
-    Model predictive control (MPC) is an efficient and systematic method for solving complex multi-variable constrained optimal control problems \cite{vajda2017limiting}. The MPC control law is based on the “receding horizon formulation”, where the model’s assumed behavior is calculated for a number of N steps, where N stands for the horizon’s length. Only the first step of the computed optimal input is applied in each iteration. The remaining steps of the optimal control input are discarded and a new optimal control problem is solved at the next sample time. Using this approach, the receding horizon policy provides the controller with the desired feedback characteristics, although with high order systems the computational effort is considerably demanding since all the steps should be taken in to account on the specified horizon in every iteration. With Explicit MPC (EMPC), the discrete time constrained optimal control problem is reformulated as multi-parametric linear or quadratic programming. Using this approach, the problem of optimization can be solved offline, making it much more feasible from the perspective of the optimal control task. The optimum control law is a piecewise affine function of the states, and the resulting solution is stored in a pre-calculated lookup table. The parameter space, or the state-space is partitioned into critical regions. The real-time implementation consists in searching for the active critical region, where the measured state variables lie, and in applying the corresponding piecewise affine control law to achieve the desired dynamics.
+    Model predictive control (MPC) is an efficient and systematic method for solving complex multi-variable constrained optimal control problems \cite{vajda2017limiting}. The basis can be examined in section \ref{BASICCSR:sec:MPC}, where the MPC control law is explained, namely, is based on the “receding horizon formulation”, where the model’s assumed behavior is calculated for a number of N steps, where N stands for the horizon’s length. Only the first step of the computed optimal input is applied in each iteration. The remaining steps of the optimal control input are discarded and a new optimal control problem (explained in chapter \ref{BASICCSR:sec:OptimalControl}) is solved at the next sample time. Using this approach, the receding horizon policy provides the controller with the desired feedback characteristics, although with high order systems the computational effort is considerably demanding since all the steps should be taken in to account on the specified horizon in every iteration.\\
+		With Explicit MPC (EMPC), the discrete time constrained optimal control problem is reformulated as multi-parametric linear or quadratic programming. As explained in chapter \ref{BASICCSR:sec:EMPC}, the problem of optimization can be solved offline, making it much more feasible from the perspective of the optimal control task. The optimum control law is a piecewise affine function of the states, and the resulting solution is stored in a pre-calculated lookup table. The parameter space, or the state-space is partitioned into critical regions. The real-time implementation consists in searching for the active critical region, where the measured state variables lie, and in applying the corresponding piecewise affine control law to achieve the desired dynamics.
     In order to introduce the MPC implementation from this paper, let us consider a linear discrete time system \ref{EMPC:equ:DiscreteStateSpace} derived with the discretisation of system \ref{EMPC:equ:mtx_DC} with zero-order hold method, where control inputs are assumed piecewise constant over the simulation sample time $T_s=\frac{1}{f_s}$ :
 
     \begin{equation}
@@ -257,7 +254,7 @@ write stuff here
         \end{array}
         \label{EMPC:equ:optim_problem_constr}
     \end{equation}
-
+There the formulation of such problem is described in detail in chapter \ref{BASICCSR:sec:OptimalControl}.\\
     This problem is solved at each time instant $t$, where $\textbf{x}_{t+k\vert t}$ denotes the state vector predicted at time $t+k$, obtained by applying the input sequence $\textbf{u}_{t|t}...\textbf{u}_{t|t+1}$ to model \ref{EMPC:equ:quadratic_regions}, starting from the state $\textbf{x}_{t|t}$. Further, it is assumed that $Q$ and $R$, are symmetric positive semidefinite $(Q_w=Q_w^T\geq0,\_R_w=R_w^T>0)$ and $K$ is a feedback gain. Further, $N_y,N_u,N_c$ are the output, input and constraint horizons, respectively.
     Using the model for predicting the future behavior of the system and with some appropriate substitution and variable manipulation, the problem \ref{EMPC:equ:optim_problem},\ref{EMPC:equ:optim_problem_constr} can be transformed to the standard multi parametric quadratic programming (mp-QP) form, as described in \cite{rivera2013predictive}:
 
@@ -375,7 +372,7 @@ write stuff here
 
 \section{Space vector modulation strategy}\section{Modulation}\label{EMPC:sec:Modulation}
 
-    The chosen modulation strategy is developed in the $"\alpha\beta"$ stationary reference frame. The structure requires simultaneous conduction of the upper and lower transistors of the bridge, since the current of the $L_{dc}$  choke must not be interrupted. Additionally, the switching devices are considered as ideal.
+    The chosen modulation strategy is developed in the $"\alpha\beta"$ stationary reference frame, based on the notions already mentioned in section \ref{BASICCSR:sec:OperationPrinciple}. The structure requires simultaneous conduction of the upper and lower transistors of the bridge, since the current of the $L_{dc}$  choke must not be interrupted. Additionally, the switching devices are considered as ideal.
 
     \begin{figure}[!ht]
         \centering
@@ -483,13 +480,13 @@ write stuff here
         \label{EMPC:equ:refconstraint}
     \end{equation}
 
-\section{Discussion}\section{Modulation}\label{EMPC:sec:Discussion}
+\section{Discussion}\label{EMPC:sec:Discussion}
 
     From the continuous AC \ref{EMPC:equ:mtx_AC}, and DC \ref{EMPC:equ:mtx_DC} model equations described in Ch.X., the controller is formulated form discretised system \ref{EMPC:equ:DiscreteStateSpace}, and it is described via the cost function and control problem of \ref{EMPC:equ:optim_problem}, and \ref{EMPC:equ:optim_problem_constr} in Ch.X$+$1. The evaluated model and control structure are shown on Fig.4. In the following section said EMPC’s computational requirements are evaluated, and the Matlab/Simulink simulation results are compared to a classic state feedback controller’s dynamic performance.
 
-    \subsection{Computational effort}\section{Modulation}\label{EMPC:sec:CompEffort}
+    \subsection{Computational effort}\label{EMPC:sec:CompEffort}
 
-    The binary search tree generated for the control problem presented in Fig. \ref{EMPC:fig:SearchTree}. The depth of the search tree is 5 and it has a total number of 29 nodes. It is utilized with the MPT toolbox \cite{muthukumar2016adaptive}, \cite{kutasi2010constrained}, and it can be used for the computationally optimal real-time implementation of the proposed algorithm on low-cost hardware.
+    The binary search tree generated for the control problem presented in Fig. \ref{EMPC:fig:SearchTree}. The search method and formulation of the tree is described in chapter \ref{BASICCSR:sec:EMPCStorage}. The depth of the search tree is 5 and it has a total number of 29 nodes. It is utilized with the MPT toolbox \cite{muthukumar2016adaptive}, \cite{kutasi2010constrained}, and it can be used for the computationally optimal real-time implementation of the proposed algorithm on low-cost hardware.
 
     \begin{figure}[!ht]
         \centering
@@ -507,7 +504,7 @@ write stuff here
         \label{EMPC:fig:Memory}
     \end{figure}
 
-    \subsection{Horizon performance}\section{Modulation}\label{EMPC:sec:Performance}
+    \subsection{Horizon performance}\label{EMPC:sec:Performance}
 
     With the cost function (\ref{EMPC:equ:optim_problem}) employed using (\ref{EMPC:equ:quadratic_mtx_set}), changing the length of the horizon ($N$) affects the system's complexity illustrated by the partition in the state space shown in Fig. \ref{EMPC:fig:regions}., and Fig. \ref{EMPC:fig:MultiHorizon} presents the step response of the controlled system for different lengths of the horizon. It shows, that the response is not affected by the increase of the horizon above $N=2$, supporting the choice of this value for Matlab Simulink implementation.
 
@@ -518,7 +515,7 @@ write stuff here
         \label{EMPC:fig:MultiHorizon}
     \end{figure}
 
-    \subsection{Simulation results}\section{Modulation}\label{EMPC:sec:Results}
+    \subsection{Simulation results}\label{EMPC:sec:Results}
 
     The simulation results are produced with Matlab/Simulik. The discrete model's (\ref{EMPC:equ:DiscreteStateSpace}) simulation frequency was 1 MHz, with the model parameters represented in Table \ref{EMPC:tbl:params}., and with the control structure shown on Fig. \ref{EMPC:fig:ControlStruct}. The EMPC performance is shown below:
 
@@ -538,7 +535,7 @@ write stuff here
 
     More details about the Matlab simulation are presented in \cite{neukirchner2019linkedmodel}.
 
-    \subsection{Comparison with a state feedback control}\section{Modulation}\label{EMPC:sec:Comparison}
+    \subsection{Comparison with a state feedback control}\label{EMPC:sec:Comparison}
 
     On the DC side, not only the output voltage $u_0$ but also the inductor current $i_{dc}$ needs to be controlled. Described in [28], a state feedback control with optimal parameters can be used as a reference based on the model properties listed in Table \ref{EMPC:tbl:params}, with output voltage $u_0$ and DC bus current $i_{dc}$ chosen as the state variables. Since $u_0$ is a DC quantity in steady state, an integrator signal is introduced to diminish the steady-state error. The structure of the controller is represented in Fig. \ref{EMPC:fig:SFeedbackDC}.
 
@@ -560,7 +557,7 @@ write stuff here
         \label{EMPC:equ:tuning}
     \end{equation}
 
-    The state feedback controllers block on the diagram is taking the controller's place, shown on Fig. \ref{EMPC:fig:ControlStruct}. The independent outputs are the high pass filter's output  $i_{rHPF(d)}$ and the controller's output $i_{rcontrol(d)}$. The sum of the independent current values is converted to Clarke frame to be able to govern the switching states of the IGBT's. This can be done because $i_{rHF(d)}$ has only high frequency components and $i_{rcontrol(d)}$ has low frequency components due to the differences in LC time constants, as discussed in the second section. Then the control signal governing the switches is applied in the same manner, described at the start of Section 3.
+    The state feedback controllers block on the diagram is taking the controller's place, shown on Fig. \ref{EMPC:fig:ControlStruct}. The independent outputs are the high pass filter's output  $i_{rHPF(d)}$ and the controller's output $i_{rcontrol(d)}$. The sum of the independent current values is converted to Clarke frame to be able to govern the switching states of the IGBT's. This can be done because $i_{rHF(d)}$ has only high frequency components and $i_{rcontrol(d)}$ has low frequency components due to the differences in LC time constants, as discussed in the second section. Then the control signal governing the switches is applied in the same manner, described at the start of section \ref{EMPC:sec:Modulation}.
     The state feedback control's performance in comparison with the EMPC is shown in Fig. \ref{EMPC:fig:Result_EMPCfinal}.
 
     \begin{figure}[!ht]
@@ -570,6 +567,6 @@ write stuff here
         \label{EMPC:fig:Result_EMPCfinal}
     \end{figure}
 
-\section{Conclusion}\section{Modulation}\label{EMPC:sec:Conclusion}
+\section{Conclusion}\label{EMPC:sec:Conclusion}
 
     The constrained, model-based optimal control of a current source rectifier has been presented in this paper. The dynamic model of a three-phase current source rectifier has been developed in Park frame. The proposed model has been examined from the design and implementation points of view with the purpose of explicit model-based predictive control. It proved to be the case that the regular set of differential equations of the CSR appears to be too complex, and contains non-linearity for such a design approach. To address this issue the usage of separated AC and DC equation sets was suggested to avoid linearization and complexity reduction. This solution eliminates bilinearity and enables the application of linear control design techniques. Current-based SVPWM of the three-phase converter has been used with an emphasis on the reduction of switching losses. Throughout the article the explicit model predictive control method is described and the method's effectiveness compared to conventional state feedback control is show. The implementation and simulation experiments have been performed in Matlab/Simulink environment. Moreover, the proper implementation of the system in a modern DSP chip will result in real-time operation. 
