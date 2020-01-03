@@ -56,8 +56,8 @@
 \contentsline {section}{\numberline {4.6}Conclusion}{62}% 
 \contentsline {chapter}{\numberline {5}Thesis and Summary}{64}% 
 \contentsline {section}{\numberline {5.1}Summary}{64}% 
-\contentsline {section}{\numberline {5.2}Developed thesis}{64}% 
-\contentsline {section}{\numberline {5.3}Applications and future work}{65}% 
-\contentsline {subsection}{\numberline {5.3.1}Geometrical voltage unbalance norm}{65}% 
-\contentsline {subsection}{\numberline {5.3.2}Voltage unbalance reducing inverter structure}{66}% 
-\contentsline {subsection}{\numberline {5.3.3}Explicit model predictive control for buck-type rectifier}{66}% 
+\contentsline {section}{\numberline {5.2}Developed thesis}{65}% 
+\contentsline {section}{\numberline {5.3}Applications and future work}{67}% 
+\contentsline {subsection}{\numberline {5.3.1}Geometrical voltage unbalance norm}{67}% 
+\contentsline {subsection}{\numberline {5.3.2}Voltage unbalance reducing inverter structure}{67}% 
+\contentsline {subsection}{\numberline {5.3.3}Explicit model predictive control for buck-type rectifier}{68}% 
