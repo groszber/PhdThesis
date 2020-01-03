@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  2 JAN 2020 19:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  3 JAN 2020 15:45
 entering extended mode
 **./dolgozatmain.tex
 (dolgozatmain.tex
@@ -1552,17 +1552,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--23
 
 ] (dolgozatmain.toc [5
 
-]
-Overfull \hbox (4.39217pt too wide) in paragraph at lines 58--58
- [][] []\T1/cmr/m/n/12 Thesis: Con-strained, ex-plicit pre-dic-tive con-trol for cur-rent source 
- []
-
-
-Overfull \hbox (6.08482pt too wide) in paragraph at lines 60--60
- [][] []\T1/cmr/m/n/12 Thesis: Volt-age un-bal-ance com-pen-sa-tion with op-ti-miza-tion based 
- []
-
-)
+])
 \tf@toc=\write4
 \openout4 = `dolgozatmain.toc'.
 
@@ -2093,25 +2083,23 @@ Package pdftex.def Info: EMPC_PNG_Pics/Result_EMPCfinal.png  used on input line 
 ) [62 <./EMPC_PNG_Pics/SFeedbackDC.png>] (subtex/5_conculsion.tex [63 <./EMPC_PNG_Pics/Result_EMPCfinal.png>]
 Chapter 5.
 
-Overfull \hbox (11.3393pt too wide) in paragraph at lines 10--10
-[]\T1/cmr/bx/n/17.28 Thesis: Volt-age un-bal-ance com-pen-sa-tion with
+Underfull \hbox (badness 10000) in paragraph at lines 10--14
+
  []
 
 
-Overfull \hbox (27.24107pt too wide) in paragraph at lines 10--10
-\T1/cmr/bx/n/17.28 op-ti-miza-tion based con-trol al-go-rithm and asym-
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
+
  []
 
-) [64
+[64
 
-] (subtex/7_nomenclature.tex
+]
+Underfull \hbox (badness 10000) in paragraph at lines 18--22
 
-Package Fancyhdr Warning: \headheight is too small (27.11469pt): 
-Make it at least 41.61469pt.
-We now make it that large for the rest of the document.
-This may cause the page layout to be inconsistent, however.
+ []
 
-[65]
+[65]) [66] (subtex/7_nomenclature.tex [67]
 Overfull \hbox (57.33714pt too wide) in alignment at lines 3--25
  [] [] 
  []
@@ -2126,7 +2114,7 @@ Overfull \hbox (57.33714pt too wide) in alignment at lines 45--65
  [] [] 
  []
 
-[66
+[68
 
 ]
 Overfull \hbox (57.33714pt too wide) in alignment at lines 65--86
@@ -2143,23 +2131,23 @@ Overfull \hbox (57.33714pt too wide) in alignment at lines 107--110
  [] [] 
  []
 
-[67]) (subtex/8_abbreviations.tex [68]) (subtex/9_appendix.tex [69
+[69]) (subtex/8_abbreviations.tex [70]) (subtex/9_appendix.tex [71
 
-]) [70
+]) [72
 
-] (dolgozatmain.bbl [71
+] (dolgozatmain.bbl [73
 
 ]
 Underfull \hbox (badness 2020) in paragraph at lines 101--106
 []\T1/cmr/m/n/12 Amitava Chat-ter-jee, Rana-jit Chat-ter-jee, Fu-mi-toshi Mat-suno, and
  []
 
-[72]
+[74]
 Underfull \hbox (badness 2088) in paragraph at lines 178--183
 []\T1/cmr/m/n/12 Piotr Gnaci«ski, Marcin Pepli«ski, Damian Hall-mann, and Pi-otr
  []
 
-[73] [74] [75]
+[75] [76] [77]
 Underfull \hbox (badness 10000) in paragraph at lines 398--405
 []\T1/cmr/m/n/12 László Neukirch-ner, Nim-ród Ku-tasi, An-drás Kele-men, At-tila
  []
@@ -2179,7 +2167,7 @@ Underfull \hbox (badness 1226) in paragraph at lines 398--405
 \T1/cmr/m/it/12 pannon.hu/ver/index.php/en/projects/30-empc-csr\T1/cmr/m/n/12 . Uni-ver-sity of Pan-
  []
 
-[76] [77] [78]) [79] (dolgozatmain.aux)
+[78] [79] [80]) [81] (dolgozatmain.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -2213,9 +2201,9 @@ sfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 onts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 msy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dolgozatmain.pdf (86 pages, 3171945 bytes).
+Output written on dolgozatmain.pdf (88 pages, 3177999 bytes).
 PDF statistics:
- 1009 PDF objects out of 1200 (max. 8388607)
+ 1015 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  193 words of extra memory for PDF output out of 10000 (max. 10000000)
 

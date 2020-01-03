@@ -17,7 +17,7 @@ Class=BibTeXView
 Document=dolgozat.bib
 
 [Frame0_View0,0]
-TopLine=129
+TopLine=126
 Cursor=4587
 
 [Frame1]
@@ -35,8 +35,8 @@ Class=LaTeXView
 Document=subtex\3_3_basics_empc.tex
 
 [Frame1_View0,0]
-TopLine=265
-Cursor=20855
+TopLine=312
+Cursor=21460
 
 [Frame2]
 Flags=0
@@ -53,7 +53,7 @@ Class=LaTeXView
 Document=subtex\4_1_discussion_results.tex
 
 [Frame2_View0,0]
-TopLine=9
+TopLine=17
 Cursor=2737
 
 [Frame3]
@@ -71,7 +71,7 @@ Class=LaTeXView
 Document=subtex\4_3_discussion_results.tex
 
 [Frame3_View0,0]
-TopLine=450
+TopLine=594
 Cursor=33179
 
 [Frame4]
@@ -94,5 +94,5 @@ Cursor=4575
 
 [SessionInfo]
 FrameCount=5
-ActiveFrame=4
+ActiveFrame=1
 

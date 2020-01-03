@@ -54,7 +54,10 @@
 \contentsline {subsection}{\numberline {4.5.3}Simulation results}{60}% 
 \contentsline {subsection}{\numberline {4.5.4}Comparison with a state feedback control}{61}% 
 \contentsline {section}{\numberline {4.6}Conclusion}{62}% 
-\contentsline {chapter}{\numberline {5}Summary}{64}% 
-\contentsline {section}{\numberline {5.1}Thesis: Constrained, explicit predictive control for current source buck-type rectifiers}{64}% 
-\contentsline {section}{\numberline {5.2}Thesis: Geometrical indicator for voltage unbalance in three phase networks}{64}% 
-\contentsline {section}{\numberline {5.3}Thesis: Voltage unbalance compensation with optimization based control algorithm and asymmetrical inverter structure}{65}% 
+\contentsline {chapter}{\numberline {5}Thesis and Summary}{64}% 
+\contentsline {section}{\numberline {5.1}Summary}{64}% 
+\contentsline {section}{\numberline {5.2}Developed thesis}{64}% 
+\contentsline {section}{\numberline {5.3}Applications and future work}{65}% 
+\contentsline {subsection}{\numberline {5.3.1}Geometrical voltage unbalance norm}{65}% 
+\contentsline {subsection}{\numberline {5.3.2}Voltage unbalance reducing inverter structure}{66}% 
+\contentsline {subsection}{\numberline {5.3.3}Explicit model predictive control for buck-type rectifier}{66}% 
