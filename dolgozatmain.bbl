@@ -18,7 +18,7 @@ Ieee standard for inverse-time characteristics equations for overcurrent
 M.~Hackl %A.~F\'abi\'an.
 \newblock Statistical data of the hungarian electricity system.
 \newblock {\em Mavir Hungarian Independent Transmission Operator Company,
-  Ltd.}, pages 899--906, 2011.
+  Ltd.}, pages 899--906, 2013.
 
 \bibitem{ahmed2014model}
 Syed~Faiz Ahmed, Ch~Fahad Azim, Hazry Desa, and Abadal-Salam~T Hussain.
@@ -69,6 +69,12 @@ RE~Betz, T~Summers, T~Furney, et~al.
 \newblock In {\em Industry Applications Conference, 2006. 41st IAS Annual
   Meeting. Conference Record of the 2006 IEEE}, volume~4, pages 1724--1731,
   2006.
+
+\bibitem{MVM2018}
+%A. Bicz\'ok.
+\newblock Statistical data of the hungarian electricity system.
+\newblock {\em Mavir Hungarian Independent Transmission Operator Company,
+  Ltd.}, pages 1--100, 2018.
 
 \bibitem{bina2011three}
 M~Tavakoli Bina and A~Kashefi.

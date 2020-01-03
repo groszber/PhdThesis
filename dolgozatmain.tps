@@ -53,8 +53,8 @@ Class=LaTeXView
 Document=subtex\4_3_discussion_results.tex
 
 [Frame2_View0,0]
-TopLine=0
-Cursor=157
+TopLine=889
+Cursor=47369
 
 [Frame3]
 Flags=0
@@ -67,14 +67,14 @@ NormalPos.left=4
 NormalPos.top=32
 NormalPos.right=1535
 NormalPos.bottom=554
-Class=LaTeXView
-Document=subtex\4_1_discussion_results.tex
+Class=BibTeXView
+Document=dolgozat.bib
 
 [Frame3_View0,0]
-TopLine=0
-Cursor=140
+TopLine=977
+Cursor=34897
 
 [SessionInfo]
 FrameCount=4
-ActiveFrame=0
+ActiveFrame=3
 

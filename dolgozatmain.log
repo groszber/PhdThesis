@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  3 JAN 2020 17:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  3 JAN 2020 18:21
 entering extended mode
 **./dolgozatmain.tex
 (dolgozatmain.tex
@@ -2143,32 +2143,32 @@ Overfull \hbox (57.33714pt too wide) in alignment at lines 107--110
 ] (dolgozatmain.bbl [74
 
 ]
-Underfull \hbox (badness 2020) in paragraph at lines 101--106
+Underfull \hbox (badness 2020) in paragraph at lines 107--112
 []\T1/cmr/m/n/12 Amitava Chat-ter-jee, Rana-jit Chat-ter-jee, Fu-mi-toshi Mat-suno, and
  []
 
 [75]
-Underfull \hbox (badness 2088) in paragraph at lines 178--183
+Underfull \hbox (badness 2088) in paragraph at lines 184--189
 []\T1/cmr/m/n/12 Piotr Gnaci«ski, Marcin Pepli«ski, Damian Hall-mann, and Pi-otr
  []
 
 [76] [77] [78]
-Underfull \hbox (badness 10000) in paragraph at lines 398--405
+Underfull \hbox (badness 10000) in paragraph at lines 404--411
 []\T1/cmr/m/n/12 László Neukirch-ner, Nim-ród Ku-tasi, An-drás Kele-men, At-tila
  []
 
 
-Underfull \hbox (badness 4429) in paragraph at lines 398--405
+Underfull \hbox (badness 4429) in paragraph at lines 404--411
 \T1/cmr/m/n/12 Fodor, and At-tila Mag-yar.  Con-strained pre-dic-tive con-trol of
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 398--405
+Underfull \hbox (badness 2310) in paragraph at lines 404--411
 \T1/cmr/m/n/12 three-phase buck rec-ti-fiers sim-u-la-tion de-tails.  In \T1/cmr/m/it/12 http://virt.uni-
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 398--405
+Underfull \hbox (badness 1226) in paragraph at lines 404--411
 \T1/cmr/m/it/12 pannon.hu/ver/index.php/en/projects/30-empc-csr\T1/cmr/m/n/12 . Uni-ver-sity of Pan-
  []
 
@@ -2181,10 +2181,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 53204 strings out of 492897
- 1318924 string characters out of 3133501
- 1548657 words of memory out of 3000000
- 56314 multiletter control sequences out of 15000+200000
+ 53205 strings out of 492897
+ 1318933 string characters out of 3133501
+ 1548661 words of memory out of 3000000
+ 56315 multiletter control sequences out of 15000+200000
  556469 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,17n,96p,2567b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2206,7 +2206,7 @@ sfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 onts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 msy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dolgozatmain.pdf (89 pages, 3182149 bytes).
+Output written on dolgozatmain.pdf (89 pages, 3182417 bytes).
 PDF statistics:
  1017 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
