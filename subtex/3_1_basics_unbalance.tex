@@ -24,9 +24,9 @@ In this chapter the basic topics of the thesis are discussed. First the phenomen
 	
 	\begin{equation}
         \begin{array}{rcl}
-            VUFactor&=&\frac{\sqrt{{1-\sqrt{3-6\upsilon}}}}{1+\sqrt{3-6\upsilon}}\\
-						\textnormal{where},&&\\
-						\upsilon&=&\frac{V_{ab}^4+V_{bc}^4+V_{ca}^4}{\left(V_{ab}^2+V_{bc}^2+V_{ca}^2\right)^2},					
+            VUFactor&=&\frac{\sqrt{{1-\sqrt{3-6\frac{V_{ab}^4+V_{bc}^4+V_{ca}^4}{\left(V_{ab}^2+V_{bc}^2+V_{ca}^2\right)^2}}}}}{1+\sqrt{3-6\frac{V_{ab}^4+V_{bc}^4+V_{ca}^4}{\left(V_{ab}^2+V_{bc}^2+V_{ca}^2\right)^2}}}\\
+						%\textnormal{where},&&\\
+						%\upsilon&=&\frac{V_{ab}^4+V_{bc}^4+V_{ca}^4}{\left(V_{ab}^2+V_{bc}^2+V_{ca}^2\right)^2},					
         \end{array}
         \label{BASICUNB:equ:CIRGE}
     \end{equation}
@@ -102,8 +102,8 @@ The number of possible combinations of three phase or line volt- ages that satis
 						\end{bmatrix}&=&
 						\frac{1}{3}\begin{bmatrix}
 						1&1&1\\
-						1&a&a^2\\
-						1&a^2&a\\
+						1&\upsilon&\upsilon^2\\
+						1&\upsilon^2&\upsilon\\
 						\end{bmatrix}\cdot
 						\begin{bmatrix}
 						V_a\\
@@ -114,7 +114,7 @@ The number of possible combinations of three phase or line volt- ages that satis
         \label{BASICUNB:equ:symmetry}
     \end{equation}
 	
-	Where $a=e^{2j\pi/3}$ is the Fortesque operator. From that the formulat of $VUF$ can be formulated:
+	Where $\upsilon=e^{2j\pi/3}$ is the Fortesque operator. From that the formulat of $VUF$ can be formulated:
 	
 	
 	\begin{equation}

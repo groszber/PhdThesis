@@ -73,7 +73,7 @@ The principle of operation of the DC-DC converter is very simple. Two active bri
         \label{BASICMPC:equ:DCDC}
     \end{equation}
 		
-		where $\omega=2\pi f$ is the switching angular frequency of the two single phase full bridge controllers, $L$ is the
+		where $\omega=2\pi f$ is the switching angular frequency of the two single phase full bridge controllers, $L_a$ is the
 sum of the transformer leakage inductance. 
 
 \section{Three-phase buck-type rectifiers}\label{BASICCSR:sec:CSR}
@@ -93,13 +93,13 @@ There are two ways to implement force commutated three phase rectifiers (Fig.\re
 \begin{figure}[!ht]
         \centering
         \includegraphics[width=0.9\textwidth]{EMPC_PNG_Pics/CurrentVoltageRectifiers.png}
-        \caption{Basic topologies of force commuted rectifiers.}
+        \caption{Basic topologies of force commuted current and voltage rectifiers.}
         \label{BASICCSR:fig:topologies}
     \end{figure}
 
 
 As  general case a front-end  converter power supply (e.g. lighting or telecommunications) shall designed that should have approximately these general characteristics: sinusoidal main currents, unity power factor, high power density and simplicity of the power circuit structure. Two structures are most fitted for the task. First a boost-type input rectifier (e.g., Vienna rectifier, \cite{kolar1996design}), that typically features two $400V$ output voltages with a three-level isolated  DC-DC  converter  or  two  isolated  DC-DC  output  stage (see Fig. \ref{EMPC:fig:network} in Ch.5.). The second candidate is the buck-type  input  rectifier (or current source rectifier (CSR))  (conventionally  six-switch topologies as proposed in \cite{zargari1993current}, \cite{sato1993state}) with only one two-level isolated  DC-DC  converter  output  stage.  Also the  input  stage  can be realized as a three-switch topology with considerably  lower  system  complexity  as  compared  to  the boost-type structure. In particular, the number of utilized active and passive components is much lower. Furthermore, there is no middle-point that has to be stabilized, as this is the case for the boost-type structures, making control and active filter design less complex. Further system advantages are the potential of direct start-up and the implicit over current protection in case of an output short circuit. Therefore, this topologies of high interest for many safety critical applications as such future electric aircraft, or automotive applications or as power supplies for process technology \cite{nussbaumer2007comprehensive}.
-The three-switch buck rectifier topology was first proposed in \cite{malesani1987three}. In \cite{itoh1989steady} and \cite{tooth2000effects}, aspects of the system modulation and control have been treated. The application of the topology used as an active filter is discussed in \cite{salo2005three}.  The addition of a DC-DC output boost-stage has been proposed in \cite{baumannnew} in order to main- tain 400-V output voltage for a wide input voltage range and for the case of unbalanced mains as, e.g., the loss of one phase.
+The three-switch buck rectifier topology was first proposed in \cite{malesani1987three}. In \cite{itoh1989steady} and \cite{tooth2000effects}, aspects of the system modulation and control have been treated. The application of the topology used as an active filter is discussed in \cite{salo2005three}.  The addition of a DC-DC output boost-stage has been proposed in \cite{baumannnew} in order to maintain 400 V output voltage for a wide input voltage range and for the case of unbalanced mains as, e.g., the loss of one phase.
 
 \subsection{Basic operation principles}\label{BASICCSR:sec:OperationPrinciple}
 
@@ -118,7 +118,7 @@ For the derivation of the relative on-times of the three buck transistors $S_i$ 
 	where $\omega$ is the network voltage's angular velocity.
 	
 	\item The mains currents are assumed to be equal to the fundamental component of the rectifier input currents.
-	\item The current in the DC output inductor $L_{dc}$ is not affected by the high frequency ripple due to the switching operation.
+	\item The current in the DC output inductor $L_{D}$ is not affected by the high frequency ripple due to the switching operation.
 \end{itemize}
 
  For achieving ohmic mains behavior also in case of unbalanced fundamental harmonics conditions the explained modulation method can still be utilized, however, additionally the control structure presented in \cite{baumann2005novel} has to be employed. The
@@ -127,7 +127,7 @@ waveforms of the phase and line-to-line mains voltages are divided into twelve $
 \begin{figure}[!ht]
         \centering
         \includegraphics[width=\textwidth]{EMPC_PNG_Pics/Waves.png}
-        \caption{Phase voltages $u_{i}$, where line-to-line voltages $u_{i,j}=u_i-u_j$, $(i,j)\in\{1,2,3\}$ and sectors $1–12$being defined by the different relations of the instantaneous values of the mains phase voltages for $u = 400 V$}
+        \caption{Phase voltages $u_{i}$, where line-to-line voltages $u_{N,ij}=u_{N,i}-u_{N,j}$, $(i,j)\in\{R,S,T\}$ and sectors $1$ to $12$ being defined by the different relations of the instantaneous values of the mains phase voltages for $u = 400 V$}
         \label{BASICCSR:fig:waves}
     \end{figure}
 		
@@ -200,7 +200,7 @@ Lets adopt an infinite sequence of iterations $k=0,1,2,\dots$, with the last ite
         \label{BSIC:equ:APPS_x}
     \end{equation}
 		
-		with the initialisation $x^0_i=x^0$, where $\omega_i(q)$ is the generating process index fir the update time at step $q$ on process $i$, and $\tau_i(q)$ is the time index for initialization of the function evaluation, that produced the update at time $q$ on process $i$. For every $q$ the step lenght control parameter $\Delta_i^q$ defined to be:
+		with the initialisation $x^0_i=x^0$, where $\omega_i(q)$ is the generating process index for the update time at step $q$ on process $i$, and $\tau_i(q)$ is the time index for initialization of the function evaluation, that produced the update at time $q$ on process $i$. For every $q$ the step lenght control parameter $\Delta_i^q$ defined to be:
 		
 		\begin{equation}
         \begin{array}{rcl}
@@ -603,6 +603,84 @@ b) the related binary tree.}
     \end{figure}
 
 The implementation of MPC in explicit form is very efficient up to a certain number of critical regions, because they do not require calculations but only search in a table. For more complex problems or fast systems the method requires longer search time.
+
+\section{Notations in order of appearance}
+\begin{longtable}{r l}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  %Chapter 4.1. notations&\\
+  $VUFactor,VU,VUR$                	& Non standardised voltage unbalance factor based on manufacturer standards\\\
+	$V_{ab},V_{bc},V_{ca}$  					& Line-to-line voltages\\
+	$V_{avg_{line}}$  								& Average of line voltages\\
+	$LVUR$														& Voltage unbalance notation based on NEMA standard\\
+	$PVUR_{IEEE-141},PVUR_{IEEE-936}$	& Voltage unbalance notation based on IEEE-141, and IEEE-936 standard\\
+	$V_{a},V_{b},V_{c}$  							& Phase-to-neutral voltages\\
+	$V_{avg_{phase}}$  								& Average of phase voltages\\
+	$V_{0},V_{p},V_{n}$  							& Zero, negative and positive sequence voltages based on symmetrical components theorem\\
+  $\upsilon$  											& Fortesque operator\\
+	$VUF$  														& Voltage Unbalance Factor\\
+	$CVUF$  													& Complex Voltage Unbalance Factor\\
+	$k_v$  														& Magnitude of CVUF\\
+	$\theta_v$  											& Angle of CVUF\\
+	$i_i$															& Constant input inductor current\\
+	$i_o$															& Alternating output current\\
+	$V_i$															& Constant input voltage\\
+	$V_o$															& Alternating output voltage\\
+	$\frac{dV}{dt}$										& Derivative of voltage over time\\
+	$L_+,L_-$													& Current filter inductors\\
+	$S_{1+},S_{2+}$										& Higher switches\\
+	$S_{1+},S_{2+}$										& Lower switches\\
+	$D_{1+},D_{2+}$										& Higher diodes\\
+	$D_{1+},D_{2+}$										& Lower diodes\\
+	$v_\Delta$												& ???\\
+	$v_c$															& ???\\
+	$V_{an},V_{bn}$  									& Designated point's potential to ground on the CSI (Fig.\ref{BASICCSR:fig:SingleCSI}.)\\
+	$\omega$													& Angular velocity of output sinusodial voltage or current\\
+	$V_{D1},V_{D2}$ 									& Two end's voltage on the DC-DC converter\\
+	$v_1,v_2$                         & Transformer voltages\\
+	$C_{snub}$ 												& Capacitance to reduce switching loss and to damp out over-voltage\\
+	$n$ 															& Transformer turn ratio.\\
+	$L_a$															& Leakage inductance\\
+	$v_D$															& Output voltage before the choke inductor $L_D$\\
+	$V_d$															& Output voltage\\
+	$I_D$															& Output current\\
+	$L_D$															& Inductor for filtering the output current of the CSR (Choke)\\ 
+	$C_D$															& Capacitance for filtering the output voltage of the VSR\\ 
+	$L_S$															& Input filter inductance of the three phase alternating current in VSR\\
+	$C_S$															& Input filter capacitance of the three phase alternating current in CSR\\
+	$u_{c_p}$													& AC-side capacitor voltage, where $p\in\{1,2,3\}$\\
+	$\widehat{u}$											& Peak value of AC-side capacitor voltage\\
+	$u_{i,j}$													& Three phase phase-to-neutral voltage $i,j\in\{R,S,T\}$\\
+	$u_{N,RS}$												& Three phase line-to-line voltage of $R$ and $S$\\
+	$\varphi_N$												& Angle of phase voltage\\
+	$\vec{i}$													& Rectifier input current\\
+	$\vec{i}_ref$											& Reference rectifier input current\\
+	$x$																& State\\
+	$f(x)$														& Function of the state\\
+	$k$																& Infinite sequence iterator\\
+	$\Delta$													& Step lenght control parameter\\
+	$\mathcal{P},\mathcal{D},\mathcal{S},\mathcal{Q},\mathcal{U},\mathcal{I},\mathcal{E}$ & Set of processes, directions, succesful iterations, timestep index, internal successes, and external succeses respectively\\
+	$p$																& Process number\\
+	$i$																& Active process indicator\\
+	$d_i$															& Direction of active process\\
+	$x_i^{best}$											& Best reached state, where $x_i^{best}$ is a minima\\
+	$\Delta_i^{best}$											& Best reached step size\\
+	$q$																& Time step\\
+	$\omega_i(q)$ 										& Generating process index for the update time at step $q$ on process $i$\\
+	$\tau_i(q)$												& Time index for initialization of the function evaluation, that produced the update at time $q$ on process $i$\\
+	$\nu_i(q)$ 												& Time index for the completion of the function evaluation that produced the update at time step $q$ on process $i$\\
+	$\textbf{A}$																& State matrix\\
+	$\textbf{B}$																& Input matrix\\
+	$\textbf{x}$											& State vector\\
+	$\textbf{z}$											& Input vector\\
+	$t$																& Time instance\\
+	$\textbf{P}, \textbf{Q},\textbf{R}$ & Terminal, state, and input weight matrices respectively\\
+	$\textbf{E}$																&???\\
+	$\textbf{L}$																&???\\
+	$\textbf{M}$																&???\\
+	$\textbf{N}$											& Defined horison\\
+	
+\hline
+\end{longtable}
 
 %\section{Summary}
 %
