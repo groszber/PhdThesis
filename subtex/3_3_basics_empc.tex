@@ -175,7 +175,7 @@ and not reliable. For such problems, pattern search methods are one possible sol
 
 \subsection{Parallel pattern search}
 
-Lets adopt an infinite sequence of iterations $k=0,1,2,\dots$, with the last iteration noted as $k-1$ and initialization at $0$. It is assumed that the process knows the best point so far as $x^{k-1}$, where $f(x^{k-1})$ has the global minima of $f$. Associated with $x^{k-1}$ there is a step-length control parameter namely $\Delta^{k-1}$. Each $i\in\mathcal{P}$, where $\mathcal{P}=\{1,\dots,p\}$ process ends iteration at $k-1$ by constructing it's trial point and initiating an evaluation of $f(x^{k-1}_i+\Delta^{k-1}_id_i)$, where $\mathcal{D}=\{d_1,\dots,d_p\}$ is the finite set of directions applied by each individual process. The simultaneous start of the function evaluations at the trial points on each of the $p$ processes signals the start of iteration $k$. When all of the participating processes are finished with their evaluation of $f$, they communicate these values to each other and determine the new values of $x^k$, and $\Delta^k$. If there exsists an $i\in\mathcal{P}$, such that $f(x^{k-1}_i+\Delta^{k-1}_id_i)<f(x^{k-1})$, then $k\in\mathcal{S}$, where $\mathcal{S}$ denotes the sucessful iterations.
+Lets adopt an infinite sequence of iterations $\rho=0,1,2,\dots$, with the last iteration noted as $\rho-1$ and initialization at $0$. It is assumed that the process knows the best point so far as $x^{\rho-1}$, where $f(x^{\rho-1})$ has the global minima of $f$. Associated with $x^{\rho-1}$ there is a step-length control parameter namely $\Delta^{\rho-1}$. Each $i\in\mathcal{P}$, where $\mathcal{P}=\{1,\dots,p\}$ process ends iteration at $\rho-1$ by constructing it's trial point and initiating an evaluation of $f(x^{\rho-1}_i+\Delta^{\rho-1}_id_i)$, where $\mathcal{D}=\{d_1,\dots,d_p\}$ is the finite set of directions applied by each individual process. The simultaneous start of the function evaluations at the trial points on each of the $p$ processes signals the start of iteration $\rho$. When all of the participating processes are finished with their evaluation of $f$, they communicate these values to each other and determine the new values of $x^\rho$, and $\Delta^\rho$. If there exsists an $i\in\mathcal{P}$, such that $f(x^{\rho-1}_i+\Delta^{\rho-1}_id_i)<f(\rho^{\rho-1})$, then $\rho\in\mathcal{S}$, where $\mathcal{S}$ denotes the successful iterations.
 
 \subsection{Adding asynchronity}
 
@@ -186,7 +186,7 @@ Lets adopt an infinite sequence of iterations $k=0,1,2,\dots$, with the last ite
 		\item Update local values $x^{best}_i$ and $\Delta^{best}_i$ based on the current local information.
 		\item Repeat.
 		\end{enumerate}
-	The price payed is that each process has its own notion of the best known point seen so far, as well as its own value for	$\Delta^i$. Any success on one process is communicated to all other processes participating in the search, but the successful process carries on from its new best point without waiting for a response from the other processes. By adding a few mild conditions, the global convergence of the search can be still ensured \cite{}.  Instead of indexing based on a notion of iterations, we switch to indexing based on time step, letting the set $\mathcal{Q}=\{1,2,\dots,q\}$ denote the index if steps. Thus $x_i^q$ s used for the best point known to process $i$ at time step $q$, and similarly, $\Delta_i^q$.  So if process $i$ starts a function evaluation at time step $q$, the trial point at which the function evaluation will be made at $x^{q}_i+\Delta^{q}_id_i$. Further worth mention, that time steps are assumed to be of fine enough resolution so that at most one function evaluation finishes per process per time step.\\
+	The price payed is that each process has its own notion of the best known point seen so far, as well as its own value for	$\Delta^i$. Any success on one process is communicated to all other processes participating in the search, but the successful process carries on from its new best point without waiting for a response from the other processes. By adding a few mild conditions, the global convergence of the search can be still ensured \cite{kolda2003understanding}.  Instead of indexing based on a notion of iterations, we switch from $\rho$ to indexing based on time step, letting the set $\mathcal{Q}=\{1,2,\dots,q\}$ denote the index if steps. Thus $x_i^q$ s used for the best point known to process $i$ at time step $q$, and similarly, $\Delta_i^q$.  So if process $i$ starts a function evaluation at time step $q$, the trial point at which the function evaluation will be made at $x^{q}_i+\Delta^{q}_id_i$. Further worth mention, that time steps are assumed to be of fine enough resolution so that at most one function evaluation finishes per process per time step.\\
 	Lets define two sets that satisfy $\mathcal{Q}=\mathcal{S}_i\cup\mathcal{U}_i$, , and $\mathcal{S}_i=\mathcal{I}_i\cup\mathcal{E}_i$, where $\mathcal{S}_i$ is the set of all time successful steps on process $i$, $\mathcal{I}_i$ is the set if internal successes, $\mathcal{E}_i$ is the set of external successes,   and $\mathcal{U}_i$ consists the unsuccessful steps respectfully. An internal success, where the process finds itself the minima, the external sucess is where the process is updated externally by the minima. Further  $\mathcal{C}_i\in\mathcal{U}_i$ is defined as the set of time steps where $\Delta^t_i$ is reduced. All the above cases ($\mathcal{U}_i\textbackslash\mathcal{C}_i$) no action is performed.\\
 	The updating functions allow us to give the following general definitions for $x_i^q$ and $\Delta^q_i$. For every $q\in\mathcal{Q}$, $q>0$, the best pont for the $i^{th}$ process defined to be:
 	
@@ -240,13 +240,13 @@ This way, predictive control methods based on a model are optimal regulators, wi
 	In practice most MPC algorithms use linear models because the dependence of the predictions on future control choices is then linear and this facilitates optimization as well as off-line analysis of expected closed-loop behavior. However, nonlinear
 models can be used where the implied computational burden is not a problem and linear approximations are not accurate enough.
 It is also important to note here the comment fit for purpose. In predictive control, the model is used solely to compute system output predictions, so the model is fit for purpose if it gives accurate enough predictions. The effort and detail put into
-modelling stage should reflect this
+modeling stage should reflect this
 	Let the us assume that the system is linear and time-invariant (LTI):
 	
 	    \begin{equation}
         \begin{array}{rcl}
-            x(t+1)&=&Ax(t)+Bu(t)\\
-						y(t)&=&Cx(t)
+            \textbf{x}(t+1)&=&\textbf{Ax}(t)+\textbf{Bu}(t)\\
+						\textbf{y}(t)&=&\textbf{Cx}(t)
         \end{array}
         \label{BASICMPC:equ:basic_LTI}
     \end{equation}
@@ -255,7 +255,7 @@ modelling stage should reflect this
 	
 	\begin{equation}
         \begin{array}{rcl}
-            Ex(t)+Lu(t)\leq M\\
+            \textbf{Ex}(t)+\textbf{Lu}(t)\leq \textbf{M}\\
         \end{array}
         \label{BASICMPC:equ:restrict_LTI}
     \end{equation}
@@ -266,7 +266,7 @@ modelling stage should reflect this
 		\begin{equation}
         \begin{array}{rcl}
 				%&&\norm{asd}
-         J(U_n,x(0))&=&\norm{{Px_N}}_p+\sum^{N-1}_{k=0}\norm{Qx_k}_p+\norm{Ru_k}_p\\
+         J(\textbf{U}_n,x(0))&=&\norm{{\textbf{Px}_N}}_\varsigma+\sum^{N-1}_{k=0}\norm{\textbf{Qx}_k}_\varsigma+\norm{\textbf{Ru}_k}_\varsigma\\
         \end{array}
         \label{BASICMPC:equ:cost_function}
     \end{equation}
@@ -275,22 +275,22 @@ modelling stage should reflect this
 		
 		\begin{equation}
         \begin{array}{rcl}
-				J^*(x(0))&=&min_{U_N}J(U_n,x(0))\\
-					&a.i.&Ex_k+Luk\leq M,k=0,\dots,N-1\\
-					&&x\in X_f\\
-					&&x_{k+1}=Ax_k+Bu_k,k\geq0\\
-					&&x_0=x(0)\\
+				J^*(\textbf{x}(0))&=&min_{\textbf{U}_N}J(\textbf{U}_n,\textbf{x}(0))\\
+					&a.i.&\textbf{Ex}_k+\textbf{Lu}_k\leq \textbf{M},k=0,\dots,N-1\\
+					&&\textbf{x}\in \mathcal{X}_f\\
+					&&\textbf{x}_{k+1}=\textbf{Ax}_k+\textbf{Bu}_k,k\geq0\\
+					&&\textbf{x}_0=\textbf{x}(0)\\
         \end{array}
         \label{BASICMPC:equ:optim_problem}
     \end{equation}
 		%
-		where $N$ is the defined horizon, $x\in X_f$ is the set if terminal states, $U_N=[u_0,u_1,\dots,u_{N-1}]\in\mathbb{R}^s,s=m*N$. In case of $p=2$ (Euclidean norm) $Q=Q'\geq0$, $R=R'\geq0$, $P\geq0$ and in case of $p=1$, $Q$,$R$, and $P$ shall be on maximum rank. As displayed, the MPC approach requires a numerical definition so that a precise calculation can be made, that is, which predicted input trajectory gives the lowest numerical value to the cost. The main requirement is that the cost depends on the future controls and that low values of cost imply good closed-loop performance good being defined for the process. Of course the choice of the cost affects the complexity of the implied optimization and this is also a consideration. For this reason 2-norm (square norm) measures are popular, as optimization is straightforward.\\
+		where $N$ is the defined horizon, $x\in \mathcal{X}_f$ is the set if terminal states, $U_N=[u_0,u_1,\dots,u_{N-1}]\in\mathbb{R}^s,s=m*N$. In case of $\varsigma=2$ (Euclidean or square norm) $Q=Q'\geq0$, $R=R'\geq0$, $P\geq0$ and in case of $\varsigma=1$, $Q$,$R$, and $P$ shall be on maximum rank. As displayed, the MPC approach requires a numerical definition so that a precise calculation can be made, that is, which predicted input trajectory gives the lowest numerical value to the cost. The main requirement is that the cost depends on the future controls and that low values of cost imply good closed-loop performance good being defined for the process. Of course the choice of the cost affects the complexity of the implied optimization and this is also a consideration. For this reason 2-norm ($\varsigma=2$) measures are popular, as optimization is straightforward.\\
 		Based on the latter and on \ref{BASICMPC:equ:cost_function} and \ref{BASICMPC:equ:optim_problem} a classical linear quadratic regulator (LQR) structure can be formulated with finite or infinite horison [N3], [N20], [N21].
 		Let us consider the following:
 		
 		\begin{equation}
         \begin{array}{c}
-         p=2, \left\{(x,u)\in\mathbb{R}^n+m:Ex+Lu\leq M\right\}=\mathbb{R},X_f=\mathbb{R}^n\\
+         \varsigma=2, \left\{(\textbf{x},\textbf{u})\in\mathbb{R}^n+m:\textbf{Ex}+\textbf{Lu}\leq \textbf{M}\right\}=\mathbb{R},\mathcal{X}_f=\mathbb{R}^n\\
         \end{array}
         \label{BASICMPC:equ:quadratic_case}
     \end{equation}
@@ -299,7 +299,7 @@ modelling stage should reflect this
 		
 		\begin{equation}
         \begin{array}{rcl}
-         u^*(k)&=&K_kx(k), k=0,\dots,N-1\\
+         \textbf{u}^*(k)&=&K_k\textbf{x}(k), k=0,\dots,N-1\\
         \end{array}
         \label{BASICMPC:equ:control_law}
     \end{equation}
@@ -308,17 +308,17 @@ modelling stage should reflect this
 		
 		\begin{equation}
         \begin{array}{rcl}
-         K_k&=&-(B'P_{k+1}B+R)^-1B'P_{k+1}A\\
+         K_k&=&-(\textbf{B}'\textbf{P}_{k+1}\textbf{B}+\textbf{R})^{-1}\textbf{B}'\textbf{P}_{k+1}A\\
         \end{array}
         \label{BASICMPC:equ:control_coefficient}
     \end{equation}
 		
-		The positive semi-definite matrix $P_k$ is the solution of the Riccati equation:
+		The positive semi-definite matrix $\textbf{P}_k$ is the solution of the Riccati equation:
 		
 		\begin{equation}
         \begin{array}{rcl}
-        P_N&=&P\\
-				P_k&=&A'(P_{k+1}-P{k+1}B(B'P_{k+1}B+R)^-1B'P_{k+1})A+Q\\
+        \textbf{P}_N&=&\textbf{P}\\
+				\textbf{P}_k&=&\textbf{A}'(\textbf{P}_{k+1}-\textbf{P}{k+1}\textbf{B}(\textbf{B}'\textbf{P}_{k+1}\textbf{B}+\textbf{R})^{-1}\textbf{B}'P_{k+1})\textbf{A}+\textbf{Q}\\
         \end{array}
         \label{BASICMPC:equ:Riccati}
     \end{equation}
@@ -327,16 +327,16 @@ modelling stage should reflect this
 		
 		\begin{equation}
         \begin{array}{rcl}
-				J^*(x(0))&=&x(0)'P_0x(0)\\
+				J^*(\textbf{x}(0))&=&\textbf{x}(0)'\textbf{P}_0\textbf{x}(0)\\
         \end{array}
         \label{BASICMPC:equ:Riccati_initial}
     \end{equation}
 		
-		If we choose $N\longrightarrow\infty$ and assume that $(A,B)$ are controllable and $(A,B)$ are observable, the optimization problem becomes an infinite horizon LQR whose solution can be written as:
+		If we choose $N\longrightarrow\infty$ and assume that $(\textbf{A},\textbf{B})$ are controllable and $(\textbf{A},\textbf{B})$ are observable, the optimization problem becomes an infinite horizon LQR whose solution can be written as:
 		
 		\begin{equation}
         \begin{array}{rcl}
-         u^*(k)&=&K_kx(k), k=0,\dots,\infty\\
+         \textbf{u}^*(k)&=&K_k\textbf{x}(k), k=0,\dots,\infty\\
         \end{array}
         \label{BASICMPC:equ:control_law_infinite}
     \end{equation}
@@ -345,16 +345,16 @@ modelling stage should reflect this
 		
 		\begin{equation}
         \begin{array}{rcl}
-         K_k&=&-(B'P_\infty B+R)^-1B'P_\infty A\\
+         K_k&=&-(\textbf{B}'\textbf{P}_\infty \textbf{B}+\textbf{R})^{-1}\textbf{B}'\textbf{P}_\infty \textbf{A}\\
         \end{array}
         \label{BASICMPC:equ:control_coefficient_infinite}
     \end{equation}
 		
-		with P as the unique solution of the Riccati equiation:
+		with $\textbf{P}$ as the unique solution of the Riccati equiation:
 		
 		\begin{equation}
         \begin{array}{rcl}
-				P_\infty&=&A'(P_\infty-P\infty B(B'P_\infty B+R)^-1B'P_\infty)A+Q\\
+				\textbf{P}_\infty&=&\textbf{A}'(\textbf{P}_\infty-\textbf{P}\infty \textbf{B}(\textbf{B}'\textbf{P}_\infty \textbf{B}+\textbf{R})^{-1}\textbf{B}'\textbf{P}_\infty)\textbf{A}+\textbf{Q}\\
         \end{array}
         \label{BASICMPC:equ:Riccati_infinite}
     \end{equation}
@@ -371,7 +371,7 @@ modelling stage should reflect this
 		
 		\begin{equation}
         \begin{array}{c}
-				y_{min}\leq y(t)\leq y_{max},u_{min}\leq u(t)\leq u_{max},\\
+				\textbf{y}_{min}\leq \textbf{y}(t)\leq \textbf{y}_{max},\textbf{u}_{min}\leq \textbf{u}(t)\leq \textbf{u}_{max},\\
         \end{array}
         \label{BASICMPC:equ:receiding_horison_constraints}
     \end{equation}
@@ -381,22 +381,22 @@ with the cost function to minimize:
 		
 		\begin{equation}
         \begin{array}{rcl}
-				J(U,x(t)&=&x'_{t+N_y|t}Px_{t+N_y|t}+\sum^{N_y-1}_{k=0}x'_{t+k|t}Qx_{t+k|t}+u'_{t+k}Ru_{t+k},\\
-				&a.i.&y_{min}\leq y_{t+k|t}\leq y_{max},k=1,\dots,N_c-1,\\
-				&&u_{min}\leq u_{t+k}\leq u_{max},k=0,1,\dots,N_c-1,\\
-				&&x_{t|t}=x(t),\\
-				&&x_{t+k+1|t}=Ax_{t+k|t}+Bu_{t+k},\\
-				&&y_{t+k|t}=Cx_{t+k|t}, k\geq0,\\
-				&&u_{t+k}=-Kx_{t+k|t}, N_u\leq k\leq N_y,\\
+				J(\textbf{U},\textbf{x}(t)&=&\textbf{x}'_{t+N_y|t}\textbf{P}\textbf{x}_{t+N_y|t}+\sum^{N_y-1}_{k=0}\textbf{x}'_{t+k|t}\textbf{Q}\textbf{x}_{t+k|t}+\textbf{u}'_{t+k}\textbf{R}\textbf{u}_{t+k},\\
+				&a.i.&\textbf{y}_{min}\leq \textbf{y}_{t+k|t}\leq \textbf{y}_{ma\textbf{x}},k=1,\dots,N_c-1,\\
+				&&\textbf{u}_{min}\leq \textbf{u}_{t+k}\leq \textbf{u}_{max},k=0,1,\dots,N_c-1,\\
+				&&\textbf{x}_{t|t}=\textbf{x}(t),\\
+				&&\textbf{x}_{t+k+1|t}=\textbf{A}\textbf{x}_{t+k|t}+\textbf{B}\textbf{u}_{t+k},\\
+				&&\textbf{y}_{t+k|t}=\textbf{C}\textbf{x}_{t+k|t}, k\geq0,\\
+				&&\textbf{u}_{t+k}=-K\textbf{x}_{t+k|t}, N_u\leq k\leq N_y,\\
         \end{array}
         \label{BASICMPC:equ:receiding_horison_problem}
     \end{equation}
 		
-		where $Q=Q'\geq0$, $R=R'\geq0$, $P\geq0$, $(C,A)$ is observable, [missing text] and $N_u\leq N_y$, $N_c\leq N_y-1$. One trivial possibility to choose $K=0$ and $P$ to satisfy the Lyapunov equation:
+		where $\textbf{Q}=\textbf{Q}'\geq0$, $\textbf{R}=\textbf{R}'\geq0$, $\textbf{P}\geq0$, $(C,A)$ is observable, [missing text] and $N_u\leq N_y$, $N_c\leq N_y-1$. One trivial possibility to choose $K=0$ and $P$ to satisfy the Lyapunov equation:
 		
 		\begin{equation}
         \begin{array}{rcl}
-				P&=&A'PA+Q\\
+				\textbf{P}&=&\textbf{A}'\textbf{PA}+\textbf{Q}\\
         \end{array}
         \label{BASICMPC:equ:receiding_horison_Lyapunov}
     \end{equation}
@@ -405,7 +405,7 @@ with the cost function to minimize:
 		
 		\begin{equation}
         \begin{array}{rcl}
-				U^*(t)&=&\left\{u^*_t,\dots,u^*_{t+N_u-1}\right\},\\
+				\textbf{U}^*(t)&=&\left\{\textbf{u}^*_t,\dots,\textbf{u}^*_{t+N_u-1}\right\},\\
         \end{array}
         \label{BASICMPC:equ:receiding_optimal_sequence}
     \end{equation}
@@ -414,7 +414,7 @@ with the cost function to minimize:
 		
 		\begin{equation}
         \begin{array}{rcl}
-				u(t)=u^*_t.\\
+				\textbf{u}(t)=\textbf{u}^*_t.\\
         \end{array}
         \label{BASICMPC:equ:receiding_optimal_first}
     \end{equation}
@@ -541,7 +541,7 @@ Let us assume an optimization problem described by \ref{BASICMPC:equ:receiding_h
 
 \begin{equation}
         \begin{array}{rcl}
-				x_{t+k|t}&=&A^kx(t)+\sum^{k-1}_{j=0}A^jBu_{t+k-1-j}
+				\textbf{x}_{t+k|t}&=&\textbf{A}^k\textbf{x}(t)+\sum^{k-1}_{j=0}\textbf{A}^j\textbf{Bu}_{t+k-1-j}
         \end{array}
         \label{BASICMPC:equ:EMPC_evolution}
     \end{equation}
@@ -550,17 +550,26 @@ Based on \ref{BASICMPC:equ:receiding_horison_problem}, and \ref{BASICMPC:equ:EMP
 
 \begin{equation}
         \begin{array}{rcl}
-				V(x(t))&=&\frac{1}{2}x'(t)Yx(t)+min\left\{\frac{1}{2}U'HU+x'(t)FU\right\}\\
-				&with\,restrictions:&GU\leq W+Ex(t)\\
+				\textbf{V}(\textbf{x}(t))&=&\frac{1}{2}\textbf{x}'(t)\textbf{Yx}(t)+min\left\{\frac{1}{2}\textbf{U}'\textbf{HU}+\textbf{x}'(t)\textbf{FU}\right\},\\
+				%&with\,restrictions:&\textbf{GU}\leq \textbf{W}+\textbf{Ex}(t)\\
         \end{array}
         \label{BASICMPC:equ:EMPC_transformed}
     \end{equation}
 		
-		where $U=\{u'_t,\dots,u'_{t+N_u-1}\}\in\mathbb{R}'s,\,s=m\cdot N_u$, $H$ is the optimization vector where $H=H'>0$, and $H,F,Y,G,W,E$ can be directly obtained from $A,B,Q,R,P$. Let the transfotmation variable be:
+		with restrictions:
 		
 		\begin{equation}
         \begin{array}{rcl}
-				z&=&U+H^{-1}F'x(t)
+				\textbf{GU}&\leq& \textbf{W}+\textbf{Ex}(t),\\
+        \end{array}
+        \label{BASICMPC:equ:EMPC_transformed_2}
+    \end{equation}
+		
+		where $\textbf{U}=\{u'_t,\dots,u'_{t+N_u-1}\}\in\mathbb{R}^s,\,s=m\cdot N_u$, and $\textbf{H}$ is the optimization vector where $\textbf{H}=\textbf{H}'>0$, and $\textbf{H},\textbf{F},\textbf{Y},\textbf{G},\textbf{W},\textbf{E}$ can be directly obtained from $\textbf{A},\textbf{B},\textbf{Q},\textbf{R},\textbf{P}$, according to \cite{borrelli2017predictive}. Let the transformation vector be:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				\textbf{z}&=&\textbf{U}+\textbf{H}^{-1}\textbf{F}'\textbf{x}(t)
         \end{array}
         \label{BASICMPC:equ:EMPC_trans_var}
     \end{equation}
@@ -569,23 +578,23 @@ Based on \ref{BASICMPC:equ:receiding_horison_problem}, and \ref{BASICMPC:equ:EMP
 		
 		\begin{equation}
         \begin{array}{rcl}
-				V(x)&=&V_z(x)+\frac{1}{2}x'\left(Y-FH^{-1}F'\right)x,
+				\textbf{V}(\textbf{x})&=&\textbf{V}_z(\textbf{x})+\frac{1}{2}\textbf{x}'\left(\textbf{Y}-\textbf{FH}^{-1}\textbf{F}'\right)\textbf{x},
         \end{array}
         \label{BASICMPC:equ:EMPC_trans_var}
     \end{equation}
 		
-		where $V_z(x)$ is defined as:
+		where $\textbf{V}_z(\textbf{x})$ is defined as:
 		
 		\begin{equation}
         \begin{array}{rcl}
-				V_z(x)&=&min\frac{1}{2}z'Hz\\
-				&s.t.&Gz\leq W+Sx(t)\\
-				&with\,restrictions:&S=E+GH^{-1}F'.\\
+				\textbf{V}_z(\textbf{x})&=&min\frac{1}{2}\textbf{z}'\textbf{Hz}\\
+				&s.t.&\textbf{Gz}\leq \textbf{W}+\textbf{Sx}(t)\\
+				&&\textbf{S}=\textbf{E}+\textbf{GH}^{-1}\textbf{F}'.\\
         \end{array}
         \label{BASICMPC:equ:EMPC_transformed}
     \end{equation}
 		
-		From \ref{BASICMPC:equ:EMPC_transformed} the standartd mp-QP problem can be defined according to \cite{borrelli2017predictive}, and thorugh this transformation the MPC problem can be explicitly obtained. 
+		From \ref{BASICMPC:equ:EMPC_transformed} the standard mp-QP problem can be defined according to \cite{borrelli2017predictive}, and through this transformation the MPC problem can be explicitly obtained. 
 		
 
 \subsection{Storage of critical regions}\label{BASICCSR:sec:EMPCStorage}
@@ -656,7 +665,7 @@ The implementation of MPC in explicit form is very efficient up to a certain num
 	$\vec{i}_ref$											& Reference rectifier input current\\
 	$x$																& State\\
 	$f(x)$														& Function of the state\\
-	$k$																& Infinite sequence iterator\\
+	$\rho$																& Infinite sequence iterator\\
 	$\Delta$													& Step lenght control parameter\\
 	$\mathcal{P},\mathcal{D},\mathcal{S},\mathcal{Q},\mathcal{U},\mathcal{I},\mathcal{E}$ & Set of processes, directions, succesful iterations, timestep index, internal successes, and external succeses respectively\\
 	$p$																& Process number\\
@@ -670,6 +679,7 @@ The implementation of MPC in explicit form is very efficient up to a certain num
 	$\nu_i(q)$ 												& Time index for the completion of the function evaluation that produced the update at time step $q$ on process $i$\\
 	$\textbf{A}$																& State matrix\\
 	$\textbf{B}$																& Input matrix\\
+	$\textbf{C}$																& Output matrix\\
 	$\textbf{x}$											& State vector\\
 	$\textbf{z}$											& Input vector\\
 	$t$																& Time instance\\
@@ -677,7 +687,30 @@ The implementation of MPC in explicit form is very efficient up to a certain num
 	$\textbf{E}$																&???\\
 	$\textbf{L}$																&???\\
 	$\textbf{M}$																&???\\
-	$\textbf{N}$											& Defined horison\\
+	$\textbf{H}$																&???\\
+	$\textbf{F}$																&???\\
+	$\textbf{Y}$																&???\\
+	$\textbf{G}$																&???\\
+	$\textbf{W}$																&???\\
+	$\textbf{E}$																&???\\
+	$N$											& Defined horizon of MPC\\
+	$N_c,N_u,N_y$											& Defined control, input, and output horizon of MPC respectively\\
+	$k$																& Time step on the horison $N$ \\
+	$\mathcal{X}_f$															& Set of terminal states \\
+	$\textbf{U}_N$										& Vector of inputs sequence following the horizon\\
+	$\varsigma$											& Norm index\\
+	$s$																& ???\\
+	$m$																& ???\\
+	$K$															& Control coefficient \\
+	$u^*(k)$													& $k^th$ instance of the optimizer input\\
+	$\textbf{U}^*(k)$									& Optimal command sequence\\
+	$\textbf{P}$																& Solution of the Riccati equation\\
+	$\textbf{u}_{min,max},\textbf{y}_{min,max}$					& Input and output constraints\\
+	$V(\textbf{x})$														& Lyapunov function of $\textbf{x}$\\
+	$\Omega$ 													& Terminal set\\
+	$\textbf{z}$																& transformation vector\\
+	$X_j$															& $j^{th}$ resulting region after partitioning of the statespace\\
+	$I_i$															& $i^{th}$ resulting node after partitioning of the statespace\\
 	
 \hline
 \end{longtable}

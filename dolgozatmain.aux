@@ -145,7 +145,7 @@
 \newlabel{BASICCSR:eqn:currents}{{2.13}{18}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.5}Asynchronous paralell pattern search}{18}\protected@file@percent }
 \newlabel{BASICUNB:sec:APPS}{{2.5}{18}}
-\citation{}
+\citation{kolda2003understanding}
 \newlabel{BASICCSR:eqn:currents}{{2.14}{19}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5.1}Parallel pattern search}{19}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5.2}Adding asynchronity}{19}\protected@file@percent }
@@ -193,9 +193,11 @@
 \newlabel{BASICCSR:sec:EMPC}{{2.7}{27}}
 \newlabel{BASICMPC:equ:EMPC_evolution}{{2.42}{27}}
 \newlabel{BASICMPC:equ:EMPC_transformed}{{2.43}{27}}
-\newlabel{BASICMPC:equ:EMPC_trans_var}{{2.44}{27}}
+\newlabel{BASICMPC:equ:EMPC_transformed_2}{{2.44}{27}}
 \newlabel{BASICMPC:equ:EMPC_trans_var}{{2.45}{27}}
-\newlabel{BASICMPC:equ:EMPC_transformed}{{2.46}{27}}
+\newlabel{BASICMPC:equ:EMPC_trans_var}{{2.46}{27}}
+\citation{borrelli2017predictive}
+\newlabel{BASICMPC:equ:EMPC_transformed}{{2.47}{28}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.7.1}Storage of critical regions}{28}\protected@file@percent }
 \newlabel{BASICCSR:sec:EMPCStorage}{{2.7.1}{28}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Basic search three of an EMPC where, a) are the critical regions for a space of 2D parameters, b) the related binary tree.\relax }}{28}\protected@file@percent }
@@ -208,211 +210,211 @@
 \citation{fortescue1918method}
 \citation{Neukirchner2015}
 \citation{neukirchner2015examination}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Voltage unbalance compensation}{31}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Voltage unbalance compensation}{32}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{VUB:sec:Main}{{3}{31}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Network structure}{31}\protected@file@percent }
-\newlabel{VUB:sec:Network}{{3.1}{31}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces The simplified structure of a three phase four wire low voltage network. The transformer station acts as transition from the medium voltage power grid to the low voltage network. The several regular households are representing the main loads of the network. The transformer and the loads are connected with power line sections infected by inductive and resistive disturbances and capacitive couplings. Domestic powerplants can connect to any connection point within the low voltage network, via an appropriate inverter - either to the three phase sections using a three phase inverter or to a single phase using a single phase inverter.\relax }}{32}\protected@file@percent }
-\newlabel{fig:network}{{3.1}{32}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Proposed geometrical indicator}{32}\protected@file@percent }
-\newlabel{VUB:sec:Geom}{{3.2}{32}}
-\newlabel{equ:geom}{{3.1}{33}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces The triangles spanned by the ideal and the actual voltage phasors. The extent of voltage deviation on the network can be measured by the sum of areas where the two triangles are not overlapping.\relax }}{33}\protected@file@percent }
-\newlabel{fig:threephase}{{3.2}{33}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}The method's additional content compared to VUF}{33}\protected@file@percent }
-\newlabel{VUB:sec:AdditionalContent}{{3.3}{33}}
+\newlabel{VUB:sec:Main}{{3}{32}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Network structure}{32}\protected@file@percent }
+\newlabel{VUB:sec:Network}{{3.1}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces The simplified structure of a three phase four wire low voltage network. The transformer station acts as transition from the medium voltage power grid to the low voltage network. The several regular households are representing the main loads of the network. The transformer and the loads are connected with power line sections infected by inductive and resistive disturbances and capacitive couplings. Domestic powerplants can connect to any connection point within the low voltage network, via an appropriate inverter - either to the three phase sections using a three phase inverter or to a single phase using a single phase inverter.\relax }}{33}\protected@file@percent }
+\newlabel{fig:network}{{3.1}{33}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Proposed geometrical indicator}{33}\protected@file@percent }
+\newlabel{VUB:sec:Geom}{{3.2}{33}}
+\newlabel{equ:geom}{{3.1}{34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces The triangles spanned by the ideal and the actual voltage phasors. The extent of voltage deviation on the network can be measured by the sum of areas where the two triangles are not overlapping.\relax }}{34}\protected@file@percent }
+\newlabel{fig:threephase}{{3.2}{34}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}The method's additional content compared to VUF}{34}\protected@file@percent }
+\newlabel{VUB:sec:AdditionalContent}{{3.3}{34}}
 \citation{arn1997under-voltage}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Correlation between the geometrical voltage unbalance indicator $G$ and the regulated voltage unbalance indicator $TDV$ using 1000 samples. In every iteration each three phase voltage vector's amplitude and phase values changed randomly, according to uniform distributions with $\pm 20$ V and $\pm \genfrac  {}{}{}{}{1}{3}\pi \cdot 10^{-2}$ rad variance. It can be seen, that the geometric norm contains more information than the classical one. The four asymmetry cases of Figure 3.5\hbox {} are denoted by black symbols on the picture. It is apparent, that in case (c), and (d) the G norm holds additional information than the TDV.\relax }}{34}\protected@file@percent }
-\newlabel{fig:correlation}{{3.3}{34}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces \textbf  {Itt a .eps converzio nem lett valami jo, javitani kell!} Correlation between the regulated unbalance indicator and the fraction of geometrical and regulated indicator. It can be seen that there is a functional connection between the two values.\relax }}{35}\protected@file@percent }
-\newlabel{fig:side_correlation}{{3.4}{35}}
-\newlabel{equ:mutual}{{3.2}{35}}
-\newlabel{equ:drop}{{3.3}{35}}
-\newlabel{fig:cases_A}{{3.5a}{36}}
-\newlabel{sub@fig:cases_A}{{a}{36}}
-\newlabel{fig:cases_B}{{3.5b}{36}}
-\newlabel{sub@fig:cases_B}{{b}{36}}
-\newlabel{fig:cases_C}{{3.5c}{36}}
-\newlabel{sub@fig:cases_C}{{c}{36}}
-\newlabel{fig:cases_D}{{3.5d}{36}}
-\newlabel{sub@fig:cases_D}{{d}{36}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Four distinct cases of voltage triangles examining correlation between the regular $TDV$ and geometrical $G$ method.\relax }}{36}\protected@file@percent }
-\newlabel{fig:cases}{{3.5}{36}}
-\newlabel{equ:factor}{{3.4}{37}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Unbalance compensation}{37}\protected@file@percent }
-\newlabel{VUB:sec:Compensation}{{3.4}{37}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Problem statement}{37}\protected@file@percent }
-\newlabel{VUB:sec:Statement}{{3.4.1}{37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Correlation between the geometrical voltage unbalance indicator $G$ and the regulated voltage unbalance indicator $TDV$ using 1000 samples. In every iteration each three phase voltage vector's amplitude and phase values changed randomly, according to uniform distributions with $\pm 20$ V and $\pm \genfrac  {}{}{}{}{1}{3}\pi \cdot 10^{-2}$ rad variance. It can be seen, that the geometric norm contains more information than the classical one. The four asymmetry cases of Figure 3.5\hbox {} are denoted by black symbols on the picture. It is apparent, that in case (c), and (d) the G norm holds additional information than the TDV.\relax }}{35}\protected@file@percent }
+\newlabel{fig:correlation}{{3.3}{35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces \textbf  {Itt a .eps converzio nem lett valami jo, javitani kell!} Correlation between the regulated unbalance indicator and the fraction of geometrical and regulated indicator. It can be seen that there is a functional connection between the two values.\relax }}{36}\protected@file@percent }
+\newlabel{fig:side_correlation}{{3.4}{36}}
+\newlabel{equ:mutual}{{3.2}{36}}
+\newlabel{equ:drop}{{3.3}{36}}
+\newlabel{fig:cases_A}{{3.5a}{37}}
+\newlabel{sub@fig:cases_A}{{a}{37}}
+\newlabel{fig:cases_B}{{3.5b}{37}}
+\newlabel{sub@fig:cases_B}{{b}{37}}
+\newlabel{fig:cases_C}{{3.5c}{37}}
+\newlabel{sub@fig:cases_C}{{c}{37}}
+\newlabel{fig:cases_D}{{3.5d}{37}}
+\newlabel{sub@fig:cases_D}{{d}{37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Four distinct cases of voltage triangles examining correlation between the regular $TDV$ and geometrical $G$ method.\relax }}{37}\protected@file@percent }
+\newlabel{fig:cases}{{3.5}{37}}
+\newlabel{equ:factor}{{3.4}{38}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Unbalance compensation}{38}\protected@file@percent }
+\newlabel{VUB:sec:Compensation}{{3.4}{38}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Problem statement}{38}\protected@file@percent }
+\newlabel{VUB:sec:Statement}{{3.4.1}{38}}
 \citation{gorbe2012reduction}
 \citation{lee2009new}
 \citation{Patnaik2013topologies}
 \citation{Ninad2014control}
 \citation{gorbe2012reduction}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Control problem}{38}\protected@file@percent }
-\newlabel{VUB:sec:Control}{{3.4.2}{38}}
-\@writefile{toc}{\contentsline {subsubsection}{Asymmetrical inverter structure}{38}\protected@file@percent }
-\newlabel{VUB:sec:Inverter}{{3.4.2}{38}}
-\newlabel{BASICCSR:sec:DCDC}{{3.4.2}{39}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces The asymmetrical inverter design, which applies three single phase full bridge IGBT current injector to create the injected asymmetrical current shapes for voltage unbalance compensation. \relax }}{40}\protected@file@percent }
-\newlabel{fig:inv}{{3.6}{40}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Control problem}{39}\protected@file@percent }
+\newlabel{VUB:sec:Control}{{3.4.2}{39}}
+\@writefile{toc}{\contentsline {subsubsection}{Asymmetrical inverter structure}{39}\protected@file@percent }
+\newlabel{VUB:sec:Inverter}{{3.4.2}{39}}
+\newlabel{BASICCSR:sec:DCDC}{{3.4.2}{40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces The asymmetrical inverter design, which applies three single phase full bridge IGBT current injector to create the injected asymmetrical current shapes for voltage unbalance compensation. \relax }}{41}\protected@file@percent }
+\newlabel{fig:inv}{{3.6}{41}}
 \citation{hough2001asynchronous}
-\@writefile{toc}{\contentsline {subsubsection}{Measurements from a real unbalanced network}{41}\protected@file@percent }
-\newlabel{VUB:sec:Measurement}{{3.4.2}{41}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Optimization based control algorithm}{41}\protected@file@percent }
-\newlabel{VUB:sec:Optimization}{{3.4.3}{41}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces The optimization algorithm implemented for current control. A one dimensional linear optimization step is being solved in each dimension of the six dimensional parameter space, iteratively.\relax }}{41}\protected@file@percent }
-\newlabel{fig:APPS}{{3.7}{41}}
+\@writefile{toc}{\contentsline {subsubsection}{Measurements from a real unbalanced network}{42}\protected@file@percent }
+\newlabel{VUB:sec:Measurement}{{3.4.2}{42}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Optimization based control algorithm}{42}\protected@file@percent }
+\newlabel{VUB:sec:Optimization}{{3.4.3}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces The optimization algorithm implemented for current control. A one dimensional linear optimization step is being solved in each dimension of the six dimensional parameter space, iteratively.\relax }}{42}\protected@file@percent }
+\newlabel{fig:APPS}{{3.7}{42}}
 \citation{segui2007approach}
 \citation{Neukirchner2015}
-\newlabel{eqn:contstruct1}{{3.5}{42}}
-\newlabel{eqn:contstruct2}{{3.6}{42}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Discussion}{43}\protected@file@percent }
-\newlabel{VUB:sec:Discussion}{{3.5}{43}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Dynamical simulation based experiments}{43}\protected@file@percent }
-\newlabel{VUB:sec:Results}{{3.5.1}{43}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Performance analysis}{43}\protected@file@percent }
-\newlabel{VUB:sec:Performance}{{3.5.2}{43}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Unbalance reduction control system performance with half charged battery and photovoltaic power source available. The underlying unbalance norm is the geometrical one ($G$) in this experiment. After starting the controller at $t=0.1s$ the unbalance measure $G$ of the network significantly decrease.\relax }}{44}\protected@file@percent }
-\newlabel{fig:compare_asym_PV}{{3.8}{44}}
-\@writefile{toc}{\contentsline {subsubsection}{Robustness analysis}{44}\protected@file@percent }
-\newlabel{VUB:sec:Robustness}{{3.5.2}{44}}
+\newlabel{eqn:contstruct1}{{3.5}{43}}
+\newlabel{eqn:contstruct2}{{3.6}{43}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Discussion}{44}\protected@file@percent }
+\newlabel{VUB:sec:Discussion}{{3.5}{44}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Dynamical simulation based experiments}{44}\protected@file@percent }
+\newlabel{VUB:sec:Results}{{3.5.1}{44}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Performance analysis}{44}\protected@file@percent }
+\newlabel{VUB:sec:Performance}{{3.5.2}{44}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Unbalance reduction control system performance with half charged battery and photovoltaic power source available. The underlying unbalance norm is the geometrical one ($G$) in this experiment. After starting the controller at $t=0.1s$ the unbalance measure $G$ of the network significantly decrease.\relax }}{45}\protected@file@percent }
+\newlabel{fig:compare_asym_PV}{{3.8}{45}}
+\@writefile{toc}{\contentsline {subsubsection}{Robustness analysis}{45}\protected@file@percent }
+\newlabel{VUB:sec:Robustness}{{3.5.2}{45}}
 \citation{Neukirchner2015}
 \citation{neukirchner2015examination}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Unbalance reduction control system performance without battery and renewable source (zero energy balance operation). The performance reduction is clearly observable compared to the case when external power source is available (Figure 3.8\hbox {}), but as result the voltage unbalance indicator $G$ reduced by the average value of 14.78\%.\relax }}{45}\protected@file@percent }
-\newlabel{fig:compare_asym}{{3.9}{45}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Robustness analysis with respect to step type changes in the network load (and voltage unbalance). The unbalance reduction controller successfully compensates the changes in the network voltage unbalance norm ($G$) value.\relax }}{45}\protected@file@percent }
-\newlabel{fig:robustness}{{3.10}{45}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Environmental effect}{45}\protected@file@percent }
-\newlabel{VUB:sec:Environment}{{3.5.3}{45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Unbalance reduction control system performance without battery and renewable source (zero energy balance operation). The performance reduction is clearly observable compared to the case when external power source is available (Figure 3.8\hbox {}), but as result the voltage unbalance indicator $G$ reduced by the average value of 14.78\%.\relax }}{46}\protected@file@percent }
+\newlabel{fig:compare_asym}{{3.9}{46}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Robustness analysis with respect to step type changes in the network load (and voltage unbalance). The unbalance reduction controller successfully compensates the changes in the network voltage unbalance norm ($G$) value.\relax }}{46}\protected@file@percent }
+\newlabel{fig:robustness}{{3.10}{46}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Environmental effect}{46}\protected@file@percent }
+\newlabel{VUB:sec:Environment}{{3.5.3}{46}}
 \citation{MVM2013}
 \citation{MVM2018}
-\@writefile{toc}{\contentsline {subsubsection}{Power loss reduction on the network}{46}\protected@file@percent }
-\newlabel{VUB:sec:Powerloss}{{3.5.3}{46}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Compensation control's loss reduction during zero energy balance operation on the modeled network, where $P_{loss}$ indicates the effective power losses and $P^{comp}_{loss}$ effective power losses during control of the network. As result the network losses reduced by mean $6.5\%$.\relax }}{46}\protected@file@percent }
-\newlabel{fig:compare_power}{{3.11}{46}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Intermediate puffer capacitance's voltage within boundaries ($600\pm 10$\tmspace  +\thinmuskip {.1667em}V), during zero energy balance operation mode of the voltage unbalance compensation controller. $U_{\textnormal  {im}}$ indicates intermediate the capacitance's voltage.\relax }}{46}\protected@file@percent }
-\newlabel{fig:u_inter}{{3.12}{46}}
+\@writefile{toc}{\contentsline {subsubsection}{Power loss reduction on the network}{47}\protected@file@percent }
+\newlabel{VUB:sec:Powerloss}{{3.5.3}{47}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Compensation control's loss reduction during zero energy balance operation on the modeled network, where $P_{loss}$ indicates the effective power losses and $P^{comp}_{loss}$ effective power losses during control of the network. As result the network losses reduced by mean $6.5\%$.\relax }}{47}\protected@file@percent }
+\newlabel{fig:compare_power}{{3.11}{47}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Intermediate puffer capacitance's voltage within boundaries ($600\pm 10$\tmspace  +\thinmuskip {.1667em}V), during zero energy balance operation mode of the voltage unbalance compensation controller. $U_{\textnormal  {im}}$ indicates intermediate the capacitance's voltage.\relax }}{47}\protected@file@percent }
+\newlabel{fig:u_inter}{{3.12}{47}}
 \citation{MVM2013}
 \citation{gorbe2012reduction}
 \citation{MVM2018}
-\@writefile{toc}{\contentsline {subsubsection}{CO2 footprint}{47}\protected@file@percent }
-\newlabel{VUB:sec:CO2}{{3.5.3}{47}}
-\newlabel{eqn:co_emission}{{3.7}{47}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Conclusion}{47}\protected@file@percent }
-\newlabel{VUB:sec:Conclusion}{{3.6}{47}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Predictive control of a CSR}{49}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{CO2 footprint}{48}\protected@file@percent }
+\newlabel{VUB:sec:CO2}{{3.5.3}{48}}
+\newlabel{eqn:co_emission}{{3.7}{48}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Conclusion}{48}\protected@file@percent }
+\newlabel{VUB:sec:Conclusion}{{3.6}{48}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Predictive control of a CSR}{50}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{EMPC:sec:main}{{4}{49}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Modeling}{49}\protected@file@percent }
-\newlabel{EMPC:sec:Modeling}{{4.1}{49}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Mathematical Modeling of the CSR}{49}\protected@file@percent }
-\newlabel{EMPC:sec:ModelofCSR}{{4.1.1}{49}}
-\newlabel{EMPC:equ:abc_eqn}{{4.1}{49}}
+\newlabel{EMPC:sec:main}{{4}{50}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Modeling}{50}\protected@file@percent }
+\newlabel{EMPC:sec:Modeling}{{4.1}{50}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Mathematical Modeling of the CSR}{50}\protected@file@percent }
+\newlabel{EMPC:sec:ModelofCSR}{{4.1.1}{50}}
+\newlabel{EMPC:equ:abc_eqn}{{4.1}{50}}
 \citation{ahmed2014model}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Circuit diagram of the three-phase buck-type rectifier with insulated gate bipolar transistors (IGBTs).\relax }}{50}\protected@file@percent }
-\newlabel{EMPC:fig:network}{{4.1}{50}}
-\newlabel{EMPC:equ:delta_set}{{4.2}{50}}
-\newlabel{EMPC:equ:abc_alfabeta}{{4.3}{50}}
-\newlabel{EMPC:equ:abc_dq}{{4.4}{50}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Model simplification}{51}\protected@file@percent }
-\newlabel{EMPC:sec:Simplification}{{4.1.2}{51}}
-\newlabel{EMPC:equ:mtx_AC}{{4.5}{51}}
-\newlabel{EMPC:equ:mtx_DC}{{4.6}{51}}
-\newlabel{EMPC:equ:mtx_ctrl}{{4.7}{51}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces The applied parameters in model and controller design\relax }}{52}\protected@file@percent }
-\newlabel{EMPC:tbl:params}{{4.1}{52}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Control structure}{52}\protected@file@percent }
-\newlabel{EMPC:sec:ControlStruct}{{4.1.3}{52}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Block diagram of the control structure.\relax }}{52}\protected@file@percent }
-\newlabel{EMPC:fig:ControlStruct}{{4.2}{52}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Circuit diagram of the three-phase buck-type rectifier with insulated gate bipolar transistors (IGBTs).\relax }}{51}\protected@file@percent }
+\newlabel{EMPC:fig:network}{{4.1}{51}}
+\newlabel{EMPC:equ:delta_set}{{4.2}{51}}
+\newlabel{EMPC:equ:abc_alfabeta}{{4.3}{51}}
+\newlabel{EMPC:equ:abc_dq}{{4.4}{51}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Model simplification}{52}\protected@file@percent }
+\newlabel{EMPC:sec:Simplification}{{4.1.2}{52}}
+\newlabel{EMPC:equ:mtx_AC}{{4.5}{52}}
+\newlabel{EMPC:equ:mtx_DC}{{4.6}{52}}
+\newlabel{EMPC:equ:mtx_ctrl}{{4.7}{52}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces The applied parameters in model and controller design\relax }}{53}\protected@file@percent }
+\newlabel{EMPC:tbl:params}{{4.1}{53}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Control structure}{53}\protected@file@percent }
+\newlabel{EMPC:sec:ControlStruct}{{4.1.3}{53}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Block diagram of the control structure.\relax }}{53}\protected@file@percent }
+\newlabel{EMPC:fig:ControlStruct}{{4.2}{53}}
 \citation{vajda2017limiting}
-\newlabel{EMPC:equ:sync_ctrl}{{4.8}{53}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Control}{53}\protected@file@percent }
-\newlabel{EMPC:sec:Control}{{4.2}{53}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}DC-side explicit model predictive control}{53}\protected@file@percent }
-\newlabel{EMPC:sec:DCside}{{4.2.1}{53}}
+\newlabel{EMPC:equ:sync_ctrl}{{4.8}{54}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Control}{54}\protected@file@percent }
+\newlabel{EMPC:sec:Control}{{4.2}{54}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}DC-side explicit model predictive control}{54}\protected@file@percent }
+\newlabel{EMPC:sec:DCside}{{4.2.1}{54}}
 \citation{rivera2013predictive}
 \citation{rivera2013predictive}
-\newlabel{EMPC:equ:DiscreteStateSpace}{{4.9}{54}}
-\newlabel{EMPC:equ:contraint_desc}{{4.10}{54}}
-\newlabel{EMPC:equ:optim_problem}{{4.11}{54}}
-\newlabel{EMPC:equ:optim_problem_constr}{{4.12}{54}}
-\newlabel{EMPC:equ:quadratic_program}{{4.13}{54}}
-\newlabel{EMPC:equ:quadratic_inequality}{{4.14}{54}}
-\newlabel{EMPC:equ:quadratic_regions}{{4.15}{54}}
-\newlabel{EMPC:equ:quadratic_critical}{{4.16}{55}}
-\newlabel{EMPC:equ:quadratic_set}{{4.17}{55}}
-\newlabel{EMPC:equ:quadratic_mtx_set}{{4.18}{55}}
-\newlabel{EMPC:equ:numeric_constraints}{{4.19}{55}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces State space partitioning.\relax }}{55}\protected@file@percent }
-\newlabel{EMPC:fig:regions}{{4.3}{55}}
+\newlabel{EMPC:equ:DiscreteStateSpace}{{4.9}{55}}
+\newlabel{EMPC:equ:contraint_desc}{{4.10}{55}}
+\newlabel{EMPC:equ:optim_problem}{{4.11}{55}}
+\newlabel{EMPC:equ:optim_problem_constr}{{4.12}{55}}
+\newlabel{EMPC:equ:quadratic_program}{{4.13}{55}}
+\newlabel{EMPC:equ:quadratic_inequality}{{4.14}{55}}
+\newlabel{EMPC:equ:quadratic_regions}{{4.15}{55}}
+\newlabel{EMPC:equ:quadratic_critical}{{4.16}{56}}
+\newlabel{EMPC:equ:quadratic_set}{{4.17}{56}}
+\newlabel{EMPC:equ:quadratic_mtx_set}{{4.18}{56}}
+\newlabel{EMPC:equ:numeric_constraints}{{4.19}{56}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces State space partitioning.\relax }}{56}\protected@file@percent }
+\newlabel{EMPC:fig:regions}{{4.3}{56}}
 \citation{regaya2014new}
-\newlabel{EMPC:equ:direct_controlval}{{4.20}{56}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces The control structure of the CSR, with MPC controller on the DC side.\relax }}{56}\protected@file@percent }
-\newlabel{EMPC:fig:MPCStructure}{{4.4}{56}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Active AC-side damping}{56}\protected@file@percent }
-\newlabel{EMPC:sec:ACdamping}{{4.2.2}{56}}
-\newlabel{EMPC:equ:AC_HPF}{{4.21}{56}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Space vector modulation strategy}{57}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Modulation}{57}\protected@file@percent }
-\newlabel{EMPC:sec:Modulation}{{4.4}{57}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{57}\protected@file@percent }
-\newlabel{EMPC:fig:VectorPhasor}{{4.5}{57}}
+\newlabel{EMPC:equ:direct_controlval}{{4.20}{57}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces The control structure of the CSR, with MPC controller on the DC side.\relax }}{57}\protected@file@percent }
+\newlabel{EMPC:fig:MPCStructure}{{4.4}{57}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Active AC-side damping}{57}\protected@file@percent }
+\newlabel{EMPC:sec:ACdamping}{{4.2.2}{57}}
+\newlabel{EMPC:equ:AC_HPF}{{4.21}{57}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Space vector modulation strategy}{58}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Modulation}{58}\protected@file@percent }
+\newlabel{EMPC:sec:Modulation}{{4.4}{58}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{58}\protected@file@percent }
+\newlabel{EMPC:fig:VectorPhasor}{{4.5}{58}}
 \citation{moussaoui2005open}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{58}\protected@file@percent }
-\newlabel{EMPC:tbl:fundamental_vect}{{4.2}{58}}
-\newlabel{EMPC:equ:neighbor}{{4.22}{58}}
-\newlabel{EMPC:equ:i_ref}{{4.23}{58}}
-\newlabel{EMPC:equ:dwelltime}{{4.24}{58}}
-\newlabel{EMPC:equ:angle}{{4.25}{58}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Synthesis of $\overrightarrow {i_{ref}}$ by $\overrightarrow {i_{1}}$, $\overrightarrow {i_{2}}$, and $\overrightarrow {i_{0}}$\relax }}{59}\protected@file@percent }
-\newlabel{EMPC:fig:OnePhasor}{{4.6}{59}}
-\newlabel{EMPC:equ:refconstraint}{{4.26}{59}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Representation of switching sequences for SECTOR I.\relax }}{59}\protected@file@percent }
-\newlabel{EMPC:tbl:sequence}{{4.3}{59}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{59}\protected@file@percent }
+\newlabel{EMPC:tbl:fundamental_vect}{{4.2}{59}}
+\newlabel{EMPC:equ:neighbor}{{4.22}{59}}
+\newlabel{EMPC:equ:i_ref}{{4.23}{59}}
+\newlabel{EMPC:equ:dwelltime}{{4.24}{59}}
+\newlabel{EMPC:equ:angle}{{4.25}{59}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Synthesis of $\overrightarrow {i_{ref}}$ by $\overrightarrow {i_{1}}$, $\overrightarrow {i_{2}}$, and $\overrightarrow {i_{0}}$\relax }}{60}\protected@file@percent }
+\newlabel{EMPC:fig:OnePhasor}{{4.6}{60}}
+\newlabel{EMPC:equ:refconstraint}{{4.26}{60}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Representation of switching sequences for SECTOR I.\relax }}{60}\protected@file@percent }
+\newlabel{EMPC:tbl:sequence}{{4.3}{60}}
 \citation{muthukumar2016adaptive}
 \citation{kutasi2010constrained}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Discussion}{60}\protected@file@percent }
-\newlabel{EMPC:sec:Discussion}{{4.5}{60}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Computational effort}{60}\protected@file@percent }
-\newlabel{EMPC:sec:CompEffort}{{4.5.1}{60}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Binary search tree of the controller for a horizon of N = 4. The leaf nodes are depicted with filled squares. The depth of the tree is 5.\relax }}{60}\protected@file@percent }
-\newlabel{EMPC:fig:SearchTree}{{4.7}{60}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Horizon performance}{60}\protected@file@percent }
-\newlabel{EMPC:sec:Performance}{{4.5.2}{60}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Data organization in the data memory of a single core DSP and the evaluation of a 2-dimensional inequality\relax }}{61}\protected@file@percent }
-\newlabel{EMPC:fig:Memory}{{4.8}{61}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Step response of the system as a function of the horizon length (N).\relax }}{61}\protected@file@percent }
-\newlabel{EMPC:fig:MultiHorizon}{{4.9}{61}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Simulation results}{61}\protected@file@percent }
-\newlabel{EMPC:sec:Results}{{4.5.3}{61}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Discussion}{61}\protected@file@percent }
+\newlabel{EMPC:sec:Discussion}{{4.5}{61}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Computational effort}{61}\protected@file@percent }
+\newlabel{EMPC:sec:CompEffort}{{4.5.1}{61}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Binary search tree of the controller for a horizon of N = 4. The leaf nodes are depicted with filled squares. The depth of the tree is 5.\relax }}{61}\protected@file@percent }
+\newlabel{EMPC:fig:SearchTree}{{4.7}{61}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Horizon performance}{61}\protected@file@percent }
+\newlabel{EMPC:sec:Performance}{{4.5.2}{61}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Data organization in the data memory of a single core DSP and the evaluation of a 2-dimensional inequality\relax }}{62}\protected@file@percent }
+\newlabel{EMPC:fig:Memory}{{4.8}{62}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Step response of the system as a function of the horizon length (N).\relax }}{62}\protected@file@percent }
+\newlabel{EMPC:fig:MultiHorizon}{{4.9}{62}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Simulation results}{62}\protected@file@percent }
+\newlabel{EMPC:sec:Results}{{4.5.3}{62}}
 \citation{neukirchner2019linkedmodel}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Three-phase voltage and current intake of the CSR with EMPC\relax }}{62}\protected@file@percent }
-\newlabel{EMPC:fig:Result_3fEMPC}{{4.10}{62}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Resulting current and voltage trajectories of the CSR with (EMPC).\relax }}{62}\protected@file@percent }
-\newlabel{EMPC:fig:Result_PerformanceEMPC}{{4.11}{62}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Comparison with a state feedback control}{62}\protected@file@percent }
-\newlabel{EMPC:sec:Comparison}{{4.5.4}{62}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Three-phase voltage and current intake of the CSR with EMPC\relax }}{63}\protected@file@percent }
+\newlabel{EMPC:fig:Result_3fEMPC}{{4.10}{63}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Resulting current and voltage trajectories of the CSR with (EMPC).\relax }}{63}\protected@file@percent }
+\newlabel{EMPC:fig:Result_PerformanceEMPC}{{4.11}{63}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Comparison with a state feedback control}{63}\protected@file@percent }
+\newlabel{EMPC:sec:Comparison}{{4.5.4}{63}}
 \citation{godlewska2015predictive}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Simple DC side state feedback control structure.\relax }}{63}\protected@file@percent }
-\newlabel{EMPC:fig:SFeedbackDC}{{4.12}{63}}
-\newlabel{EMPC:equ:tuning}{{4.27}{63}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Conclusion}{63}\protected@file@percent }
-\newlabel{EMPC:sec:Conclusion}{{4.6}{63}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces Resulting current and voltage trajectories of the CSR with explicit model predictive control (MPC) compared state feedback control (LIN).\relax }}{64}\protected@file@percent }
-\newlabel{EMPC:fig:Result_EMPCfinal}{{4.13}{64}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Thesis and Summary}{65}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Simple DC side state feedback control structure.\relax }}{64}\protected@file@percent }
+\newlabel{EMPC:fig:SFeedbackDC}{{4.12}{64}}
+\newlabel{EMPC:equ:tuning}{{4.27}{64}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Conclusion}{64}\protected@file@percent }
+\newlabel{EMPC:sec:Conclusion}{{4.6}{64}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces Resulting current and voltage trajectories of the CSR with explicit model predictive control (MPC) compared state feedback control (LIN).\relax }}{65}\protected@file@percent }
+\newlabel{EMPC:fig:Result_EMPCfinal}{{4.13}{65}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Thesis and Summary}{66}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Summary}{65}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Developed thesis}{66}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Applications and future work}{68}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Geometrical voltage unbalance norm}{68}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Voltage unbalance reducing inverter structure}{68}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Explicit model predictive control for buck-type rectifier}{69}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Summary}{66}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Developed thesis}{67}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Applications and future work}{69}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Geometrical voltage unbalance norm}{69}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Voltage unbalance reducing inverter structure}{69}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Explicit model predictive control for buck-type rectifier}{70}\protected@file@percent }
 \gdef \LT@ii {\LT@entry 
     {1}{128.8839pt}\LT@entry 
     {2}{326.79184pt}}
