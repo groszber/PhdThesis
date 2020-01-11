@@ -74,6 +74,12 @@
 \usepackage{tabularx}
 \usepackage{ltablex}\keepXColumns
 \usepackage{adjustbox}
+%\usepackage{hyperref}
+\usepackage{enumitem}
+\newlist{inparaenum}{enumerate}{2}% allow two levels of nesting in an enumerate-like environment
+\setlist[inparaenum]{nosep}% compact spacing for all nesting levels
+\setlist[inparaenum,1]{label=\bfseries\roman*.}% labels for top level
+\setlist[inparaenum,2]{label=\roman{inparaenumi}\emph{\alph*})}% labels for second level
 
 %\usepackage{ulem}
 %\newcommand{\soutthick}[1]{%

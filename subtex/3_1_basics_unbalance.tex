@@ -1,10 +1,44 @@
 \chapter{Basic notions}\label{BASIC:sec:main}
 
-In this chapter the basic topics of the thesis are discussed. First the phenomena of voltage unbalance on small distribution networks are shown and the ambiguities though the development of the concept, and at the end the norm currently in use in the industry. Next a necessary glimpse of power electric background is given to invite to the viewpoint of the modeling and problem breakdown of power converter. Lastly the basis of model based predictive methodology shall be shown, with the end with the explicit partition of the state space for a computationally efficient approach.
+In this chapter the basic topics of the thesis are discussed, as components for further understanding. First the phenomena of voltage unbalance on small distribution networks are shown and the ambiguities though the development of the concept, and at the end the norm currently in use in the industry. It would be shown how many definitions are currently in use, thus the introduced ambiguity of definition, further validating the proposal in section \ref{VUB:sec:Geom}.\\
+Next a necessary glimpse of power electric background is given to invite to the viewpoint of the modeling and problem breakdown of power converter. The section would introduce the background of current source switching devices with forced commutation, since control based on external situations or according to a cost function is eminent. Afer the single phase method would be described, DC-DC conversion would be shown, since in section \ref{VUB:sec:Compensation} non-zero mean asymmetrical power injection would be required. The section closes with the three phase rectifier example, for contributing the understating of the modeling in section \ref{EMPC:sec:Modeling}.\\
+Lastly the basis of controller structures, shall be shown which were used in the thesis, where the APPS (asynchronous parallel pattern search) method (used in section \ref{VUB:sec:Optimization}) and constrained model based predictive control (MPC) is to be described with the end with the explicit partition of the state space (explicit MPC applied in section \ref{EMPC:sec:DCside}) for a computationally efficient approach.
 
 	\section{Definitions of voltage unbalance}\label{BASICUNB:sec:DefinitionsofUNB}
+
+	In a domestic network, three-phase electric power systems have at least three conductors carrying alternating voltages that are offset in time by one-third of the period. A three-phase system may be arranged in delta  or star. A star system allows the use of two different voltages from all three phases, such as a 230/400 V system which provides 230 V between the neutral (center hub) and any one of the phases, and 400 V across any two phases displayed on Fig.\ref{BASICUNB:fig:UnbWave}. The definition is the following:
 	
-	Voltage unbalance is such a phenomena where the three phase voltages differ in amplitude normal 120 degree phase relationship. In most cases both are happening at the same time. This includes unequal voltage magnitudes at the fundamental frequency, either under, or over voltage, at the fundamental phase angle deviation. This is observed as a frequently cited power quality issue in low-voltage domestic distribution networks and in systems that supply large single phase loads unevenly distributed. Effects of voltage unbalance are complex, but can be categorized as structural or functional. The former refers to the asymmetry in the three-phase impedances of transmission lines, cables, transformers, etc. It occurs because it is neither economical nor necessary to maintain distribution system with perfectly symmetrical impedances. The latter refers to uneven distribution of power consumption over the three phases. Although the term voltage unbalance is unambiguous, the root phenomenon may be various as well as the standard norms used to measure unbalance. All of these different indicators measure voltage unbalance but each of them does it in a different way (\ref{equ:regular}). In this section a detailed explanation is presented about the types of currently used method for indication.
+			\begin{equation}
+        \begin{array}{rcl}
+            V12&=&V_Psin(\theta)\\
+						V23&=&V_Psin(\theta+\frac{4}{3}\pi)\\
+						V31&=&V_Psin(\theta+\frac{2}{3}\pi),\\
+        \end{array}
+        \label{BASICUNB:equ:Definition}
+    \end{equation}
+	
+	where $V_P$ is the voltage peak and $\theta$ is the phase angle. Voltage unbalance is such a phenomena where the three phase voltages differ in amplitude normal 120 degree phase relationship shown in Fig.\ref{BASICUNB:fig:UnbPhasor}. This voltage In most cases both are happening at the same time. This includes unequal voltage magnitudes at the fundamental frequency, either under, or over voltage, at the fundamental phase angle deviation.
+	
+	\begin{figure}[h!]
+     \centering
+		\begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Unblance_EPS_Pics/Three-phase-voltage-system.png}
+         \caption{Three phase sine wave of network voltage.}
+         \label{BASICUNB:fig:UnbWave}
+     \end{subfigure}
+		\hfill
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Unblance_EPS_Pics/PhasorGrayscale.jpg}
+         \caption{The three phase voltage phasor whith $Ideal$ and $Real$ voltage vectors.}
+         \label{BASICUNB:fig:UnbPhasor}
+     \end{subfigure}    
+        %\caption{BASICUNB:fig:UnbPhasor}
+        \label{BASICUNB:fig:UnbPhasor_all}
+\end{figure}
+	
+	This is observed as a frequently cited power quality issue in low-voltage domestic distribution networks and in systems that supply large single phase loads unevenly distributed. Effects of voltage unbalance are complex, but can be categorized as structural or functional. The former refers to the asymmetry in the three-phase impedances of transmission lines, cables, transformers, etc. It occurs because it is neither economical nor necessary to maintain distribution system with perfectly symmetrical impedances. The latter refers to uneven distribution of power consumption over the three phases. Although the term voltage unbalance is unambiguous, the root phenomenon may be various as well as the standard norms used to measure unbalance. All of these different indicators measure voltage unbalance but each of them does it in a different way (\ref{equ:regular}). In this section a detailed explanation is presented about the types of currently used method for indication.
 	
 	\subsection{Types of voltage deviations and norms}\label{BASICUNB:sec:DefinitionsofUNB}
 
