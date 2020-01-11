@@ -7,20 +7,21 @@
 \contentsline {subsection}{\numberline {2.1.3}LVUR}{10}% 
 \contentsline {subsection}{\numberline {2.1.4}PVUR}{10}% 
 \contentsline {subsection}{\numberline {2.1.5}VUF and CVUF}{11}% 
-\contentsline {section}{\numberline {2.2}Current source inverters}{12}% 
-\contentsline {section}{\numberline {2.3}Galvanic decoupled bi-directional DC-DC converters}{14}% 
-\contentsline {section}{\numberline {2.4}Three-phase buck-type rectifiers}{15}% 
-\contentsline {subsection}{\numberline {2.4.1}Basic operation principles}{17}% 
-\contentsline {section}{\numberline {2.5}Asynchronous paralell pattern search}{18}% 
-\contentsline {subsection}{\numberline {2.5.1}Parallel pattern search}{19}% 
-\contentsline {subsection}{\numberline {2.5.2}Adding asynchronity}{19}% 
-\contentsline {section}{\numberline {2.6}Quadratic optimization and model predictive control (MPC)}{20}% 
-\contentsline {subsection}{\numberline {2.6.1}Overview on predictive control}{21}% 
-\contentsline {subsection}{\numberline {2.6.2}Constained optimal control}{21}% 
-\contentsline {subsection}{\numberline {2.6.3}Stability of MPC}{24}% 
-\contentsline {section}{\numberline {2.7}Explicit model predictive control (EMPC)}{27}% 
-\contentsline {subsection}{\numberline {2.7.1}Storage of critical regions}{28}% 
-\contentsline {section}{\numberline {2.8}Notations in order of appearance}{29}% 
+\contentsline {section}{\numberline {2.2}Power electronic components for current control}{12}% 
+\contentsline {subsection}{\numberline {2.2.1}Current source inverters}{12}% 
+\contentsline {subsection}{\numberline {2.2.2}Galvanic decoupled bi-directional DC-DC converters}{14}% 
+\contentsline {subsection}{\numberline {2.2.3}Three-phase buck-type rectifiers}{15}% 
+\contentsline {paragraph}{Basic operation principles}{17}% 
+\contentsline {section}{\numberline {2.3}Applied control structures}{19}% 
+\contentsline {subsection}{\numberline {2.3.1}Asynchronous paralell pattern search}{19}% 
+\contentsline {paragraph}{Parallel pattern search}{19}% 
+\contentsline {paragraph}{Adding asynchronity}{19}% 
+\contentsline {subsection}{\numberline {2.3.2}Quadratic optimization and predictive control}{20}% 
+\contentsline {paragraph}{Constained optimal control}{21}% 
+\contentsline {subsubsection}{Stability of MPC}{24}% 
+\contentsline {subsection}{\numberline {2.3.3}Explicit model predictive control (EMPC)}{27}% 
+\contentsline {subsection}{\numberline {2.3.4}Storage of critical regions}{28}% 
+\contentsline {section}{\numberline {2.4}Notations}{28}% 
 \contentsline {chapter}{\numberline {3}Voltage unbalance compensation}{32}% 
 \contentsline {section}{\numberline {3.1}Network structure}{32}% 
 \contentsline {section}{\numberline {3.2}Proposed geometrical indicator}{33}% 
@@ -49,11 +50,11 @@
 \contentsline {subsection}{\numberline {4.2.2}Active AC-side damping}{57}% 
 \contentsline {section}{\numberline {4.3}Space vector modulation strategy}{58}% 
 \contentsline {section}{\numberline {4.4}Modulation}{58}% 
-\contentsline {section}{\numberline {4.5}Discussion}{61}% 
-\contentsline {subsection}{\numberline {4.5.1}Computational effort}{61}% 
+\contentsline {section}{\numberline {4.5}Discussion}{60}% 
+\contentsline {subsection}{\numberline {4.5.1}Computational effort}{60}% 
 \contentsline {subsection}{\numberline {4.5.2}Horizon performance}{61}% 
 \contentsline {subsection}{\numberline {4.5.3}Simulation results}{62}% 
-\contentsline {subsection}{\numberline {4.5.4}Comparison with a state feedback control}{63}% 
+\contentsline {subsection}{\numberline {4.5.4}Comparison with a state feedback control}{62}% 
 \contentsline {section}{\numberline {4.6}Conclusion}{64}% 
 \contentsline {chapter}{\numberline {5}Thesis and Summary}{66}% 
 \contentsline {section}{\numberline {5.1}Summary}{66}% 

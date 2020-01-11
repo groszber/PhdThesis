@@ -59,13 +59,22 @@
 \usepackage{multirow}
 \usepackage{hhline}
 \usepackage{textpos}
-\usepackage{textcomp} %===!!!=== Ezt én adtam hozzá
 
+%% Saját package-ek
+\usepackage{textcomp} 
 \usepackage{mfirstuc}
 \usepackage{longtable}
-\usepackage{textcomp} %===!!!=== Ezt én adtam hozzá
-\usepackage{tabu} %===!!!=== Ezt én adtam hozzá
-\usepackage[shortlabels]{enumitem} %===!!!=== Ezt én adtam hozzá
+\usepackage{textcomp} 
+\usepackage{tabu} 
+\usepackage[shortlabels]{enumitem} 
+\usepackage{arydshln}
+\setlength{\dashlinedash}{0.2pt}
+\setlength{\dashlinegap}{4.5pt}
+\setlength{\arrayrulewidth}{0.2pt}
+\usepackage{tabularx}
+\usepackage{ltablex}\keepXColumns
+\usepackage{adjustbox}
+
 %\usepackage{ulem}
 %\newcommand{\soutthick}[1]{%
 %    \renewcommand{\ULthickness}{2.4pt}%
@@ -81,6 +90,8 @@
     %}
   %}
 %}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
 
 
 \def\myuni{Universiy of Pannonia}

@@ -74,7 +74,7 @@ Understandably, model based controllers require the system's model the ought to 
 
     Notice, that the sixth-order ODE model (4) is bilinear in its states and
     inputs because of the product terms (e.g.: $\delta_di_{dc}$). As such, using design methods for linear systems is not straightforward. The high complexity given by the system’s order is another problem to tackle. For designing classic MPC, linear, low-order equation systems are favorable. Hence simplification of the model would bring noteworthy benefits, making the MPC design more straightforward, when a linear system resulted.
-    Since the AC and DC side’s time constants differ significantly (as in the AC: $\omega_{ac}=\frac{1}{\sqrt{L_ac C_ac}}\cong5.7\cdot10^3$ [rad/s], and on the DC: $\omega_{dc}=\frac{1}{\sqrt{L_dc C_dc}}\cong2.8\cdot10^2$ [rad/s], see Table X. for reference). Thus, the differential equations can be separated into two sets, and the control of the AC and DC sides can be decoupled as described in \cite{ahmed2014model}. The AC side model results as follows:
+    Since the AC and DC side’s time constants differ significantly (as in the AC: $\omega_{ac}=\frac{1}{\sqrt{L_ac C_ac}}\cong5.7\cdot10^3$ [rad/s], and on the DC: $\omega_{dc}=\frac{1}{\sqrt{L_dc C_dc}}\cong2.8\cdot10^2$ [rad/s], see Table \ref{EMPC:tbl:params}. for reference). Thus, the differential equations can be separated into two sets, and the control of the AC and DC sides can be decoupled as described in \cite{ahmed2014model}. The AC side model results as follows:
 
 
     \begin{equation}
@@ -160,6 +160,7 @@ Understandably, model based controllers require the system's model the ought to 
 
     \begin{table}[]
     \center
+		\caption{The applied parameters in model and controller design}
         \begin{tabular}{|l|l|}
         \hline
         PARAMETER      & VALUE  \\ \hline
@@ -173,7 +174,6 @@ Understandably, model based controllers require the system's model the ought to 
         \textbf{fpwm}  & 20kHz  \\ \hline
         \textbf{Un}    & 400V   \\ \hline
         \end{tabular}
-        \caption{The applied parameters in model and controller design}
         \label{EMPC:tbl:params}
     \end{table}
 
@@ -376,7 +376,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/VectorPhasor.png}
+        \includegraphics[width=.6\textwidth]{EMPC_PNG_Pics/VectorPhasor.png}
         \caption{The fundamental input current vectors corresponding to the active switching states of the CSR.}
         \label{EMPC:fig:VectorPhasor}
     \end{figure}
@@ -390,7 +390,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 % If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 
 \begin{table}[]
-
+\caption{The fundamental input current vectors corresponding to the active switching states of the CSR.}
     \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
     \hline
     \rowcolor[HTML]{EFEFEF}
@@ -407,7 +407,6 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
     $\vec{i}_8$                                                                            & 0          & 0          & 1          & 1          & 0          & 0          & 0                     & 0                     & 0                    & 0                                                                                             \\ \hline
     $\vec{i}_9$                                                                            & 0          & 0          & 0          & 0          & 1          & 1          & 0                     & 0                     & 0                    & 0                                                                                             \\ \hline
     \end{tabular}
-        \caption{The fundamental input current vectors corresponding to the active switching states of the CSR.}
         \label{EMPC:tbl:fundamental_vect}
 
 \end{table}
@@ -445,7 +444,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=0.8\textwidth]{EMPC_PNG_Pics/OnePhasor.png}
+        \includegraphics[width=0.6\textwidth]{EMPC_PNG_Pics/OnePhasor.png}
         \caption{Synthesis of $\protect\overrightarrow{i_{ref}}$ by $\protect\overrightarrow{i_{1}}$, $\protect\overrightarrow{i_{2}}$, and $\protect\overrightarrow{i_{0}}$}
         \label{EMPC:fig:OnePhasor}
     \end{figure}
@@ -464,9 +463,11 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
     Table \ref{EMPC:tbl:sequence} presents an example of switching pattern in case of a current reference vector situated in Sector I.
 
     \begin{table}[]
-    \centering
+    
+		\caption{Representation of switching sequences for SECTOR I.}
+		\centering
         \includegraphics[width=0.8\textwidth]{EMPC_PNG_Pics/Sequence.png}
-        \caption{Representation of switching sequences for SECTOR I.}
+        
         \label{EMPC:tbl:sequence}
     \end{table}
 

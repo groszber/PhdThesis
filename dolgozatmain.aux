@@ -1,5 +1,6 @@
 \relax 
 \providecommand{\transparent@use}[1]{}
+\providecommand \oddpage@label [2]{}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -17,7 +18,6 @@
 \citation{meersman2011three}
 \citation{ates2016}
 \citation{bina2011three}
-\@writefile{toc}{\contentsline {section}{\numberline {1.1}Literature overview}{3}\protected@file@percent }
 \citation{gorbe2012reduction}
 \citation{Gorbe2014experimental}
 \citation{gorbe2012reduction}
@@ -62,6 +62,7 @@
 \citation{godlewska2015predictive}
 \citation{muthukumar2016adaptive}
 \citation{kutasi2010constrained}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Literature overview}{3}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Basic notions}{8}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -105,8 +106,9 @@
 \newlabel{BASICUNB:equ:symmetry}{{2.7}{11}}
 \newlabel{BASICUNB:equ:VUF}{{2.8}{11}}
 \newlabel{BASICUNB:equ:CVUF}{{2.9}{11}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Current source inverters}{12}\protected@file@percent }
-\newlabel{BASICCSR:sec:CSI}{{2.2}{12}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Power electronic components for current control}{12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Current source inverters}{12}\protected@file@percent }
+\newlabel{BASICCSR:sec:CSI}{{2.2.1}{12}}
 \citation{kheraluwala1992performance}
 \citation{inoue2007bidirectional}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Topology of a singly phase current source inverter, where $V_i$, and $V_o$ are the input and output voltages, $i_i$, and $i_o$ are the input and output currents respectively. $L_+$ and $L_-$ are current filter inductances, $S_{1+}$, $S_{2+}$, $D_{1+}$, and $D_{2+}$ are the higher switches (controlled IGBTs for instance) and diodes, and $S_{1-}$, $S_{2-}$, $D_{1-}$, and $D_{2-}$ are the lower switches and diodes respectively.\relax }}{13}\protected@file@percent }
@@ -116,13 +118,13 @@
 \newlabel{BASICCSR:table:CSIstates}{{2.1}{13}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces The CSI, ideal waveforms for the unipolar modulation: (A) carrier and modulating signals, (B) switch $S_{1+}$'s state, (C) switch $S_{2+}$'s state, and (D) AC output current.\relax }}{14}\protected@file@percent }
 \newlabel{BASICCSR:fig:CSIwave}{{2.2}{14}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Galvanic decoupled bi-directional DC-DC converters}{14}\protected@file@percent }
-\newlabel{BASICCSR:sec:DCDC}{{2.3}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Galvanic decoupled bi-directional DC-DC converters}{14}\protected@file@percent }
+\newlabel{BASICCSR:sec:DCDC}{{2.2.2}{14}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Bidirectional isolated dc-dc converter, where $V_{D1}$, and $V_{D2}$ are the two end's voltage (in- and output depends on the power flow), $v_1$ and $v_2$ are the transformer voltages, $C_{snub}$ are to reduce switching loss and to damp out over-voltage, and $n$ is the transformer turn ratio.\relax }}{15}\protected@file@percent }
 \newlabel{BASICCSR:fig:DCDCGalvanic}{{2.3}{15}}
 \newlabel{BASICMPC:equ:DCDC}{{2.10}{15}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Three-phase buck-type rectifiers}{15}\protected@file@percent }
-\newlabel{BASICCSR:sec:CSR}{{2.4}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Three-phase buck-type rectifiers}{15}\protected@file@percent }
+\newlabel{BASICCSR:sec:CSR}{{2.2.3}{15}}
 \citation{kolar1996design}
 \citation{zargari1993current}
 \citation{sato1993state}
@@ -132,80 +134,83 @@
 \citation{tooth2000effects}
 \citation{salo2005three}
 \citation{baumannnew}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Basic topologies of force commuted current and voltage rectifiers.\relax }}{16}\protected@file@percent }
-\newlabel{BASICCSR:fig:topologies}{{2.4}{16}}
+\newlabel{BASICMPC:fig:CSR}{{2.4a}{16}}
+\newlabel{sub@BASICMPC:fig:CSR}{{a}{16}}
+\newlabel{BASICMPC:fig:VSR}{{2.4b}{16}}
+\newlabel{sub@BASICMPC:fig:VSR}{{b}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Basic topologies of force commuted rectifiers.\relax }}{16}\protected@file@percent }
 \citation{baumann2005novel}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Basic operation principles}{17}\protected@file@percent }
-\newlabel{BASICCSR:sec:OperationPrinciple}{{2.4.1}{17}}
+\citation{nussbaumer2007comprehensive}
+\@writefile{toc}{\contentsline {paragraph}{Basic operation principles}{17}\protected@file@percent }
+\newlabel{BASICCSR:sec:OperationPrinciple}{{2.2.3}{17}}
 \newlabel{BASICMPC:equ:basic_LTI}{{2.11}{17}}
 \citation{moussaoui2005open}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Phase voltages $u_{i}$, where line-to-line voltages $u_{N,ij}=u_{N,i}-u_{N,j}$, $(i,j)\in \{R,S,T\}$ and sectors $1$ to $12$ being defined by the different relations of the instantaneous values of the mains phase voltages for $u = 400 V$\relax }}{18}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Phase voltages $v_{i}$, where line-to-line voltages $v_{N,ij}=v_{N,i}-v_{N,j}$, $(i,j)\in \{R,S,T\}$ and sectors $1$ to $12$ being defined by the different relations of the instantaneous values of the mains phase voltages for $v = 400 V$\relax }}{18}\protected@file@percent }
 \newlabel{BASICCSR:fig:waves}{{2.5}{18}}
 \newlabel{BASICCSR:eqn:currents}{{2.12}{18}}
 \newlabel{BASICCSR:eqn:currents}{{2.13}{18}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.5}Asynchronous paralell pattern search}{18}\protected@file@percent }
-\newlabel{BASICUNB:sec:APPS}{{2.5}{18}}
-\citation{kolda2003understanding}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Applied control structures}{19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Asynchronous paralell pattern search}{19}\protected@file@percent }
+\newlabel{BASICUNB:sec:APPS}{{2.3.1}{19}}
 \newlabel{BASICCSR:eqn:currents}{{2.14}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.1}Parallel pattern search}{19}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.2}Adding asynchronity}{19}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Parallel pattern search}{19}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Adding asynchronity}{19}\protected@file@percent }
+\citation{kolda2003understanding}
 \citation{kolda2003understanding}
 \newlabel{BSIC:equ:APPS_x}{{2.15}{20}}
 \newlabel{BSIC:equ:APPS_Delta}{{2.16}{20}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.6}Quadratic optimization and model predictive control (MPC)}{20}\protected@file@percent }
-\newlabel{BASICCSR:sec:MPC}{{2.6}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Quadratic optimization and predictive control}{20}\protected@file@percent }
+\newlabel{BASICCSR:sec:MPC}{{2.3.2}{20}}
 \citation{rossiter2017model}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.1}Overview on predictive control}{21}\protected@file@percent }
-\newlabel{BASICCSR:sec:MPCOverview}{{2.6.1}{21}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.2}Constained optimal control}{21}\protected@file@percent }
-\newlabel{BASICCSR:sec:OptimalControl}{{2.6.2}{21}}
+\@writefile{toc}{\contentsline {paragraph}{Constained optimal control}{21}\protected@file@percent }
+\newlabel{BASICCSR:sec:OptimalControl}{{2.3.2}{21}}
 \newlabel{BASICMPC:equ:basic_LTI}{{2.17}{22}}
 \newlabel{BASICMPC:equ:restrict_LTI}{{2.18}{22}}
 \newlabel{BASICMPC:equ:cost_function}{{2.19}{22}}
 \newlabel{BASICMPC:equ:optim_problem}{{2.20}{22}}
 \newlabel{BASICMPC:equ:quadratic_case}{{2.21}{22}}
-\newlabel{BASICMPC:equ:control_law}{{2.22}{22}}
-\newlabel{BASICMPC:equ:control_coefficient}{{2.23}{22}}
+\newlabel{BASICMPC:equ:control_law}{{2.22}{23}}
+\newlabel{BASICMPC:equ:control_coefficient}{{2.23}{23}}
 \newlabel{BASICMPC:equ:Riccati}{{2.24}{23}}
 \newlabel{BASICMPC:equ:Riccati_initial}{{2.25}{23}}
 \newlabel{BASICMPC:equ:control_law_infinite}{{2.26}{23}}
 \newlabel{BASICMPC:equ:control_coefficient_infinite}{{2.27}{23}}
 \newlabel{BASICMPC:equ:Riccati_infinite}{{2.28}{23}}
-\newlabel{BASICMPC:equ:receiding_horison_constraints}{{2.29}{23}}
 \citation{horn2012matrix}
+\newlabel{BASICMPC:equ:receiding_horison_constraints}{{2.29}{24}}
 \newlabel{BASICMPC:equ:receiding_horison_problem}{{2.30}{24}}
 \newlabel{BASICMPC:equ:receiding_horison_Lyapunov}{{2.31}{24}}
 \newlabel{BASICMPC:equ:receiding_optimal_sequence}{{2.32}{24}}
 \newlabel{BASICMPC:equ:receiding_optimal_first}{{2.33}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.3}Stability of MPC}{24}\protected@file@percent }
-\newlabel{BASICCSR:sec:MPCStability}{{2.6.3}{24}}
+\@writefile{toc}{\contentsline {subsubsection}{Stability of MPC}{24}\protected@file@percent }
+\newlabel{BASICCSR:sec:MPCStability}{{2.3.2}{24}}
 \newlabel{BASICMPC:equ:LyapunovTheory_0}{{2.34}{25}}
 \newlabel{BASICMPC:equ:LyapunovTheory_1}{{2.35}{25}}
 \newlabel{BASICMPC:equ:LyapunovTheory_2}{{2.36}{25}}
 \newlabel{BASICMPC:equ:LyapunovTheory_3}{{2.37}{25}}
-\newlabel{BASICMPC:equ:stability_Lyapunov_1}{{2.38}{25}}
-\newlabel{BASICMPC:equ:stability_Lyapunov_2}{{2.39}{25}}
 \citation{borrelli2017predictive}
+\newlabel{BASICMPC:equ:stability_Lyapunov_1}{{2.38}{26}}
+\newlabel{BASICMPC:equ:stability_Lyapunov_2}{{2.39}{26}}
 \newlabel{BASICMPC:equ:stability_Lyapunov_3}{{2.40}{26}}
 \newlabel{BASICMPC:equ:optim_stability}{{2.41}{26}}
 \citation{borrelli2017predictive}
-\@writefile{toc}{\contentsline {section}{\numberline {2.7}Explicit model predictive control (EMPC)}{27}\protected@file@percent }
-\newlabel{BASICCSR:sec:EMPC}{{2.7}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Explicit model predictive control (EMPC)}{27}\protected@file@percent }
+\newlabel{BASICCSR:sec:EMPC}{{2.3.3}{27}}
 \newlabel{BASICMPC:equ:EMPC_evolution}{{2.42}{27}}
 \newlabel{BASICMPC:equ:EMPC_transformed}{{2.43}{27}}
 \newlabel{BASICMPC:equ:EMPC_transformed_2}{{2.44}{27}}
 \newlabel{BASICMPC:equ:EMPC_trans_var}{{2.45}{27}}
-\newlabel{BASICMPC:equ:EMPC_trans_var}{{2.46}{27}}
 \citation{borrelli2017predictive}
-\newlabel{BASICMPC:equ:EMPC_transformed}{{2.47}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.1}Storage of critical regions}{28}\protected@file@percent }
-\newlabel{BASICCSR:sec:EMPCStorage}{{2.7.1}{28}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Basic search three of an EMPC where, a) are the critical regions for a space of 2D parameters, b) the related binary tree.\relax }}{28}\protected@file@percent }
-\newlabel{BASICMPC:fig:searchtree}{{2.6}{28}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.8}Notations in order of appearance}{29}\protected@file@percent }
 \gdef \LT@i {\LT@entry 
-    {1}{179.36038pt}\LT@entry 
-    {3}{613.45268pt}}
+    {1}{179.56038pt}\LT@entry 
+    {1}{613.45268pt}}
+\newlabel{BASICMPC:equ:EMPC_trans_var}{{2.46}{28}}
+\newlabel{BASICMPC:equ:EMPC_transformed}{{2.47}{28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}Storage of critical regions}{28}\protected@file@percent }
+\newlabel{BASICCSR:sec:EMPCStorage}{{2.3.4}{28}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Notations}{28}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Basic search three of an EMPC where, a) are the critical regions for a space of 2D parameters, b) the related binary tree.\relax }}{31}\protected@file@percent }
+\newlabel{BASICMPC:fig:searchtree}{{2.6}{31}}
 \citation{gorbe2012reduction}
 \citation{fortescue1918method}
 \citation{Neukirchner2015}
@@ -363,49 +368,49 @@
 \newlabel{EMPC:sec:Modulation}{{4.4}{58}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{58}\protected@file@percent }
 \newlabel{EMPC:fig:VectorPhasor}{{4.5}{58}}
-\citation{moussaoui2005open}
+\newlabel{EMPC:equ:neighbor}{{4.22}{58}}
 \@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{59}\protected@file@percent }
 \newlabel{EMPC:tbl:fundamental_vect}{{4.2}{59}}
-\newlabel{EMPC:equ:neighbor}{{4.22}{59}}
 \newlabel{EMPC:equ:i_ref}{{4.23}{59}}
 \newlabel{EMPC:equ:dwelltime}{{4.24}{59}}
-\newlabel{EMPC:equ:angle}{{4.25}{59}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Synthesis of $\overrightarrow {i_{ref}}$ by $\overrightarrow {i_{1}}$, $\overrightarrow {i_{2}}$, and $\overrightarrow {i_{0}}$\relax }}{60}\protected@file@percent }
-\newlabel{EMPC:fig:OnePhasor}{{4.6}{60}}
-\newlabel{EMPC:equ:refconstraint}{{4.26}{60}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Representation of switching sequences for SECTOR I.\relax }}{60}\protected@file@percent }
-\newlabel{EMPC:tbl:sequence}{{4.3}{60}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Synthesis of $\overrightarrow {i_{ref}}$ by $\overrightarrow {i_{1}}$, $\overrightarrow {i_{2}}$, and $\overrightarrow {i_{0}}$\relax }}{59}\protected@file@percent }
+\newlabel{EMPC:fig:OnePhasor}{{4.6}{59}}
+\citation{moussaoui2005open}
 \citation{muthukumar2016adaptive}
 \citation{kutasi2010constrained}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Discussion}{61}\protected@file@percent }
-\newlabel{EMPC:sec:Discussion}{{4.5}{61}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Computational effort}{61}\protected@file@percent }
-\newlabel{EMPC:sec:CompEffort}{{4.5.1}{61}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Representation of switching sequences for SECTOR I.\relax }}{60}\protected@file@percent }
+\newlabel{EMPC:tbl:sequence}{{4.3}{60}}
+\newlabel{EMPC:equ:angle}{{4.25}{60}}
+\newlabel{EMPC:equ:refconstraint}{{4.26}{60}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Discussion}{60}\protected@file@percent }
+\newlabel{EMPC:sec:Discussion}{{4.5}{60}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Computational effort}{60}\protected@file@percent }
+\newlabel{EMPC:sec:CompEffort}{{4.5.1}{60}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Binary search tree of the controller for a horizon of N = 4. The leaf nodes are depicted with filled squares. The depth of the tree is 5.\relax }}{61}\protected@file@percent }
 \newlabel{EMPC:fig:SearchTree}{{4.7}{61}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Data organization in the data memory of a single core DSP and the evaluation of a 2-dimensional inequality\relax }}{61}\protected@file@percent }
+\newlabel{EMPC:fig:Memory}{{4.8}{61}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Horizon performance}{61}\protected@file@percent }
 \newlabel{EMPC:sec:Performance}{{4.5.2}{61}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Data organization in the data memory of a single core DSP and the evaluation of a 2-dimensional inequality\relax }}{62}\protected@file@percent }
-\newlabel{EMPC:fig:Memory}{{4.8}{62}}
+\citation{neukirchner2019linkedmodel}
+\citation{godlewska2015predictive}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Step response of the system as a function of the horizon length (N).\relax }}{62}\protected@file@percent }
 \newlabel{EMPC:fig:MultiHorizon}{{4.9}{62}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Simulation results}{62}\protected@file@percent }
 \newlabel{EMPC:sec:Results}{{4.5.3}{62}}
-\citation{neukirchner2019linkedmodel}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Comparison with a state feedback control}{62}\protected@file@percent }
+\newlabel{EMPC:sec:Comparison}{{4.5.4}{62}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Three-phase voltage and current intake of the CSR with EMPC\relax }}{63}\protected@file@percent }
 \newlabel{EMPC:fig:Result_3fEMPC}{{4.10}{63}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Resulting current and voltage trajectories of the CSR with (EMPC).\relax }}{63}\protected@file@percent }
 \newlabel{EMPC:fig:Result_PerformanceEMPC}{{4.11}{63}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Comparison with a state feedback control}{63}\protected@file@percent }
-\newlabel{EMPC:sec:Comparison}{{4.5.4}{63}}
-\citation{godlewska2015predictive}
+\newlabel{EMPC:equ:tuning}{{4.27}{63}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Simple DC side state feedback control structure.\relax }}{64}\protected@file@percent }
 \newlabel{EMPC:fig:SFeedbackDC}{{4.12}{64}}
-\newlabel{EMPC:equ:tuning}{{4.27}{64}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces Resulting current and voltage trajectories of the CSR with explicit model predictive control (MPC) compared state feedback control (LIN).\relax }}{64}\protected@file@percent }
+\newlabel{EMPC:fig:Result_EMPCfinal}{{4.13}{64}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.6}Conclusion}{64}\protected@file@percent }
 \newlabel{EMPC:sec:Conclusion}{{4.6}{64}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces Resulting current and voltage trajectories of the CSR with explicit model predictive control (MPC) compared state feedback control (LIN).\relax }}{65}\protected@file@percent }
-\newlabel{EMPC:fig:Result_EMPCfinal}{{4.13}{65}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Thesis and Summary}{66}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
