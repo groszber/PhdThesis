@@ -1,6 +1,6 @@
 \section{Power electronic components for current control}
 
-Write stuff here..
+As the introduction suggest the main theme of the thesis is current optimal current control. As such for reaching the desired optimum, the necessary actuators are needed for the task. For this, power electric converters are used, all of them based on a simple principle, namely they use controllable switches to set the required voltage level or the conducting current value, required on the load's end.
 
 \subsection{Current source inverters}\label{BASICCSR:sec:CSI}
 
@@ -212,15 +212,15 @@ According to the actual switch combination the DC link current shaped by the cho
 		The resulting discrete space vectors can be used to synthesize desired current
 space vector $\vec{i}_{ref}$. 
 
-The modulation methods were evaluated in and choosen for this paper based on \cite{moussaoui2005open}, which ensures minimum switching-losses, minimum ripple values of the input capacitor voltages and of the output inductor current. According to this modulation, each pulse interval comprises two active states and a freewheeling state, arranged symmetrically about the middle of the pulse interval (see Table \ref{EMPC:tbl:sequence}). For more in depth functional description see Chapter X.
+The modulation methods were evaluated in and chosen for this paper based on \cite{moussaoui2005open}, which ensures minimum switching-losses, minimum ripple values of the input capacitor voltages and of the output inductor current. According to this modulation, each pulse interval comprises two active states and a freewheeling state, arranged symmetrically about the middle of the pulse interval (see Table \ref{EMPC:tbl:sequence}). For more in depth functional description see section \cite{EMPC:sec:Modulation}.
 
-\section{Applied control structures}
+\section{Applied optimization methods}
 
-Write suff here..
+In this part of the thesis, the applied control structures shall be discussed in detail. Optimization (or optimal control) deals with the problem of finding a control law for a given system such that a certain optimality criterion is achieved. A control problem includes a cost functional that is a function of state and control variables. An optimal control is a set of differential equations describing the paths of the control variables that minimize the cost function. They commonality in this work, is that all of them are designed to search for the optimal control input for a current governing system, should it be voltage unbalance reduction with no applicable network model (due the actors unpredictability), or reaching the fastest reference value with explicit predictive control with the converter's equation's considered. 
 
-\subsection{Asynchronous paralell pattern search}\label{BASICUNB:sec:APPS}
+\subsection{Asynchronous parallel pattern search}\label{BASICUNB:sec:APPS}
 
-Parallel variants of pattern search to solve nonlinear unconstrained problems of the form of:
+This algorithm can rather be described as a linear search program, distributed in a multi-dimensional plane, where the it is only a black box model available. These variants of pattern search can solve nonlinear unconstrained problems of the form of:
 
 \begin{equation}
         \begin{array}{rcl}
@@ -245,7 +245,7 @@ Lets adopt an infinite sequence of iterations $\rho=0,1,2,\dots$, with the last 
 		\item Update local values $x^{best}_i$ and $\Delta^{best}_i$ based on the current local information.
 		\item Repeat.
 		\end{enumerate}
-	The price payed is that each process has its own notion of the best known point seen so far, as well as its own value for	$\Delta^i$. Any success on one process is communicated to all other processes participating in the search, but the successful process carries on from its new best point without waiting for a response from the other processes. By adding a few mild conditions, the global convergence of the search can be still ensured \cite{kolda2003understanding}.  Instead of indexing based on a notion of iterations, we switch from $\rho$ to indexing based on time step, letting the set $\mathcal{Q}=\{1,2,\dots,q\}$ denote the index if steps. Thus $x_i^q$ s used for the best point known to process $i$ at time step $q$, and similarly, $\Delta_i^q$.  So if process $i$ starts a function evaluation at time step $q$, the trial point at which the function evaluation will be made at $x^{q}_i+\Delta^{q}_id_i$. Further worth mention, that time steps are assumed to be of fine enough resolution so that at most one function evaluation finishes per process per time step.\\
+	The price payed is that each process has its own notion of the best known point seen so far, as well as its own value for	$\Delta^i$. Any success on one process is communicated to all other processes participating in the search, but the successful process carries on from its new best point without waiting for a response from the other processes. By adding a few mild conditions, the global convergence of the search can be still ensured \cite{kolda2003understanding}.  Instead of indexing based on a notion of iterations, we switch from $\rho$ to indexing based on discrete time instance, letting the set $\mathcal{Q}=\{1,2,\dots,q\}$ denote the index if steps. Thus $x_i^q$ s used for the best point known to process $i$ at time step $q$, and similarly, $\Delta_i^q$.  So if process $i$ starts a function evaluation at time step $q$, the trial point at which the function evaluation will be made at $x^{q}_i+\Delta^{q}_id_i$. Further worth mention, that time steps are assumed to be of fine enough resolution so that at most one function evaluation finishes per process per time step.\\
 	Lets define two sets that satisfy $\mathcal{Q}=\mathcal{S}_i\cup\mathcal{U}_i$, , and $\mathcal{S}_i=\mathcal{I}_i\cup\mathcal{E}_i$, where $\mathcal{S}_i$ is the set of all time successful steps on process $i$, $\mathcal{I}_i$ is the set if internal successes, $\mathcal{E}_i$ is the set of external successes,   and $\mathcal{U}_i$ consists the unsuccessful steps respectfully. An internal success, where the process finds itself the minima, the external sucess is where the process is updated externally by the minima. Further  $\mathcal{C}_i\in\mathcal{U}_i$ is defined as the set of time steps where $\Delta^t_i$ is reduced. All the above cases ($\mathcal{U}_i\textbackslash\mathcal{C}_i$) no action is performed.\\
 	The updating functions allow us to give the following general definitions for $x_i^q$ and $\Delta^q_i$. For every $q\in\mathcal{Q}$, $q>0$, the best pont for the $i^{th}$ process defined to be:
 	
@@ -303,8 +303,8 @@ modeling stage should reflect this
 	
 	    \begin{equation}
         \begin{array}{rcl}
-            \textbf{x}(t+1)&=&\textbf{Ax}(t)+\textbf{Bu}(t)\\
-						\textbf{y}(t)&=&\textbf{Cx}(t)
+            \textbf{x}(t+1)&=&\textbf{Ax}(q)+\textbf{Bu}(q)\\
+						\textbf{y}(q)&=&\textbf{Cx}(q)
         \end{array}
         \label{BASICMPC:equ:basic_LTI}
     \end{equation}
@@ -313,12 +313,12 @@ modeling stage should reflect this
 	
 	\begin{equation}
         \begin{array}{rcl}
-            \textbf{Ex}(t)+\textbf{Lu}(t)\leq \textbf{M}\\
+            \textbf{Ex}(q)+\textbf{Lu}(q)\leq \textbf{M}\\
         \end{array}
         \label{BASICMPC:equ:restrict_LTI}
     \end{equation}
 		
-		where $t\geq0$ defines the time instance and $\textbf{x}\in \mathbb{R}^n$, $\textbf{u}\in \mathbb{R}^m$, $\textbf{y}\in \mathbb{R}^p$ are the states, inputs and outputs of the system respectively. \\
+		where $q\geq0$ defines the discrete time instance and $\textbf{x}\in \mathbb{R}^n$, $\textbf{u}\in \mathbb{R}^m$, $\textbf{y}\in \mathbb{R}^p$ are the states, inputs and outputs of the system respectively. \\
 	 We define the following cost function to optimize:
 		
 		\begin{equation}
@@ -439,13 +439,13 @@ with the cost function to minimize:
 		
 		\begin{equation}
         \begin{array}{rcl}
-				J(\textbf{U},\textbf{x}(t)&=&\textbf{x}'_{t+N_y|t}\textbf{P}\textbf{x}_{t+N_y|t}+\sum^{N_y-1}_{k=0}\textbf{x}'_{t+k|t}\textbf{Q}\textbf{x}_{t+k|t}+\textbf{u}'_{t+k}\textbf{R}\textbf{u}_{t+k},\\
-				&a.i.&\textbf{y}_{min}\leq \textbf{y}_{t+k|t}\leq \textbf{y}_{ma\textbf{x}},k=1,\dots,N_c-1,\\
-				&&\textbf{u}_{min}\leq \textbf{u}_{t+k}\leq \textbf{u}_{max},k=0,1,\dots,N_c-1,\\
-				&&\textbf{x}_{t|t}=\textbf{x}(t),\\
-				&&\textbf{x}_{t+k+1|t}=\textbf{A}\textbf{x}_{t+k|t}+\textbf{B}\textbf{u}_{t+k},\\
-				&&\textbf{y}_{t+k|t}=\textbf{C}\textbf{x}_{t+k|t}, k\geq0,\\
-				&&\textbf{u}_{t+k}=-K\textbf{x}_{t+k|t}, N_u\leq k\leq N_y,\\
+				J(\textbf{U},\textbf{x}(q)&=&\textbf{x}'_{q+N_y|q}\textbf{P}\textbf{x}_{q+N_y|q}+\sum^{N_y-1}_{k=0}\textbf{x}'_{q+k|q}\textbf{Q}\textbf{x}_{q+k|q}+\textbf{u}'_{q+k}\textbf{R}\textbf{u}_{q+k},\\
+				&a.i.&\textbf{y}_{min}\leq \textbf{y}_{q+k|q}\leq \textbf{y}_{ma\textbf{x}},k=1,\dots,N_c-1,\\
+				&&\textbf{u}_{min}\leq \textbf{u}_{q+k}\leq \textbf{u}_{max},k=0,1,\dots,N_c-1,\\
+				&&\textbf{x}_{q|q}=\textbf{x}(q),\\
+				&&\textbf{x}_{q+k+1|q}=\textbf{A}\textbf{x}_{q+k|q}+\textbf{B}\textbf{u}_{q+k},\\
+				&&\textbf{y}_{q+k|q}=\textbf{C}\textbf{x}_{q+k|q}, k\geq0,\\
+				&&\textbf{u}_{q+k}=-K\textbf{x}_{q+k|q}, N_u\leq k\leq N_y,\\
         \end{array}
         \label{BASICMPC:equ:receiding_horison_problem}
     \end{equation}
@@ -463,7 +463,7 @@ with the cost function to minimize:
 		
 		\begin{equation}
         \begin{array}{rcl}
-				\textbf{U}^*(t)&=&\left\{\textbf{u}^*_t,\dots,\textbf{u}^*_{t+N_u-1}\right\},\\
+				\textbf{U}^*(q)&=&\left\{\textbf{u}^*_q,\dots,\textbf{u}^*_{q+N_u-1}\right\},\\
         \end{array}
         \label{BASICMPC:equ:receiding_optimal_sequence}
     \end{equation}
@@ -472,7 +472,7 @@ with the cost function to minimize:
 		
 		\begin{equation}
         \begin{array}{rcl}
-				\textbf{u}(t)=\textbf{u}^*_t.\\
+				\textbf{u}(q)=\textbf{u}^*_q.\\
         \end{array}
         \label{BASICMPC:equ:receiding_optimal_first}
     \end{equation}
@@ -502,7 +502,7 @@ repeated on the basis of new measurements or a new estimation of the states.
         \label{BASICMPC:equ:LyapunovTheory_1}
     \end{equation}
 	
-	where we assume that $f(0)=0$ is a (trivial) equilibrium point of the system. The component functions of $f$ are denoted by $f(\boldsymbol{x})=f_1(\boldsymbol{x},\dots,f_n(\boldsymbol{x}))^T$. Let $V:\mathbb{R}^n\longrightarrow\mathbb{R}$ be continuously partially differentiable, with respect to all variables. By computing the derivative of the composite function $V(\boldsymbol{x}(t))$, where $\boldsymbol{x}(t)=(x_1(t),\dots,x_n(t)))^T$ is solution of \ref{BASICMPC:equ:LyapunovTheory_1}:
+	where we assume that $f(0)=0$ is a (trivial) equilibrium point of the system. The component functions of $f$ are denoted by $f(\boldsymbol{x})=f_1(\boldsymbol{x},\dots,f_n(\boldsymbol{x}))^T$. Let $V:\mathbb{R}^n\longrightarrow\mathbb{R}$ be continuously partially differentiable, with respect to all variables. By computing the derivative of the composite function $V(\boldsymbol{x}(t)$, where $\boldsymbol{x}(t)=(x_1(q),\dots,x_n(q)))^T$ is solution of \ref{BASICMPC:equ:LyapunovTheory_1}:
 	
 	\begin{equation}
         \begin{array}{rcl}
@@ -566,7 +566,7 @@ This way $V$ is called Lyapunov function if its positive definite and its deriva
 				\min_{\textbf{U}}J(\textbf{U},\textbf{x})&=&F(\textbf{x}_N)+\sum^{N-1}_{k=0}L(\textbf{x}_k,\textbf{u}_k)\\
 					&a.i.&\textbf{x}_{k+1}=f(\textbf{x}_k,\textbf{u}_k) \\
 					&&x\in \mathcal{X}_f, u\in \textbf{U}\\
-					&&\textbf{x}_0=\textbf{x}(t)\\
+					&&\textbf{x}_0=\textbf{x}(q)\\
         \end{array}
         \label{BASICMPC:equ:optim_stability}
     \end{equation}
@@ -600,7 +600,7 @@ Let us assume an optimization problem described by \ref{BASICMPC:equ:receiding_h
 
 \begin{equation}
         \begin{array}{rcl}
-				\textbf{x}_{t+k|t}&=&\textbf{A}^k\textbf{x}(t)+\sum^{k-1}_{j=0}\textbf{A}^j\textbf{Bu}_{t+k-1-j}
+				\textbf{x}_{q+k|t}&=&\textbf{A}^k\textbf{x}(q)+\sum^{k-1}_{j=0}\textbf{A}^j\textbf{Bu}_{q+k-1-j}
         \end{array}
         \label{BASICMPC:equ:EMPC_evolution}
     \end{equation}
@@ -609,7 +609,7 @@ Based on \ref{BASICMPC:equ:receiding_horison_problem}, and \ref{BASICMPC:equ:EMP
 
 \begin{equation}
         \begin{array}{rcl}
-				\textbf{V}(\textbf{x}(t))&=&\frac{1}{2}\textbf{x}'(t)\textbf{Yx}(t)+min\left\{\frac{1}{2}\textbf{U}'\textbf{HU}+\textbf{x}'(t)\textbf{FU}\right\},\\
+				\textbf{V}(\textbf{x}(q))&=&\frac{1}{2}\textbf{x}'(q)\textbf{Yx}(q)+min\left\{\frac{1}{2}\textbf{U}'\textbf{HU}+\textbf{x}'(q)\textbf{FU}\right\},\\
 				%&with\,restrictions:&\textbf{GU}\leq \textbf{W}+\textbf{Ex}(t)\\
         \end{array}
         \label{BASICMPC:equ:EMPC_transformed}
@@ -619,16 +619,16 @@ Based on \ref{BASICMPC:equ:receiding_horison_problem}, and \ref{BASICMPC:equ:EMP
 		
 		\begin{equation}
         \begin{array}{rcl}
-				\textbf{GU}&\leq& \textbf{W}+\textbf{Ex}(t),\\
+				\textbf{GU}&\leq& \textbf{W}+\textbf{Ex}(q),\\
         \end{array}
         \label{BASICMPC:equ:EMPC_transformed_2}
     \end{equation}
 		
-		where $\textbf{U}=\{u'_t,\dots,u'_{t+N_u-1}\}\in\mathbb{R}^s,\,s=m\cdot N_u$, and $\textbf{H}$ is the optimization vector where $\textbf{H}=\textbf{H}'>0$, and $\textbf{H},\textbf{F},\textbf{Y},\textbf{G},\textbf{W},\textbf{E}$ can be directly obtained from $\textbf{A},\textbf{B},\textbf{Q},\textbf{R},\textbf{P}$, according to \cite{borrelli2017predictive}. Let the transformation vector be:
+		where $\textbf{U}=\{u'_t,\dots,u'_{q+N_u-1}\}\in\mathbb{R}^s,\,s=m\cdot N_u$, and $\textbf{H}$ is the optimization vector where $\textbf{H}=\textbf{H}'>0$, and $\textbf{H},\textbf{F},\textbf{Y},\textbf{G},\textbf{W},\textbf{E}$ can be directly obtained from $\textbf{A},\textbf{B},\textbf{Q},\textbf{R},\textbf{P}$, according to \cite{borrelli2017predictive}. Let the transformation vector be:
 		
 		\begin{equation}
         \begin{array}{rcl}
-				\textbf{z}&=&\textbf{U}+\textbf{H}^{-1}\textbf{F}'\textbf{x}(t)
+				\textbf{z}&=&\textbf{U}+\textbf{H}^{-1}\textbf{F}'\textbf{x}(q)
         \end{array}
         \label{BASICMPC:equ:EMPC_trans_var}
     \end{equation}
@@ -647,7 +647,7 @@ Based on \ref{BASICMPC:equ:receiding_horison_problem}, and \ref{BASICMPC:equ:EMP
 		\begin{equation}
         \begin{array}{rcl}
 				\textbf{V}_z(\textbf{x})&=&min\frac{1}{2}\textbf{z}'\textbf{Hz}\\
-				&s.t.&\textbf{Gz}\leq \textbf{W}+\textbf{Sx}(t)\\
+				&s.t.&\textbf{Gz}\leq \textbf{W}+\textbf{Sx}(q)\\
 				&&\textbf{S}=\textbf{E}+\textbf{GH}^{-1}\textbf{F}'.\\
         \end{array}
         \label{BASICMPC:equ:EMPC_transformed}
@@ -740,7 +740,7 @@ The implementation of MPC in explicit form is very efficient up to a certain num
 	$d_i$															& Direction of active process\\
 	$x_i^{best}$											& Best reached state, where $x_i^{best}$ is a minima\\
 	$\Delta_i^{best}$											& Best reached step size\\
-	$q$																& Time step\\
+	$q$																& Discrete time step\\
 	$\omega_i(q)$ 										& Generating process index for the update time at step $q$ on process $i$\\
 	$\tau_i(q)$												& Time index for initialization of the function evaluation, that produced the update at time $q$ on process $i$\\
 	$\nu_i(q)$ 												& Time index for the completion of the function evaluation that produced the update at time step $q$ on process $i$\\
@@ -749,7 +749,7 @@ The implementation of MPC in explicit form is very efficient up to a certain num
 	$\textbf{C}$																& Output matrix\\
 	$\textbf{x}$											& State vector\\
 	$\textbf{z}$											& Input vector\\
-	$t$																& Time instance\\
+	%$t$																& Time instance\\
 	$\textbf{P}, \textbf{Q},\textbf{R}$ & Terminal, state, and input weight matrices respectively\\
 	$\textbf{E}$																&???\\
 	$\textbf{L}$																&???\\

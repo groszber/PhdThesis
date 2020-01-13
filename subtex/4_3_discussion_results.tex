@@ -43,14 +43,14 @@ The geometrical norm was validated experimentally, by investigating the correlat
             \begin{figure}[!ht]
            \centering
            \includegraphics[width=\textwidth,scale=0.95]{Unblance_EPS_Pics/EPS_images/scatter.eps}
-           \caption{Correlation between the geometrical voltage unbalance indicator $G$ and the regulated voltage unbalance indicator $TDV$ using 1000 samples. In every iteration each three phase voltage vector's amplitude and phase values changed randomly, according to uniform distributions with $\pm20$ V and $\pm\frac{1}{3}\pi\cdot10^{-2}$ rad variance. It can be seen, that the geometric norm contains more information than the classical one. The  four asymmetry cases of Figure \ref{fig:cases} are denoted by black symbols on the picture. It is apparent, that in case (c), and (d) the G norm holds additional information than the TDV.}
+           \caption{Correlation between the geometrical voltage unbalance indicator $G$ and the regulated voltage unbalance indicator $VUF$ using 1000 samples. In every iteration each three phase voltage vector's amplitude and phase values changed randomly, according to uniform distributions with $\pm20$ V and $\pm\frac{1}{3}\pi\cdot10^{-2}$ rad variance. It can be seen, that the geometric norm contains more information than the classical one. The  four asymmetry cases of Figure \ref{fig:cases} are denoted by black symbols on the picture. It is apparent, that in case (c), and (d) the G norm holds additional information than the $VUF$.}
            \label{fig:correlation}
             \end{figure}
 
             \begin{figure}[!ht]
            \centering
            \includegraphics[width=\textwidth,scale=0.95]{Unblance_EPS_Pics/EPS_images/side_scatter.eps}
-           \caption{\textbf{Itt a .eps converzio nem lett valami jo, javitani kell!} Correlation between the regulated unbalance indicator and the fraction of geometrical and regulated indicator. It can be seen that there is a functional connection between the two values.}
+           \caption{ Correlation between the regulated unbalance indicator and the fraction of geometrical and regulated indicator. It can be seen that there is a functional connection between the two values.}
            \label{fig:side_correlation}
             \end{figure}
 
@@ -63,32 +63,32 @@ The geometrical norm was validated experimentally, by investigating the correlat
                 \centering
                 \begin{subfigure}[b]{0.48\textwidth}
                     \includegraphics[width=\textwidth]{Unblance_EPS_Pics/EPS_images/rombus.eps}
-                    \caption{\centering High correlation with phase deviation. The norm values are $G=3986$ and $TDV=1.434$.}
+                    \caption{\centering High correlation with phase deviation. The norm values are $G=3986$ and $VUF=1.434$.}
                     \label{fig:cases_A}
                 \end{subfigure}
                 ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
                   %(or a blank line to force the subfigure onto a new line)
                 \begin{subfigure}[b]{0.48\textwidth}
                     \includegraphics[width=\textwidth]{Unblance_EPS_Pics/EPS_images/triangle.eps}
-                    \caption{\centering High correlation with opposed amplitude deviation. The norm values are $G=4198$ and $TDV=1.612$.}
+                    \caption{\centering High correlation with opposed amplitude deviation. The norm values are $G=4198$ and $VUF=1.612$.}
                     \label{fig:cases_B}
                 \end{subfigure}
                  %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
                 %(or a blank line to force the subfigure onto a new line)
                 \begin{subfigure}[b]{0.48\textwidth}
                     \includegraphics[width=\textwidth]{Unblance_EPS_Pics/EPS_images/square.eps}
-                    \caption{Low correlation with opposed amplitude deviation. The norm values are $G=9322$ and $TDV=0.5198$.}
+                    \caption{Low correlation with opposed amplitude deviation. The norm values are $G=9322$ and $VUF=0.5198$.}
                     \label{fig:cases_C}
                 \end{subfigure}
                 ~
                 \begin{subfigure}[b]{0.48\textwidth}
                     \includegraphics[width=\textwidth]{Unblance_EPS_Pics/EPS_images/circle.eps}
-                    \caption{\centering Low correlation with uniform voltage drop. The norm values are $G=6280$ and $TDV=0.156$.}
+                    \caption{\centering Low correlation with uniform voltage drop. The norm values are $G=6280$ and $VUF=0.156$.}
                     \label{fig:cases_D}
                 \end{subfigure}
 
 
-                \caption{Four distinct cases of voltage triangles examining correlation between the regular $TDV$ and geometrical $G$ method.}\label{fig:cases}
+                \caption{Four distinct cases of voltage triangles examining correlation between the regular $VUF$ and geometrical $G$ method.}\label{fig:cases}
             \end{figure}
 
 To clarify this, the regular norm's calculation method needs to be investigated. The symmetrical component mutual impedance matrix on a three phase connection point is given by (\ref{equ:mutual}),
@@ -124,8 +124,8 @@ $\Delta U_0,\,\Delta U_1,\,\Delta U_2$ are the voltage drop's zero positive and 
                 \label{equ:factor}
             \end{equation}
 
-where $m_{21}$ is the negative sequence factor which is identical to the TDV (\ref{equ:regular}), and $m_{01}$ is the zero sequence factor.\\
-At the previously described balanced over- or under-voltage case the positive sequence value is dominant, so the regular indicator will take considerably lower value. In other words, aside from indicating voltage unbalance, the geometrical method incorporates the balanced deviations as well. In a control design perspective, a general case, where notably highly unbalance values may appear, using $TDV$ as cost function could introduce hidden errors in control due error cancellation. Additionally the geometrical solution checks electrical asymmetry, i.e. the norm of a $\pm120$ degree rotated version of the ideal three-phase phasor is zero in the geometrical sense. Moreover, the geometrical norm is more sensitive for small scale unbalance, as opposed to the TDV. To summarize, the geometrical indicator a more suitable solution for a more general case indicator, and a good candidate for cost function in optimal control design.
+where $m_{21}$ is the negative sequence factor which is identical to the VUF (\ref{equ:regular}), and $m_{01}$ is the zero sequence factor.\\
+At the previously described balanced over- or under-voltage case the positive sequence value is dominant, so the regular indicator will take considerably lower value. In other words, aside from indicating voltage unbalance, the geometrical method incorporates the balanced deviations as well. In a control design perspective, a general case, where notably highly unbalance values may appear, using $VUF$ as cost function could introduce hidden errors in control due error cancellation. Additionally the geometrical solution checks electrical asymmetry, i.e. the norm of a $\pm120$ degree rotated version of the ideal three-phase phasor is zero in the geometrical sense. Moreover, the geometrical norm is more sensitive for small scale unbalance, as opposed to the VUF. To summarize, the geometrical indicator a more suitable solution for a more general case indicator, and a good candidate for cost function in optimal control design.
 
 \section{Unbalance compensation}\label{VUB:sec:Compensation}
 
@@ -296,12 +296,12 @@ For the control aim it is a natural choice to minimize the actual voltage unbala
         \label{fig:APPS}
         \end{figure*}
 
-        The problem is that, the exact mathematical relation is nonlinear because the nonlinear, and highly time variant loads of the network, we should use a control strategy to cope this nonlinear and time variant energy system. For this purpose we chose an asynchronous parallel pattern search method (APPS) which could be able to control our scenario \cite{hough2001asynchronous}. The methodology and formulation of the APPS method is described in section \ref{BASICUNB:sec:APPS}. We applied a variant of the gradient method that is a first-order optimization (minimization) algorithm for a multivariate function $f(x)$. The point $x(q)$ corresponding to the local minimum can be calculated from the negative gradient $\nabla f(x)$, that gives the value and direction of the corresponding step in the parameter space. The next step is made in the direction of gradient with the proper sign. This sequence of steps, ideally, converges to local multivariate extreme value $x(q)$ of the function (\ref{eqn:contstruct1}).
+        The problem is that, the exact mathematical relation is nonlinear because the nonlinear, and highly time variant loads of the network, we should use a control strategy to cope this nonlinear and time variant energy system. For this purpose we chose an asynchronous parallel pattern search method (APPS) which could be able to control our scenario \cite{hough2001asynchronous}. The methodology and formulation of the APPS method is described in section \ref{BASICUNB:sec:APPS}. We applied a variant of the gradient method that is a first-order optimization (minimization) algorithm for a multivariate function $f(\textbf{x})$. The point $\textbf{x}^q$ corresponding to the local minimum can be calculated from the negative gradient $\nabla f(\textbf{x})$, that gives the value and direction of the corresponding step in the parameter space. The next step is made in the direction of gradient with the proper sign. This sequence of steps, ideally, converges to local multivariate extreme value $\textbf{x}^q$ of the function (\ref{eqn:contstruct1}).
 
         \begin{equation}
         \begin{array}{rcl}
         \label{eqn:contstruct1}
-         x^{(q)}&=&x^{(q-1)}-t_q\nabla f(x^{(q-1)}),\\
+         \textbf{x}^{(q)}&=&\textbf{x}^{(q-1)}-t_q\nabla f(\textbf{x}^{(q-1)}),\\
          %q&\in&\mathbb{N},\\
          \end{array}
         \end{equation}
@@ -311,19 +311,19 @@ For the control aim it is a natural choice to minimize the actual voltage unbala
         \begin{equation}
         \label{eqn:contstruct2}
         \begin{array}{rcl}
-         x^{(q+1)}&=&x^{(q)}+\Delta_qd_i \\
-         \mathrm{if}&&f(x^{(k)}+\Delta_qd_i) \leq f(x^{(q)}),\\
+         \textbf{x}^{(q+1)}&=&\textbf{x}^{(q)}+\Delta_qd_i \\
+         \mathrm{if}&&f(\textbf{x}^{(k)}+\Delta_qd_i) \leq f(\textbf{x}^{(q)}),\\
          %q&\in&\mathbb{N}\\
          \end{array}
         \end{equation}
 
-        The parameter is $x(q)\in\mathbb{R}^n$, and the search pattern $p\in\mathcal{D}={d_1,...d_n}$ is taken from a predefined finite set. In this case, the error function values should be calculated for each pattern $p$ in the set $D$. If the error function is not decreasing in any of the directions, then the step size should be reduced (e.g. by half). As the competing directions are different, if there is not enough computing power available for direction vector $p$, synchronization should not be maintained. In this case we are talking about the asynchronous case . In the case of our controller, an individual $p$ vector is defined for each output variable, and the optimization was performed in each direction asynchronously and shifted in time. Most likely, the error function has a single local minimum as a symmetric amplitude and phase values. Approaching the minimal value of norm, the controller uses adaptive increments that are proportional to the norm itself. Because of the complex interactions between the components of the controller, only one parameter is changed at a time, even if the values of the amplitude and phase components in specific time slot changes. The algorithm moves along the six axes of six separate time slots close to the local minimum of the error function.\\
+        The parameter is $\textbf{x}^q\in\mathbb{R}^n$, and the search pattern $p\in\mathcal{D}={d_1,...d_n}$ is taken from a predefined finite set. In this case, the error function values should be calculated for each pattern $p$ in the set $\mathcal{D}$. If the error function is not decreasing in any of the directions, then the step size should be reduced (e.g. by half). As the competing directions are different, if there is not enough computing power available for direction vector $p$, synchronization should not be maintained. In this case we are talking about the asynchronous case . In the case of our controller, an individual $p$ vector is defined for each output variable, and the optimization was performed in each direction asynchronously and shifted in time. Most likely, the error function has a single local minimum as a symmetric amplitude and phase values. Approaching the minimal value of norm, the controller uses adaptive increments that are proportional to the norm itself. Because of the complex interactions between the components of the controller, only one parameter is changed at a time, even if the values of the amplitude and phase components in specific time slot changes. The algorithm moves along the six axes of six separate time slots close to the local minimum of the error function.\\
         Unlike other similar approaches, e.g. \cite{segui2007approach}, the explained optimal controller does not rely on a measured current signal (which varies according where the measurement took place on the grid and renders the global optimization unreliable) but rather measuring and analyzing the voltage unbalance via the proposed indicator and optimizes the voltage shape, the latter of which depends on the nonlinear distortion of the whole low-voltage transformer area and determines additional power losses. The controller's performance was compared to a non compensated network, and a network consisting synchronized symmetric power intake from a regular inverter.\\
         In each iteration only one physical value is changing on the six dimensional parameter field, which consists of the three amplitude and three phase values. If the change effects with cost function reduction (the reference norm's normalized value), the controller holds the new value of amplitude or phase for the controlled current sources (Figure \ref{fig:APPS}). The advantage of this controller structure that is not necessary to know the controlled value's behavior well, like we could not determine the number and type of the other loads on the network \cite{Neukirchner2015}. There are however two disadvantages. First is the low speed of control, due to the several necessary iterations (depending on the circumstances) to find the optimal directions in the parameter space, and the serial nature of interventions and norm calculations. The second comes from the method itself since the controller may stuck in local minima.
 
 \section{Discussion}\label{VUB:sec:Discussion}
 
-write stuff here..
+%write stuff here..
 
     \subsection{Dynamical simulation based experiments}\label{VUB:sec:Results}
 		
@@ -889,3 +889,39 @@ write stuff here..
 %    The defined norm is applied as a cost function in the asymmetry reducing controller structure also presented in the paper. Simulations show that the geometrical based unbalance indicator can serve as a basis of further research. The suggested controller structure enables the residential users owning a grid synchronized domestic power plant to reduce voltage unbalance measurable at the connection point. The fundamental element of the system is a modified three phase inverter that is capable of the asymmetric injection of any current waveforms to the network. The optimization based control algorithm injects the available energy (as current waveform) in such a way, that the voltage unbalance decreases. This optimization problem is usually constrained by the available renewable energy supplied by the power plant.\\
 %    The control structure has been tested on a low voltage network model in a dynamical simulation environment consisting of the models of the electrical grid, a domestic power plant,  asymmetrical inverter circuit, and different types of loads. Different simulation experiments has been run for each norm and for both the power constrained and unconstrained case. The preliminary results show that this structure can serve as a residential level voltage quality improvement method for the three phase low voltage network.
 
+		\section{Notations}
+		
+		\begin{longtable}{r|l}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+		%
+		%Chapter 4.2. notations&\\
+  %$IEEEv_{936}$                         & ?\\
+  %$IEEEv_{112}$                         & ?\\
+  %$V_{an},V_{bn},V_{cn}$            & Line-to-neutral network voltage\\
+  %$V_{ab},V_{bc},V_{ca}$            & Line-to-line network voltage\\
+  %$MDV$                             & ?\\
+  $VUF$                             & Voltage unbalance factor\\
+  %$V_{1,\dots,n}$                   & Voltage of the $n^{th}$ harmonic\\
+  %$\Delta R$                        & Vectorial deviation of the $R^{th}$ phase\\
+  %$\Delta S$                        & Vectorial deviation of the $S^{th}$ phase\\
+  %$\Delta T$                        & Vectorial deviation of the $T^{th}$ phase\\
+  %$N$                               & Vectorial voltage deviation from the balanced state\\
+  $G$                               & Geometrical voltage deviation from the balanced state\\
+  $\bigtriangleup_{Ideal}$          & Triangle of Ideal voltage vectors\\
+  $\bigtriangleup_{Real}$           & Triangle of real voltage vectors\\
+	$f(\textbf{x})$										& Multivariate function to minimize\\
+  $\textbf{x}^{q}$                           & Local multivariate state at the $q^th$ timestep\\
+  $t_q$                             & Timestep of the algorithm at $q$\\
+  $q$                               & Discrete timestep\\
+  $\Delta_q$                        & Step size at $q$\\
+  $d_i$                             & Direction of the step of process $i$\\
+	$\mathcal{D}$											& Set of directions\\
+  $P_{loss}$                        & Lost power per household due to network unbalance\\
+  $P^{comp}_{loss}$                 & Assumed network loss with unbalance compensation control\\
+  $\Delta P_{loss}$                 & Saved power with unbalance compensation control\\
+	$Z$																& Symmetrical component mutual impedance\\
+	$\Delta U$													& Zero positive and negarive sequence of voltage drop\\
+	$\alpha$													& Fortesque operator\\
+	$I_{0,1,2}$												& Zero positive and negarive sequence of current drop\\
+	
+	\end{longtable}
