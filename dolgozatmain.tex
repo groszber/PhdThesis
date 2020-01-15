@@ -1,12 +1,12 @@
-\documentclass[12pt, a4paper, oneside, table]{report}
-%%%<
+\documentclass[12pt, a4paper, twoside]{report}
+%%% Nyomtatásnál Figyelni a kétoldalasságra és a kötésre!!!
 \usepackage{verbatim}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 %\usepackage[UTF8]{ctex}     %% kínai karakterekhez
 \usepackage{anysize}
 \usepackage[left=4cm,top=3cm, bottom=3cm, right=3cm]{geometry}
-\usepackage{cite}
+%\usepackage{cite}
 %\usepackage[square,numbers]{natbib}
 %\bibliographystyle{abbrvnat}
 
@@ -47,6 +47,9 @@
 \usepackage{fancyhdr}
 \usepackage{multirow}
 \pagestyle{fancy}
+\fancyhead{}
+\fancyhead[RO]{\textsl{\rightmark}}
+\fancyhead[LE]{\textsl{\leftmark}}
 %\usetikzlibrary{external}
 %\tikzexternalize % activate!
 \usepackage{breqn}
@@ -61,12 +64,12 @@
 \usepackage{textpos}
 
 %% Saját package-ek
-\usepackage{textcomp} 
+\usepackage{textcomp}
 \usepackage{mfirstuc}
 \usepackage{longtable}
-\usepackage{textcomp} 
-\usepackage{tabu} 
-\usepackage[shortlabels]{enumitem} 
+\usepackage{textcomp}
+\usepackage{tabu}
+\usepackage[shortlabels]{enumitem}
 \usepackage{arydshln}
 \setlength{\dashlinedash}{0.2pt}
 \setlength{\dashlinegap}{4.5pt}
@@ -80,6 +83,11 @@
 \setlist[inparaenum]{nosep}% compact spacing for all nesting levels
 \setlist[inparaenum,1]{label=\bfseries\roman*.}% labels for top level
 \setlist[inparaenum,2]{label=\roman{inparaenumi}\emph{\alph*})}% labels for second level
+
+\usepackage[backend=bibtex, style=ieee, sorting=none, defernumbers=true, url=false, doi=false]{biblatex} %%% true/fals be és kikapcsolás!!
+\addbibresource{dolgozat} %bib fájl
+\input{boldauthorname}
+\usepackage{sectsty}
 
 %\usepackage{ulem}
 %\newcommand{\soutthick}[1]{%
@@ -105,7 +113,7 @@
 \def\myschool{Doctoral School of Information Science}
 \def\mytitle{Optimal Current Control for Domestic Power converters}
 \def\myauthor{L\'aszlo Richard Neukirchner}
-\def\mydate{2019}
+\def\mydate{2020}
 \def\mysupervisor{dr. Magyar Attila}
 
 
@@ -163,12 +171,12 @@
  %\input{subtex/1_1_motivation.tex}
  %\input{subtex/1_2_compendiary.tex}
 
- 
+
 %% Basic notions
 \input{subtex/3_1_basics_unbalance.tex}
 %\input{subtex/3_2_basics_inverter.tex}
 \input{subtex/3_3_basics_empc.tex}
- 
+
 %% Voltage Unbalance
 \input{subtex/4_3_discussion_results.tex}
 %\input{subtex/4_2_discussion_results.tex}
@@ -178,7 +186,7 @@
 %% Summary
 \input{subtex/5_conculsion.tex} %--> List of thesis and own publications moved here <=====
 
-%% Thesis 
+%% Thesis
 %\input{subtex/6_thesis.tex}
 
 %% Nomenclature
@@ -191,12 +199,24 @@
 \input{subtex/9_appendix.tex}
 
 
-%% Citations
+%%% Citations
  \newpage
  \pagestyle{plain}
- \bibliographystyle{plain}
- % \bibliography{dolgozat_own}
- \bibliography{dolgozat}
+ %\bibliographystyle{plain}
+ %% \bibliography{dolgozat_own}
+ %\bibliography{dolgozat}
+
+ \boldname{Neukirchner}{L{\'a}szl{\'o}}{L.}   %%%% félkövér kiemeléshez NEM MINDEGY PL. HOGY á VAGY \'a VAN A BIB-BEN !!!!!!!!!!!!
+    %\boldname{}{}{}
+		\printbibheading
+\section*{Publications}
+    \begin{refcontext}[labelprefix={P}]
+        \printbibliography[keyword=sajat, heading=none, title={asd}]        %% keyword alapján szűr, azaz bele kell tenni a bib-be
+    \end{refcontext}
+    
+    \section*{Literature}
+    %\boldname{}{}{}
+    \printbibliography[notkeyword=sajat,resetnumbers=true, heading=none, title={veryasd}] % ha egybe kell a másikkal akkor "heading=none," és nincs title
 
 
 

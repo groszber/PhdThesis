@@ -1,12 +1,12 @@
-\documentclass[12pt, a4paper, oneside, table]{report}
-%%%<
+\documentclass[12pt, a4paper, twoside]{report}
+%%% Nyomtatásnál Figyelni a kétoldalasságra és a kötésre!!!
 \usepackage{verbatim}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 %\usepackage[UTF8]{ctex}     %% kínai karakterekhez
 \usepackage{anysize}
 \usepackage[left=4cm,top=3cm, bottom=3cm, right=3cm]{geometry}
-\usepackage{cite}
+%\usepackage{cite}
 %\usepackage[square,numbers]{natbib}
 %\bibliographystyle{abbrvnat}
 
@@ -14,7 +14,9 @@
 
 %\usepackage{xcolor}
 \usepackage[table,xcdraw]{xcolor}
+\colorlet{RED}{red}
 \usepackage{amsmath}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \usepackage{amssymb}
 \usepackage{eurosym}
 \usepackage{graphics}
@@ -45,6 +47,9 @@
 \usepackage{fancyhdr}
 \usepackage{multirow}
 \pagestyle{fancy}
+\fancyhead{}
+\fancyhead[RO]{\textsl{\rightmark}}
+\fancyhead[LE]{\textsl{\leftmark}}
 %\usetikzlibrary{external}
 %\tikzexternalize % activate!
 \usepackage{breqn}
@@ -57,31 +62,62 @@
 \usepackage{multirow}
 \usepackage{hhline}
 \usepackage{textpos}
-\usepackage{textcomp} %===!!!=== Ezt én adtam hozzá
 
+%% Saját package-ek
+\usepackage{textcomp}
 \usepackage{mfirstuc}
 \usepackage{longtable}
-\usepackage{textcomp} %===!!!=== Ezt én adtam hozzá
+\usepackage{textcomp}
+\usepackage{tabu}
+\usepackage[shortlabels]{enumitem}
+\usepackage{arydshln}
+\setlength{\dashlinedash}{0.2pt}
+\setlength{\dashlinegap}{4.5pt}
+\setlength{\arrayrulewidth}{0.2pt}
+\usepackage{tabularx}
+\usepackage{ltablex}\keepXColumns
+\usepackage{adjustbox}
+%\usepackage{hyperref}
+\usepackage{enumitem}
+\newlist{inparaenum}{enumerate}{2}% allow two levels of nesting in an enumerate-like environment
+\setlist[inparaenum]{nosep}% compact spacing for all nesting levels
+\setlist[inparaenum,1]{label=\bfseries\roman*.}% labels for top level
+\setlist[inparaenum,2]{label=\roman{inparaenumi}\emph{\alph*})}% labels for second level
+
+\usepackage[backend=bibtex, style=ieee, sorting=none, defernumbers=true, url=false, doi=false]{biblatex} %%% true/fals be és kikapcsolás!!
+\addbibresource{dolgozat} %bib fájl
+\input{boldauthorname}
+
 %\usepackage{ulem}
 %\newcommand{\soutthick}[1]{%
 %    \renewcommand{\ULthickness}{2.4pt}%
 %       \sout{#1}%
 %    \renewcommand{\ULthickness}{.4pt}% Resetting to ulem default
 % \usepackage{MnSymbol,wasysym}
+%\DeclareSourcemap{
+  %\maps[datatype=bibtex]{
+    %\map{
+      %\step[fieldsource=issue, match=\regexp{\A(\d+)\Z}, final]
+      %\step[fieldset=number, fieldvalue={$1}]
+      %\step[fieldset=issue, null]
+    %}
+  %}
+%}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
 
 
 \def\myuni{Universiy of Pannonia}
 \def\myfaculty{Department of Electrical Engineering and Information Systems}
 \def\myschool{Doctoral School of Information Science}
 \def\mytitle{Optimal Current Control for Domestic Power converters}
-%\def\mymytitle{ Energia management tervez\'ese fogyaszt\'oi \'es naper\H{o}m\H{u} modell seg\'its\'eg\'evel }
 \def\myauthor{L\'aszlo Richard Neukirchner}
-\def\mydate{2019}
+\def\mydate{2020}
 \def\mysupervisor{dr. Magyar Attila}
 
 
-%\rhead{Bálint Roland (BPRATZ) 2017/18/II.}
-\renewcommand{\contentsname}{List of contets}
+%\rhead{L\'aszlo Richard Neukirchner (ZOK4EW) 2014/15/II.}
+\renewcommand{\contentsname}{List of contents}
 \renewcommand{\figurename}{Figure}
 \renewcommand{\tablename}{Table}
 \renewcommand{\chaptername}{Chapter}
@@ -104,75 +140,81 @@
  \addtocounter{page}{-1}%
  \newpage
 
-        %% Címoldal
+%% Title Page
  \input{subtex/0_cimoldal.tex}
 
-        %% harmadik oldal
+%% Mandatory third page
  \input{subtex/00_thirdpage.tex}
 
-        %% Köszönetnyilvánítás
- \chapter*{Acknowledgement}
+%% Acknowledgements
  \input{subtex/000_acknowledgments.tex}
 
-%\chapter*{Compendiary}
+%\chapter*{Compendiary} --> Not required
 % \input{subtex/0000_compendiary.tex}
 %% (max 2500 karakter)
 
-        %% Tartalmi kivonatok címfordítással
- \chapter*{Abstract}
- \input{subtex/00000_abstracts.tex}
+%% Abstract
+\input{subtex/00000_abstracts.tex}
 
-        %% Tartalomjegyzék
- \thispagestyle{plain}
- \tableofcontents
- \newpage
+%% Tableofcontents
+\thispagestyle{plain}
+\tableofcontents
+\newpage
 
- \pagenumbering{arabic}
-        %% 1 - Bevezetés
-\chapter{Introduction}
- \input{subtex/1_introduction.tex}
- \input{subtex/1_1_motivation.tex}
- \input{subtex/1_2_compendiary.tex}
+\pagenumbering{arabic}
 
-        %% 2 - Motiváció és cél
- %\chapter{Motivations}
- 
+%% Introduction
+\input{subtex/1_introduction.tex}
 
-        %% 3 - Irodalmi összefoglalás
- \chapter{Baic notions}
-
- \input{subtex/3_1_basics_unbalance.tex}
- %\input{subtex/3_2_basics_inverter.tex}
- \input{subtex/3_3_basics_empc.tex}
-
-        %% 4 - Kísérleti rész
- \chapter{Constrained, explicit predictive control for current source buck-type rectifiers}
- \input{subtex/4_1_discussion_results.tex}
- \chapter{Geometrical indicator for voltage asymmetry in three phase networks}
- \input{subtex/4_2_discussion_results.tex}
- \chapter{Voltage unbalance compensation with optimization based control algorithm and asymmetrical inverter structure}
- \input{subtex/4_3_discussion_results.tex}
-
-        %% 5 - Összefoglalás
- \chapter{Summary}
- \input{subtex/5_conculsion.tex}
-
-        %% 6 - Tézispontok magyarul és angolul
- \chapter{Thesis}
- \input{subtex/6_thesis.tex}
-
- \chapter*{List of notations}
- \input{subtex/7_nomenclature.tex}
-
- \chapter*{Abbrevations}
- \input{subtex/8_abbreviations}
+ %Not requied:
+ %\input{subtex/1_1_motivation.tex}
+ %\input{subtex/1_2_compendiary.tex}
 
 
-%%        %% Hivatkozások
+%% Basic notions
+\input{subtex/3_1_basics_unbalance.tex}
+%\input{subtex/3_2_basics_inverter.tex}
+\input{subtex/3_3_basics_empc.tex}
+
+%% Voltage Unbalance
+\input{subtex/4_3_discussion_results.tex}
+%\input{subtex/4_2_discussion_results.tex}
+%% Explicit MPC
+\input{subtex/4_1_discussion_results.tex}
+
+%% Summary
+\input{subtex/5_conculsion.tex} %--> List of thesis and own publications moved here <=====
+
+%% Thesis
+%\input{subtex/6_thesis.tex}
+
+%% Nomenclature
+\input{subtex/7_nomenclature.tex}
+
+%% Abbreviations
+\input{subtex/8_abbreviations.tex}
+
+%% Appendix
+\input{subtex/9_appendix.tex}
+
+
+%%% Citations
  \newpage
  \pagestyle{plain}
- \bibliographystyle{plain}
- \bibliography{dolgozat}
+ %\bibliographystyle{plain}
+ %% \bibliography{dolgozat_own}
+ %\bibliography{dolgozat}
+\section{Publications}
+ \boldname{Neukirchner}{L{\'a}szl{\'o}}{L.}   %%%% félkövér kiemeléshez NEM MINDEGY PL. HOGY á VAGY \'a VAN A BIB-BEN !!!!!!!!!!!!
+    %\boldname{}{}{}
+		\printbibheading
+    \begin{refcontext}[labelprefix={S}]
+        \printbibliography[keyword=sajat, heading=none, title={asd}]        %% keyword alapján szűr, azaz bele kell tenni a bib-be
+    \end{refcontext}
+    
+    \section{Literature}
+    %\boldname{}{}{}
+    \printbibliography[notkeyword=sajat,resetnumbers=true, heading=none, title={veryasd}] % ha egybe kell a másikkal akkor "heading=none," és nincs title
 
 
 
