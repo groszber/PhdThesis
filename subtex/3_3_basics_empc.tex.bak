@@ -680,9 +680,7 @@ The implementation of MPC in explicit form is very efficient up to a certain num
   %\caption{My caption}
   %\label{my-label}
 %\begin{adjustbox}{width=\textwidth}
-\begin{scriptsize}
-\begin{tabularx}{\textwidth}{r|X}
-
+\begin{tabularx}{\textwidth}{r|l}
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
   %Chapter 4.1. notations&\\
 	$V_P$															& Voltage peak\\
@@ -783,7 +781,6 @@ The implementation of MPC in explicit form is very efficient up to a certain num
 	$I_i$															& $i^{th}$ resulting node after partitioning of the statespace\\
 	
 \end{tabularx}
-\end{scriptsize}
 %\end{adjustbox}
 %\end{table}
 

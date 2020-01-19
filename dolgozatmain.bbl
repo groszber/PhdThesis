@@ -2222,8 +2222,8 @@
       {{hash=MN}{%
          family={Muthukumar},
          familyi={M\bibinitperiod},
-         given={N},
-         giveni={N},
+         given={N.},
+         giveni={N\bibinitperiod},
       }}%
       {{hash=SS}{%
          family={Srinivasan},
@@ -2234,14 +2234,14 @@
       {{hash=RK}{%
          family={Ramkumar},
          familyi={R\bibinitperiod},
-         given={K},
-         giveni={K},
+         given={K.},
+         giveni={K\bibinitperiod},
       }}%
       {{hash=KK}{%
          family={Kannan},
          familyi={K\bibinitperiod},
-         given={K},
-         giveni={K},
+         given={K.},
+         giveni={K\bibinitperiod},
       }}%
       {{hash=BVE}{%
          family={Balas},
@@ -2450,7 +2450,6 @@
     \verb 10.1109/IEEESTD.1987.81536
     \endverb
     \field{issn}{null}
-    \field{pages}{0_1\bibrangedash }
     \field{title}{\textsc{IEEE} Guide for Self-Commutated Converters}
     \field{journaltitle}{ANSI/IEEE Std 936-1987}
     \field{year}{1987}
@@ -3212,6 +3211,394 @@
     \field{year}{2017}
   \endentry
 
+  \entry{kwon2006receding}{book}{}
+    \name{author}{2}{}{%
+      {{hash=KWH}{%
+         family={Kwon},
+         familyi={K\bibinitperiod},
+         given={Wook\bibnamedelima Hyun},
+         giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=HSH}{%
+         family={Han},
+         familyi={H\bibinitperiod},
+         given={Soo\bibnamedelima Hee},
+         giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Science \& Business Media}%
+    }
+    \strng{namehash}{KWHHSH1}
+    \strng{fullhash}{KWHHSH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Receding horizon control: model predictive control for state
+  models}
+    \field{year}{2006}
+  \endentry
+
+  \entry{baotic2005optimal}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=BM}{%
+         family={Baotic},
+         familyi={B\bibinitperiod},
+         given={Mato},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BM1}
+    \strng{fullhash}{BM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Optimal control of piecewise affine systems: A
+  multi-parametric approach}
+    \list{institution}{1}{%
+      {ETH Zurich}%
+    }
+    \field{type}{phdthesis}
+    \field{year}{2005}
+  \endentry
+
+  \entry{herceg2009real}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=HM}{%
+         family={Herceg},
+         familyi={H\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HM1}
+    \strng{fullhash}{HM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Real-Time Explicit Model Predictive Control of Processes}
+    \list{institution}{1}{%
+      {PhD thesis}%
+    }
+    \field{type}{phdthesis}
+    \field{year}{2009}
+  \endentry
+
+  \entry{grancharova2005survey}{incollection}{}
+    \name{author}{2}{}{%
+      {{hash=GA}{%
+         family={Grancharova},
+         familyi={G\bibinitperiod},
+         given={Alexandra},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=JTA}{%
+         family={Johansen},
+         familyi={J\bibinitperiod},
+         given={Tor\bibnamedelima Arne},
+         giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{GAJTA1}
+    \strng{fullhash}{GAJTA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Switching and Learning in Feedback Systems}
+    \field{pages}{47\bibrangedash 97}
+    \field{title}{Survey of explicit approaches to constrained optimal control}
+    \field{year}{2005}
+  \endentry
+
+  \entry{antoniewicz2009predictive}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=AP}{%
+         family={Antoniewicz},
+         familyi={A\bibinitperiod},
+         given={Patrycjusz},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AP1}
+    \strng{fullhash}{AP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Predictive control of three phase AC/DC converters}
+    \list{institution}{2}{%
+      {The Institute of Control}%
+      {Industrial Electronics}%
+    }
+    \field{type}{phdthesis}
+    \field{year}{2009}
+  \endentry
+
+  \entry{geyer2005low}{book}{}
+    \name{author}{1}{}{%
+      {{hash=GT}{%
+         family={Geyer},
+         familyi={G\bibinitperiod},
+         given={Tobias},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cuvillier Verlag}%
+    }
+    \strng{namehash}{GT1}
+    \strng{fullhash}{GT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Low complexity model predictive control in power electronics
+  and power systems}
+    \field{year}{2005}
+  \endentry
+
+  \entry{aastrom2013computer}{book}{}
+    \name{author}{2}{}{%
+      {{hash=AKJ}{%
+         family={{\AA}str{\"o}m},
+         familyi={{\AA}\bibinitperiod},
+         given={Karl\bibnamedelima J},
+         giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=WB}{%
+         family={Wittenmark},
+         familyi={W\bibinitperiod},
+         given={Bj{\"o}rn},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Courier Corporation}%
+    }
+    \strng{namehash}{AKJWB1}
+    \strng{fullhash}{AKJWB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Computer-controlled systems: theory and design}
+    \field{year}{2013}
+  \endentry
+
+  \entry{bela2005iranyitasi}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BL}{%
+         family={B{\'e}la},
+         familyi={B\bibinitperiod},
+         given={Lantos},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Akad{\'e}miai K.}%
+    }
+    \strng{namehash}{BL1}
+    \strng{fullhash}{BL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Ir{\'a}ny{\'\i}t{\'a}si rendszerek elm{\'e}lete {\'e}s
+  tervez{\'e}se}
+    \field{year}{2005}
+  \endentry
+
+  \entry{levine2018control}{book}{}
+    \name{author}{1}{}{%
+      {{hash=LWS}{%
+         family={Levine},
+         familyi={L\bibinitperiod},
+         given={William\bibnamedelima S},
+         giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {CRC press}%
+    }
+    \strng{namehash}{LWS1}
+    \strng{fullhash}{LWS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{The Control Handbook (three volume set)}
+    \field{year}{2018}
+  \endentry
+
+  \entry{goodwin2006constrained}{book}{}
+    \name{author}{3}{}{%
+      {{hash=GG}{%
+         family={Goodwin},
+         familyi={G\bibinitperiod},
+         given={Graham},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SMM}{%
+         family={Seron},
+         familyi={S\bibinitperiod},
+         given={Mar{\'\i}a\bibnamedelima M},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=DDJA}{%
+         family={De\bibnamedelima Don{\'a}},
+         familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod},
+         given={Jos{\'e}\bibnamedelima A},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Science \& Business Media}%
+    }
+    \strng{namehash}{GGSMMDDJA1}
+    \strng{fullhash}{GGSMMDDJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Constrained control and estimation: an optimisation approach}
+    \field{year}{2006}
+  \endentry
+
+  \entry{mayne2000constrained}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MDQ}{%
+         family={Mayne},
+         familyi={M\bibinitperiod},
+         given={David\bibnamedelima Q},
+         giveni={D\bibinitperiod\bibinitdelim Q\bibinitperiod},
+      }}%
+      {{hash=RJB}{%
+         family={Rawlings},
+         familyi={R\bibinitperiod},
+         given={James\bibnamedelima B},
+         giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=RCV}{%
+         family={Rao},
+         familyi={R\bibinitperiod},
+         given={Christopher\bibnamedelima V},
+         giveni={C\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=SPO}{%
+         family={Scokaert},
+         familyi={S\bibinitperiod},
+         given={Pierre\bibnamedelima OM},
+         giveni={P\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{MDQRJBRCV+1}
+    \strng{fullhash}{MDQRJBRCVSPO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{789\bibrangedash 814}
+    \field{title}{Constrained model predictive control: Stability and
+  optimality}
+    \field{volume}{36}
+    \field{journaltitle}{Automatica}
+    \field{year}{2000}
+  \endentry
+
+  \entry{grieder2005stabilizing}{article}{}
+    \name{author}{4}{}{%
+      {{hash=GP}{%
+         family={Grieder},
+         familyi={G\bibinitperiod},
+         given={Pascal},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kvasnica},
+         familyi={K\bibinitperiod},
+         given={Michal},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Baoti{\'c}},
+         familyi={B\bibinitperiod},
+         given={Mato},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Morari},
+         familyi={M\bibinitperiod},
+         given={Manfred},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{GPKMBM+1}
+    \strng{fullhash}{GPKMBMMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{10}
+    \field{pages}{1683\bibrangedash 1694}
+    \field{title}{Stabilizing low complexity feedback control of constrained
+  piecewise affine systems}
+    \field{volume}{41}
+    \field{journaltitle}{Automatica}
+    \field{year}{2005}
+  \endentry
+
+  \entry{keerthi1988optimal}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KSa}{%
+         family={Keerthi},
+         familyi={K\bibinitperiod},
+         given={SS\bibnamedelima a},
+         giveni={S\bibinitperiod\bibinitdelim a\bibinitperiod},
+      }}%
+      {{hash=GEG}{%
+         family={Gilbert},
+         familyi={G\bibinitperiod},
+         given={Elmer\bibnamedelima G},
+         giveni={E\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{KSaGEG1}
+    \strng{fullhash}{KSaGEG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{265\bibrangedash 293}
+    \field{title}{Optimal infinite-horizon feedback laws for a general class of
+  constrained discrete-time systems: Stability and moving-horizon
+  approximations}
+    \field{volume}{57}
+    \field{journaltitle}{Journal of optimization theory and applications}
+    \field{year}{1988}
+  \endentry
+
+  \entry{mayne1990receding}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MDQ}{%
+         family={Mayne},
+         familyi={M\bibinitperiod},
+         given={David\bibnamedelima Q},
+         giveni={D\bibinitperiod\bibinitdelim Q\bibinitperiod},
+      }}%
+      {{hash=MH}{%
+         family={Michalska},
+         familyi={M\bibinitperiod},
+         given={Hannah},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{MDQMH1}
+    \strng{fullhash}{MDQMH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{7}
+    \field{pages}{814\bibrangedash 824}
+    \field{title}{Receding horizon control of nonlinear systems}
+    \field{volume}{35}
+    \field{journaltitle}{IEEE Transactions on automatic control}
+    \field{year}{1990}
+  \endentry
+
   \entry{horn2012matrix}{book}{}
     \name{author}{2}{}{%
       {{hash=HRA}{%
@@ -3268,6 +3655,108 @@
     \field{labeltitlesource}{title}
     \field{title}{Predictive control for linear and hybrid systems}
     \field{year}{2017}
+  \endentry
+
+  \entry{jones2006logarithmic}{article}{}
+    \name{author}{3}{}{%
+      {{hash=JCN}{%
+         family={Jones},
+         familyi={J\bibinitperiod},
+         given={Colin\bibnamedelima Neil},
+         giveni={C\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={Grieder},
+         familyi={G\bibinitperiod},
+         given={Pascal},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=RSV}{%
+         family={Rakovi{\'c}},
+         familyi={R\bibinitperiod},
+         given={Sa{\v{s}}a\bibnamedelima V},
+         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{JCNGPRSV1}
+    \strng{fullhash}{JCNGPRSV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{12}
+    \field{pages}{2215\bibrangedash 2218}
+    \field{title}{A logarithmic-time solution to the point location problem for
+  parametric linear programming}
+    \field{volume}{42}
+    \field{journaltitle}{Automatica}
+    \field{year}{2006}
+  \endentry
+
+  \entry{tondel2003evaluation}{article}{}
+    \name{author}{3}{}{%
+      {{hash=TP}{%
+         family={T{\o}ndel},
+         familyi={T\bibinitperiod},
+         given={Petter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=JTA}{%
+         family={Johansen},
+         familyi={J\bibinitperiod},
+         given={Tor\bibnamedelima Arne},
+         giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Bemporad},
+         familyi={B\bibinitperiod},
+         given={Alberto},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{TPJTABA1}
+    \strng{fullhash}{TPJTABA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{945\bibrangedash 950}
+    \field{title}{Evaluation of piecewise affine control via binary search
+  tree}
+    \field{volume}{39}
+    \field{journaltitle}{Automatica}
+    \field{year}{2003}
+  \endentry
+
+  \entry{tondel2003constrained}{thesis}{}
+    \name{author}{2}{}{%
+      {{hash=TP}{%
+         family={T{\o}ndel},
+         familyi={T\bibinitperiod},
+         given={Petter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=TN}{%
+         family={Trondheim},
+         familyi={T\bibinitperiod},
+         given={N},
+         giveni={N},
+      }}%
+    }
+    \strng{namehash}{TPTN1}
+    \strng{fullhash}{TPTN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Constrained optimal control via multiparametric
+  quadraticprogramming.}
+    \list{institution}{1}{%
+      {Citeseer}%
+    }
+    \field{type}{phdthesis}
+    \field{year}{2003}
   \endentry
 
   \entry{Neukirchner2015}{article}{}
@@ -3643,6 +4132,142 @@
     \field{title}{Constrained Predictive Control of Three-Phase Buck Rectifiers
   Simulation details}
     \field{year}{2019}
+  \endentry
+
+  \entry{neukirchner2014quasi}{article}{}
+    \name{author}{2}{}{%
+      {{hash=NL}{%
+         family={Neukirchner},
+         familyi={N\bibinitperiod},
+         given={L{\'a}szl{\'o}},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Magyar},
+         familyi={M\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{sajat}
+    \strng{namehash}{NLMA1}
+    \strng{fullhash}{NLMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{91\bibrangedash 95}
+    \field{title}{Quasi-polynomial representation-based control of mechanical
+  systems}
+    \field{volume}{42}
+    \field{journaltitle}{Hungarian Journal of Industry and Chemistry}
+    \field{year}{2014}
+  \endentry
+
+  \entry{gollei2014measurement}{article}{}
+    \name{author}{4}{}{%
+      {{hash=GA}{%
+         family={G{\"o}llei},
+         familyi={G\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={G{\"o}rbe},
+         familyi={G\bibinitperiod},
+         given={P{\'e}ter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Magyar},
+         familyi={M\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=NL}{%
+         family={Neukirchner},
+         familyi={N\bibinitperiod},
+         given={L{\'a}szl{\'o}},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \keyw{sajat}
+    \strng{namehash}{GAGPMA+1}
+    \strng{fullhash}{GAGPMANL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{85\bibrangedash 89}
+    \field{title}{Measurement-based Modelling and Simulation of a
+  Hydrogengenerating Dry Cell for Complex Domestic Renewable Energy Systems}
+    \field{volume}{42}
+    \field{journaltitle}{Hungarian Journal of Industry and Chemistry}
+    \field{year}{2014}
+  \endentry
+
+  \entry{neukirchner2011modeling}{article}{}
+    \name{author}{3}{}{%
+      {{hash=NL}{%
+         family={Neukirchner},
+         familyi={N\bibinitperiod},
+         given={L{\'a}szl{\'o}},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=FA}{%
+         family={Fodor},
+         familyi={F\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Magyar},
+         familyi={M\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{sajat}
+    \strng{namehash}{NLFAMA1}
+    \strng{fullhash}{NLFAMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{147\bibrangedash 152}
+    \field{title}{Modeling and Parameter Sensitivity Analysis of a Synchronous
+  Motor}
+    \field{volume}{39}
+    \field{journaltitle}{Hungarian Journal of Industry and Chemistry}
+    \field{year}{2011}
+  \endentry
+
+  \entry{neukirchner2016modelling}{article}{}
+    \name{author}{2}{}{%
+      {{hash=NL}{%
+         family={Neukirchner},
+         familyi={N\bibinitperiod},
+         given={L{\'a}szl{\'o}},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Magyar},
+         familyi={M\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {De Gruyter Open}%
+    }
+    \keyw{sajat}
+    \strng{namehash}{NLMA1}
+    \strng{fullhash}{NLMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{105\bibrangedash 111}
+    \field{title}{Modelling a Three-Phase Current Source Inverter}
+    \field{volume}{44}
+    \field{journaltitle}{Hungarian Journal of Industry and Chemistry}
+    \field{year}{2016}
   \endentry
 \enddatalist
 \endinput
