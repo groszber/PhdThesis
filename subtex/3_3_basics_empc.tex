@@ -169,7 +169,7 @@ For the derivation of the relative on-times of the three buck transistors $S_i$ 
 						v_{c_2}&=&\widehat{v}_ccos(\omega t-2\pi/3)\\
 						v_{c_3}&=&\widehat{v}_ccos(\omega t+2\pi/3),\\
         \end{array}
-        \label{BASICMPC:equ:basic_LTI}
+        \label{BASICMPC:equ:phasorvect}
     \end{equation}
 	where $\omega$ is the network voltage's angular velocity.
 	
@@ -236,7 +236,7 @@ and not reliable. For such problems, pattern search methods are one possible sol
 
 Lets adopt an infinite sequence of iterations $\rho=0,1,2,\dots$, with the last iteration noted as $\rho-1$ and initialization at $0$. It is assumed that the process knows the best point so far as $x^{\rho-1}$, where $f(x^{\rho-1})$ has the global minima of $f$. Associated with $x^{\rho-1}$ there is a step-length control parameter namely $\Delta^{\rho-1}$. Each $i\in\mathcal{P}$, where $\mathcal{P}=\{1,\dots,p\}$ process ends iteration at $\rho-1$ by constructing it's trial point and initiating an evaluation of $f(x^{\rho-1}_i+\Delta^{\rho-1}_id_i)$, where $\mathcal{D}=\{d_1,\dots,d_p\}$ is the finite set of directions applied by each individual process. The simultaneous start of the function evaluations at the trial points on each of the $p$ processes signals the start of iteration $\rho$. When all of the participating processes are finished with their evaluation of $f$, they communicate these values to each other and determine the new values of $x^\rho$, and $\Delta^\rho$. If there exists an $i\in\mathcal{P}$, such that $f(x^{\rho-1}_i+\Delta^{\rho-1}_id_i)<f(\rho^{\rho-1})$, then $\rho\in\mathcal{S}$, where $\mathcal{S}$ denotes the successful iterations.
 
-\myparagraph{Adding asynchronity}
+\myparagraph{Adding asynchronicity}
 
  With said above, the general strategy for asynchronous parallel pattern search, from the perspective of a single process $i\in\mathcal{P}$ can be outlined:
 		\begin{enumerate}
@@ -276,7 +276,7 @@ Lets adopt an infinite sequence of iterations $\rho=0,1,2,\dots$, with the last 
 
 \subsection{Quadratic optimization and predictive control}\label{BASICCSR:sec:MPC}
 
-Philosophically MPC reflects human behavior whereby we select control actions which we think will lead to the best predicted outcome (or output)over some limited horizon. To make this selection we use an internal model of the process in question. We constantly update our decisions as new observations become available. Hence a predictive control law has the following components:
+Philosophically MPC reflects human behavior whereby we select control actions which we think will lead to the best predicted outcome (or output) over some limited horizon. To make this selection we use an internal model of the process in question, and constantly update our decisions as new observations become available. Hence a predictive control law has the following components:
 \begin{itemize}
 \item The control law depends on predicted behavior.
 \item The output predictions are computed using a process model.
@@ -285,26 +285,20 @@ Philosophically MPC reflects human behavior whereby we select control actions wh
 \end{itemize}
 
 %\myparagraph{Model predictive control}\label{BASICCSR:sec:MPCOverview}
-Most control laws, say PID (proportional, integral and derivative), do not explicitly consider the future implication of current control actions. To some extent this is only accounted for by the expected closed-loop dynamics. MPC on the other hand
-implicitly (or explicitly) computes the predicted behavior over some horizon. One can therefore restrict the choice of the current proposed input trajectories to those that do not lead to difficulties in the future.\\
-In order to predict the future behavior of a process,we must have a model of how the process behaves. In particular, this model must show the dependence of the output on the current measured variable and the current/future inputs. This model does not
-have to be linear (e.g. transfer function, state-space) and in fact can be just about anything. A precise model is not always required to get tight control, because the decisions are updated regularly. This will deal with some model uncertainty in a fairly
-fast time scale. The decision on the best control is thus continually updated using information from this comparison \cite{rossiter2017model}.\\
-This way, predictive control methods based on a model are optimal regulators, with a defined cost function on a defined and encompassed prediction horizon with restrictions \cite{kwon2006receding}, \cite{baotic2005optimal}, \cite{herceg2009real}, \cite{grancharova2005survey}. The control signal is calculated over a defined horizon, but from the sequence of applicable control signals only the first one is used in the next sample. This procedure is repeated according to the principle of the moving horizon, using new iterations, as such provides the reaction in each sample. This method was developed for systems with physical restrictions, in the first stage for the control of chemical processes in the oil industry, then it was applied to various rapid processes from automotive or power electronics industry \cite{antoniewicz2009predictive} , \cite{geyer2005low}. By default the optimization problem can be solved, for each sample, or explicitly using the multi-parameter programming techniques (mp-LP, mp-QP) presented in \textbf{[N-ANNEX 1]-(Needed?)}, over a well-defined parameter space.
+Most control laws, say PID (proportional, integral and derivative) control, does not explicitly consider the future implication of current control actions. To some extent this is only accounted by the expected closed-loop dynamics. MPC on the other hand
+implicitly (or explicitly) computes the predicted behavior over some horizon. One can therefore restrict the choice of the proposed input trajectories to those that do not lead to difficulties in the future.\\
+In order to predict the future behavior of a process, we must have a model of how the process behaves. In particular, this model must show the dependence of the output on the current measured variable and the current/future inputs. This does not have to be linear (e.g. transfer function, state-space) and in fact can be just about anything. A precise model is not always required to get tight control, because the decisions are updated regularly. This will deal with some model uncertainty in a fairly fast time scale. The decision on the best control is thus continually updated using information from this comparison \cite{rossiter2017model}.\\
+This way, model based predictive control methods are optimal regulators, with a defined cost function on a defined and encompassed prediction horizon with restrictions \cite{kwon2006receding}, \cite{baotic2005optimal}, \cite{herceg2009real}, \cite{grancharova2005survey}. The control signal is calculated over a defined horizon, but from the sequence of applicable control signals only the first one is used in the next sample. This procedure is repeated according to the principle of the moving horizon, using new iterations, as such provides the reaction in each sample. The method was developed for systems with physical restrictions, in the first stage for the control of chemical processes in the oil industry, then it was applied to various rapid processes from automotive or power electronics industry \cite{antoniewicz2009predictive} , \cite{geyer2005low}. By default the optimization problem can be solved, for each sample, or explicitly using the multi-parameter programming techniques (mp-LP, mp-QP) presented in \textbf{[N-ANNEX 1]-(Needed?)}, over a well-defined parameter space.
 
 	%MPC example
 	
 	\myparagraph{Constained optimal control}\label{BASICCSR:sec:OptimalControl}
 	
-	In practice most MPC algorithms use linear models because the dependence of the predictions on future control choices is then linear and this facilitates optimization as well as off-line analysis of expected closed-loop behavior. However, nonlinear
-models can be used where the implied computational burden is not a problem and linear approximations are not accurate enough.
-It is also important to note here the comment fit for purpose. In predictive control, the model is used solely to compute system output predictions, so the model is fit for purpose if it gives accurate enough predictions. The effort and detail put into
-modeling stage should reflect this
-	Let the us assume that the system is linear and time-invariant (LTI):
+	In practice most MPC algorithms use linear models because the dependence of the predictions on future control choices is then linear and this facilitates optimization as well as off-line analysis of expected closed-loop behavior. However, nonlinear models can be used where the implied computational burden is not a problem and linear approximations are not accurate enough. It is also important to note here the comment fit for purpose. In predictive control, the model is used solely to compute system output predictions, so the model is fit for purpose if it gives accurate enough predictions. The effort and detail put into modeling stage should reflect this.	Let the us assume that the system is linear and time-invariant (LTI):
 	
 	    \begin{equation}
         \begin{array}{rcl}
-            \textbf{x}(t+1)&=&\textbf{Ax}(q)+\textbf{Bu}(q)\\
+            \textbf{x}(q+1)&=&\textbf{Ax}(q)+\textbf{Bu}(q)\\
 						\textbf{y}(q)&=&\textbf{Cx}(q)
         \end{array}
         \label{BASICMPC:equ:basic_LTI}
@@ -343,7 +337,8 @@ modeling stage should reflect this
         \label{BASICMPC:equ:optim_problem}
     \end{equation}
 		%
-		where $N$ is the defined horizon, $x\in \mathcal{X}_f$ is the set if terminal states, $\textbf{U}_N=[u_0,u_1,\dots,u_{N-1}]\in\mathbb{R}^s,s=m*N$. In case of $\varsigma=2$ (Euclidean or square norm) $\textbf{Q}=\textbf{Q}'\geq0$, $\textbf{R}=\textbf{R}'\geq0$, $\textbf{P}\geq0$ and in case of $\varsigma=1$, $\textbf{Q}$,$\textbf{R}$, and $\textbf{P}$ shall be on maximum rank. As displayed, the MPC approach requires a numerical definition so that a precise calculation can be made, that is, which predicted input trajectory gives the lowest numerical value to the cost. The main requirement is that the cost depends on the future controls and that low values of cost imply good closed-loop performance good being defined for the process. Of course the choice of the cost affects the complexity of the implied optimization and this is also a consideration. For this reason 2-norm ($\varsigma=2$) measures are popular, as optimization is straightforward.\\
+		where $N$ is the defined horizon, $x\in \mathcal{X}_f$ is the set if terminal states, $\textbf{U}_N=[u_0,u_1,\dots,u_{N-1}]\in\mathbb{R}^s,s=m*N$.\\
+ In case of $\varsigma=2$ (Euclidean or square norm) $\textbf{Q}=\textbf{Q}'\geq0$, $\textbf{R}=\textbf{R}'\geq0$, $\textbf{P}\geq0$ and in case of $\varsigma=1$, $\textbf{Q}$,$\textbf{R}$, and $\textbf{P}$ shall be on maximum rank. As displayed, the MPC approach requires a numerical definition so that a precise calculation can be made, that is, which predicted input trajectory gives the lowest numerical value to the cost. The main requirement is that the cost depends on the future controls and that low values of cost imply good closed-loop performance good being defined for the process. Of course the choice of the cost affects the complexity of the implied optimization and this is also a consideration. For this reason 2-norm ($\varsigma=2$) measures are popular, as optimization is straightforward.\\
 		Based on the latter and on \ref{BASICMPC:equ:cost_function} and \ref{BASICMPC:equ:optim_problem} a classical linear quadratic regulator (LQR) structure can be formulated with finite or infinite horison \cite{aastrom2013computer}, \cite{bela2005iranyitasi}, \cite{levine2018control}.
 		Let us consider the following:
 		
@@ -481,10 +476,119 @@ with the cost function to minimize:
 		The optimal control inputs estimated for future samples are not taken into account and the algorithm is
 repeated on the basis of new measurements or a new estimation of the states.
 
+\paragraph{Batch approach}
+
+Let's assume system \ref{BASICMPC:equ:basic_LTI} with applied cost function \ref{BASICMPC:equ:cost_function}, and optimization problem \ref{BASICMPC:equ:optim_problem}. If we assume Euclidian norm ($\varsigma = 2$) the cost function can be written in the following way:
+
+\begin{equation}
+        \begin{array}{rcl}
+				%&&\norm{asd}
+         J_0(\textbf{U}_0,x(0))&=&\textbf{x}'_N\textbf{P}\textbf{x}_N+\sum^{N-1}_{k=0}\textbf{x}'_k\textbf{Q}\textbf{x}_k+\textbf{u}'_k\textbf{R}\textbf{u}_k\\
+        \end{array}
+        \label{BASICMPC:equ:cost_function_Euclidian}
+    \end{equation}
+    
+    where $U_0=[\textbf{u}'_0,\dots,\textbf{u}'_{N-1}]in\mathbb{R}^s$, $s=m*N$ is the desision vector contraining all future inputs, also $\textbf{P}=\textbf{P}'\succeq 0$, $\textbf{Q}=\textbf{Q}'\succeq 0$, $\textbf{R}=\textbf{R}'\succeq 0$.
+    The first step is to write the equality constraints to express all future states and inputs from the initial state $\textbf{x}_0$ until the and of horizon $N$:
+    
+    \begin{equation}
+        \begin{array}{rcl}
+        \underbrace{
+        \begin{bmatrix}
+        \textbf{x}(0)\\
+        \textbf{x}_1\\
+        \vdots\\
+        \vdots\\
+        \textbf{x}_N\\
+        \end{bmatrix}}_{\mathcal{X}^x}
+        &=&
+        \underbrace{
+        \begin{bmatrix}
+        \textbf{I}_0\\
+        \textbf{A}_1\\
+        \vdots\\
+        \vdots\\
+        \textbf{A}^N\\
+        \end{bmatrix}}_{\mathcal{S}^x}\textbf{x}(0)+
+        \underbrace{
+        \begin{bmatrix}
+        0& \dots& \dots& 0\\
+        \textbf{B}& 0& \dots& 0\\
+        \textbf{AB}& \ddots& \ddots& \vdots\\
+        \vdots& \ddots& \ddots& \vdots\\
+        \textbf{A}^{N-1}\textbf{B}& \ddots& \ddots& \textbf{B}\\
+        \end{bmatrix}}_{\mathcal{S}^u}
+        \begin{bmatrix}
+        \textbf{u}_0\\
+        \vdots\\
+        \vdots\\
+        \textbf{u}_N\\
+        \end{bmatrix}.
+        
+		\end{array}
+        \label{BASICMPC:equ:batch_allstates}
+    \end{equation}
+    
+    %For the easier notation it is asmued that $\mathcal{X^x}={\textbf{x}(0),\textbf{x}_1,\dots,\textbf{x}_N}$, $\mathcal{S^x}={\textbf{I},\textbf{A},\dots,\textbf{x}_N}$ $ \underbrace{(x + 2)^3}_{\text{text 1}}$
+    Here all future states are explicit functions of the state $\textbf{x}(0)$ and the future inputs of $\textbf{u}_0,\textbf{u}_1\cdot$ only. By defining appropriate quantities, we can rewrite \ref{BASICMPC:equ:batch_allstates} in a compact form:
+    
+    \begin{equation}
+        \begin{array}{rcl}
+        \mathcal{X}^x&=&\mathcal{S}^x(0)+\mathcal{S}^u\textbf{U}_0.\\
+		\end{array}
+        \label{BASICMPC:equ:batch_allstates_compact}
+    \end{equation}
+    
+    Using the same notation the object function can be rewritten as:
+    
+    \begin{equation}
+        \begin{array}{rcl}
+        J(\textbf{x}_0,\textbf{U}_0)&=&\mathcal{X}'\bar{\textbf{Q}}\mathcal{X}+\textbf{U}_0\bar{\textbf{Q}}\textbf{U}'_0,\\
+		\end{array}
+        \label{BASICMPC:equ:batch_object}
+    \end{equation}
+    
+    where $\bar{\textbf{Q}}=diag\{\textbf{Q},\dots,\textbf{Q},\textbf{P}\}$, and $\bar{\textbf{R}}=diag\{\textbf{R},\dots,\textbf{R}\}$. Substituting \ref{BASICMPC:equ:batch_allstates_compact} into the objective function \ref{BASICMPC:equ:batch_object} yields:
+    
+    \begin{equation}
+        \begin{array}{rcl}
+        J(\textbf{x}_0,\textbf{U}_0)&=&(\mathcal{S}^x(0)+\mathcal{S}^u\textbf{U}_0)'\bar{\textbf{Q}}(\mathcal{S}^x(0)+\mathcal{S}^u\textbf{U}_0)+\textbf{U}_0'\bar{\textbf{R}}\textbf{U}_0\\
+        &=&\textbf{U}'_0\underbrace{(\mathcal{S}^{u'}\bar{\textbf{Q}}\mathcal{S}^u+\bar{\textbf{R}})}_{\textbf{H}}\textbf{U}_0+ \\
+        &+&2\textbf{x}'(0)\underbrace{(\mathcal{S}^{x'}\bar{\textbf{Q}}\mathcal{S}^u)}_{\textbf{F}}\textbf{U}_0+\\
+        &+&\textbf{x}'(0)\underbrace{(\mathcal{S}^{x'}\bar{\textbf{Q}}\mathcal{S}^x)}_{\textbf{Y}}\textbf{x}(0)\\
+        &=&\textbf{U}'_0\textbf{H}\textbf{U}_0+2\textbf{x}'(0)\textbf{F}\textbf{U}_0+\textbf{x}'(0)\textbf{Y}\textbf{x}(0).
+		\end{array}
+        \label{BASICMPC:equ:batch_simplfy}
+    \end{equation}
+    
+    Because $\bar{\textbf{R}}\succ 0$, and $\bar{\textbf{H}}\succ 0$, thus $J(\textbf{x}_0,\textbf{U}_0)$ is a positive definite quadratic function of $\textbf{U}_0$, therefore its minimum can be found by computing its gradient and setting it to zero, which yields the optimal vector of future inputs:
+%
+    \begin{equation}
+        \begin{array}{rcl}
+        \textbf{U}^*_0(\textbf{x}(0))&=&-\textbf{H}^{-1}F'x(0)\\
+        &=&-(\mathcal{S}^{u'}\bar{\textbf{Q}}\mathcal{S}^{u}+\bar{\textbf{R}})^{-1}\mathcal{S}^{u'}\bar{\textbf{Q}}\mathcal{S}^{x}\textbf{x}(0).
+		\end{array}
+        \label{BASICMPC:equ:batch_optimal_solution}
+    \end{equation}
+    
+    With \ref{BASICMPC:equ:batch_optimal_solution} applied and calculated $\textbf{U}_0$ the cost is the optimal following:
+    
+    \begin{equation}
+        \begin{array}{rcl}
+        \textbf{J}^*_0(\textbf{x}(0))&=&-\textbf{x}(0)'\textbf{F}\textbf{H}^{-1}F'x(0)\\
+        &=&\textbf{x}(0)'\left[ \mathcal{S}^{x'}\bar{\textbf{Q}}\mathcal{S}^{x} - \mathcal{S}^{x'}\bar{\textbf{Q}}\mathcal{S}^{u}
+        (\mathcal{S}^{u'}\bar{\textbf{Q}}\mathcal{S}^{u}+\bar{\textbf{R}})^{-1}\mathcal{S}^{u'}\bar{\textbf{Q}}\mathcal{S}^{x}  \right]\textbf{x}(0).
+		\end{array}
+        \label{BASICMPC:equ:batch_optimal_cost}
+    \end{equation}
+    
+    Note that the optimal vector of future inputs $\textbf{U}^*_0(\textbf{x}(0))$ is a linear function of \ref{BASICMPC:equ:batch_optimal_solution} of the initial state $\textbf{x}(0)$ and the optimal cost $J^*_0(x(0))$ is a quadratic function \ref{BASICMPC:equ:batch_optimal_cost} of the initial state $\textbf{x}(0)$.
+    
+
 \subsubsection{Stability of MPC}\label{BASICCSR:sec:MPCStability}		
 
-	The problem of closed system stability with the predictive control has been extensively studied e.g. in \cite{mayne2000constrained}, \cite{grieder2005stabilizing}. In the first generation of model based controllers, stability was achieved more experimentally by choosing parameters based on previous studies and experiences. In 1988 Keerthi and Gilbert introduced the Lyapunov stability method for discrete systems \cite{keerthi1988optimal} , and in 1990 Mayne and Michalska for continuous systems \cite{mayne1990receding}. \\
-	Generrally, let $\textbf{U}\subset\mathbb{R}^n$ be an open set where $0\in \textbf{U}$. A function $V:\textbf{U}\longrightarrow\mathbb{R}$ is called positive (or negative) definite if $V(0)=0$ and $V(\boldsymbol{x})>0$ (or $V(\boldsymbol{x})<0$), when $\boldsymbol{x}\neq0$, and $\boldsymbol{x}\in U$. Also said function called positive (or negative) semidefinite if $V(0)=0$ and $V(\boldsymbol{x})\geq 0$ (or $V(\boldsymbol{x})\leq 0$), when $\boldsymbol{x}\neq 0$, and $\boldsymbol{x}\in \textbf{U}$. Clearly $V$ is a negative (semi-)definite function if $-V$ is a positive (semi-)definite function. So, in many applications the domain of $V$ is $\textbf{U}=\mathbb{R}^n$.\\
+	The problem of closed system stability with the predictive control has been extensively studied e.g. in \cite{mayne2000constrained}, \cite{grieder2005stabilizing}. In the first generation of model based controllers, stability was achieved more experimentally by choosing parameters based on previous studies and experiences. In 1988 the Lyapunov stability method for discrete systems were introduced \cite{keerthi1988optimal}, and in 1990 for continuous systems \cite{mayne1990receding} also for continuous systems. \\
+	Generally, let $\textbf{U}\subset\mathbb{R}^n$ be an open set where $0\in \textbf{U}$. A function $V:\textbf{U}\longrightarrow\mathbb{R}$ is called positive (or negative) definite if $V(0)=0$ and $V(\boldsymbol{x})>0$ (or $V(\boldsymbol{x})<0$), when $\boldsymbol{x}\neq0$, and $\boldsymbol{x}\in U$. Also said function called positive (or negative) semidefinite if $V(0)=0$ and $V(\boldsymbol{x})\geq 0$ (or $V(\boldsymbol{x})\leq 0$), when $\boldsymbol{x}\neq 0$, and $\boldsymbol{x}\in \textbf{U}$. Clearly $V$ is a negative (semi-)definite function if $-V$ is a positive (semi-)definite function. So, in many applications the domain of $V$ is $\textbf{U}=\mathbb{R}^n$.\\
 	Also it can be said (according to the Sylvester theorem \cite{horn2012matrix}) that the quadratic function:
 	
 	\begin{equation}
@@ -591,13 +695,12 @@ of unrestricted systems.
 	\item \textbf{MPC with permissible set restrictions on final states and terminal cost}: Combined method, and widely used because it encompasses the advantages of previous methods.
 \end{itemize}
 
-There are also stabilization methods such as infinite horizon MPCs or suboptimal MPC regulators, but we do not detail these methods because they are not used in the thesis.
+There are also stabilization methods such as infinite horizon MPCs or suboptimal MPC regulators, but we do not detail these methods because they are not mentioned in the thesis.
 
 \subsection{Explicit model predictive control (EMPC)}\label{BASICCSR:sec:EMPC}
 
-The problem \ref{BASICMPC:equ:receiding_horison_problem} can be transformed into a multi-parametric quadratic programming (mp-QP) problem. Such an approach involves solving the problem "offline", i.e. explicitly for the defined state-space with considering given constraints. By solving the optimization offline, critical regions are obtained, where each region corresponds to an optimal command that can be expressed as a function tuned by system states. Therefore the real-time regulation of the system is reduced to the identification of the critical regions corresponding to the measured state and the application of the optimal control input stored in a table. This method has revolutionized the use of the MPC method for systems with high dynamics, in particular for reduced order systems. The disadvantage of the method is that the number of critical regions increases exponentially with an increasing system order. The following shows the transformation of MPC into
-mp-QP.
-Let us assume an optimization problem described by \ref{BASICMPC:equ:receiding_horison_problem} The evolution of the subsequent states is calculated based on a mathematical of the system, according to the relation:
+The problem \ref{BASICMPC:equ:receiding_horison_problem} can be transformed into a multi-parametric quadratic programming (mp-QP) problem. Such an approach involves solving the problem "offline", i.e. explicitly for the defined state-space with considering given constraints. By solving the optimization, critical regions are obtained, where each region corresponds to an optimal command that can be expressed as a function tuned by system states. Therefore the real-time regulation of the system is reduced to the identification of the critical regions corresponding to the measured state and the application of the optimal control input stored in a table. This method has revolutionized the use of the MPC method for systems with high dynamics, in particular for reduced order systems. The disadvantage of the method is that the number of critical regions increases exponentially with an increasing system order. The following shows the transformation of MPC into mp-QP.
+Let us assume an optimization problem described by \ref{BASICMPC:equ:receiding_horison_problem}. The evolution of the subsequent states is calculated according to the relation:
 
 \begin{equation}
         \begin{array}{rcl}
@@ -660,7 +763,7 @@ Based on \ref{BASICMPC:equ:receiding_horison_problem}, and \ref{BASICMPC:equ:EMP
 \subsection{Storage of critical regions}\label{BASICCSR:sec:EMPCStorage}
 
 The issue of iterative model based controllers is that they require a lot of computational resource. The CPU load and required ROM consumption could increase exponentially the longer the more steps the control horizon is calculated. For this reason explicit model bssed predictive controllers (EMPC) were developed, where only the storage the critical regions and the signal coefficients for each critical region, so the matrices $H$, $K$, $M$, $G$ are required. The on-line part of control consists of searching the critical region for the current states and calculating the necessary inputs for them.
-One method of storing entire critical regions in order to calculate them, and that is in the order in which the MP-LP or MP-QP problem is resolved. It has the disadvantage, that the search time can be high, as such starting from the top of the list, a linear search is not effective. The efficient method is to store critical regions already in a binary tree \cite{jones2006logarithmic}, \cite{tondel2003evaluation}, \cite{tondel2003constrained}. The method of generating the binary tree is shown in (Fig.\ref{BASICMPC:fig:searchtree}.).\\
+One method of storing entire critical regions in order to calculate them, and that is in the order in which the MP-LP or MP-QP problem is resolved. It has the disadvantage, that the search time can be high, as such starting from the top of the list, a linear search is not effective. The efficient method is to store critical regions already in a binary tree \cite{jones2006logarithmic}, \cite{tondel2003evaluation}, \cite{tondel2003constrained}, \cite{kutasi2008vector}. The method of generating the binary tree is shown in (Fig.\ref{BASICMPC:fig:searchtree}.).\\
  The basic idea is to sort the critical regions depending on their adjacent sides. For example, in (Fig.\ref{BASICMPC:fig:searchtree}.a.) side $j_1$ divides the state space into two, at the right of it are the regions $X_{2,3,4,5}$ and to the left are the regions $X_{1,2,6}$. They make up the nodes adjacent to the base node $I_1$ of the binary tree. Next the another side from the space is chosen defined by each node $I_2$ respectively $I_3$, and the algorithm is continued until all the regions in the current node correspond to the same control signal, denoted by $F$ on the shaft in fig. (Fig.\ref{BASICMPC:fig:searchtree}.b.) Thus with this search pattern logarithmic search time can be achieved.
 
  \begin{figure}[!ht]

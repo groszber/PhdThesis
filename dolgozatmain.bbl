@@ -3759,6 +3759,42 @@
     \field{year}{2003}
   \endentry
 
+  \entry{kutasi2008vector}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=KN}{%
+         family={Kutasi},
+         familyi={K\bibinitperiod},
+         given={Nimrod},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kelemen},
+         familyi={K\bibinitperiod},
+         given={Andras},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=IM}{%
+         family={Imecs},
+         familyi={I\bibinitperiod},
+         given={Maria},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{KNKAIM2}
+    \strng{fullhash}{KNKAIM2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2008 IEEE International Conference on Computational
+  Cybernetics}
+    \field{pages}{21\bibrangedash 26}
+    \field{title}{Vector control of induction motor drives with model based
+  predictive current controller}
+    \field{year}{2008}
+  \endentry
+
   \entry{Neukirchner2015}{article}{}
     \name{author}{4}{}{%
       {{hash=NL}{%
@@ -4087,51 +4123,7 @@
     \field{year}{2018}
   \endentry
 
-  \entry{neukirchner2019linkedmodel}{inproceedings}{}
-    \name{author}{5}{}{%
-      {{hash=NL}{%
-         family={Neukirchner},
-         familyi={N\bibinitperiod},
-         given={L{\'a}szl{\'o}},
-         giveni={L\bibinitperiod},
-      }}%
-      {{hash=KN}{%
-         family={Kutasi},
-         familyi={K\bibinitperiod},
-         given={Nimr{\'o}d},
-         giveni={N\bibinitperiod},
-      }}%
-      {{hash=KA}{%
-         family={Kelemen},
-         familyi={K\bibinitperiod},
-         given={Andr{\'a}s},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=FA}{%
-         family={Fodor},
-         familyi={F\bibinitperiod},
-         given={Attila},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=MA}{%
-         family={Magyar},
-         familyi={M\bibinitperiod},
-         given={Attila},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{organization}{1}{%
-      {University of Pannonia}%
-    }
-    \keyw{sajat}
-    \strng{namehash}{NLKNKA+1}
-    \strng{fullhash}{NLKNKAFAMA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-  \field{booktitle}{http://virt.uni-pannon.hu/ver/index.php/en/projects/30-empc-csr}
-    \field{title}{Constrained Predictive Control of Three-Phase Buck Rectifiers
-  Simulation details}
-    \field{year}{2019}
+  \entry{neukirchner2019linkedmodel}{article}{}
   \endentry
 
   \entry{neukirchner2014quasi}{article}{}
