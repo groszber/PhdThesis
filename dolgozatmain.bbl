@@ -3352,103 +3352,36 @@
     \field{year}{2005}
   \endentry
 
-  \entry{aastrom2013computer}{book}{}
-    \name{author}{2}{}{%
-      {{hash=AKJ}{%
-         family={{\AA}str{\"o}m},
-         familyi={{\AA}\bibinitperiod},
-         given={Karl\bibnamedelima J},
-         giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=WB}{%
-         family={Wittenmark},
-         familyi={W\bibinitperiod},
-         given={Bj{\"o}rn},
-         giveni={B\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Courier Corporation}%
-    }
-    \strng{namehash}{AKJWB1}
-    \strng{fullhash}{AKJWB1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Computer-controlled systems: theory and design}
-    \field{year}{2013}
-  \endentry
-
-  \entry{bela2005iranyitasi}{book}{}
-    \name{author}{1}{}{%
-      {{hash=BL}{%
-         family={B{\'e}la},
-         familyi={B\bibinitperiod},
-         given={Lantos},
-         giveni={L\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Akad{\'e}miai K.}%
-    }
-    \strng{namehash}{BL1}
-    \strng{fullhash}{BL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Ir{\'a}ny{\'\i}t{\'a}si rendszerek elm{\'e}lete {\'e}s
-  tervez{\'e}se}
-    \field{year}{2005}
-  \endentry
-
-  \entry{levine2018control}{book}{}
-    \name{author}{1}{}{%
-      {{hash=LWS}{%
-         family={Levine},
-         familyi={L\bibinitperiod},
-         given={William\bibnamedelima S},
-         giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {CRC press}%
-    }
-    \strng{namehash}{LWS1}
-    \strng{fullhash}{LWS1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{The Control Handbook (three volume set)}
-    \field{year}{2018}
-  \endentry
-
-  \entry{goodwin2006constrained}{book}{}
+  \entry{borrelli2017predictive}{book}{}
     \name{author}{3}{}{%
-      {{hash=GG}{%
-         family={Goodwin},
-         familyi={G\bibinitperiod},
-         given={Graham},
-         giveni={G\bibinitperiod},
+      {{hash=BF}{%
+         family={Borrelli},
+         familyi={B\bibinitperiod},
+         given={Francesco},
+         giveni={F\bibinitperiod},
       }}%
-      {{hash=SMM}{%
-         family={Seron},
-         familyi={S\bibinitperiod},
-         given={Mar{\'\i}a\bibnamedelima M},
-         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      {{hash=BA}{%
+         family={Bemporad},
+         familyi={B\bibinitperiod},
+         given={Alberto},
+         giveni={A\bibinitperiod},
       }}%
-      {{hash=DDJA}{%
-         family={De\bibnamedelima Don{\'a}},
-         familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod},
-         given={Jos{\'e}\bibnamedelima A},
-         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      {{hash=MM}{%
+         family={Morari},
+         familyi={M\bibinitperiod},
+         given={Manfred},
+         giveni={M\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {Springer Science \& Business Media}%
+      {Cambridge University Press}%
     }
-    \strng{namehash}{GGSMMDDJA1}
-    \strng{fullhash}{GGSMMDDJA1}
+    \strng{namehash}{BFBAMM1}
+    \strng{fullhash}{BFBAMM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{title}{Constrained control and estimation: an optimisation approach}
-    \field{year}{2006}
+    \field{title}{Predictive control for linear and hybrid systems}
+    \field{year}{2017}
   \endentry
 
   \entry{mayne2000constrained}{article}{}
@@ -3623,38 +3556,6 @@
     \field{labeltitlesource}{title}
     \field{title}{Matrix analysis}
     \field{year}{2012}
-  \endentry
-
-  \entry{borrelli2017predictive}{book}{}
-    \name{author}{3}{}{%
-      {{hash=BF}{%
-         family={Borrelli},
-         familyi={B\bibinitperiod},
-         given={Francesco},
-         giveni={F\bibinitperiod},
-      }}%
-      {{hash=BA}{%
-         family={Bemporad},
-         familyi={B\bibinitperiod},
-         given={Alberto},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=MM}{%
-         family={Morari},
-         familyi={M\bibinitperiod},
-         given={Manfred},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Cambridge University Press}%
-    }
-    \strng{namehash}{BFBAMM1}
-    \strng{fullhash}{BFBAMM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Predictive control for linear and hybrid systems}
-    \field{year}{2017}
   \endentry
 
   \entry{jones2006logarithmic}{article}{}

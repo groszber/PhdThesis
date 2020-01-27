@@ -390,42 +390,30 @@
 \newlabel{BSIC:equ:APPS_Delta}{{2.17}{22}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Quadratic optimization and predictive control}{22}\protected@file@percent }
 \newlabel{BASICCSR:sec:MPC}{{2.3.2}{22}}
-\citation{aastrom2013computer}
-\abx@aux@cite{aastrom2013computer}
-\abx@aux@segm{0}{0}{aastrom2013computer}
-\citation{bela2005iranyitasi}
-\abx@aux@cite{bela2005iranyitasi}
-\abx@aux@segm{0}{0}{bela2005iranyitasi}
-\citation{levine2018control}
-\abx@aux@cite{levine2018control}
-\abx@aux@segm{0}{0}{levine2018control}
-\@writefile{toc}{\contentsline {paragraph}{Constained optimal control}{23}\protected@file@percent }
-\newlabel{BASICCSR:sec:OptimalControl}{{2.3.2}{23}}
+\@writefile{toc}{\contentsline {paragraph}{Linear quadratic optimal control}{23}\protected@file@percent }
+\newlabel{BASICCSR:sec:LQR}{{2.3.2}{23}}
 \newlabel{BASICMPC:equ:basic_LTI}{{2.18}{23}}
-\newlabel{BASICMPC:equ:restrict_LTI}{{2.19}{23}}
-\newlabel{BASICMPC:equ:cost_function}{{2.20}{23}}
-\newlabel{BASICMPC:equ:optim_problem}{{2.21}{23}}
-\newlabel{BASICMPC:equ:quadratic_case}{{2.22}{24}}
-\newlabel{BASICMPC:equ:control_law}{{2.23}{24}}
-\newlabel{BASICMPC:equ:control_coefficient}{{2.24}{24}}
-\newlabel{BASICMPC:equ:Riccati}{{2.25}{24}}
-\newlabel{BASICMPC:equ:Riccati_initial}{{2.26}{24}}
-\newlabel{BASICMPC:equ:control_law_infinite}{{2.27}{24}}
-\newlabel{BASICMPC:equ:control_coefficient_infinite}{{2.28}{24}}
-\citation{goodwin2006constrained}
-\abx@aux@cite{goodwin2006constrained}
-\abx@aux@segm{0}{0}{goodwin2006constrained}
-\newlabel{BASICMPC:equ:Riccati_infinite}{{2.29}{25}}
-\newlabel{BASICMPC:equ:receiding_horison_constraints}{{2.30}{25}}
-\newlabel{BASICMPC:equ:receiding_horison_problem}{{2.31}{25}}
-\newlabel{BASICMPC:equ:receiding_horison_Lyapunov}{{2.32}{25}}
-\newlabel{BASICMPC:equ:receiding_optimal_sequence}{{2.33}{26}}
-\newlabel{BASICMPC:equ:receiding_optimal_first}{{2.34}{26}}
-\@writefile{toc}{\contentsline {paragraph}{Batch approach}{26}\protected@file@percent }
-\newlabel{BASICMPC:equ:cost_function_Euclidian}{{2.35}{26}}
-\newlabel{BASICMPC:equ:batch_allstates}{{2.36}{26}}
-\newlabel{BASICMPC:equ:batch_allstates_compact}{{2.37}{26}}
-\newlabel{BASICMPC:equ:batch_object}{{2.38}{26}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian}{{2.19}{23}}
+\newlabel{BASICMPC:equ:basic_horizon model}{{2.20}{23}}
+\newlabel{BASICMPC:equ:optimal_control_problem_Euclidian}{{2.21}{23}}
+\newlabel{BASICMPC:equ:batch_allstates}{{2.22}{24}}
+\newlabel{BASICMPC:equ:batch_allstates_compact}{{2.23}{24}}
+\newlabel{BASICMPC:equ:batch_object}{{2.24}{24}}
+\newlabel{BASICMPC:equ:batch_simplfy}{{2.25}{24}}
+\newlabel{BASICMPC:equ:batch_optimal_solution}{{2.26}{24}}
+\newlabel{BASICMPC:equ:batch_optimal_cost}{{2.27}{24}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive}{{2.28}{25}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_onestep}{{2.29}{25}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_substituted}{{2.30}{25}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_optimum}{{2.31}{25}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_stepback}{{2.32}{25}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_P}{{2.33}{25}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_twostep}{{2.34}{25}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_optimum_twostep}{{2.35}{25}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_twostepback}{{2.36}{25}}
+\citation{borrelli2017predictive}
+\abx@aux@cite{borrelli2017predictive}
+\abx@aux@segm{0}{0}{borrelli2017predictive}
 \citation{mayne2000constrained}
 \abx@aux@cite{mayne2000constrained}
 \abx@aux@segm{0}{0}{mayne2000constrained}
@@ -441,25 +429,26 @@
 \citation{horn2012matrix}
 \abx@aux@cite{horn2012matrix}
 \abx@aux@segm{0}{0}{horn2012matrix}
-\newlabel{BASICMPC:equ:batch_simplfy}{{2.39}{27}}
-\newlabel{BASICMPC:equ:batch_optimal_solution}{{2.40}{27}}
-\newlabel{BASICMPC:equ:batch_optimal_cost}{{2.41}{27}}
-\@writefile{toc}{\contentsline {subsubsection}{Stability of MPC}{27}\protected@file@percent }
-\newlabel{BASICCSR:sec:MPCStability}{{2.3.2}{27}}
-\newlabel{BASICMPC:equ:LyapunovTheory_0}{{2.42}{27}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_twoP}{{2.37}{26}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_optimum_anystep}{{2.38}{26}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_twoP}{{2.39}{26}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_anystepback}{{2.40}{26}}
+\@writefile{toc}{\contentsline {subsubsection}{Stability of MPC}{26}\protected@file@percent }
+\newlabel{BASICCSR:sec:MPCStability}{{2.3.2}{26}}
+\newlabel{BASICMPC:equ:LyapunovTheory_0}{{2.41}{26}}
+\newlabel{BASICMPC:equ:LyapunovTheory_1}{{2.42}{26}}
 \citation{borrelli2017predictive}
 \abx@aux@cite{borrelli2017predictive}
 \abx@aux@segm{0}{0}{borrelli2017predictive}
-\newlabel{BASICMPC:equ:LyapunovTheory_1}{{2.43}{28}}
-\newlabel{BASICMPC:equ:LyapunovTheory_2}{{2.44}{28}}
-\newlabel{BASICMPC:equ:LyapunovTheory_3}{{2.45}{28}}
-\newlabel{BASICMPC:equ:stability_Lyapunov_1}{{2.46}{28}}
-\newlabel{BASICMPC:equ:stability_Lyapunov_2}{{2.47}{28}}
-\newlabel{BASICMPC:equ:stability_Lyapunov_3}{{2.48}{28}}
+\newlabel{BASICMPC:equ:LyapunovTheory_2}{{2.43}{27}}
+\newlabel{BASICMPC:equ:LyapunovTheory_3}{{2.44}{27}}
+\newlabel{BASICMPC:equ:stability_Lyapunov_1}{{2.45}{27}}
+\newlabel{BASICMPC:equ:stability_Lyapunov_2}{{2.46}{27}}
+\newlabel{BASICMPC:equ:stability_Lyapunov_3}{{2.47}{27}}
 \citation{herceg2009real}
 \abx@aux@cite{herceg2009real}
 \abx@aux@segm{0}{0}{herceg2009real}
-\newlabel{BASICMPC:equ:optim_stability}{{2.49}{29}}
+\newlabel{BASICMPC:equ:optim_stability}{{2.48}{28}}
 \citation{borrelli2017predictive}
 \abx@aux@cite{borrelli2017predictive}
 \abx@aux@segm{0}{0}{borrelli2017predictive}
@@ -478,19 +467,19 @@
 \citation{kutasi2008vector}
 \abx@aux@cite{kutasi2008vector}
 \abx@aux@segm{0}{0}{kutasi2008vector}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Explicit model predictive control (EMPC)}{30}\protected@file@percent }
-\newlabel{BASICCSR:sec:EMPC}{{2.3.3}{30}}
-\newlabel{BASICMPC:equ:EMPC_evolution}{{2.50}{30}}
-\newlabel{BASICMPC:equ:EMPC_transformed}{{2.51}{30}}
-\newlabel{BASICMPC:equ:EMPC_transformed_2}{{2.52}{30}}
-\newlabel{BASICMPC:equ:EMPC_trans_var}{{2.53}{30}}
-\newlabel{BASICMPC:equ:EMPC_trans_var}{{2.54}{30}}
-\newlabel{BASICMPC:equ:EMPC_transformed}{{2.55}{30}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}Storage of critical regions}{31}\protected@file@percent }
-\newlabel{BASICCSR:sec:EMPCStorage}{{2.3.4}{31}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Basic search three of an EMPC where, a) are the critical regions for a space of 2D parameters, b) the related binary tree.\relax }}{31}\protected@file@percent }
-\newlabel{BASICMPC:fig:searchtree}{{2.7}{31}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Notations}{31}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Explicit model predictive control (EMPC)}{29}\protected@file@percent }
+\newlabel{BASICCSR:sec:EMPC}{{2.3.3}{29}}
+\newlabel{BASICMPC:equ:EMPC_evolution}{{2.49}{29}}
+\newlabel{BASICMPC:equ:EMPC_transformed}{{2.50}{29}}
+\newlabel{BASICMPC:equ:EMPC_transformed_2}{{2.51}{29}}
+\newlabel{BASICMPC:equ:EMPC_trans_var}{{2.52}{29}}
+\newlabel{BASICMPC:equ:EMPC_trans_var}{{2.53}{29}}
+\newlabel{BASICMPC:equ:EMPC_transformed}{{2.54}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}Storage of critical regions}{30}\protected@file@percent }
+\newlabel{BASICCSR:sec:EMPCStorage}{{2.3.4}{30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Basic search three of an EMPC where, a) are the critical regions for a space of 2D parameters, b) the related binary tree.\relax }}{30}\protected@file@percent }
+\newlabel{BASICMPC:fig:searchtree}{{2.7}{30}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Notations}{30}\protected@file@percent }
 \gdef \LT@i {\LT@entry 
     {1}{145.1751pt}\LT@entry 
     {1}{253.1635pt}}
@@ -506,45 +495,45 @@
 \citation{neukirchner2015examination}
 \abx@aux@cite{neukirchner2015examination}
 \abx@aux@segm{0}{0}{neukirchner2015examination}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Voltage unbalance compensation}{34}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Voltage unbalance compensation}{33}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{VUB:sec:Main}{{3}{34}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Network structure}{34}\protected@file@percent }
-\newlabel{VUB:sec:Network}{{3.1}{34}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces The simplified structure of a three phase four wire low voltage network. The transformer station acts as transition from the medium voltage power grid to the low voltage network. The several regular households are representing the main loads of the network. The transformer and the loads are connected with power line sections infected by inductive and resistive disturbances and capacitive couplings. Domestic powerplants can connect to any connection point within the low voltage network, via an appropriate inverter - either to the three phase sections using a three phase inverter or to a single phase using a single phase inverter.\relax }}{35}\protected@file@percent }
-\newlabel{fig:network}{{3.1}{35}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Proposed geometrical indicator}{35}\protected@file@percent }
-\newlabel{VUB:sec:Geom}{{3.2}{35}}
-\newlabel{equ:geom}{{3.1}{36}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces The triangles spanned by the ideal and the actual voltage phasors. The extent of voltage deviation on the network can be measured by the sum of areas where the two triangles are not overlapping.\relax }}{36}\protected@file@percent }
-\newlabel{fig:threephase}{{3.2}{36}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}The method's novelty compared to VUF}{36}\protected@file@percent }
-\newlabel{VUB:sec:AdditionalContent}{{3.3}{36}}
+\newlabel{VUB:sec:Main}{{3}{33}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Network structure}{33}\protected@file@percent }
+\newlabel{VUB:sec:Network}{{3.1}{33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces The simplified structure of a three phase four wire low voltage network. The transformer station acts as transition from the medium voltage power grid to the low voltage network. The several regular households are representing the main loads of the network. The transformer and the loads are connected with power line sections infected by inductive and resistive disturbances and capacitive couplings. Domestic powerplants can connect to any connection point within the low voltage network, via an appropriate inverter - either to the three phase sections using a three phase inverter or to a single phase using a single phase inverter.\relax }}{34}\protected@file@percent }
+\newlabel{fig:network}{{3.1}{34}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Proposed geometrical indicator}{34}\protected@file@percent }
+\newlabel{VUB:sec:Geom}{{3.2}{34}}
+\newlabel{equ:geom}{{3.1}{35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces The triangles spanned by the ideal and the actual voltage phasors. The extent of voltage deviation on the network can be measured by the sum of areas where the two triangles are not overlapping.\relax }}{35}\protected@file@percent }
+\newlabel{fig:threephase}{{3.2}{35}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}The method's novelty compared to VUF}{35}\protected@file@percent }
+\newlabel{VUB:sec:AdditionalContent}{{3.3}{35}}
 \citation{arn1997under-voltage}
 \abx@aux@cite{arn1997under-voltage}
 \abx@aux@segm{0}{0}{arn1997under-voltage}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Correlation between the geometrical voltage unbalance indicator $G$ and the regulated voltage unbalance indicator $VUF$ using 1000 samples. In every iteration each three phase voltage vector's amplitude and phase values changed randomly, according to uniform distributions with $\pm 20$ V and $\pm \genfrac  {}{}{}{}{1}{3}\pi \cdot 10^{-2}$ rad variance. It can be seen, that the geometric norm contains more information than the classical one. The four asymmetry cases of Figure 3.5\hbox {} are denoted by black symbols on the picture. It is apparent, that in case (c), and (d) the G norm holds additional information than the $VUF$.\relax }}{37}\protected@file@percent }
-\newlabel{fig:correlation}{{3.3}{37}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces  Correlation between the regulated unbalance indicator and the fraction of geometrical and regulated indicator. It can be seen that there is a functional connection between the two values.\relax }}{38}\protected@file@percent }
-\newlabel{fig:side_correlation}{{3.4}{38}}
-\newlabel{equ:mutual}{{3.2}{38}}
-\newlabel{equ:drop}{{3.3}{38}}
-\newlabel{equ:factor}{{3.4}{38}}
-\newlabel{fig:cases_A}{{3.5a}{39}}
-\newlabel{sub@fig:cases_A}{{a}{39}}
-\newlabel{fig:cases_B}{{3.5b}{39}}
-\newlabel{sub@fig:cases_B}{{b}{39}}
-\newlabel{fig:cases_C}{{3.5c}{39}}
-\newlabel{sub@fig:cases_C}{{c}{39}}
-\newlabel{fig:cases_D}{{3.5d}{39}}
-\newlabel{sub@fig:cases_D}{{d}{39}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Four distinct cases of voltage triangles examining correlation between the regular $VUF$ and geometrical $G$ method.\relax }}{39}\protected@file@percent }
-\newlabel{fig:cases}{{3.5}{39}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Unbalance compensation}{40}\protected@file@percent }
-\newlabel{VUB:sec:Compensation}{{3.4}{40}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Problem statement}{40}\protected@file@percent }
-\newlabel{VUB:sec:Statement}{{3.4.1}{40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Correlation between the geometrical voltage unbalance indicator $G$ and the regulated voltage unbalance indicator $VUF$ using 1000 samples. In every iteration each three phase voltage vector's amplitude and phase values changed randomly, according to uniform distributions with $\pm 20$ V and $\pm \genfrac  {}{}{}{}{1}{3}\pi \cdot 10^{-2}$ rad variance. It can be seen, that the geometric norm contains more information than the classical one. The four asymmetry cases of Figure 3.5\hbox {} are denoted by black symbols on the picture. It is apparent, that in case (c), and (d) the G norm holds additional information than the $VUF$.\relax }}{36}\protected@file@percent }
+\newlabel{fig:correlation}{{3.3}{36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces  Correlation between the regulated unbalance indicator and the fraction of geometrical and regulated indicator. It can be seen that there is a functional connection between the two values.\relax }}{37}\protected@file@percent }
+\newlabel{fig:side_correlation}{{3.4}{37}}
+\newlabel{equ:mutual}{{3.2}{37}}
+\newlabel{equ:drop}{{3.3}{37}}
+\newlabel{equ:factor}{{3.4}{37}}
+\newlabel{fig:cases_A}{{3.5a}{38}}
+\newlabel{sub@fig:cases_A}{{a}{38}}
+\newlabel{fig:cases_B}{{3.5b}{38}}
+\newlabel{sub@fig:cases_B}{{b}{38}}
+\newlabel{fig:cases_C}{{3.5c}{38}}
+\newlabel{sub@fig:cases_C}{{c}{38}}
+\newlabel{fig:cases_D}{{3.5d}{38}}
+\newlabel{sub@fig:cases_D}{{d}{38}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Four distinct cases of voltage triangles examining correlation between the regular $VUF$ and geometrical $G$ method.\relax }}{38}\protected@file@percent }
+\newlabel{fig:cases}{{3.5}{38}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Unbalance compensation}{39}\protected@file@percent }
+\newlabel{VUB:sec:Compensation}{{3.4}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Problem statement}{39}\protected@file@percent }
+\newlabel{VUB:sec:Statement}{{3.4.1}{39}}
 \citation{gorbe2012reduction}
 \abx@aux@cite{gorbe2012reduction}
 \abx@aux@segm{0}{0}{gorbe2012reduction}
@@ -560,40 +549,40 @@
 \citation{gorbe2012reduction}
 \abx@aux@cite{gorbe2012reduction}
 \abx@aux@segm{0}{0}{gorbe2012reduction}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Control problem}{41}\protected@file@percent }
-\newlabel{VUB:sec:Control}{{3.4.2}{41}}
-\@writefile{toc}{\contentsline {subsubsection}{Asymmetrical inverter structure}{41}\protected@file@percent }
-\newlabel{VUB:sec:Inverter}{{3.4.2}{41}}
-\newlabel{BASICCSR:sec:DCDC}{{3.4.2}{42}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces The asymmetrical inverter design, which applies three single phase full bridge IGBT current injector to create the injected asymmetrical current shapes for voltage unbalance compensation. \relax }}{43}\protected@file@percent }
-\newlabel{fig:inv}{{3.6}{43}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Control problem}{40}\protected@file@percent }
+\newlabel{VUB:sec:Control}{{3.4.2}{40}}
+\@writefile{toc}{\contentsline {subsubsection}{Asymmetrical inverter structure}{40}\protected@file@percent }
+\newlabel{VUB:sec:Inverter}{{3.4.2}{40}}
+\newlabel{BASICCSR:sec:DCDC}{{3.4.2}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces The asymmetrical inverter design, which applies three single phase full bridge IGBT current injector to create the injected asymmetrical current shapes for voltage unbalance compensation. \relax }}{42}\protected@file@percent }
+\newlabel{fig:inv}{{3.6}{42}}
 \citation{hough2001asynchronous}
 \abx@aux@cite{hough2001asynchronous}
 \abx@aux@segm{0}{0}{hough2001asynchronous}
-\@writefile{toc}{\contentsline {subsubsection}{Measurements from a real unbalanced network}{44}\protected@file@percent }
-\newlabel{VUB:sec:Measurement}{{3.4.2}{44}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Optimization based control algorithm}{44}\protected@file@percent }
-\newlabel{VUB:sec:Optimization}{{3.4.3}{44}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces The optimization algorithm implemented for current control. A one dimensional linear optimization step is being solved in each dimension of the six dimensional parameter space, iteratively.\relax }}{44}\protected@file@percent }
-\newlabel{fig:APPS}{{3.7}{44}}
+\@writefile{toc}{\contentsline {subsubsection}{Measurements from a real unbalanced network}{43}\protected@file@percent }
+\newlabel{VUB:sec:Measurement}{{3.4.2}{43}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Optimization based control algorithm}{43}\protected@file@percent }
+\newlabel{VUB:sec:Optimization}{{3.4.3}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces The optimization algorithm implemented for current control. A one dimensional linear optimization step is being solved in each dimension of the six dimensional parameter space, iteratively.\relax }}{43}\protected@file@percent }
+\newlabel{fig:APPS}{{3.7}{43}}
 \citation{segui2007approach}
 \abx@aux@cite{segui2007approach}
 \abx@aux@segm{0}{0}{segui2007approach}
 \citation{Neukirchner2015}
 \abx@aux@cite{Neukirchner2015}
 \abx@aux@segm{0}{0}{Neukirchner2015}
-\newlabel{eqn:contstruct1}{{3.5}{45}}
-\newlabel{eqn:contstruct2}{{3.6}{45}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Discussion}{46}\protected@file@percent }
-\newlabel{VUB:sec:Discussion}{{3.5}{46}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Dynamical simulation based experiments}{46}\protected@file@percent }
-\newlabel{VUB:sec:Results}{{3.5.1}{46}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Performance analysis}{46}\protected@file@percent }
-\newlabel{VUB:sec:Performance}{{3.5.2}{46}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Unbalance reduction control system performance with half charged battery and photovoltaic power source available. The underlying unbalance norm is the geometrical one ($G$) in this experiment. After starting the controller at $t=0.1s$ the unbalance measure $G$ of the network significantly decrease.\relax }}{47}\protected@file@percent }
-\newlabel{fig:compare_asym_PV}{{3.8}{47}}
-\@writefile{toc}{\contentsline {subsubsection}{Robustness analysis}{47}\protected@file@percent }
-\newlabel{VUB:sec:Robustness}{{3.5.2}{47}}
+\newlabel{eqn:contstruct1}{{3.5}{44}}
+\newlabel{eqn:contstruct2}{{3.6}{44}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Discussion}{45}\protected@file@percent }
+\newlabel{VUB:sec:Discussion}{{3.5}{45}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Dynamical simulation based experiments}{45}\protected@file@percent }
+\newlabel{VUB:sec:Results}{{3.5.1}{45}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Performance analysis}{45}\protected@file@percent }
+\newlabel{VUB:sec:Performance}{{3.5.2}{45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Unbalance reduction control system performance with half charged battery and photovoltaic power source available. The underlying unbalance norm is the geometrical one ($G$) in this experiment. After starting the controller at $t=0.1s$ the unbalance measure $G$ of the network significantly decrease.\relax }}{46}\protected@file@percent }
+\newlabel{fig:compare_asym_PV}{{3.8}{46}}
+\@writefile{toc}{\contentsline {subsubsection}{Robustness analysis}{46}\protected@file@percent }
+\newlabel{VUB:sec:Robustness}{{3.5.2}{46}}
 \citation{Neukirchner2015}
 \abx@aux@cite{Neukirchner2015}
 \abx@aux@segm{0}{0}{Neukirchner2015}
@@ -606,14 +595,14 @@
 \citation{MVM2018}
 \abx@aux@cite{MVM2018}
 \abx@aux@segm{0}{0}{MVM2018}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Unbalance reduction control system performance without battery and renewable source (zero energy balance operation). The performance reduction is clearly observable compared to the case when external power source is available (Figure 3.8\hbox {}), but as result the voltage unbalance indicator $G$ reduced by the average value of 14.78\%.\relax }}{48}\protected@file@percent }
-\newlabel{fig:compare_asym}{{3.9}{48}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Environmental effect}{48}\protected@file@percent }
-\newlabel{VUB:sec:Environment}{{3.5.3}{48}}
-\@writefile{toc}{\contentsline {subsubsection}{Power loss reduction on the network}{48}\protected@file@percent }
-\newlabel{VUB:sec:Powerloss}{{3.5.3}{48}}
-\@writefile{toc}{\contentsline {subsubsection}{CO2 footprint}{48}\protected@file@percent }
-\newlabel{VUB:sec:CO2}{{3.5.3}{48}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Unbalance reduction control system performance without battery and renewable source (zero energy balance operation). The performance reduction is clearly observable compared to the case when external power source is available (Figure 3.8\hbox {}), but as result the voltage unbalance indicator $G$ reduced by the average value of 14.78\%.\relax }}{47}\protected@file@percent }
+\newlabel{fig:compare_asym}{{3.9}{47}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Environmental effect}{47}\protected@file@percent }
+\newlabel{VUB:sec:Environment}{{3.5.3}{47}}
+\@writefile{toc}{\contentsline {subsubsection}{Power loss reduction on the network}{47}\protected@file@percent }
+\newlabel{VUB:sec:Powerloss}{{3.5.3}{47}}
+\@writefile{toc}{\contentsline {subsubsection}{CO2 footprint}{47}\protected@file@percent }
+\newlabel{VUB:sec:CO2}{{3.5.3}{47}}
 \citation{MVM2013}
 \abx@aux@cite{MVM2013}
 \abx@aux@segm{0}{0}{MVM2013}
@@ -623,95 +612,95 @@
 \citation{MVM2018}
 \abx@aux@cite{MVM2018}
 \abx@aux@segm{0}{0}{MVM2018}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Robustness analysis with respect to step type changes in the network load (and voltage unbalance). The unbalance reduction controller successfully compensates the changes in the network voltage unbalance norm ($G$) value.\relax }}{49}\protected@file@percent }
-\newlabel{fig:robustness}{{3.10}{49}}
-\newlabel{eqn:co_emission}{{3.7}{49}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Conclusion}{49}\protected@file@percent }
-\newlabel{VUB:sec:Conclusion}{{3.6}{49}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Compensation control's loss reduction during zero energy balance operation on the modeled network, where $P_{loss}$ indicates the effective power losses and $P^{comp}_{loss}$ effective power losses during control of the network. As result the network losses reduced by mean $6.5\%$.\relax }}{50}\protected@file@percent }
-\newlabel{fig:compare_power}{{3.11}{50}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Intermediate puffer capacitance's voltage within boundaries ($600\pm 10$\tmspace  +\thinmuskip {.1667em}V), during zero energy balance operation mode of the voltage unbalance compensation controller. $U_{\textnormal  {im}}$ indicates intermediate the capacitance's voltage.\relax }}{50}\protected@file@percent }
-\newlabel{fig:u_inter}{{3.12}{50}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Robustness analysis with respect to step type changes in the network load (and voltage unbalance). The unbalance reduction controller successfully compensates the changes in the network voltage unbalance norm ($G$) value.\relax }}{48}\protected@file@percent }
+\newlabel{fig:robustness}{{3.10}{48}}
+\newlabel{eqn:co_emission}{{3.7}{48}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Conclusion}{48}\protected@file@percent }
+\newlabel{VUB:sec:Conclusion}{{3.6}{48}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Compensation control's loss reduction during zero energy balance operation on the modeled network, where $P_{loss}$ indicates the effective power losses and $P^{comp}_{loss}$ effective power losses during control of the network. As result the network losses reduced by mean $6.5\%$.\relax }}{49}\protected@file@percent }
+\newlabel{fig:compare_power}{{3.11}{49}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Intermediate puffer capacitance's voltage within boundaries ($600\pm 10$\tmspace  +\thinmuskip {.1667em}V), during zero energy balance operation mode of the voltage unbalance compensation controller. $U_{\textnormal  {im}}$ indicates intermediate the capacitance's voltage.\relax }}{49}\protected@file@percent }
+\newlabel{fig:u_inter}{{3.12}{49}}
 \gdef \LT@ii {\LT@entry 
     {1}{38.27098pt}\LT@entry 
     {1}{360.06761pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.7}Notations}{51}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Predictive control of a CSR}{52}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Notations}{50}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Predictive control of a CSR}{51}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{EMPC:sec:main}{{4}{52}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Modeling}{52}\protected@file@percent }
-\newlabel{EMPC:sec:Modeling}{{4.1}{52}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Mathematical Modeling of the CSR}{52}\protected@file@percent }
-\newlabel{EMPC:sec:ModelofCSR}{{4.1.1}{52}}
-\newlabel{EMPC:equ:abc_eqn}{{4.1}{52}}
+\newlabel{EMPC:sec:main}{{4}{51}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Modeling}{51}\protected@file@percent }
+\newlabel{EMPC:sec:Modeling}{{4.1}{51}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Mathematical Modeling of the CSR}{51}\protected@file@percent }
+\newlabel{EMPC:sec:ModelofCSR}{{4.1.1}{51}}
+\newlabel{EMPC:equ:abc_eqn}{{4.1}{51}}
 \citation{ahmed2014model}
 \abx@aux@cite{ahmed2014model}
 \abx@aux@segm{0}{0}{ahmed2014model}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Circuit diagram of the three-phase buck-type rectifier with insulated gate bipolar transistors (IGBTs).\relax }}{53}\protected@file@percent }
-\newlabel{EMPC:fig:network}{{4.1}{53}}
-\newlabel{EMPC:equ:delta_set}{{4.2}{53}}
-\newlabel{EMPC:equ:abc_alfabeta}{{4.3}{53}}
-\newlabel{EMPC:equ:abc_dq}{{4.4}{53}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Model simplification}{54}\protected@file@percent }
-\newlabel{EMPC:sec:Simplification}{{4.1.2}{54}}
-\newlabel{EMPC:equ:mtx_AC}{{4.5}{54}}
-\newlabel{EMPC:equ:mtx_DC}{{4.6}{54}}
-\newlabel{EMPC:equ:mtx_ctrl}{{4.7}{54}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces The applied parameters in model and controller design\relax }}{55}\protected@file@percent }
-\newlabel{EMPC:tbl:params}{{4.1}{55}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Control structure}{55}\protected@file@percent }
-\newlabel{EMPC:sec:ControlStruct}{{4.1.3}{55}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Block diagram of the control structure.\relax }}{55}\protected@file@percent }
-\newlabel{EMPC:fig:ControlStruct}{{4.2}{55}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Circuit diagram of the three-phase buck-type rectifier with insulated gate bipolar transistors (IGBTs).\relax }}{52}\protected@file@percent }
+\newlabel{EMPC:fig:network}{{4.1}{52}}
+\newlabel{EMPC:equ:delta_set}{{4.2}{52}}
+\newlabel{EMPC:equ:abc_alfabeta}{{4.3}{52}}
+\newlabel{EMPC:equ:abc_dq}{{4.4}{52}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Model simplification}{53}\protected@file@percent }
+\newlabel{EMPC:sec:Simplification}{{4.1.2}{53}}
+\newlabel{EMPC:equ:mtx_AC}{{4.5}{53}}
+\newlabel{EMPC:equ:mtx_DC}{{4.6}{53}}
+\newlabel{EMPC:equ:mtx_ctrl}{{4.7}{53}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces The applied parameters in model and controller design\relax }}{54}\protected@file@percent }
+\newlabel{EMPC:tbl:params}{{4.1}{54}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Control structure}{54}\protected@file@percent }
+\newlabel{EMPC:sec:ControlStruct}{{4.1.3}{54}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Block diagram of the control structure.\relax }}{54}\protected@file@percent }
+\newlabel{EMPC:fig:ControlStruct}{{4.2}{54}}
 \citation{vajda2017limiting}
 \abx@aux@cite{vajda2017limiting}
 \abx@aux@segm{0}{0}{vajda2017limiting}
-\newlabel{EMPC:equ:sync_ctrl}{{4.8}{56}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Control}{56}\protected@file@percent }
-\newlabel{EMPC:sec:Control}{{4.2}{56}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}DC-side explicit model predictive control}{56}\protected@file@percent }
-\newlabel{EMPC:sec:DCside}{{4.2.1}{56}}
+\newlabel{EMPC:equ:sync_ctrl}{{4.8}{55}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Control}{55}\protected@file@percent }
+\newlabel{EMPC:sec:Control}{{4.2}{55}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}DC-side explicit model predictive control}{55}\protected@file@percent }
+\newlabel{EMPC:sec:DCside}{{4.2.1}{55}}
 \citation{rivera2013predictive}
 \abx@aux@cite{rivera2013predictive}
 \abx@aux@segm{0}{0}{rivera2013predictive}
 \citation{rivera2013predictive}
 \abx@aux@cite{rivera2013predictive}
 \abx@aux@segm{0}{0}{rivera2013predictive}
-\newlabel{EMPC:equ:DiscreteStateSpace}{{4.9}{57}}
-\newlabel{EMPC:equ:contraint_desc}{{4.10}{57}}
-\newlabel{EMPC:equ:optim_problem}{{4.11}{57}}
-\newlabel{EMPC:equ:optim_problem_constr}{{4.12}{57}}
-\newlabel{EMPC:equ:quadratic_program}{{4.13}{57}}
-\newlabel{EMPC:equ:quadratic_inequality}{{4.14}{57}}
-\newlabel{EMPC:equ:quadratic_regions}{{4.15}{57}}
-\newlabel{EMPC:equ:quadratic_critical}{{4.16}{58}}
-\newlabel{EMPC:equ:quadratic_set}{{4.17}{58}}
-\newlabel{EMPC:equ:quadratic_mtx_set}{{4.18}{58}}
-\newlabel{EMPC:equ:numeric_constraints}{{4.19}{58}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces State space partitioning.\relax }}{58}\protected@file@percent }
-\newlabel{EMPC:fig:regions}{{4.3}{58}}
+\newlabel{EMPC:equ:DiscreteStateSpace}{{4.9}{56}}
+\newlabel{EMPC:equ:contraint_desc}{{4.10}{56}}
+\newlabel{EMPC:equ:optim_problem}{{4.11}{56}}
+\newlabel{EMPC:equ:optim_problem_constr}{{4.12}{56}}
+\newlabel{EMPC:equ:quadratic_program}{{4.13}{56}}
+\newlabel{EMPC:equ:quadratic_inequality}{{4.14}{56}}
+\newlabel{EMPC:equ:quadratic_regions}{{4.15}{56}}
+\newlabel{EMPC:equ:quadratic_critical}{{4.16}{57}}
+\newlabel{EMPC:equ:quadratic_set}{{4.17}{57}}
+\newlabel{EMPC:equ:quadratic_mtx_set}{{4.18}{57}}
+\newlabel{EMPC:equ:numeric_constraints}{{4.19}{57}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces State space partitioning.\relax }}{57}\protected@file@percent }
+\newlabel{EMPC:fig:regions}{{4.3}{57}}
 \citation{regaya2014new}
 \abx@aux@cite{regaya2014new}
 \abx@aux@segm{0}{0}{regaya2014new}
-\newlabel{EMPC:equ:direct_controlval}{{4.20}{59}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces The control structure of the CSR, with MPC controller on the DC side.\relax }}{59}\protected@file@percent }
-\newlabel{EMPC:fig:MPCStructure}{{4.4}{59}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Active AC-side damping}{59}\protected@file@percent }
-\newlabel{EMPC:sec:ACdamping}{{4.2.2}{59}}
-\newlabel{EMPC:equ:AC_HPF}{{4.21}{59}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Space vector modulation strategy}{60}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Modulation}{60}\protected@file@percent }
-\newlabel{EMPC:sec:Modulation}{{4.4}{60}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{60}\protected@file@percent }
-\newlabel{EMPC:fig:VectorPhasor}{{4.5}{60}}
-\newlabel{EMPC:equ:neighbor}{{4.22}{60}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{61}\protected@file@percent }
-\newlabel{EMPC:tbl:fundamental_vect}{{4.2}{61}}
-\newlabel{EMPC:equ:i_ref}{{4.23}{61}}
-\newlabel{EMPC:equ:dwelltime}{{4.24}{61}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Synthesis of $\overrightarrow {i_{ref}}$ by $\overrightarrow {i_{1}}$, $\overrightarrow {i_{2}}$, and $\overrightarrow {i_{0}}$\relax }}{61}\protected@file@percent }
-\newlabel{EMPC:fig:OnePhasor}{{4.6}{61}}
+\newlabel{EMPC:equ:direct_controlval}{{4.20}{58}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces The control structure of the CSR, with MPC controller on the DC side.\relax }}{58}\protected@file@percent }
+\newlabel{EMPC:fig:MPCStructure}{{4.4}{58}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Active AC-side damping}{58}\protected@file@percent }
+\newlabel{EMPC:sec:ACdamping}{{4.2.2}{58}}
+\newlabel{EMPC:equ:AC_HPF}{{4.21}{58}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Space vector modulation strategy}{59}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Modulation}{59}\protected@file@percent }
+\newlabel{EMPC:sec:Modulation}{{4.4}{59}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{59}\protected@file@percent }
+\newlabel{EMPC:fig:VectorPhasor}{{4.5}{59}}
+\newlabel{EMPC:equ:neighbor}{{4.22}{59}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{60}\protected@file@percent }
+\newlabel{EMPC:tbl:fundamental_vect}{{4.2}{60}}
+\newlabel{EMPC:equ:i_ref}{{4.23}{60}}
+\newlabel{EMPC:equ:dwelltime}{{4.24}{60}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Synthesis of $\overrightarrow {i_{ref}}$ by $\overrightarrow {i_{1}}$, $\overrightarrow {i_{2}}$, and $\overrightarrow {i_{0}}$\relax }}{60}\protected@file@percent }
+\newlabel{EMPC:fig:OnePhasor}{{4.6}{60}}
 \citation{moussaoui2005open}
 \abx@aux@cite{moussaoui2005open}
 \abx@aux@segm{0}{0}{moussaoui2005open}
@@ -721,58 +710,58 @@
 \citation{kutasi2010constrained}
 \abx@aux@cite{kutasi2010constrained}
 \abx@aux@segm{0}{0}{kutasi2010constrained}
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Representation of switching sequences for SECTOR I.\relax }}{62}\protected@file@percent }
-\newlabel{EMPC:tbl:sequence}{{4.3}{62}}
-\newlabel{EMPC:equ:angle}{{4.25}{62}}
-\newlabel{EMPC:equ:refconstraint}{{4.26}{62}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Discussion}{62}\protected@file@percent }
-\newlabel{EMPC:sec:Discussion}{{4.5}{62}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Computational effort}{62}\protected@file@percent }
-\newlabel{EMPC:sec:CompEffort}{{4.5.1}{62}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Binary search tree of the controller for a horizon of N = 4. The leaf nodes are depicted with filled squares. The depth of the tree is 5.\relax }}{63}\protected@file@percent }
-\newlabel{EMPC:fig:SearchTree}{{4.7}{63}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Data organization in the data memory of a single core DSP and the evaluation of a 2-dimensional inequality\relax }}{63}\protected@file@percent }
-\newlabel{EMPC:fig:Memory}{{4.8}{63}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Horizon performance}{63}\protected@file@percent }
-\newlabel{EMPC:sec:Performance}{{4.5.2}{63}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Representation of switching sequences for SECTOR I.\relax }}{61}\protected@file@percent }
+\newlabel{EMPC:tbl:sequence}{{4.3}{61}}
+\newlabel{EMPC:equ:angle}{{4.25}{61}}
+\newlabel{EMPC:equ:refconstraint}{{4.26}{61}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Discussion}{61}\protected@file@percent }
+\newlabel{EMPC:sec:Discussion}{{4.5}{61}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Computational effort}{61}\protected@file@percent }
+\newlabel{EMPC:sec:CompEffort}{{4.5.1}{61}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Binary search tree of the controller for a horizon of N = 4. The leaf nodes are depicted with filled squares. The depth of the tree is 5.\relax }}{62}\protected@file@percent }
+\newlabel{EMPC:fig:SearchTree}{{4.7}{62}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Data organization in the data memory of a single core DSP and the evaluation of a 2-dimensional inequality\relax }}{62}\protected@file@percent }
+\newlabel{EMPC:fig:Memory}{{4.8}{62}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Horizon performance}{62}\protected@file@percent }
+\newlabel{EMPC:sec:Performance}{{4.5.2}{62}}
 \citation{neukirchner2019linkedmodel}
 \abx@aux@cite{neukirchner2019linkedmodel}
 \abx@aux@segm{0}{0}{neukirchner2019linkedmodel}
 \citation{godlewska2015predictive}
 \abx@aux@cite{godlewska2015predictive}
 \abx@aux@segm{0}{0}{godlewska2015predictive}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Step response of the system as a function of the horizon length (N).\relax }}{64}\protected@file@percent }
-\newlabel{EMPC:fig:MultiHorizon}{{4.9}{64}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Simulation results}{64}\protected@file@percent }
-\newlabel{EMPC:sec:Results}{{4.5.3}{64}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Comparison with a state feedback control}{64}\protected@file@percent }
-\newlabel{EMPC:sec:Comparison}{{4.5.4}{64}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Three-phase voltage and current intake of the CSR with EMPC\relax }}{65}\protected@file@percent }
-\newlabel{EMPC:fig:Result_3fEMPC}{{4.10}{65}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Resulting current and voltage trajectories of the CSR with (EMPC).\relax }}{65}\protected@file@percent }
-\newlabel{EMPC:fig:Result_PerformanceEMPC}{{4.11}{65}}
-\newlabel{EMPC:equ:tuning}{{4.27}{65}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Simple DC side state feedback control structure.\relax }}{66}\protected@file@percent }
-\newlabel{EMPC:fig:SFeedbackDC}{{4.12}{66}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces Resulting current and voltage trajectories of the CSR with explicit model predictive control (MPC) compared state feedback control (LIN).\relax }}{66}\protected@file@percent }
-\newlabel{EMPC:fig:Result_EMPCfinal}{{4.13}{66}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Conclusion}{66}\protected@file@percent }
-\newlabel{EMPC:sec:Conclusion}{{4.6}{66}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Step response of the system as a function of the horizon length (N).\relax }}{63}\protected@file@percent }
+\newlabel{EMPC:fig:MultiHorizon}{{4.9}{63}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Simulation results}{63}\protected@file@percent }
+\newlabel{EMPC:sec:Results}{{4.5.3}{63}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Comparison with a state feedback control}{63}\protected@file@percent }
+\newlabel{EMPC:sec:Comparison}{{4.5.4}{63}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Three-phase voltage and current intake of the CSR with EMPC\relax }}{64}\protected@file@percent }
+\newlabel{EMPC:fig:Result_3fEMPC}{{4.10}{64}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Resulting current and voltage trajectories of the CSR with (EMPC).\relax }}{64}\protected@file@percent }
+\newlabel{EMPC:fig:Result_PerformanceEMPC}{{4.11}{64}}
+\newlabel{EMPC:equ:tuning}{{4.27}{64}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Simple DC side state feedback control structure.\relax }}{65}\protected@file@percent }
+\newlabel{EMPC:fig:SFeedbackDC}{{4.12}{65}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces Resulting current and voltage trajectories of the CSR with explicit model predictive control (MPC) compared state feedback control (LIN).\relax }}{65}\protected@file@percent }
+\newlabel{EMPC:fig:Result_EMPCfinal}{{4.13}{65}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Conclusion}{65}\protected@file@percent }
+\newlabel{EMPC:sec:Conclusion}{{4.6}{65}}
 \gdef \LT@iii {\LT@entry 
     {1}{53.28783pt}\LT@entry 
     {1}{345.05077pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Notations}{67}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Thesis and Summary}{69}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Notations}{66}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Thesis and Summary}{68}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Summary}{69}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Summary}{68}\protected@file@percent }
 \citation{neukirchner2015examination}
 \abx@aux@cite{neukirchner2015examination}
 \abx@aux@segm{0}{0}{neukirchner2015examination}
 \citation{Neukirchner2015}
 \abx@aux@cite{Neukirchner2015}
 \abx@aux@segm{0}{0}{Neukirchner2015}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}New scientific results}{70}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}New scientific results}{69}\protected@file@percent }
 \citation{Neukirchner2015}
 \abx@aux@cite{Neukirchner2015}
 \abx@aux@segm{0}{0}{Neukirchner2015}
@@ -794,134 +783,106 @@
 \citation{neukirchner2016modelling}
 \abx@aux@cite{neukirchner2016modelling}
 \abx@aux@segm{0}{0}{neukirchner2016modelling}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Applications and future work}{72}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Geometrical voltage unbalance norm}{72}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Voltage unbalance reducing inverter structure}{72}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Explicit model predictive control for buck-type rectifier}{73}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Applications and future work}{71}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Geometrical voltage unbalance norm}{71}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Voltage unbalance reducing inverter structure}{71}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Explicit model predictive control for buck-type rectifier}{72}\protected@file@percent }
 \gdef \LT@iv {\LT@entry 
     {1}{58.15816pt}\LT@entry 
     {2}{206.92871pt}}
 \abx@aux@refcontext{none/global//global/global}
-\abx@aux@number{155}{neukirchner2017voltage}{0}{none/global//global/global}{1}
-\abx@aux@number{156}{Neukirchner2015}{0}{none/global//global/global}{2}
-\abx@aux@number{157}{neukirchner2015examination}{0}{none/global//global/global}{3}
-\abx@aux@number{158}{neukirchner2014quasi}{0}{none/global//global/global}{4}
-\abx@aux@number{159}{gollei2014measurement}{0}{none/global//global/global}{5}
-\abx@aux@number{160}{neukirchner2011modeling}{0}{none/global//global/global}{6}
-\abx@aux@number{161}{neukirchner2016modelling}{0}{none/global//global/global}{7}
-\abx@aux@number{162}{shezan2016}{0}{none/global//global/global}{1}
-\abx@aux@number{163}{cucchiella2013environmental}{0}{none/global//global/global}{2}
-\abx@aux@number{164}{kaldellis2009optimum}{0}{none/global//global/global}{3}
-\abx@aux@number{165}{ortega2013measurement}{0}{none/global//global/global}{4}
-\abx@aux@number{166}{huat2015integration}{0}{none/global//global/global}{5}
-\abx@aux@number{167}{lund2015smart}{0}{none/global//global/global}{6}
-\abx@aux@number{168}{gnacinski2019induction}{0}{none/global//global/global}{7}
-\abx@aux@number{169}{savaghebi2012secondary}{0}{none/global//global/global}{8}
-\abx@aux@number{170}{siddique2004effects}{0}{none/global//global/global}{9}
-\abx@aux@number{171}{brekken2005control}{0}{none/global//global/global}{10}
-\abx@aux@number{172}{lee1998effects}{0}{none/global//global/global}{11}
-\abx@aux@number{173}{meersman2011three}{0}{none/global//global/global}{12}
-\abx@aux@number{174}{ates2016}{0}{none/global//global/global}{13}
-\abx@aux@number{175}{bina2011three}{0}{none/global//global/global}{14}
-\abx@aux@number{176}{gorbe2012reduction}{0}{none/global//global/global}{15}
-\abx@aux@number{177}{Gorbe2014experimental}{0}{none/global//global/global}{16}
-\abx@aux@number{178}{uimethod}{0}{none/global//global/global}{17}
-\abx@aux@number{179}{martin2015unbalance}{0}{none/global//global/global}{18}
-\abx@aux@number{180}{kini2007novel}{0}{none/global//global/global}{19}
-\abx@aux@number{181}{wen2014approximate}{0}{none/global//global/global}{20}
-\abx@aux@number{182}{araujo2013three}{0}{none/global//global/global}{21}
-\abx@aux@number{183}{lee2009new}{0}{none/global//global/global}{22}
-\abx@aux@number{184}{xu2010voltage}{0}{none/global//global/global}{23}
-\abx@aux@number{185}{li2005microgrid}{0}{none/global//global/global}{24}
-\abx@aux@number{186}{Hu2016264}{0}{none/global//global/global}{25}
-\abx@aux@number{187}{wang2016dc}{0}{none/global//global/global}{26}
-\abx@aux@number{188}{wang2014virtual}{0}{none/global//global/global}{27}
-\abx@aux@number{189}{guo2018advanced}{0}{none/global//global/global}{28}
-\abx@aux@number{190}{vekhande2015control}{0}{none/global//global/global}{29}
-\abx@aux@number{191}{vajda2017limiting}{0}{none/global//global/global}{30}
-\abx@aux@number{192}{ghalem2010six}{0}{none/global//global/global}{31}
-\abx@aux@number{193}{gupta2014two}{0}{none/global//global/global}{32}
-\abx@aux@number{194}{chen2016single}{0}{none/global//global/global}{33}
-\abx@aux@number{195}{exposto2015predictive}{0}{none/global//global/global}{34}
-\abx@aux@number{196}{chebre2011speed}{0}{none/global//global/global}{35}
-\abx@aux@number{197}{salloum2014robust}{0}{none/global//global/global}{36}
-\abx@aux@number{198}{tahri2012digital}{0}{none/global//global/global}{37}
-\abx@aux@number{199}{gao2017model}{0}{none/global//global/global}{38}
-\abx@aux@number{200}{han2010control}{0}{none/global//global/global}{39}
-\abx@aux@number{201}{venkatraman2018multilevel}{0}{none/global//global/global}{40}
-\abx@aux@number{202}{feroura2017finite}{0}{none/global//global/global}{41}
-\abx@aux@number{203}{yan2015study}{0}{none/global//global/global}{42}
-\abx@aux@number{204}{urmos2017application}{0}{none/global//global/global}{43}
-\abx@aux@number{205}{chatterjee2008augmented}{0}{none/global//global/global}{44}
-\abx@aux@number{206}{haidegger2012simulation}{0}{none/global//global/global}{45}
-\abx@aux@number{207}{vrkalovic2018model}{0}{none/global//global/global}{46}
-\abx@aux@number{208}{regaya2014new}{0}{none/global//global/global}{47}
-\abx@aux@number{209}{szell2014mathematical}{0}{none/global//global/global}{48}
-\abx@aux@number{210}{ahmed2014model}{0}{none/global//global/global}{49}
-\abx@aux@number{211}{kelemen2010constrained}{0}{none/global//global/global}{50}
-\abx@aux@number{212}{rivera2013predictive}{0}{none/global//global/global}{51}
-\abx@aux@number{213}{godlewska2015predictive}{0}{none/global//global/global}{52}
-\abx@aux@number{214}{muthukumar2016adaptive}{0}{none/global//global/global}{53}
-\abx@aux@number{215}{kutasi2010constrained}{0}{none/global//global/global}{54}
-\abx@aux@number{216}{eugene1986new}{0}{none/global//global/global}{55}
-\abx@aux@number{217}{robert1992assessing}{0}{none/global//global/global}{56}
-\abx@aux@number{218}{fortescue1918method}{0}{none/global//global/global}{57}
-\abx@aux@number{219}{bonnett1997understanding}{0}{none/global//global/global}{58}
-\abx@aux@number{220}{IEEE_141_35071}{0}{none/global//global/global}{59}
-\abx@aux@number{221}{IEEE_112_8635630}{0}{none/global//global/global}{60}
-\abx@aux@number{222}{IEEE_936_29053}{0}{none/global//global/global}{61}
-\abx@aux@number{223}{pillay2001definitions}{0}{none/global//global/global}{62}
-\abx@aux@number{224}{dugan1996electrical}{0}{none/global//global/global}{63}
-\abx@aux@number{225}{wang2000analytical}{0}{none/global//global/global}{64}
-\abx@aux@number{226}{pierrat1987unbalance}{0}{none/global//global/global}{65}
-\abx@aux@number{227}{wang2001analysis}{0}{none/global//global/global}{66}
-\abx@aux@number{228}{singh2007some}{0}{none/global//global/global}{67}
-\abx@aux@number{229}{chen2013examination}{0}{none/global//global/global}{68}
-\abx@aux@number{230}{betz2006symmetry}{0}{none/global//global/global}{69}
-\abx@aux@number{231}{hang2015online}{0}{none/global//global/global}{70}
-\abx@aux@number{232}{kheraluwala1992performance}{0}{none/global//global/global}{71}
-\abx@aux@number{233}{inoue2007bidirectional}{0}{none/global//global/global}{72}
-\abx@aux@number{234}{kolar1996design}{0}{none/global//global/global}{73}
-\abx@aux@number{235}{zargari1993current}{0}{none/global//global/global}{74}
-\abx@aux@number{236}{sato1993state}{0}{none/global//global/global}{75}
-\abx@aux@number{237}{nussbaumer2007comprehensive}{0}{none/global//global/global}{76}
-\abx@aux@number{238}{malesani1987three}{0}{none/global//global/global}{77}
-\abx@aux@number{239}{itoh1989steady}{0}{none/global//global/global}{78}
-\abx@aux@number{240}{tooth2000effects}{0}{none/global//global/global}{79}
-\abx@aux@number{241}{salo2005three}{0}{none/global//global/global}{80}
-\abx@aux@number{242}{baumannnew}{0}{none/global//global/global}{81}
-\abx@aux@number{243}{baumann2005novel}{0}{none/global//global/global}{82}
-\abx@aux@number{244}{moussaoui2005open}{0}{none/global//global/global}{83}
-\abx@aux@number{245}{kolda2003understanding}{0}{none/global//global/global}{84}
-\abx@aux@number{246}{rossiter2017model}{0}{none/global//global/global}{85}
-\abx@aux@number{247}{kwon2006receding}{0}{none/global//global/global}{86}
-\abx@aux@number{248}{baotic2005optimal}{0}{none/global//global/global}{87}
-\abx@aux@number{249}{herceg2009real}{0}{none/global//global/global}{88}
-\abx@aux@number{250}{grancharova2005survey}{0}{none/global//global/global}{89}
-\abx@aux@number{251}{antoniewicz2009predictive}{0}{none/global//global/global}{90}
-\abx@aux@number{252}{geyer2005low}{0}{none/global//global/global}{91}
-\abx@aux@number{253}{aastrom2013computer}{0}{none/global//global/global}{92}
-\abx@aux@number{254}{bela2005iranyitasi}{0}{none/global//global/global}{93}
-\abx@aux@number{255}{levine2018control}{0}{none/global//global/global}{94}
-\abx@aux@number{256}{goodwin2006constrained}{0}{none/global//global/global}{95}
-\abx@aux@number{257}{mayne2000constrained}{0}{none/global//global/global}{96}
-\abx@aux@number{258}{grieder2005stabilizing}{0}{none/global//global/global}{97}
-\abx@aux@number{259}{keerthi1988optimal}{0}{none/global//global/global}{98}
-\abx@aux@number{260}{mayne1990receding}{0}{none/global//global/global}{99}
-\abx@aux@number{261}{horn2012matrix}{0}{none/global//global/global}{100}
-\abx@aux@number{262}{borrelli2017predictive}{0}{none/global//global/global}{101}
-\abx@aux@number{263}{jones2006logarithmic}{0}{none/global//global/global}{102}
-\abx@aux@number{264}{tondel2003evaluation}{0}{none/global//global/global}{103}
-\abx@aux@number{265}{tondel2003constrained}{0}{none/global//global/global}{104}
-\abx@aux@number{266}{kutasi2008vector}{0}{none/global//global/global}{105}
-\abx@aux@number{267}{arn1997under-voltage}{0}{none/global//global/global}{106}
-\abx@aux@number{268}{Patnaik2013topologies}{0}{none/global//global/global}{107}
-\abx@aux@number{269}{Ninad2014control}{0}{none/global//global/global}{108}
-\abx@aux@number{270}{hough2001asynchronous}{0}{none/global//global/global}{109}
-\abx@aux@number{271}{segui2007approach}{0}{none/global//global/global}{110}
-\abx@aux@number{272}{MVM2013}{0}{none/global//global/global}{111}
-\abx@aux@number{273}{MVM2018}{0}{none/global//global/global}{112}
-\abx@aux@number{274}{neukirchner2019linkedmodel}{0}{none/global//global/global}{113}
+\abx@aux@number{152}{neukirchner2017voltage}{0}{none/global//global/global}{1}
+\abx@aux@number{159}{shezan2016}{0}{none/global//global/global}{1}
+\abx@aux@number{160}{cucchiella2013environmental}{0}{none/global//global/global}{2}
+\abx@aux@number{161}{kaldellis2009optimum}{0}{none/global//global/global}{3}
+\abx@aux@number{162}{ortega2013measurement}{0}{none/global//global/global}{4}
+\abx@aux@number{163}{huat2015integration}{0}{none/global//global/global}{5}
+\abx@aux@number{164}{lund2015smart}{0}{none/global//global/global}{6}
+\abx@aux@number{165}{gnacinski2019induction}{0}{none/global//global/global}{7}
+\abx@aux@number{166}{savaghebi2012secondary}{0}{none/global//global/global}{8}
+\abx@aux@number{167}{siddique2004effects}{0}{none/global//global/global}{9}
+\abx@aux@number{168}{brekken2005control}{0}{none/global//global/global}{10}
+\abx@aux@number{169}{lee1998effects}{0}{none/global//global/global}{11}
+\abx@aux@number{170}{meersman2011three}{0}{none/global//global/global}{12}
+\abx@aux@number{171}{ates2016}{0}{none/global//global/global}{13}
+\abx@aux@number{172}{bina2011three}{0}{none/global//global/global}{14}
+\abx@aux@number{173}{gorbe2012reduction}{0}{none/global//global/global}{15}
+\abx@aux@number{174}{Gorbe2014experimental}{0}{none/global//global/global}{16}
+\abx@aux@number{175}{uimethod}{0}{none/global//global/global}{17}
+\abx@aux@number{176}{martin2015unbalance}{0}{none/global//global/global}{18}
+\abx@aux@number{177}{kini2007novel}{0}{none/global//global/global}{19}
+\abx@aux@number{178}{wen2014approximate}{0}{none/global//global/global}{20}
+\abx@aux@number{179}{araujo2013three}{0}{none/global//global/global}{21}
+\abx@aux@number{180}{lee2009new}{0}{none/global//global/global}{22}
+\abx@aux@number{181}{xu2010voltage}{0}{none/global//global/global}{23}
+\abx@aux@number{182}{li2005microgrid}{0}{none/global//global/global}{24}
+\abx@aux@number{183}{Hu2016264}{0}{none/global//global/global}{25}
+\abx@aux@number{184}{wang2016dc}{0}{none/global//global/global}{26}
+\abx@aux@number{185}{wang2014virtual}{0}{none/global//global/global}{27}
+\abx@aux@number{186}{guo2018advanced}{0}{none/global//global/global}{28}
+\abx@aux@number{187}{vekhande2015control}{0}{none/global//global/global}{29}
+\abx@aux@number{188}{vajda2017limiting}{0}{none/global//global/global}{30}
+\abx@aux@number{189}{ghalem2010six}{0}{none/global//global/global}{31}
+\abx@aux@number{190}{gupta2014two}{0}{none/global//global/global}{32}
+\abx@aux@number{191}{chen2016single}{0}{none/global//global/global}{33}
+\abx@aux@number{192}{exposto2015predictive}{0}{none/global//global/global}{34}
+\abx@aux@number{193}{chebre2011speed}{0}{none/global//global/global}{35}
+\abx@aux@number{194}{salloum2014robust}{0}{none/global//global/global}{36}
+\abx@aux@number{195}{tahri2012digital}{0}{none/global//global/global}{37}
+\abx@aux@number{196}{gao2017model}{0}{none/global//global/global}{38}
+\abx@aux@number{197}{han2010control}{0}{none/global//global/global}{39}
+\abx@aux@number{198}{venkatraman2018multilevel}{0}{none/global//global/global}{40}
+\abx@aux@number{199}{feroura2017finite}{0}{none/global//global/global}{41}
+\abx@aux@number{200}{yan2015study}{0}{none/global//global/global}{42}
+\abx@aux@number{201}{urmos2017application}{0}{none/global//global/global}{43}
+\abx@aux@number{202}{chatterjee2008augmented}{0}{none/global//global/global}{44}
+\abx@aux@number{203}{haidegger2012simulation}{0}{none/global//global/global}{45}
+\abx@aux@number{204}{vrkalovic2018model}{0}{none/global//global/global}{46}
+\abx@aux@number{205}{regaya2014new}{0}{none/global//global/global}{47}
+\abx@aux@number{206}{szell2014mathematical}{0}{none/global//global/global}{48}
+\abx@aux@number{207}{ahmed2014model}{0}{none/global//global/global}{49}
+\abx@aux@number{208}{kelemen2010constrained}{0}{none/global//global/global}{50}
+\abx@aux@number{209}{rivera2013predictive}{0}{none/global//global/global}{51}
+\abx@aux@number{210}{godlewska2015predictive}{0}{none/global//global/global}{52}
+\abx@aux@number{211}{muthukumar2016adaptive}{0}{none/global//global/global}{53}
+\abx@aux@number{212}{kutasi2010constrained}{0}{none/global//global/global}{54}
+\abx@aux@number{213}{eugene1986new}{0}{none/global//global/global}{55}
+\abx@aux@number{214}{robert1992assessing}{0}{none/global//global/global}{56}
+\abx@aux@number{215}{fortescue1918method}{0}{none/global//global/global}{57}
+\abx@aux@number{216}{bonnett1997understanding}{0}{none/global//global/global}{58}
+\abx@aux@number{217}{IEEE_141_35071}{0}{none/global//global/global}{59}
+\abx@aux@number{218}{IEEE_112_8635630}{0}{none/global//global/global}{60}
+\abx@aux@number{219}{IEEE_936_29053}{0}{none/global//global/global}{61}
+\abx@aux@number{220}{pillay2001definitions}{0}{none/global//global/global}{62}
+\abx@aux@number{221}{dugan1996electrical}{0}{none/global//global/global}{63}
+\abx@aux@number{222}{wang2000analytical}{0}{none/global//global/global}{64}
+\abx@aux@number{223}{pierrat1987unbalance}{0}{none/global//global/global}{65}
+\abx@aux@number{224}{wang2001analysis}{0}{none/global//global/global}{66}
+\abx@aux@number{225}{singh2007some}{0}{none/global//global/global}{67}
+\abx@aux@number{226}{chen2013examination}{0}{none/global//global/global}{68}
+\abx@aux@number{227}{betz2006symmetry}{0}{none/global//global/global}{69}
+\abx@aux@number{228}{hang2015online}{0}{none/global//global/global}{70}
+\abx@aux@number{229}{kheraluwala1992performance}{0}{none/global//global/global}{71}
+\abx@aux@number{230}{inoue2007bidirectional}{0}{none/global//global/global}{72}
+\abx@aux@number{231}{kolar1996design}{0}{none/global//global/global}{73}
+\abx@aux@number{232}{zargari1993current}{0}{none/global//global/global}{74}
+\abx@aux@number{233}{sato1993state}{0}{none/global//global/global}{75}
+\abx@aux@number{234}{nussbaumer2007comprehensive}{0}{none/global//global/global}{76}
+\abx@aux@number{235}{malesani1987three}{0}{none/global//global/global}{77}
+\abx@aux@number{236}{itoh1989steady}{0}{none/global//global/global}{78}
+\abx@aux@number{237}{tooth2000effects}{0}{none/global//global/global}{79}
+\abx@aux@number{238}{salo2005three}{0}{none/global//global/global}{80}
+\abx@aux@number{239}{baumannnew}{0}{none/global//global/global}{81}
+\abx@aux@number{240}{baumann2005novel}{0}{none/global//global/global}{82}
+\abx@aux@number{241}{moussaoui2005open}{0}{none/global//global/global}{83}
+\abx@aux@number{242}{kolda2003understanding}{0}{none/global//global/global}{84}
+\abx@aux@number{243}{rossiter2017model}{0}{none/global//global/global}{85}
+\abx@aux@number{244}{kwon2006receding}{0}{none/global//global/global}{86}
+\abx@aux@number{245}{baotic2005optimal}{0}{none/global//global/global}{87}
+\abx@aux@number{246}{herceg2009real}{0}{none/global//global/global}{88}
+\abx@aux@number{247}{grancharova2005survey}{0}{none/global//global/global}{89}
+\abx@aux@number{248}{antoniewicz2009predictive}{0}{none/global//global/global}{90}
+\abx@aux@number{249}{geyer2005low}{0}{none/global//global/global}{91}
 \abx@aux@refcontextdefaultsdone
 \abx@aux@defaultrefcontext{0}{neukirchner2017voltage}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{Neukirchner2015}{none/global//global/global}
@@ -1021,10 +982,6 @@
 \abx@aux@defaultrefcontext{0}{grancharova2005survey}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{antoniewicz2009predictive}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{geyer2005low}{none/global//global/global}
-\abx@aux@defaultrefcontext{0}{aastrom2013computer}{none/global//global/global}
-\abx@aux@defaultrefcontext{0}{bela2005iranyitasi}{none/global//global/global}
-\abx@aux@defaultrefcontext{0}{levine2018control}{none/global//global/global}
-\abx@aux@defaultrefcontext{0}{goodwin2006constrained}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{mayne2000constrained}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{grieder2005stabilizing}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{keerthi1988optimal}{none/global//global/global}
@@ -1141,10 +1098,6 @@
 \abx@aux@defaultlabelprefix{0}{grancharova2005survey}{}
 \abx@aux@defaultlabelprefix{0}{antoniewicz2009predictive}{}
 \abx@aux@defaultlabelprefix{0}{geyer2005low}{}
-\abx@aux@defaultlabelprefix{0}{aastrom2013computer}{}
-\abx@aux@defaultlabelprefix{0}{bela2005iranyitasi}{}
-\abx@aux@defaultlabelprefix{0}{levine2018control}{}
-\abx@aux@defaultlabelprefix{0}{goodwin2006constrained}{}
 \abx@aux@defaultlabelprefix{0}{mayne2000constrained}{}
 \abx@aux@defaultlabelprefix{0}{grieder2005stabilizing}{}
 \abx@aux@defaultlabelprefix{0}{keerthi1988optimal}{}
