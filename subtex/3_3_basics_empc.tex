@@ -501,9 +501,9 @@ In practice most MPC algorithms use linear models because the dependence of the 
         \end{array}
         \label{BASICMPC:equ:cost_function_Euclidian_recursive_P}
     \end{equation}
-    
+
     The next stage is to write down the "two step" problem based on \ref{BASICMPC:equ:cost_function_Euclidian_recursive_onestep}:
-    
+
     \begin{equation}
         \begin{array}{rcl}
 				%&&\norm{asd}
@@ -513,25 +513,25 @@ In practice most MPC algorithms use linear models because the dependence of the 
         \end{array}
         \label{BASICMPC:equ:cost_function_Euclidian_recursive_twostep}
     \end{equation}
-    
+
     We since \ref{BASICMPC:equ:cost_function_Euclidian_recursive_twostep} has the same form as \ref{BASICMPC:equ:cost_function_Euclidian_recursive_onestep} we can apply the same solution seen at \ref{BASICMPC:equ:cost_function_Euclidian_recursive_optimum}:
-    
+
     \begin{equation}
         \begin{array}{rcl}
         \textbf{u}^*_{N-2}=\underbrace{-(\textbf{B}'\textbf{P}_{N-1}\textbf{B}+\textbf{R})^{-1}\textbf{B}'\textbf{P}_{N-1}\textbf{A}}_{\textbf{F}_{N-2}}\textbf{x}_{N-2},\\
         \end{array}
         \label{BASICMPC:equ:cost_function_Euclidian_recursive_optimum_twostep}
     \end{equation}
-    
+
     where the "two step" cost:
-    
+
     \begin{equation}
         \begin{array}{rcl}
         J^*_{N-2}(\textbf{x}_{N-2})&=&\textbf{x}'_{N-2}\textbf{P}_{N-2}\textbf{x}_{N-2},\\
         \end{array}
         \label{BASICMPC:equ:cost_function_Euclidian_recursive_twostepback}
     \end{equation}
-    
+
     where $\textbf{P}_{N-2}$ can be defined recursively as:
 
     \begin{equation}
@@ -540,46 +540,145 @@ In practice most MPC algorithms use linear models because the dependence of the 
         \end{array}
         \label{BASICMPC:equ:cost_function_Euclidian_recursive_twoP}
     \end{equation}
-    
+
     Continuing in this manner at some arbitrary time $k$ the optimal control action is:
-    
+
     \begin{equation}
         \begin{array}{rcl}
         \textbf{u}^*(k)=\underbrace{-(\textbf{B}'\textbf{P}_{k+1}\textbf{B}+\textbf{R})^{-1}\textbf{B}'\textbf{P}_{k+1}\textbf{A}}_{\textbf{F}_{k}}\textbf{x}_{k},\\
         \end{array}
         \label{BASICMPC:equ:cost_function_Euclidian_recursive_optimum_anystep}
     \end{equation}
-    
+
     where $k=0,1,\dots,N-1$ and:
-    
+
     \begin{equation}
         \begin{array}{rcl}
         \textbf{P}_{k}=\textbf{A}'\textbf{P}_{k+1}\textbf{A}+\textbf{Q}-\textbf{A}'\textbf{P}_{k+1}\textbf{B}(\textbf{B}'\textbf{P}_{k+1}\textbf{B}+\textbf{R})^{-1}\textbf{B}'\textbf{P}_{k+1}\textbf{A}.\\
         \end{array}
         \label{BASICMPC:equ:cost_function_Euclidian_recursive_twoP}
     \end{equation}
-    
+
     and the optimal starting cost starting from the measured state:
-    
+
      \begin{equation}
         \begin{array}{rcl}
         J^*_{k}(\textbf{x}(k))&=&\textbf{x}'(k)\textbf{P}_{k}\textbf{x}(k).\\
         \end{array}
         \label{BASICMPC:equ:cost_function_Euclidian_recursive_anystepback}
     \end{equation}
+
+    Equation \ref{BASICMPC:equ:cost_function_Euclidian_recursive_twoP} is called the discrete Ricatti equation \cite{borrelli2017predictive}, or Ricatti difference equation, which is initialised with $\textbf{P}_n=\textbf{P}$ and solves backwards. It is worth noting that from \ref{BASICMPC:equ:cost_function_Euclidian_recursive_optimum_anystep} the optimal control action $\textbf{u}^*(k)$ is obtained in the form of feedback law as linear function of the measured state $\textbf{x}(k)$ at time instance $k$, and the optimal cost is \ref{BASICMPC:equ:cost_function_Euclidian_recursive_anystepback}. 
+
+	
+	\myparagraph{Constained optimal control}\label{BASICCSR:sec:OptimalControl}
+	
+	In constrained optimal control for any input action with a given initial state the control action can be computed with quadratic programming but with respect to pre described constraints. As displayed, the linear quadratic approach requires a numerical definition so that a precise calculation can be made, that is, which optimal input trajectory gives the lowest numerical value to the cost. The main requirement is that the cost depends on the batch or recursive input sequence and that low values of cost imply good closed-loop performance good being defined for the process. Of course the choice of the cost affects the complexity of the implied optimization and this is also a consideration.\\
+With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assume that it is subject to constraints:
+
+\begin{equation}
+        \begin{array}{rcl}
+            \textbf{x}(q)\in\mathcal{X}^x,&\textnormal{ }\textbf{u}(q)\in\mathcal{U}^u,&\textnormal{ }\forall t\geq0,\\
+						%\textbf{y}(q)&=&\textbf{Cx}(q)
+        \end{array}
+        \label{BASICMPC:equ:basic_LTI_constrained}
+    \end{equation}
     
-    Equation \ref{BASICMPC:equ:cost_function_Euclidian_recursive_twoP} is called the discrete Ricatti equation \cite{borrelli2017predictive}, or Ricatti difference equation, which is initialised with $\textbf{P}_n=\textbf{P}$ and solves backwards. It is worth noting that from \ref{BASICMPC:equ:cost_function_Euclidian_recursive_optimum_anystep} the optimal control action $\textbf{u}^*(k)$ is obtained in the form of feedback law as linear function of the measured state $\textbf{x}(k)$ at time instance $k$, and the optimal cost is \ref{BASICMPC:equ:cost_function_Euclidian_recursive_anystepback}.
+    where the set of inputs $\mathcal{U}^u\subseteq\mathbb{R}^m$ and states $\mathcal{X}^x\subseteq\mathbb{R}^n$ are polyhedra. when Eucledian norm is used such as described in the previous chapter with the cost as \ref{BASICMPC:equ:cost_function_Euclidian} with $\textbf{P}\succeq0$, $\textbf{Q}\succeq0$, and $\textbf{R}\succ0$ we define the constrained optimal control problem as:
     
+    \begin{equation}
+        \begin{array}{rcl}
+            J^*_0(\textbf{x}(0))&=&\min_{\textbf{U}_0}J_0(\textbf{x}(0),\textbf{U}_0)\\
+            &\textnormal{subj. to}&\textbf{x}_{k+1}=\textbf{Ax}_{k}+\textbf{Bu}_{k},k=0,1,\dots,N-1\\
+            &&\textbf{x}_N\in\mathcal{X}_f,\textbf{x}_k\in\mathcal{X}^x,\textbf{u}_k\in\mathcal{U}^u\\
+            &&\textbf{x}_0=\textbf{x}(0),
+        \end{array}
+        \label{BASICMPC:equ:constrained_optimal_control_problem}
+    \end{equation}
+
+    where $\textbf{x}_N\subseteq\mathbb{R}^n$ is the terminal polyhedral region, and $\textbf{U}_0=[\textbf{u}'_0,\dots,\textbf{u}'_{N-1}]'\in\mathbb{R}^s$ with $s=mN$ is tha optimization vector. We denote $\mathcal{X}_0\subset\mathcal{X}^x$ as the set of initial states $\textbf{x}(0)$ for which the optimal control problem is feasible such as:
     
+    \begin{equation}
+        \begin{array}{rcl}
+            \mathcal{X}_0&=&\{
+            \textbf{x}_0\in\mathbb{R}^n:\exists\textbf{U}_0,\\
+            &&s.t.:\textbf{x}_k\in\mathcal{X}^x,\textbf{u}_k\in\mathcal{U}^u,\textbf{x}_N\in\mathcal{X}_f,\\
+            &&where\_ \textbf{x}_{k+1}=\textbf{Ax}_{k}+\textbf{Bu}_{k},k=0,\dots,N-1
+            \}.\\
+        \end{array}
+        \label{BASICMPC:equ:constrained_initial_set}
+    \end{equation}
     
+    We denote $\mathcal{X}_i$ as the set of states $\textbf{x}_i$ at time $i=0,1,\dots,N$ which is feasible for \ref{BASICMPC:equ:constrained_optimal_control_problem}. The sets $\mathcal{X}_i$ are independent of the cost function as long as it guaranties the exsistence of a minima and the algorithm used to compute the solution. There are also ways to define an compute $\mathcal{X}_i$. With the batch approach is as follows:
+    
+    \begin{equation}
+        \begin{array}{rcl}
+            \mathcal{X}_i&=&\{
+            \textbf{x}_i\in\mathbb{R}^n:\exists\textbf{U}_i,\\
+            &&s.t.:\textbf{x}_k\in\mathcal{X}^x,\textbf{u}_k\in\mathcal{U}^u,\textbf{x}_N\in\mathcal{X}_f,\\
+            &&where\_ \textbf{x}_{k+1}=\textbf{Ax}_{k}+\textbf{Bu}_{k},k=0,\dots,N-1
+            \}.\\
+        \end{array}
+        \label{BASICMPC:equ:constrained_feasible_set}
+    \end{equation}
+    
+    This definition requires, that for any initial $\textbf{x}_i\in\mathcal{X}_i$ state there exsists a feasible $\textbf{U}_i=[\textbf{u}_i,\dots,\textbf{u}_{N-1}]$ which keeps the state evolution in the feasible set $\mathcal{X}^x$ at future time instants $k$ and forces $\textbf{x}_N$ into $\mathcal{X}_f$ at $k=N$.\\
+    Next we show how to compute $\mathcal{X}_i$ for $i=0,\dots,N-1$. It is stated that the state $\mathcal{X}^x$, $\mathcal{X}_f$ and input $\mathcal{U}^u$ sets are $\mathcal{H}$-polyhedra \cite{borrelli2017predictive}, and $\textbf{A}_x\leq\textbf{x}\textbf{b}_x$, $\textbf{A}_f\textbf{x}_N\leq \textbf{b}_f$, are the set of equality and inequality constraints for the states and the terminal state and $\textbf{A}_u\textbf{u}\leq \textbf{b}_u$ are the set of of equality and inequality constraints on inputs respectively. We define the set of constraints as polyhedron $\mathcal{P}_i$ at time instance $i$ as:
+    
+    \begin{equation}
+        \begin{array}{rcl}
+            \mathcal{P}_i&=&\{
+            (\textbf{U}_i,\textbf{x}_i)\in\mathbb{R}^{m(N-i)+n,s.t.:\textbf{G}_u\textbf{U}_i-\textbf{E}_i\textbf{x}_i\leq\textbf{W}_i},
+            \}
+        \end{array}
+        \label{BASICMPC:equ:constrained_constraint_set}
+    \end{equation}
+    
+    where $\textbf{G}_i$, $\textbf{E}_i$, and $\textbf{W}_i$ are defined as:
+    
+    \begin{equation}
+    \begin{small}
+        \begin{array}{rcl}
+            \textbf{G}_i=\begin{bmatrix}
+            \textbf{A}_u& 0& \cdots & 0\\
+            0& \textbf{A}_u& \cdots & 0\\
+            \vdots& \vdots& \ddots& \vdots\\
+            0& 0& \cdots& \textbf{A}_u\\
+            0& 0& \cdots& 0\\
+            \textbf{A}_x\textbf{B}& 0& \cdots& 0\\
+            \textbf{A}_x\textbf{A}\textbf{B}& \textbf{A}_x\textbf{B}& \cdots& 0\\
+            \vdots& \vdots& \ddots& \vdots\\
+            \textbf{A}_f\textbf{A}^{N-i-1}\textbf{B}& \textbf{A}_f\textbf{A}^{N-i-2}\textbf{B}& \cdots& \textbf{A}_f\textbf{B}\\
+            \end{bmatrix}&
+            \textbf{E}_i=\begin{bmatrix}
+            0\\
+            0\\
+            \vdots\\
+            0\\
+            -\textbf{A}_x\\
+            -\textbf{A}_x\textbf{A}\\
+            -\textbf{A}_x\textbf{A}^2\\
+            \vdots\\
+            -\textbf{A}_f\textbf{A}^{N-i}\\
+            \end{bmatrix}&
+            \textbf{W}_i=\begin{bmatrix}
+            \textbf{b}_u\\
+            \textbf{b}_u\\
+            \vdots\\
+            \textbf{b}_u\\
+            \textbf{b}_x\\
+            \textbf{b}_x\\
+            \textbf{b}_x\\
+            \vdots\\
+            \textbf{b}_f\\
+            \end{bmatrix}.
+        \end{array}
+        \label{BASICMPC:equ:constrained_constraint_matrices}
+        \end{small}
+    \end{equation}
     
     
 
-    %%%%%%%%%%%%%%%%%=====================%%%%%%%%%%%%%%%%%%%%
-	
-	%\myparagraph{Constained optimal control}\label{BASICCSR:sec:OptimalControl}
-	
-	
 		
 	%with the restrictions:
 %	
