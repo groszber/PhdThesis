@@ -568,7 +568,7 @@ In practice most MPC algorithms use linear models because the dependence of the 
         \label{BASICMPC:equ:cost_function_Euclidian_recursive_anystepback}
     \end{equation}
 
-    Equation \ref{BASICMPC:equ:cost_function_Euclidian_recursive_twoP} is called the discrete Ricatti equation \cite{borrelli2017predictive}, or Ricatti difference equation, which is initialised with $\textbf{P}_n=\textbf{P}$ and solves backwards. It is worth noting that from \ref{BASICMPC:equ:cost_function_Euclidian_recursive_optimum_anystep} the optimal control action $\textbf{u}^*(k)$ is obtained in the form of feedback law as linear function of the measured state $\textbf{x}(k)$ at time instance $k$, and the optimal cost is \ref{BASICMPC:equ:cost_function_Euclidian_recursive_anystepback}. 
+    Equation \ref{BASICMPC:equ:cost_function_Euclidian_recursive_twoP} is called the discrete Ricatti equation \cite{borrelli2017predictive}, or Ricatti difference equation, which is initialised with $\textbf{P}_n=\textbf{P}$ and solves backwards. It is worth noting that from \ref{BASICMPC:equ:cost_function_Euclidian_recursive_optimum_anystep} the optimal control action $\textbf{u}^*(k)$ is obtained in the form of feedback law as linear function of the measured state $\textbf{x}(k)$ at time instance $k$, and the optimal cost is \ref{BASICMPC:equ:cost_function_Euclidian_recursive_anystepback}.
 
 	
 	\myparagraph{Constained optimal control}\label{BASICCSR:sec:OptimalControl}
@@ -583,9 +583,9 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \end{array}
         \label{BASICMPC:equ:basic_LTI_constrained}
     \end{equation}
-    
+
     where the set of inputs $\mathcal{U}^u\subseteq\mathbb{R}^m$ and states $\mathcal{X}^x\subseteq\mathbb{R}^n$ are polyhedra. when Eucledian norm is used such as described in the previous chapter with the cost as \ref{BASICMPC:equ:cost_function_Euclidian} with $\textbf{P}\succeq0$, $\textbf{Q}\succeq0$, and $\textbf{R}\succ0$ we define the constrained optimal control problem as:
-    
+
     \begin{equation}
         \begin{array}{rcl}
             J^*_0(\textbf{x}(0))&=&\min_{\textbf{U}_0}J_0(\textbf{x}(0),\textbf{U}_0)\\
@@ -597,7 +597,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
     \end{equation}
 
     where $\textbf{x}_N\subseteq\mathbb{R}^n$ is the terminal polyhedral region, and $\textbf{U}_0=[\textbf{u}'_0,\dots,\textbf{u}'_{N-1}]'\in\mathbb{R}^s$ with $s=mN$ is tha optimization vector. We denote $\mathcal{X}_0\subset\mathcal{X}^x$ as the set of initial states $\textbf{x}(0)$ for which the optimal control problem is feasible such as:
-    
+
     \begin{equation}
         \begin{array}{rcl}
             \mathcal{X}_0&=&\{
@@ -608,9 +608,9 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \end{array}
         \label{BASICMPC:equ:constrained_initial_set}
     \end{equation}
-    
+
     We denote $\mathcal{X}_i$ as the set of states $\textbf{x}_i$ at time $i=0,1,\dots,N$ which is feasible for \ref{BASICMPC:equ:constrained_optimal_control_problem}. The sets $\mathcal{X}_i$ are independent of the cost function as long as it guaranties the exsistence of a minima and the algorithm used to compute the solution. There are also ways to define an compute $\mathcal{X}_i$. With the batch approach is as follows:
-    
+
     \begin{equation}
         \begin{array}{rcl}
             \mathcal{X}_i&=&\{
@@ -621,21 +621,21 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \end{array}
         \label{BASICMPC:equ:constrained_feasible_set}
     \end{equation}
-    
+
     This definition requires, that for any initial $\textbf{x}_i\in\mathcal{X}_i$ state there exsists a feasible $\textbf{U}_i=[\textbf{u}_i,\dots,\textbf{u}_{N-1}]$ which keeps the state evolution in the feasible set $\mathcal{X}^x$ at future time instants $k$ and forces $\textbf{x}_N$ into $\mathcal{X}_f$ at $k=N$.\\
     Next we show how to compute $\mathcal{X}_i$ for $i=0,\dots,N-1$. It is stated that the state $\mathcal{X}^x$, $\mathcal{X}_f$ and input $\mathcal{U}^u$ sets are $\mathcal{H}$-polyhedra \cite{borrelli2017predictive}, and $\textbf{A}_x\leq\textbf{x}\textbf{b}_x$, $\textbf{A}_f\textbf{x}_N\leq \textbf{b}_f$, are the set of equality and inequality constraints for the states and the terminal state and $\textbf{A}_u\textbf{u}\leq \textbf{b}_u$ are the set of of equality and inequality constraints on inputs respectively. We define the set of constraints as polyhedron $\mathcal{P}_i$ at time instance $i$ as:
-    
+
     \begin{equation}
         \begin{array}{rcl}
             \mathcal{P}_i&=&\{
-            (\textbf{U}_i,\textbf{x}_i)\in\mathbb{R}^{m(N-i)+n,s.t.:\textbf{G}_u\textbf{U}_i-\textbf{E}_i\textbf{x}_i\leq\textbf{W}_i},
-            \}
+            (\textbf{U}_i,\textbf{x}_i)\in\mathbb{R}^{m(N-i)+n,s.t.:\textbf{G}_u\textbf{U}_i-\textbf{E}_i\textbf{x}_i\leq\textbf{W}_i}
+            \},
         \end{array}
         \label{BASICMPC:equ:constrained_constraint_set}
     \end{equation}
-    
-    where $\textbf{G}_i$, $\textbf{E}_i$, and $\textbf{W}_i$ are defined as:
-    
+
+    where $\textbf{G}_i$, $\textbf{E}_i$, and $\textbf{W}_i$ as the matrices of inequality and equality constraints are defined as:
+
     \begin{equation}
     \begin{small}
         \begin{array}{rcl}
@@ -677,7 +677,47 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \end{small}
     \end{equation}
     
+    Also, the set $\mathcal{X}_i$ is a polyhedrof serves as the projection of $\mathcal{P}_i$ in \ref{BASICMPC:equ:constrained_constraint_set} and in \ref{BASICMPC:equ:constrained_constraint_matrices}.\\
+    Next the previously mentioned terms are implemented with using the Euclidian norm case. For this we start with the constrained control problem \ref{BASICMPC:equ:constrained_optimal_control_problem} with the assumption of $\textbf{Q}=\textbf{Q}'\succeq0$, $\textbf{R}=\textbf{R}'\succ0$, and $\textbf{R}=\textbf{R}'\succeq0$. As such the constrained control problem with euclidian norm:
     
+    \begin{equation}
+        \begin{array}{rcl}
+            J^*_0(\textbf{x}(0))&=&\min_{\textbf{U}_0}J_0(\textbf{x}(0),\textbf{U}_0)=
+            \textbf{x}'_N\textbf{P}\textbf{x}_N+\sum^{N-1}_{k=0}\textbf{x}'_k\textbf{Q}\textbf{x}_k+\textbf{u}'_k\textbf{R}\textbf{u}_k\\
+            &\textnormal{subj. to}&\textbf{x}_{k+1}=\textbf{Ax}_{k}+\textbf{Bu}_{k},k=0,1,\dots,N-1\\
+            &&\textbf{x}_N\in\mathcal{X}_f,\textbf{x}_k\in\mathcal{X}^x,\textbf{u}_k\in\mathcal{U}^u\\
+            &&\textbf{x}_0=\textbf{x}(0).
+        \end{array}
+        \label{BASICMPC:equ:constrained_optimal_control_problem_Euclidian}
+    \end{equation}
+    
+    As shown in the unconstrained case \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian} can be rewritten as:
+
+\begin{equation}
+    \begin{array}{rcl}
+            %J^*_0(\textbf{x}(0))=
+            \min_{\textbf{U}_0}J_0(\textbf{x}(0),\textbf{U}_0)&=& \textbf{U}'_0\textbf{H}\textbf{U}_0+2\textbf{x}(0)\textbf{F}\textbf{U}_0+\textbf{x}(0)\textbf{Y}\textbf{x}(0)\\
+            &=&[\textbf{U}'_0\textbf{x}'(0)]
+            \begin{bmatrix}
+            \textbf{H}&\textbf{F}'\\
+            \textbf{F}&\textbf{Y}\\
+            \end{bmatrix}
+            [\textbf{U}'_0\textbf{x}'(0)]'\\.
+            &\textnormal{subj. to}&\textbf{G}_0\textbf{U}_0\leq\textbf{W}_0+\textbf{E}_0\textbf{x}(0),
+        \end{array}
+        \label{BASICMPC:equ:constrained_optimal_control_problem_Euclidian_second form}
+    \end{equation}
+    
+    with $\textbf{G}_0$, $\textbf{W}_0$, and $\textbf{E}_0$ are defined in \ref{BASICMPC:equ:constrained_constraint_matrices} and $\textbf{H}$, $\textbf{F}$, and $\textbf{Y}$ are defined in \ref{BASICMPC:equ:batch_simplfy}, additionally as $J_0(\textbf{x}(0),\textbf{U}_0)\geq 0$ it follows that $\begin{bmatrix}
+            \textbf{H}&\textbf{F}'\\
+            \textbf{F}&\textbf{Y}\\
+            \end{bmatrix}\succeq 0$.
+    
+    
+    
+    
+
+
 
 		
 	%with the restrictions:
