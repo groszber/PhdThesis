@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  3 FEB 2020 21:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  4 FEB 2020 21:27
 entering extended mode
 **C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
 (C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
@@ -2271,36 +2271,48 @@ Overfull \hbox (0.85146pt too wide) detected at line 692
 
 [28]
 
-LaTeX Warning: Reference `BASICMPC:equ:cost_function' on page 29 undefined on i
-nput line 947.
+LaTeX Font Warning: Command \small invalid in math mode on input line 735.
+
+
+Overfull \hbox (1.31032pt too wide) detected at line 783
+[]
+ []
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 788.
 
 [29]
 
-LaTeX Warning: Reference `BASICMPC:equ:optim_problem' on page 30 undefined on i
-nput line 976.
+LaTeX Warning: Reference `BASICMPC:equ:cost_function' on page 30 undefined on i
+nput line 1036.
 
 [30]
 
-LaTeX Warning: Reference `BASICMPC:equ:receiding_horison_problem' on page 31 un
-defined on input line 1012.
-
-
-LaTeX Warning: Reference `BASICMPC:equ:receiding_horison_problem' on page 31 un
-defined on input line 1013.
-
-
-LaTeX Warning: Reference `BASICMPC:equ:receiding_horison_problem' on page 31 un
-defined on input line 1022.
+LaTeX Warning: Reference `BASICMPC:equ:optim_problem' on page 31 undefined on i
+nput line 1065.
 
 [31]
-<EMPC_PNG_Pics/BasicSearchTree.png, id=174, 985.88326pt x 359.54324pt>
+
+LaTeX Warning: Reference `BASICMPC:equ:receiding_horison_problem' on page 32 un
+defined on input line 1101.
+
+
+LaTeX Warning: Reference `BASICMPC:equ:receiding_horison_problem' on page 32 un
+defined on input line 1102.
+
+
+LaTeX Warning: Reference `BASICMPC:equ:receiding_horison_problem' on page 32 un
+defined on input line 1111.
+
+[32]
+<EMPC_PNG_Pics/BasicSearchTree.png, id=177, 985.88326pt x 359.54324pt>
 File: EMPC_PNG_Pics/BasicSearchTree.png Graphic file (type png)
 <use EMPC_PNG_Pics/BasicSearchTree.png>
 Package pdftex.def Info: EMPC_PNG_Pics/BasicSearchTree.png  used on input line 
-1081.
+1170.
 (pdftex.def)             Requested size: 398.3386pt x 145.26859pt.
- [32] [33]) (subtex/4_3_discussion_results.tex [34] [35 <./EMPC_PNG_Pics/BasicS
-earchTree.png>]
+ [33 <./EMPC_PNG_Pics/BasicSearchTree.png>] [34])
+(subtex/4_3_discussion_results.tex [35]
 Chapter 3.
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/network_gray.eps>
 (epstopdf)                    date: 2016-01-28 12:54:46
@@ -2763,37 +2775,25 @@ Package biblatex Warning: The option 'labelprefix' is limited
 
 [78
 
-] [79] [80] [81]
-Overfull \hbox (14.06616pt too wide) in paragraph at lines 220--220
-\T1/cmr/m/it/12 5th In-ter-na-tional Con-fer-ence on Elec-tri-cal Engineering-B
-oumerdes (ICEE-
+] [79]
+Overfull \hbox (9.29346pt too wide) in paragraph at lines 220--220
+\T1/cmr/m/n/12 op-ti-mal power-flow al-go-rithm to mit-i-gate volt-age un-bal-a
+nce,'' \T1/cmr/m/it/12 IEEE Trans-
  []
 
-[82]
-Overfull \hbox (6.91681pt too wide) in paragraph at lines 220--220
+[80] [81] [82]
+Overfull \hbox (3.16217pt too wide) in paragraph at lines 220--220
 [] \T1/cmr/m/n/12 N. Muthuku-mar,  S. Srini-vasan,  K. Ramku-mar,  K. Kan-nan, 
 and  V. E. Balas,
  []
 
-
-Overfull \hbox (2.42229pt too wide) in paragraph at lines 220--220
-[] \T1/cmr/m/n/12 A. H. Bon-nett and  G. Soukup, ``Un-der-stand-ing the nema mo
-tor-generator
- []
-
 [83] [84]
-Overfull \hbox (6.06155pt too wide) in paragraph at lines 220--220
-\T1/cmr/m/n/12 rents,'' in \T1/cmr/m/it/12 IEE Pro-ceed-ings B (Elec-tric Power
- Ap-pli-ca-tions)\T1/cmr/m/n/12 , IET, vol. 136,
- []
-
-[85]
-Overfull \hbox (14.42554pt too wide) in paragraph at lines 220--220
+Overfull \hbox (10.6709pt too wide) in paragraph at lines 220--220
 [] \T1/cmr/m/n/12 M. Baotic, ``Op-ti-mal con-trol of piece-wise affine sys-tems
 : A multi-parametric
  []
 
-[86] [87] (dolgozatmain.aux)
+[85] [86] [87] (dolgozatmain.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -2810,10 +2810,10 @@ Package logreq Info: Writing requests to 'dolgozatmain.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 62119 strings out of 492897
- 1505727 string characters out of 3133501
- 2138830 words of memory out of 3000000
- 65101 multiletter control sequences out of 15000+200000
+ 62110 strings out of 492897
+ 1505175 string characters out of 3133501
+ 2132683 words of memory out of 3000000
+ 65092 multiletter control sequences out of 15000+200000
  561413 words of font info for 100 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,23n,96p,2650b,1435s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2852,9 +2852,9 @@ c/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dolgozatmain.pdf (94 pages, 3752841 bytes).
+Output written on dolgozatmain.pdf (94 pages, 3757041 bytes).
 PDF statistics:
- 1157 PDF objects out of 1200 (max. 8388607)
+ 1162 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  218 words of extra memory for PDF output out of 10000 (max. 10000000)
 

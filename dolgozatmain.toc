@@ -20,10 +20,10 @@
 \contentsline {subsection}{\numberline {2.3.2}Quadratic optimization and predictive control}{22}% 
 \contentsline {paragraph}{Linear quadratic optimal control}{23}% 
 \contentsline {paragraph}{Constained optimal control}{26}% 
-\contentsline {subsubsection}{Stability of MPC}{28}% 
-\contentsline {subsection}{\numberline {2.3.3}Explicit model predictive control (EMPC)}{31}% 
-\contentsline {subsection}{\numberline {2.3.4}Storage of critical regions}{32}% 
-\contentsline {section}{\numberline {2.4}Notations}{32}% 
+\contentsline {subsubsection}{Stability of MPC}{29}% 
+\contentsline {subsection}{\numberline {2.3.3}Explicit model predictive control (EMPC)}{32}% 
+\contentsline {subsection}{\numberline {2.3.4}Storage of critical regions}{33}% 
+\contentsline {section}{\numberline {2.4}Notations}{34}% 
 \contentsline {chapter}{\numberline {3}Voltage unbalance compensation}{36}% 
 \contentsline {section}{\numberline {3.1}Network structure}{36}% 
 \contentsline {section}{\numberline {3.2}Proposed geometrical indicator}{37}% 

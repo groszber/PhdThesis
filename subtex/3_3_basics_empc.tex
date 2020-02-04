@@ -676,10 +676,10 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \label{BASICMPC:equ:constrained_constraint_matrices}
         \end{small}
     \end{equation}
-    
+
     Also, the set $\mathcal{X}_i$ is a polyhedrof serves as the projection of $\mathcal{P}_i$ in \ref{BASICMPC:equ:constrained_constraint_set} and in \ref{BASICMPC:equ:constrained_constraint_matrices}.\\
     Next the previously mentioned terms are implemented with using the Euclidian norm case. For this we start with the constrained control problem \ref{BASICMPC:equ:constrained_optimal_control_problem} with the assumption of $\textbf{Q}=\textbf{Q}'\succeq0$, $\textbf{R}=\textbf{R}'\succ0$, and $\textbf{R}=\textbf{R}'\succeq0$. As such the constrained control problem with euclidian norm:
-    
+
     \begin{equation}
         \begin{array}{rcl}
             J^*_0(\textbf{x}(0))&=&\min_{\textbf{U}_0}J_0(\textbf{x}(0),\textbf{U}_0)=
@@ -690,7 +690,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \end{array}
         \label{BASICMPC:equ:constrained_optimal_control_problem_Euclidian}
     \end{equation}
-    
+
     As shown in the unconstrained case \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian} can be rewritten as:
 
 \begin{equation}
@@ -707,15 +707,104 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \end{array}
         \label{BASICMPC:equ:constrained_optimal_control_problem_Euclidian_second form}
     \end{equation}
-    
+
     with $\textbf{G}_0$, $\textbf{W}_0$, and $\textbf{E}_0$ are defined in \ref{BASICMPC:equ:constrained_constraint_matrices} and $\textbf{H}$, $\textbf{F}$, and $\textbf{Y}$ are defined in \ref{BASICMPC:equ:batch_simplfy}, additionally as $J_0(\textbf{x}(0),\textbf{U}_0)\geq 0$ it follows that $\begin{bmatrix}
             \textbf{H}&\textbf{F}'\\
             \textbf{F}&\textbf{Y}\\
-            \end{bmatrix}\succeq 0$.
+            \end{bmatrix}\succeq 0$.\\
+    To obtain problem \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian_second form} elimination of equality constraints can be obtained by successive substitution of $\textbf{x}_{k+1}=\textbf{Ax}_{k}+\textbf{Bu}_{k}$, so only an input sequece as decision variables of $\textbf{U}_0=[\textbf{u}_0,\dots,\textbf{u}_{N-1}]$ and $\textbf{x}(0)$ is left as a parameter vector. In general, it might be more efficient to solve the problem the equality and inequality constraints, so that sparsity can be exploited. To aim this, for this lets define the set of inputs and states as $\tilde{\textbf{z}}=[\textbf{x}'_1,\dots,\textbf{x}'_N,\textbf{u}'_0,\dots,\textbf{u}'_{N-1}]$ and rewrite \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian} as:
     
+    \begin{equation}
+    \begin{array}{rcl}
+            J^*_0(\textbf{x}(0))
+            &=&[\textbf{U}'_0\textbf{x}'(0)]
+            \begin{bmatrix}
+            \textbf{H}&\textbf{F}'\\
+            \textbf{F}&\textbf{Y}\\
+            \end{bmatrix}
+            [\textbf{U}'_0\textbf{x}'(0)]'\\.
+            &\textnormal{subj. to}&\textbf{G}_{0,eq}\tilde{\textbf{z}}=\textbf{E}_{0,eq}\textbf{x}(0)\\
+            &&\textbf{G}_{0,in}\tilde{\textbf{z}}\leq\textbf{W}_{0,in}+\textbf{E}_{0,in}\textbf{x}(0),
+        \end{array}
+        \label{BASICMPC:equ:constrained_Euclidian_mergedconstraint}
+    \end{equation}
     
+    where $\textbf{G}_{0,eq}$, and $\textbf{E}_{0,eq}$, are the equality constraint matrices, and  $\textbf{G}_{0,in}$, $\textbf{E}_{0,in}$, and $\textbf{W}_{0,in}$ are the inequality constraint matrices respectively:
     
+    \begin{equation}
+    \begin{small}
+    \begin{array}{c}
+            \textbf{G}_{0,eq}=\left[\begin{array}{ccccc|ccccc}
+            \textbf{I}&&&&&-\textbf{B}&&&&\\
+            -\textbf{A}&\textbf{I}&&&&&-\textbf{B}&&&\\
+            &-\textbf{A}&\textbf{I}&&&&&\ddots&&\\
+            &&\ddots&\ddots&&&&&\ddots&\\
+            &&&-\textbf{A}&\textbf{I}&&&&&-\textbf{B}\\
+            \end{array}\right],\textbf{E}_{0,eq}=\left[\begin{array}{c}
+            \textbf{A}\\
+            0\\
+            \vdots\\
+            0\\
+            \end{array}\right],\\
+            \\
+             \textbf{G}_{0,in}=\left[\begin{array}{ccccc|ccccc}
+            0&&&&&0&&&&\\
+            \textbf{A}_x&0&&&&0&&&&\\
+            &\textbf{A}_x&&&&&0&&&\\
+            &&\ddots&\ddots&&&&\ddots&&\\
+            &&&\textbf{A}_x&&&&&0&\\
+            &&&&\textbf{A}_f&&&&&0\\
+            \hline
+            0&&&&&\textbf{A}_u&&&&\\
+            &0&&&&&\textbf{A}_u&&&\\
+            &&\ddots&&&&&\ddots&&\\
+            &&&0&&&&&\textbf{A}_u&\\
+            &&&&0&&&&&\textbf{A}_u\\
+            \end{array}\right],\textbf{W}_{0,in}=\left[\begin{array}{c}
+            \textbf{b}_x\\
+            \textbf{b}_x\\
+            \vdots\\
+            \textbf{b}_x\\
+            \textbf{b}_f\\
+            \hline
+            \textbf{b}_u\\
+            \textbf{b}_u\\
+            \vdots\\
+            \textbf{b}_u\\
+            \textbf{b}_u\\
+            \end{array}\right],\\
+            \textbf{E}_{0,in}=\left[\begin{array}{cccc}
+             -\textbf{A}'_x&0&\dots&0\\
+             \end{array}\right],
+      
+        \end{array}
+        \end{small}
+        \label{BASICMPC:equ:constrained_Euclidian_matrices}
+    \end{equation}
     
+    and the costructed cost matrix $\bar{\textbf{H}}$ as:
+    
+    \begin{equation}
+    \begin{small}
+    \begin{array}{c}
+    \bar{\textbf{H}}=\left[\begin{array}{cccc|ccc}
+    \textbf{Q}&&&&&&\\
+    &\ddots&&&&&\\
+    &&\textbf{Q}&&&&\\
+    &&&\textbf{P}&&&\\
+    \hline
+    &&&&\textbf{R}&&\\
+    &&&&&\ddots&\\
+    &&&&&&\textbf{R}\\
+    \end{array}\right].
+    \end{array}
+    \end{small}
+    \label{BASICMPC:equ:constrained_Euclidian_costmatrix}
+    \end{equation}
+
+
+
+
 
 
 
