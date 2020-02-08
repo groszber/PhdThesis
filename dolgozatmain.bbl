@@ -3384,6 +3384,81 @@
     \field{year}{2017}
   \endentry
 
+  \entry{bemporad2002explicit}{article}{}
+    \name{author}{4}{}{%
+      {{hash=BA}{%
+         family={Bemporad},
+         familyi={B\bibinitperiod},
+         given={Alberto},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Morari},
+         familyi={M\bibinitperiod},
+         given={Manfred},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DV}{%
+         family={Dua},
+         familyi={D\bibinitperiod},
+         given={Vivek},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=PEN}{%
+         family={Pistikopoulos},
+         familyi={P\bibinitperiod},
+         given={Efstratios\bibnamedelima N},
+         giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{BAMMDV+1}
+    \strng{fullhash}{BAMMDVPEN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{3\bibrangedash 20}
+    \field{title}{The explicit linear quadratic regulator for constrained
+  systems}
+    \field{volume}{38}
+    \field{journaltitle}{Automatica}
+    \field{year}{2002}
+  \endentry
+
+  \entry{goodwin2006constrained}{book}{}
+    \name{author}{3}{}{%
+      {{hash=GG}{%
+         family={Goodwin},
+         familyi={G\bibinitperiod},
+         given={Graham},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SMM}{%
+         family={Seron},
+         familyi={S\bibinitperiod},
+         given={Mar{\'\i}a\bibnamedelima M},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=DDJA}{%
+         family={De\bibnamedelima Don{\'a}},
+         familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod},
+         given={Jos{\'e}\bibnamedelima A},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Science \& Business Media}%
+    }
+    \strng{namehash}{GGSMMDDJA1}
+    \strng{fullhash}{GGSMMDDJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Constrained control and estimation: an optimisation approach}
+    \field{year}{2006}
+  \endentry
+
   \entry{mayne2000constrained}{article}{}
     \name{author}{4}{}{%
       {{hash=MDQ}{%
@@ -3530,32 +3605,6 @@
     \field{volume}{35}
     \field{journaltitle}{IEEE Transactions on automatic control}
     \field{year}{1990}
-  \endentry
-
-  \entry{horn2012matrix}{book}{}
-    \name{author}{2}{}{%
-      {{hash=HRA}{%
-         family={Horn},
-         familyi={H\bibinitperiod},
-         given={Roger\bibnamedelima A},
-         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=JCR}{%
-         family={Johnson},
-         familyi={J\bibinitperiod},
-         given={Charles\bibnamedelima R},
-         giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Cambridge university press}%
-    }
-    \strng{namehash}{HRAJCR1}
-    \strng{fullhash}{HRAJCR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Matrix analysis}
-    \field{year}{2012}
   \endentry
 
   \entry{jones2006logarithmic}{article}{}

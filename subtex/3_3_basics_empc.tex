@@ -1,4 +1,4 @@
-\section{Power electronic components for current control}
+\section{Power electronic components for current control}\label{BASICCSR:sec:PowerGeneral}
 
 As the introduction suggest the main theme of the thesis is current optimal current control. As such for reaching the desired optimum, the necessary actuators are needed for the task. For this, power electric converters are used, all of them based on a simple principle, namely they use controllable switches to set the required voltage level or the conducting current value, required on the load's end.
 
@@ -288,7 +288,7 @@ Philosophically MPC reflects human behavior whereby we select control actions wh
 Most control laws, say PID (proportional, integral and derivative) control, does not explicitly consider the future implication of current control actions. To some extent this is only accounted by the expected closed-loop dynamics. MPC on the other hand
 implicitly (or explicitly) computes the predicted behavior over some horizon. One can therefore restrict the choice of the proposed input trajectories to those that do not lead to difficulties in the future.\\
 In order to predict the future behavior of a process, we must have a model of how the process behaves. In particular, this model must show the dependence of the output on the current measured variable and the current/future inputs. This does not have to be linear (e.g. transfer function, state-space) and in fact can be just about anything. A precise model is not always required to get tight control, because the decisions are updated regularly. This will deal with some model uncertainty in a fairly fast time scale. The decision on the best control is thus continually updated using information from this comparison \cite{rossiter2017model}.\\
-This way, model based predictive control methods are optimal regulators, with a defined cost function on a defined and encompassed prediction horizon with restrictions \cite{kwon2006receding}, \cite{baotic2005optimal}, \cite{herceg2009real}, \cite{grancharova2005survey}. The control signal is calculated over a defined horizon, but from the sequence of applicable control signals only the first one is used in the next sample. This procedure is repeated according to the principle of the moving horizon, using new iterations, as such provides the reaction in each sample. The method was developed for systems with physical restrictions, in the first stage for the control of chemical processes in the oil industry, then it was applied to various rapid processes from automotive or power electronics industry \cite{antoniewicz2009predictive} , \cite{geyer2005low}. By default the optimization problem can be solved, for each sample, or explicitly using the multi-parameter programming techniques (mp-LP, mp-QP) presented in \textbf{[N-ANNEX 1]-(Needed?)}, over a well-defined parameter space.
+This way, model based predictive control methods are optimal regulators, with a defined cost function on a defined and encompassed prediction horizon with restrictions \cite{kwon2006receding}, \cite{baotic2005optimal}, \cite{herceg2009real}, \cite{grancharova2005survey}. The control signal is calculated over a defined horizon, but from the sequence of applicable control signals only the first one is used in the next sample. This procedure is repeated according to the principle of the moving horizon, using new iterations, as such provides the reaction in each sample. The method was developed for systems with physical restrictions, in the first stage for the control of chemical processes in the oil industry, then it was applied to various rapid processes from automotive or power electronics industry \cite{antoniewicz2009predictive} , \cite{geyer2005low}. By default the optimization problem can be solved, for each sample, or explicitly using the multi-parameter programming techniques (mp-LP, mp-QP).% presented in \textbf{[N-ANNEX 1]-(Needed?)}, over a well-defined parameter space.
 
 	\myparagraph{Linear quadratic optimal control}\label{BASICCSR:sec:LQR}
 
@@ -677,7 +677,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \end{small}
     \end{equation}
 
-    Also, the set $\mathcal{X}_i$ is a polyhedrof serves as the projection of $\mathcal{P}_i$ in \ref{BASICMPC:equ:constrained_constraint_set} and in \ref{BASICMPC:equ:constrained_constraint_matrices}.\\
+    Also, the set $\mathcal{X}_i$ is a polyhedron serves as the projection of $\mathcal{P}_i$ in \ref{BASICMPC:equ:constrained_constraint_set} and in \ref{BASICMPC:equ:constrained_constraint_matrices}.\\
     Next the previously mentioned terms are implemented with using the Euclidian norm case. For this we start with the constrained control problem \ref{BASICMPC:equ:constrained_optimal_control_problem} with the assumption of $\textbf{Q}=\textbf{Q}'\succeq0$, $\textbf{R}=\textbf{R}'\succ0$, and $\textbf{R}=\textbf{R}'\succeq0$. As such the constrained control problem with euclidian norm:
 
     \begin{equation}
@@ -713,7 +713,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
             \textbf{F}&\textbf{Y}\\
             \end{bmatrix}\succeq 0$.\\
     To obtain problem \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian_second form} elimination of equality constraints can be obtained by successive substitution of $\textbf{x}_{k+1}=\textbf{Ax}_{k}+\textbf{Bu}_{k}$, so only an input sequece as decision variables of $\textbf{U}_0=[\textbf{u}_0,\dots,\textbf{u}_{N-1}]$ and $\textbf{x}(0)$ is left as a parameter vector. In general, it might be more efficient to solve the problem the equality and inequality constraints, so that sparsity can be exploited. To aim this, for this lets define the set of inputs and states as $\tilde{\textbf{z}}=[\textbf{x}'_1,\dots,\textbf{x}'_N,\textbf{u}'_0,\dots,\textbf{u}'_{N-1}]$ and rewrite \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian} as:
-    
+
     \begin{equation}
     \begin{array}{rcl}
             J^*_0(\textbf{x}(0))
@@ -728,9 +728,9 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \end{array}
         \label{BASICMPC:equ:constrained_Euclidian_mergedconstraint}
     \end{equation}
-    
+
     where $\textbf{G}_{0,eq}$, and $\textbf{E}_{0,eq}$, are the equality constraint matrices, and  $\textbf{G}_{0,in}$, $\textbf{E}_{0,in}$, and $\textbf{W}_{0,in}$ are the inequality constraint matrices respectively:
-    
+
     \begin{equation}
     \begin{small}
     \begin{array}{c}
@@ -776,14 +776,14 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
             \textbf{E}_{0,in}=\left[\begin{array}{cccc}
              -\textbf{A}'_x&0&\dots&0\\
              \end{array}\right],
-      
+
         \end{array}
         \end{small}
         \label{BASICMPC:equ:constrained_Euclidian_matrices}
     \end{equation}
-    
-    and the costructed cost matrix $\bar{\textbf{H}}$ as:
-    
+
+    and the constructed cost matrix $\bar{\textbf{H}}$ as:
+
     \begin{equation}
     \begin{small}
     \begin{array}{c}
@@ -801,14 +801,198 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
     \end{small}
     \label{BASICMPC:equ:constrained_Euclidian_costmatrix}
     \end{equation}
+    
+    In the following the state feedback solution starting from the persumed initial state for one minimizing instance $J^*_0(\textbf{x}(0))$ shall be displayed for the constrained quadratic control problem \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian} as \ref{BASICMPC:equ:constrained_Euclidian_mergedconstraint}, with $\textbf{G}_0$, $\textbf{E}_0$ $\textbf{W}_0$ as the constraint describing matrices as defined in \ref{BASICMPC:equ:constrained_constraint_matrices} starting from $\textbf{x}(0)$, and $\textbf{H}$, $\textbf{F}$, and $\textbf{Y}$ as the substitute matrices described in \ref{BASICMPC:equ:batch_simplfy}, to acquire the optimal solution.\\
+    We view the initial state $\textbf{x}(0)$ as the vector of parameters as our goal to solve \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian} for all values of the set of initial states $\textbf{x}(0)\in\mathcal{X}_0$ and make this dependence explicit, with the computation of $\mathcal{X}_0$ in terms of feasibility, described in  \ref{BASICMPC:equ:constrained_feasible_set}.\\
+    For convenience let us define the substitutive term $\textbf{z}$ as:
+    
+    \begin{equation}
+    \begin{array}{rcl}
+            \textbf{z}&=&\textbf{U}_0+\textbf{H}^{-1}\textbf{F}'\textbf{x}(0),
+        \end{array}
+        \label{BASICMPC:equ:constrained_substitute_z}
+    \end{equation}
 
-
-
-
-
-
-
+    where $\textbf{z}\in\mathbb{R}^s$ and with this transform \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian} to obtain the equivalent control problem:
+    
+    \begin{equation}
+    \begin{array}{rcl}
+            \hat{J}^*(\textbf{x}(0))&=&J^*_0(\textbf{x}(0))-\textbf{x}(0)'(\textbf{Y}-\textbf{F}\textbf{H}^{-1}\textbf{F}')\textbf{x}(0)\\
+            &=&\min_{\textbf{z}}\textbf{z}'\textbf{H}\textbf{z}\\
+            &\textnormal{subj. to}&\textbf{G}_0\textbf{U}_0\leq\textbf{W}_0+\textbf{S}_0\textbf{x}(0),
+        \end{array}
+        \label{BASICMPC:equ:constrained_substitute_J}
+    \end{equation}
+    
+    where $\textbf{S}_0=\textbf{E}_0+\textbf{G}_0\textbf{H}^{-1}\textbf{F}'$. In this transformed problem the initial parameter vector $\textbf{x}(0)$ appears only on right hand side of constraints. In this case \ref{BASICMPC:equ:constrained_substitute_J} is a multi parametric constrained quadratic optimal program that can be solved explicitly by using geometrical means described in \cite{bemporad2002explicit}.
+    
+    \subsubsection{Receiding horison control}\label{BASICCSR:sec:RHC}
+    
+    All this said, even if we calculate the best optimal step sequence for solving the constrained control problem, there are sstill uncertainties for the future. Optimization over a finite horizon has the following disadvantages:
 		
+		\begin{itemize}
+			\item Unforeseen problems may occur after the fixed optimization horizon, which may cancel the sequence of order for the 		calculated finished horizon.
+		\item After reaching the time defined by the horizon, the law of command is no longer optimal.
+		\item Finite horizon optimization is usually used because of the limited computing power is available, and not for theoretical reasons
+		\end{itemize}
+		
+		To prevent this problem, the notion of optimization is introduced on a moving horizon. In each sample $k$ , an optimization problem is solved over a defined horizon $k,\dots,k+N$ to calculate the appropriate command sequence, and only the first command is applied. This results in a moving optimization horizon, which eliminates the issues listed before dispayed on Fig.\ref{BASICCSR:fig:RHC}. \\
+
+\begin{figure}[!ht]
+        \centering
+        \includegraphics[width=.9\textwidth]{EMPC_PNG_Pics/RHC.png}
+        \caption{Graphycal display of receiding horison control (RHC) idea \cite{borrelli2017predictive}.}
+        \label{BASICCSR:fig:RHC}
+    \end{figure}
+
+The Formulation of the optimal control problem with moving horizon \cite{goodwin2006constrained} in the system \ref{BASICMPC:equ:basic_LTI} with input and output constraints as mentioned in \ref{BASICMPC:equ:basic_LTI_constrained} with the cost function to minimize:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				J(\textbf{U},\textbf{x}(q))&=&\min_{\textbf{U}_{q\rightarrow q+N|q}}J_q(\textbf{x}(q),\textbf{U}_{q\rightarrow q+N|q})\\
+                &=&\textbf{x}'_{q+N_y|q}\textbf{P}\textbf{x}_{q+N_y|q}+\sum^{N_y-1}_{k=0}\textbf{x}'_{q+k|q}\textbf{Q}\textbf{x}_{q+k|q}+\textbf{u}'_{q+k}\textbf{R}\textbf{u}_{q+k},\\
+				&\textnormal{subj. to}&\textbf{x}_N\in\mathcal{X}_f,\textbf{x}_k\in\mathcal{X}^x,\textbf{u}_k\in\mathcal{U}^u\\
+				&&\textbf{x}_{q|q}=\textbf{x}(q),\\
+				&&\textbf{x}_{q+k+1|q}=\textbf{A}\textbf{x}_{q+k|q}+\textbf{B}\textbf{u}_{q+k},\\
+				%&&\textbf{y}_{q+k|q}=\textbf{C}\textbf{x}_{q+k|q}, k\geq0,\\
+				&&\textbf{u}_{q+k}=-K\textbf{x}_{q+k|q}, N_u\leq k\leq N_y,\\
+        \end{array}
+        \label{BASICMPC:equ:receiding_horison_problem}
+    \end{equation}
+		
+		where $\textbf{Q}=\textbf{Q}'\geq0$, $\textbf{R}=\textbf{R}'\geq0$, $\textbf{P}\geq0$, $(\textbf{C},\textbf{A})$ is observable, and $N_u\leq N_y$, $N_c\leq N_y-1$. One trivial possibility to choose $K=0$ and $\textbf{P}$ to satisfy the Lyapunov equation:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				\textbf{P}&=&\textbf{A}'\textbf{PA}+\textbf{Q}\\
+        \end{array}
+        \label{BASICMPC:equ:receiding_horison_Lyapunov}
+    \end{equation}
+		
+		This means that after $N_u$ samples the control stops and the system is evolving to an open loop form. It is obvious that the choice only makes sense if the open loop system is stable. The second option would as described in \ref{BASICMPC:equ:control_coefficient_infinite}, and \ref{BASICMPC:equ:Riccati_infinite}, but this involves to use an unconstrained control for $N_u$ LQR samples. As a result, the MPC law calculates the optimal command sequence:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				\textbf{U}^*(q)&=&\left\{\textbf{u}^*_q,\dots,\textbf{u}^*_{q+N_u-1}\right\},\\
+        \end{array}
+        \label{BASICMPC:equ:receiding_optimal_sequence}
+    \end{equation}
+		
+		and only the first control input is applied:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+				\textbf{u}(q)=\textbf{u}^*_q.\\
+        \end{array}
+        \label{BASICMPC:equ:receiding_optimal_first}
+    \end{equation}
+		
+		The optimal control inputs estimated for future samples are not taken into account and the algorithm is
+repeated on the basis of new measurements or a new estimation of the states.	
+    
+    \subsubsection{Stability of MPC}\label{BASICCSR:sec:MPCStability}
+    
+    	The problem of closed system stability with the predictive control has been extensively studied e.g. in \cite{mayne2000constrained}, \cite{grieder2005stabilizing}. In the first generation of model based controllers, stability was achieved more experimentally by choosing parameters based on previous studies and experiences. In 1988 the Lyapunov stability method for discrete systems were introduced \cite{keerthi1988optimal}, and in 1990 for continuous systems \cite{mayne1990receding} also for continuous systems. \\
+    While asymptotic convergence $\lim_{k\rightarrow\infty}\textbf{x}_k=0$ is a desirable property, it is generally not sufficient in practice. We would also like a system to stay in a small neighborhood of the origin when it is disturbed by a little. Formally this is expressed as Lyapunov stability.\\
+    For the autonomous system:
+    
+    \begin{equation}
+    \begin{array}{rcl}
+            \textbf{x}_{k+1}&=&g(\textbf{x}_k)\\
+            &\textnormal{subj. to}&g(0)=0,
+        \end{array}
+        \label{BASICMPC:equ:autonom_system}
+    \end{equation}
+    
+    the defnition of Lyapunov stability is for the equilibrium point $\textbf{x}=0$ of system \ref{BASICMPC:equ:autonom_system} is:
+    \begin{itemize}
+    \item stable if, for each $\epsilon>0$, there is a $\delta>0$ such that:
+        \begin{equation}
+        \begin{array}{c}
+                \norm{\textbf{x}_0}<\delta\textnormal{ s.t.: }\norm{\textbf{x}_k}<\epsilon,\textnormal{ }\forall k\geq0.
+            \end{array}
+            \label{BASICMPC:equ:lyapunov_1}
+        \end{equation}
+        
+    \item unstable if not stable
+    
+    \item asymptotically stable if in the set $\boldsymbol{\Omega}\subseteq\mathbb{R}^n$ if its stable and:
+       \begin{equation}
+        \begin{array}{c}
+                \lim_{k\rightarrow\infty}\textbf{x}_k=0,\textnormal{ }\forall\textbf{x}_0\in\boldsymbol{\Omega}.
+            \end{array}
+            \label{BASICMPC:equ:lyapunov_2}
+        \end{equation}
+    
+    \item globally asymptotically stable if it is asymptotically stable and $\boldsymbol{\Omega}=\mathbb{R}^n$
+    
+    \item exponentially stable if it is stable and there exist constants $\alpha>0$ and $\gamma\in(0,1)$ such that:
+    \begin{equation}
+        \begin{array}{c}
+                \norm{\textbf{x}_0}<\delta\textnormal{ s.t.: }\norm{\textbf{x}_k}\leq\alpha\norm{\textbf{x}_0}\gamma^k,\textnormal{ }\forall k\geq0.
+            \end{array}
+            \label{BASICMPC:equ:lyapunov_3}
+        \end{equation}
+    
+    
+    \end{itemize}
+    
+    Usually to show Lyapunov stability of the origin for a particular system one constructs a so called Lyapunov function, i.e., a function satisfying the conditions of the following theorem:\\
+    Consider the equilibrium point $\textbf{x}=0$ of system \ref{BASICMPC:equ:autonom_system}. Let $\boldsymbol{\Omega}\subset\mathbb{R}^n$ be a closed and bounded set containing the origin. Assume there exists a function $V:\mathbb{R}^n\rightarrow\mathbb{R}$ continuous at the origin, finite for every $\textbf{x}\in\boldsymbol{\Omega}$ and such that:
+    
+    \begin{equation}
+        \begin{array}{l}
+                \bullet\textnormal{ } V(0)=0\\
+                \bullet\textnormal{ } V(\textbf{x})>0,\textnormal{ }\forall\textbf{x}\in\boldsymbol{\Omega}\textbackslash\{0\}\\
+                \bullet\textnormal{ } V(\textbf{x}_{k+1})-V(\textbf{x}_{k})\leq-\alpha(\textbf{x}_k),\textnormal{ }\forall\textbf{x}\in\boldsymbol{\Omega}\textbackslash\{0\},
+            \end{array}
+            \label{BASICMPC:equ:lyapunov_4_1}
+        \end{equation}
+        
+     where $\alpha:\mathbb{R}^n\rightarrow\mathbb{R}$ is a continuous positive definite function, then $\textbf{x}=0$ is asymptotically stable. As such a function satisfying \ref{BASICMPC:equ:lyapunov_4} is called a Lyapunov function.\\
+     A similar theorem can be derived for global asymptotic stability i.e.: $\boldsymbol{\Omega}=\mathbb{R}^n$:
+     Consider the equilibrium point $\textbf{x}=0$ of system \ref{BASICMPC:equ:autonom_system}. Let $\boldsymbol{\Omega}\subset\mathbb{R}^n$ be a closed and bounded set containing the origin. Assume there exists a function $V:\mathbb{R}^n\rightarrow\mathbb{R}$ continuous at the origin, finite for every $\textbf{x}\in\boldsymbol{\Omega}$ and such that:
+     
+     \begin{equation}
+        \begin{array}{l}
+                \bullet\textnormal{ }\norm{\textbf{x}}\rightarrow\infty,\textnormal{ s.t.: }V(\textbf{x})\rightarrow\infty\\
+                \bullet\textnormal{ } V(0)=0\\
+                \bullet\textnormal{ } V(\textbf{x})>0,\textnormal{ }\forall\textbf{x}\neq0\\
+                \bullet\textnormal{ } V(\textbf{x}_{k+1})-V(\textbf{x}_{k})\leq-\alpha(\textbf{x}_k),\textnormal{ }\forall\textbf{x}\neq0,
+            \end{array}
+            \label{BASICMPC:equ:lyapunov_4_2}
+        \end{equation}
+     where $\alpha:\mathbb{R}^n\rightarrow\mathbb{R}$ is a continuous positive definite function, then $\textbf{x}=0$ is globally asymptotically stable.\\
+     For linear systems a simple and effective Lyapunov function can be:
+     
+     \begin{equation}
+        \begin{array}{rcl}
+                V(\textbf{x})&=&\textbf{x}'\textbf{P}\textbf{x},\textbf{P}\succ 0,\\
+            \end{array}
+            \label{BASICMPC:equ:lyapunov_5}
+        \end{equation}
+    
+    In order to test the satisfaction of the last point of \ref{BASICMPC:equ:lyapunov_4_2}, we compute:
+    
+    \begin{equation}
+        \begin{array}{rcl}
+                V(\textbf{x}_{k+1})-V(\textbf{x}_{k})&=&\textbf{x}'_{k+1}\textbf{P}\textbf{x}_{k+1}-\textbf{x}'_{k}\textbf{P}\textbf{x}_{k}\\
+                &=&\textbf{x}'_{k}(\textbf{A}'\textbf{P}\textbf{A})\textbf{x}_{k}-\textbf{x}'_{k}\textbf{P}\textbf{x}_{k}\\
+                &=&\textbf{x}'_{k}(\textbf{A}'\textbf{P}\textbf{A}-\textbf{P})\textbf{x}_{k},
+            \end{array}
+            \label{BASICMPC:equ:lyapunov_6}
+        \end{equation}
+    
+    therefore, if \ref{BASICMPC:equ:lyapunov_5} holds true then:
+    
+    \begin{equation}
+        \begin{array}{rcl}
+                 \textbf{A}'\textbf{P}\textbf{A}-\textbf{P}&=&-\textbf{Q},\textbf{Q}\succ 0,\\
+            \end{array}
+            \label{BASICMPC:equ:lyapunov_7}
+        \end{equation}
+
+	which is referred as discrete time Lyapunov equation.
 	%with the restrictions:
 %	
 %	\begin{equation}
@@ -984,184 +1168,184 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
 %\paragraph{Batch approach}
 
 
-\subsubsection{Stability of MPC}\label{BASICCSR:sec:MPCStability}		
-
-	The problem of closed system stability with the predictive control has been extensively studied e.g. in \cite{mayne2000constrained}, \cite{grieder2005stabilizing}. In the first generation of model based controllers, stability was achieved more experimentally by choosing parameters based on previous studies and experiences. In 1988 the Lyapunov stability method for discrete systems were introduced \cite{keerthi1988optimal}, and in 1990 for continuous systems \cite{mayne1990receding} also for continuous systems. \\
-	Generally, let $\textbf{U}\subset\mathbb{R}^n$ be an open set where $0\in \textbf{U}$. A function $V:\textbf{U}\longrightarrow\mathbb{R}$ is called positive (or negative) definite if $V(0)=0$ and $V(\boldsymbol{x})>0$ (or $V(\boldsymbol{x})<0$), when $\boldsymbol{x}\neq0$, and $\boldsymbol{x}\in U$. Also said function called positive (or negative) semidefinite if $V(0)=0$ and $V(\boldsymbol{x})\geq 0$ (or $V(\boldsymbol{x})\leq 0$), when $\boldsymbol{x}\neq 0$, and $\boldsymbol{x}\in \textbf{U}$. Clearly $V$ is a negative (semi-)definite function if $-V$ is a positive (semi-)definite function. So, in many applications the domain of $V$ is $\textbf{U}=\mathbb{R}^n$.\\
-	Also it can be said (according to the Sylvester theorem \cite{horn2012matrix}) that the quadratic function:
-	
-	\begin{equation}
-        \begin{array}{rcl}
-				V(\boldsymbol{x})&=&\boldsymbol{x}^T\boldsymbol{A}\boldsymbol{x},\\
-        \end{array}
-        \label{BASICMPC:equ:LyapunovTheory_0}
-    \end{equation}
-	
-	is positive definite iff all the leading principal minors if the matrix $A$ are positive. As such consider the nonlinear system \ref{BASICMPC:equ:LyapunovTheory_1}:
-	
-	\begin{equation}
-        \begin{array}{rcl}
-				\boldsymbol{\dot{x}}&=&f(\boldsymbol{x}),\\
-        \end{array}
-        \label{BASICMPC:equ:LyapunovTheory_1}
-    \end{equation}
-	
-	where we assume that $f(0)=0$ is a (trivial) equilibrium point of the system. The component functions of $f$ are denoted by $f(\boldsymbol{x})=f_1(\boldsymbol{x},\dots,f_n(\boldsymbol{x}))^T$. Let $V:\mathbb{R}^n\longrightarrow\mathbb{R}$ be continuously partially differentiable, with respect to all variables. By computing the derivative of the composite function $V(\boldsymbol{x}(t)$, where $\boldsymbol{x}(t)=(x_1(q),\dots,x_n(q)))^T$ is solution of \ref{BASICMPC:equ:LyapunovTheory_1}:
-	
-	\begin{equation}
-        \begin{array}{rcl}
-				\frac{dV}{dt}(\boldsymbol{x}(t))&=&\frac{\partial V}{\partial x_1}(\boldsymbol{x}(t)f_1(\boldsymbol{x}(t)))+\dots+\frac{\partial V}{\partial x_n}(\boldsymbol{x}(t)f_n(\boldsymbol{x}(t))),\\
-        \end{array}
-        \label{BASICMPC:equ:LyapunovTheory_2}
-    \end{equation}
-		
-		where the derivative of $V$ with respect to \ref{BASICMPC:equ:LyapunovTheory_1} follows:
-		
-		\begin{equation}
-        \begin{array}{rcl}
-				\dot{V}(\boldsymbol{x})&=&\frac{\partial V}{\partial x_1}(\boldsymbol{x}f_1(\boldsymbol{x}))+\dots+\frac{\partial V}{\partial x_n}(\boldsymbol{x}f_n(\boldsymbol{x})).\\
-        \end{array}
-        \label{BASICMPC:equ:LyapunovTheory_3}
-    \end{equation}
-		
-		If this function is negative definite then for every solution $\boldsymbol{x}(t)$ the composite function $V(\boldsymbol{x}(t))$ is monotone decreasing. Moreover, if  $V(\boldsymbol{x}(t))\longrightarrow 0$ as $t\longrightarrow \infty$, then $\boldsymbol{x}(t)\longrightarrow 0$ holds. This is the background of the next Lyapunov theorem:\\
-		Suppose $f(0)=0$, $\textbf{U}\subset\mathbb{R}^n$, is an open set with $0\in \textbf{U}$. Let $V:\textbf{U}\longrightarrow\mathbb{R}$ continuously differentiable with respect to all variables.
-		\begin{enumerate}[a)] % a), b), c), ...
-		\item If $V$ is positive definite and $\dot{V}$ is negative semidefinite, then the equlibrium $0$ of \ref{BASICMPC:equ:LyapunovTheory_1} is stable.
-		\item If $V$ is positive definite and $\dot{V}$ is negative definite, then the equlibrium $0$ of \ref{BASICMPC:equ:LyapunovTheory_1} is asymptotically stable.
-		\item If in every neighborhood of $0$ there exsists $\boldsymbol{x}$ such that $V(\boldsymbol{x})>0$ and $\dot{V}$ is positive definite, then the equlibrium $0$ of \ref{BASICMPC:equ:LyapunovTheory_1} is unstable.
-\end{enumerate}
-
-This way $V$ is called Lyapunov function if its positive definite and its derivative $\dot{V}$ with respect to \ref{BASICMPC:equ:LyapunovTheory_1} is negative semidefinite.\\
-	In this fashion, by using cost function, as a candidate for Lyapunov function, several methods of analysis have been developed, guaranteeing stability.	As basis the unconstrained LQR \ref{BASICMPC:equ:cost_function} is serving to create the Lypunov function such as:
-	
-\begin{equation}
-        \begin{array}{rcl}
-				V(x)&=&x'Px, P\succ 0.\\
-        \end{array}
-        \label{BASICMPC:equ:stability_Lyapunov_1}
-    \end{equation}
-		
-	In order to test this lets make the following calculation:
-	
-	\begin{equation}
-        \begin{array}{rcl}
-				V(x_{k+1})-V(x_{k})&=&x'_{k+1}Px_{k+1}-x'_{k}Px_{k}=\\
-				&=&k'_kA'PAx_k-x'_kPx_k=\\
-				&=&x'_k(A'PA-P)x_k,\\
-        \end{array}
-        \label{BASICMPC:equ:stability_Lyapunov_2}
-    \end{equation}
-		
-		where, in order to satisfy the Lyapunov theorem:
-		
-		\begin{equation}
-        \begin{array}{rcl}
-				A'PA-P&=&-Q, Q\succ 0.\\
-        \end{array}
-        \label{BASICMPC:equ:stability_Lyapunov_3}
-    \end{equation}
-		
-	This is referred to as discrete-time Lyapunov equation, where  according to \cite{borrelli2017predictive} iff $\textbf{P}$ satisfying \ref{BASICMPC:equ:stability_Lyapunov_3}, then the system is asymptotically stable. From an optimisation point of view problem \ref{BASICMPC:equ:optim_problem} in compact form:
-	
-\begin{equation}
-        \begin{array}{rcl}
-				%min_\textbf{U}J(\textbf{U},\textbf{x})&=&F(\textbf{x}_N)+\sum^{N-1}_{k=0}L(\textbf{x}_k,\textbf{u}_k)\\
-				\min_{\textbf{U}}J(\textbf{U},\textbf{x})&=&F(\textbf{x}_N)+\sum^{N-1}_{k=0}L(\textbf{x}_k,\textbf{u}_k)\\
-					&a.i.&\textbf{x}_{k+1}=f(\textbf{x}_k,\textbf{u}_k) \\
-					&&x\in \mathcal{X}_f, u\in \textbf{U}\\
-					&&\textbf{x}_0=\textbf{x}(q)\\
-        \end{array}
-        \label{BASICMPC:equ:optim_stability}
-    \end{equation}
-
-Assuming that the function cost $J(\textbf{U},\textbf{x})$ is a Lyapunov candidate, the MPC would be asymptotically make the system stable, if the following conditions are met:
-\begin{enumerate}
-	\item There is a terminal set $\Omega\subset \mathcal{X}_f$ so that $\Omega$ is also marginalized $0\in\Omega$ (constraints of states are satisfied in $\Omega$).
-	\item There is a terminal controller $K(\textbf{x}_k)\in U, \forall x\in\Omega,k=N,\dots,\infty$ (constraints of inputs are satisfied in $\Omega$)
-	\item The set $\Omega$ is invariant for the function $f(\textbf{x}_k,K(\textbf{x}_k)$ which needs to be optimized, so for every $\textbf{x}_0\in\Omega$, all subsequent $\textbf{x}_{k+1}=f(\textbf{x}_k,K(\textbf{x}_k)$ would remain in $\Omega$.
-	\item $F(f(\textbf{x}_k,K(\textbf{x}_k)))-F(\textbf{x})+L(\textbf{x}_k,K(\textbf{x}_k))\leq 0$, then $F()$ is the Lyapunov function in $\Omega$.
-\end{enumerate}
-
-Based on these conditions above, there are several methods of stabilizing the systems with MPC regulators, some of these are presented below \cite{herceg2009real}.
-
-\begin{itemize}
-	\item \textbf{MPC with final state constraint}: Stability is ensured by $\textbf{x}_N=0$. This imposes that $\Omega=\{0\}$, as such $K(\textbf{x}_k)=0$ maintains the state of origin. The advantage of the method is that we have a simple constraint, but imposing an equality constraint can to lead to difficulties in obtaining the solution.
-	\item \textbf{MPC with terminal cost}: This method imposes a zero terminal cost, without imposing restrictions
-for the final states. This method guarantees stability for large prediction horizons
-of unrestricted systems.
-	\item \textbf{MPC with permissible set restrictions of final states}: For this, it is required to $\textbf{x}_N\in\Omega$. This equality constraint ensures that the controller $K(\textbf{x}_k)$ remains in $\Omega$. This method is also called dual predictive controller, because two regulators are used, one with a moving horizon and one with stabilization of $K(\textbf{x}_k)$.
-	\item \textbf{MPC with permissible set restrictions on final states and terminal cost}: Combined method, and widely used because it encompasses the advantages of previous methods.
-\end{itemize}
-
-There are also stabilization methods such as infinite horizon MPCs or suboptimal MPC regulators, but we do not detail these methods because they are not mentioned in the thesis.
-
-\subsection{Explicit model predictive control (EMPC)}\label{BASICCSR:sec:EMPC}
-
-The problem \ref{BASICMPC:equ:receiding_horison_problem} can be transformed into a multi-parametric quadratic programming (mp-QP) problem. Such an approach involves solving the problem "offline", i.e. explicitly for the defined state-space with considering given constraints. By solving the optimization, critical regions are obtained, where each region corresponds to an optimal command that can be expressed as a function tuned by system states. Therefore the real-time regulation of the system is reduced to the identification of the critical regions corresponding to the measured state and the application of the optimal control input stored in a table. This method has revolutionized the use of the MPC method for systems with high dynamics, in particular for reduced order systems. The disadvantage of the method is that the number of critical regions increases exponentially with an increasing system order. The following shows the transformation of MPC into mp-QP.
-Let us assume an optimization problem described by \ref{BASICMPC:equ:receiding_horison_problem}. The evolution of the subsequent states is calculated according to the relation:
-
-\begin{equation}
-        \begin{array}{rcl}
-				\textbf{x}_{q+k|t}&=&\textbf{A}^k\textbf{x}(q)+\sum^{k-1}_{j=0}\textbf{A}^j\textbf{Bu}_{q+k-1-j}
-        \end{array}
-        \label{BASICMPC:equ:EMPC_evolution}
-    \end{equation}
-
-Based on \ref{BASICMPC:equ:receiding_horison_problem}, and \ref{BASICMPC:equ:EMPC_evolution} the optimization problem becomes:
-
-\begin{equation}
-        \begin{array}{rcl}
-				\textbf{V}(\textbf{x}(q))&=&\frac{1}{2}\textbf{x}'(q)\textbf{Yx}(q)+min\left\{\frac{1}{2}\textbf{U}'\textbf{HU}+\textbf{x}'(q)\textbf{FU}\right\},\\
-				%&with\,restrictions:&\textbf{GU}\leq \textbf{W}+\textbf{Ex}(t)\\
-        \end{array}
-        \label{BASICMPC:equ:EMPC_transformed}
-    \end{equation}
-		
-		with restrictions:
-		
-		\begin{equation}
-        \begin{array}{rcl}
-				\textbf{GU}&\leq& \textbf{W}+\textbf{Ex}(q),\\
-        \end{array}
-        \label{BASICMPC:equ:EMPC_transformed_2}
-    \end{equation}
-		
-		where $\textbf{U}=\{u'_t,\dots,u'_{q+N_u-1}\}\in\mathbb{R}^s,\,s=m\cdot N_u$, and $\textbf{H}$ is the optimization vector where $\textbf{H}=\textbf{H}'>0$, and $\textbf{H},\textbf{F},\textbf{Y},\textbf{G},\textbf{W},\textbf{E}$ can be directly obtained from $\textbf{A},\textbf{B},\textbf{Q},\textbf{R},\textbf{P}$, according to \cite{borrelli2017predictive}. Let the transformation vector be:
-		
-		\begin{equation}
-        \begin{array}{rcl}
-				\textbf{z}&=&\textbf{U}+\textbf{H}^{-1}\textbf{F}'\textbf{x}(q)
-        \end{array}
-        \label{BASICMPC:equ:EMPC_trans_var}
-    \end{equation}
-		
-		the cost function \ref{BASICMPC:equ:EMPC_transformed} becomes:
-		
-		\begin{equation}
-        \begin{array}{rcl}
-				\textbf{V}(\textbf{x})&=&\textbf{V}_z(\textbf{x})+\frac{1}{2}\textbf{x}'\left(\textbf{Y}-\textbf{FH}^{-1}\textbf{F}'\right)\textbf{x},
-        \end{array}
-        \label{BASICMPC:equ:EMPC_trans_var}
-    \end{equation}
-		
-		where $\textbf{V}_z(\textbf{x})$ is defined as:
-		
-		\begin{equation}
-        \begin{array}{rcl}
-				\textbf{V}_z(\textbf{x})&=&min\frac{1}{2}\textbf{z}'\textbf{Hz}\\
-				&s.t.&\textbf{Gz}\leq \textbf{W}+\textbf{Sx}(q)\\
-				&&\textbf{S}=\textbf{E}+\textbf{GH}^{-1}\textbf{F}'.\\
-        \end{array}
-        \label{BASICMPC:equ:EMPC_transformed}
-    \end{equation}
-		
-		From \ref{BASICMPC:equ:EMPC_transformed} the standard mp-QP problem can be defined according to \cite{borrelli2017predictive}, and through this transformation the MPC problem can be explicitly obtained.
+%\subsubsection{Stability of MPC}\label{BASICCSR:sec:MPCStability}		
+%
+%	The problem of closed system stability with the predictive control has been extensively studied e.g. in \cite{mayne2000constrained}, \cite{grieder2005stabilizing}. In the first generation of model based controllers, stability was achieved more experimentally by choosing parameters based on previous studies and experiences. In 1988 the Lyapunov stability method for discrete systems were introduced \cite{keerthi1988optimal}, and in 1990 for continuous systems \cite{mayne1990receding} also for continuous systems. \\
+%	Generally, let $\textbf{U}\subset\mathbb{R}^n$ be an open set where $0\in \textbf{U}$. A function $V:\textbf{U}\longrightarrow\mathbb{R}$ is called positive (or negative) definite if $V(0)=0$ and $V(\boldsymbol{x})>0$ (or $V(\boldsymbol{x})<0$), when $\boldsymbol{x}\neq0$, and $\boldsymbol{x}\in U$. Also said function called positive (or negative) semidefinite if $V(0)=0$ and $V(\boldsymbol{x})\geq 0$ (or $V(\boldsymbol{x})\leq 0$), when $\boldsymbol{x}\neq 0$, and $\boldsymbol{x}\in \textbf{U}$. Clearly $V$ is a negative (semi-)definite function if $-V$ is a positive (semi-)definite function. So, in many applications the domain of $V$ is $\textbf{U}=\mathbb{R}^n$.\\
+%	Also it can be said (according to the Sylvester theorem \cite{horn2012matrix}) that the quadratic function:
+%	
+%	\begin{equation}
+%        \begin{array}{rcl}
+%				V(\boldsymbol{x})&=&\boldsymbol{x}^T\boldsymbol{A}\boldsymbol{x},\\
+%        \end{array}
+%        \label{BASICMPC:equ:LyapunovTheory_0}
+%    \end{equation}
+%	
+%	is positive definite iff all the leading principal minors if the matrix $A$ are positive. As such consider the nonlinear system \ref{BASICMPC:equ:LyapunovTheory_1}:
+%	
+%	\begin{equation}
+%        \begin{array}{rcl}
+%				\boldsymbol{\dot{x}}&=&f(\boldsymbol{x}),\\
+%        \end{array}
+%        \label{BASICMPC:equ:LyapunovTheory_1}
+%    \end{equation}
+%	
+%	where we assume that $f(0)=0$ is a (trivial) equilibrium point of the system. The component functions of $f$ are denoted by $f(\boldsymbol{x})=f_1(\boldsymbol{x},\dots,f_n(\boldsymbol{x}))^T$. Let $V:\mathbb{R}^n\longrightarrow\mathbb{R}$ be continuously partially differentiable, with respect to all variables. By computing the derivative of the composite function $V(\boldsymbol{x}(t)$, where $\boldsymbol{x}(t)=(x_1(q),\dots,x_n(q)))^T$ is solution of \ref{BASICMPC:equ:LyapunovTheory_1}:
+%	
+%	\begin{equation}
+%        \begin{array}{rcl}
+%				\frac{dV}{dt}(\boldsymbol{x}(t))&=&\frac{\partial V}{\partial x_1}(\boldsymbol{x}(t)f_1(\boldsymbol{x}(t)))+\dots+\frac{\partial V}{\partial x_n}(\boldsymbol{x}(t)f_n(\boldsymbol{x}(t))),\\
+%        \end{array}
+%        \label{BASICMPC:equ:LyapunovTheory_2}
+%    \end{equation}
+%		
+%		where the derivative of $V$ with respect to \ref{BASICMPC:equ:LyapunovTheory_1} follows:
+%		
+%		\begin{equation}
+%        \begin{array}{rcl}
+%				\dot{V}(\boldsymbol{x})&=&\frac{\partial V}{\partial x_1}(\boldsymbol{x}f_1(\boldsymbol{x}))+\dots+\frac{\partial V}{\partial x_n}(\boldsymbol{x}f_n(\boldsymbol{x})).\\
+%        \end{array}
+%        \label{BASICMPC:equ:LyapunovTheory_3}
+%    \end{equation}
+%		
+%		If this function is negative definite then for every solution $\boldsymbol{x}(t)$ the composite function $V(\boldsymbol{x}(t))$ is monotone decreasing. Moreover, if  $V(\boldsymbol{x}(t))\longrightarrow 0$ as $t\longrightarrow \infty$, then $\boldsymbol{x}(t)\longrightarrow 0$ holds. This is the background of the next Lyapunov theorem:\\
+%		Suppose $f(0)=0$, $\textbf{U}\subset\mathbb{R}^n$, is an open set with $0\in \textbf{U}$. Let $V:\textbf{U}\longrightarrow\mathbb{R}$ continuously differentiable with respect to all variables.
+%		\begin{enumerate}[a)] % a), b), c), ...
+%		\item If $V$ is positive definite and $\dot{V}$ is negative semidefinite, then the equlibrium $0$ of \ref{BASICMPC:equ:LyapunovTheory_1} is stable.
+%		\item If $V$ is positive definite and $\dot{V}$ is negative definite, then the equlibrium $0$ of \ref{BASICMPC:equ:LyapunovTheory_1} is asymptotically stable.
+%		\item If in every neighborhood of $0$ there exsists $\boldsymbol{x}$ such that $V(\boldsymbol{x})>0$ and $\dot{V}$ is positive definite, then the equlibrium $0$ of \ref{BASICMPC:equ:LyapunovTheory_1} is unstable.
+%\end{enumerate}
+%
+%This way $V$ is called Lyapunov function if its positive definite and its derivative $\dot{V}$ with respect to \ref{BASICMPC:equ:LyapunovTheory_1} is negative semidefinite.\\
+%	In this fashion, by using cost function, as a candidate for Lyapunov function, several methods of analysis have been developed, guaranteeing stability.	As basis the unconstrained LQR \ref{BASICMPC:equ:cost_function} is serving to create the Lypunov function such as:
+%	
+%\begin{equation}
+%        \begin{array}{rcl}
+%				V(x)&=&x'Px, P\succ 0.\\
+%        \end{array}
+%        \label{BASICMPC:equ:stability_Lyapunov_1}
+%    \end{equation}
+%		
+%	In order to test this lets make the following calculation:
+%	
+%	\begin{equation}
+%        \begin{array}{rcl}
+%				V(x_{k+1})-V(x_{k})&=&x'_{k+1}Px_{k+1}-x'_{k}Px_{k}=\\
+%				&=&k'_kA'PAx_k-x'_kPx_k=\\
+%				&=&x'_k(A'PA-P)x_k,\\
+%        \end{array}
+%        \label{BASICMPC:equ:stability_Lyapunov_2}
+%    \end{equation}
+%		
+%		where, in order to satisfy the Lyapunov theorem:
+%		
+%		\begin{equation}
+%        \begin{array}{rcl}
+%				A'PA-P&=&-Q, Q\succ 0.\\
+%        \end{array}
+%        \label{BASICMPC:equ:stability_Lyapunov_3}
+%    \end{equation}
+%		
+%	This is referred to as discrete-time Lyapunov equation, where  according to \cite{borrelli2017predictive} iff $\textbf{P}$ satisfying \ref{BASICMPC:equ:stability_Lyapunov_3}, then the system is asymptotically stable. From an optimisation point of view problem \ref{BASICMPC:equ:optim_problem} in compact form:
+%	
+%\begin{equation}
+%        \begin{array}{rcl}
+%				%min_\textbf{U}J(\textbf{U},\textbf{x})&=&F(\textbf{x}_N)+\sum^{N-1}_{k=0}L(\textbf{x}_k,\textbf{u}_k)\\
+%				\min_{\textbf{U}}J(\textbf{U},\textbf{x})&=&F(\textbf{x}_N)+\sum^{N-1}_{k=0}L(\textbf{x}_k,\textbf{u}_k)\\
+%					&a.i.&\textbf{x}_{k+1}=f(\textbf{x}_k,\textbf{u}_k) \\
+%					&&x\in \mathcal{X}_f, u\in \textbf{U}\\
+%					&&\textbf{x}_0=\textbf{x}(q)\\
+%        \end{array}
+%        \label{BASICMPC:equ:optim_stability}
+%    \end{equation}
+%
+%Assuming that the function cost $J(\textbf{U},\textbf{x})$ is a Lyapunov candidate, the MPC would be asymptotically make the system stable, if the following conditions are met:
+%\begin{enumerate}
+%	\item There is a terminal set $\Omega\subset \mathcal{X}_f$ so that $\Omega$ is also marginalized $0\in\Omega$ (constraints of states are satisfied in $\Omega$).
+%	\item There is a terminal controller $K(\textbf{x}_k)\in U, \forall x\in\Omega,k=N,\dots,\infty$ (constraints of inputs are satisfied in $\Omega$)
+%	\item The set $\Omega$ is invariant for the function $f(\textbf{x}_k,K(\textbf{x}_k)$ which needs to be optimized, so for every $\textbf{x}_0\in\Omega$, all subsequent $\textbf{x}_{k+1}=f(\textbf{x}_k,K(\textbf{x}_k)$ would remain in $\Omega$.
+%	\item $F(f(\textbf{x}_k,K(\textbf{x}_k)))-F(\textbf{x})+L(\textbf{x}_k,K(\textbf{x}_k))\leq 0$, then $F()$ is the Lyapunov function in $\Omega$.
+%\end{enumerate}
+%
+%Based on these conditions above, there are several methods of stabilizing the systems with MPC regulators, some of these are presented below \cite{herceg2009real}.
+%
+%\begin{itemize}
+%	\item \textbf{MPC with final state constraint}: Stability is ensured by $\textbf{x}_N=0$. This imposes that $\Omega=\{0\}$, as such $K(\textbf{x}_k)=0$ maintains the state of origin. The advantage of the method is that we have a simple constraint, but imposing an equality constraint can to lead to difficulties in obtaining the solution.
+%	\item \textbf{MPC with terminal cost}: This method imposes a zero terminal cost, without imposing restrictions
+%for the final states. This method guarantees stability for large prediction horizons
+%of unrestricted systems.
+%	\item \textbf{MPC with permissible set restrictions of final states}: For this, it is required to $\textbf{x}_N\in\Omega$. This equality constraint ensures that the controller $K(\textbf{x}_k)$ remains in $\Omega$. This method is also called dual predictive controller, because two regulators are used, one with a moving horizon and one with stabilization of $K(\textbf{x}_k)$.
+%	\item \textbf{MPC with permissible set restrictions on final states and terminal cost}: Combined method, and widely used because it encompasses the advantages of previous methods.
+%\end{itemize}
+%
+%There are also stabilization methods such as infinite horizon MPCs or suboptimal MPC regulators, but we do not detail these methods because they are not mentioned in the thesis.
+%
+%\subsection{Explicit model predictive control (EMPC)}\label{BASICCSR:sec:EMPC}
+%
+%The problem \ref{BASICMPC:equ:receiding_horison_problem} can be transformed into a multi-parametric quadratic programming (mp-QP) problem. Such an approach involves solving the problem "offline", i.e. explicitly for the defined state-space with considering given constraints. By solving the optimization, critical regions are obtained, where each region corresponds to an optimal command that can be expressed as a function tuned by system states. Therefore the real-time regulation of the system is reduced to the identification of the critical regions corresponding to the measured state and the application of the optimal control input stored in a table. This method has revolutionized the use of the MPC method for systems with high dynamics, in particular for reduced order systems. The disadvantage of the method is that the number of critical regions increases exponentially with an increasing system order. The following shows the transformation of MPC into mp-QP.
+%Let us assume an optimization problem described by \ref{BASICMPC:equ:receiding_horison_problem}. The evolution of the subsequent states is calculated according to the relation:
+%
+%\begin{equation}
+%        \begin{array}{rcl}
+%				\textbf{x}_{q+k|t}&=&\textbf{A}^k\textbf{x}(q)+\sum^{k-1}_{j=0}\textbf{A}^j\textbf{Bu}_{q+k-1-j}
+%        \end{array}
+%        \label{BASICMPC:equ:EMPC_evolution}
+%    \end{equation}
+%
+%Based on \ref{BASICMPC:equ:receiding_horison_problem}, and \ref{BASICMPC:equ:EMPC_evolution} the optimization problem becomes:
+%
+%\begin{equation}
+%        \begin{array}{rcl}
+%				\textbf{V}(\textbf{x}(q))&=&\frac{1}{2}\textbf{x}'(q)\textbf{Yx}(q)+min\left\{\frac{1}{2}\textbf{U}'\textbf{HU}+\textbf{x}'(q)\textbf{FU}\right\},\\
+%				%&with\,restrictions:&\textbf{GU}\leq \textbf{W}+\textbf{Ex}(t)\\
+%        \end{array}
+%        \label{BASICMPC:equ:EMPC_transformed}
+%    \end{equation}
+%		
+%		with restrictions:
+%		
+%		\begin{equation}
+%        \begin{array}{rcl}
+%				\textbf{GU}&\leq& \textbf{W}+\textbf{Ex}(q),\\
+%        \end{array}
+%        \label{BASICMPC:equ:EMPC_transformed_2}
+%    \end{equation}
+%		
+%		where $\textbf{U}=\{u'_t,\dots,u'_{q+N_u-1}\}\in\mathbb{R}^s,\,s=m\cdot N_u$, and $\textbf{H}$ is the optimization vector where $\textbf{H}=\textbf{H}'>0$, and $\textbf{H},\textbf{F},\textbf{Y},\textbf{G},\textbf{W},\textbf{E}$ can be directly obtained from $\textbf{A},\textbf{B},\textbf{Q},\textbf{R},\textbf{P}$, according to \cite{borrelli2017predictive}. Let the transformation vector be:
+%		
+%		\begin{equation}
+%        \begin{array}{rcl}
+%				\textbf{z}&=&\textbf{U}+\textbf{H}^{-1}\textbf{F}'\textbf{x}(q)
+%        \end{array}
+%        \label{BASICMPC:equ:EMPC_trans_var}
+%    \end{equation}
+%		
+%		the cost function \ref{BASICMPC:equ:EMPC_transformed} becomes:
+%		
+%		\begin{equation}
+%        \begin{array}{rcl}
+%				\textbf{V}(\textbf{x})&=&\textbf{V}_z(\textbf{x})+\frac{1}{2}\textbf{x}'\left(\textbf{Y}-\textbf{FH}^{-1}\textbf{F}'\right)\textbf{x},
+%        \end{array}
+%        \label{BASICMPC:equ:EMPC_trans_var}
+%    \end{equation}
+%		
+%		where $\textbf{V}_z(\textbf{x})$ is defined as:
+%		
+%		\begin{equation}
+%        \begin{array}{rcl}
+%				\textbf{V}_z(\textbf{x})&=&min\frac{1}{2}\textbf{z}'\textbf{Hz}\\
+%				&s.t.&\textbf{Gz}\leq \textbf{W}+\textbf{Sx}(q)\\
+%				&&\textbf{S}=\textbf{E}+\textbf{GH}^{-1}\textbf{F}'.\\
+%        \end{array}
+%        \label{BASICMPC:equ:EMPC_transformed}
+%    \end{equation}
+%		
+%		From \ref{BASICMPC:equ:EMPC_transformed} the standard mp-QP problem can be defined according to \cite{borrelli2017predictive}, and through this transformation the MPC problem can be explicitly obtained.
 		
 
 \subsection{Storage of critical regions}\label{BASICCSR:sec:EMPCStorage}
 
-The issue of iterative model based controllers is that they require a lot of computational resource. The CPU load and required ROM consumption could increase exponentially the longer the more steps the control horizon is calculated. For this reason explicit model bssed predictive controllers (EMPC) were developed, where only the storage the critical regions and the signal coefficients for each critical region, so the matrices $H$, $K$, $M$, $G$ are required. The on-line part of control consists of searching the critical region for the current states and calculating the necessary inputs for them.
+The issue of iterative model based controllers is that they require a lot of computational resource. The CPU load and required ROM consumption could increase exponentially the longer the more steps the control horizon is calculated. For this reason explicit model bssed predictive controllers (EMPC) were developed, where only the storage the critical regions and the signal coefficients for each critical region, so the matrices $H$, $K$, $F$, $G$ are required. The on-line part of control consists of searching the critical region for the current states and calculating the necessary inputs for them.
 One method of storing entire critical regions in order to calculate them, and that is in the order in which the MP-LP or MP-QP problem is resolved. It has the disadvantage, that the search time can be high, as such starting from the top of the list, a linear search is not effective. The efficient method is to store critical regions already in a binary tree \cite{jones2006logarithmic}, \cite{tondel2003evaluation}, \cite{tondel2003constrained}, \cite{kutasi2008vector}. The method of generating the binary tree is shown in (Fig.\ref{BASICMPC:fig:searchtree}.).\\
  The basic idea is to sort the critical regions depending on their adjacent sides. For example, in (Fig.\ref{BASICMPC:fig:searchtree}.a.) side $j_1$ divides the state space into two, at the right of it are the regions $X_{2,3,4,5}$ and to the left are the regions $X_{1,2,6}$. They make up the nodes adjacent to the base node $I_1$ of the binary tree. Next the another side from the space is chosen defined by each node $I_2$ respectively $I_3$, and the algorithm is continued until all the regions in the current node correspond to the same control signal, denoted by $F$ on the shaft in fig. (Fig.\ref{BASICMPC:fig:searchtree}.b.) Thus with this search pattern logarithmic search time can be achieved.
 
