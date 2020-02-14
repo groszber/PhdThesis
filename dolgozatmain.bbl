@@ -2300,6 +2300,26 @@
     \field{year}{2010}
   \endentry
 
+  \entry{von2006electric}{book}{}
+    \name{author}{1}{}{%
+      {{hash=VMA}{%
+         family={Von\bibnamedelima Meier},
+         familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={Alexandra},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {John Wiley \& Sons}%
+    }
+    \strng{namehash}{VMA1}
+    \strng{fullhash}{VMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Electric power systems: a conceptual introduction}
+    \field{year}{2006}
+  \endentry
+
   \entry{eugene1986new}{inproceedings}{}
     \name{author}{1}{}{%
       {{hash=EC}{%
@@ -4076,6 +4096,82 @@
   \entry{neukirchner2019linkedmodel}{article}{}
   \endentry
 
+  \entry{neukirchner2016voltage}{article}{}
+    \name{author}{4}{}{%
+      {{hash=NL}{%
+         family={Neukirchner},
+         familyi={N\bibinitperiod},
+         given={L{\'a}szl{\'o}},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={G{\"o}llei},
+         familyi={G\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={G{\"o}rbe},
+         familyi={G\bibinitperiod},
+         given={P{\'e}ter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Magyar},
+         familyi={M\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{sajat}
+    \strng{namehash}{NLGAGP+1}
+    \strng{fullhash}{NLGAGPMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{129\bibrangedash 134}
+    \field{title}{Voltage Unbalance Reduction of a Local Transformer Area with
+  Domestic Asymmetrical Inverter and Optimal Control Design}
+    \field{volume}{12}
+    \field{journaltitle}{Int. J. of Thermal \& Environmental Engineering}
+    \field{year}{2016}
+  \endentry
+
+  \entry{neukirchner2011modeling}{article}{}
+    \name{author}{3}{}{%
+      {{hash=NL}{%
+         family={Neukirchner},
+         familyi={N\bibinitperiod},
+         given={L{\'a}szl{\'o}},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=FA}{%
+         family={Fodor},
+         familyi={F\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Magyar},
+         familyi={M\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{sajat}
+    \strng{namehash}{NLFAMA1}
+    \strng{fullhash}{NLFAMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{147\bibrangedash 152}
+    \field{title}{Modeling and Parameter Sensitivity Analysis of a Synchronous
+  Motor}
+    \field{volume}{39}
+    \field{journaltitle}{Hungarian Journal of Industry and Chemistry}
+    \field{year}{2011}
+  \endentry
+
   \entry{neukirchner2014quasi}{article}{}
     \name{author}{2}{}{%
       {{hash=NL}{%
@@ -4144,41 +4240,6 @@
     \field{volume}{42}
     \field{journaltitle}{Hungarian Journal of Industry and Chemistry}
     \field{year}{2014}
-  \endentry
-
-  \entry{neukirchner2011modeling}{article}{}
-    \name{author}{3}{}{%
-      {{hash=NL}{%
-         family={Neukirchner},
-         familyi={N\bibinitperiod},
-         given={L{\'a}szl{\'o}},
-         giveni={L\bibinitperiod},
-      }}%
-      {{hash=FA}{%
-         family={Fodor},
-         familyi={F\bibinitperiod},
-         given={Attila},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=MA}{%
-         family={Magyar},
-         familyi={M\bibinitperiod},
-         given={Attila},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \keyw{sajat}
-    \strng{namehash}{NLFAMA1}
-    \strng{fullhash}{NLFAMA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{1}
-    \field{pages}{147\bibrangedash 152}
-    \field{title}{Modeling and Parameter Sensitivity Analysis of a Synchronous
-  Motor}
-    \field{volume}{39}
-    \field{journaltitle}{Hungarian Journal of Industry and Chemistry}
-    \field{year}{2011}
   \endentry
 
   \entry{neukirchner2016modelling}{article}{}

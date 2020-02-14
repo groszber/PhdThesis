@@ -2,22 +2,16 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: dolgozatmain.aux
 The style file: biblatex.bst
 Database file #1: dolgozatmain-blx.bib
 Database file #2: dolgozat.bib
-You're missing a field name---line 636 of file dolgozat.bib
+You're missing a field name---line 645 of file dolgozat.bib
  : 
  : %  title={Constrained Predictive Control of Three-Phase Buck Rectifiers},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 646 of file dolgozat.bib
- : @article{neukirchner2019linkedmodel
- :                                    ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 741 of file dolgozat.bib
+Repeated entry---line 763 of file dolgozat.bib
  : %@article{IEEE_936_29053
  :                         ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "thrift2003space"
-Warning--I didn't find a database entry for "EMPC:sec:Modulation"
 Biblatex version: 3.13
 Too many commas in name 1 of "BUDAPEST TECH BECSI UT 96-B, BUDAPEST, H-1034, HUNGARY" for entry ahmed2014model
 while executing---line 2805 of file biblatex.bst
-(There were 4 error messages)
+(There were 3 error messages)

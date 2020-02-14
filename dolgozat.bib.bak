@@ -13,15 +13,6 @@
   Timestamp                = {2016.09.20},
 }
 
-%Wiki
-@book{von2006electric,
-  title={Electric power systems: a conceptual introduction},
-  author={Von Meier, Alexandra},
-  year={2006},
-  publisher={John Wiley \& Sons}
-}
-
-
 %%% Nimród Thesis
 
 @phdthesis{baotic2005optimal,

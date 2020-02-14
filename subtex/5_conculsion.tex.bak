@@ -16,7 +16,7 @@ Lastly in chapter \ref{EMPC:sec:main} in-depth modeling and predictive control t
     I extended the currently used measures of voltage unbalance with a new norm candidate. I found out that it is more demanding from the computational point of view, but has a new feature namely it checks electrical asymmetry, i.e. the norm of a $\pm120$ degree rotated version of the ideal three phase phasor is zero in the geometrical sense. I compared my geometrical approach to the standard wide-spread use of voltage unbalance factor (VUF) and found out it carries additional information, whilst retaining it's original purpose.\\
 		
 \item\textbf{Thesis}: \emph{Voltage unbalance compensation with optimization based control algorithm and asymmetrical inverter structure}\\
-    \textbf{Related publications:} \cite{Neukirchner2015}, \cite{neukirchner2016voltage}, \cite{neukirchner2017voltage}.\\
+    \textbf{Related publications:} \cite{Neukirchner2015}, \cite{neukirchner2017voltage}.\\
      I found out that the regular current controlling applications would not fit to the purpose for reducing voltage unbalance whilst only relying on the voltage measurement. As such I developed an asymmetrical current source inverter (ACSI) circuit with combined asynchronous parallel pattern search (APPS) control structure, in Matlab/Simulink environment, and I applied the my geometrical norm as a cost function. I showed with validating simulations, that the geometrical based unbalance indicator can serve as a basis of further research. \\
 		The fundamental element of the system is a modified three phase inverter that is capable of the asymmetric injection of any current waveforms to the network. The optimization based control algorithm injects the available energy (as current waveform) in such a way, that the voltage unbalance decreases. This optimization problem is usually constrained by the available renewable energy supplied by the power plant. This suggested controller with combined inverter structure enables the residential users owning a grid synchronized domestic power plant to reduce voltage unbalance measurable at any low voltage domestic the connection point. \\
     I also tested the control structure on a real low voltage network model in a dynamical simulation environment consisting of the models of the electrical grid, a domestic power plant, ACSI, and different types of loads. Different simulation experiments has been run for each norm and for both the power constrained and unconstrained case. I showed with the evaluation that this structure can serve as a residential level voltage quality improvement method for the three phase low voltage network.\\
@@ -29,7 +29,7 @@ Lastly in chapter \ref{EMPC:sec:main} in-depth modeling and predictive control t
 	
 \end{enumerate}
 
-Non Thesis related publications:  \cite{neukirchner2011modeling}, \cite{neukirchner2014quasi}, \cite{gollei2014measurement}, \cite{neukirchner2016modelling}.
+Non Thesis related publications: \cite{neukirchner2014quasi}, \cite{gollei2014measurement}, \cite{neukirchner2011modeling}, \cite{neukirchner2016modelling}.
 
 
 		\section{Applications and future work}

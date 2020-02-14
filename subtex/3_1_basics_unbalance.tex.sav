@@ -1,8 +1,8 @@
 \chapter{Basic notions}\label{BASIC:sec:main}
 
-In this chapter the basic topics of the thesis are discussed, as components for further understanding. First the phenomena of voltage unbalance on small distribution networks are shown and the ambiguities though the development of the concept, and at the end the norm currently being in use in the industry. It would be shown how many definitions are currently in use, thus the introduced ambiguity of definition, further validating the proposal in section \ref{VUB:sec:Geom}.\\
-Next a necessary glimpse of power electric background is given to invite to the viewpoint of the modeling and problem breakdown of power converter. The section would introduce the background of current source switching devices with forced commutation, since control based on external situations or according to a cost function is eminent. After the single phase method shall be described, DC-DC conversion would be shown, since in section \ref{VUB:sec:Compensation} non-zero mean asymmetrical power injection was required. The section closes with the three phase rectifier example, for contributing the understating of the modeling in section \ref{EMPC:sec:Modeling}.\\
-Lastly the basis of controller structures, shall be shown, applied in the thesis. These are the APPS (asynchronous parallel pattern search) method (used in section \ref{VUB:sec:Optimization}) and constrained model based predictive control (MPC) is to be described with the end with the explicit partition of the state space (explicit MPC applied in section \ref{EMPC:sec:DCside}) for a computationally efficient approach.
+In this chapter the basic topics of the thesis are discussed, as components for further understanding. First the phenomena of voltage unbalance on small distribution networks are shown and the ambiguities though the development of the concept, and at the end the norm currently in use in the industry. It would be shown how many definitions are currently in use, thus the introduced ambiguity of definition, further validating the proposal in section \ref{VUB:sec:Geom}.\\
+Next a necessary glimpse of power electric background is given to invite to the viewpoint of the modeling and problem breakdown of power converter. The section would introduce the background of current source switching devices with forced commutation, since control based on external situations or according to a cost function is eminent. After the single phase method would be described, DC-DC conversion would be shown, since in section \ref{VUB:sec:Compensation} non-zero mean asymmetrical power injection would be required. The section closes with the three phase rectifier example, for contributing the understating of the modeling in section \ref{EMPC:sec:Modeling}.\\
+Lastly the basis of controller structures, shall be shown which were used in the thesis, where the APPS (asynchronous parallel pattern search) method (used in section \ref{VUB:sec:Optimization}) and constrained model based predictive control (MPC) is to be described with the end with the explicit partition of the state space (explicit MPC applied in section \ref{EMPC:sec:DCside}) for a computationally efficient approach.
 
 	\section{Definitions of voltage unbalance}\label{BASICUNB:sec:DefinitionsofUNB}
 
@@ -18,14 +18,14 @@ In a domestic network, three-phase electric power systems have at least three co
 	
 			\begin{equation}
         \begin{array}{rcl}
-            V_a&=&\hat{V}\,sin(\theta)\\
-						V_b&=&\hat{V}\,sin(\theta+\frac{4}{3}\pi)\\
-						V_c&=&\hat{V}\,sin(\theta+\frac{2}{3}\pi),\\
+            V12&=&V_Psin(\theta)\\
+						V23&=&V_Psin(\theta+\frac{4}{3}\pi)\\
+						V31&=&V_Psin(\theta+\frac{2}{3}\pi),\\
         \end{array}
         \label{BASICUNB:equ:Definition}
     \end{equation}
 	
-	where $\hat{V}$ is the voltage peak, $\theta$ is the phase angle. Voltage unbalance a phenomena where the three phase voltages differ in amplitude normal 120 degree phase relationship shown in Fig.\ref{BASICUNB:fig:UnbPhasor}. In most cases both are happening at the same time. This includes unequal voltage magnitudes at the fundamental frequency, either under, or over voltage, at the fundamental phase angle deviation.
+	where $V_P$ is the voltage peak and $\theta$ is the phase angle. Voltage unbalance is such a phenomena where the three phase voltages differ in amplitude normal 120 degree phase relationship shown in Fig.\ref{BASICUNB:fig:UnbPhasor}. This voltage In most cases both are happening at the same time. This includes unequal voltage magnitudes at the fundamental frequency, either under, or over voltage, at the fundamental phase angle deviation.
 	
 	\begin{figure}[h!]
      \centering
@@ -46,7 +46,7 @@ In a domestic network, three-phase electric power systems have at least three co
         \label{BASICUNB:fig:UnbPhasor_all}
 \end{figure}
 	
-	This is observed as a frequently cited power quality issue in low-voltage domestic distribution networks and in systems that supply large single phase loads distributed unevenly among the phases. Effects of voltage unbalance are complex, but can be categorized as structural or functional. The former refers to the asymmetry in the three-phase impedances of transmission lines, cables, transformers, etc. It occurs because it is neither economical nor necessary to maintain distribution system with perfectly symmetrical impedances. The latter refers to uneven distribution of power consumption over the three phases. Although the term voltage unbalance is unambiguous, the root phenomenon may be various as well as the standard norms used to measure unbalance. All of these different indicators measure voltage unbalance but each of them does it in a different way. In this section a detailed explanation is presented about the types of currently used method for indication.
+	This is observed as a frequently cited power quality issue in low-voltage domestic distribution networks and in systems that supply large single phase loads unevenly distributed. Effects of voltage unbalance are complex, but can be categorized as structural or functional. The former refers to the asymmetry in the three-phase impedances of transmission lines, cables, transformers, etc. It occurs because it is neither economical nor necessary to maintain distribution system with perfectly symmetrical impedances. The latter refers to uneven distribution of power consumption over the three phases. Although the term voltage unbalance is unambiguous, the root phenomenon may be various as well as the standard norms used to measure unbalance. All of these different indicators measure voltage unbalance but each of them does it in a different way (\ref{equ:regular}). In this section a detailed explanation is presented about the types of currently used method for indication.
 	
 	\subsection{Types of voltage deviations and norms}\label{BASICUNB:sec:DefinitionsofUNB}
 
@@ -55,14 +55,14 @@ In a domestic network, three-phase electric power systems have at least three co
         \item[Single phase under-voltage unbalance]  If there is a single phase uncompensated overload in the system, the voltage in the overloaded phase will be lower than the other two.
         \item[Two phase under-voltage unbalance]  Two of the three phases are overloaded without compensation, the two overloaded phases will have higher voltage drop than the third phase.
         Balanced three phase under-voltage]  The loads of all three phases are overloaded in an unbalanced manner.
-        \item[Unbalanced single phase angle]  If the three phase voltage amplitudes are balanced but the relative angles between them (ideally it should be equal to $\pm120$ degree). It is assumed, that $V_a$ would be the reference. If one of the other two phase angles is deflected, unequal displacement.
+        \item[Unbalanced single phase angle]  If the three phase voltage amplitudes are balanced but the relative angles between them (ideally it should be equal to $\pm120$ degree). It is assumed, that phase A would be the reference. If one of the other two phase angles is deflected, unequal displacement.
         \item[Unbalanced two phase angles displacement] Similar to the single phase angle unbalance, if the other two phase angles are both deflected, then unequal angle displacement in two phase angles occurs.
         \end{description}
         An indicator of the voltage unbalance is supposed to measure the extent of unbalance but it is not expected to classify between the above types.
 	
 	\subsection{Non standardized approximation formulas}\label{BASICUNB:sec:ApproxFormula}
 	
-	Up to now, the following definitions have not been adopted by any standard or rule to indicate the degree of voltage unbalance, but used by various manufacturers. Firstly based on \cite{eugene1986new} recommended by the CIGRE (International Council on Large Electric Systems, in French: Conseil International des Grands Réseaux Électriques), the voltage unbalance is determined with:
+	Up to now, the following definitions have not been adopted by any standard or rule to indicate the degree of voltage unbalance, but used by various manufacturers. Firstly based on \cite{eugene1986new} recommended by the CIGRE (International Council on Large Electric Systems, in french: Conseil International des Grands Réseaux Électriques), the voltage unbalance is determined with the following \ref{BASICUNB:equ:CIRGE}:
 	
 	\begin{equation}
         \begin{array}{rcl}
@@ -73,7 +73,7 @@ In a domestic network, three-phase electric power systems have at least three co
         \label{BASICUNB:equ:CIRGE}
     \end{equation}
 		
-		where, $\{V_{ab},V_{bc},V_{ca}\}$ are the line-to-line voltages. Note, that the CIRGE variant has no distinct notation, as such it would be indicated as $VUFactor$ in this thesis. Moreover, the author of \cite{robert1992assessing} recommends two more variants, based on manufacturer recommended"standards":
+		where, $\{V_{ab},V_{bc},V_{ca}\}$ are the line-to-line voltages. Note, that the CIRGE variant has no distinct notation, as such it would be indicated as $VUFactor$ in this thesis. Moreover, the autor of \cite{robert1992assessing} recommends two more variants, based on manufacturer recommended"standards":
 		
 		\begin{equation}
         \begin{array}{rcl}
@@ -89,9 +89,9 @@ In a domestic network, three-phase electric power systems have at least three co
         \label{BASICUNB:equ:VUR}
     \end{equation}
 		
-		where the mean of line voltages is noted by $V_{avg_{line}}=\frac{V_{ab}+V_{bc}+V_{ca}}{3}$.
+		where the line voltage mean is noted by and $V_{avg_{line}}=\frac{V_{ab}+V_{bc}+V_{ca}}{3}$.
 		This formulas were created with the intention to avoid the use of the complex algebra in symmetrical components and give
-a good approximation of the later described $VUF$ standard. With the indicator of \ref{BASICUNB:equ:VU}, and as well as \ref{BASICUNB:equ:VUR}. It is worth noticing, that only the voltage magnitude unbalance is reflected, completely ignoring Fortescue's method of symmetrical components \cite{fortescue1918method} (shall presented later in the thesis), which considers negative sequence components as harmful on electric equipment and yield. Later it will be shown that other methods try to push the same methodology, until the currently used norm ($VUF$) is used.
+a good approximation of the later described $VUF$ standard. With the indicator of \ref{BASICUNB:equ:VU}, and as well as \ref{BASICUNB:equ:VUR}. It is worth noticing, that only the voltage magnitude unbalance is reflected, completely ignoring Fortescue's method of symmetrical components \cite{fortescue1918method} (shall presented later in the thesis), which considers negative sequence components as harmful on electric equipment and yield. Later we shall see that other methods try to push the same methodology, until the currently used norm ($VUF$) is used.
 
 	
 	\subsection{LVUR}\label{BASICUNB:sec:LVUR}
@@ -100,7 +100,7 @@ a good approximation of the later described $VUF$ standard. With the indicator o
 	
 \begin{equation}
         \begin{array}{rcl}
-            LVUR&=&\frac{\max\left( |V_{ab}-V_{avg_{line}}|,|V_{bc}-V_{avg_{line}}|,|V_{ca}-V_{avg_{line}}| \right)}{V_{avg_{line}}}\times100\\			
+            LVUR&=&\frac{max\left( |V_{ab}-V_{avg_{line}}|,|V_{bc}-V_{avg_{line}}|,|V_{ca}-V_{avg_{line}}| \right)}{V_{avg_{line}}}\times100\\			
         \end{array}
         \label{BASICUNB:equ:LVUR}
     \end{equation}
@@ -113,7 +113,7 @@ a good approximation of the later described $VUF$ standard. With the indicator o
 	
 	\begin{equation}
         \begin{array}{rcl}
-            PVUR_{IEEE-141}&=&\frac{\max\left( |V_{a}-V_{avg_{phase}}|,|V_{b}-V_{avg_{phase}}|,|V_{c}-V_{avg_{phase}}| \right)}{V_{avg_{phase}}}\times100,\\
+            PVUR_{IEEE-141}&=&\frac{max\left( |V_{a}-V_{avg_{phase}}|,|V_{b}-V_{avg_{phase}}|,|V_{c}-V_{avg_{phase}}| \right)}{V_{avg_{phase}}}\times100,\\
         \end{array}
         \label{BASICUNB:equ:PVUR-141}
     \end{equation}
@@ -123,12 +123,12 @@ The second variant is, $PVUR_{IEEE-936}$, mentioned in \cite{IEEE_936_29053} is 
 
 \begin{equation}
         \begin{array}{rcl}
-            PVUR_{IEEE-936}&=&\frac{\max\left( |V_a|,|V_b|,|V_c| \right)-min\left( |V_a|,|V_b|,|V_c| \right)}{V_{avg_{phase}}}\times100,\\					
+            PVUR_{IEEE-936}&=&\frac{max\left( |V_a|,|V_b|,|V_c| \right)-min\left( |V_a|,|V_b|,|V_c| \right)}{V_{avg_{phase}}}\times100,\\					
         \end{array}
         \label{BASICUNB:equ:PVUR-936}
     \end{equation}
 		
-The number of possible combinations of three phase or line voltages that satisfy the definitions of voltage unbalance mentioned above will become infinite as only the magnitudes of voltages are considered.	
+The number of possible combinations of three phase or line volt- ages that satisfy the definitions of voltage unbalance mentioned above will become infinite as only the magnitudes of voltages are considered.	
 		
 	
 	\subsection{VUF and CVUF}\label{BASICUNB:sec:VUFCVUF}
@@ -156,7 +156,7 @@ The number of possible combinations of three phase or line voltages that satisfy
         \label{BASICUNB:equ:symmetry}
     \end{equation}
 	
-	Where $\upsilon=e^{2j\pi/3}$ is the Fortesque operator. From that the formula of $VUF$ can be expressed as:
+	Where $\upsilon=e^{2j\pi/3}$ is the Fortesque operator. From that the formulat of $VUF$ can be formulated:
 	
 	
 	\begin{equation}
@@ -165,18 +165,11 @@ The number of possible combinations of three phase or line voltages that satisfy
         \end{array}
         \label{BASICUNB:equ:VUF}
     \end{equation}
-    
-    \begin{figure}[h]
-         \centering
-         \includegraphics[width=.7\textwidth]{Unblance_EPS_Pics/Symmetrical_components_gray.jpg}
-         \caption{Simplified graphical display of symmetrical components.}
-         \label{BASICUNB:fig:symmetrical_simple}
-     \end{figure}
 	
-This norm is currently in use world wide for voltage unbalance indication. The main focus in on the negative sequence component $V_n$, on which many studies attributes importance of the cause of negative effects the voltage unbalance causes.\\
+This norm is currently in use world wide for voltage unbalance indication. The main focus in on the negative sequence compnent $V_n$, on which many studies attributes importance of the cause of negative effects the voltage unbalance causes.\\
 	As such, three-phase electric loads without path through the neutral, negative-sequence voltage is the primary cause of voltage unbalance. Normally, positive-sequence component of three-phase voltages is very close to rated value. If expressed in per-unit quantities, the positive-sequence voltage will be very close to $1.0$ p.u., and the corresponding negative-sequence voltage will be very close to the $VUF$. Thus, the $VUF$ can indeed be considered as the negative-sequence component in per-unit.	This explains the advantage of using the VUF as an index for analyzing the effects of voltage unbalance considering the phase deviations.
 	An extension of the VUF is the complex voltage unbalance factor ($CVUF$) that is defined by the ratio of the negative-
-sequence voltage phasor to the positive-sequence voltage phasor studied in \cite{wang2000analytical}, and \cite{pierrat1987unbalance}. The CVUF is a complex quantity having the magnitude and the angle. Although the CVUF has not yet been widely used by practicing engineers, it has been proposed in some studies (e.g., \cite{wang2001analysis}, \cite{singh2007some}, \cite{chen2013examination}) due to its richness of information on unbalance. The formula of $CVUF$ is similar to $VUF$:
+sequence voltage phasor to the positive-sequence voltage phasor studied in \cite{wang2000analytical}, and \cite{pierrat1987unbalance}. The CVUF is a complex quantity having the magnitude and the angle. Although the CVUF has not yet been widely used by practicing engineers, it has been proposed in some studies (e.g., \cite{wang2001analysis},\cite{singh2007some},\cite{chen2013examination}) due to its richness of information on unbalance. The formula of $CVUF$ is similar to $VUF$:
 
 \begin{equation}
         \begin{array}{rcl}
@@ -187,8 +180,8 @@ sequence voltage phasor to the positive-sequence voltage phasor studied in \cite
 		
 		where $k_v$ is the magnitude and $\theta_v$ is the angle of $CVUF$.
 		
-			It can be observed, that the previously mentioned norms \ref{BASICUNB:equ:CIRGE}, \ref{BASICUNB:equ:VU}, \ref{BASICUNB:equ:VUR}, \ref{BASICUNB:equ:LVUR}, \ref{BASICUNB:equ:PVUR-141}, \ref{BASICUNB:equ:PVUR-936}, and \ref{BASICUNB:equ:VUF}  indicate different values for a single case with various correlations. The first two standard indicators, $PVUR_{IEEE-936}$ and $PVUR_{IEEE-141}$, ignore the $\pm120$ degree phase difference unbalance and only take the amplitudes into account. Additionaly, the zero-sequence components never present in the line-to-tine voltages regardless of the level of unbalance, only phase-to-neutral voltages. It has been proven, that these components are unelectable in some cases like bridge control of converters \cite{betz2006symmetry}, or synchronous machine diagnosis \cite{hang2015online}.\\
-			The actual state of the art definition in use, $VUF$, is sensitive to the phase difference unbalance. Lastly $CVUF$ considers also phase and magnitude of the voltage unbalance, but the two units are hard to merge together as the optimization cost of a cost function. Moreover, these definitions ignore zero sequence components and harmonic distortion that are always present in three-phase four-wire systems \cite{bina2011three}.
+			It can be observed, that the previously mentioned norms of \ref{BASICUNB:equ:CIRGE}, \ref{BASICUNB:equ:VU}, \ref{BASICUNB:equ:VUR}, \ref{BASICUNB:equ:LVUR}, \ref{BASICUNB:equ:PVUR-141}, \ref{BASICUNB:equ:PVUR-936}, and \ref{BASICUNB:equ:VUF}  indicate different values for a single case with various correlations. The first two standard indicators, $PVUR_{IEEE-936}$ and $PVUR_{IEEE-141}$, ignore the $\pm120$ degree phase difference unbalance and only take the amplitudes into account. Additionaly, the zero-sequence components never present in the line-to-tine voltages regardless of the level of unbalance, only phase-to-neutral voltages. It has been proven, that these components are unelectable in some cases like bridge control of converters \cite{betz2006symmetry}, or synchronous machine diagnosis \cite{hang2015online}.\\
+			The current state of the art definition in use, $VUF$, is sensitive to the phase difference unbalance. Lastly $CVUF$ considers also phase and magnitude of the voltage unbalance, but the two units are hard to merge together as the optimization cost of a cost function. Moreover, these definitions ignore zero sequence components and harmonic distortion that are always present in three-phase four-wire systems \cite{bina2011three}.
 		
 % =========== SECTION MIGRATED TO INTRODUCTION -->
 
