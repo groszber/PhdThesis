@@ -124,6 +124,7 @@
 \renewcommand{\tablename}{Table}
 \renewcommand{\chaptername}{Chapter}
 \renewcommand{\bibname}{Bibliography}
+\let\oldref\ref
 \renewcommand{\ref}[1]{(\oldref{#1})}
 %\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 

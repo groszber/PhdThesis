@@ -223,7 +223,7 @@ In the following section, the applied control structures shall be discussed in d
 This algorithm can rather be described as a linear search program, distributed in a multi-dimensional plane, where the it is only a black box model available \cite{kolda2003understanding}. These variants of pattern search can solve nonlinear unconstrained problems of the form of:
 
 \begin{equation}
-        \begin{array}{rcl}
+        \begin{array}{c}
             \min_{x\in\mathbb{R}^n}f(x),\\
         \end{array}
         \label{BASICCSR:eqn:currents}
@@ -302,7 +302,7 @@ In practice most MPC algorithms use linear models because the dependence of the 
         \label{BASICMPC:equ:basic_LTI}
     \end{equation}
 
-    where $\textbf{x}(q)\in\mathbb{R}^n$ and $\textbf{u}(q)\in\mathbb{R}^m$ are the state and input vectors respectively. We define a quadratic coat function over a finite horizon of $N$ steps:
+    where $\textbf{x}(q)\in\mathbb{R}^n$ and $\textbf{u}(q)\in\mathbb{R}^m$ are the state and input vectors respectively. We define a quadratic cost function over a finite horizon of $N$ steps:
 
   %  \begin{equation}
 %        \begin{array}{rcl}
@@ -323,7 +323,7 @@ In practice most MPC algorithms use linear models because the dependence of the 
         \label{BASICMPC:equ:cost_function_Euclidian}
     \end{equation}
 
-    where $U_0=[\textbf{u}'_0,\dots,\textbf{u}'_{N-1}]in\mathbb{R}^s$, $s=m*N$ is the decision vector constraining all future inputs, also $\textbf{P}=\textbf{P}'\succeq 0$, $\textbf{Q}=\textbf{Q}'\succeq 0$, $\textbf{R}=\textbf{R}'\succeq 0$, and $\textbf{x}_k$ denotes the state vector at time $k$ obtained form $\textbf{x}_0=\textbf{x}(0)$. We also apply the system model based on \ref{BASICMPC:equ:basic_LTI}:
+    where $U_0=[\textbf{u}'_0,\dots,\textbf{u}'_{N-1}]\in\mathbb{R}^s$, $s=m\cdot N$ is the decision vector (with $m$ dimensional input vector) constraining all future inputs, also $\textbf{P}=\textbf{P}'\succeq 0$, $\textbf{Q}=\textbf{Q}'\succeq 0$, $\textbf{R}=\textbf{R}'\succeq 0$, and $\textbf{x}_k$ denotes the state vector at time $k$ obtained form $\textbf{x}_0=\textbf{x}(0)$. We also apply the system model based on \ref{BASICMPC:equ:basic_LTI}:
 
     \begin{equation}
         \begin{array}{rcl}
@@ -423,7 +423,7 @@ In practice most MPC algorithms use linear models because the dependence of the 
 %
     \begin{equation}
         \begin{array}{rcl}
-        \textbf{U}^*_0(\textbf{x}(0))&=&-\textbf{H}^{-1}F'x(0)\\
+        \textbf{U}^*_0(\textbf{x}(0))&=&-\textbf{H}^{-1}\textbf{F}'x(0)\\
         &=&-(\mathcal{S}^{u'}\bar{\textbf{Q}}\mathcal{S}^{u}+\bar{\textbf{R}})^{-1}\mathcal{S}^{u'}\bar{\textbf{Q}}\mathcal{S}^{x}\textbf{x}(0).
 		\end{array}
         \label{BASICMPC:equ:batch_optimal_solution}
@@ -571,7 +571,7 @@ In practice most MPC algorithms use linear models because the dependence of the 
     Equation \ref{BASICMPC:equ:cost_function_Euclidian_recursive_twoP} is called the discrete Ricatti equation \cite{borrelli2017predictive}, or Ricatti difference equation, which is initialised with $\textbf{P}_n=\textbf{P}$ and solves backwards. It is worth noting that from \ref{BASICMPC:equ:cost_function_Euclidian_recursive_optimum_anystep} the optimal control action $\textbf{u}^*(k)$ is obtained in the form of feedback law as linear function of the measured state $\textbf{x}(k)$ at time instance $k$, and the optimal cost is \ref{BASICMPC:equ:cost_function_Euclidian_recursive_anystepback}.
 
 	
-	\myparagraph{Constained optimal control}\label{BASICCSR:sec:OptimalControl}
+	\myparagraph{Constrained optimal control}\label{BASICCSR:sec:OptimalControl}
 	
 	In constrained optimal control for any input action with a given initial state the control action can be computed with quadratic programming but with respect to pre described constraints. As displayed, the linear quadratic approach requires a numerical definition so that a precise calculation can be made, that is, which optimal input trajectory gives the lowest numerical value to the cost. The main requirement is that the cost depends on the batch or recursive input sequence and that low values of cost imply good closed-loop performance good being defined for the process. Of course the choice of the cost affects the complexity of the implied optimization and this is also a consideration.\\
 With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assume that it is subject to constraints:
@@ -596,14 +596,14 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \label{BASICMPC:equ:constrained_optimal_control_problem}
     \end{equation}
 
-    where $\textbf{x}_N\subseteq\mathbb{R}^n$ is the terminal polyhedral region, and $\textbf{U}_0=[\textbf{u}'_0,\dots,\textbf{u}'_{N-1}]'\in\mathbb{R}^s$ with $s=mN$ is tha optimization vector. We denote $\mathcal{X}_0\subset\mathcal{X}^x$ as the set of initial states $\textbf{x}(0)$ for which the optimal control problem is feasible such as:
+    where $\textbf{x}_N\subseteq\mathbb{R}^n$ is the terminal polyhedral region, and $\textbf{U}_0=[\textbf{u}'_0,\dots,\textbf{u}'_{N-1}]'\in\mathbb{R}^s$ with $s=m\cdot N$ is the optimization vector. We denote $\mathcal{X}_0\subset\mathcal{X}^x$ as the set of initial states $\textbf{x}(0)$ for which the optimal control problem is feasible such as:
 
     \begin{equation}
         \begin{array}{rcl}
             \mathcal{X}_0&=&\{
             \textbf{x}_0\in\mathbb{R}^n:\exists\textbf{U}_0,\\
             &&s.t.:\textbf{x}_k\in\mathcal{X}^x,\textbf{u}_k\in\mathcal{U}^u,\textbf{x}_N\in\mathcal{X}_f,\\
-            &&where\_ \textbf{x}_{k+1}=\textbf{Ax}_{k}+\textbf{Bu}_{k},k=0,\dots,N-1
+            &&where\,\textbf{x}_{k+1}=\textbf{Ax}_{k}+\textbf{Bu}_{k},k=0,\dots,N-1
             \}.\\
         \end{array}
         \label{BASICMPC:equ:constrained_initial_set}
@@ -616,7 +616,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
             \mathcal{X}_i&=&\{
             \textbf{x}_i\in\mathbb{R}^n:\exists\textbf{U}_i,\\
             &&s.t.:\textbf{x}_k\in\mathcal{X}^x,\textbf{u}_k\in\mathcal{U}^u,\textbf{x}_N\in\mathcal{X}_f,\\
-            &&where\_ \textbf{x}_{k+1}=\textbf{Ax}_{k}+\textbf{Bu}_{k},k=0,\dots,N-1
+            &&where\,\textbf{x}_{k+1}=\textbf{Ax}_{k}+\textbf{Bu}_{k},k=0,\dots,N-1
             \}.\\
         \end{array}
         \label{BASICMPC:equ:constrained_feasible_set}
@@ -628,7 +628,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
     \begin{equation}
         \begin{array}{rcl}
             \mathcal{P}_i&=&\{
-            (\textbf{U}_i,\textbf{x}_i)\in\mathbb{R}^{m(N-i)+n,s.t.:\textbf{G}_u\textbf{U}_i-\textbf{E}_i\textbf{x}_i\leq\textbf{W}_i}
+            (\textbf{U}_i,\textbf{x}_i)\in\mathbb{R}^{m\cdot(N-i)+n},s.t.:\textbf{G}_u\textbf{U}_i-\textbf{E}_i\textbf{x}_i\leq\textbf{W}_i
             \},
         \end{array}
         \label{BASICMPC:equ:constrained_constraint_set}
@@ -826,9 +826,9 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
 
     where $\textbf{S}_0=\textbf{E}_0+\textbf{G}_0\textbf{H}^{-1}\textbf{F}'$. In this transformed problem the initial parameter vector $\textbf{x}(0)$ appears only on right hand side of constraints. In this case \ref{BASICMPC:equ:constrained_substitute_J} is a multi parametric constrained quadratic optimal program that can be solved explicitly by using geometrical means described in \cite{bemporad2002explicit}.
 
-    \subsubsection{Receiding horison control}\label{BASICCSR:sec:RHC}
+    \subsubsection{Receiding horizon control}\label{BASICCSR:sec:RHC}
 
-    All this said, even if we calculate the best optimal step sequence for solving the constrained control problem, there are sstill uncertainties for the future. Optimization over a finite horizon has the following disadvantages:
+    All this said, even if we calculate the best optimal step sequence for solving the constrained control problem, there are still uncertainties for the future. Optimization over a finite horizon has the following disadvantages:
 		
 		\begin{itemize}
 			\item Unforeseen problems may occur after the fixed optimization horizon, which may cancel the sequence of order for the 		calculated finished horizon.
@@ -840,7 +840,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
 
 \begin{figure}[!ht]
         \centering
-        \includegraphics[width=.9\textwidth]{EMPC_PNG_Pics/RHC.png}
+        \includegraphics[width=.9\textwidth]{EMPC_PNG_Pics/RHC_gray.jpg}
         \caption{Graphycal display of receiding horison control (RHC) idea \cite{borrelli2017predictive}.}
         \label{BASICCSR:fig:RHC}
     \end{figure}
@@ -869,7 +869,7 @@ The Formulation of the optimal control problem with moving horizon \cite{goodwin
         \label{BASICMPC:equ:receiding_horison_Lyapunov}
     \end{equation}
 		
-		This means that after $N_u$ samples the control stops and the system is evolving to an open loop form. It is obvious that the choice only makes sense if the open loop system is stable. The second option would as described in \ref{BASICMPC:equ:control_coefficient_infinite}, and \ref{BASICMPC:equ:Riccati_infinite}, but this involves to use an unconstrained control for $N_u$ LQR samples. As a result, the MPC law calculates the optimal command sequence:
+		This means that after $N_u$ samples the control stops and the system is evolving to an open loop form. It is obvious that the choice only makes sense if the open loop system is stable. The second option would as described with the method \ref{BASICMPC:equ:cost_function_Euclidian_recursive_twoP}, but this involves to use an unconstrained control for $N_u$ LQR samples. As a result, the MPC law calculates the optimal command sequence:
 		
 		\begin{equation}
         \begin{array}{rcl}
@@ -899,12 +899,12 @@ repeated on the basis of new measurements or a new estimation of the states.
     \begin{equation}
     \begin{array}{rcl}
             \textbf{x}_{k+1}&=&g(\textbf{x}_k)\\
-            &\textnormal{subj. to}&g(0)=0,
+            %&\textnormal{subj. to}&g(0)=0,
         \end{array}
         \label{BASICMPC:equ:autonom_system}
     \end{equation}
 
-    the defnition of Lyapunov stability is for the equilibrium point $\textbf{x}=0$ of system \ref{BASICMPC:equ:autonom_system} is:
+    where $g(0)=0$. The definition of Lyapunov stability is for the equilibrium point $\textbf{x}=0$ of system \ref{BASICMPC:equ:autonom_system} is:
     \begin{itemize}
     \item stable if, for each $\epsilon>0$, there is a $\delta>0$ such that:
         \begin{equation}
@@ -949,7 +949,7 @@ repeated on the basis of new measurements or a new estimation of the states.
             \label{BASICMPC:equ:lyapunov_4_1}
         \end{equation}
 
-     where $\alpha:\mathbb{R}^n\rightarrow\mathbb{R}$ is a continuous positive definite function, then $\textbf{x}=0$ is asymptotically stable. As such a function satisfying \ref{BASICMPC:equ:lyapunov_4} is called a Lyapunov function.\\
+     where $\alpha:\mathbb{R}^n\rightarrow\mathbb{R}$ is a continuous positive definite function, then $\textbf{x}=0$ is asymptotically stable. As such a function satisfying \ref{BASICMPC:equ:lyapunov_4_1} is called a Lyapunov function.\\
      A similar theorem can be derived for global asymptotic stability i.e.: $\boldsymbol{\Omega}=\mathbb{R}^n$:
      Consider the equilibrium point $\textbf{x}=0$ of system \ref{BASICMPC:equ:autonom_system}. Let $\boldsymbol{\Omega}\subset\mathbb{R}^n$ be a closed and bounded set containing the origin. Assume there exists a function $V:\mathbb{R}^n\rightarrow\mathbb{R}$ continuous at the origin, finite for every $\textbf{x}\in\boldsymbol{\Omega}$ and such that:
 
@@ -1345,7 +1345,7 @@ repeated on the basis of new measurements or a new estimation of the states.
 
 \subsection{Storage of critical regions}\label{BASICCSR:sec:EMPCStorage}
 
-The issue of iterative model based controllers is that they require a lot of computational resource. The CPU load and required ROM consumption could increase exponentially the longer the more steps the control horizon is calculated. For this reason explicit model bssed predictive controllers (EMPC) were developed, where only the storage the critical regions and the signal coefficients for each critical region, so the matrices $H$, $K$, $F$, $G$ are required. The on-line part of control consists of searching the critical region for the current states and calculating the necessary inputs for them.
+The issue of iterative model based controllers is that they require a lot of computational resource. The CPU load and required ROM consumption could increase exponentially the longer the more steps the control horizon is calculated. For this reason explicit model bssed predictive controllers (EMPC) were developed, where only the storage the critical regions and the signal coefficients for each critical region, so the matrices $\textbf{H}$, $\textbf{K}$, $\textbf{F}$, $\textbf{G}$ are required. The on-line part of control consists of searching the critical region for the current states and calculating the necessary inputs for them.
 One method of storing entire critical regions in order to calculate them, and that is in the order in which the MP-LP or MP-QP problem is resolved. It has the disadvantage, that the search time can be high, as such starting from the top of the list, a linear search is not effective. The efficient method is to store critical regions already in a binary tree \cite{jones2006logarithmic}, \cite{tondel2003evaluation}, \cite{tondel2003constrained}, \cite{kutasi2008vector}. The method of generating the binary tree is shown in (Fig.\ref{BASICMPC:fig:searchtree}.).\\
  The basic idea is to sort the critical regions depending on their adjacent sides. For example, in (Fig.\ref{BASICMPC:fig:searchtree}.a.) side $j_1$ divides the state space into two, at the right of it are the regions $X_{2,3,4,5}$ and to the left are the regions $X_{1,2,6}$. They make up the nodes adjacent to the base node $I_1$ of the binary tree. Next the another side from the space is chosen defined by each node $I_2$ respectively $I_3$, and the algorithm is continued until all the regions in the current node correspond to the same control signal, denoted by $F$ on the shaft in fig. (Fig.\ref{BASICMPC:fig:searchtree}.b.) Thus with this search pattern logarithmic search time can be achieved.
 
@@ -1359,121 +1359,126 @@ b) the related binary tree.}
 
 The implementation of MPC in explicit form is very efficient up to a certain number of critical regions, because they do not require calculations but only search in a table. For more complex problems or fast systems the method requires longer search time.
 
-\section{Notations}
-
-%\begin{table}[]
-  %\centering
-  %\caption{My caption}
-  %\label{my-label}
-%\begin{adjustbox}{width=\textwidth}
-\begin{scriptsize}
-\begin{tabularx}{\textwidth}{r|X}
-
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-  %Chapter 4.1. notations&\\
-	$V_P$															& Voltage peak\\
-	$V12, V23, V31$										& Voltage vectors in the three phase phasor\\
-  $VUFactor,VU,VUR$                	& Non standardized voltage unbalance factor based on manufacturer standards\\
-	$V_{ab},V_{bc},V_{ca}$  					& Line-to-line voltages\\
-	$V_{avg_{line}}$  								& Average of line voltages\\
-	$LVUR$														& Voltage unbalance notation based on NEMA standard\\
-	$PVUR_{IEEE-141},PVUR_{IEEE-936}$	& Voltage unbalance notation based on IEEE-141, and IEEE-936 standard\\
-	$V_{a},V_{b},V_{c}$  							& Phase-to-neutral voltages\\
-	$V_{avg_{phase}}$  								& Average of phase voltages\\
-	$V_{0},V_{p},V_{n}$  							& Zero, negative and positive sequence voltages based on symmetrical components theorem\\
-  $\upsilon$  											& Fortesque operator\\
-	$VUF$  														& Voltage Unbalance Factor\\
-	$CVUF$  													& Complex Voltage Unbalance Factor\\
-	$k_v$  														& Magnitude of CVUF\\
-	$\theta_v$  											& Angle of CVUF\\
-	$i_i$															& Constant input inductor current\\
-	$i_o$															& Alternating output current\\
-	$V_i$															& Constant input voltage\\
-	$V_o$															& Alternating output voltage\\
-	$\frac{dV}{dt}$										& Derivative of voltage over time\\
-	$L_+,L_-$													& Current filter inductors\\
-	$S_{1+},S_{2+}$										& Higher switches\\
-	$S_{1+},S_{2+}$										& Lower switches\\
-	$D_{1+},D_{2+}$										& Higher diodes\\
-	$D_{1+},D_{2+}$										& Lower diodes\\
-	$v_\Delta$												& ???\\
-	$v_c$															& ???\\
-	$V_{an},V_{bn}$  									& Designated point's potential to ground on the CSI (Fig.\ref{BASICCSR:fig:SingleCSI}.)\\
-	$\omega$													& Angular velocity of output sinusodial voltage or current\\
-	$V_{D1},V_{D2}$ 									& Two end's voltage on the DC-DC converter\\
-	$v_1,v_2$                         & Transformer voltages\\
-	$C_{snub}$ 												& Capacitance to reduce switching loss and to damp out over-voltage\\
-	$n$ 															& Transformer turn ratio.\\
-	$L_a$															& Leakage inductance\\
-	$v_D$															& Output voltage before the choke inductor $L_D$\\
-	$V_d$															& Output voltage\\
-	$I_D$															& Output current\\
-	$L_D$															& Inductor for filtering the output current of the CSR (Choke)\\
-	$C_D$															& Capacitance for filtering the output voltage of the VSR\\
-	$L_S$															& Input filter inductance of the three phase alternating current in VSR\\
-	$C_S$															& Input filter capacitance of the three phase alternating current in CSR\\
-	$v_{c_p}$													& AC-side capacitor voltage, where $p\in\{1,2,3\}$\\
-	$\widehat{u}$											& Peak value of AC-side capacitor voltage\\
-	$v_{i,j}$													& Three phase phase-to-neutral voltage $i,j\in\{R,S,T\}$\\
-	$v_{N,RS}$												& Three phase line-to-line voltage of $R$ and $S$\\
-	$\varphi_N$												& Angle of phase voltage\\
-	$\vec{i}$													& Rectifier input current\\
-	$\vec{i}_ref$											& Reference rectifier input current\\
-	$x$																& State\\
-	$f(x)$														& Function of the state\\
-	$\rho$																& Infinite sequence iterator\\
-	$\Delta$													& Step lenght control parameter\\
-	$\mathcal{P},\mathcal{D},\mathcal{S},\mathcal{Q},\mathcal{U},\mathcal{I},\mathcal{E}$ & Set of processes, directions, succesful iterations, timestep index, internal successes, and external succeses respectively\\
-	$p$																& Process number\\
-	$i$																& Active process indicator\\
-	$d_i$															& Direction of active process\\
-	$x_i^{best}$											& Best reached state, where $x_i^{best}$ is a minima\\
-	$\Delta_i^{best}$											& Best reached step size\\
-	$q$																& Discrete time step\\
-	$\omega_i(q)$ 										& Generating process index for the update time at step $q$ on process $i$\\
-	$\tau_i(q)$												& Time index for initialization of the function evaluation, that produced the update at time $q$ on process $i$\\
-	$\nu_i(q)$ 												& Time index for the completion of the function evaluation that produced the update at time step $q$ on process $i$\\
-	$\textbf{A}$																& State matrix\\
-	$\textbf{B}$																& Input matrix\\
-	$\textbf{C}$																& Output matrix\\
-	$\textbf{x}$											& State vector\\
-	$\textbf{z}$											& Input vector\\
-	%$t$																& Time instance\\
-	$\textbf{P}, \textbf{Q},\textbf{R}$ & Terminal, state, and input weight matrices respectively\\
-	$\textbf{E}$																&???\\
-	$\textbf{L}$																&???\\
-	$\textbf{M}$																&???\\
-	$\textbf{H}$																&???\\
-	$\textbf{F}$																&???\\
-	$\textbf{Y}$																&???\\
-	$\textbf{G}$																&???\\
-	$\textbf{W}$																&???\\
-	$\textbf{E}$																&???\\
-	$N$											& Defined horizon of MPC\\
-	$N_c,N_u,N_y$											& Defined control, input, and output horizon of MPC respectively\\
-	$k$																& Time step on the horison $N$ \\
-	$\mathcal{X}_f$															& Set of terminal states \\
-	$\textbf{U}_N$										& Vector of inputs sequence following the horizon\\
-	$\varsigma$											& Norm index\\
-	$s$																& ???\\
-	$m$																& ???\\
-	$K$															& Control coefficient \\
-	$u^*(k)$													& $k^th$ instance of the optimizer input\\
-	$\textbf{U}^*(k)$									& Optimal command sequence\\
-	$\textbf{P}$																& Solution of the Riccati equation\\
-	$\textbf{u}_{min,max},\textbf{y}_{min,max}$					& Input and output constraints\\
-	$V(\textbf{x})$														& Lyapunov function of $\textbf{x}$\\
-	$\Omega$ 													& Terminal set\\
-	$\textbf{z}$																& transformation vector\\
-	$X_j$															& $j^{th}$ resulting region after partitioning of the statespace\\
-	$I_i$															& $i^{th}$ resulting node after partitioning of the statespace\\
-	
-\end{tabularx}
-\end{scriptsize}
-%\end{adjustbox}
-%\end{table}
-
-%\section{Summary}
+%\section{Notations used in the chapter}
 %
-%$\longmapsto$Summary of basic notions general.
-
+%%\begin{table}[]
+%  %\centering
+%  %\caption{My caption}
+%  %\label{my-label}
+%%\begin{adjustbox}{width=\textwidth}
+%\begin{scriptsize}
+%\begin{tabularx}{\textwidth}{r|X}
+%
+%  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+%  %Chapter 4.1. notations&\\
+%	$\hat{V}$															& Voltage peak\\
+%	$\vec{V}_a, \vec{V}_b, \vec{V}_c,$										& Voltage vectors in the three phase phasor\\
+%  $VUFactor,VU,VUR$                	& Non standardized voltage unbalance factor based on manufacturer standards\\
+%	$V_{ab},V_{bc},V_{ca}$  					& Line-to-line voltages\\
+%	$V_{avg_{line}}$  								& Average of line voltages\\
+%	$LVUR$														& Voltage unbalance notation based on NEMA standard\\
+%	$PVUR_{IEEE-141},PVUR_{IEEE-936}$	& Voltage unbalance notation based on IEEE-141, and IEEE-936 standard\\
+%	$V_{a},V_{b},V_{c}$  							& Phase-to-neutral voltages\\
+%	$V_{avg_{phase}}$  								& Average of phase voltages\\
+%	$V_{0},V_{p},V_{n}$  							& Zero, negative and positive sequence voltages based on symmetrical components theorem\\
+%  $\upsilon$  											& Fortesque operator\\
+%	$VUF$  														& Voltage Unbalance Factor\\
+%	$CVUF$  													& Complex Voltage Unbalance Factor\\
+%	$k_v$  														& Magnitude of CVUF\\
+%	$\theta_v$  											& Angle of CVUF\\
+%	$i_i$															& Constant input inductor current\\
+%	$i_o$															& Alternating output current\\
+%	$V_i$															& Constant input voltage\\
+%	$V_o$															& Alternating output voltage\\
+%	$\frac{dV}{dt}$										& Derivative of voltage over time\\
+%	$L_+,L_-$													& Current filter inductors\\
+%	$S_{1+},S_{2+}$										& Higher switches\\
+%	$S_{1+},S_{2+}$										& Lower switches\\
+%	$D_{1+},D_{2+}$										& Higher diodes\\
+%	$D_{1+},D_{2+}$										& Lower diodes\\
+%	$V_{an},V_{bn}$  									& Designated point's potential to ground \\
+%	$\omega$													& Angular velocity of output sinusoidal voltage or current\\
+%	$V_{D1},V_{D2}$ 									& Two end's voltage on the DC-DC converter\\
+%	$v_1,v_2$                         & Transformer voltages\\
+%	$C_{snub}$ 												& Capacitance to reduce switching loss and to damp out over-voltage\\
+%	$n$ 															& Transformer turn ratio.\\
+%	$L_a$															& Leakage inductance\\
+%	$v_D$															& Output voltage before the choke inductor $L_D$\\
+%	$V_d$															& Output voltage\\
+%	$I_D$															& Output current\\
+%	$L_D$															& Inductor for filtering the output current of the CSR (Choke)\\
+%	$C_D$															& Capacitance for filtering the output voltage of the VSR\\
+%	$L_S$															& Input filter inductance of the three phase alternating current in VSR\\
+%	$C_S$															& Input filter capacitance of the three phase alternating current in CSR\\
+%	$v_{c_p}$													& AC-side capacitor voltage, where $p\in\{1,2,3\}$\\
+%	$\widehat{u}$											& Peak value of AC-side capacitor voltage\\
+%	$v_{i,j}$													& Three phase phase-to-neutral voltage $i,j\in\{R,S,T\}$\\
+%	$v_{N,RS}$												& Three phase line-to-line voltage of $R$ and $S$\\
+%	$\varphi_N$												& Angle of phase voltage\\
+%	$\vec{i}$													& Rectifier input current\\
+%	$\vec{i}_ref$											& Reference rectifier input current\\
+%	$x$																& State of a linear time invariant model\\
+%	$f(x)$														& Function of the state\\
+%	$\rho$																& Infinite sequence iterator\\
+%	$\Delta$													& Step lenght control parameter\\
+%	$\mathcal{P},\mathcal{D},\mathcal{S},\mathcal{Q},\mathcal{U},\mathcal{I},\mathcal{E}$ & Set of processes, directions, succesful iterations, timestep index, internal successes, and external successes respectively\\
+%	$p$																& Process number\\
+%	$i$																& Active process indicator\\
+%	$d_i$															& Direction of active process\\
+%	$x_i^{best}$											& Best reached state, where $x_i^{best}$ is a minima\\
+%	$\Delta_i^{best}$											& Best reached step size\\
+%	$q$																& Discrete time step\\
+%	$\omega_i(q)$ 										& Generating process index for the update time at step $q$ on process $i$\\
+%	$\tau_i(q)$												& Time index for initialization of the function evaluation, that produced the update at time $q$ on process $i$\\
+%	$\nu_i(q)$ 												& Time index for the completion of the function evaluation that produced the update at time step $q$ on process $i$\\
+%
+%
+%
+%	$\textbf{A}$																& State matrix of a linear time invariant model\\
+%	$\textbf{B}$																& Input matrix of a linear time invariant model\\
+%	$\textbf{C}$																& Output matrix of a linear time invariant model\\
+%	$\textbf{x}$											& State vector of a linear time invariant model\\
+%	$\textbf{z}$											& Input vector of a linear time invariant model\\
+%$$
+%
+%	$\textbf{P}$                    & Terminal penalising weight matrix\\
+%$\textbf{Q}$                    & State penalising weight matrix\\
+%$\textbf{R}$                    & Input penalising weight matrix\\
+%
+%%	$\textbf{E}$																&???\\
+%%	$\textbf{L}$																&???\\
+%%	$\textbf{M}$																&???\\
+%%	$\textbf{H}$																&???\\
+%%	$\textbf{F}$																&???\\
+%%	$\textbf{Y}$																&???\\
+%%	$\textbf{G}$																&???\\
+%%	$\textbf{W}$																&???\\
+%%	$\textbf{E}$																&???\\
+%	$N$											& Defined horizon of MPC\\
+%	$N_c,N_u,N_y$											& Defined control, input, and output horizon respectively\\
+%	$k$																& Time step on the horizon $N$ \\
+%%	$\mathcal{X}_f$															& Set of terminal states \\
+%%	$\textbf{U}_N$										& Vector of inputs sequence following the horizon\\
+%%	$\varsigma$											& Norm index\\
+%%	$s$																& ???\\
+%%	$m$																& ???\\
+%%	$K$															& Control coefficient \\
+%%	$u^*(k)$													& $k^th$ instance of the optimizer input\\
+%%	$\textbf{U}^*(k)$									& Optimal command sequence\\
+%%	$\textbf{P}$																& Solution of the Riccati equation\\
+%%	$\textbf{u}_{min,max},\textbf{y}_{min,max}$					& Input and output constraints\\
+%%	$V(\textbf{x})$														& Lyapunov function of $\textbf{x}$\\
+%%	$\Omega$ 													& Terminal set\\
+%%	$\textbf{z}$																& transformation vector\\
+%%	$X_j$															& $j^{th}$ resulting region after partitioning of the statespace\\
+%%	$I_i$															& $i^{th}$ resulting node after partitioning of the statespace\\
+%	
+%\end{tabularx}
+%\end{scriptsize}
+%%\end{adjustbox}
+%%\end{table}
+%
+%%\section{Summary}
+%%
+%%$\longmapsto$Summary of basic notions general.
+%

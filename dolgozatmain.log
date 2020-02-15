@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  14 FEB 2020 23:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  15 FEB 2020 17:44
 entering extended mode
 **C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
 (C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
@@ -2276,48 +2276,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 839--840
 
  []
 
-<EMPC_PNG_Pics/RHC.png, id=176, 564.9105pt x 440.847pt>
-File: EMPC_PNG_Pics/RHC.png Graphic file (type png)
-<use EMPC_PNG_Pics/RHC.png>
-Package pdftex.def Info: EMPC_PNG_Pics/RHC.png  used on input line 843.
+<EMPC_PNG_Pics/RHC_gray.jpg, id=176, 941.5175pt x 734.745pt>
+File: EMPC_PNG_Pics/RHC_gray.jpg Graphic file (type jpg)
+<use EMPC_PNG_Pics/RHC_gray.jpg>
+Package pdftex.def Info: EMPC_PNG_Pics/RHC_gray.jpg  used on input line 843.
 (pdftex.def)             Requested size: 358.50229pt x 279.76656pt.
 
 Overfull \hbox (3.21584pt too wide) detected at line 861
 []
  []
 
-[31]
-
-LaTeX Warning: Reference `BASICMPC:equ:control_coefficient_infinite' on page 32
- undefined on input line 872.
-
-
-LaTeX Warning: Reference `BASICMPC:equ:Riccati_infinite' on page 32 undefined o
-n input line 872.
-
-[32 <./EMPC_PNG_Pics/RHC.png>]
+[31] [32 <./EMPC_PNG_Pics/RHC_gray.jpg>]
 
 LaTeX Warning: Command \textbackslash invalid in math mode on input line 946.
 
 
 LaTeX Warning: Command \textbackslash invalid in math mode on input line 947.
 
-
-LaTeX Warning: Reference `BASICMPC:equ:lyapunov_4' on page 33 undefined on inpu
-t line 952.
-
-[33]
-<EMPC_PNG_Pics/BasicSearchTree.png, id=188, 985.88326pt x 359.54324pt>
+[33] [34]
+<EMPC_PNG_Pics/BasicSearchTree.png, id=191, 985.88326pt x 359.54324pt>
 File: EMPC_PNG_Pics/BasicSearchTree.png Graphic file (type png)
 <use EMPC_PNG_Pics/BasicSearchTree.png>
 Package pdftex.def Info: EMPC_PNG_Pics/BasicSearchTree.png  used on input line 
 1354.
 (pdftex.def)             Requested size: 398.3386pt x 145.26859pt.
- [34] [35 <./EMPC_PNG_Pics/BasicSearchTree.png>])
-(subtex/4_3_discussion_results.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [36]
+) (subtex/3_4_basics_notations.tex [35 <./EMPC_PNG_Pics/BasicSearchTree.png>] [
+36]) (subtex/4_3_discussion_results.tex [37]
 Chapter 3.
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/network_gray.eps>
 (epstopdf)                    date: 2016-01-28 12:54:46
@@ -2330,7 +2314,7 @@ ed-to.pdf>
 ray-eps-converted-to.pdf Unblance_EPS_Pics/network_gray.eps>
 (epstopdf)             \includegraphics on input line 11.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/network_gray-eps-converted-to.pdf, id=202, 709.65125pt x 400
+<Unblance_EPS_Pics/network_gray-eps-converted-to.pdf, id=204, 709.65125pt x 400
 .49625pt>
 File: Unblance_EPS_Pics/network_gray-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -2341,10 +2325,10 @@ sed on input line 11.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37
+ [38
 
 ]
-[38 <./Unblance_EPS_Pics/network_gray-eps-converted-to.pdf>]
+[39 <./Unblance_EPS_Pics/network_gray-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure1
 .eps>
 (epstopdf)                    date: 2016-01-28 13:17:38
@@ -2358,7 +2342,7 @@ omp_JCP-figure1-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure1
 .eps>
 (epstopdf)             \includegraphics on input line 33.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure1-eps-converted-to.pdf, id=212, 262.9
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure1-eps-converted-to.pdf, id=214, 262.9
 825pt x 226.8475pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure1-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2368,19 +2352,19 @@ ed-to.pdf  used on input line 33.
 (pdftex.def)             Requested size: 249.83194pt x 215.50389pt.
 
 
-LaTeX Warning: Reference `equ:regular' on page 39 undefined on input line 40.
+LaTeX Warning: Reference `equ:regular' on page 40 undefined on input line 40.
 
 
-LaTeX Warning: Reference `equ:regular' on page 39 undefined on input line 41.
+LaTeX Warning: Reference `equ:regular' on page 40 undefined on input line 41.
 
-<Unblance_EPS_Pics/EPS_images/scatter.png, id=213, 1036.47224pt x 881.09175pt>
+<Unblance_EPS_Pics/EPS_images/scatter.png, id=215, 1036.47224pt x 881.09175pt>
 File: Unblance_EPS_Pics/EPS_images/scatter.png Graphic file (type png)
 <use Unblance_EPS_Pics/EPS_images/scatter.png>
 Package pdftex.def Info: Unblance_EPS_Pics/EPS_images/scatter.png  used on inpu
 t line 45.
 (pdftex.def)             Requested size: 984.64307pt x 837.03242pt.
-[39 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure1-eps-converted-to.pdf>]
-<Unblance_EPS_Pics/EPS_images/side_scatter.png, id=220, 1053.9375pt x 484.209pt
+[40 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure1-eps-converted-to.pdf>]
+<Unblance_EPS_Pics/EPS_images/side_scatter.png, id=223, 1053.9375pt x 484.209pt
 >
 File: Unblance_EPS_Pics/EPS_images/side_scatter.png Graphic file (type png)
 <use Unblance_EPS_Pics/EPS_images/side_scatter.png>
@@ -2388,7 +2372,7 @@ Package pdftex.def Info: Unblance_EPS_Pics/EPS_images/side_scatter.png  used on
  input line 52.
 (pdftex.def)             Requested size: 1001.23497pt x 459.99594pt.
 
-[40 <./Unblance_EPS_Pics/EPS_images/scatter.png>]
+[41 <./Unblance_EPS_Pics/EPS_images/scatter.png>]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/EPS_images/rombus.eps>
 (epstopdf)                    date: 2016-11-09 10:26:30
 (epstopdf)                    size: 104805 bytes
@@ -2400,7 +2384,7 @@ nverted-to.pdf>
 s/rombus-eps-converted-to.pdf Unblance_EPS_Pics/EPS_images/rombus.eps>
 (epstopdf)             \includegraphics on input line 65.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/EPS_images/rombus-eps-converted-to.pdf, id=226, 233.87375pt 
+<Unblance_EPS_Pics/EPS_images/rombus-eps-converted-to.pdf, id=228, 233.87375pt 
 x 217.81375pt>
 File: Unblance_EPS_Pics/EPS_images/rombus-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -2420,7 +2404,7 @@ converted-to.pdf>
 s/triangle-eps-converted-to.pdf Unblance_EPS_Pics/EPS_images/triangle.eps>
 (epstopdf)             \includegraphics on input line 72.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/EPS_images/triangle-eps-converted-to.pdf, id=227, 233.87375p
+<Unblance_EPS_Pics/EPS_images/triangle-eps-converted-to.pdf, id=229, 233.87375p
 t x 217.81375pt>
 File: Unblance_EPS_Pics/EPS_images/triangle-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -2439,7 +2423,7 @@ nverted-to.pdf>
 s/square-eps-converted-to.pdf Unblance_EPS_Pics/EPS_images/square.eps>
 (epstopdf)             \includegraphics on input line 79.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/EPS_images/square-eps-converted-to.pdf, id=228, 233.87375pt 
+<Unblance_EPS_Pics/EPS_images/square-eps-converted-to.pdf, id=230, 233.87375pt 
 x 217.81375pt>
 File: Unblance_EPS_Pics/EPS_images/square-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -2458,7 +2442,7 @@ nverted-to.pdf>
 s/circle-eps-converted-to.pdf Unblance_EPS_Pics/EPS_images/circle.eps>
 (epstopdf)             \includegraphics on input line 85.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/EPS_images/circle-eps-converted-to.pdf, id=229, 233.87375pt 
+<Unblance_EPS_Pics/EPS_images/circle-eps-converted-to.pdf, id=231, 233.87375pt 
 x 217.81375pt>
 File: Unblance_EPS_Pics/EPS_images/circle-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -2468,13 +2452,13 @@ df  used on input line 85.
 (pdftex.def)             Requested size: 191.20082pt x 178.07997pt.
 
 
-LaTeX Warning: Reference `equ:regular' on page 41 undefined on input line 127.
+LaTeX Warning: Reference `equ:regular' on page 42 undefined on input line 127.
 
-[41 <./Unblance_EPS_Pics/EPS_images/side_scatter.png>] [42 <./Unblance_EPS_Pics
+[42 <./Unblance_EPS_Pics/EPS_images/side_scatter.png>] [43 <./Unblance_EPS_Pics
 /EPS_images/rombus-eps-converted-to.pdf> <./Unblance_EPS_Pics/EPS_images/triang
 le-eps-converted-to.pdf> <./Unblance_EPS_Pics/EPS_images/square-eps-converted-t
-o.pdf> <./Unblance_EPS_Pics/EPS_images/circle-eps-converted-to.pdf>] [43]
-[44] [45]
+o.pdf> <./Unblance_EPS_Pics/EPS_images/circle-eps-converted-to.pdf>] [44]
+[45] [46]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/inverter.eps>
 (epstopdf)                    date: 2016-04-12 15:30:24
 (epstopdf)                    size: 993540 bytes
@@ -2486,14 +2470,14 @@ o.pdf>
 eps-converted-to.pdf Unblance_EPS_Pics/inverter.eps>
 (epstopdf)             \includegraphics on input line 278.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/inverter-eps-converted-to.pdf, id=291, 823.075pt x 596.2275p
+<Unblance_EPS_Pics/inverter-eps-converted-to.pdf, id=294, 823.075pt x 596.2275p
 t>
 File: Unblance_EPS_Pics/inverter-eps-converted-to.pdf Graphic file (type pdf)
 <use Unblance_EPS_Pics/inverter-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/inverter-eps-converted-to.pdf  used 
 on input line 278.
 (pdftex.def)             Requested size: 378.42044pt x 274.1224pt.
- [46 <./Unblance_EPS_Pics/inverter-eps-converted-to.pdf>]
+ [47 <./Unblance_EPS_Pics/inverter-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/APPS_1_2_.eps>
 (epstopdf)                    date: 2016-05-05 13:08:58
 (epstopdf)                    size: 3341246 bytes
@@ -2505,19 +2489,19 @@ to.pdf>
 -eps-converted-to.pdf Unblance_EPS_Pics/APPS_1_2_.eps>
 (epstopdf)             \includegraphics on input line 294.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf, id=299, 884.30376pt x 625.33
+<Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf, id=301, 884.30376pt x 625.33
 624pt>
 File: Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf Graphic file (type pdf)
 <use Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf  used
  on input line 294.
 (pdftex.def)             Requested size: 378.42044pt x 267.6012pt.
- [47 <./Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf>] [48]
+ [48 <./Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf>] [49]
 Underfull \hbox (badness 10000) in paragraph at lines 330--333
 
  []
 
-[49]
+[50]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure3
 .eps>
 (epstopdf)                    date: 2016-01-28 13:20:08
@@ -2531,7 +2515,7 @@ omp_JCP-figure3-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure3
 .eps>
 (epstopdf)             \includegraphics on input line 343.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf, id=312, 376.4
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf, id=314, 376.4
 0625pt x 175.65625pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2552,7 +2536,7 @@ omp_JCP-figure4-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure4
 .eps>
 (epstopdf)             \includegraphics on input line 350.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf, id=313, 394.4
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf, id=315, 394.4
 7375pt x 175.65625pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2573,7 +2557,7 @@ omp_JCP-figure5-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure5
 .eps>
 (epstopdf)             \includegraphics on input line 363.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf, id=314, 385.4
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf, id=316, 385.4
 4pt x 175.65625pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2581,7 +2565,7 @@ ile (type pdf)
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-convert
 ed-to.pdf  used on input line 363.
 (pdftex.def)             Requested size: 378.42044pt x 172.45552pt.
- [50 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf>]
+ [51 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure6
 .eps>
 (epstopdf)                    date: 2016-01-28 13:21:12
@@ -2595,7 +2579,7 @@ omp_JCP-figure6-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure6
 .eps>
 (epstopdf)             \includegraphics on input line 378.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf, id=321, 406.5
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf, id=323, 406.5
 1875pt x 162.6075pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2616,7 +2600,7 @@ omp_JCP-figure7-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure7
 .eps>
 (epstopdf)             \includegraphics on input line 387.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf, id=322, 401.5
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf, id=324, 401.5
 pt x 133.49875pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2625,52 +2609,52 @@ Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-convert
 ed-to.pdf  used on input line 387.
 (pdftex.def)             Requested size: 378.42044pt x 125.83307pt.
 
-[51 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf>]
-[52 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf>]
+[52 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf>]
+[53 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf>]
 Underfull \vbox (badness 4391) has occurred while \output is active []
 
- [53 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf> <./Unb
+ [54 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf> <./Unb
 lance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf>])
-(subtex/4_1_discussion_results.tex [54]
+(subtex/4_1_discussion_results.tex [55]
 Chapter 4.
-<EMPC_PNG_Pics/circuit.png, id=348, 630.55576pt x 287.8755pt>
+<EMPC_PNG_Pics/circuit.png, id=350, 630.55576pt x 287.8755pt>
 File: EMPC_PNG_Pics/circuit.png Graphic file (type png)
 <use EMPC_PNG_Pics/circuit.png>
 Package pdftex.def Info: EMPC_PNG_Pics/circuit.png  used on input line 15.
 (pdftex.def)             Requested size: 398.3386pt x 181.86327pt.
-[55
+[56
 
-] [56 <./EMPC_PNG_Pics/circuit.png>] [57]
+] [57 <./EMPC_PNG_Pics/circuit.png>] [58]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 161.
 
-<EMPC_PNG_Pics/ControlStructure.png, id=359, 477.58424pt x 347.49825pt>
+<EMPC_PNG_Pics/ControlStructure.png, id=362, 477.58424pt x 347.49825pt>
 File: EMPC_PNG_Pics/ControlStructure.png Graphic file (type png)
 <use EMPC_PNG_Pics/ControlStructure.png>
 Package pdftex.def Info: EMPC_PNG_Pics/ControlStructure.png  used on input line
  186.
 (pdftex.def)             Requested size: 398.3386pt x 289.8498pt.
-[58 <./EMPC_PNG_Pics/ControlStructure.png>]
+[59 <./EMPC_PNG_Pics/ControlStructure.png>]
 
-LaTeX Warning: Reference `BASICCSR:sec:EMPC' on page 59 undefined on input line
+LaTeX Warning: Reference `BASICCSR:sec:EMPC' on page 60 undefined on input line
  213.
 
-[59] [60]
-<EMPC_PNG_Pics/Regions.png, id=372, 310.4325pt x 151.4385pt>
+[60] [61]
+<EMPC_PNG_Pics/Regions.png, id=374, 310.4325pt x 151.4385pt>
 File: EMPC_PNG_Pics/Regions.png Graphic file (type png)
 <use EMPC_PNG_Pics/Regions.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Regions.png  used on input line 336.
 (pdftex.def)             Requested size: 398.3386pt x 194.33742pt.
- [61 <./EMPC_PNG_Pics/Regions.png>]
-<EMPC_PNG_Pics/MPCStructure.png, id=377, 599.841pt x 351.714pt>
+ [62 <./EMPC_PNG_Pics/Regions.png>]
+<EMPC_PNG_Pics/MPCStructure.png, id=379, 599.841pt x 351.714pt>
 File: EMPC_PNG_Pics/MPCStructure.png Graphic file (type png)
 <use EMPC_PNG_Pics/MPCStructure.png>
 Package pdftex.def Info: EMPC_PNG_Pics/MPCStructure.png  used on input line 355
 .
 (pdftex.def)             Requested size: 398.3386pt x 233.57024pt.
- [62 <./EMPC_PNG_Pics/MPCStructure.png>]
-<EMPC_PNG_Pics/VectorPhasor.png, id=382, 663.6795pt x 646.8165pt>
+ [63 <./EMPC_PNG_Pics/MPCStructure.png>]
+<EMPC_PNG_Pics/VectorPhasor.png, id=384, 663.6795pt x 646.8165pt>
 File: EMPC_PNG_Pics/VectorPhasor.png Graphic file (type png)
 <use EMPC_PNG_Pics/VectorPhasor.png>
 Package pdftex.def Info: EMPC_PNG_Pics/VectorPhasor.png  used on input line 379
@@ -2686,83 +2670,83 @@ Overfull \hbox (2.03748pt too wide) in paragraph at lines 394--411
 [][]
  []
 
-[63 <./EMPC_PNG_Pics/VectorPhasor.png>]
-<EMPC_PNG_Pics/OnePhasor.png, id=387, 164.03387pt x 137.4081pt>
+[64 <./EMPC_PNG_Pics/VectorPhasor.png>]
+<EMPC_PNG_Pics/OnePhasor.png, id=390, 164.03387pt x 137.4081pt>
 File: EMPC_PNG_Pics/OnePhasor.png Graphic file (type png)
 <use EMPC_PNG_Pics/OnePhasor.png>
 Package pdftex.def Info: EMPC_PNG_Pics/OnePhasor.png  used on input line 447.
 (pdftex.def)             Requested size: 239.00558pt x 200.2116pt.
- [64 <./EMPC_PNG_Pics/OnePhasor.png>]
+ [65 <./EMPC_PNG_Pics/OnePhasor.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 465.
 
-<EMPC_PNG_Pics/Sequence.png, id=393, 847.36575pt x 420.3705pt>
+<EMPC_PNG_Pics/Sequence.png, id=395, 847.36575pt x 420.3705pt>
 File: EMPC_PNG_Pics/Sequence.png Graphic file (type png)
 <use EMPC_PNG_Pics/Sequence.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Sequence.png  used on input line 469.
 (pdftex.def)             Requested size: 318.67209pt x 158.09396pt.
-<EMPC_PNG_Pics/SearchTree.png, id=394, 989.94844pt x 213.79875pt>
+<EMPC_PNG_Pics/SearchTree.png, id=396, 989.94844pt x 213.79875pt>
 File: EMPC_PNG_Pics/SearchTree.png Graphic file (type png)
 <use EMPC_PNG_Pics/SearchTree.png>
 Package pdftex.def Info: EMPC_PNG_Pics/SearchTree.png  used on input line 494.
 (pdftex.def)             Requested size: 398.3386pt x 86.0269pt.
-[65 <./EMPC_PNG_Pics/Sequence.png>]
-<EMPC_PNG_Pics/Memory.png, id=399, 599.841pt x 351.714pt>
+[66 <./EMPC_PNG_Pics/Sequence.png>]
+<EMPC_PNG_Pics/Memory.png, id=401, 599.841pt x 351.714pt>
 File: EMPC_PNG_Pics/Memory.png Graphic file (type png)
 <use EMPC_PNG_Pics/Memory.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Memory.png  used on input line 503.
 (pdftex.def)             Requested size: 398.3386pt x 233.57024pt.
- [66 <./EMPC_PNG_Pics/SearchTree.png> <./EMPC_PNG_Pics/Memory.png>]
-<EMPC_PNG_Pics/MultiHorizon.png, id=405, 526.96875pt x 395.22656pt>
+ [67 <./EMPC_PNG_Pics/SearchTree.png> <./EMPC_PNG_Pics/Memory.png>]
+<EMPC_PNG_Pics/MultiHorizon.png, id=407, 526.96875pt x 395.22656pt>
 File: EMPC_PNG_Pics/MultiHorizon.png Graphic file (type png)
 <use EMPC_PNG_Pics/MultiHorizon.png>
 Package pdftex.def Info: EMPC_PNG_Pics/MultiHorizon.png  used on input line 514
 .
 (pdftex.def)             Requested size: 398.3386pt x 298.7651pt.
-<EMPC_PNG_Pics/Result_3fEMPC.png, id=406, 333.099pt x 169.506pt>
+<EMPC_PNG_Pics/Result_3fEMPC.png, id=408, 333.099pt x 169.506pt>
 File: EMPC_PNG_Pics/Result_3fEMPC.png Graphic file (type png)
 <use EMPC_PNG_Pics/Result_3fEMPC.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Result_3fEMPC.png  used on input line 52
 5.
 (pdftex.def)             Requested size: 398.3386pt x 202.70525pt.
-<EMPC_PNG_Pics/Result_PerformanceEMPC.png, id=407, 279.882pt x 142.2405pt>
+<EMPC_PNG_Pics/Result_PerformanceEMPC.png, id=409, 279.882pt x 142.2405pt>
 File: EMPC_PNG_Pics/Result_PerformanceEMPC.png Graphic file (type png)
 <use EMPC_PNG_Pics/Result_PerformanceEMPC.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Result_PerformanceEMPC.png  used on inpu
 t line 532.
 (pdftex.def)             Requested size: 398.3386pt x 202.4452pt.
-<EMPC_PNG_Pics/SFeedbackDC.png, id=408, 162.936pt x 110.0475pt>
+<EMPC_PNG_Pics/SFeedbackDC.png, id=410, 162.936pt x 110.0475pt>
 File: EMPC_PNG_Pics/SFeedbackDC.png Graphic file (type png)
 <use EMPC_PNG_Pics/SFeedbackDC.png>
 Package pdftex.def Info: EMPC_PNG_Pics/SFeedbackDC.png  used on input line 545.
 
 (pdftex.def)             Requested size: 278.83578pt x 188.35948pt.
- [67 <./EMPC_PNG_Pics/MultiHorizon.png>] [68 <./EMPC_PNG_Pics/Result_3fEMPC.png
+ [68 <./EMPC_PNG_Pics/MultiHorizon.png>] [69 <./EMPC_PNG_Pics/Result_3fEMPC.png
 > <./EMPC_PNG_Pics/Result_PerformanceEMPC.png>]
-<EMPC_PNG_Pics/Result_EMPCfinal.png, id=415, 333.099pt x 169.506pt>
+<EMPC_PNG_Pics/Result_EMPCfinal.png, id=417, 333.099pt x 169.506pt>
 File: EMPC_PNG_Pics/Result_EMPCfinal.png Graphic file (type png)
 <use EMPC_PNG_Pics/Result_EMPCfinal.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Result_EMPCfinal.png  used on input line
  566.
 (pdftex.def)             Requested size: 398.3386pt x 202.70525pt.
- [69 <./EMPC_PNG_Pics/SFeedbackDC.png> <./EMPC_PNG_Pics/Result_EMPCfinal.png>] 
-[70])
-(subtex/5_conculsion.tex [71]
+ [70 <./EMPC_PNG_Pics/SFeedbackDC.png> <./EMPC_PNG_Pics/Result_EMPCfinal.png>] 
+[71])
+(subtex/5_conculsion.tex [72]
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--9
 
  []
 
-[72
+[73
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 14--17
 
  []
 
-[73]
+[74]
 Underfull \hbox (badness 10000) in paragraph at lines 18--23
 
  []
@@ -2772,10 +2756,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--29
 
  []
 
-[74] [75]) (subtex/7_nomenclature.tex) (subtex/8_abbreviations.tex [76])
-(subtex/9_appendix.tex [77
+[75] [76]) (subtex/7_nomenclature.tex) (subtex/8_abbreviations.tex [77])
+(subtex/9_appendix.tex [78
 
-]) [78
+]) [79
 
 ]
 
@@ -2783,27 +2767,27 @@ Package biblatex Warning: The option 'labelprefix' is limited
 (biblatex)                when used with BibTeX.
 (biblatex)                Consider using Biber instead.
 
-[79
+[80
 
-] [80]
-Overfull \hbox (9.29346pt too wide) in paragraph at lines 223--223
+] [81]
+Overfull \hbox (9.29346pt too wide) in paragraph at lines 224--224
 \T1/cmr/m/n/12 op-ti-mal power-flow al-go-rithm to mit-i-gate volt-age un-bal-a
 nce,'' \T1/cmr/m/it/12 IEEE Trans-
  []
 
-[81] [82] [83]
-Overfull \hbox (3.16217pt too wide) in paragraph at lines 223--223
+[82] [83] [84]
+Overfull \hbox (3.16217pt too wide) in paragraph at lines 224--224
 [] \T1/cmr/m/n/12 N. Muthuku-mar,  S. Srini-vasan,  K. Ramku-mar,  K. Kan-nan, 
 and  V. E. Balas,
  []
 
-[84] [85] [86]
-Overfull \hbox (10.6709pt too wide) in paragraph at lines 223--223
+[85] [86] [87]
+Overfull \hbox (10.6709pt too wide) in paragraph at lines 224--224
 [] \T1/cmr/m/n/12 M. Baotic, ``Op-ti-mal con-trol of piece-wise affine sys-tems
 : A multi-parametric
  []
 
-[87] [88] (dolgozatmain.aux)
+[88] [89] (dolgozatmain.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -2816,9 +2800,9 @@ Package logreq Info: Writing requests to 'dolgozatmain.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  62111 strings out of 492897
- 1504682 string characters out of 3133501
- 2134579 words of memory out of 3000000
- 65091 multiletter control sequences out of 15000+200000
+ 1504739 string characters out of 3133501
+ 2138579 words of memory out of 3000000
+ 65088 multiletter control sequences out of 15000+200000
  561413 words of font info for 100 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,23n,96p,2654b,1435s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2857,7 +2841,7 @@ c/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dolgozatmain.pdf (97 pages, 3928210 bytes).
+Output written on dolgozatmain.pdf (98 pages, 3917104 bytes).
 PDF statistics:
  1170 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
