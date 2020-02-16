@@ -498,14 +498,20 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     The search for an active critical region starts from the first level and represents the evaluation in each adjacent node of an inequality of the form: $x\leq K$. Thus, in this case a maximum number of 4 inequalities have to be evaluated to reach the active critical region. Implementing the presented algorithm is straightforward on a DSP processor, for instance from the dsPIC33 family by Microchip. Using the MAC (multiply and accumulate) instruction the inequality is evaluated for each node using 4 instructions, thus in 80 ns on a 50 MIPS processor (Fig. \ref{EMPC:fig:Memory}). The active critical region can be reached in a maximum of 400 ns. Compared to the typical sample rate of 10us in the case of a CSR, the real-time implementation on a DSP processor is possible.
     
-   % \begin{table}[]
-%\caption{asd}
-%    \begin{tabular}{ccc}
-%    asd
-%    &asd
-%    &asd    \\
-%    \end{tabular}
-%    \end{table}
+    \begin{table}[]
+\caption{asd}
+    \begin{tabular}{ccc}
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/Memory.png}
+        \caption{Data organization in the data memory of a single core DSP and the evaluation of a 2-dimensional inequality}
+        \label{EMPC:fig:Memory}
+    \end{figure}
+    &asd
+    &asd
+    \\
+    \end{tabular}
+    \end{table}
 
     \begin{figure}[!ht]
         \centering
@@ -561,7 +567,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
     \begin{equation}
         \begin{array}{l}
             k1=\frac{\omega^3_n}{1.5U_n\omega^2_{dc}},\,k2=\frac{1.9\omega_n L_{dc}}{1.5U_n},\,k3=\frac{2.2\omega^2_n}{1.5U_n(\omega^2_{dc}-1)},\\
-            \textnormal{where,}\\
+            where,\\
             \omega_n=1.1,\,\omega_{ac}=\frac{1}{\sqrt{L_{ac}C_{ac}}},\,\omega_{dc}=\frac{1}{\sqrt{L_{dc}C_{dc}}}
         \end{array}
         \label{EMPC:equ:tuning}
@@ -577,7 +583,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
         \label{EMPC:fig:Result_EMPCfinal}
     \end{figure}
 
-\section{Conclusion}\label{EMPC:sec:Conclusions}
+\section{Conclusion}\label{EMPC:sec:Conclusion}
 
     The constrained, model-based optimal control of a current source rectifier has been presented in this paper. The dynamic model of a three-phase current source rectifier has been developed in Park frame. The proposed model has been examined from the design and implementation points of view with the purpose of explicit model-based predictive control. It proved to be the case that the regular set of differential equations of the CSR appears to be too complex, and contains non-linearity for such a design approach. To address this issue the usage of separated AC and DC equation sets was suggested to avoid linearization and complexity reduction. This solution eliminates bilinearity and enables the application of linear control design techniques. Current-based SVPWM of the three-phase converter has been used with an emphasis on the reduction of switching losses. Throughout the article the explicit model predictive control method is described and the method's effectiveness compared to conventional state feedback control is show. The implementation and simulation experiments have been performed in Matlab/Simulink environment. Moreover, the proper implementation of the system in a modern DSP chip will result in real-time operation.
 		
@@ -601,10 +607,10 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
   $f$                               & Network voltage frequeny\\
   $fpwm$                            & Rectifier switching frequency\\
   $f_s$                             & Simulation frequency\\
-  $f_i$                             & Function of state at the $i^th$ step\\
-  $g_i$                             & Function of input at the $i^th$ step\\
-  $G$                               & Constraint input matrix\\
-  $H$                               & Supplementary matrix\\
+  $f_i$                             & ?\\
+  $g_i$                             & ?\\
+  $G$                               & ?\\
+  $H$                               & ?\\
   $HPF(s)$                          & High pass filter transfer function\\
   $i_{ac_{1,2,3}}$                  & AC side inductance current\\
   $i_{ac_{\alpha,\beta}}$           & AC side inductance current in Clarke frame\\
@@ -636,7 +642,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
   $\textbf{R}_w$                & Input weight matrix of quadratic MPC cost function\\
   $\mathbb{R}$                      & Set of real numbers\\
   $S$                               & Current phasor sector\\
-  $\textbf{S}$                  & Coefficient constraint matrix\\
+  $\textbf{S}$                  & ?\\
   $t$                               & Discrete timestep\\
   $T_s$                             & Switching period\\
   $T_{0,\dots,9}$                   & Dwell time in the corresponding sector\\
@@ -650,12 +656,12 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
   $u_0$                             & DC side voltage on load\\
   $u^*_0$                           & DC side voltage reference\\
   $u_{MPC}$                         & MPC control variable\\
-  $\textbf{u}^*$                & Optimal input vector\\
+  $\textbf{u}^*$                & ?\\
   $U$                               & Set of MPC inputs\\
   $Un$                              & Network line-to-line voltage\\
   $\textbf{x}$                  & State vector of the DC side system\\
   $\textbf{y}$                  & Input vector of the DC side system\\
-  $V_z$                             & Quadratic lyapunov function for minimization\\
+  $V_z$                             & ?\\
   $\delta_{1,2,3}$                  & Conduction state leg in Clarke frame\\
   $\delta_{\alpha,\beta}$           & Conduction state leg in Park frame\\
   $\delta_{d,q}$                    & Conduction state leg\\

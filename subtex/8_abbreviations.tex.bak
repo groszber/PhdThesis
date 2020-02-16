@@ -24,5 +24,6 @@
 	SHE:			& Selective harmonic elimination\\
 	APPS:			& Asynchronous Parallel Pattern Search\\
 	MPPT:			& Maximum Power Point Tracking\\
+VU:          &Voltage unbalance\\
 
 \end{longtable} 

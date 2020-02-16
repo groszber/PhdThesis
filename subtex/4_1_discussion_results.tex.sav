@@ -256,11 +256,11 @@ Understandably, model based controllers require the system's model the ought to 
     \end{equation}
 There the formulation of such problem is described in detail in chapter \ref{BASICCSR:sec:OptimalControl}.\\
     This problem is solved at each time instant $t$, where $\textbf{x}_{t+k\vert t}$ denotes the state vector predicted at time $t+k$, obtained by applying the input sequence $\textbf{u}_{t|t}...\textbf{u}_{t|t+1}$ to model \ref{EMPC:equ:quadratic_regions}, starting from the state $\textbf{x}_{t|t}$. Further, it is assumed that $Q$ and $R$, are symmetric positive semidefinite $(\textbf{Q}_w=\textbf{Q}_w^T\geq0$, $\textbf{R}_w=\textbf{R}_w^T>0)$ and $K$ is a feedback gain. Further, $N_y,N_u,N_c$ are the output, input and constraint horizons, respectively.
-    Using the model for predicting the future behavior of the system and with some appropriate substitution and variable manipulation which basic notions showed in section \ref{BASICCSR:sec:MPC}, the problem \ref{EMPC:equ:optim_problem},\ref{EMPC:equ:optim_problem_constr} can be transformed to the standard multi parametric quadratic programming form, as described in \cite{rivera2013predictive}:
+    Using the model for predicting the future behavior of the system and with some appropriate substitution and variable manipulation, the problem \ref{EMPC:equ:optim_problem},\ref{EMPC:equ:optim_problem_constr} can be transformed to the standard multi parametric quadratic programming form, as described in \cite{rivera2013predictive}:
 
     \begin{equation}
         \begin{array}{rcl}
-            V_z&=&\min\frac{1}{2}z^t\textbf{H}\textbf{z}
+            V_z&=&min\frac{1}{2}z^tHz
         \end{array}
         \label{EMPC:equ:quadratic_program}
     \end{equation}
@@ -269,12 +269,12 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \begin{equation}
         \begin{array}{rcl}
-            \textbf{Gz}&\leq&\textbf{W}+\textbf{S}\textbf{x}(t)
+            Gz&\leq&W+S\textbf{x}(t)
         \end{array}
         \label{EMPC:equ:quadratic_inequality}
     \end{equation}
 
-    where the matrices $\textbf{H}$, $\textbf{G}$, $\textbf{W}$, $\textbf{S}$ result directly from the coordinate transformations described in \ref{BASICCSR:sec:OptimalControl}. The solution of the quadratic optimization problem for each critical region has the form:
+    where the matrices $H$, $G$, $W$, $S$ result directly from the coordinate transformations and variable manipulations. The solution of the mp-QP problem for each critical region has the form:
 
     \begin{equation}
         \begin{array}{rcl}
@@ -287,7 +287,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \begin{equation}
         \begin{array}{rcl}
-            \mathcal{C}_{reg_i}&=&\{\textbf{x}\in mathbb{R}^n|\textbf{H}_i\textbf{x}\leq K_i\}
+            \mathcal{C}_{reg_i}&=&\{\textbf{x}\in R^n|H_i\textbf{x}\leq K_i\}
         \end{array}
         \label{EMPC:equ:quadratic_critical}
     \end{equation}
@@ -296,7 +296,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \begin{equation}
         \begin{array}{l}
-            \{f_i,g_i,\textbf{H}_i,\textbf{K}_i|i=1\dots N\}
+            \{f_i,g_i,H_i,K_i\}^{i=1\dots N}
         \end{array}
         \label{EMPC:equ:quadratic_set}
     \end{equation}
@@ -338,7 +338,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
         \label{EMPC:fig:regions}
     \end{figure}
 
-    From the basis of the discretised model \ref{EMPC:equ:DiscreteStateSpace}, the given constraints \ref{EMPC:equ:numeric_constraints}, and horizon \ref{EMPC:equ:numeric_constraints} the cost function \ref{EMPC:equ:optim_problem} is established via the MPT toolbox [30] and used in the generated controller for the EMPC design [29], [31]. The controller is created as a compliable S-function in the Matlab/Simulink environment and its place in the control structure can be observed in Fig. \ref{EMPC:fig:MPCStructure}. as the EMPC controller.
+    From the basis of the discredited model \ref{EMPC:equ:DiscreteStateSpace}, the given constraints, and horizon \ref{EMPC:equ:numeric_constraints} the cost function \ref{EMPC:equ:optim_problem} is established via the MPT toolbox [30] and used in the generated controller for the EMPC design [29], [31]. The controller is created as a compliable S-function in the Matlab/Simulink environment and its place in the control structure can be observed in Fig. \ref{EMPC:fig:MPCStructure}. as the EMPC controller.
     The output of the MPC controller is the control variable obtained via solving \ref{EMPC:equ:optim_problem_constr} and
     $u_{MPC}=(\delta_du_{c_d}+\delta_qu_{c_q})$, from which the current reference can be calculated using \ref{EMPC:equ:numeric_constraints}. The quadrature component $u_{c_q}$ is zero in the synchronous frame of the filter capacitor voltage.
 
@@ -359,7 +359,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
 \subsection{Active AC-side damping}\label{EMPC:sec:ACdamping}
 
-    The CSR requires a voltage supply on the AC side. Taking the inductive character of the mains into consideration, the presence of a three-phase capacitor bank at the input of the CSR is a must. The most convenient is to use three-phase LC filtering with inductors on the lines and star connected capacitors resembling those in Fig. \ref{EMPC:fig:network}, although the resonance phenomena between these components can still cause difficult problems. The simplest way to dampen the resonance on the AC side LC filter is to add a damping resistor across the capacitor \cite{regaya2014new}. Because these resistors result in high losses, active damping methods have been proposed, which emulate damping resistors by control. This makes the CSR bridge produce an additional high frequency current, equivalent to the presence of virtual damping resistors connected in parallel with the AC capacitors. The resonance of the AC side LC filter produces harmonics in the capacitor voltage with frequency close to $\omega_{ac}=\frac{1}{\sqrt{L_{ac}C_{ac}}}$, which appears as $\omega_{ac}-\omega$ component in $u_{c_d}$, where $\omega=2\pi f$. The fundamental component of the capacitor voltage represents a DC component in the synchronous reference frame. Therefore, a high-pass filter (HPF) is applied to filter out this DC component, with the transfer function:
+    The CSR requires a voltage supply on the AC side. Taking into consideration the inductive character of the mains, the presence of a three-phase capacitor tank at the input of the CSR is a must. The most convenient is to use three-phase LC filtering with inductors on the lines and star connected capacitors resembling those in Fig. \ref{EMPC:fig:network}, although the resonance phenomena between these components can still cause difficult problems. The simplest way to dampen the resonance on the AC side LC filter is to add a damping resistor across the capacitor \cite{regaya2014new}. Because these resistors result in high losses, active damping methods have been proposed, which emulate damping resistors by control. This makes the CSR bridge produce an additional high frequency current, equivalent to the presence of virtual damping resistors connected in parallel with the AC capacitors. The resonance of the AC side LC filter produces harmonics in the capacitor voltage with frequency close to $\omega_{ac}=\frac{1}{\sqrt{L_{ac}C_{ac}}}$, which appears as $\omega_{ac}-\omega$ component in $u_{c_d}$, where $\omega=2\pi f$. The fundamental component of the capacitor voltage represents a DC component in the synchronous reference frame. Therefore, a high-pass filter (HPF) is applied to filter out this DC component, with the transfer function:
 
     \begin{equation}
         \begin{array}{rcl}
@@ -370,7 +370,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     A virtual damping resistance $R_H$ has been defined for calculation of the damping current component $i_{HPF}$ from the HPF component of the capacitor voltage.
 
-\section{Modulation}\label{EMPC:sec:Modulation}
+\section{Space vector modulation strategy}\section{Modulation}\label{EMPC:sec:Modulation}
 
     The chosen modulation strategy is developed in the $"\alpha\beta"$ stationary reference frame, based on the notions already mentioned in section \ref{BASICCSR:sec:OperationPrinciple}. The structure requires simultaneous conduction of the upper and lower transistors of the bridge, since the current of the $L_{dc}$  choke must not be interrupted. Additionally, the switching devices are considered as ideal.
 
@@ -492,20 +492,11 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
     \begin{figure}[!ht]
         \centering
         \includegraphics[width=\textwidth]{EMPC_PNG_Pics/SearchTree.png}
-        \caption{Binary search tree of the controller for a horizon of $N = 4$. The leaf nodes are depicted with filled squares. The depth of the tree is 5.}
+        \caption{Binary search tree of the controller for a horizon of N = 4. The leaf nodes are depicted with filled squares. The depth of the tree is 5.}
         \label{EMPC:fig:SearchTree}
     \end{figure}
 
-    The search for an active critical region starts from the first level and represents the evaluation in each adjacent node of an inequality of the form: $x\leq K$. Thus, in this case a maximum number of 4 inequalities have to be evaluated to reach the active critical region. Implementing the presented algorithm is straightforward on a DSP processor, for instance from the dsPIC33 family by Microchip. Using the MAC (multiply and accumulate) instruction the inequality is evaluated for each node using 4 instructions, thus in 80 ns on a 50 MIPS processor (Fig. \ref{EMPC:fig:Memory}). The active critical region can be reached in a maximum of 400 ns. Compared to the typical sample rate of 10us in the case of a CSR, the real-time implementation on a DSP processor is possible.
-    
-   % \begin{table}[]
-%\caption{asd}
-%    \begin{tabular}{ccc}
-%    asd
-%    &asd
-%    &asd    \\
-%    \end{tabular}
-%    \end{table}
+    The search for an active critical region starts from the first level and represents the evaluation in each adjacent node of an inequality of the form: $x\leq K$. Thus, in this case a maximum number of 4 inequalities have to be evaluated to reach the active critical region. Implementing the presented algorithm is straightforward on a DSP processor, for instance from the dsPIC33 family by Microchip. Using the mac (multiply and accumulate) instruction the inequality is evaluated for each node using 4 instructions, thus in 80ns on a 50MIPS processor (Fig. \ref{EMPC:fig:Memory}). The active critical region can be reached in a maximum of 400ns. Compared to the typical sample rate of 10us in the case of a CSR, the real-time implementation on a DSP processor is possible.
 
     \begin{figure}[!ht]
         \centering
@@ -561,7 +552,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
     \begin{equation}
         \begin{array}{l}
             k1=\frac{\omega^3_n}{1.5U_n\omega^2_{dc}},\,k2=\frac{1.9\omega_n L_{dc}}{1.5U_n},\,k3=\frac{2.2\omega^2_n}{1.5U_n(\omega^2_{dc}-1)},\\
-            \textnormal{where,}\\
+            where,\\
             \omega_n=1.1,\,\omega_{ac}=\frac{1}{\sqrt{L_{ac}C_{ac}}},\,\omega_{dc}=\frac{1}{\sqrt{L_{dc}C_{dc}}}
         \end{array}
         \label{EMPC:equ:tuning}
@@ -577,7 +568,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
         \label{EMPC:fig:Result_EMPCfinal}
     \end{figure}
 
-\section{Conclusion}\label{EMPC:sec:Conclusions}
+\section{Conclusion}\label{EMPC:sec:Conclusion}
 
     The constrained, model-based optimal control of a current source rectifier has been presented in this paper. The dynamic model of a three-phase current source rectifier has been developed in Park frame. The proposed model has been examined from the design and implementation points of view with the purpose of explicit model-based predictive control. It proved to be the case that the regular set of differential equations of the CSR appears to be too complex, and contains non-linearity for such a design approach. To address this issue the usage of separated AC and DC equation sets was suggested to avoid linearization and complexity reduction. This solution eliminates bilinearity and enables the application of linear control design techniques. Current-based SVPWM of the three-phase converter has been used with an emphasis on the reduction of switching losses. Throughout the article the explicit model predictive control method is described and the method's effectiveness compared to conventional state feedback control is show. The implementation and simulation experiments have been performed in Matlab/Simulink environment. Moreover, the proper implementation of the system in a modern DSP chip will result in real-time operation.
 		
@@ -601,10 +592,10 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
   $f$                               & Network voltage frequeny\\
   $fpwm$                            & Rectifier switching frequency\\
   $f_s$                             & Simulation frequency\\
-  $f_i$                             & Function of state at the $i^th$ step\\
-  $g_i$                             & Function of input at the $i^th$ step\\
-  $G$                               & Constraint input matrix\\
-  $H$                               & Supplementary matrix\\
+  $f_i$                             & ?\\
+  $g_i$                             & ?\\
+  $G$                               & ?\\
+  $H$                               & ?\\
   $HPF(s)$                          & High pass filter transfer function\\
   $i_{ac_{1,2,3}}$                  & AC side inductance current\\
   $i_{ac_{\alpha,\beta}}$           & AC side inductance current in Clarke frame\\
@@ -636,7 +627,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
   $\textbf{R}_w$                & Input weight matrix of quadratic MPC cost function\\
   $\mathbb{R}$                      & Set of real numbers\\
   $S$                               & Current phasor sector\\
-  $\textbf{S}$                  & Coefficient constraint matrix\\
+  $\textbf{S}$                  & ?\\
   $t$                               & Discrete timestep\\
   $T_s$                             & Switching period\\
   $T_{0,\dots,9}$                   & Dwell time in the corresponding sector\\
@@ -650,12 +641,12 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
   $u_0$                             & DC side voltage on load\\
   $u^*_0$                           & DC side voltage reference\\
   $u_{MPC}$                         & MPC control variable\\
-  $\textbf{u}^*$                & Optimal input vector\\
+  $\textbf{u}^*$                & ?\\
   $U$                               & Set of MPC inputs\\
   $Un$                              & Network line-to-line voltage\\
   $\textbf{x}$                  & State vector of the DC side system\\
   $\textbf{y}$                  & Input vector of the DC side system\\
-  $V_z$                             & Quadratic lyapunov function for minimization\\
+  $V_z$                             & ?\\
   $\delta_{1,2,3}$                  & Conduction state leg in Clarke frame\\
   $\delta_{\alpha,\beta}$           & Conduction state leg in Park frame\\
   $\delta_{d,q}$                    & Conduction state leg\\

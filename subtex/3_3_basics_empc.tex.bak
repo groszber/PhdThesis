@@ -828,7 +828,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
 
     \subsubsection{Receiding horizon control}\label{BASICCSR:sec:RHC}
 
-    All this said, even if we calculate the best optimal step sequence for solving the constrained control problem, there are sstill uncertainties for the future. Optimization over a finite horizon has the following disadvantages:
+    All this said, even if we calculate the best optimal step sequence for solving the constrained control problem, there are still uncertainties for the future. Optimization over a finite horizon has the following disadvantages:
 		
 		\begin{itemize}
 			\item Unforeseen problems may occur after the fixed optimization horizon, which may cancel the sequence of order for the 		calculated finished horizon.
@@ -840,7 +840,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
 
 \begin{figure}[!ht]
         \centering
-        \includegraphics[width=.9\textwidth]{EMPC_PNG_Pics/RHC.png}
+        \includegraphics[width=.9\textwidth]{EMPC_PNG_Pics/RHC_gray.jpg}
         \caption{Graphycal display of receiding horison control (RHC) idea \cite{borrelli2017predictive}.}
         \label{BASICCSR:fig:RHC}
     \end{figure}
@@ -869,7 +869,7 @@ The Formulation of the optimal control problem with moving horizon \cite{goodwin
         \label{BASICMPC:equ:receiding_horison_Lyapunov}
     \end{equation}
 		
-		This means that after $N_u$ samples the control stops and the system is evolving to an open loop form. It is obvious that the choice only makes sense if the open loop system is stable. The second option would as described in \ref{BASICMPC:equ:control_coefficient_infinite}, and \ref{BASICMPC:equ:Riccati_infinite}, but this involves to use an unconstrained control for $N_u$ LQR samples. As a result, the MPC law calculates the optimal command sequence:
+		This means that after $N_u$ samples the control stops and the system is evolving to an open loop form. It is obvious that the choice only makes sense if the open loop system is stable. The second option would as described with the method \ref{BASICMPC:equ:cost_function_Euclidian_recursive_twoP}, but this involves to use an unconstrained control for $N_u$ LQR samples. As a result, the MPC law calculates the optimal command sequence:
 		
 		\begin{equation}
         \begin{array}{rcl}

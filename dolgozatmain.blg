@@ -2,12 +2,12 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: dolgozatmain.aux
 The style file: biblatex.bst
 Database file #1: dolgozatmain-blx.bib
 Database file #2: dolgozat.bib
-You're missing a field name---line 645 of file dolgozat.bib
- : 
- : %  title={Constrained Predictive Control of Three-Phase Buck Rectifiers},
+You're missing a field name---line 649 of file dolgozat.bib
+ :   
+ :   %urldate = {2019-09-01}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 763 of file dolgozat.bib
+Repeated entry---line 760 of file dolgozat.bib
  : %@article{IEEE_936_29053
  :                         ,
 I'm skipping whatever remains of this entry

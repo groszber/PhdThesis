@@ -4093,7 +4093,25 @@
     \field{year}{2018}
   \endentry
 
-  \entry{neukirchner2019linkedmodel}{article}{}
+  \entry{neukirchner2019linkedmodel}{online}{}
+    \name{author}{1}{}{%
+      {{hash=NLR}{%
+         family={Neukirchner},
+         familyi={N\bibinitperiod},
+         given={L{\'a}szl{\'o}\bibnamedelima Rich{\'a}rd},
+         giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NLR1}
+    \strng{fullhash}{NLR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Constrained Predictive Control of Three-Phase Buck Rectifiers
+  Simulation details}
+    \verb{url}
+    \verb http://virt.uni-pannon.hu/ver/index.php/en/projects/30-empc-csr, 2019
+    \endverb
+    \field{year}{2019}
   \endentry
 
   \entry{neukirchner2016voltage}{article}{}
@@ -4135,6 +4153,51 @@
     \field{volume}{12}
     \field{journaltitle}{Int. J. of Thermal \& Environmental Engineering}
     \field{year}{2016}
+  \endentry
+
+  \entry{neukirchner2020constrained}{article}{}
+    \name{author}{5}{}{%
+      {{hash=NLR}{%
+         family={Neukirchner},
+         familyi={N\bibinitperiod},
+         given={L{\'a}szl{\'o}\bibnamedelima Rich{\'a}rd},
+         giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Magyar},
+         familyi={M\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=FA}{%
+         family={Fodor},
+         familyi={F\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KND}{%
+         family={Kutasi},
+         familyi={K\bibinitperiod},
+         given={Nimr{\'o}d\bibnamedelima D{\'e}nes},
+         giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kelemen},
+         familyi={K\bibinitperiod},
+         given={Andr{\'a}s},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{sajat}
+    \strng{namehash}{NLRMAFA+1}
+    \strng{fullhash}{NLRMAFAKNDKA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{title}{Constrained Predictive Control of Three-PhaseBuck Rectifiers}
+    \field{volume}{17}
+    \field{journaltitle}{Acta Polytechnica Hungarica}
+    \field{year}{2020}
   \endentry
 
   \entry{neukirchner2011modeling}{article}{}
