@@ -110,7 +110,6 @@ $\textbf{K}$                & Controller gain\\
 $g$                         & Autonomous function where there are no inputs\\
 $V$                         & Lyapunov function\\
 
-
 \end{tabularx}
 \end{scriptsize}
 

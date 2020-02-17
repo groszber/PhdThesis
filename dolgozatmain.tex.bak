@@ -178,7 +178,6 @@
 
 %% Basic notions
 \input{subtex/3_1_basics_unbalance.tex}
-\input{subtex/3_2_basics_powelectric.tex}
 \input{subtex/3_3_basics_empc.tex}
 \input{subtex/3_4_basics_notations.tex}
 

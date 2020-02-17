@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  17 FEB 2020 21:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  17 FEB 2020 21:20
 entering extended mode
 **C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
 (C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
@@ -2281,37 +2281,33 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 571.
 LaTeX Warning: Reference `MPP_program' on page 32 undefined on input line 657.
 
 
-LaTeX Warning: Reference `MPP_program' on page 32 undefined on input line 676.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 691--692
+Underfull \hbox (badness 10000) in paragraph at lines 687--688
 
  []
 
-[32]
-<EMPC_PNG_Pics/RHC_gray.jpg, id=183, 941.5175pt x 734.745pt>
+<EMPC_PNG_Pics/RHC_gray.jpg, id=179, 941.5175pt x 734.745pt>
 File: EMPC_PNG_Pics/RHC_gray.jpg Graphic file (type jpg)
 <use EMPC_PNG_Pics/RHC_gray.jpg>
-Package pdftex.def Info: EMPC_PNG_Pics/RHC_gray.jpg  used on input line 695.
+Package pdftex.def Info: EMPC_PNG_Pics/RHC_gray.jpg  used on input line 691.
 (pdftex.def)             Requested size: 358.50229pt x 279.76656pt.
-
-Overfull \hbox (3.21584pt too wide) detected at line 713
+[32]
+Overfull \hbox (3.21584pt too wide) detected at line 709
 []
  []
 
-[33 <./EMPC_PNG_Pics/RHC_gray.jpg>] [34]
+[33 <./EMPC_PNG_Pics/RHC_gray.jpg>]
 
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 798.
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 794.
 
 
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 799.
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 795.
 
-[35]
+[34] [35]
 <EMPC_PNG_Pics/BasicSearchTree.png, id=195, 985.88326pt x 359.54324pt>
 File: EMPC_PNG_Pics/BasicSearchTree.png Graphic file (type png)
 <use EMPC_PNG_Pics/BasicSearchTree.png>
 Package pdftex.def Info: EMPC_PNG_Pics/BasicSearchTree.png  used on input line 
-1206.
+1202.
 (pdftex.def)             Requested size: 398.3386pt x 145.26859pt.
 ) (subtex/3_4_basics_notations.tex [36 <./EMPC_PNG_Pics/BasicSearchTree.png>] [
 37]) (subtex/4_3_discussion_results.tex [38]
@@ -2810,10 +2806,10 @@ Package logreq Info: Writing requests to 'dolgozatmain.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 62163 strings out of 492897
- 1507388 string characters out of 3133501
- 2141184 words of memory out of 3000000
- 65140 multiletter control sequences out of 15000+200000
+ 62162 strings out of 492897
+ 1507367 string characters out of 3133501
+ 2140171 words of memory out of 3000000
+ 65139 multiletter control sequences out of 15000+200000
  560468 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,23n,96p,2654b,1435s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2851,7 +2847,7 @@ lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 msy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb>
-Output written on dolgozatmain.pdf (98 pages, 3905455 bytes).
+Output written on dolgozatmain.pdf (98 pages, 3905536 bytes).
 PDF statistics:
  1192 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
