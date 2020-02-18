@@ -40,7 +40,7 @@ Understandably, model based controllers require the system's model the ought to 
         \label{EMPC:equ:delta_set}
     \end{equation}
 
-    Converting the components in the stationary (Clarke) frame of the space phasors of the three-phase quantities, from \ref{EMPC:equ:abc_eqn} it results:
+    Converting the components in the stationary (Clarke) frame (displayed in section \ref{BASICCSR:sec:Clarke}) of the space phasors of the three-phase quantities, from \ref{EMPC:equ:abc_eqn} it results:
 
     \begin{equation}
         \begin{array}{rcl}
@@ -54,7 +54,7 @@ Understandably, model based controllers require the system's model the ought to 
         \label{EMPC:equ:abc_alfabeta}
     \end{equation}
 
-    Equation \ref{EMPC:equ:abc_alfabeta} is transformed to the synchronous reference (Park) frame rotating with the $u_{c_d}$ capacitor voltage space vector. The resulting mathematical model is thus:
+    Equation \ref{EMPC:equ:abc_alfabeta} is transformed to the synchronous reference (Park) frame (displayed in section \ref{BASICCSR:sec:Park}) rotating with the $u_{c_d}$ capacitor voltage space vector. The resulting mathematical model is thus:
 
     \begin{equation}
         \begin{array}{rcl}
@@ -267,7 +267,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \begin{equation}
         \begin{array}{rcl}
-            J^*(\textbf{x}(t))&=&\min \textbf{z}'\textbf{H}\textbf{z}
+            J^*(\textbf{x}(t))&=&\min_{\textbf{z}}J(\textbf{x},\textbf{z})=\frac{1}{2}\textbf{z}'\textbf{H}\textbf{z}
         \end{array}
         \label{EMPC:equ:quadratic_program}
     \end{equation}
@@ -628,6 +628,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
   $\vec{i}_{0,\dots,9}$             & Current vector of the phasor\\
   $\vec{i}_{ref}$                   & Reference current vector\\
   $J$                               & Quadratic EMPC cost function\\
+  $J^*$                             & Optimal cost value\\
   $k_{1,2,3}$                       & State feedback controller's coefficients\\
   $K$                               & Feedback gain of EMPC controller\\
   $L_{ac}$                          & AC side inductance\\
@@ -662,7 +663,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
   $Un$                              & Network line-to-line voltage\\
   $\textbf{x}$                  & State vector of the DC side system\\
   $\textbf{y}$                  & Input vector of the DC side system\\
-  $V_z$                             & Quadratic lyapunov function for minimization\\
+  $\textbf{z}$                  & Vector of optimization variables\\
   $\delta_{1,2,3}$                  & Conduction state leg in Clarke frame\\
   $\delta_{\alpha,\beta}$           & Conduction state leg in Park frame\\
   $\delta_{d,q}$                    & Conduction state leg\\

@@ -411,13 +411,13 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
     \begin{equation}
         \begin{array}{rcl}
             \mathcal{P}_i&=&\{
-            (\textbf{U}_i,\textbf{x}_i)\in\mathbb{R}^{m\cdot(N-i)+n},s.t.:\textbf{G}_u\textbf{U}_i-\textbf{E}_i\textbf{x}_i\leq\textbf{W}_i
+            (\textbf{U}_i,\textbf{x}_i)\in\mathbb{R}^{m\cdot(N-i)+n},s.t.:\textbf{G}_u\textbf{U}_i-\textbf{E}_i\textbf{x}_i\leq\textbf{w}_i
             \},
         \end{array}
         \label{BASICMPC:equ:constrained_constraint_set}
     \end{equation}
 
-    where $\textbf{G}_i$, $\textbf{E}_i$, and $\textbf{W}_i$ as the matrices of inequality and equality constraints are defined as:
+    where $\textbf{G}_i$, $\textbf{E}_i$, and $\textbf{w}_i$ as the matrices of inequality and equality constraints are defined as:
 
     \begin{equation}
     \begin{small}
@@ -444,7 +444,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
             \vdots\\
             -\textbf{A}_f\textbf{A}^{N-i}\\
             \end{bmatrix}&
-            \textbf{W}_i=\begin{bmatrix}
+            \textbf{w}_i=\begin{bmatrix}
             \textbf{b}_u\\
             \textbf{b}_u\\
             \vdots\\
@@ -486,12 +486,12 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
             \textbf{F}&\textbf{Y}\\
             \end{bmatrix}
             [\textbf{U}'_0\textbf{x}'(0)]'\\.
-            &\textnormal{subj. to}&\textbf{G}_0\textbf{U}_0\leq\textbf{W}_0+\textbf{E}_0\textbf{x}(0),
+            &\textnormal{subj. to}&\textbf{G}_0\textbf{U}_0\leq\textbf{w}_0+\textbf{E}_0\textbf{x}(0),
         \end{array}
         \label{BASICMPC:equ:constrained_optimal_control_problem_Euclidian_second form}
     \end{equation}
 
-    with $\textbf{G}_0$, $\textbf{W}_0$, and $\textbf{E}_0$ are defined in \ref{BASICMPC:equ:constrained_constraint_matrices} and $\textbf{H}$, $\textbf{F}$, and $\textbf{Y}$ are defined in \ref{BASICMPC:equ:batch_simplfy}, additionally as $J_0(\textbf{x}(0),\textbf{U}_0)\geq 0$ it follows that $\begin{bmatrix}
+    with $\textbf{G}_0$, $\textbf{w}_0$, and $\textbf{E}_0$ are defined in \ref{BASICMPC:equ:constrained_constraint_matrices} and $\textbf{H}$, $\textbf{F}$, and $\textbf{Y}$ are defined in \ref{BASICMPC:equ:batch_simplfy}, additionally as $J_0(\textbf{x}(0),\textbf{U}_0)\geq 0$ it follows that $\begin{bmatrix}
             \textbf{H}&\textbf{F}'\\
             \textbf{F}&\textbf{Y}\\
             \end{bmatrix}\succeq 0$.\\
@@ -507,12 +507,12 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
             \end{bmatrix}
             [\textbf{U}'_0\textbf{x}'(0)]'\\.
             &\textnormal{subj. to}&\textbf{G}_{0,eq}\tilde{\textbf{z}}=\textbf{E}_{0,eq}\textbf{x}(0)\\
-            &&\textbf{G}_{0,in}\tilde{\textbf{z}}\leq\textbf{W}_{0,in}+\textbf{E}_{0,in}\textbf{x}(0),
+            &&\textbf{G}_{0,in}\tilde{\textbf{z}}\leq\textbf{w}_{0,in}+\textbf{E}_{0,in}\textbf{x}(0),
         \end{array}
         \label{BASICMPC:equ:constrained_Euclidian_mergedconstraint}
     \end{equation}
 
-    where $\textbf{G}_{0,eq}$, and $\textbf{E}_{0,eq}$, are the equality constraint matrices, and  $\textbf{G}_{0,in}$, $\textbf{E}_{0,in}$, and $\textbf{W}_{0,in}$ are the inequality constraint matrices respectively:
+    where $\textbf{G}_{0,eq}$, and $\textbf{E}_{0,eq}$, are the equality constraint matrices, and  $\textbf{G}_{0,in}$, $\textbf{E}_{0,in}$, and $\textbf{w}_{0,in}$ are the inequality constraint matrices respectively:
 
     \begin{equation}
     \begin{small}
@@ -543,7 +543,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
             &&\ddots&&&&&\ddots&&\\
             &&&0&&&&&\textbf{A}_u&\\
             &&&&0&&&&&\textbf{A}_u\\
-            \end{array}\right],\textbf{W}_{0,in}=\left[\begin{array}{c}
+            \end{array}\right],\textbf{w}_{0,in}=\left[\begin{array}{c}
             \textbf{b}_x\\
             \textbf{b}_x\\
             \vdots\\
@@ -585,7 +585,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
     \label{BASICMPC:equ:constrained_Euclidian_costmatrix}
     \end{equation}
 
-    In the following the state feedback solution starting from the persumed initial state for one minimizing instance $J^*_0(\textbf{x}(0))$ shall be displayed for the constrained quadratic control problem \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian} as \ref{BASICMPC:equ:constrained_Euclidian_mergedconstraint}, with $\textbf{G}_0$, $\textbf{E}_0$ $\textbf{W}_0$ as the constraint describing matrices as defined in \ref{BASICMPC:equ:constrained_constraint_matrices} starting from $\textbf{x}(0)$, and $\textbf{H}$, $\textbf{F}$, and $\textbf{Y}$ as the substitute matrices described in \ref{BASICMPC:equ:batch_simplfy}, to acquire the optimal solution.\\
+    In the following the state feedback solution starting from the persumed initial state for one minimizing instance $J^*_0(\textbf{x}(0))$ shall be displayed for the constrained quadratic control problem \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian} as \ref{BASICMPC:equ:constrained_Euclidian_mergedconstraint}, with $\textbf{G}_0$, $\textbf{E}_0$ $\textbf{w}_0$ as the constraint describing matrices as defined in \ref{BASICMPC:equ:constrained_constraint_matrices} starting from $\textbf{x}(0)$, and $\textbf{H}$, $\textbf{F}$, and $\textbf{Y}$ as the substitute matrices described in \ref{BASICMPC:equ:batch_simplfy}, to acquire the optimal solution.\\
     We view the initial state $\textbf{x}(0)$ as the vector of parameters as our goal to solve \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian} for all values of the set of initial states $\textbf{x}(0)\in\mathcal{X}_0$ and make this dependence explicit, with the computation of $\mathcal{X}_0$ in terms of feasibility, described in  \ref{BASICMPC:equ:constrained_feasible_set}.\\
     For convenience let us define the substitutive term $\textbf{z}$ as:
 
@@ -602,7 +602,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
     \begin{array}{rcl}
             \hat{J}^*(\textbf{x}(0))&=&J^*_0(\textbf{x}(0))-\textbf{x}(0)'(\textbf{Y}-\textbf{F}\textbf{H}^{-1}\textbf{F}')\textbf{x}(0)\\
             &=&\min_{\textbf{z}}\textbf{z}'\textbf{H}\textbf{z}\\
-            &\textnormal{subj. to}&\textbf{G}_0\textbf{U}_0\leq\textbf{W}_0+\textbf{S}_0\textbf{x}(0),
+            &\textnormal{subj. to}&\textbf{G}_0\textbf{U}_0\leq\textbf{w}_0+\textbf{S}_0\textbf{x}(0),
         \end{array}
         \label{BASICMPC:equ:constrained_substitute_J}
     \end{equation}
@@ -620,12 +620,12 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
     \begin{equation}
     \begin{array}{rcl}
             J^*(\textbf{x})&=&\min_{\textbf{z}}J(\textbf{x},\textbf{z})\\
-            &\textnormal{subj. to}&\textbf{Gz}\leq\textbf{W}+\textbf{Sx},
+            &\textnormal{subj. to}&\textbf{Gz}\leq\textbf{w}+\textbf{Sx},
         \end{array}
         \label{BASICMPC:equ:MPP_program}
     \end{equation}
 
-    where $\textbf{z}\in\mathbb{R}^s$ are the optimization variables,  $\textbf{x}\in\mathbb{R}^n$ is the vector of states, and of course $J(\textbf{x},\textbf{z}):\mathbb{R}^{s+n}\rightarrow\mathbb{R}$ is the objective or cost function. Additionally $\textbf{G}\in\mathbb{R}^{m\cdot s}$, $\textbf{W}\in\mathbb{R}^m$, and $\textbf{S}\in\mathbb{R}^{m\cdot n}$ as described in the previous section. Lets state that the states are in a closed, bounded (constrained), and polyhedral set $\mathcal{K}\subset\mathbb{R}^n$:
+    where $\textbf{z}\in\mathbb{R}^s$ are the optimization variables,  $\textbf{x}\in\mathbb{R}^n$ is the vector of states, and of course $J(\textbf{x},\textbf{z}):\mathbb{R}^{s+n}\rightarrow\mathbb{R}$ is the objective or cost function. Additionally $\textbf{G}\in\mathbb{R}^{m\cdot s}$, $\textbf{w}\in\mathbb{R}^m$, and $\textbf{S}\in\mathbb{R}^{m\cdot n}$ as described in the previous section. Lets state that the states are in a closed, bounded (constrained), and polyhedral set $\mathcal{K}\subset\mathbb{R}^n$:
 
     \begin{equation}
     \begin{array}{rcl}
@@ -638,45 +638,188 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
 
     \begin{equation}
     \begin{array}{rcl}
-            \mathcal{K}^*&=&\{\textbf{x}\in\mathcal{K}:\exists\textbf{x}\,s.t.:\,\textbf{Gz}\leq\textbf{W}+\textbf{Sx}\}.
+            \mathcal{K}^*&=&\{\textbf{x}\in\mathcal{K}:\exists\textbf{x}\,s.t.:\,\textbf{Gz}\leq\textbf{w}+\textbf{Sx}\}.
         \end{array}
         \label{BASICMPC:equ:MPP_stateset_params}
     \end{equation}
 
     It is further assumed that:
     \begin{enumerate}
-    \item the constraint $\textbf{x}\in\mathcal{K}$ is included in the constraints of $\textbf{Gz}\leq\textbf{W}+\textbf{Sx}$.
+    \item the constraint $\textbf{x}\in\mathcal{K}$ is included in the constraints of $\textbf{Gz}\leq\textbf{w}+\textbf{Sx}$.
     \item $\mathcal{K}$ is a full dimensional polytope, or the problem can be reformulated to $\mathcal{K}$ to be full dimensional with a smaller set of parameters.
     \item $\textbf{S}$ is on full rank, or the problem can be reformulated to $\textbf{S}$ to be full rank with a smaller set of parameters.
     \end{enumerate}
 
-    With the above assumptions in mind the following theorem can be stated, where we consider the problem \ref{BASICMPC:equ:MPP_program}, and the domain of $J(\textbf{z},\textbf{x})$ is $\mathbb{R}^{s+n}$, then $\mathcal{K}^*$ is a polyscope. This is because $\mathcal{K}^*$ is the projection of the set $\textbf{Gz}-\textbf{Sx}\leq\textbf{W}$ on the $\textbf{x}$ space intersected with the polytope $\mathcal{K}$. The aim is to determine a feasible set of $\mathcal{K}^*\subseteq\mathcal{K}$ of the states, the expression of the value function $J^*(\textbf{x})$, and the expression of optimizers $\textbf{z}^*\in\textbf{Z}^*$, where $\textbf{Z}^*:\mathcal{K}^*\rightarrow 2^{\mathbb{R}^s}$, yielding $J^*(\textbf{x})$.
-    
+    With the above assumptions in mind the following theorem can be stated, where we consider the problem \ref{BASICMPC:equ:MPP_program}, and the domain of $J(\textbf{z},\textbf{x})$ is $\mathbb{R}^{s+n}$, then $\mathcal{K}^*$ is a polyscope. This is because $\mathcal{K}^*$ is the projection of the set $\textbf{Gz}-\textbf{Sx}\leq\textbf{w}$ on the $\textbf{x}$ space intersected with the polytope $\mathcal{K}$. The aim is to determine a feasible set of $\mathcal{K}^*\subseteq\mathcal{K}$ of the states, the expression of the value function $J^*(\textbf{x})$, and the expression of optimizers $\textbf{z}^*\in\textbf{Z}^*$, where $\textbf{Z}^*:\mathcal{K}^*\rightarrow 2^{\mathbb{R}^s}$, yielding $J^*(\textbf{x})$.
+
     \myparagraph{Definition of critical region}\label{BASICCSR:sec:MPP_Critical}
-    
-    Consider the multi parametric program \ref{MPP_program}, and let $\mathcal{I}=\{1,\dots,m\}$ be the set of constraint indices. Fot any $\mathcal{A}\subseteq\mathcal{I}$, let $\textbf{G}_A$, and $\textbf{S}_A$ be the submatrices of $\textbf{G}$, and $\textbf{S}$, respectively, compromising the rows indexed by $\mathcal{A}$, and denote with $\textbf{G}_j$, $\textbf{S}_j$ and $\textbf{W}_j$, the $j^th$ row of $\textbf{G}$, $\textbf{S}$ and $\textbf{W}$. We define $\mathcal{C}_A$ as the set of states $\textbf{x}$ for which the same set $\mathcal{A}$ of constraints is active at the optimum. Formally, the \emph{optimal partition} of $\mathcal{I}$ at $\textbf{x}$ is the optimal partition of $(\mathcal{A}(x),\mathcal{A}_N(x))$, where:
-    
+
+    Consider the multi parametric program \ref{MPP_program}, and let $\mathcal{I}=\{1,\dots,m\}$ be the set of constraint indices. Fot any $\mathcal{A}\subseteq\mathcal{I}$, let $\textbf{G}_{\mathcal{A}}$, and $\textbf{S}_{\mathcal{A}}$ be the submatrices of $\textbf{G}$, and $\textbf{S}$, respectively, compromising the rows indexed by $\mathcal{A}$, and denote with $\textbf{G}_j$, $\textbf{S}_j$ and $\textbf{w}_j$, the $j^th$ row of $\textbf{G}$, $\textbf{S}$ and $\textbf{w}$. We define $\mathcal{C}_{\mathcal{A}}$ as the set of states $\textbf{x}$ for which the same set $\mathcal{A}$ of constraints is active at the optimum. Formally, the \emph{optimal partition} of $\mathcal{I}$ at $\textbf{x}$ is the optimal partition of $(\mathcal{A}(x),\mathcal{A}^N(x))$, where:
+
     \begin{equation}
     \begin{array}{rcl}
-            \mathcal{A}&=&\{j\in\mathcal{I}:\textbf{G}_j\textbf{z}^*(x)-\textbf{S}_j\textbf{x}=\textbf{W}_j\forall\textbf{z}^*\in\textbf{Z}^*(x)\}\\
-            \mathcal{A}_N&=&\{j\in\mathcal{I}:\exists\textbf{z}^*\in\textbf{Z}^*(x)\textnormal{ s.t.: }\textbf{G}_j\textbf{z}^*(x)-\textbf{S}_j\textbf{x}<\textbf{W}_j\}.
+            \mathcal{A}&=&\{j\in\mathcal{I}:\textbf{G}_j\textbf{z}^*(x)-\textbf{S}_j\textbf{x}=\textbf{w}_j\forall\textbf{z}^*\in\textbf{Z}^*(x)\}\\
+            \mathcal{A}^N&=&\{j\in\mathcal{I}:\exists\textbf{z}^*\in\textbf{Z}^*(x)\textnormal{ s.t.: }\textbf{G}_j\textbf{z}^*(x)-\textbf{S}_j\textbf{x}<\textbf{w}_j\}.
         \end{array}
         \label{BASICMPC:equ:MPP_stateset_optimal partition}
     \end{equation}
-    
-    It can be noticed, that $\mathcal{A}$ and $\mathcal{A}_N$ are disjoint and they union is $\mathcal{I}$. As such consider a set $\mathcal{A}\subseteq\mathcal{I}$, then the \emph{critical region} associated with the set of active constraints $\mathcal{A}$ is defined as:
-    
+
+    It can be noticed, that $\mathcal{A}$ and $\mathcal{A}^N$ are disjoint and they union is $\mathcal{I}$. As such consider a set $\mathcal{A}\subseteq\mathcal{I}$, then the \emph{critical region} associated with the set of active constraints $\mathcal{A}$ is defined as:
+
     \begin{equation}
     \begin{array}{rcl}
-            \mathcal{C}_A&=&\{\textbf{x}\in\mathcal{K}^*:\mathcal{A}(x)=\mathcal{A}\}.
+            \mathcal{C}_{\mathcal{A}}&=&\{\textbf{x}\in\mathcal{K}^*:\mathcal{A}(x)=\mathcal{A}\}.
         \end{array}
-        \label{BASICMPC:equ:MPP_stateset_optimal partition}
+        \label{BASICMPC:equ:MPP_stateset_optimal critical}
     \end{equation}
-    
-    With the above the set $\mathcal{C}_A$ is the set of all $\textbf{x}$ states such that constraints indexed by $\mathcal{A}$ are active at the optimum of problem \ref{MPP_program}.
-    
+
+    With the above the set $\mathcal{C}_{\mathcal{A}}$ is the set of all $\textbf{x}$ states such that constraints indexed by $\mathcal{A}$ are active at the optimum of problem \ref{MPP_program}.
+
     \myparagraph{Multi parametric quadratic programming}\label{BASICCSR:sec:MPP_QP}
     
+    Lets assume that the objective function is a quadratic function:
+    
+    \begin{equation}
+    \begin{array}{rcl}
+            J^*(\textbf{x})&=&\min_{\textbf{z}}J(\textbf{z},\textbf{x})=\\
+            &=&\frac{1}{2}\textbf{z}'\textbf{H}\textbf{z}\\
+            &\textnormal{subj. to}&\textbf{Gz}\leq\textbf{w}+\textbf{Sx},
+        \end{array}
+        \label{BASICMPC:equ:MPP_quadratic}
+    \end{equation}
+    
+    and the variables are defined as by \ref{MPP_program} additionally it is assumed that $\textbf{H}\succ 0$. The goal is to find the value function $J^*(\textbf{x})$ and the optimizer function $\textbf{z}^*(\textbf{x})$ in $\mathcal{K}^*$. The search of these functions proceeds by partitioning the set of feasible states into critical regions.\\
+    As previously let be $j$ the $j^{th}$ row of a matrix or the $j^{th}$ element in a vector, also $\mathcal{J}=\{1,\dots,m\}$ be the set of constraint indices and for any $\mathcal{A}\subseteq\mathcal{I}$, also $\textbf{G}_{\mathcal{A}}$, $\textbf{w}_{\mathcal{A}}$, and $\textbf{S}_{\mathcal{A}}$ be the submatrices of $\textbf{G}$, $\textbf{w}$ and $\textbf{S}$ respectively, consisting rows, indexed by $\mathcal{A}$, and $\mathcal{K}^*$ is full dimensional.
+    with the definition displayed in \ref{BASICMPC:equ:MPP_stateset_optimal partition}, and \ref{BASICMPC:equ:MPP_stateset_optimal critical} it can be showed that the critical regions of a multi parametric quadratic program are polyhedra. Let $(\mathcal{A},\mathcal{A}^N)=(\mathcal{A}(\bar{\textbf{x}}),\mathcal{A}^N(\bar{\textbf{x}}))$ for some $\bar{\textbf{x}}\in\mathcal{K}^*$, where for any given $\bar{\textbf{x}}\in\mathcal{K}^*$, $J^*(\bar{\textbf{x}})$ denotes the minimum value of the objective function for $\textbf{x}=\bar{\textbf{x}}$. Then
+    \begin{enumerate}
+    \item the closure of $\mathcal{C}_{\mathcal{A}}$ is a polyhedron.
+    \item $\textbf{z}^*(\textbf{x})$ is an affine function of the state inside $\mathcal{C}_{\mathcal{A}}$, i.e.: $\textbf{z}^*(\textbf{x})=\textbf{F}_i\textbf{x}+\textbf{g}_i$ for all $\mathcal{C}_{\mathcal{A}}$.
+    \item $J^*(\textbf{x})$ is a quadratic function of the state inside $\mathcal{C}_{\mathcal{A}}$, i.e.: $J^*(\textbf{x})=\textbf{x}'\textbf{M}_i\textbf{x}+\textbf{c}_i\textbf{x}+\textbf{d}_i$ for all $\textbf{x}\in\mathcal{C}_{\mathcal{A}}$.
+    \end{enumerate}
+    
+    For proving the above, the first order Karush-Kuhn-Tucker (KKT) conditions for multi parameter quadratic programs are:
+    \begin{subequations}
+    \label{BASICMPC:equ:MPP_KKT}
+        \begin{align}
+        \textbf{Hz}^*+\textbf{G}'\textbf{u}^*=0,\,\textbf{u}\in\mathbb{R}^m        \label{BASICMPC:equ:MPP_KKT_a} \\
+        \textbf{u}^*_i(\textbf{G}_i\textbf{z}^*-\textbf{w}_i-\textbf{S}_i\textbf{x})=0,\,i=1,\dots,m \label{BASICMPC:equ:MPP_KKT_b} \\
+        \textbf{u}^*\geq 0 \label{BASICMPC:equ:MPP_KKT_c} \\
+        \textbf{G}\textbf{z}^*-\textbf{w}-\textbf{S}\textbf{x}\leq 0 \label{BASICMPC:equ:MPP_KKT_d}.
+    \end{align}
+    \end{subequations}
+    
+    Let us assume we have determined the optimal partition, namely $(\mathcal{A},\mathcal{A}^N)=(\mathcal{A}(\bar{\textbf{x}}),\mathcal{A}^N(\bar{\textbf{x}}))$ for some $\bar{\textbf{x}}\in\mathcal{K}^*$. The primary feasibility condition \ref{BASICMPC:equ:MPP_KKT_d} can be rewritten as:
+    
+    \begin{subequations}
+    \label{BASICMPC:equ:MPP_KKT_rewritten}
+        \begin{align}
+         \textbf{G}_{\mathcal{A}}\textbf{z}^*-\textbf{S}_{\mathcal{A}}\textbf{x}=\textbf{w}_{\mathcal{A}} \label{BASICMPC:equ:MPP_KKT_rewritten_a}\\
+         \textbf{G}_{\mathcal{A}^N}\textbf{z}^*-\textbf{S}_{\mathcal{A}^N}\textbf{x}<\textbf{w}_{\mathcal{A}^N}. \label{BASICMPC:equ:MPP_KKT_rewritten_b}
+    \end{align}
+    \end{subequations}
+    
+    After this lets solve \ref{BASICMPC:equ:MPP_KKT_rewritten_a} for $\textbf{z}^*$:
+    
+    \begin{equation}
+    \begin{array}{rcl}
+            \textbf{z}^*=-\textbf{H}^{-1}\textbf{G}'\textbf{u}^*,
+        
+        \end{array}
+        \label{BASICMPC:equ:MPP_quadratic_solvedfor_z}
+    \end{equation}
+    
+    and substitute the result into \ref{BASICMPC:equ:MPP_KKT_rewritten_b} to obtain the complementary slackness conditions:
+    
+    \begin{equation}
+    \begin{array}{rcl}
+            \textbf{u}^*_i(-\textbf{G}_i\textbf{H}^{-1}\textbf{G}'_i\textbf{u}^*-\textbf{w}_i-\textbf{S}_i\textbf{x})=0,\,i=1,\dots,m.
+        \end{array}
+        \label{BASICMPC:equ:MPP_quadratic_slackness}
+    \end{equation}
+    
+    Let $\textbf{u}_{\mathcal{A}^N}$ and $\textbf{u}_{\mathcal{A}}$ denote the Lagrange multipliers corresponding to active and inactive constraints, respectively. For inactive constraints $\textbf{u}_{\mathcal{A}^N}=0$ and for active constraints: 
+    
+    \begin{equation}
+    \begin{array}{rcl}
+            (-\textbf{G}_{\mathcal{A}}\textbf{H}^{-1}\textbf{G}'_{\mathcal{A}})\textbf{u}^*_{\mathcal{A}}-\textbf{w}_{\mathcal{A}}-\textbf{S}_{\mathcal{A}}\textbf{x})=0.
+        \end{array}
+        \label{BASICMPC:equ:MPP_quadratic_activeconstr}
+    \end{equation}
+    
+    If the set of active constraints $\mathcal{A}$ is empty, the $\textbf{u}^*=\textbf{u}^*_{\mathcal{A}^N}=0$ and $\textbf{z}^*=0$, which implies that the critical region $\mathcal{C}_{\mathcal{A}}$ is:
+    
+   \begin{equation}
+    \begin{array}{rcl}
+            \mathcal{C}_{\mathcal{A}}&=&\{\textbf{x}:\textbf{Sx}+\textbf{w} > 0 \}.
+        \end{array}
+        \label{BASICMPC:equ:MPP_quadratic_emptycritical}
+    \end{equation}
+    
+    Otherwise when the rows of $\textbf{G}_{\mathcal{A}}$ are linearly independent, it implies that $\textbf{G}_{\mathcal{A}}\textbf{H}^{-1}\textbf{G}'_{\mathcal{A}}$ is a square full rank matrix and therefore:
+    
+    \begin{equation}
+    \begin{array}{rcl}
+            \textbf{u}^*_{\mathcal{A}}=-(\textbf{G}_{\mathcal{A}}\textbf{H}^{-1}\textbf{G}'_{\mathcal{A}})^{-1}(\textbf{w}'_{\mathcal{A}}+\textbf{S}'_{\mathcal{A}}\textbf{x}),
+        \end{array}
+        \label{BASICMPC:equ:MPP_quadratic_full_optimum}
+    \end{equation}
+    
+    where $\textbf{G}_{\mathcal{A}}$, $\textbf{w}_{\mathcal{A}}$, and $\textbf{S}_{\mathcal{A}}$ correspond to the active constraint $\mathcal{A}$, thus $\textbf{u}^*$ is an affine function of $\textbf{x}$. Furthermore $\textbf{u}^*_{\mathcal{A}}$ can be substituted from \ref{BASICMPC:equ:MPP_quadratic_full_optimum} into \ref{BASICMPC:equ:MPP_quadratic_solvedfor_z} to obtain:
+ %
+    \begin{equation}
+    \begin{array}{rcl}
+            \textbf{z}^*&=&\textbf{H}^{-1}\textbf{G}'_{\mathcal{A}}(\textbf{G}_{\mathcal{A}}\textbf{H}^{-1}\textbf{G}'_{\mathcal{A}})^{-1}(\textbf{w}'_{\mathcal{A}}+\textbf{S}'_{\mathcal{A}}\textbf{x}),
+        \end{array}
+        \label{BASICMPC:equ:MPP_quadratic_full_optimizer}
+    \end{equation}
+    
+    and note that $\textbf{z}^*$ is also an affine function of $\textbf{x}$, and $J^*(\textbf{x})=\frac{1}{2}\textbf{z}^*(\textbf{x})'\textbf{H}\textbf{z}^*(\textbf{x})$, and therefore it is a quadratic function of $\textbf{x}$. The critical region $\mathcal{C}_{\mathcal{A}}$ is computed by substituting $\textbf{z}^*$ from \ref{BASICMPC:equ:MPP_quadratic_full_optimizer} in the primal feasibility conditions \ref{BASICMPC:equ:MPP_KKT_rewritten_b} to obtain the primal feasible set:
+    
+    \begin{equation}
+    \begin{array}{rcl}
+            \mathcal{P}_p&=&\{
+            \textbf{x}:\textbf{G}_{\mathcal{A}^N}\textbf{H}^{-1}\textbf{G}'_{\mathcal{A}}(\textbf{G}_{\mathcal{A}}\textbf{H}^{-1}\textbf{G}'_{\mathcal{A}})^{-1}(\textbf{w}'_{\mathcal{A}}+\textbf{S}'_{\mathcal{A}}\textbf{x})
+            <(\textbf{w}'_{\mathcal{A}^N}+\textbf{S}'_{\mathcal{A}^N}\textbf{x})
+            \},
+        \end{array}
+        \label{BASICMPC:equ:MPP_quadratic_primalset}
+    \end{equation}
+    
+    and the Lagrange multipliers from \ref{BASICMPC:equ:MPP_quadratic_full_optimum} in the dual feasibility conditions \ref{BASICMPC:equ:MPP_KKT_c} to obtain the dual feasible set:
+    
+    \begin{equation}
+    \begin{array}{rcl}
+            \mathcal{P}_d&=&\{
+            \textbf{x}:-(\textbf{G}_{\mathcal{A}}\textbf{H}^{-1}\textbf{G}'_{\mathcal{A}})(\textbf{w}'_{\mathcal{A}}+\textbf{S}'_{\mathcal{A}}\textbf{x})\geq 0
+            \}.
+        \end{array}
+        \label{BASICMPC:equ:MPP_quadratic_dualset}
+    \end{equation}
+    
+    In conclusion the critical region $\mathcal{C}_{\mathcal{A}}$ is the intersection of the primal $\mathcal{P}_p$ and dual $\mathcal{P}_d$ feasible set:
+    
+    \begin{equation}
+    \begin{array}{rcl}
+            \mathcal{C}_{\mathcal{A}}=&=\{\textbf{x}:\textbf{x}\in\mathcal{P}_p,\,\textbf{x}\in\mathcal{P}_d\},
+        \end{array}
+        \label{BASICMPC:equ:MPP_quadratic_criticalset}
+    \end{equation}
+    
+    where the closure of $\mathcal{C}_{\mathcal{A}}$ is a polyhedron in the $\textbf{x}$-space, also the polyhedron $\mathcal{P}_p$ is open and non empty, because it contains at least the point of $\bar{\textbf{x}}$, therefore it is full dimensional in the $\textbf{x}$-space. This implies that $\mathcal{C}_{\mathcal{A}}=dim\mathcal{P}_d$.
+    
+    \myparagraph{Geometrical multi parametric quadratic programming algorithm}\label{BASICCSR:sec:MPP_QP_Algo}
+    
+    The goal of a multi parametric quadratic programming algorithm is to determine the partition of $\mathcal{K}^*$ into critical regions $\mathcal{C}_{\mathcal{A}}$ , and find the expression of the functions $J^*$ and $\textbf{z}^*$ for each critical region. 
+    
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=.7\textwidth]{EMPC_PNG_Pics/MPQPAlgo.png}
+        \caption{Generic multi parametric quadratic program with explicit solver.}
+        \label{EMPC:fig:ControlStruct}
+    \end{figure}
+
+
+
 
     \subsubsection{Receiding horizon control}\label{BASICCSR:sec:RHC}
 
@@ -688,7 +831,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
 		\item Finite horizon optimization is usually used because of the limited computing power is available, and not for theoretical reasons
 		\end{itemize}
 		
-		To prevent this problem, the notion of optimization is introduced on a moving horizon. In each sample $k$ , an optimization problem is solved over a defined horizon $k,\dots,k+N$ to calculate the appropriate command sequence, and only the first command is applied. This results in a moving optimization horizon, which eliminates the issues listed before dispayed on Fig.\ref{BASICCSR:fig:RHC}. \\
+		To prevent this problem, the notion of optimization is introduced on a moving horizon. In each sample $k$ , an optimization problem is solved over a defined horizon $k,\dots,k+N$ to calculate the appropriate command sequence, and only the first command is applied. This results in a moving optimization horizon, which eliminates the issues listed before displayed on Fig.\ref{BASICCSR:fig:RHC}. \\
 
 \begin{figure}[!ht]
         \centering
@@ -1149,7 +1292,7 @@ repeated on the basis of new measurements or a new estimation of the states.
 %\begin{equation}
 %        \begin{array}{rcl}
 %				\textbf{V}(\textbf{x}(q))&=&\frac{1}{2}\textbf{x}'(q)\textbf{Yx}(q)+min\left\{\frac{1}{2}\textbf{U}'\textbf{HU}+\textbf{x}'(q)\textbf{FU}\right\},\\
-%				%&with\,restrictions:&\textbf{GU}\leq \textbf{W}+\textbf{Ex}(t)\\
+%				%&with\,restrictions:&\textbf{GU}\leq \textbf{w}+\textbf{Ex}(t)\\
 %        \end{array}
 %        \label{BASICMPC:equ:EMPC_transformed}
 %    \end{equation}
@@ -1158,12 +1301,12 @@ repeated on the basis of new measurements or a new estimation of the states.
 %		
 %		\begin{equation}
 %        \begin{array}{rcl}
-%				\textbf{GU}&\leq& \textbf{W}+\textbf{Ex}(q),\\
+%				\textbf{GU}&\leq& \textbf{w}+\textbf{Ex}(q),\\
 %        \end{array}
 %        \label{BASICMPC:equ:EMPC_transformed_2}
 %    \end{equation}
 %		
-%		where $\textbf{U}=\{u'_t,\dots,u'_{q+N_u-1}\}\in\mathbb{R}^s,\,s=m\cdot N_u$, and $\textbf{H}$ is the optimization vector where $\textbf{H}=\textbf{H}'>0$, and $\textbf{H},\textbf{F},\textbf{Y},\textbf{G},\textbf{W},\textbf{E}$ can be directly obtained from $\textbf{A},\textbf{B},\textbf{Q},\textbf{R},\textbf{P}$, according to \cite{borrelli2017predictive}. Let the transformation vector be:
+%		where $\textbf{U}=\{u'_t,\dots,u'_{q+N_u-1}\}\in\mathbb{R}^s,\,s=m\cdot N_u$, and $\textbf{H}$ is the optimization vector where $\textbf{H}=\textbf{H}'>0$, and $\textbf{H},\textbf{F},\textbf{Y},\textbf{G},\textbf{w},\textbf{E}$ can be directly obtained from $\textbf{A},\textbf{B},\textbf{Q},\textbf{R},\textbf{P}$, according to \cite{borrelli2017predictive}. Let the transformation vector be:
 %		
 %		\begin{equation}
 %        \begin{array}{rcl}
@@ -1186,7 +1329,7 @@ repeated on the basis of new measurements or a new estimation of the states.
 %		\begin{equation}
 %        \begin{array}{rcl}
 %				\textbf{V}_z(\textbf{x})&=&min\frac{1}{2}\textbf{z}'\textbf{Hz}\\
-%				&s.t.&\textbf{Gz}\leq \textbf{W}+\textbf{Sx}(q)\\
+%				&s.t.&\textbf{Gz}\leq \textbf{w}+\textbf{Sx}(q)\\
 %				&&\textbf{S}=\textbf{E}+\textbf{GH}^{-1}\textbf{F}'.\\
 %        \end{array}
 %        \label{BASICMPC:equ:EMPC_transformed}
@@ -1304,7 +1447,7 @@ The implementation of MPC in explicit form is very efficient up to a certain num
 %%	$\textbf{F}$																&???\\
 %%	$\textbf{Y}$																&???\\
 %%	$\textbf{G}$																&???\\
-%%	$\textbf{W}$																&???\\
+%%	$\textbf{w}$																&???\\
 %%	$\textbf{E}$																&???\\
 %	$N$											& Defined horizon of MPC\\
 %	$N_c,N_u,N_y$											& Defined control, input, and output horizon respectively\\

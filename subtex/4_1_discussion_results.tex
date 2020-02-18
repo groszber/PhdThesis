@@ -40,7 +40,7 @@ Understandably, model based controllers require the system's model the ought to 
         \label{EMPC:equ:delta_set}
     \end{equation}
 
-    Converting the components in the stationary (Clarke) frame of the space phasors of the three-phase quantities, from \ref{EMPC:equ:abc_eqn} it results:
+    Converting the components in the stationary (Clarke) frame (displayed in section \ref{BASICCSR:sec:Clarke}) of the space phasors of the three-phase quantities, from \ref{EMPC:equ:abc_eqn} it results:
 
     \begin{equation}
         \begin{array}{rcl}
@@ -54,7 +54,7 @@ Understandably, model based controllers require the system's model the ought to 
         \label{EMPC:equ:abc_alfabeta}
     \end{equation}
 
-    Equation \ref{EMPC:equ:abc_alfabeta} is transformed to the synchronous reference (Park) frame rotating with the $u_{c_d}$ capacitor voltage space vector. The resulting mathematical model is thus:
+    Equation \ref{EMPC:equ:abc_alfabeta} is transformed to the synchronous reference (Park) frame (displayed in section \ref{BASICCSR:sec:Park}) rotating with the $u_{c_d}$ capacitor voltage space vector. The resulting mathematical model is thus:
 
     \begin{equation}
         \begin{array}{rcl}
@@ -276,16 +276,16 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \begin{equation}
         \begin{array}{rcl}
-            \textbf{Gz}&\leq&\textbf{W}+\textbf{S}\textbf{x}(t)
+            \textbf{Gz}&\leq&\textbf{w}+\textbf{S}\textbf{x}(t)
         \end{array}
         \label{EMPC:equ:quadratic_inequality}
     \end{equation}
 
-    where the matrices $\textbf{H}$, $\textbf{G}$, $\textbf{W}$, $\textbf{S}$ result directly from the coordinate transformations described in \ref{BASICCSR:sec:OptimalControl}. The solution of the quadratic optimization problem for each critical region has the form:
+    where the matrices $\textbf{H}$, $\textbf{G}$, $\textbf{w}$, $\textbf{S}$ result directly from the coordinate transformations described in \ref{BASICCSR:sec:OptimalControl}. The solution of the quadratic optimization problem for each critical region has the form:
 
     \begin{equation}
         \begin{array}{rcl}
-            \textbf{u}^*&=&f_i\textbf{x}+g_i
+            \textbf{u}^*&=&\textbf{F}_i\textbf{x}+\textbf{g}_i
         \end{array}
         \label{EMPC:equ:quadratic_regions}
     \end{equation}
@@ -294,7 +294,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \begin{equation}
         \begin{array}{rcl}
-            \mathcal{C}_{reg_i}&=&\{\textbf{x}\in mathbb{R}^n|\textbf{H}_i\textbf{x}\leq K_i\}
+            \mathcal{C}_{reg_i}&=&\{\textbf{x}\in \mathbb{R}^n|\textbf{H}_i\textbf{x}\leq \textbf{K}_i\}
         \end{array}
         \label{EMPC:equ:quadratic_critical}
     \end{equation}
@@ -303,7 +303,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \begin{equation}
         \begin{array}{l}
-            \{f_i,g_i,\textbf{H}_i,\textbf{K}_i|i=1\dots N\}
+            \{\textbf{F}_i,\textbf{g}_i,\textbf{H}_i,\textbf{K}_i|i=1\dots N\}
         \end{array}
         \label{EMPC:equ:quadratic_set}
     \end{equation}

@@ -214,4 +214,53 @@ space vector $\vec{i}_{ref}$.
 
 The modulation methods were evaluated in and chosen for this paper based on \cite{moussaoui2005open}, which ensures minimum switching-losses, minimum ripple values of the input capacitor voltages and of the output inductor current. According to this modulation, each pulse interval comprises two active states and a freewheeling state, arranged symmetrically about the middle of the pulse interval (see Table \ref{EMPC:tbl:sequence}). For more in depth functional description see section \ref{EMPC:sec:Modulation}.
 
+\subsection{Coordinate transformations}
 
+In section \ref{EMPC:sec:ModelofCSR} the three phase current source rectifier's (CSR) equations are converted to different coordinate spaces.
+
+\subsubsection{Clarke transformation}\label{BASICCSR:sec:Clarke}
+
+In electrical engineering, Clarke transformation is a mathematical transformation employed to simplify the analysis of three-phase circuits. Conceptually it is similar to the Park transformation. One very useful application is the generation of the reference signal used for space vector modulation control of three-phase inverters. The transformation follows:
+
+\begin{equation}
+        \begin{array}{rcl}
+            \textbf{i}_{\alpha\beta\gamma}(t)&=&T_{Clarke}\textbf{i}_{abc}(t)
+            \begin{bmatrix}
+            1& -\frac{1}{2}& -\frac{1}{2}\\
+            0& \frac{\sqrt{3}}{2}& -\frac{\sqrt{3}}{2}\\
+            \frac{1}{2}& \frac{1}{2}& \frac{1}{2}\\
+            \end{bmatrix}
+            \begin{bmatrix}
+            i_a(t)\\
+            i_b(t)\\
+            i_c(t)\\
+            \end{bmatrix},
+        \end{array}
+        \label{BASICCSR:eqn:Clarke}
+    \end{equation}
+
+    where $\textbf{i}_{abc}$ is the generic three phase current sequence, and $\textbf{i}_{\alpha\beta\gamma}$ is given by the transformation.
+
+    \subsubsection{Park transformation}\label{BASICCSR:sec:Park}
+
+The Park transformation is a tensor that rotates the reference frame of a three-element vector or a three-by-three element matrix in an effort to simplify analysis. The transform can be used to rotate the reference frames of AC waveforms such that they become DC signals. Simplified calculations can then be carried out on these dc quantities before performing the inverse transform to recover the actual three-phase ac results. As an example, the Park transform is often used in order to simplify the analysis of three-phase synchronous machines or to simplify calculations for the control of three-phase inverters. In analysis of three-phase synchronous machines the transformation transfers three-phase stator and rotor quantities into a single rotating reference frame to eliminate the effect of time-varying inductances. The transformation follows:
+
+
+\begin{equation}
+        \begin{array}{rcl}
+            \textbf{i}_{dq0}(t)&=&T_{Park}\textbf{i}_{abc}(t)
+            \sqrt{\frac{2}{3}}\begin{bmatrix}
+            \cos(\theta)& \cos(\theta-\frac{2\pi}{3})& \cos(\theta+\frac{2\pi}{3})\\
+            -\sin(\theta)& -\sin(\theta-\frac{2\pi}{3})& -\sin(\theta+\frac{2\pi}{3})\\
+            \frac{\sqrt{2}}{2}& \frac{\sqrt{2}}{2}& \frac{\sqrt{2}}{2}\\
+            \end{bmatrix}
+            \begin{bmatrix}
+            i_a(t)\\
+            i_b(t)\\
+            i_c(t)\\
+            \end{bmatrix},
+        \end{array}
+        \label{BASICCSR:eqn:Park}
+    \end{equation}
+
+    where $\theta$ is instantaneous angular position of an arbitrary frequency.
