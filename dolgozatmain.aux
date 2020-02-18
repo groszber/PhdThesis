@@ -475,17 +475,6 @@
 \newlabel{BASICMPC:equ:MPP_quadratic_slackness}{{2.65}{34}}
 \newlabel{BASICMPC:equ:MPP_quadratic_activeconstr}{{2.66}{34}}
 \newlabel{BASICMPC:equ:MPP_quadratic_emptycritical}{{2.67}{34}}
-\newlabel{BASICMPC:equ:MPP_quadratic_full_optimum}{{2.68}{34}}
-\newlabel{BASICMPC:equ:MPP_quadratic_full_optimizer}{{2.69}{35}}
-\newlabel{BASICMPC:equ:MPP_quadratic_primalset}{{2.70}{35}}
-\newlabel{BASICMPC:equ:MPP_quadratic_dualset}{{2.71}{35}}
-\newlabel{BASICMPC:equ:MPP_quadratic_criticalset}{{2.72}{35}}
-\@writefile{toc}{\contentsline {paragraph}{Geometrical multi parametric quadratic programming algorithm}{35}\protected@file@percent }
-\newlabel{BASICCSR:sec:MPP_QP_Algo}{{2.3.2}{35}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Generic multi parametric quadratic program with explicit solver.\relax }}{35}\protected@file@percent }
-\newlabel{EMPC:fig:ControlStruct}{{2.8}{35}}
-\@writefile{toc}{\contentsline {subsubsection}{Receiding horizon control}{35}\protected@file@percent }
-\newlabel{BASICCSR:sec:RHC}{{2.3.2}{35}}
 \citation{borrelli2017predictive}
 \abx@aux@cite{borrelli2017predictive}
 \abx@aux@segm{0}{0}{borrelli2017predictive}
@@ -495,9 +484,17 @@
 \citation{goodwin2006constrained}
 \abx@aux@cite{goodwin2006constrained}
 \abx@aux@segm{0}{0}{goodwin2006constrained}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Graphycal display of receiding horison control (RHC) idea \cite {borrelli2017predictive}.\relax }}{36}\protected@file@percent }
-\newlabel{BASICCSR:fig:RHC}{{2.9}{36}}
+\newlabel{BASICMPC:equ:MPP_quadratic_full_optimum}{{2.68}{35}}
+\newlabel{BASICMPC:equ:MPP_quadratic_full_optimizer}{{2.69}{35}}
+\newlabel{BASICMPC:equ:MPP_quadratic_primalset}{{2.70}{35}}
+\newlabel{BASICMPC:equ:MPP_quadratic_dualset}{{2.71}{35}}
+\newlabel{BASICMPC:equ:MPP_quadratic_criticalset}{{2.72}{35}}
+\@writefile{toc}{\contentsline {subsubsection}{Receiding horizon control}{35}\protected@file@percent }
+\newlabel{BASICCSR:sec:RHC}{{2.3.2}{35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Graphycal display of receiding horison control (RHC) idea \cite {borrelli2017predictive}.\relax }}{36}\protected@file@percent }
+\newlabel{BASICCSR:fig:RHC}{{2.8}{36}}
 \newlabel{BASICMPC:equ:receiding_horison_problem}{{2.73}{36}}
+\newlabel{BASICMPC:equ:receiding_horison_Lyapunov}{{2.74}{36}}
 \citation{mayne2000constrained}
 \abx@aux@cite{mayne2000constrained}
 \abx@aux@segm{0}{0}{mayne2000constrained}
@@ -510,7 +507,6 @@
 \citation{mayne1990receding}
 \abx@aux@cite{mayne1990receding}
 \abx@aux@segm{0}{0}{mayne1990receding}
-\newlabel{BASICMPC:equ:receiding_horison_Lyapunov}{{2.74}{37}}
 \newlabel{BASICMPC:equ:receiding_optimal_sequence}{{2.75}{37}}
 \newlabel{BASICMPC:equ:receiding_optimal_first}{{2.76}{37}}
 \@writefile{toc}{\contentsline {subsubsection}{Stability of MPC}{37}\protected@file@percent }
@@ -518,6 +514,7 @@
 \newlabel{BASICMPC:equ:autonom_system}{{2.77}{37}}
 \newlabel{BASICMPC:equ:lyapunov_1}{{2.78}{37}}
 \newlabel{BASICMPC:equ:lyapunov_2}{{2.79}{37}}
+\newlabel{BASICMPC:equ:lyapunov_3}{{2.80}{37}}
 \citation{jones2006logarithmic}
 \abx@aux@cite{jones2006logarithmic}
 \abx@aux@segm{0}{0}{jones2006logarithmic}
@@ -530,19 +527,18 @@
 \citation{kutasi2008vector}
 \abx@aux@cite{kutasi2008vector}
 \abx@aux@segm{0}{0}{kutasi2008vector}
-\newlabel{BASICMPC:equ:lyapunov_3}{{2.80}{38}}
 \newlabel{BASICMPC:equ:lyapunov_4_1}{{2.81}{38}}
 \newlabel{BASICMPC:equ:lyapunov_4_2}{{2.82}{38}}
 \newlabel{BASICMPC:equ:lyapunov_5}{{2.83}{38}}
 \newlabel{BASICMPC:equ:lyapunov_6}{{2.84}{38}}
 \newlabel{BASICMPC:equ:lyapunov_7}{{2.85}{38}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Storage of critical regions}{39}\protected@file@percent }
-\newlabel{BASICCSR:sec:EMPCStorage}{{2.3.3}{39}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Basic search three of an EMPC where, a) are the critical regions for a space of 2D parameters, b) the related binary tree.\relax }}{39}\protected@file@percent }
-\newlabel{BASICMPC:fig:searchtree}{{2.10}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Storage of critical regions}{38}\protected@file@percent }
+\newlabel{BASICCSR:sec:EMPCStorage}{{2.3.3}{38}}
 \gdef \LT@i {\LT@entry 
     {1}{145.1751pt}\LT@entry 
     {1}{253.1635pt}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Basic search three of an EMPC where, a) are the critical regions for a space of 2D parameters, b) the related binary tree.\relax }}{39}\protected@file@percent }
+\newlabel{BASICMPC:fig:searchtree}{{2.9}{39}}
 \citation{gorbe2012reduction}
 \abx@aux@cite{gorbe2012reduction}
 \abx@aux@segm{0}{0}{gorbe2012reduction}

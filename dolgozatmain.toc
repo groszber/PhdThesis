@@ -28,10 +28,9 @@
 \contentsline {paragraph}{Linearly constrained multi parametric programs}{32}% 
 \contentsline {paragraph}{Definition of critical region}{33}% 
 \contentsline {paragraph}{Multi parametric quadratic programming}{33}% 
-\contentsline {paragraph}{Geometrical multi parametric quadratic programming algorithm}{35}% 
 \contentsline {subsubsection}{Receiding horizon control}{35}% 
 \contentsline {subsubsection}{Stability of MPC}{37}% 
-\contentsline {subsection}{\numberline {2.3.3}Storage of critical regions}{39}% 
+\contentsline {subsection}{\numberline {2.3.3}Storage of critical regions}{38}% 
 \contentsline {chapter}{\numberline {3}Voltage unbalance compensation}{42}% 
 \contentsline {section}{\numberline {3.1}Network structure}{42}% 
 \contentsline {section}{\numberline {3.2}Proposed geometrical indicator}{43}% 

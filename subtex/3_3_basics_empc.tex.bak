@@ -585,7 +585,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
     \label{BASICMPC:equ:constrained_Euclidian_costmatrix}
     \end{equation}
 
-    In the following the state feedback solution starting from the persumed initial state for one minimizing instance $J^*_0(\textbf{x}(0))$ shall be displayed for the constrained quadratic control problem \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian} as \ref{BASICMPC:equ:constrained_Euclidian_mergedconstraint}, with $\textbf{G}_0$, $\textbf{E}_0$ $\textbf{w}_0$ as the constraint describing matrices as defined in \ref{BASICMPC:equ:constrained_constraint_matrices} starting from $\textbf{x}(0)$, and $\textbf{H}$, $\textbf{F}$, and $\textbf{Y}$ as the substitute matrices described in \ref{BASICMPC:equ:batch_simplfy}, to acquire the optimal solution.\\
+    In the following the state feedback solution starting from the presumed initial state for one minimizing instance $J^*_0(\textbf{x}(0))$ shall be displayed for the constrained quadratic control problem \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian} as \ref{BASICMPC:equ:constrained_Euclidian_mergedconstraint}, with $\textbf{G}_0$, $\textbf{E}_0$ $\textbf{w}_0$ as the constraint describing matrices as defined in \ref{BASICMPC:equ:constrained_constraint_matrices} starting from $\textbf{x}(0)$, and $\textbf{H}$, $\textbf{F}$, and $\textbf{Y}$ as the substitute matrices described in \ref{BASICMPC:equ:batch_simplfy}, to acquire the optimal solution.\\
     We view the initial state $\textbf{x}(0)$ as the vector of parameters as our goal to solve \ref{BASICMPC:equ:constrained_optimal_control_problem_Euclidian} for all values of the set of initial states $\textbf{x}(0)\in\mathcal{X}_0$ and make this dependence explicit, with the computation of $\mathcal{X}_0$ in terms of feasibility, described in  \ref{BASICMPC:equ:constrained_feasible_set}.\\
     For convenience let us define the substitutive term $\textbf{z}$ as:
 
@@ -619,13 +619,14 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
 
     \begin{equation}
     \begin{array}{rcl}
-            J^*(\textbf{x})&=&\min_{\textbf{z}}J(\textbf{x},\textbf{z})\\
+            J^*(\textbf{x})&=&\min_{\textbf{z}}J(\textbf{x},\textbf{z})=
+            &=&\frac{1}{2}\textbf{z}'\textbf{H}\textbf{z}\\
             &\textnormal{subj. to}&\textbf{Gz}\leq\textbf{w}+\textbf{Sx},
         \end{array}
         \label{BASICMPC:equ:MPP_program}
     \end{equation}
 
-    where $\textbf{z}\in\mathbb{R}^s$ are the optimization variables,  $\textbf{x}\in\mathbb{R}^n$ is the vector of states, and of course $J(\textbf{x},\textbf{z}):\mathbb{R}^{s+n}\rightarrow\mathbb{R}$ is the objective or cost function. Additionally $\textbf{G}\in\mathbb{R}^{m\cdot s}$, $\textbf{w}\in\mathbb{R}^m$, and $\textbf{S}\in\mathbb{R}^{m\cdot n}$ as described in the previous section. Lets state that the states are in a closed, bounded (constrained), and polyhedral set $\mathcal{K}\subset\mathbb{R}^n$:
+    where $\textbf{z}\in\mathbb{R}^s$ are the optimization variables,  $\textbf{x}\in\mathbb{R}^n$ is the vector of states, and of course $J(\textbf{x},\textbf{z}):\mathbb{R}^{s+n}\rightarrow\mathbb{R}$ is the objective or cost function. Note that the more general problem with $J(\textbf{x},\textbf{z})=\frac{1}{2}\textbf{z}'\textbf{H}\textbf{z}+\textbf{x}'\textbf{F}\textbf{x}$ can always be transformed into \ref{BASICMPC:equ:MPP_program} using the variable substitution $\tilde{\textbf{z}}=\textbf{z}+\textbf{H}^{-1}\textbf{F}'\textbf{x}$. Additionally $\textbf{G}\in\mathbb{R}^{m\cdot s}$, $\textbf{w}\in\mathbb{R}^m$, and $\textbf{S}\in\mathbb{R}^{m\cdot n}$ as described in the previous section. Lets state that the states are in a closed, bounded (constrained), and polyhedral set $\mathcal{K}\subset\mathbb{R}^n$:
 
     \begin{equation}
     \begin{array}{rcl}
@@ -773,9 +774,51 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \label{BASICMPC:equ:MPP_quadratic_full_optimizer}
     \end{equation}
     
-    and note that $\textbf{z}^*$ is also an affine function of $\textbf{x}$, and $J^*(\textbf{x})=\frac{1}{2}\textbf{z}^*(\textbf{x})'\textbf{H}\textbf{z}^*(\textbf{x})$, and therefore it is a quadratic function of $\textbf{x}$.
+    and note that $\textbf{z}^*$ is also an affine function of $\textbf{x}$, and $J^*(\textbf{x})=\frac{1}{2}\textbf{z}^*(\textbf{x})'\textbf{H}\textbf{z}^*(\textbf{x})$, and therefore it is a quadratic function of $\textbf{x}$. The critical region $\mathcal{C}_{\mathcal{A}}$ is computed by substituting $\textbf{z}^*$ from \ref{BASICMPC:equ:MPP_quadratic_full_optimizer} in the primal feasibility conditions \ref{BASICMPC:equ:MPP_KKT_rewritten_b} to obtain the primal feasible set:
     
-
+    \begin{equation}
+    \begin{array}{rcl}
+            \mathcal{P}_p&=&\{
+            \textbf{x}:\textbf{G}_{\mathcal{A}^N}\textbf{H}^{-1}\textbf{G}'_{\mathcal{A}}(\textbf{G}_{\mathcal{A}}\textbf{H}^{-1}\textbf{G}'_{\mathcal{A}})^{-1}(\textbf{w}'_{\mathcal{A}}+\textbf{S}'_{\mathcal{A}}\textbf{x})
+            <(\textbf{w}'_{\mathcal{A}^N}+\textbf{S}'_{\mathcal{A}^N}\textbf{x})
+            \},
+        \end{array}
+        \label{BASICMPC:equ:MPP_quadratic_primalset}
+    \end{equation}
+    
+    and the Lagrange multipliers from \ref{BASICMPC:equ:MPP_quadratic_full_optimum} in the dual feasibility conditions \ref{BASICMPC:equ:MPP_KKT_c} to obtain the dual feasible set:
+    
+    \begin{equation}
+    \begin{array}{rcl}
+            \mathcal{P}_d&=&\{
+            \textbf{x}:-(\textbf{G}_{\mathcal{A}}\textbf{H}^{-1}\textbf{G}'_{\mathcal{A}})(\textbf{w}'_{\mathcal{A}}+\textbf{S}'_{\mathcal{A}}\textbf{x})\geq 0
+            \}.
+        \end{array}
+        \label{BASICMPC:equ:MPP_quadratic_dualset}
+    \end{equation}
+    
+    In conclusion the critical region $\mathcal{C}_{\mathcal{A}}$ is the intersection of the primal $\mathcal{P}_p$ and dual $\mathcal{P}_d$ feasible set:
+    
+    \begin{equation}
+    \begin{array}{rcl}
+            \mathcal{C}_{\mathcal{A}}=&=\{\textbf{x}:\textbf{x}\in\mathcal{P}_p,\,\textbf{x}\in\mathcal{P}_d\},
+        \end{array}
+        \label{BASICMPC:equ:MPP_quadratic_criticalset}
+    \end{equation}
+    
+    where the closure of $\mathcal{C}_{\mathcal{A}}$ is a polyhedron in the $\textbf{x}$-space, also the polyhedron $\mathcal{P}_p$ is open and non empty, because it contains at least the point of $\bar{\textbf{x}}$, therefore it is full dimensional in the $\textbf{x}$-space. This implies that $\mathcal{C}_{\mathcal{A}}=dim\mathcal{P}_d$.
+    
+%    \myparagraph{Geometrical multi parametric quadratic programming algorithm}\label{BASICCSR:sec:MPP_QP_Algo}
+%
+%    The goal of a multi parametric quadratic programming algorithm is to determine the partition of $\mathcal{K}^*$ into critical regions $\mathcal{C}_{\mathcal{A}}$ , and find the expression of the functions $J^*$ and $\textbf{z}^*$ for each critical region.
+%
+%    \begin{figure}[!ht]
+%        \centering
+%        \includegraphics[width=.95\textwidth]{EMPC_PNG_Pics/MPQPAlgo.png}
+%        \caption{Generic multi parametric quadratic program with explicit solver.}
+%        \label{EMPC:fig:ControlStruct}
+%    \end{figure}
+    
     \subsubsection{Receiding horizon control}\label{BASICCSR:sec:RHC}
 
     All this said, even if we calculate the best optimal step sequence for solving the constrained control problem, there are still uncertainties for the future. Optimization over a finite horizon has the following disadvantages:
@@ -786,7 +829,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
 		\item Finite horizon optimization is usually used because of the limited computing power is available, and not for theoretical reasons
 		\end{itemize}
 		
-		To prevent this problem, the notion of optimization is introduced on a moving horizon. In each sample $k$ , an optimization problem is solved over a defined horizon $k,\dots,k+N$ to calculate the appropriate command sequence, and only the first command is applied. This results in a moving optimization horizon, which eliminates the issues listed before dispayed on Fig.\ref{BASICCSR:fig:RHC}. \\
+		To prevent this problem, the notion of optimization is introduced on a moving horizon. In each sample $k$ , an optimization problem is solved over a defined horizon $k,\dots,k+N$ to calculate the appropriate command sequence, and only the first command is applied. This results in a moving optimization horizon, which eliminates the issues listed before displayed on Fig.\ref{BASICCSR:fig:RHC}. \\
 
 \begin{figure}[!ht]
         \centering
@@ -1295,7 +1338,7 @@ repeated on the basis of new measurements or a new estimation of the states.
 
 \subsection{Storage of critical regions}\label{BASICCSR:sec:EMPCStorage}
 
-The issue of iterative model based controllers is that they require a lot of computational resource. The CPU load and required ROM consumption could increase exponentially the longer the more steps the control horizon is calculated. For this reason explicit model bssed predictive controllers (EMPC) were developed, where only the storage the critical regions and the signal coefficients for each critical region, so the matrices $\textbf{H}$, $\textbf{K}$, $\textbf{F}$, $\textbf{G}$ are required. The on-line part of control consists of searching the critical region for the current states and calculating the necessary inputs for them.
+The issue of iterative model based controllers is that they require a lot of computational resource. The CPU load and required ROM consumption could increase exponentially the longer the more steps the control horizon is calculated. For this reason explicit model bssed predictive controllers (EMPC) were developed, where only the storage the critical regions and the signal coefficients for each critical region, so the matrices $\textbf{H}$, $\mathcal{K}$, $\textbf{F}$, $\textbf{G}$ are required. The on-line part of control consists of searching the critical region for the current states and calculating the necessary inputs for them.
 One method of storing entire critical regions in order to calculate them, and that is in the order in which the MP-LP or MP-QP problem is resolved. It has the disadvantage, that the search time can be high, as such starting from the top of the list, a linear search is not effective. The efficient method is to store critical regions already in a binary tree \cite{jones2006logarithmic}, \cite{tondel2003evaluation}, \cite{tondel2003constrained}, \cite{kutasi2008vector}. The method of generating the binary tree is shown in (Fig.\ref{BASICMPC:fig:searchtree}.).\\
  The basic idea is to sort the critical regions depending on their adjacent sides. For example, in (Fig.\ref{BASICMPC:fig:searchtree}.a.) side $j_1$ divides the state space into two, at the right of it are the regions $X_{2,3,4,5}$ and to the left are the regions $X_{1,2,6}$. They make up the nodes adjacent to the base node $I_1$ of the binary tree. Next the another side from the space is chosen defined by each node $I_2$ respectively $I_3$, and the algorithm is continued until all the regions in the current node correspond to the same control signal, denoted by $F$ on the shaft in fig. (Fig.\ref{BASICMPC:fig:searchtree}.b.) Thus with this search pattern logarithmic search time can be achieved.
 
