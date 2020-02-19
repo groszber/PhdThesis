@@ -3,6 +3,60 @@
 
 \begin{scriptsize}
 \begin{tabularx}{\textwidth}{r|X}
+% A
+$\textbf{A}$																& State matrix of a linear time invariant model\\
+$\textbf{A}_x$              & Constraint state matrix\\
+$\textbf{A}_u$              & Constraint input matrix\\
+$\textbf{A}_f$              & Constraint state matrix at the end of the horizon\\
+$\mathcal{A}$               & Set if indices in states where the constraints are active\\
+$\mathcal{A}^N$               & Set if indices in states where the constraints are inactive\\
+
+
+% B
+$\textbf{B}$																& Input matrix of a linear time invariant model\\
+$\textbf{b}_x$              & Constraint state coefficient\\
+$\textbf{b}_u$              & Constraint input coefficient\\
+$\textbf{b}_f$              & Constraint state coefficient at the end of the horizon\\
+
+% C
+$CVUF$  													& Complex Voltage Unbalance Factor\\
+$\textbf{C}$																& Output matrix of a linear time invariant model\\
+$C_{snub}$ 												& Capacitance to reduce switching loss and to damp out over-voltage\\
+$C_D$															& Capacitance for filtering the output voltage of the VSR\\
+$C_S$															& Input filter capacitance of the three phase alternating current in CSR\\
+$\mathcal{C}_{\mathcal{A}}$               & Critical region associated with the active constraints\\
+
+% D
+$D_{1+},D_{2+}$										& Higher diodes\\
+$D_{1+},D_{2+}$										& Lower diodes\\
+
+% E
+$\textbf{E}$                & Unified constraint state matrix \\
+$\mathcal{E}$               & Set of external sucesses\\
+
+% F
+$\textbf{F}$                & State coefficient matrix for calculating the optimal input \\
+$f(x)$														& Function of the state\\
+
+% G
+$\textbf{G}$                & Unified constraint input matrix \\
+$\mathcal{D}$               & Set of directions\\
+
+% H
+$\textbf{H}$                & Supplementary quadratic optimizer matrix\\
+
+% I
+$i_i$															& Constant input inductor current\\
+$i_o$															& Alternating output current\\
+$\vec{i}$													& Rectifier input current\\
+$\vec{i}_ref$											& Reference rectifier input current\\
+$\mathcal{I}$               & Set if internal sucesses\\
+$\mathcal{I}_c$               & Set if indices of constraints\\
+
+
+
+
+%================================================
 
 
 	$\hat{V}$															& Voltage peak\\
@@ -17,46 +71,44 @@
 	$V_{0},V_{p},V_{n}$  							& Zero, negative and positive sequence voltages based on symmetrical components theorem\\
   $\upsilon$  											& Fortesque operator\\
 	$VUF$  														& Voltage Unbalance Factor\\
-	$CVUF$  													& Complex Voltage Unbalance Factor\\
+	
 	$k_v$  														& Magnitude of CVUF\\
 	$\theta_v$  											& Angle of CVUF\\
-	$i_i$															& Constant input inductor current\\
-	$i_o$															& Alternating output current\\
+	
+	
 	$V_i$															& Constant input voltage\\
 	$V_o$															& Alternating output voltage\\
 	$L_+,L_-$													& Current filter inductors\\
 	$S_{1+},S_{2+}$										& Higher switches\\
 	$S_{1+},S_{2+}$										& Lower switches\\
-	$D_{1+},D_{2+}$										& Higher diodes\\
-	$D_{1+},D_{2+}$										& Lower diodes\\
+	
 	$V_{an},V_{bn}$  									& Designated point's potential to ground \\
 	$\omega$													& Angular velocity of output sinusoidal voltage or current\\
 	$V_{D1},V_{D2}$ 									& Two end's voltage on the DC-DC converter\\
 	$v_1,v_2$                         & Transformer voltages\\
-	$C_{snub}$ 												& Capacitance to reduce switching loss and to damp out over-voltage\\
+	
 	$n$ 															& Transformer turn ratio.\\
 	$L_a$															& Leakage inductance\\
 	$v_D$															& Output voltage before the choke inductor $L_D$\\
 	$V_d$															& Output voltage\\
 	$I_D$															& Output current\\
 	$L_D$															& Inductor for filtering the output current of the CSR (Choke)\\
-	$C_D$															& Capacitance for filtering the output voltage of the VSR\\
+	
 	$L_S$															& Input filter inductance of the three phase alternating current in VSR\\
-	$C_S$															& Input filter capacitance of the three phase alternating current in CSR\\
+	
 	$v_{c_p}$													& AC-side capacitor voltage, where $p\in\{1,2,3\}$\\
 	$\widehat{u}$											& Peak value of AC-side capacitor voltage\\
 	$v_{i,j}$													& Three phase phase-to-neutral voltage $i,j\in\{R,S,T\}$\\
 	$v_{N,RS}$												& Three phase line-to-line voltage of $R$ and $S$\\
 	$\varphi_N$												& Angle of phase voltage\\
-	$\vec{i}$													& Rectifier input current\\
-	$\vec{i}_ref$											& Reference rectifier input current\\
+	
 	$x$																& State of a linear time invariant model\\
-	$f(x)$														& Function of the state\\
+	
 	$\rho$																& Infinite sequence iterator\\
 	$\Delta$													& Step lenght control parameter\\
-	$\mathcal{P},\mathcal{D},\mathcal{S},\mathcal{Q},\mathcal{U},\mathcal{I},\mathcal{E}$ & Set of processes, directions, succesful iterations, timestep index, internal successes, and external successes respectively\\
+	$\mathcal{P},,\mathcal{S},\mathcal{Q},\mathcal{U},,$ & Set of processes, directions, succesful iterations, timestep index, internal successes, and external successes respectively\\
 	$p$																& Process number\\
-	$i$																& Active process indicator\\
+	
 	$d_i$															& Direction of active process\\
 	$x_i^{best}$											& Best reached state, where $x_i^{best}$ is a minima\\
 	$\Delta_i^{best}$											& Best reached step size\\
@@ -67,16 +119,18 @@
 
 
 
-	$\textbf{A}$																& State matrix of a linear time invariant model\\
-	$\textbf{B}$																& Input matrix of a linear time invariant model\\
-	$\textbf{C}$																& Output matrix of a linear time invariant model\\
+
+
+	
 	$\textbf{x}$											& State vector of a linear time invariant model\\
-	$\textbf{z}$											& Input vector of a linear time invariant model\\
+$\bar{\textbf{x}}$											& Minimum state value of the objective function\\
+	$\textbf{z}$											& Optimizer of linear multi parametric problem\\
 $s$                             & Dimension of the decision vector\\
 $m$                             & Dimension of the input vector\\
 $n$                             & Dimension of the state vector\\
 $J_0$                           & Cost function to optimize at the initial state\\
 $\textbf{x}(0)$                 & Initial state\\
+
 
 	$\textbf{P}$                    & Terminal penalising weight matrix\\
 $\textbf{Q}$                    & State penalising weight matrix\\
@@ -89,24 +143,30 @@ $\textbf{R}$                    & Input penalising weight matrix\\
 $\mathcal{X}^x$             & Set of all possible future states stepping through the horizon\\
 $\mathcal{S}^x$             & Set of all possible future state matrices stepping through the horizon\\
 $\mathcal{S}^u$             & Set of all possible future input matrices stepping through the horizon\\
-$\textbf{H}$, $\textbf{F}$, $\textbf{Y}$ & Supplementary matrices\\
+ $\textbf{Y}$ & Supplementary matrices\\
 $\textbf{U}^*_0$            & Optimal vector of future inputs starting from the initial state\\
-$\textbf{J}^*_0$            & Optimal cost value at the initial state\\
+$\textbf{u}^*$            & Optimal vector of input\\
+$J^*_0$            & Optimal cost value at the initial state\\
 $j$                         & Intermediate step index on the horizon\\
 $\mathcal{U}^u$             & Set of inputs not violating constraints\\
-$\textbf{A}_x$              & Constraint state matrix\\
-$\textbf{b}_x$              & Constraint state coefficient\\
-$\textbf{A}_u$              & Constraint input matrix\\
-$\textbf{b}_u$              & Constraint input coefficient\\
-$\textbf{A}_f$              & Constraint state matrix at the end of the horizon\\
-$\textbf{b}_f$              & Constraint state coefficient at the end of the horizon\\
+
+$\textbf{S}$              & General state constraint coefficient\\
 $\mathcal{P}$               & Set of all (input and state) constraints at time instance\\
-$\textbf{G}$                & Unified constraint input matrix \\
-$\textbf{E}$                & Unified constraint state matrix \\
-$\textbf{W}$                & Unified constraint coefficient matrix \\
+
+
+
+$\textbf{w}$                & Unified constraint coefficient matrix \\
 $\tilde{\textbf{z}}$        & Set of all future states and inputs over the horizon\\
 $\textbf{z}$                & Optimal controller evolution vector over the horizon\\
 $\textbf{K}$                & Controller gain\\
+$\mathcal{K}$               & Set of states respective to constraints\\
+$\mathcal{K}^*$               & Set of feasible states respective to constraints\\
+$\textbf{Z}^*$              & Set of optimizers leading to feasible states\\
+
+$\mathcal{J}$               & Set if indices of active constraints\\
+
+$\mathcal{P}_p$             & Set of primary feasibility conditions\\
+$\mathcal{P}_d$             & Set of dual feasibility conditions\\
 $g$                         & Autonomous function where there are no inputs\\
 $V$                         & Lyapunov function\\
 
