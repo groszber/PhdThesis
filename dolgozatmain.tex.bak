@@ -118,7 +118,7 @@
 \def\mysupervisor{dr. Attila Magyar}
 
 
-%\rhead{L\'aszlo Richard Neukirchner (ZOK4EW) 2014/15/II.}
+%\rhead{L\'aszlo Richard Neukirchner (ZOK4EW) 2014/20}
 \renewcommand{\contentsname}{List of contents}
 \renewcommand{\figurename}{Figure}
 \renewcommand{\tablename}{Table}
@@ -126,6 +126,7 @@
 \renewcommand{\bibname}{Bibliography}
 \let\oldref\ref
 \renewcommand{\ref}[1]{(\oldref{#1})}
+%\renewcommand\oldrefdot[1]{\oldref{#1}.}
 %\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 
 \newcommand{\sig}[1]{\begin{tikzpicture} \draw[ultra thick, densely dotted, color=white] (0,0)--(8,0) ;\draw[ultra thick, dotted] (10,0)--(14,0) (12,0) node[below]{#1};  \end{tikzpicture}}
@@ -178,6 +179,7 @@
 
 %% Basic notions
 \input{subtex/3_1_basics_unbalance.tex}
+\input{subtex/3_2_basics_powelectric.tex}
 \input{subtex/3_3_basics_empc.tex}
 \input{subtex/3_4_basics_notations.tex}
 
@@ -208,7 +210,7 @@
  %% \bibliography{dolgozat_own}
  %\bibliography{dolgozat}
 
- \boldname{Neukirchner}{L{\'a}szl{\'o}}{L.}   %%%% félkövér kiemeléshez NEM MINDEGY PL. HOGY á VAGY \'a VAN A BIB-BEN !!!!!!!!!!!!
+ \boldname{Neukirchner}{L{\'a}szl{\'o}}{L.}{Rich{\'a}rd}{R.}   %%%% félkövér kiemeléshez NEM MINDEGY PL. HOGY á VAGY \'a VAN A BIB-BEN !!!!!!!!!!!!
     %\boldname{}{}{}
 		\printbibheading
 \section*{Publications}

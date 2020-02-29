@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  19 FEB 2020 19:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  29 FEB 2020 14:46
 entering extended mode
 **C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
 (C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
@@ -1866,31 +1866,28 @@ LaTeX Warning: Label `BASICCSR:eqn:currents' multiply defined.
 LaTeX Warning: Label `BASICMPC:equ:cost_function_Euclidian_recursive_twoP' mult
 iply defined.
 
-
-LaTeX Warning: Label `BASICCSR:sec:DCDC' multiply defined.
-
 )
 \openout1 = `dolgozatmain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 138.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 138.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 139.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 139.
 
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    ... okay on input line 139.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1970,15 +1967,15 @@ enefit from \pgfplotsset{compat=1.16} (current compat level: 1.9).
 
 \symgns@font=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 138.
-Package gensymb Info: Math companion symbols declared on input line 138.
-LaTeX Info: Redefining \degree on input line 138.
-LaTeX Info: Redefining \celsius on input line 138.
+(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 139.
+Package gensymb Info: Math companion symbols declared on input line 139.
+LaTeX Info: Redefining \degree on input line 139.
+LaTeX Info: Redefining \celsius on input line 139.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 138.
-LaTeX Info: Redefining \ohm on input line 138.
-Package gensymb Info: Using \textohm for \ohm on input line 138.
-Package gensymb Info: Using \textmu for \micro on input line 138.
+erthousand on input line 139.
+LaTeX Info: Redefining \ohm on input line 139.
+Package gensymb Info: Using \textohm for \ohm on input line 139.
+Package gensymb Info: Using \textmu for \micro on input line 139.
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/translator\translator-basic
 -dictionary-English.dict
@@ -2007,13 +2004,13 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'dolgozatmain.bbl' found.
 
 (dolgozatmain.bbl)
-Package biblatex Info: Reference section=0 on input line 138.
-Package biblatex Info: Reference segment=0 on input line 138.
-LaTeX Font Info:    Try loading font information for U+msa on input line 138.
+Package biblatex Info: Reference section=0 on input line 139.
+Package biblatex Info: Reference segment=0 on input line 139.
+LaTeX Font Info:    Try loading font information for U+msa on input line 139.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 138.
+LaTeX Font Info:    Try loading font information for U+msb on input line 139.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2097,13 +2094,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2])
-Overfull \hbox (5.50177pt too wide) in paragraph at lines 17--173
-\T1/cmr/m/n/12 have been pre-sented by [22] to es-ti-mate and com-pen-sate in-p
-ut voltage-unbalance
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--173
+Underfull \hbox (badness 10000) in paragraph at lines 17--174
 
  []
 
@@ -2648,12 +2639,7 @@ File: EMPC_PNG_Pics/ControlStructure.png Graphic file (type png)
 Package pdftex.def Info: EMPC_PNG_Pics/ControlStructure.png  used on input line
  186.
 (pdftex.def)             Requested size: 398.3386pt x 289.8498pt.
-[63 <./EMPC_PNG_Pics/ControlStructure.png>]
-
-LaTeX Warning: Reference `BASICCSR:sec:EMPC' on page 64 undefined on input line
- 213.
-
-[64] [65]
+[63 <./EMPC_PNG_Pics/ControlStructure.png>] [64] [65]
 <EMPC_PNG_Pics/Regions.png, id=388, 310.4325pt x 151.4385pt>
 File: EMPC_PNG_Pics/Regions.png Graphic file (type png)
 <use EMPC_PNG_Pics/Regions.png>
@@ -2786,7 +2772,7 @@ Package biblatex Warning: The option 'labelprefix' is limited
 (biblatex)                Consider using Biber instead.
 
 
-Overfull \hbox (3.63234pt too wide) in paragraph at lines 217--217
+Overfull \hbox (3.63234pt too wide) in paragraph at lines 218--218
 \T1/cmr/m/n/12 ``Con-strained pre-dic-tive con-trol of three-phasebuck rec-ti-f
 iers,'' \T1/cmr/m/it/12 Acta Poly-
  []
@@ -2794,37 +2780,37 @@ iers,'' \T1/cmr/m/it/12 Acta Poly-
 [83
 
 ] [84] [85] [86]
-Overfull \hbox (14.06616pt too wide) in paragraph at lines 222--222
+Overfull \hbox (14.06616pt too wide) in paragraph at lines 223--223
 \T1/cmr/m/it/12 5th In-ter-na-tional Con-fer-ence on Elec-tri-cal Engineering-B
 oumerdes (ICEE-
  []
 
 [87]
-Overfull \hbox (6.91681pt too wide) in paragraph at lines 222--222
+Overfull \hbox (6.91681pt too wide) in paragraph at lines 223--223
 [] \T1/cmr/m/n/12 N. Muthuku-mar,  S. Srini-vasan,  K. Ramku-mar,  K. Kan-nan, 
 and  V. E. Balas,
  []
 
 
-Overfull \hbox (2.42229pt too wide) in paragraph at lines 222--222
+Overfull \hbox (2.42229pt too wide) in paragraph at lines 223--223
 [] \T1/cmr/m/n/12 A. H. Bon-nett and  G. Soukup, ``Un-der-stand-ing the nema mo
 tor-generator
  []
 
 [88] [89]
-Overfull \hbox (6.06155pt too wide) in paragraph at lines 222--222
+Overfull \hbox (6.06155pt too wide) in paragraph at lines 223--223
 \T1/cmr/m/n/12 rents,'' in \T1/cmr/m/it/12 IEE Pro-ceed-ings B (Elec-tric Power
  Ap-pli-ca-tions)\T1/cmr/m/n/12 , IET, vol. 136,
  []
 
 [90]
-Overfull \hbox (14.42554pt too wide) in paragraph at lines 222--222
+Overfull \hbox (14.42554pt too wide) in paragraph at lines 223--223
 [] \T1/cmr/m/n/12 M. Baotic, ``Op-ti-mal con-trol of piece-wise affine sys-tems
 : A multi-parametric
  []
 
 [91]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 222.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 223.
 
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -2841,13 +2827,13 @@ Package logreq Info: Writing requests to 'dolgozatmain.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 62202 strings out of 492897
- 1508847 string characters out of 3133501
- 2150694 words of memory out of 3000000
- 65179 multiletter control sequences out of 15000+200000
+ 62217 strings out of 492897
+ 1509764 string characters out of 3133501
+ 2150918 words of memory out of 3000000
+ 65194 multiletter control sequences out of 15000+200000
  560468 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,23n,96p,2654b,1435s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,23n,96p,2654b,1437s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
 ctt1200.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec
 /dpi600\eccc1200.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jk
@@ -2882,7 +2868,7 @@ lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 msy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb>
-Output written on dolgozatmain.pdf (102 pages, 3922133 bytes).
+Output written on dolgozatmain.pdf (102 pages, 3923813 bytes).
 PDF statistics:
  1204 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

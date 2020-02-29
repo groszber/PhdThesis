@@ -4095,15 +4095,15 @@
 
   \entry{neukirchner2019linkedmodel}{online}{}
     \name{author}{1}{}{%
-      {{hash=NLR}{%
+      {{hash=NL}{%
          family={Neukirchner},
          familyi={N\bibinitperiod},
-         given={L{\'a}szl{\'o}\bibnamedelima Rich{\'a}rd},
-         giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+         given={L{\'a}szl{\'o}},
+         giveni={L\bibinitperiod},
       }}%
     }
-    \strng{namehash}{NLR1}
-    \strng{fullhash}{NLR1}
+    \strng{namehash}{NL1}
+    \strng{fullhash}{NL1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{title}{Constrained Predictive Control of Three-Phase Buck Rectifiers
@@ -4157,11 +4157,11 @@
 
   \entry{neukirchner2020constrained}{article}{}
     \name{author}{5}{}{%
-      {{hash=NLR}{%
+      {{hash=NL}{%
          family={Neukirchner},
          familyi={N\bibinitperiod},
-         given={L{\'a}szl{\'o}\bibnamedelima Rich{\'a}rd},
-         giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+         given={L{\'a}szl{\'o}},
+         giveni={L\bibinitperiod},
       }}%
       {{hash=MA}{%
          family={Magyar},
@@ -4189,8 +4189,8 @@
       }}%
     }
     \keyw{sajat}
-    \strng{namehash}{NLRMAFA+1}
-    \strng{fullhash}{NLRMAFAKNDKA1}
+    \strng{namehash}{NLMAFA+1}
+    \strng{fullhash}{NLMAFAKNDKA1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{number}{1}
