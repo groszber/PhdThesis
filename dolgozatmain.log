@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  15 APR 2020 20:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  15 APR 2020 21:43
 entering extended mode
 **C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
 (C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
@@ -2309,25 +2309,14 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 518.
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 571.
 
-[31]
-
-LaTeX Warning: Reference `MPP_program' on page 32 undefined on input line 645.
-
-[32]
-
-LaTeX Warning: Reference `MPP_program' on page 33 undefined on input line 664.
-
+[31] [32]
 <EMPC_PNG_Pics/criticalregions.jpg, id=189, 415.7934pt x 291.7299pt>
 File: EMPC_PNG_Pics/criticalregions.jpg Graphic file (type jpg)
 <use EMPC_PNG_Pics/criticalregions.jpg>
 Package pdftex.def Info: EMPC_PNG_Pics/criticalregions.jpg  used on input line 
 675.
 (pdftex.def)             Requested size: 358.50229pt x 251.53719pt.
-
-LaTeX Warning: Reference `BASICMPC:equ:MPP_quadratic' on page 33 undefined on i
-nput line 690.
-
-[33] [34 <./EMPC_PNG_Pics/criticalregions.jpg>] [35]
+ [33] [34 <./EMPC_PNG_Pics/criticalregions.jpg>] [35]
 Underfull \hbox (badness 10000) in paragraph at lines 1007--1008
 
  []
@@ -2862,9 +2851,6 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [93]
 (dolgozatmain.aux)
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'dolgozatmain.run.xml'.
@@ -2872,10 +2858,10 @@ Package logreq Info: Writing requests to 'dolgozatmain.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 62214 strings out of 492897
- 1509586 string characters out of 3133501
+ 62212 strings out of 492897
+ 1509545 string characters out of 3133501
  2152808 words of memory out of 3000000
- 65190 multiletter control sequences out of 15000+200000
+ 65188 multiletter control sequences out of 15000+200000
  560468 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,23n,96p,2654b,1437s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2913,9 +2899,9 @@ lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 msy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb>
-Output written on dolgozatmain.pdf (104 pages, 4114633 bytes).
+Output written on dolgozatmain.pdf (104 pages, 4114216 bytes).
 PDF statistics:
- 1211 PDF objects out of 1440 (max. 8388607)
+ 1210 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  233 words of extra memory for PDF output out of 10000 (max. 10000000)
 
