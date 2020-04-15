@@ -673,11 +673,11 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
     \begin{figure}[!ht]
         \centering
         \includegraphics[width=.9\textwidth]{EMPC_PNG_Pics/criticalregions.jpg}
-        \caption{Partitioning the parameter space to critical regions.}
+        \caption{Partitioning incrementally the two dimensional parameter space to critical regions from $C0$ to $C11$.}
         \label{BASICCSR:fig:Crit}
     \end{figure}
     
-    As it shall be described in section \ref{EMPC:sec:main}, the if the linear optimization could be described with quadratic programming the process yield more computational cost efficient results in a lot of cases. As such it is advised to apply above geometrical approach in a multi-parametric quadratic programming (mp-QP) environment, as it would be used in the explicit MPC. Consider a multi parametric quadratic program:
+    As it shall be described in section \oldref{EMPC:sec:main}, the if the linear optimization could be described with quadratic programming the process yield more computational cost efficient results in a lot of cases. As such it is advised to apply above geometrical approach in a multi-parametric quadratic programming (mp-QP) environment, as it would be used in the explicit MPC. Consider a multi parametric quadratic program:
     
     \begin{equation}
     \begin{array}{rcl}
@@ -687,7 +687,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \label{BASICMPC:equ:MPQP}
     \end{equation}
     
-    and the variables are defined as by \ref{MPP_program} additionally it is assumed that $\textbf{H}\succ 0$. The goal is to find the value function $J^*(\textbf{x})$ and the optimizer function $\textbf{z}^*(\textbf{x})$ in $\mathcal{K}^*$. The search of these functions proceeds by partitioning the set of feasible states into critical regions as before. Note that the more general problem with $J(\textbf{x},\textbf{z})=\frac{1}{2}\textbf{z}'\textbf{H}\textbf{z}+\textbf{x}'\textbf{F}\textbf{x}$ can always be transformed into \ref{BASICMPC:equ:MPP_quadratic} using the variable substitution $\tilde{\textbf{z}}=\textbf{z}+\textbf{H}^{-1}\textbf{F}'\textbf{x}$.\\
+    and the variables are defined as by \ref{BASICMPC:equ:MPP_program} additionally it is assumed that $\textbf{H}\succ 0$. The goal is to find the value function $J^*(\textbf{x})$ and the optimizer function $\textbf{z}^*(\textbf{x})$ in $\mathcal{K}^*$. The search of these functions proceeds by partitioning the set of feasible states into critical regions as before. Note that the more general problem with $J(\textbf{x},\textbf{z})=\frac{1}{2}\textbf{z}'\textbf{H}\textbf{z}+\textbf{x}'\textbf{F}\textbf{x}$ can always be transformed into \ref{BASICMPC:equ:MPP_quadratic} using the variable substitution $\tilde{\textbf{z}}=\textbf{z}+\textbf{H}^{-1}\textbf{F}'\textbf{x}$.\\
     As previously let be $j$ the $j^{th}$ row of a matrix or the $j^{th}$ element in a vector, also $\mathcal{J}=\{1,\dots,m\}$ be the set of constraint indices and for any $\mathcal{A}\subseteq\mathcal{I}_c$, also $\textbf{G}_{\mathcal{A}}$, $\textbf{w}_{\mathcal{A}}$, and $\textbf{S}_{\mathcal{A}}$ be the submatrices of $\textbf{G}$, $\textbf{w}$ and $\textbf{S}$ respectively, consisting rows, indexed by $\mathcal{A}$, and $\mathcal{K}^*$ is full dimensional.
     with the definition displayed in \ref{BASICMPC:equ:MPP_stateset_optimal partition}, and \ref{BASICMPC:equ:MPP_stateset_optimal critical} it can be showed that the critical regions of a multi parametric quadratic program are polyhedra. Let $(\mathcal{A},\mathcal{A}^N)=(\mathcal{A}(\bar{\textbf{x}}),\mathcal{A}^N(\bar{\textbf{x}}))$ for some $\bar{\textbf{x}}\in\mathcal{K}^*$, where for any given $\bar{\textbf{x}}\in\mathcal{K}^*$, $J^*(\bar{\textbf{x}})$ denotes the minimum value of the objective function for $\textbf{x}=\bar{\textbf{x}}$. Then:
     
