@@ -636,13 +636,13 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
 
     \begin{enumerate}
     \item the constraint $\textbf{x}\in\textbf{K}$ is included in the constraints of $\textbf{Gz}\leq\textbf{w}+\textbf{Sx}$.
-    \item $\mathcal{K}$ is a full dimensional polytope, or the problem can be reformulated to $\mathcal{K}$ to be full dimensional with a smaller set of parameters.
+    \item $\textbf{K}$ is a full dimensional polytope, or the problem can be reformulated to $\textbf{K}$ to be full dimensional with a smaller set of parameters.
     \item $\textbf{S}$ is on full rank, or the problem can be reformulated to $\textbf{S}$ to be full rank with a smaller set of parameters.
     \end{enumerate}
 
     As such $\textbf{J}^*:\textbf{K}^*\rightarrow\mathbb{R}$ is a function which gives the optimum by $\textbf{x}$. That said let $\textbf{Z}^*:\textbf{K}^*\rightarrow\mathbb{R}^s$ the function which gives the set of optimizers namely $\textbf{z}^*\in\textbf{Z}^*$. The task is to find a $\textbf{K}^*\subseteq\textbf{K}$ set and a $\textbf{z}^*\in\textbf{Z}^*$ optimizer and the value of the optimum.\\
     Beside of the systematic linear and quadratic program solutions \cite{borrelli2017predictive} there is a direct geometrical solution for the problem which uses critical regions for describing the parameter space. The critical regions are convex subsets of the parameter space where the optimum is constant based on the function of the parameters.
-    Consider the multi parametric program \ref{MPP_program}, and let $\mathcal{I}_c=\{1,\dots,m\}$ be the set of constraint indices. For any $\mathcal{A}\subseteq\mathcal{I}_c$, let $\textbf{G}_{\mathcal{A}}$, and $\textbf{S}_{\mathcal{A}}$ be the subsets of $\textbf{G}$, and $\textbf{S}$, respectively, compromising the rows indexed by $\mathcal{A}$, and denote with $\textbf{G}_j$, $\textbf{S}_j$ and $\textbf{w}_j$, the $j^th$ row of $\textbf{G}$, $\textbf{S}$ and $\textbf{w}$. We define $\mathcal{C}_{\mathcal{A}}$ as the set of states $\textbf{x}$ for which the same set $\mathcal{A}$ of constraints is active at the optimum. Formally, the \emph{optimal partition} of $\mathcal{I}_c$ at $\textbf{x}$ is the optimal partition of $(\mathcal{A}(x),\mathcal{A}^N(x))$, where:
+    Consider the multi parametric program \ref{BASICMPC:equ:MPP_program}, and let $\mathcal{I}_c=\{1,\dots,m\}$ be the set of constraint indices. For any $\mathcal{A}\subseteq\mathcal{I}_c$, let $\textbf{G}_{\mathcal{A}}$, and $\textbf{S}_{\mathcal{A}}$ be the subsets of $\textbf{G}$, and $\textbf{S}$, respectively, compromising the rows indexed by $\mathcal{A}$, and denote with $\textbf{G}_j$, $\textbf{S}_j$ and $\textbf{w}_j$, the $j^th$ row of $\textbf{G}$, $\textbf{S}$ and $\textbf{w}$. We define $\mathcal{C}_{\mathcal{A}}$ as the set of states $\textbf{x}$ for which the same set $\mathcal{A}$ of constraints is active at the optimum. Formally, the \emph{optimal partition} of $\mathcal{I}_c$ at $\textbf{x}$ is the optimal partition of $(\mathcal{A}(x),\mathcal{A}^N(x))$, where:
 
     \begin{equation}
     \begin{array}{rcl}
@@ -661,7 +661,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \label{BASICMPC:equ:MPP_stateset_optimal critical}
     \end{equation}
 
-    With the above the critical region $\mathcal{C}_{\mathcal{A}}$ is the set of all $\textbf{x}$ states such that constraints indexed by $\mathcal{A}$ are active at the optimum of problem \ref{MPP_program}. Furthermore it can be proven, that the optimum is an affine function in the domain of $\textbf{K}$ adn unique for every critical region. As such the problem can be separated into two parts:
+    With the above the critical region $\mathcal{C}_{\mathcal{A}}$ is the set of all $\textbf{x}$ states such that constraints indexed by $\mathcal{A}$ are active at the optimum of problem \ref{BASICMPC:equ:MPP_program}. Furthermore it can be proven, that the optimum is an affine function in the domain of $\textbf{K}$ adn unique for every critical region. As such the problem can be separated into two parts:
 
     \begin{enumerate}
     \item Find the least dimension subset of $\textbf{K}$ which contains $\textbf{K}^*$.
@@ -687,7 +687,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \label{BASICMPC:equ:MPQP}
     \end{equation}
 
-    and the variables are defined as by \ref{BASICMPC:equ:MPP_program} additionally it is assumed that $\textbf{H}\succ 0$. The goal is to find the value function $J^*(\textbf{x})$ and the optimizer function $\textbf{z}^*(\textbf{x})$ in $\mathcal{K}^*$. The search of these functions proceeds by partitioning the set of feasible states into critical regions as before. Note that the more general problem with $J(\textbf{x},\textbf{z})=\frac{1}{2}\textbf{z}'\textbf{H}\textbf{z}+\textbf{x}'\textbf{F}\textbf{x}$ can always be transformed into \ref{BASICMPC:equ:MPP_quadratic} using the variable substitution $\tilde{\textbf{z}}=\textbf{z}+\textbf{H}^{-1}\textbf{F}'\textbf{x}$.\\
+    and the variables are defined as by \ref{BASICMPC:equ:MPP_program} additionally it is assumed that $\textbf{H}\succ 0$. The goal is to find the value function $J^*(\textbf{x})$ and the optimizer function $\textbf{z}^*(\textbf{x})$ in $\mathcal{K}^*$. The search of these functions proceeds by partitioning the set of feasible states into critical regions as before. Note that the more general problem with $J(\textbf{x},\textbf{z})=\frac{1}{2}\textbf{z}'\textbf{H}\textbf{z}+\textbf{x}'\textbf{F}\textbf{x}$ can always be transformed into \ref{BASICMPC:equ:MPQP} using the variable substitution $\tilde{\textbf{z}}=\textbf{z}+\textbf{H}^{-1}\textbf{F}'\textbf{x}$.\\
     As previously let be $j$ the $j^{th}$ row of a matrix or the $j^{th}$ element in a vector, also $\mathcal{J}=\{1,\dots,m\}$ be the set of constraint indices and for any $\mathcal{A}\subseteq\mathcal{I}_c$, also $\textbf{G}_{\mathcal{A}}$, $\textbf{w}_{\mathcal{A}}$, and $\textbf{S}_{\mathcal{A}}$ be the submatrices of $\textbf{G}$, $\textbf{w}$ and $\textbf{S}$ respectively, consisting rows, indexed by $\mathcal{A}$, and $\mathcal{K}^*$ is full dimensional.
     with the definition displayed in \ref{BASICMPC:equ:MPP_stateset_optimal partition}, and \ref{BASICMPC:equ:MPP_stateset_optimal critical} it can be showed that the critical regions of a multi parametric quadratic program are polyhedra. Let $(\mathcal{A},\mathcal{A}^N)=(\mathcal{A}(\bar{\textbf{x}}),\mathcal{A}^N(\bar{\textbf{x}}))$ for some $\bar{\textbf{x}}\in\mathcal{K}^*$, where for any given $\bar{\textbf{x}}\in\mathcal{K}^*$, $J^*(\bar{\textbf{x}})$ denotes the minimum value of the objective function for $\textbf{x}=\bar{\textbf{x}}$. Then:
 
