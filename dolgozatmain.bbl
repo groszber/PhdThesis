@@ -894,6 +894,585 @@
     \field{year}{2013}
   \endentry
 
+  \entry{von2006electric}{book}{}
+    \name{author}{1}{}{%
+      {{hash=VMA}{%
+         family={Von\bibnamedelima Meier},
+         familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={Alexandra},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {John Wiley \& Sons}%
+    }
+    \strng{namehash}{VMA1}
+    \strng{fullhash}{VMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Electric power systems: a conceptual introduction}
+    \field{year}{2006}
+  \endentry
+
+  \entry{eugene1986new}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=EC}{%
+         family={Eugene},
+         familyi={E\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EC1}
+    \strng{fullhash}{EC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{CIGRE 1986}
+    \field{pages}{11}
+    \field{title}{A new simple and effective approximate formulation for
+  determination of three-phase unbalance by the voltmeter method}
+    \field{year}{1986}
+  \endentry
+
+  \entry{robert1992assessing}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=RA}{%
+         family={Robert},
+         familyi={R\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=MJ}{%
+         family={Marquet},
+         familyi={M\bibinitperiod},
+         given={J},
+         giveni={J},
+      }}%
+    }
+    \strng{namehash}{RAMJ1}
+    \strng{fullhash}{RAMJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{International Conference on Large High Voltage Electric
+  Systems}
+    \field{pages}{36\bibrangedash 203}
+    \field{title}{Assessing voltage quality with relation to harmonics, flicker
+  and unbalance}
+    \field{volume}{2}
+    \field{year}{1992}
+  \endentry
+
+  \entry{fortescue1918method}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FCL}{%
+         family={Fortescue},
+         familyi={F\bibinitperiod},
+         given={Charles\bibnamedelima L},
+         giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{FCL1}
+    \strng{fullhash}{FCL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{1027\bibrangedash 1140}
+    \field{title}{Method of symmetrical co-ordinates applied to the solution of
+  polyphase networks}
+    \field{volume}{37}
+    \field{journaltitle}{Transactions of the American Institute of Electrical
+  Engineers}
+    \field{year}{1918}
+  \endentry
+
+  \entry{bonnett1997understanding}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=BAH}{%
+         family={Bonnett},
+         familyi={B\bibinitperiod},
+         given={Austin\bibnamedelima H},
+         giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Soukup},
+         familyi={S\bibinitperiod},
+         given={GC},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{BAHSG1}
+    \strng{fullhash}{BAHSG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Record of Conference Papers. IEEE Industry Applications
+  Society 44th Annual Petroleum and Chemical Industry Conference}
+    \field{pages}{225\bibrangedash 238}
+    \field{title}{Understanding the NEMA motor-generator standards of section
+  MG-1-1993, revision 3, three-phase induction motors}
+    \field{year}{1997}
+  \endentry
+
+  \entry{IEEE_141_35071}{inproceedings}{}
+    \keyw{distribution networks;industrial plants;power supplies to
+  apparatus;standards;IEEE red book;ANSI/IEEE standard 141-1986;electric power
+  distribution;industrial plant;surge voltage protection;electrical energy
+  conservation;electrical design criteria;reliability;voltage regulation;load
+  conditions;maintenance;inspection;flexibility;Industrial plants;Power
+  supplies;Standards}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/IEEESTD.1986.86376
+    \endverb
+    \field{issn}{null}
+    \field{pages}{1\bibrangedash 609}
+    \field{title}{\textsc{IEEE} Recommended Practice for Electric Power
+  Distribution for Industrial Plants (IEEE Red Book)}
+    \field{journaltitle}{ANSI/IEEE Std 141-1986}
+    \field{year}{1986}
+  \endentry
+
+  \entry{IEEE_112_8635630}{inproceedings}{}
+    \keyw{IEEE Standards;Power system relaying;Relays;Switchgear;inverse-time
+  characteristics;overcurrent relays}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/IEEESTD.2019.8635630
+    \endverb
+    \field{issn}{null}
+    \field{pages}{1\bibrangedash 25}
+    \field{title}{\textsc{IEEE} Standard for Inverse-Time Characteristics
+  Equations for Overcurrent Relays}
+    \field{journaltitle}{IEEE Std C37.112-2018 (Revision of IEEE Std
+  C37.112-1996)}
+    \field{year}{2019}
+  \endentry
+
+  \entry{IEEE_936_29053}{inproceedings}{}
+    \keyw{commutation;power convertors;standards;thyristor
+  applications;self-commutated power converters;switching
+  devices;transistors;gate turn-off thyristors;circuit-commutated
+  thyristors;capacitors;power conversion;Power conversion;Standards;Thyristor
+  applications}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/IEEESTD.1987.81536
+    \endverb
+    \field{issn}{null}
+    \field{title}{\textsc{IEEE} Guide for Self-Commutated Converters}
+    \field{journaltitle}{ANSI/IEEE Std 936-1987}
+    \field{year}{1987}
+  \endentry
+
+  \entry{pillay2001definitions}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PP}{%
+         family={Pillay},
+         familyi={P\bibinitperiod},
+         given={P},
+         giveni={P},
+      }}%
+      {{hash=MM}{%
+         family={Manyage},
+         familyi={M\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+    }
+    \strng{namehash}{PPMM1}
+    \strng{fullhash}{PPMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{50\bibrangedash 51}
+    \field{title}{Definitions of voltage unbalance}
+    \field{volume}{21}
+    \field{journaltitle}{IEEE Power Engineering Review}
+    \field{year}{2001}
+  \endentry
+
+  \entry{dugan1996electrical}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DRC}{%
+         family={Dugan},
+         familyi={D\bibinitperiod},
+         given={Roger\bibnamedelima C},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=MMF}{%
+         family={McGranaghan},
+         familyi={M\bibinitperiod},
+         given={Mark\bibnamedelima F},
+         giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=BHW}{%
+         family={Beaty},
+         familyi={B\bibinitperiod},
+         given={H\bibnamedelima Wayne},
+         giveni={H\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DRCMMFBHW1}
+    \strng{fullhash}{DRCMMFBHW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Electrical power systems quality}
+    \field{journaltitle}{New York, NY: McGraw-Hill,| c1996}
+    \field{year}{1996}
+  \endentry
+
+  \entry{wang2000analytical}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=WYJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yaw-Juen},
+         giveni={Y\bibinithyphendelim J\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{WYJ1}
+    \strng{fullhash}{WYJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2000 IEEE Power Engineering Society Winter Meeting.
+  Conference Proceedings (Cat. No. 00CH37077)}
+    \field{pages}{159\bibrangedash 164}
+    \field{title}{An analytical study on steady-state performance of an
+  induction motor connected to unbalanced three-phase voltage}
+    \field{volume}{1}
+    \field{year}{2000}
+  \endentry
+
+  \entry{pierrat1987unbalance}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PL}{%
+         family={Pierrat},
+         familyi={P\bibinitperiod},
+         given={L},
+         giveni={L},
+      }}%
+      {{hash=MJ}{%
+         family={Meyer},
+         familyi={M\bibinitperiod},
+         given={JP},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PLMJ1}
+    \strng{fullhash}{PLMJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{18\bibrangedash 26}
+    \field{title}{Unbalance factor it is as simple as ABC}
+    \field{volume}{1}
+    \field{journaltitle}{Revue G{\'e}n{\'e}rale de l’{\'E}lectricit{\'e}}
+    \field{year}{1987}
+  \endentry
+
+  \entry{wang2001analysis}{article}{}
+    \name{author}{1}{}{%
+      {{hash=WYJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yaw-Juen},
+         giveni={Y\bibinithyphendelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{WYJ1}
+    \strng{fullhash}{WYJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{270\bibrangedash 275}
+    \field{title}{Analysis of effects of three-phase voltage unbalance on
+  induction motors with emphasis on the angle of the complex voltage unbalance
+  factor}
+    \field{volume}{16}
+    \field{journaltitle}{IEEE Transactions on energy conversion}
+    \field{year}{2001}
+  \endentry
+
+  \entry{singh2007some}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=SAK}{%
+         family={Singh},
+         familyi={S\bibinitperiod},
+         given={Asheesh\bibnamedelima K},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Singh},
+         familyi={S\bibinitperiod},
+         given={GK},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=MR}{%
+         family={Mitra},
+         familyi={M\bibinitperiod},
+         given={R},
+         giveni={R},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{SAKSGMR1}
+    \strng{fullhash}{SAKSGMR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2007 39th North American Power Symposium}
+    \field{pages}{473\bibrangedash 479}
+    \field{title}{Some observations on definitions of voltage unbalance}
+    \field{year}{2007}
+  \endentry
+
+  \entry{chen2013examination}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CTH}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Tsai-Hsiang},
+         giveni={T\bibinithyphendelim H\bibinitperiod},
+      }}%
+      {{hash=YCH}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Cheng-Han},
+         giveni={C\bibinithyphendelim H\bibinitperiod},
+      }}%
+      {{hash=YNC}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Nien-Che},
+         giveni={N\bibinithyphendelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{CTHYCHYNC1}
+    \strng{fullhash}{CTHYCHYNC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{380\bibrangedash 385}
+    \field{title}{Examination of the definitions of voltage unbalance}
+    \field{volume}{49}
+    \field{journaltitle}{International Journal of Electrical Power \& Energy
+  Systems}
+    \field{year}{2013}
+  \endentry
+
+  \entry{betz2006symmetry}{inproceedings}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{3}{}{%
+      {{hash=BR}{%
+         family={Betz},
+         familyi={B\bibinitperiod},
+         given={RE},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=ST}{%
+         family={Summers},
+         familyi={S\bibinitperiod},
+         given={T},
+         giveni={T},
+      }}%
+      {{hash=FT}{%
+         family={Furney},
+         familyi={F\bibinitperiod},
+         given={T},
+         giveni={T},
+      }}%
+    }
+    \strng{namehash}{BRSTFT+1}
+    \strng{fullhash}{BRSTFT+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Industry Applications Conference, 2006. 41st IAS Annual
+  Meeting. Conference Record of the 2006 IEEE}
+    \field{pages}{1724\bibrangedash 1731}
+    \field{title}{Symmetry compensation using a H-bridge multilevel STATCOM
+  with zero sequence injection}
+    \field{volume}{4}
+    \field{year}{2006}
+  \endentry
+
+  \entry{hang2015online}{article}{}
+    \name{author}{4}{}{%
+      {{hash=HJ}{%
+         family={Hang},
+         familyi={H\bibinitperiod},
+         given={Jun},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Jianzhong},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Cheng},
+         familyi={C\bibinitperiod},
+         given={Ming},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Jin},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{HJZJCM+1}
+    \strng{fullhash}{HJZJCMHJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{12}
+    \field{pages}{6731\bibrangedash 6741}
+    \field{title}{Online interturn fault diagnosis of permanent magnet
+  synchronous machine using zero-sequence components}
+    \field{volume}{30}
+    \field{journaltitle}{IEEE Transactions on Power Electronics}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Neukirchner2015}{article}{}
+    \name{author}{4}{}{%
+      {{hash=NL}{%
+         family={Neukirchner},
+         familyi={N\bibinitperiod},
+         given={L{\'a}szl{\'o}},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={G{\"o}llei},
+         familyi={G\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={G{\"o}rbe},
+         familyi={G\bibinitperiod},
+         given={P{\'e}ter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Magyar},
+         familyi={M\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{sajat}
+    \strng{namehash}{NLGAGP+1}
+    \strng{fullhash}{NLGAGPMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{283\bibrangedash 288}
+    \field{title}{Carbon footprint reduction via voltage asymmetry compensation
+  of three-phase low voltage grid utilizing small domestic power plants}
+    \field{volume}{45}
+    \field{journaltitle}{Chemical Engineering Transactions}
+    \field{year}{2015}
+  \endentry
+
+  \entry{neukirchner2015examination}{incollection}{}
+    \name{author}{3}{}{%
+      {{hash=NL}{%
+         family={Neukirchner},
+         familyi={N\bibinitperiod},
+         given={L{\'a}szl{\'o}},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={G{\"o}rbe},
+         familyi={G\bibinitperiod},
+         given={P{\'e}ter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Magyar},
+         familyi={M\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \keyw{sajat}
+    \strng{namehash}{NLGPMA1}
+    \strng{fullhash}{NLGPMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{PowerTech, 2015 IEEE Eindhoven}
+    \field{pages}{1\bibrangedash 6}
+    \field{title}{Examination of different voltage asymmetry norms under
+  transient behavior of three-phase low voltage power systems containing small
+  domestic power plants}
+    \field{year}{2015}
+  \endentry
+
+  \entry{arn1997under-voltage}{article}{}
+    \name{author}{4}{}{%
+      {{hash=AS}{%
+         family={Arnborg},
+         familyi={A\bibinitperiod},
+         given={Stefan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=AG}{%
+         family={Andersson},
+         familyi={A\bibinitperiod},
+         given={G{\"o}ran},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=HDJ}{%
+         family={Hill},
+         familyi={H\bibinitperiod},
+         given={David\bibnamedelima J},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=HIA}{%
+         family={Hiskens},
+         familyi={H\bibinitperiod},
+         given={Ian\bibnamedelima A},
+         giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{ASAGHDJ+1}
+    \strng{fullhash}{ASAGHDJHIA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{141\bibrangedash 149}
+    \field{title}{On undervoltage load shedding in power systems}
+    \field{volume}{19}
+    \field{journaltitle}{International Journal of Electrical Power \& Energy
+  Systems}
+    \field{year}{1997}
+  \endentry
+
   \entry{lee2009new}{article}{}
     \name{author}{4}{}{%
       {{hash=LK}{%
@@ -1231,6 +1810,317 @@
     \field{volume}{31}
     \field{journaltitle}{IEEE Transactions on power electronics}
     \field{year}{2015}
+  \endentry
+
+  \entry{kheraluwala1992performance}{article}{}
+    \name{author}{4}{}{%
+      {{hash=KM}{%
+         family={Kheraluwala},
+         familyi={K\bibinitperiod},
+         given={MN},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GRW}{%
+         family={Gascoigne},
+         familyi={G\bibinitperiod},
+         given={Randal\bibnamedelima W},
+         giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=DDM}{%
+         family={Divan},
+         familyi={D\bibinitperiod},
+         given={Deepakraj\bibnamedelima M},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=BED}{%
+         family={Baumann},
+         familyi={B\bibinitperiod},
+         given={Eric\bibnamedelima D},
+         giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{KMGRWDDM+1}
+    \strng{fullhash}{KMGRWDDMBED1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{1294\bibrangedash 1301}
+    \field{title}{Performance characterization of a high-power dual active
+  bridge DC-to-DC converter}
+    \field{volume}{28}
+    \field{journaltitle}{IEEE Transactions on industry applications}
+    \field{year}{1992}
+  \endentry
+
+  \entry{inoue2007bidirectional}{article}{}
+    \name{author}{2}{}{%
+      {{hash=IS}{%
+         family={Inoue},
+         familyi={I\bibinitperiod},
+         given={Shigenori},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=AH}{%
+         family={Akagi},
+         familyi={A\bibinitperiod},
+         given={Hirofumi},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{ISAH1}
+    \strng{fullhash}{ISAH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{2299\bibrangedash 2306}
+    \field{title}{A bidirectional DC--DC converter for an energy storage system
+  with galvanic isolation}
+    \field{volume}{22}
+    \field{journaltitle}{IEEE Transactions on Power Electronics}
+    \field{year}{2007}
+  \endentry
+
+  \entry{kolda2003understanding}{incollection}{}
+    \name{author}{2}{}{%
+      {{hash=KTG}{%
+         family={Kolda},
+         familyi={K\bibinitperiod},
+         given={Tamara\bibnamedelima G},
+         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=TVJ}{%
+         family={Torczon},
+         familyi={T\bibinitperiod},
+         given={Virginia\bibnamedelima J},
+         giveni={V\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{KTGTVJ1}
+    \strng{fullhash}{KTGTVJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{High Performance Algorithms and Software for Nonlinear
+  Optimization}
+    \field{pages}{323\bibrangedash 342}
+    \field{title}{Understanding asynchronous parallel pattern search}
+    \field{year}{2003}
+  \endentry
+
+  \entry{Patnaik2013topologies}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PSS}{%
+         family={Patnaik},
+         familyi={P\bibinitperiod},
+         given={Sushree\bibnamedelima Sangita},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=PAK}{%
+         family={Panda},
+         familyi={P\bibinitperiod},
+         given={Anup\bibnamedelima Kumar},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{PSSPAK1}
+    \strng{fullhash}{PSSPAK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{298\bibrangedash 306}
+    \field{title}{Three-level H-bridge and three H-bridges-based three-phase
+  four-wire shunt active power filter topologies for high voltage applications}
+    \field{volume}{51}
+    \field{journaltitle}{International Journal of Electrical Power \& Energy
+  Systems}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Ninad2014control}{article}{}
+    \name{author}{2}{}{%
+      {{hash=NNA}{%
+         family={Ninad},
+         familyi={N\bibinitperiod},
+         given={Nayeem\bibnamedelima Ahmed},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=LL}{%
+         family={Lopes},
+         familyi={L\bibinitperiod},
+         given={Luiz},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{NNALL1}
+    \strng{fullhash}{NNALL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{449\bibrangedash 459}
+    \field{title}{Per-phase vector control strategy for a four-leg voltage
+  source inverter operating with highly unbalanced loads in stand-alone hybrid
+  systems}
+    \field{volume}{55}
+    \field{journaltitle}{International Journal of Electrical Power \& Energy
+  Systems}
+    \field{year}{2014}
+  \endentry
+
+  \entry{hough2001asynchronous}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HPD}{%
+         family={Hough},
+         familyi={H\bibinitperiod},
+         given={Patricia\bibnamedelima D},
+         giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=KTG}{%
+         family={Kolda},
+         familyi={K\bibinitperiod},
+         given={Tamara\bibnamedelima G},
+         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=TVJ}{%
+         family={Torczon},
+         familyi={T\bibinitperiod},
+         given={Virginia\bibnamedelima J},
+         giveni={V\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {SIAM}%
+    }
+    \strng{namehash}{HPDKTGTVJ1}
+    \strng{fullhash}{HPDKTGTVJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{134\bibrangedash 156}
+    \field{title}{Asynchronous parallel pattern search for nonlinear
+  optimization}
+    \field{volume}{23}
+    \field{journaltitle}{SIAM Journal on Scientific Computing}
+    \field{year}{2001}
+  \endentry
+
+  \entry{segui2007approach}{article}{}
+    \name{author}{7}{}{%
+      {{hash=SCS}{%
+         family={Segui-Chilet},
+         familyi={S\bibinithyphendelim C\bibinitperiod},
+         given={S},
+         giveni={S},
+      }}%
+      {{hash=GSF}{%
+         family={Gimeno-Sales},
+         familyi={G\bibinithyphendelim S\bibinitperiod},
+         given={FJ},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=OS}{%
+         family={Orts},
+         familyi={O\bibinitperiod},
+         given={S},
+         giveni={S},
+      }}%
+      {{hash=GG}{%
+         family={Garcera},
+         familyi={G\bibinitperiod},
+         given={G},
+         giveni={G},
+      }}%
+      {{hash=FE}{%
+         family={Figueres},
+         familyi={F\bibinitperiod},
+         given={E},
+         giveni={E},
+      }}%
+      {{hash=AM}{%
+         family={Alcaniz},
+         familyi={A\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+      {{hash=MR}{%
+         family={Masot},
+         familyi={M\bibinitperiod},
+         given={R},
+         giveni={R},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{SCSGSFOS+1}
+    \strng{fullhash}{SCSGSFOSGGFEAMMR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{7}
+    \field{pages}{526\bibrangedash 539}
+    \field{title}{Approach to unbalance power active compensation under linear
+  load unbalances and fundamental voltage asymmetries}
+    \field{volume}{29}
+    \field{journaltitle}{International Journal of Electrical Power \& Energy
+  Systems}
+    \field{year}{2007}
+  \endentry
+
+  \entry{MVM2013}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AFMH}{%
+         family={A.\bibnamedelima F\'abi\'an},
+         familyi={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+         given={M.\bibnamedelima Hackl},
+         giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {MVM group}%
+    }
+    \strng{namehash}{AFMH1}
+    \strng{fullhash}{AFMH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{899\bibrangedash 906}
+    \field{title}{Statistical data of the Hungarian electricity system}
+    \field{journaltitle}{Mavir Hungarian Independent Transmission Operator
+  Company, Ltd.}
+    \field{year}{2013}
+  \endentry
+
+  \entry{MVM2018}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BA}{%
+         family={Bicz\'ok},
+         familyi={B\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {MVM group}%
+    }
+    \strng{namehash}{BA1}
+    \strng{fullhash}{BA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{1\bibrangedash 100}
+    \field{title}{Statistical data of the Hungarian electricity system}
+    \field{journaltitle}{Mavir Hungarian Independent Transmission Operator
+  Company, Ltd.}
+    \field{year}{2018}
   \endentry
 
   \entry{vajda2017limiting}{article}{}
@@ -2300,539 +3190,6 @@
     \field{year}{2010}
   \endentry
 
-  \entry{von2006electric}{book}{}
-    \name{author}{1}{}{%
-      {{hash=VMA}{%
-         family={Von\bibnamedelima Meier},
-         familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
-         given={Alexandra},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {John Wiley \& Sons}%
-    }
-    \strng{namehash}{VMA1}
-    \strng{fullhash}{VMA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Electric power systems: a conceptual introduction}
-    \field{year}{2006}
-  \endentry
-
-  \entry{eugene1986new}{inproceedings}{}
-    \name{author}{1}{}{%
-      {{hash=EC}{%
-         family={Eugene},
-         familyi={E\bibinitperiod},
-         given={C.},
-         giveni={C\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{EC1}
-    \strng{fullhash}{EC1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{CIGRE 1986}
-    \field{pages}{11}
-    \field{title}{A new simple and effective approximate formulation for
-  determination of three-phase unbalance by the voltmeter method}
-    \field{year}{1986}
-  \endentry
-
-  \entry{robert1992assessing}{inproceedings}{}
-    \name{author}{2}{}{%
-      {{hash=RA}{%
-         family={Robert},
-         familyi={R\bibinitperiod},
-         given={A},
-         giveni={A},
-      }}%
-      {{hash=MJ}{%
-         family={Marquet},
-         familyi={M\bibinitperiod},
-         given={J},
-         giveni={J},
-      }}%
-    }
-    \strng{namehash}{RAMJ1}
-    \strng{fullhash}{RAMJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{International Conference on Large High Voltage Electric
-  Systems}
-    \field{pages}{36\bibrangedash 203}
-    \field{title}{Assessing voltage quality with relation to harmonics, flicker
-  and unbalance}
-    \field{volume}{2}
-    \field{year}{1992}
-  \endentry
-
-  \entry{fortescue1918method}{article}{}
-    \name{author}{1}{}{%
-      {{hash=FCL}{%
-         family={Fortescue},
-         familyi={F\bibinitperiod},
-         given={Charles\bibnamedelima L},
-         giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{FCL1}
-    \strng{fullhash}{FCL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{2}
-    \field{pages}{1027\bibrangedash 1140}
-    \field{title}{Method of symmetrical co-ordinates applied to the solution of
-  polyphase networks}
-    \field{volume}{37}
-    \field{journaltitle}{Transactions of the American Institute of Electrical
-  Engineers}
-    \field{year}{1918}
-  \endentry
-
-  \entry{bonnett1997understanding}{inproceedings}{}
-    \name{author}{2}{}{%
-      {{hash=BAH}{%
-         family={Bonnett},
-         familyi={B\bibinitperiod},
-         given={Austin\bibnamedelima H},
-         giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
-      }}%
-      {{hash=SG}{%
-         family={Soukup},
-         familyi={S\bibinitperiod},
-         given={GC},
-         giveni={G\bibinitperiod},
-      }}%
-    }
-    \list{organization}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{BAHSG1}
-    \strng{fullhash}{BAHSG1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{Record of Conference Papers. IEEE Industry Applications
-  Society 44th Annual Petroleum and Chemical Industry Conference}
-    \field{pages}{225\bibrangedash 238}
-    \field{title}{Understanding the NEMA motor-generator standards of section
-  MG-1-1993, revision 3, three-phase induction motors}
-    \field{year}{1997}
-  \endentry
-
-  \entry{IEEE_141_35071}{inproceedings}{}
-    \keyw{distribution networks;industrial plants;power supplies to
-  apparatus;standards;IEEE red book;ANSI/IEEE standard 141-1986;electric power
-  distribution;industrial plant;surge voltage protection;electrical energy
-  conservation;electrical design criteria;reliability;voltage regulation;load
-  conditions;maintenance;inspection;flexibility;Industrial plants;Power
-  supplies;Standards}
-    \field{labeltitlesource}{title}
-    \verb{doi}
-    \verb 10.1109/IEEESTD.1986.86376
-    \endverb
-    \field{issn}{null}
-    \field{pages}{1\bibrangedash 609}
-    \field{title}{\textsc{IEEE} Recommended Practice for Electric Power
-  Distribution for Industrial Plants (IEEE Red Book)}
-    \field{journaltitle}{ANSI/IEEE Std 141-1986}
-    \field{year}{1986}
-  \endentry
-
-  \entry{IEEE_112_8635630}{inproceedings}{}
-    \keyw{IEEE Standards;Power system relaying;Relays;Switchgear;inverse-time
-  characteristics;overcurrent relays}
-    \field{labeltitlesource}{title}
-    \verb{doi}
-    \verb 10.1109/IEEESTD.2019.8635630
-    \endverb
-    \field{issn}{null}
-    \field{pages}{1\bibrangedash 25}
-    \field{title}{\textsc{IEEE} Standard for Inverse-Time Characteristics
-  Equations for Overcurrent Relays}
-    \field{journaltitle}{IEEE Std C37.112-2018 (Revision of IEEE Std
-  C37.112-1996)}
-    \field{year}{2019}
-  \endentry
-
-  \entry{IEEE_936_29053}{inproceedings}{}
-    \keyw{commutation;power convertors;standards;thyristor
-  applications;self-commutated power converters;switching
-  devices;transistors;gate turn-off thyristors;circuit-commutated
-  thyristors;capacitors;power conversion;Power conversion;Standards;Thyristor
-  applications}
-    \field{labeltitlesource}{title}
-    \verb{doi}
-    \verb 10.1109/IEEESTD.1987.81536
-    \endverb
-    \field{issn}{null}
-    \field{title}{\textsc{IEEE} Guide for Self-Commutated Converters}
-    \field{journaltitle}{ANSI/IEEE Std 936-1987}
-    \field{year}{1987}
-  \endentry
-
-  \entry{pillay2001definitions}{article}{}
-    \name{author}{2}{}{%
-      {{hash=PP}{%
-         family={Pillay},
-         familyi={P\bibinitperiod},
-         given={P},
-         giveni={P},
-      }}%
-      {{hash=MM}{%
-         family={Manyage},
-         familyi={M\bibinitperiod},
-         given={M},
-         giveni={M},
-      }}%
-    }
-    \strng{namehash}{PPMM1}
-    \strng{fullhash}{PPMM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{5}
-    \field{pages}{50\bibrangedash 51}
-    \field{title}{Definitions of voltage unbalance}
-    \field{volume}{21}
-    \field{journaltitle}{IEEE Power Engineering Review}
-    \field{year}{2001}
-  \endentry
-
-  \entry{dugan1996electrical}{article}{}
-    \name{author}{3}{}{%
-      {{hash=DRC}{%
-         family={Dugan},
-         familyi={D\bibinitperiod},
-         given={Roger\bibnamedelima C},
-         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
-      }}%
-      {{hash=MMF}{%
-         family={McGranaghan},
-         familyi={M\bibinitperiod},
-         given={Mark\bibnamedelima F},
-         giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
-      }}%
-      {{hash=BHW}{%
-         family={Beaty},
-         familyi={B\bibinitperiod},
-         given={H\bibnamedelima Wayne},
-         giveni={H\bibinitperiod\bibinitdelim W\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{DRCMMFBHW1}
-    \strng{fullhash}{DRCMMFBHW1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Electrical power systems quality}
-    \field{journaltitle}{New York, NY: McGraw-Hill,| c1996}
-    \field{year}{1996}
-  \endentry
-
-  \entry{wang2000analytical}{inproceedings}{}
-    \name{author}{1}{}{%
-      {{hash=WYJ}{%
-         family={Wang},
-         familyi={W\bibinitperiod},
-         given={Yaw-Juen},
-         giveni={Y\bibinithyphendelim J\bibinitperiod},
-      }}%
-    }
-    \list{organization}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{WYJ1}
-    \strng{fullhash}{WYJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{2000 IEEE Power Engineering Society Winter Meeting.
-  Conference Proceedings (Cat. No. 00CH37077)}
-    \field{pages}{159\bibrangedash 164}
-    \field{title}{An analytical study on steady-state performance of an
-  induction motor connected to unbalanced three-phase voltage}
-    \field{volume}{1}
-    \field{year}{2000}
-  \endentry
-
-  \entry{pierrat1987unbalance}{article}{}
-    \name{author}{2}{}{%
-      {{hash=PL}{%
-         family={Pierrat},
-         familyi={P\bibinitperiod},
-         given={L},
-         giveni={L},
-      }}%
-      {{hash=MJ}{%
-         family={Meyer},
-         familyi={M\bibinitperiod},
-         given={JP},
-         giveni={J\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{PLMJ1}
-    \strng{fullhash}{PLMJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{6}
-    \field{pages}{18\bibrangedash 26}
-    \field{title}{Unbalance factor it is as simple as ABC}
-    \field{volume}{1}
-    \field{journaltitle}{Revue G{\'e}n{\'e}rale de l’{\'E}lectricit{\'e}}
-    \field{year}{1987}
-  \endentry
-
-  \entry{wang2001analysis}{article}{}
-    \name{author}{1}{}{%
-      {{hash=WYJ}{%
-         family={Wang},
-         familyi={W\bibinitperiod},
-         given={Yaw-Juen},
-         giveni={Y\bibinithyphendelim J\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{WYJ1}
-    \strng{fullhash}{WYJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{3}
-    \field{pages}{270\bibrangedash 275}
-    \field{title}{Analysis of effects of three-phase voltage unbalance on
-  induction motors with emphasis on the angle of the complex voltage unbalance
-  factor}
-    \field{volume}{16}
-    \field{journaltitle}{IEEE Transactions on energy conversion}
-    \field{year}{2001}
-  \endentry
-
-  \entry{singh2007some}{inproceedings}{}
-    \name{author}{3}{}{%
-      {{hash=SAK}{%
-         family={Singh},
-         familyi={S\bibinitperiod},
-         given={Asheesh\bibnamedelima K},
-         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
-      }}%
-      {{hash=SG}{%
-         family={Singh},
-         familyi={S\bibinitperiod},
-         given={GK},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=MR}{%
-         family={Mitra},
-         familyi={M\bibinitperiod},
-         given={R},
-         giveni={R},
-      }}%
-    }
-    \list{organization}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{SAKSGMR1}
-    \strng{fullhash}{SAKSGMR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{2007 39th North American Power Symposium}
-    \field{pages}{473\bibrangedash 479}
-    \field{title}{Some observations on definitions of voltage unbalance}
-    \field{year}{2007}
-  \endentry
-
-  \entry{chen2013examination}{article}{}
-    \name{author}{3}{}{%
-      {{hash=CTH}{%
-         family={Chen},
-         familyi={C\bibinitperiod},
-         given={Tsai-Hsiang},
-         giveni={T\bibinithyphendelim H\bibinitperiod},
-      }}%
-      {{hash=YCH}{%
-         family={Yang},
-         familyi={Y\bibinitperiod},
-         given={Cheng-Han},
-         giveni={C\bibinithyphendelim H\bibinitperiod},
-      }}%
-      {{hash=YNC}{%
-         family={Yang},
-         familyi={Y\bibinitperiod},
-         given={Nien-Che},
-         giveni={N\bibinithyphendelim C\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{CTHYCHYNC1}
-    \strng{fullhash}{CTHYCHYNC1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{pages}{380\bibrangedash 385}
-    \field{title}{Examination of the definitions of voltage unbalance}
-    \field{volume}{49}
-    \field{journaltitle}{International Journal of Electrical Power \& Energy
-  Systems}
-    \field{year}{2013}
-  \endentry
-
-  \entry{betz2006symmetry}{inproceedings}{}
-    \true{moreauthor}
-    \true{morelabelname}
-    \name{author}{3}{}{%
-      {{hash=BR}{%
-         family={Betz},
-         familyi={B\bibinitperiod},
-         given={RE},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=ST}{%
-         family={Summers},
-         familyi={S\bibinitperiod},
-         given={T},
-         giveni={T},
-      }}%
-      {{hash=FT}{%
-         family={Furney},
-         familyi={F\bibinitperiod},
-         given={T},
-         giveni={T},
-      }}%
-    }
-    \strng{namehash}{BRSTFT+1}
-    \strng{fullhash}{BRSTFT+1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{Industry Applications Conference, 2006. 41st IAS Annual
-  Meeting. Conference Record of the 2006 IEEE}
-    \field{pages}{1724\bibrangedash 1731}
-    \field{title}{Symmetry compensation using a H-bridge multilevel STATCOM
-  with zero sequence injection}
-    \field{volume}{4}
-    \field{year}{2006}
-  \endentry
-
-  \entry{hang2015online}{article}{}
-    \name{author}{4}{}{%
-      {{hash=HJ}{%
-         family={Hang},
-         familyi={H\bibinitperiod},
-         given={Jun},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=ZJ}{%
-         family={Zhang},
-         familyi={Z\bibinitperiod},
-         given={Jianzhong},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=CM}{%
-         family={Cheng},
-         familyi={C\bibinitperiod},
-         given={Ming},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=HJ}{%
-         family={Huang},
-         familyi={H\bibinitperiod},
-         given={Jin},
-         giveni={J\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{HJZJCM+1}
-    \strng{fullhash}{HJZJCMHJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{12}
-    \field{pages}{6731\bibrangedash 6741}
-    \field{title}{Online interturn fault diagnosis of permanent magnet
-  synchronous machine using zero-sequence components}
-    \field{volume}{30}
-    \field{journaltitle}{IEEE Transactions on Power Electronics}
-    \field{year}{2015}
-  \endentry
-
-  \entry{kheraluwala1992performance}{article}{}
-    \name{author}{4}{}{%
-      {{hash=KM}{%
-         family={Kheraluwala},
-         familyi={K\bibinitperiod},
-         given={MN},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=GRW}{%
-         family={Gascoigne},
-         familyi={G\bibinitperiod},
-         given={Randal\bibnamedelima W},
-         giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
-      }}%
-      {{hash=DDM}{%
-         family={Divan},
-         familyi={D\bibinitperiod},
-         given={Deepakraj\bibnamedelima M},
-         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-      {{hash=BED}{%
-         family={Baumann},
-         familyi={B\bibinitperiod},
-         given={Eric\bibnamedelima D},
-         giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{KMGRWDDM+1}
-    \strng{fullhash}{KMGRWDDMBED1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{6}
-    \field{pages}{1294\bibrangedash 1301}
-    \field{title}{Performance characterization of a high-power dual active
-  bridge DC-to-DC converter}
-    \field{volume}{28}
-    \field{journaltitle}{IEEE Transactions on industry applications}
-    \field{year}{1992}
-  \endentry
-
-  \entry{inoue2007bidirectional}{article}{}
-    \name{author}{2}{}{%
-      {{hash=IS}{%
-         family={Inoue},
-         familyi={I\bibinitperiod},
-         given={Shigenori},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=AH}{%
-         family={Akagi},
-         familyi={A\bibinitperiod},
-         given={Hirofumi},
-         giveni={H\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{ISAH1}
-    \strng{fullhash}{ISAH1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{6}
-    \field{pages}{2299\bibrangedash 2306}
-    \field{title}{A bidirectional DC--DC converter for an energy storage system
-  with galvanic isolation}
-    \field{volume}{22}
-    \field{journaltitle}{IEEE Transactions on Power Electronics}
-    \field{year}{2007}
-  \endentry
-
   \entry{kolar1996design}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=KJW}{%
@@ -3180,35 +3537,6 @@
     \field{volume}{1}
     \field{journaltitle}{WSEAS Trans.-Circuits and Systems}
     \field{year}{2005}
-  \endentry
-
-  \entry{kolda2003understanding}{incollection}{}
-    \name{author}{2}{}{%
-      {{hash=KTG}{%
-         family={Kolda},
-         familyi={K\bibinitperiod},
-         given={Tamara\bibnamedelima G},
-         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
-      }}%
-      {{hash=TVJ}{%
-         family={Torczon},
-         familyi={T\bibinitperiod},
-         given={Virginia\bibnamedelima J},
-         giveni={V\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Springer}%
-    }
-    \strng{namehash}{KTGTVJ1}
-    \strng{fullhash}{KTGTVJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{High Performance Algorithms and Software for Nonlinear
-  Optimization}
-    \field{pages}{323\bibrangedash 342}
-    \field{title}{Understanding asynchronous parallel pattern search}
-    \field{year}{2003}
   \endentry
 
   \entry{rossiter2017model}{book}{}
@@ -3763,334 +4091,6 @@
     \field{title}{Vector control of induction motor drives with model based
   predictive current controller}
     \field{year}{2008}
-  \endentry
-
-  \entry{Neukirchner2015}{article}{}
-    \name{author}{4}{}{%
-      {{hash=NL}{%
-         family={Neukirchner},
-         familyi={N\bibinitperiod},
-         given={L{\'a}szl{\'o}},
-         giveni={L\bibinitperiod},
-      }}%
-      {{hash=GA}{%
-         family={G{\"o}llei},
-         familyi={G\bibinitperiod},
-         given={Attila},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=GP}{%
-         family={G{\"o}rbe},
-         familyi={G\bibinitperiod},
-         given={P{\'e}ter},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=MA}{%
-         family={Magyar},
-         familyi={M\bibinitperiod},
-         given={Attila},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \keyw{sajat}
-    \strng{namehash}{NLGAGP+1}
-    \strng{fullhash}{NLGAGPMA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{pages}{283\bibrangedash 288}
-    \field{title}{Carbon footprint reduction via voltage asymmetry compensation
-  of three-phase low voltage grid utilizing small domestic power plants}
-    \field{volume}{45}
-    \field{journaltitle}{Chemical Engineering Transactions}
-    \field{year}{2015}
-  \endentry
-
-  \entry{neukirchner2015examination}{incollection}{}
-    \name{author}{3}{}{%
-      {{hash=NL}{%
-         family={Neukirchner},
-         familyi={N\bibinitperiod},
-         given={L{\'a}szl{\'o}},
-         giveni={L\bibinitperiod},
-      }}%
-      {{hash=GP}{%
-         family={G{\"o}rbe},
-         familyi={G\bibinitperiod},
-         given={P{\'e}ter},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=MA}{%
-         family={Magyar},
-         familyi={M\bibinitperiod},
-         given={Attila},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {IEEE}%
-    }
-    \keyw{sajat}
-    \strng{namehash}{NLGPMA1}
-    \strng{fullhash}{NLGPMA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{PowerTech, 2015 IEEE Eindhoven}
-    \field{pages}{1\bibrangedash 6}
-    \field{title}{Examination of different voltage asymmetry norms under
-  transient behavior of three-phase low voltage power systems containing small
-  domestic power plants}
-    \field{year}{2015}
-  \endentry
-
-  \entry{arn1997under-voltage}{article}{}
-    \name{author}{4}{}{%
-      {{hash=AS}{%
-         family={Arnborg},
-         familyi={A\bibinitperiod},
-         given={Stefan},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=AG}{%
-         family={Andersson},
-         familyi={A\bibinitperiod},
-         given={G{\"o}ran},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=HDJ}{%
-         family={Hill},
-         familyi={H\bibinitperiod},
-         given={David\bibnamedelima J},
-         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=HIA}{%
-         family={Hiskens},
-         familyi={H\bibinitperiod},
-         given={Ian\bibnamedelima A},
-         giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{ASAGHDJ+1}
-    \strng{fullhash}{ASAGHDJHIA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{2}
-    \field{pages}{141\bibrangedash 149}
-    \field{title}{On undervoltage load shedding in power systems}
-    \field{volume}{19}
-    \field{journaltitle}{International Journal of Electrical Power \& Energy
-  Systems}
-    \field{year}{1997}
-  \endentry
-
-  \entry{Patnaik2013topologies}{article}{}
-    \name{author}{2}{}{%
-      {{hash=PSS}{%
-         family={Patnaik},
-         familyi={P\bibinitperiod},
-         given={Sushree\bibnamedelima Sangita},
-         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-      {{hash=PAK}{%
-         family={Panda},
-         familyi={P\bibinitperiod},
-         given={Anup\bibnamedelima Kumar},
-         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{PSSPAK1}
-    \strng{fullhash}{PSSPAK1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{pages}{298\bibrangedash 306}
-    \field{title}{Three-level H-bridge and three H-bridges-based three-phase
-  four-wire shunt active power filter topologies for high voltage applications}
-    \field{volume}{51}
-    \field{journaltitle}{International Journal of Electrical Power \& Energy
-  Systems}
-    \field{year}{2013}
-  \endentry
-
-  \entry{Ninad2014control}{article}{}
-    \name{author}{2}{}{%
-      {{hash=NNA}{%
-         family={Ninad},
-         familyi={N\bibinitperiod},
-         given={Nayeem\bibnamedelima Ahmed},
-         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=LL}{%
-         family={Lopes},
-         familyi={L\bibinitperiod},
-         given={Luiz},
-         giveni={L\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{NNALL1}
-    \strng{fullhash}{NNALL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{pages}{449\bibrangedash 459}
-    \field{title}{Per-phase vector control strategy for a four-leg voltage
-  source inverter operating with highly unbalanced loads in stand-alone hybrid
-  systems}
-    \field{volume}{55}
-    \field{journaltitle}{International Journal of Electrical Power \& Energy
-  Systems}
-    \field{year}{2014}
-  \endentry
-
-  \entry{hough2001asynchronous}{article}{}
-    \name{author}{3}{}{%
-      {{hash=HPD}{%
-         family={Hough},
-         familyi={H\bibinitperiod},
-         given={Patricia\bibnamedelima D},
-         giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
-      }}%
-      {{hash=KTG}{%
-         family={Kolda},
-         familyi={K\bibinitperiod},
-         given={Tamara\bibnamedelima G},
-         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
-      }}%
-      {{hash=TVJ}{%
-         family={Torczon},
-         familyi={T\bibinitperiod},
-         given={Virginia\bibnamedelima J},
-         giveni={V\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {SIAM}%
-    }
-    \strng{namehash}{HPDKTGTVJ1}
-    \strng{fullhash}{HPDKTGTVJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{1}
-    \field{pages}{134\bibrangedash 156}
-    \field{title}{Asynchronous parallel pattern search for nonlinear
-  optimization}
-    \field{volume}{23}
-    \field{journaltitle}{SIAM Journal on Scientific Computing}
-    \field{year}{2001}
-  \endentry
-
-  \entry{segui2007approach}{article}{}
-    \name{author}{7}{}{%
-      {{hash=SCS}{%
-         family={Segui-Chilet},
-         familyi={S\bibinithyphendelim C\bibinitperiod},
-         given={S},
-         giveni={S},
-      }}%
-      {{hash=GSF}{%
-         family={Gimeno-Sales},
-         familyi={G\bibinithyphendelim S\bibinitperiod},
-         given={FJ},
-         giveni={F\bibinitperiod},
-      }}%
-      {{hash=OS}{%
-         family={Orts},
-         familyi={O\bibinitperiod},
-         given={S},
-         giveni={S},
-      }}%
-      {{hash=GG}{%
-         family={Garcera},
-         familyi={G\bibinitperiod},
-         given={G},
-         giveni={G},
-      }}%
-      {{hash=FE}{%
-         family={Figueres},
-         familyi={F\bibinitperiod},
-         given={E},
-         giveni={E},
-      }}%
-      {{hash=AM}{%
-         family={Alcaniz},
-         familyi={A\bibinitperiod},
-         given={M},
-         giveni={M},
-      }}%
-      {{hash=MR}{%
-         family={Masot},
-         familyi={M\bibinitperiod},
-         given={R},
-         giveni={R},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{SCSGSFOS+1}
-    \strng{fullhash}{SCSGSFOSGGFEAMMR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{7}
-    \field{pages}{526\bibrangedash 539}
-    \field{title}{Approach to unbalance power active compensation under linear
-  load unbalances and fundamental voltage asymmetries}
-    \field{volume}{29}
-    \field{journaltitle}{International Journal of Electrical Power \& Energy
-  Systems}
-    \field{year}{2007}
-  \endentry
-
-  \entry{MVM2013}{article}{}
-    \name{author}{1}{}{%
-      {{hash=AFMH}{%
-         family={A.\bibnamedelima F\'abi\'an},
-         familyi={A\bibinitperiod\bibinitdelim F\bibinitperiod},
-         given={M.\bibnamedelima Hackl},
-         giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {MVM group}%
-    }
-    \strng{namehash}{AFMH1}
-    \strng{fullhash}{AFMH1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{pages}{899\bibrangedash 906}
-    \field{title}{Statistical data of the Hungarian electricity system}
-    \field{journaltitle}{Mavir Hungarian Independent Transmission Operator
-  Company, Ltd.}
-    \field{year}{2013}
-  \endentry
-
-  \entry{MVM2018}{article}{}
-    \name{author}{1}{}{%
-      {{hash=BA}{%
-         family={Bicz\'ok},
-         familyi={B\bibinitperiod},
-         given={A.},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {MVM group}%
-    }
-    \strng{namehash}{BA1}
-    \strng{fullhash}{BA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{pages}{1\bibrangedash 100}
-    \field{title}{Statistical data of the Hungarian electricity system}
-    \field{journaltitle}{Mavir Hungarian Independent Transmission Operator
-  Company, Ltd.}
-    \field{year}{2018}
   \endentry
 
   \entry{neukirchner2019linkedmodel}{online}{}

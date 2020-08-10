@@ -1,0 +1,85 @@
+\section{Notations used in the chapter}
+		
+		%\begin{longtable}{r|l}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  %Chapter 4.1. notations&\\
+  \begin{scriptsize}
+\begin{tabularx}{\textwidth}{r|X}
+  $\textbf{A}$                  & State matrix of the DC side system\\
+  $\textbf{A}_d$                & Discretised state matrix of the DC side system\\
+  $\textbf{B}$                  & Input matrix of the DC side system\\
+  $\textbf{B_d}$                & Discretised input matrix of the DC side system\\
+  $C_{ac}$                          & AC side inductance\\
+  $C_{dc}$                          & DC side inductance\\
+  $\textbf{C}$                  & Output matrix of the DC side system\\
+  $\textbf{C_d}$                & Discretised output matrix of the DC side system\\
+  $C_{reg_i}$                       & Critical region\\
+  $D(-\Theta)$                      & Inverse Clarke transformation\\
+  $f$                               & Network voltage frequeny\\
+  $fpwm$                            & Rectifier switching frequency\\
+  $f_s$                             & Simulation frequency\\
+  $f_i$                             & Function of state at the $i^th$ step\\
+  $g_i$                             & Function of input at the $i^th$ step\\
+  $G$                               & Constraint input matrix\\
+  $H$                               & Supplementary matrix\\
+  $HPF(s)$                          & High pass filter transfer function\\
+  $i_{ac_{1,2,3}}$                  & AC side inductance current\\
+  $i_{ac_{\alpha,\beta}}$           & AC side inductance current in Clarke frame\\
+  $i_{ac_{d,q}}$                    & AC side inductance current in Park frame\\
+  $i_{HPF}$                         & AC side damping current\\
+  $i_{r_{1,2,3}}$                   & Rectifier current\\
+  $i_{rMPC_d}$                      & Direct component of the output of the EMPC controller\\
+  $i^*_{r_{1,2,3}}$                 & Rectifier reference current\\
+  $i^*_{r_{\alpha,\beta}}$          & Rectifier reference current in Clarke frame\\
+  $i_{rcontrol_d}$                  & Direct component of the output of the DC voltage controller\\
+  $i_{rHF_d}$                       & Direct component of the damping current of AC noise\\
+  $i_{dc}$                          & DC side inductance current\\
+  $i_{ref_{\alpha,\beta}}$          & $\alpha$, or $\beta$ component of the reference current vector respecively\\
+  $\vec{i}_{0,\dots,9}$             & Current vector of the phasor\\
+  $\vec{i}_{ref}$                   & Reference current vector\\
+  $J$                               & Quadratic EMPC cost function\\
+  $J^*$                             & Optimal cost value\\
+  $k_{1,2,3}$                       & State feedback controller's coefficients\\
+  $K$                               & Feedback gain of EMPC controller\\
+  $L_{ac}$                          & AC side inductance\\
+  $L_{dc}$                          & DC side inductance\\
+  $n$                               & Current phasor sector indicator\\
+  $N$                               & Control horizon\\
+  $N_y,N_u,N_c$                     & Output, input and constraint horizons\\
+  $P_n$                             & Nominal power of the CRS\\
+  $\textbf{Q}_w$                & State weight matrix of quadratic MPC cost function\\
+  $R$                               & Phase resistance\\
+  $R_H$                             & Virtual damping resistance\\
+  $R_{load}$                        & Load resistance\\
+  $\textbf{R}_w$                & Input weight matrix of quadratic MPC cost function\\
+  $\mathbb{R}$                      & Set of real numbers\\
+  $S$                               & Current phasor sector\\
+  $\textbf{S}$                  & Coefficient constraint matrix\\
+  $t$                               & Discrete timestep\\
+  $T_s$                             & Switching period\\
+  $T_{0,\dots,9}$                   & Dwell time in the corresponding sector\\
+  $\textbf{u}$                  & Output vector of the DC side system\\
+  $u_{1,2,3}$                       & AC side phase voltage\\
+  $u_{\alpha,\beta}$                & AC side phase voltage in Clarke frame\\
+  $u_{d,q}$                         & AC side phase voltage in Park frame\\
+  $u_{c_{1,2,3}}$                   & AC side capacitance voltage\\
+  $u_{c_{\alpha,\beta}}$            & AC side capacitance voltage in Clarke frame\\
+  $u_{c_{d,q}}$                     & AC side capacitance voltage in Park frame\\
+  $u_0$                             & DC side voltage on load\\
+  $u^*_0$                           & DC side voltage reference\\
+  $u_{MPC}$                         & MPC control variable\\
+  $\textbf{u}^*$                & Optimal input vector\\
+  $U$                               & Set of MPC inputs\\
+  $Un$                              & Network line-to-line voltage\\
+  $\textbf{x}$                  & State vector of the DC side system\\
+  $\textbf{y}$                  & Input vector of the DC side system\\
+  $\textbf{z}$                  & Vector of optimization variables\\
+  $\delta_{1,2,3}$                  & Conduction state leg in Clarke frame\\
+  $\delta_{\alpha,\beta}$           & Conduction state leg in Park frame\\
+  $\delta_{d,q}$                    & Conduction state leg\\
+  $\theta$                          & Network voltage vector’s angular displacement\\
+  $\omega$                          & Network voltage vector’s angular velocity\\
+  $\omega_{ac}$                     & Ac side LC filter angular velocity\\
+  $\omega_{n}$                      & Damping angular velocity\\
+  \end{tabularx}
+  \end{scriptsize}

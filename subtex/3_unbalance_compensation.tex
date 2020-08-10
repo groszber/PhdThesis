@@ -1,0 +1,946 @@
+\chapter[Voltage unbalance compensation]{Voltage unbalance compensation with geometrical indicator on a domestic low voltage network}\label{BASIC:sec:unbalance_compensation}
+
+\section{Literature overview}
+
+%============ UNBALANCE COMPENSATION
+There are different approaches of lowering the unbalance with different control techniques. Additionally, new computationally efficient control techniques have been presented by \cite{lee2009new} to estimate and compensate input voltage unbalance (VU) disturbances for a voltage source converter. These tools are designed to be effective with high power systems with slower PWM switching frequencies of 5 kHz or lower and limited current-controller bandwidth. About the unbalance compensation control aspect, a three-phase IGBT-based static synchronous compensator were proposed for voltage and/or current unbalance compensation by \cite{xu2010voltage}. An instantaneous power theory was used for real-time calculation and control. Three control schemes current control, voltage control and integrated control were proposed to compensate unbalanced voltage, unbalanced current or both. Unbalance phenomena and power quality can be examined with modeling too. A particular modeling method was presented by \cite{li2005microgrid}, where a three-phase four-wire grid-interfacing power quality compensator were modeled. During voltage unbalance, the compensator, used a shunt with a series four phase inverter, could enhance both the quality of power within the microgrid and the quality of currents flowing between the microgrid and utility system. In this case a microgrid is a group of interconnected loads and distributed energy resources within clearly defined electrical boundaries that acts as a single controllable entity with respect to the grid. A microgrid can connect and disconnect from the grid to enable it to operate in both grid-connected or island-mode. The shunt four-leg inverter were controlled to maintain a set of balanced distortion free voltages to regulate power sharing among the parallel-connected distributed generation systems. Simulation studies were carried out by \cite{Hu2016264} where one of the aims was to develop and test the feasibility of a decoupled three-phase on-load tap charger in the distribution system with the objective of improving the distribution network power quality. Further control methods were applied for the solution for balancing of the most sensitive with regard to electric energy quality part of power system by \cite{uimethod},  minimizing the active power losses, stabilization of three-phase voltages, enhancement of asynchronous machine performance stability and reduction of errors occurring in power consumption measuring circuits.\\
+%============ UNBALANCE COMPENSATON WITH OF CURRENT SOURCE CONVERTERS
+In the arsenal of voltage unbalance compensation, current source power electronic devices have a dedicated position. Based on the instantaneous active power theory under unbalanced  grid conditions \cite{wang2016dc} proposes an optimized negative-sequence current  references  for  eliminating  the double-frequency  oscillations  on  active  power  at  AC  side of a current source converter. The author argues in \cite{wang2014virtual} that a classification of the virtual impedances can greatly benefit an unbalance compensating control structure, with an active stabilization method. In \cite{guo2018advanced} direct control strategy with detailed current converter model is shown which is much simpler than the complicated instantaneous power theory approach. This solution needs less voltage and current sensors for the feedback control, which means that it is a cost-effective solution. An interesting, yet similar approach compared in the paper if a bi-directional current source topology is used like in \cite{vekhande2015control}. This enables to compensate a much larger degree of freedom handing unbalanced conditions with the precaution of unstable operation possibilities.\\
+
+\section{Power electronic components for current control}\label{BASICCSR:sec:PowerGeneral}
+
+As the introduction suggest the main topic of the thesis is optimal current control. As such for reaching the desired optimum, the necessary actuators are needed for the task. For this, power electric converters are used, all of them based on a simple principle, namely they use controllable switches to set the required voltage level or the conducting current value, required on the load's end.
+
+
+\subsection{Galvanic decoupled bi-directional DC-DC converters}\label{BASICCSR:sec:DCDC}
+
+In this section a basic galvanic decoupled voltage source DC-DC converter shall be presented. In many DC power supplies, a galvanic isolation between the DC or AC input and the DC output is required for safety and reliability. An economical mean of achieving such an isolation is to employ a transformer version of a DC-DC converter. High-frequency transformers are of small size and weight and provide high efficiency. Their turns ratio can be used to additionally adjust the output voltage level. Generally, electric power generated by renewable energy sources is unstable in nature, thus producing an unwanted effect on the utility grid. This fact motivates research on energy storage and quality systems to smooth out active-power flow.\\
+On the converter Fig.\ref{BASICCSR:fig:DCDCGalvanic} has two symmetrical single-phase voltage-source full-bridge converters, allowing a bi-directional power flow. Thanks to advancement in power device technology over the last decade the DC-DC devices are able to operate at an efficiency as high as $\approx97\%$ by using the latest trench-gate IGBTs. Therefore this topology has become a promising candidate as a power electronic interface for an energy storage and renewable system \cite{kheraluwala1992performance} \cite{inoue2007bidirectional}.
+
+
+\begin{figure}[!ht]
+        \centering
+        \includegraphics[width=0.7\textwidth]{EMPC_PNG_Pics/DC_DC_galvanic.png}
+        \caption{Bidirectional isolated DC-DC converter, where $V_{D1}$, and $V_{D2}$ are the two end's voltage (in- and output depends on the power flow), $v_1$ and $v_2$ are the transformer voltages, $C_{snub}$ are to reduce switching loss and to damp out
+over-voltage, and $h$ is the transformer turn ratio.}
+        \label{BASICCSR:fig:DCDCGalvanic}
+    \end{figure}
+		
+The principle of operation of the DC-DC converter is very simple. Two active bridges are interfaced through a transformer and are phase shifted from each other to control the amount of power flow from one DC voltage source to the other. This allows a fixed frequency, square-wave mode of operation and utilization of the leakage inductance of the transformer as the main energy transfer element. The power transfer under idealized conditions is defined as:
+
+\begin{equation}
+        \begin{array}{rcl}
+            P_D&=&\frac{V_{D1}V_{D2}}{\omega L}\left(\delta-\frac{\delta^2}{\pi}\right)\\
+        \end{array}
+        \label{BASICMPC:equ:DCDC}
+    \end{equation}
+		
+		where $\omega=2\pi f$ is the switching angular frequency of the two single phase full bridge controllers, $L_a$ is the
+sum of the transformer leakage inductance.
+
+\subsection{Current source inverters}\label{BASICCSR:sec:CSI}
+
+Single-phase inverter's operating principles are different in each converter. The main features of the different approaches are reviewed and presented in the following. Although these converters cover the low-power range, they are widely used in power supplies or single-phase supplies. For this thesis a domestic current source inverter is considered, which fits into this category.\\
+A current source inverter is composed of capacitors, switches, and diodes, where an array of two switches is called inverter leg shown in Fig.\ref{BASICCSR:fig:SingleCSI}. The capacitors required to provide a neutral point, such that each capacitor maintains a constant voltage.
+
+\begin{figure}[!ht]
+        \centering
+        \includegraphics[width=0.6\textwidth]{EMPC_PNG_Pics/CurrentSourceInverter.png}
+        \caption{Topology of a singly phase current source inverter, where $V_i$, and $V_o$ are the input and output voltages, $i_i$, and $i_o$ are the input and output currents respectively. $L_+$ and $L_-$ are current filter inductances, $S_{1+}$, $S_{2+}$, $D_{1+}$, and $D_{2+}$ are the higher switches (controlled IGBTs for instance) and diodes, and $S_{1-}$, $S_{2-}$, $D_{1-}$, and $D_{2-}$ are the lower switches and diodes respectively.}
+        \label{BASICCSR:fig:SingleCSI}
+    \end{figure}
+
+The inductors required are large, such that the inductors
+maintain a constant current $i_i$. Current-source topologies feature a low switching voltage gradient and reliable over-current or short-circuit protection. In order to operate properly the current-source inverter, we need to adhere to the following rules:
+\begin{itemize}
+\item Top or bottom switches of the different legs cannot be off simultaneously, because no current path is provided to the input inductors.
+\item Diode must be placed in series with each switch, because a short circuit across the output voltage $V_o$ would be produced. If the commercial switch does not include anti- parallel diodes, then the circuit is already complete.
+\item In practical implementation, an overlapping time must be considered in the control signals of the top or bottom switches of the different legs.
+\end{itemize}
+
+According to the previous rules, it should be noticed that all switches of the inverter leg can be turned on at the same time. This is not possible in voltage source inverters. There are four ($1^{st}$ to $4^{th}$) defined states of the switches and one not permitted switching state ($5^{th}$ state) as shown in Table \ref{BASICCSR:table:CSIstates}. The modulating technique should always ensure that at any instant, at least one of the top and bottom switch of the inverter legs is on, otherwise the inverter will be damaged.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[h!]
+\centering
+\caption{Switching states of the current source inverter, where $V_{an}$, $V_{bn}$ are the $a$ and $b$ point's potential to ground.}
+\begin{tabu}{|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Components conducting} & \multirow{2}{*}{State} & \multicolumn{3}{c|}{Output voltages}                \\ \cline{1-4} \cline{6-8}
+$S_{1+}$       & $S_{2+}$       & $S_{1-}$      & $S_{2-}$      &                        & $V_{an}$              & $V_{bn}$              & $V_{o}$           \\ \tabucline[2pt]{-}
+1         & 0         & 0        & 1        & 1                      & $V_{i}/2$            & -$V_{i}/2$           & $V_{i}$           \\ \hline
+0         & 1         & 1        & 0        & 2                      & -$V_{i}/2$          & $V_{i}/2$            & -$V_{i}$          \\ \hline
+1         & 1         & 0        & 0        & 3                      & $V_{i}/2$             & $V_{i}/2$            & 0             \\ \hline
+0         & 0         & 1        & 1        & 4                      & -$V_{i}/2$           & -$V_{i}/2$          & 0             \\ \hline
+0         & -         & 0        & -        & \multirow{2}{*}{5}     & \multicolumn{3}{c|}{\multirow{2}{*}{Not permitted}} \\ \cline{1-4}
+-         & 0         & -        & 0        &                        & \multicolumn{3}{c|}{}                               \\ \hline
+\end{tabu}
+
+\label{BASICCSR:table:CSIstates}
+\end{table}
+
+The ideal waveforms are shown in Fig.\ref{BASICCSR:fig:CSIwave_All}.
+
+\begin{figure}[h!]
+                \centering
+                \begin{subfigure}[b]{0.9\textwidth}
+                    \includegraphics[width=\textwidth]{EMPC_PNG_Pics/CSIwaves_A.png}
+                    \caption{\centering The state of switch $S_{1+}$.}
+                    \label{BASICCSR:fig:CSIwave_A}
+                \end{subfigure}
+                ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+                  %(or a blank line to force the subfigure onto a new line)
+                \begin{subfigure}[b]{0.9\textwidth}
+                    \includegraphics[width=\textwidth]{EMPC_PNG_Pics/CSIwaves_B.png}
+                    \caption{\centering The state of switch $S_{2+}$..}
+                    \label{BASICCSR:fig:CSIwave_B}
+                \end{subfigure}
+								 ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+                  %(or a blank line to force the subfigure onto a new line)
+                \begin{subfigure}[b]{0.9\textwidth}
+                    \includegraphics[width=\textwidth]{EMPC_PNG_Pics/CSIwaves_C.png}
+                    \caption{\centering AC output current.}
+                    \label{BASICCSR:fig:CSIwave_C}
+                \end{subfigure}
+
+                \caption{The CSI, ideal waveforms as the result of the modulation.}
+                \label{BASICCSR:fig:CSIwave_All}
+            \end{figure}
+
+The states for the switches are defined by the modulating technique, which in this case is a carrier-based PWM, but unipolar output is considered. For the CSIs, different output filters may be employed, in order to provide the fundamental component of the output waveform. Depending on the application, it would be desirable to provide a voltage or current output.
+
+\section{Applied optimization method}
+
+In the following section, the applied control structure shall be discussed in detail. Optimization (or mathematical optimization) is considered as the mathematical process of finding the best decision for a given problem within a defined set of constraints. In the simplest case, an optimization problem consists of maximizing (or minimizing) a real function by systematically choosing input values from within an allowed input set respective to the given constraints and computing the value of the function. In a controller design case, it deals with the problem of finding the optimal control law for a given system such that a certain optimality criterion is achieved with the best dynamics or lowest amount of energy required. A control problem includes a cost functional that is a function of state and control variables. An optimal control is a set of differential equations describing the paths of the control variables that minimize the cost function. They commonality in this work, is that all of them are designed to search for the optimal control input for a current governing system, should it be voltage unbalance reduction with no applicable network model (due the actors unpredictability), or reaching the fastest reference value with explicit predictive control with the converter's equation's considered.
+
+\subsection{Asynchronous parallel pattern search}\label{BASICUNB:sec:APPS}
+
+This algorithm can rather be described as a linear search program, distributed in a multi-dimensional plane, where the it is only a black box model available \cite{kolda2003understanding}. These variants of pattern search can solve nonlinear unconstrained problems of the form of:
+
+\begin{equation}
+        \begin{array}{c}
+            \min_{x\in\mathbb{R}^n}f(x),\\
+        \end{array}
+        \label{BASICCSR:eqn:currents}
+    \end{equation}
+		
+		where $f:\mathbb{R}^n\longrightarrow\mathbb{R}$. We assume that the evaluation of $f$ is computationally expensive, hence our interest in using either distributed or parallel computing environments to solve the problem. It needs to be concentrated on the parallelization of the search strategy, rather than on the evaluation of $f$, though the techniques we discuss here can be adapted to handle problems for which the computation of $f$ also can be distributed. Additionally is is assumed that $f$ is continuously differentiable. It can be assumed that the gradient $\nabla f$ is unavailable, but the method is applicable as presented in \ref{VUB:sec:Optimization}, where the gradient determines the direction of the next step, further increasing its efficiency. For such problems, pattern search methods are one possible solution technique since they neither require nor explicitly estimate derivatives.\\
+
+\myparagraph{Parallel pattern search}
+
+Lets adopt an infinite sequence of iterations $\rho=0,1,2,\dots$, with the last iteration noted as $\rho-1$ and initialization at $0$. It is assumed that the process knows the best point so far as $x^{\rho-1}$, where $f(x^{\rho-1})$ is the global minima of $f$. Associated with $x^{\rho-1}$ there is a step-length control parameter namely $\Delta^{\rho-1}$. Each $i\in\mathcal{P}$, where $\mathcal{P}=\{1,\dots,p\}$ process ends iteration at $\rho-1$ by constructing it's trial point and initiating an evaluation of $f(x^{\rho-1}_i+\Delta^{\rho-1}_id_i)$, where $\mathcal{D}=\{d_1,\dots,d_p\}$ is the finite set of directions applied by each individual process. The simultaneous start of the function evaluations at the trial points on each of the $p$ processes signals the start of iteration $\rho$. When all of the participating processes are finished with their evaluation of $f$, they communicate these values to each other and determine the new values of $x^\rho$, and $\Delta^\rho$. If there exists an $i\in\mathcal{P}$, such that $f(x^{\rho-1}_i+\Delta^{\rho-1}_id_i)<f(\rho^{\rho-1})$, then $\rho\in\mathcal{S}$, where $\mathcal{S}$ denotes the successful iterations.
+
+\myparagraph{Adding asynchronicity}
+
+ With said above, the general strategy for asynchronous parallel pattern search, from the perspective of a single process $i\in\mathcal{P}$ can be outlined:
+		\begin{enumerate}
+		\item Evaluate $f(x^{best}_i+\Delta^{best}_id_i)$.
+		\item If $f(x^{best}_i+\Delta^{best}_id_i) <f(x^{best}_i)$, then broadcast result to all other processes.
+		\item Update local values $x^{best}_i$ and $\Delta^{best}_i$ based on the current local information.
+		\item Repeat.
+		\end{enumerate}
+	The price payed is that each process has its own notion of the best known point seen so far, as well as its own value for	$\Delta^i$. Any success on one process is communicated to all other processes participating in the search, but the successful process carries on from its new best point without waiting for a response from the other processes. By adding a few mild conditions, the global convergence of the search can be still ensured \cite{kolda2003understanding}.  Instead of indexing based on a notion of iterations, we switch from $\rho$ to indexing based on discrete time instance, letting the set $\mathcal{Q}=\{1,2,\dots,q\}$ denote the index of steps. Thus $x_i^q$ s used for the best point known to process $i$ at time step $q$, and similarly, $\Delta_i^q$.  So if process $i$ starts a function evaluation at time step $q$, the trial point at which the function evaluation will be made at $x^{q}_i+\Delta^{q}_id_i$. Further worth mention, that time steps are assumed to be of fine enough resolution so that at most one function evaluation finishes per process per time step.\\
+	Lets define two sets that satisfy $\mathcal{Q}=\mathcal{S}_i\cup\mathcal{U}_i$, , and $\mathcal{S}_i=\mathcal{I}_i\cup\mathcal{E}_i$, where $\mathcal{S}_i$ is the set of all time successful steps on process $i$, $\mathcal{I}_i$ is the set if internal successes, $\mathcal{E}_i$ is the set of external successes,   and $\mathcal{U}_i$ consists the unsuccessful steps respectfully. An internal success, where the process finds itself the minima, the external success is where the process is updated externally by the minima. Further  $\mathcal{C}_i\in\mathcal{U}_i$ is defined as the set of time steps where $\Delta^t_i$ is reduced. All the above cases ($\mathcal{U}_i\textbackslash\mathcal{C}_i$) no action is performed.\\
+	The updating functions allow us to give the following general definitions for $x_i^q$ and $\Delta^q_i$. For every $q\in\mathcal{Q}$, $q>0$, the best point for the $i^{th}$ process defined to be:
+	
+	\begin{equation}
+        \begin{array}{rcl}
+            x_i^q&=&\begin{Bmatrix}
+                x_{\omega_i(q)}^{\tau_i(q)}+\Delta_{\omega_i(q)}^{\tau_i(q)}d_{\omega_i(q)},&\textnormal{if }q\in\mathcal{S}_i\\
+                x_i^{q-1},&\textnormal{otherwise}\\
+            \end{Bmatrix},\\
+        \end{array}
+        \label{BSIC:equ:APPS_x}
+    \end{equation}
+		
+		with the initialisation $x^0_i=x^0$, where $\omega_i(q)$ is the generating process index for the update time at step $q$ on process $i$, and $\tau_i(q)$ is the time index for initialization of the function evaluation, that produced the update at time $q$ on process $i$. For every $q$ the step length control parameter $\Delta_i^q$ defined to be:
+		
+		\begin{equation}
+        \begin{array}{rcl}
+            \Delta_i^q&=&\begin{Bmatrix}
+                \lambda_{\omega_i(q)}^{\nu_i(q)}\Delta_{\omega_i(q)}^{\tau_i(q)},&\textnormal{if }q\in\mathcal{S}_i\\
+								\theta_{i}^{q}\Delta_{\omega_i(q)}^{\tau_i(q)},&\textnormal{if }q\in\mathcal{C}_i\\
+                \Delta_i^{q-1},&\textnormal{otherwise}\\
+            \end{Bmatrix},\\
+        \end{array}
+        \label{BSIC:equ:APPS_Delta}
+    \end{equation}
+		
+		with the initialization $\Delta^0_i=\Delta^0$, where $\nu_i(q)$ is  time index for the completion of the function evaluation that produced the update at time step $q$ on process $i$, and $\theta_i^q$ and $\lambda_i^q$ are chosen. With the following pattern followed, the minima of $f$ shall eventually reached, in an undetermined steps.
+
+\section{Voltage unbalance compensation with optimization based control algorithm and asymmetrical inverter structure}\label{VUB:sec:Compensation}
+
+ First the networks structure shall be described, the power electrical device is connected to, as a household supplying, renewable utilizing device, followed by the aforementioned device's topology and control shall be presented based on the geometrical voltage unbalance norm (described in section \ref{VUB:sec:Geom}), with the performance results on an unbalanced network. It shall be shown, that it is possible to formulate some power quality related aims, or demands for the domestic size generator units implemented in a complex power electrical system, capable of supplying a household, with both renewable and network supplied energy, and lowering voltage unbalance as well, considering a network with unpredictable impedance.
+		
+\subsection{Network structure}\label{VUB:sec:Network}
+
+         The examined network is supposed to be the low voltage local transformer area with regular households, depicted in Figure \ref{fig:network}. The network structure of Figure \ref{fig:network} has been implemented in Simulink\texttrademark\, environment for simulation based experiments. Most of the households represent a single phase load with resistive inductive and capacitive properties while some of them are symmetric three phase ones. There might also be some households with domestic power plant, they are not only loads but also represents distributed generators. Furthermore, it is assumed that the households located on a domestic size grid tie inverter are also provided with battery storage capacities. Commercially available inverters are capable of optimizing the working point and charging current of the system, while the ability of power quality improvement is far not typical - it is in experimental phase in some cases, e.g. \cite{gorbe2012reduction}.%
+
+        \begin{figure}[!ht]
+            \centering
+            \includegraphics[width=\textwidth]{Unblance_EPS_Pics/network_gray.eps}
+            \caption{The simplified structure of a three phase four wire low voltage network. The transformer station acts as transition from the medium voltage power grid to
+            the low voltage network. The several regular households are representing the main loads of the network. The transformer and the loads are connected with power line sections infected by inductive and resistive disturbances and capacitive couplings. Domestic powerplants can connect to any connection point within the low voltage network, via an appropriate inverter - either to the three phase sections using a three phase inverter or to a single phase using a single phase inverter.}
+            \label{fig:network}
+            \end{figure}
+
+
+\subsection{Problem statement}\label{VUB:sec:Statement}
+
+    The voltage and current unbalance presents in the three phase low voltage transformer area causes additional power loss inside the medium voltage/low voltage transformer and in the transportation line wires too. It also has undesired effects in certain three phase loads, mainly rotating machines where it causes torque reduction and pulsating torque effect. Large scale unbalance can activate automatic protection functions of electricity dispatch system causes power outage. This is unpleasant for the customers and adds maintenance cost to the service provider. These negative effects lower the electric power quality and rises the cost of electrical energy and rises the carbon footprint of our everyday life. The aim to propose a model and control for a three phase instrumentation, which can compensate these undesirable effects, lower or eliminate the voltage and current unbalance to lower the power losses and the CO${}_2$ emission and increase power quality not only at the connection point but in the whole low voltage transformer area. \emph{It is important to note, that this power quality improvement can be achieved without any significant added cost.} The future aim is to integrate this function into an existing three phase photovoltaic inverter device connected to the low voltage grid, and a  complex energetic system is able to inject the renewable energy to the transportation network, can store the electrical energy from stochastic renewable sources in electrical vehicle batteries or feed the grid from the charged batteries in energy deficit and high demand simultaneous situations. The novelty is the integrated control algorithm which can highly lower or eliminate the observed unbalance of the network.
+
+    \subsection{Control problem}\label{VUB:sec:Control}
+
+    The above problem statement partially specifies the solution space together with the solution method. The system of interest is the power grid with all the stochastic and nonlinear phenomena present in it mentioned in section \oldref{VUB:sec:Network}. The input to the system are current signals (one current in the single phase case and three in the three phase setup), which are naturally constrained by the available energy of the household, stored in a battery pack or momentarily generated by the wind or solar generator unit. The response of the system can be either the current or the voltage measured at the connection point of the inverter unit, however, the general legal regulations only allow voltage measurement for consumers. The difficulty of the control problem comes from the fact, that there are no mathematically tractable models of the network can be generated because of its unpredictable and nonlinear features. This means, that in these conditions only black-box methods can be applied for this system.
+    For the control aim it is a natural choice to minimize the actual voltage unbalance of the low voltage local transformer area measured (or calculated) at the connection point of the inverter. Several optimization based methods are available for such kind of optimal control problems, e.g. \cite{gorbe2012reduction} where the only bottleneck is the computational efficiency since the implemented controller has to run on the commercial inverter's hardware (digital signal processor unit).
+
+    \subsubsection{Asymmetrical inverter structure}\label{VUB:sec:Inverter}
+
+    For the sake of completeness an asymmetrical inverter was developed in simulation environment, which is capable of carrying out the specified control task. The renewable energy injection is realized increasingly, and applied directly to the three phase low voltage grid  with a domestic size photovoltaic power plant as source of power. This can reduce the voltage and current unbalance caused by the stochastic power production of wind and solar sources. More and more manufacturers produce three phase grid synchronized inverters from 5\,kW size. These equipments implement accurate symmetrical current feed with a standard three phase full bridge structure, consists of six Isolated Gate Bipolar Transistors (IGBT). The demand is to employ a current source single phase structure with aforementioned controllable switches in section \oldref{BASICCSR:sec:CSI}. This is a standard structure suitable for symmetric harmonic current injection. It has limited capacities to inject not totally symmetric 3 phase current time functions, but Kirchhoff's current law permits only constant zero-sum current time functions injected with this structure. There are examples with this type of asymmetric current injections in the literature \cite{lee2009new}.\\
+    This type of current injection has limited compensation capacity and this is not enough in most asymmetric production and load cases. In our case we need more general, not specific asymmetric current waveforms, because the proposed control aim assumes the ability of injecting non zero-sum currents. This needs special inverter design structure. We need zero line connection for the differential current. One of the possible solution is to use 3 different full bridge single phase current inverters to supply each phase of low voltage transportation lines \cite{Patnaik2013topologies}. This way it is most sufficient to use bi-directional power flow, with galvanic decoupling, but with a current controlled fashion (shown in section \oldref{BASICCSR:sec:CSI}).\\
+    This isolation can be reached  with using isolation transformers in the supply side. But we prefer to use it a complex energetic system with specific inside true DC bus system fed from Photovoltaic panel or batteries. We have to isolate at least 2 full bridges with two way DC-DC converters (described in section \oldref{BASICCSR:sec:DCDC}). This can complicate the physical realization but easy to simulate with two controlled power source. Other possible easy to realize solution to isolate the full bridge outputs  connected to three phase lines with isolating transformers. It is recommended due to electric shock protection reasons. Our distant aim to compensate other operational type line failures, such zero current appearing. This isolation method doesn't allow to produce DC current components, thats why we are looking for other design. Possible elegant solution to supplement the standard three phase inverter design with a fourth half bridge for Zero line, building a specific four leg inverter design \cite{Ninad2014control}.\\
+    Only drawback of this solution is the complex difficult control method of the half bridges, to keep the current sum in zero values in each moment, and to provide the correct current paths inside the inverter. This structure has the lowest production cost, but in the phase of proofing the asymmetry compensation we chose the DC-DC isolated  full bridge design for simulation purpose because of the simple control during simulation.\\
+    As a further generalization step, the injection of no harmonic current shapes will be necessary in order to decrease the extant Total Harmonic Distortion (THD) of the network. These expectations yield an inverter with new structure suitable for arbitrary current injections without limitations. The design lends similar elements like in \cite{gorbe2012reduction} by means of battery charge, renewable power point tracking, intermediate voltage, and IGBT bridge control, but in this case the problem requires a three phase solution for the voltage unbalance reduction. The applied structure based on a full bridge IGBT structure used in single phase current injection. Three different IGBT full bridge were connected at the output point, thus our structure has three phase and neutral connection too, to carry out any current form. The disadvantage of this structure is that it needs 12 IGBTs in the output stage as opposed to the 6 IGBTs needed for a classical full bridge structure and needs three galvanically isolated direct current (DC) voltage source for feeding.\\
+    The other standard elements, that the inverter design consists:
+
+        \begin{itemize}
+            \item Standard maximum power point tracking (MPPT) input stage, to inject the maximum available power from the renewable source to the intermediate voltage capacitor with a simple controlled boost converter
+            \item A half bridge current controller to charge or deploy the battery pack connected to the complex energetic system for energy storage and energy unbalance compensation
+            \item Intermediate voltage controller
+            \item Universal three phase output stage with 3 single phase full bridge IGBT current injector and 2 high current DC-DC converter
+        \end{itemize}
+    This is suitable to inject any necessary current shape to the low voltage three phase grid even DC currents too. Later a power loss and production cost analysis will be necessary if the built structure will be suitable for asymmetric compensation of low voltage transformer area.
+
+        %\begin{figure*}[ht]
+%            \centering
+%            \includegraphics[width=0.95\textwidth]{standard_inverter.eps}
+%            \caption{\textcolor{blue}{Standard symmetrical current inverter design, implies 6 IGBT current injector with serial inductance. }}
+%        \label{fig: symminv}
+%        \end{figure*}
+
+        %\begin{figure*}[ht]
+%            \centering
+%            \includegraphics[width=0.95\textwidth]{isolated_inverter.eps}
+%            \caption{\textcolor{blue}{Asymmetrical inverter design with three separated H-bridges.}}
+%        \label{fig: asymminvwithDCgalvanic transformer}
+%        \end{figure*}
+%
+%\begin{figure}[h]
+%          \begin{center}
+%                \begin{circuitikz}[scale=.5, european] %% => Itt ne állíts a skálát, inkább a figure-nél!%%
+%                %\draw[help lines] (0,0) grid (16,40);
+%
+%                \draw%[color=magenta]
+%                    %% híd
+%                    (0,0) to[C=$C_{intermediate}$] (0,38)
+%                    (0,0) to[short] (10,0)
+%                    (6,0) node[nigbt, anchor=E](nigbt33){}
+%                    (nigbt33.E) node[circ]{}
+%
+%                    (10,8) node[nigbt, anchor=E,xscale=-1](nigbt32){}
+%
+%                    (6,8) node[nigbt, anchor=E](nigbt31){}
+%                    (nigbt33.C) to[short] (nigbt31.E)
+%
+%                    (10,0) node[nigbt, anchor=E, xscale=-1](nigbt34){}
+%                    (nigbt34.C) to[short] (nigbt32.E)
+%
+%                    (nigbt32.C) to[short] (10,12)
+%                    (nigbt31.C) to[short,-*] (6,12)
+%                    (4,12) to[short] (10,12)
+%                    (4,12) to[short,-*] (4,38)
+%
+%
+%                    %%trafó
+%                    (7,6) node[transformer,rotate=90,transform shape,american](T3){}
+%                    (T3.B1) to[short,-*] (6,7.05)
+%                    (T3.B2) to[short,-*] (10,7.05)
+%                    (T3.A1) to[short] (7,4)
+%                    (7,4) to[short,-o] (13,4) node[anchor=west] {$N$}
+%                    (T3.A2) to[short,-o] (13,4.95) node[anchor=west] {$T$}
+%                    ;
+%
+%                    \draw%[color=blue]
+%                    %% híd
+%                    (3,13) to[short,*-] (10,13)
+%                    (6,13) node[nigbt, anchor=E](nigbt23){}
+%                    (nigbt23.E) node[circ]{}
+%
+%                    (10,21) node[nigbt, anchor=E,xscale=-1](nigbt22){}
+%
+%                    (6,21) node[nigbt, anchor=E](nigbt21){}
+%                    (nigbt23.C) to[short] (nigbt21.E)
+%
+%                    (10,13) node[nigbt, anchor=E, xscale=-1](nigbt24){}
+%                    (nigbt24.C) to[short] (nigbt22.E)
+%
+%                    (nigbt22.C) to[short] (10,25)
+%                    (nigbt21.C) to[short,-*] (6,25)
+%                    (4,25) to[short,*-] (10,25)
+%
+%
+%
+%
+%                    %%trafó
+%                    (7,19) node[transformer,rotate=90,transform shape,american](T2){}
+%                    (T2.B1) to[short,-*] (6,20.05)
+%                    (T2.B2) to[short,-*] (10,20.05)
+%                    (T2.A1) to[short] (7,17)
+%                    (7,17) to[short,-*] (12,17)
+%                    (T2.A2) to[short,-o] (13,17.95) node[anchor=west] {$S$}
+%                    ;
+%
+%                    \draw%[color=cyan]
+%                    %% híd
+%                    (3,26) to[short] (10,26)
+%                    (3,26) to[short,-*] (3,0)
+%
+%                    (6,26) node[nigbt, anchor=E](nigbt13){}
+%                    (nigbt13.E) node[circ]{}
+%
+%                    (10,34) node[nigbt, anchor=E,xscale=-1](nigbt12){}
+%
+%                    (6,34) node[nigbt, anchor=E](nigbt11){}
+%                    (nigbt13.C) to[short] (nigbt11.E)
+%
+%                    (10,26) node[nigbt, anchor=E, xscale=-1](nigbt14){}
+%                    (nigbt14.C) to[short] (nigbt12.E)
+%
+%                    (nigbt12.C) to[short] (10,38)
+%                    (nigbt11.C) to[short,-*] (6,38)
+%                    (0,38) to[short] (10,38)
+%
+%
+%                    %%trafó
+%                    (7,32) node[transformer,rotate=90,transform shape,american](T1){}
+%                    (T1.B1) to[short,-*] (6,33.05)
+%                    (T1.B2) to[short,-*] (10,33.05)
+%                    (T1.A1) to[short] (7,30)
+%                    (7,30) to[short] (12,30)
+%                    (12,30) to[short,-*] (12,4)
+%                    (T1.A2) to[short,-o] (13,30.95) node[anchor=west] {$R$}
+%                    ;
+%                %%
+%                \end{circuitikz}
+%                \caption{Simplified asymmetrical inverter design employing three galvanically isolated H-bridges with transformers for DC-DC isolation substitution.}
+%                \label{fig: asymminvwithgalvanic transformer}
+%          \end{center}
+%        \end{figure}
+
+        \begin{figure*}[ht]
+        \centering
+        \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/inverter.eps}
+        \caption{The asymmetrical inverter design, which applies three single phase full bridge IGBT current injector to create the injected asymmetrical current shapes for voltage unbalance compensation. }
+        \label{fig:inv}
+        \end{figure*}
+
+        Of course there is a possibility that there is no renewable power available for a longer period of time and the battery completely looses its charge. In this case the system should work merely with the power of the connection point but with zero energy balance. This states to operate two controller with semi-opposite control goals. The optimization based controller requires current injection while the intermediate voltage controller (Figure \ref{fig:inv}) keeps the inverters energy balance.\emph{ Although for this operation some of the control's performance should be sacrificed, unbalance compensation could be achieved even without external renewable power, and energy storage at a minimum power requirement.}
+
+        \subsubsection{Measurements from a real unbalanced network}\label{VUB:sec:Measurement}
+
+            The measurements took place at the campus building's power electronics laboratory, where a common 400\,V connection point was investigated as the behaviour of the network. The three phase 230\,V line-to-ground voltages has been transformed to 6\,V to be effectively measurable in time domain with high performance NI-USB DAQ on 10\,ksample/s. Because of the limited computational capacity only a 10 second measurement was made in every hour.  The measurements then has been merged and smoothed to eliminate the inter-measurement transients.\\
+            Afterwards, the measurement data has been used as the input of a micro-grid segment of the Matlab/Simulink model, to test the controller and inverters structure's performance in quasi-realistic circumstances. The controllers performance on the simulated microgrid's network loss reduction can be observed on Figure \ref{fig:compare_power} and Figure \ref{fig:u_inter}. The measurement output is connected to a modeled three phase load and network system, consisting of symmetrical loads and network segments between them. Further artificial load unbalance is not necessary since the network's unbalance is already present. This structure enables to show that any point the inverter is connected, could restore power quality with a certain degree such unbalance compensation at this case. The future plan is to set up multiple devices on different connection points.
+
+    \subsection{Optimization based control algorithm}\label{VUB:sec:Optimization}
+
+        Unfortunately the difficulty from optimization point of view is that the exact mathematical relation is hard to formulate because the nonlinear, and highly time variant and stochastic loads of the network. As such a kind of control strategy should be used to cope this nonlinear and time variant energy system. For this purpose we chose an asynchronous parallel pattern search method (APPS) which could be able to control our scenario \cite{hough2001asynchronous}. The methodology and formulation of the APPS method is described in section \oldref{BASICUNB:sec:APPS}. We applied a variant of the gradient method that is a first-order optimization (minimization) algorithm for a multivariate function $f(\textbf{x})$. The point $\textbf{x}^q$ corresponding to the local minimum can be calculated from the negative gradient $\nabla f(\textbf{x})$, that gives the value and direction of the corresponding step in the parameter space. The next step is made in the direction of gradient with the proper sign. This sequence of steps, ideally, converges to local multivariate extreme value $\textbf{x}^q$ of the function \ref{eqn:contstruct1}.
+
+        \begin{equation}
+        \begin{array}{rcl}
+        \label{eqn:contstruct1}
+         \textbf{x}^{(q)}&=&\textbf{x}^{(q-1)}-t_q\nabla f(\textbf{x}^{(q-1)}),\\
+         %q&\in&\mathbb{N},\\
+         \end{array}
+        \end{equation}
+
+        where $q\in\mathbb{N}$, and $t_q$ resembles the step time of the algorithm.
+
+        \begin{figure*}[h]
+        \centering
+        \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/APPS_1_2_.eps}
+        \caption{The optimization algorithm implemented for current control. A one dimensional linear optimization step is being solved in each dimension of the six dimensional parameter space, iteratively.}
+        \label{fig:APPS}
+        \end{figure*}
+
+         The controlled electrical system is described by multivariate non-linear differential equations, the optimization of which is infeasible to derive using the differentiation of an error function. Therefore, the optimization methods based on direct differentiation are not applicable. In such cases, when high computational power is needed for performing long time-consuming simulations, the APPS method can utilized. The search pattern $p$ is based on the sampling of the error function (selected norm) on a "grid", and it corresponds to variables or subsets of variables in each point in the independent variable or parameter space easily. At the same time, the norm values at these points can be calculated independently if $\Delta_q>0$, using \ref{eqn:contstruct2}.
+				
+        \begin{equation}
+        \label{eqn:contstruct2}
+        \begin{array}{rcl}
+         \textbf{x}^{(q+1)}&=&\textbf{x}^{(q)}+\Delta_qd_i \\
+         \mathrm{if}&&f(\textbf{x}^{(k)}+\Delta_qd_i) \leq f(\textbf{x}^{(q)}),\\
+         %q&\in&\mathbb{N}\\
+         \end{array}
+        \end{equation}
+
+        The parameter is $\textbf{x}^q\in\mathbb{R}^n$, and the search pattern $\textbf{p}\in\mathcal{D}={d_1,...d_n}$ is taken from a predefined finite set. In this case, the error function values should be calculated for each pattern $\textbf{p}$ in the set $\mathcal{D}$. If the error function is not decreasing in any of the directions, then the step size should be reduced (e.g. by half). As the competing directions are different, if there is not enough computing power available for direction vector $\textbf{p}$, synchronization should not be maintained. In this case we are talking about the asynchronous case . In the case of our controller, an individual $\textbf{p}$ vector is defined for each output variable, and the optimization was performed in each direction asynchronously and shifted in time. Most likely, the error function has a single local minimum as a symmetric amplitude and phase values. Approaching the minimal value of norm, the controller uses adaptive increments that are proportional to the norm itself. Because of the complex interactions between the components of the controller, only one parameter is changed at a time, even if the values of the amplitude and phase components in specific time slot changes. The algorithm moves along the six axes of six separate time slots close to the local minimum of the error function.\\
+        Unlike other similar approaches, e.g. \cite{segui2007approach}, the explained optimal controller does not rely on a measured current signal (which varies according where the measurement took place on the grid and renders the global optimization unreliable) but rather measuring and analyzing the voltage unbalance via the proposed indicator and optimizes the voltage shape, the latter of which depends on the nonlinear distortion of the whole low-voltage transformer area and determines additional power losses. The controller's performance was compared to a non compensated network, and a network consisting synchronized symmetric power intake from a regular inverter.\\
+        In each iteration only one physical value is changing on the six dimensional parameter field, which consists of the three amplitude and three phase values. If the change effects with cost function reduction (the reference norm's normalized value), the controller holds the new value of amplitude or phase for the controlled current sources (Figure \ref{fig:APPS}). The advantage of this controller structure that is not necessary to know the controlled value's behavior well, like we could not determine the number and type of the other loads on the network \cite{Neukirchner2015}. There are however two disadvantages. First is the low speed of control, due to the several necessary iterations (depending on the circumstances) to find the optimal directions in the parameter space, and the serial nature of interventions and norm calculations. The second comes from the method itself since the controller may stuck in local minima.
+
+\section{Discussion}\label{VUB:sec:Discussion}
+
+%write stuff here..
+
+    \subsection{Dynamical simulation based experiments}\label{VUB:sec:Results}
+		
+    In order to be able to investigate the proposed optimization based unbalance reduction control structure with the three phase inverter on a low voltage local grid, all the elements of this complex electrical system (including the photovoltaic source, the inverter, the battery and the nonlinear local grid with different types of loads) has been modeled in Matlab/Simulink environment. The primary aim of the simulation based experiments were to serve as a proof of concept for the proposed complex control structure.
+
+    \subsection{Performance analysis}\label{VUB:sec:Performance}
+
+    The aim of performance analysis is twofold. First of all, the proposed voltage unbalance indicator has to be investigated in the control structure as the cost function of the optimization based controller, and on the other hand, the control structure itself has to be exposed against engineering expectations.
+
+
+            The results of the first experiment can be seen in Figure \ref{fig:compare_asym_PV} where the geometrical norm \ref{equ:geom} has been used as the voltage unbalance indicator and the cost function for the optimizer.  The dashed line represents the examined low voltage local network's unbalance norm ($G$) without the proposed controller implemented in the inverter unit of the domestic powerplant while the solid line represents the compensated network's norm value. The performance of the controller with this norm is apparent, it was able to decrease the network voltage unbalance by approximately 85 \%. In this experimental setup the controller has enough input energy due to the batteries and the available solar power.
+
+            \begin{figure*}[ht]
+            \centering
+            \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/UnbalRedComp_JCP-figure3.eps}
+            \caption{Unbalance reduction control system performance with half charged battery and photovoltaic power source available. The underlying unbalance norm is the geometrical one ($G$) in this experiment. After starting the controller at $t=0.1s$ the unbalance measure $G$ of the network significantly decrease.}
+            \label{fig:compare_asym_PV}
+            \end{figure*}
+
+            \begin{figure*}[ht]
+            \centering
+            \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/UnbalRedComp_JCP-figure4.eps}
+            \caption{Unbalance reduction control system performance without battery and renewable source (zero energy balance operation). The performance reduction is clearly observable compared to the case when external power source is available (Figure \ref{fig:compare_asym_PV}), but as result the voltage unbalance indicator $G$ reduced by the average value of 14.78\%.}
+            \label{fig:compare_asym}
+            \end{figure*}
+
+            A slightly more challenging situation is investigated in Figure \ref{fig:compare_asym} where the controller had had to operate without photovoltaic source and batteries. This is called zero moving average balance operation mode when the energy obtained from the network is reinjected in such a way that the unbalance indicators decrease. It can be seen that the performance of the controller is modest than that of Figure \ref{fig:compare_asym_PV}, but it is still acceptable.
+
+      \subsubsection{Robustness analysis}\label{VUB:sec:Robustness}
+
+            The robustness of the proposed control structure is an important qualitative property with respect to the time dependent loads present on the network. The robustness of the proposed controller had to be tested via simulation when different types of loads (inductive, capacitive, resistive) had been varied in step changes representing the on/off switching the different types of household appliances (motors, switching mode power supplies, electric heaters, etc.). In the experiment depicted in Figure \ref{fig:robustness}, a load change has been introduced to the network in every 15 seconds causing the voltage unbalance to jump to a different value (measured in the geometrical norm \ref{equ:geom}). As it can be seen in the figure the controller successfully compensates the unbalance after each transient.
+
+              \begin{figure*}[ht]
+            \centering
+            \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/UnbalRedComp_JCP-figure5.eps}
+            \caption{Robustness analysis with respect to step type changes in the network load (and voltage unbalance). The unbalance reduction controller successfully compensates the changes in the network voltage unbalance norm ($G$) value.}
+            \label{fig:robustness}
+            \end{figure*}
+
+    \subsection{Environmental effect}\label{VUB:sec:Environment}
+
+    The favorable effects of the proposed unbalance reduction control algorithm , i.e. increase power quality not only at the connection point but in the whole low voltage transformer area, which causes a reduction of the effective power loss and the reduction in the CO${}_2$ emission.
+
+        \subsubsection{Power loss reduction on the network}\label{VUB:sec:Powerloss}
+
+             Network loss reduction due to the unbalance reduction compensation control is investigated on Figure \ref{fig:compare_power} where the simulation experiment was carried out in the circumstance when the renewable source was not shut down (e.g. insufficient amount of sunlight) and additionally the battery was drained completely  \cite{Neukirchner2015}, \cite{neukirchner2015examination}.
+
+            \begin{figure*}[ht]
+            \centering
+            \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/UnbalRedComp_JCP-figure6.eps}
+            \caption{Compensation control's loss reduction during zero energy balance operation on the modeled network, where $P_{loss}$ indicates the effective power losses and $P^{comp}_{loss}$ effective power losses during control of the network. As result the network losses reduced by mean $6.5\%$.}
+            \label{fig:compare_power}
+            \end{figure*}
+
+            The results show that despite of the negative cross effects of the intermediate voltage controller and the unbalance reduction controller it was possible to find the trade-off between the control goals of the different controllers (maintain zero energy balance for the inverter and decrease the unbalance on the network). The estimated loss reduction in the experimental setup is 6.5\%.
+
+            \begin{figure*}[ht]
+            \centering
+            \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/UnbalRedComp_JCP-figure7.eps}
+%                  %\pgfplotsset{every tick label/.append style={font=\tiny},legend style={at={(1,1)},anchor=north east}}
+%                 \pgfplotsset{every tick label/.append style={font=\normalsize}}
+%                 \begin{tikzpicture}
+%                 \begin{axis}[
+%                     width=\textwidth,
+%                     height=5cm,
+%                     xlabel = {$t$~[s]},
+%                     ylabel = {$U_{\textnormal{im}}$~[V]},
+%                     grid=major,
+%                     xmin=0,
+%                     xmax=20,
+%                     %ymin=0,
+%                     ]
+%                     \addplot[thick] table {netw_plot/U_inter.dat};
+%                     %\legend{\scriptsize$U_{intermediate}$}
+%                     \end{axis}
+%                  \end{tikzpicture}
+                 \caption{Intermediate puffer capacitance's voltage within boundaries ($600\pm10$\,V), during zero energy balance operation mode of the voltage unbalance compensation controller. $U_{\textnormal{im}}$ indicates intermediate the capacitance's voltage.}
+                 \label{fig:u_inter}
+                \end{figure*}
+
+%        \subsubsection{Malfunction rejection}
+%
+%            asd
+
+        \subsubsection[CO2 footprint]{CO$_2$ footprint}\label{VUB:sec:CO2}
+
+            The fact that this controller enables the reactive power reduction has a favourable consequence, i.e. the power loss or equivalently CO$_2$ emission and the carbon footprint can also be decreased. The estimated environmental effects of voltage asymmetry compensation can be calculated. Let us assume 3000\,kWh for the yearly electric energy consumption an average household and $9.173\%$ for the loss of the distribution network at 2013 \cite{MVM2013} and $7.654\%$ at 2018 \cite{MVM2018}. Using the controller the losses on the simulated network are reduced by 6.5\%. The calculation follows \ref{eqn:co_emission}:
+
+            \begin{equation}
+                \label{eqn:co_emission}
+                \begin{array}{rcl}
+                 P_{loss}&=&3000\,\textnormal{kWh}\cdot7.654\%\\
+                P^{comp}_{loss}&=&3000\,\textnormal{kWh}\cdot(7.654\cdot0.93)\%\\
+                 \Delta P_{loss}&=&P_{loss}-P^{comp}_{loss}\\
+                 \end{array}
+                \end{equation}
+
+            where $P_{loss}$ is the assumed network loss per household and $P^{comp}_{loss}$ is s the assumed network loss with unbalance compensation control and $\Delta P_{loss}$ is the saved energy. According to \ref{eqn:co_emission}, unbalance compensation results in an energy savings of 19.26 kWh in 2013 and 16.07 kWh in 2018. Taking into account the proportion of power currently generated by fossil fuels (coal 17.3\%, gas 38.3\% at 2013 \cite{MVM2013}, \cite{gorbe2012reduction} and coal 13.1\%, gas 51.4\% at 2018 \cite{MVM2018}) and the rate of $\textnormal{CO}_2$ emission during electric energy production (1,000\,g/kWh from coal and 430\,g/kWh from gas), it can be concluded that voltage unbalance compensation could reduce $\textnormal{CO}_2$ emissions by 6504.9\,g a year in 2013 and 5656.96\,g in 2018 in an average household. Note that this result reflect only the proof of concept, due the neglected power losses of the inverter and the artificial load of the network.
+						
+						%2105.17+3551.79
+
+\section{Conclusion}\label{VUB:sec:Conclusion}
+
+    Currently used measures of voltage unbalance (see section \oldref{BASICUNB:sec:DefinitionsofUNB}) has been extended in this chapter with a new norm candidate, namely a geometrical norm, where the magnitude of voltage unbalance are evaluatad by the symmetrical difference of the voltage phasor triangles. It is more demanding from the computational point, of view but has an interesting feature namely it checks electrical asymmetry, i.e. the norm of a $\pm120$ degree  rotated version of the ideal three-phase phasor is zero in the geometrical sense.\\
+    This way, the defined norm is applied as a cost function in the asymmetry reducing controller structure utilizing an asynchronous parallel pattern search (APPS) algorithm also presented in the thesis. Simulations, performed in Matlab/Simulink environment show that the geometrical based indicator can serve as a basis of further research. The suggested controller structure enables the residential users owning a grid synchronized domestic power (renewable) plant to reduce voltage unbalance measurable at the connection point. The fundamental element of the system is a modified three phase inverter that is capable of the asymmetric current injection of any current waveforms to the network, via decoupled bi-directional DC-DC converters. The optimization-based control algorithm injects the available energy (as current waveform) in such a way, that the voltage unbalance decreases. This is an optimization problem which is constrained by the available renewable energy supplied by the power plant, or energy storage unit.\\
+    The control structure has been tested on a low voltage network model in a dynamical simulation environment consisting of the models of the electrical grid, a domestic power plant, an asymmetrical inverter circuit, and different types of loads. Different simulation experiments has been run for each norm and for both the power constrained and unconstrained case. The preliminary results show that this structure can serve as a residential level voltage quality improvement method for the three phase low voltage network also indirectly reduces the CO${}_2$ emission due facilitating more effective energy usage.
+
+%\section{Voltage unbalance compensation with optimization based control algorithm and asymmetrical inverter structure}
+%
+%    Based on the proposed measures of voltage unbalance it is possible to formulate some power quality related aims, or demands for the domestic size generator units as follows.
+%
+%    \subsection{Problem statement}
+%
+%    The voltage and current unbalance presents in the three phase low voltage transformer area causes additional power loss inside the medium voltage/low voltage transformer and in the transportation line wires too. It also has undesired effects in certain three phase loads, mainly rotating machines where it causes torque reduction and pulsating torque effect. Large scale unbalance can activate automatic protection functions of electricity dispatch system causes power outage. This is unpleasant for the customers and adds maintenance cost to the service provider. These negative effects lower the electric power quality and rises the cost of electrical energy and rises the carbon footprint of our everyday life. Our aim to develop a three phase instrumentation, which can compensate these undesirable effects, lower or eliminate the voltage and current unbalance to lower the power losses and the CO${}_2$ emission and increase power quality not only at the connection point but in the whole low voltage transformer area. \emph{It is important to note, that this power quality improvement can be achieved without any significant added cost.} The aim is to integrate this function into an existing three phase photovoltaic inverter device connected to the low voltage grid, and the created complex energetic system is able to inject the renewable energy to the transportation network, can store the electrical energy from stochastic renewable sources in electrical vehicle batteries or feed the grid from the charged batteries in energy deficit and high demand simultaneous situations. Our new added value the integrated control algorithm which can highly lower or eliminate the observed unbalance of the network.
+%
+%    \subsection{Control problem}
+%
+%    The above problem statement partially specifies the solution space together with the solution method. The system of interest is the power grid with all the stochastic and nonlinear phenomena present in it. The input to the system is the current signals (one current in the single phase case and three in the three phase setup), which are naturally constrained by the available energy of the household - stored in a battery pack or momentarily generated by the wind or solar generator unit. The response of the system can be either the current or the voltage measured at the connection point of the inverter unit, however, the general legal regulations only allow voltage measurement for consumers. The difficulty of the control problem comes from the fact, that there are no mathematically tractable models of the network can be generated because of its unpredictable and nonlinear features. This means, that only black-box methods can be applied for this system.
+%
+%    For the control aim it is a natural choice to minimize the actual voltage unbalance of the low voltage local transformer area measured (or calculated) at the connection point of the inverter. Several optimization based methods are available for such kind of optimal control problems, e.g.  \cite{gorbe2012reduction} where the only bottleneck is the computational efficiency since the impemented controller has to run on the commercial inverter's hardware (digital singal processor unit).
+%
+%    \subsection{Asymmetrical inverter structure}
+%
+%    \textcolor{blue}{
+%        The renewable energy injection is realized increasingly directly to the three phase low voltage grid in domestic size photovoltaic power plants too. This can reduce the voltage and current unbalance caused by the stochastic power production of wind and solar sources. More and more manufacturers produce three phase grid synchronized inverters from 5\,kW size. These equipments implement accurate symmetrical current feed with a standard three phase full bridge structure consists of six Isolated Gate Bipolar Transistors (IGBT). This is a cost effective standard structure suitable for symmetric harmonic current injection. It has limited capacities to inject not totally symmetric 3 phase current time functions, but Kirchhoff's current law permits only constant zero-sum current time functions injected with this structure. There are examples with this type of asymmetric current injections in the literature \cite{lee2010new}.}
+%
+%         %ide kellene a hivatkozás arra a cikkre, amit mutattál, ahol nem 120 fokosak a vektorok a fazor diagrammon, de az összegük 0
+%    \textcolor{blue}{
+%        This type of current injections has limited compensation capacity and this is not enough in  most asymmetric production and load cases. In our case we need more general, not specific asymmetric current waveforms, because the proposed control aim assumes the ability of injecting non zero-sum currents. This needs special inverter design structure. We need zero line connection for the differential current. One of the possible solution is to use 3 different full bridge single phase current inverters to supply each phase of low voltage transportation lines \cite{Patnaik2013topologies}. But in this case we need galvanic isolations of these single phase inverters in the output, or in the DC input size.}
+%
+%        %ide tegyük be hivatkozásnak: "Sushree Sangita Patnaik ., Anup Kumar Panda:Three-level H-bridge and three H-bridges-based three-phase four-wire shunt active power filter topologies for high voltage applications"
+%    \textcolor{blue}{
+%        This isolation can be reached  with using isolation transformers in the supply side. But we would like to use it a complex energetic system with specific inside true DC bus system feeded from Photovoltaic panel or batteries. We have to isolate  at least 2 full bridges with two way DC-DC converters. This can complicate the physical realization but easy to simulate with two controlled power source. Other possible easy to realize solution to isolate the full bridge outputs  connected to three phase lines with isolating transformers. It is recommended for operating and electric shock protection reasons too (Figure \ref{fig:asymminvwithgalvanic transformer}).Our distant aim to compensate other operational type line failures, such zero current appearing. This isolation method doesn't allow to produce CD current components, thats why we are looking for other design. Possible elegant solution to supplement the standard three phase inverter design with a fourth half bridge for Zero line, building a specific four leg inverter design \cite{Ninad2014control}.}
+%
+%        %ide tegyük be hivatkozásnak: "Nayeem Ahmed Ninad ., Luiz Lopes:Per-phase vector control strategy for a four-leg voltage source inverter operating with highly unbalanced loads in stand-alone hybrid systems"
+%    \textcolor{blue}{
+%        Only drawback of this solution is the complex difficult control method of the half bridges, to keep the current sum in zero values in each moment, and to provide the correct current paths inside the inverter. This structure has the lowest production cost, but in the phase of proofing the asymmetry compensation we chose the DC-DC isolated  full bridge design for simulation purpose because of the simple control during simulation.}
+%    \textcolor{blue}{
+%        As a further generalization step, the injection of no harmonic current shapes will be necessary in order to decrease the extant Total Harmonic Distortion (THD) of the network. These expectations yield an inverter with new structure suitable for arbitrary current injections without limitations. The design lends similar elements like in \cite{gorbe2012reduction} by means of battery charge, renewable power point tracking, intermediate voltage, and IGBT bridge control, but in this case the problem requires a three phase solution for the voltage unbalance reduction. The applied structure based on a full bridge IGBT structure used in single phase current injection. Three different IGBT full bridge were connected at the output point, thus our structure has three phase and neutral connection too, to carry out any current form. The disadvantage of this structure is that it needs 12 IGBTs in the output stage as opposed to the 6 IGBTs needed for a classical full bridge structure and needs three galvanically isolated direct current (DC) voltage source for feeding.}
+%    \textcolor{blue}{The other standard elements, that the inverter design consists:}
+%
+%
+%
+%        \begin{itemize}
+%            \item\textcolor{blue}{ Standard maximum power point tracking (MPPT) input stage, to inject the maximum available power from the renewable source to the intermediate voltage capacitor with a simple controlled boost converter}
+%            \item\textcolor{blue}{ A half bridge current controller to charge or deploy the battery pack connected to the complex energetic system for energy storage and energy unbalance compensation}
+%            \item\textcolor{blue}{ Intermediate voltage controller}
+%            \item\textcolor{blue}{ Universal three phase output stage with 3 single phase full bridge IGBT current injector and 2 high current DC-DC converter}
+%        \end{itemize}
+%    \textcolor{blue}{
+%        This is suitable to inject any necessary current shape to the low voltage three phase grid connection even DC currents too. Later a power loss and production cost analysis will be necessary if the built structure will be suitable for asymmetric compensation of low voltage transformer area.}
+%
+%        %\begin{figure*}[ht]
+%%            \centering
+%%            \includegraphics[width=0.95\textwidth]{standard_inverter.eps}
+%%            \caption{\textcolor{blue}{Standard symmetrical current inverter design, implies 6 IGBT current injector with serial inductance. }}
+%%        \label{fig: symminv}
+%%        \end{figure*}
+%
+%        %\begin{figure*}[ht]
+%%            \centering
+%%            \includegraphics[width=0.95\textwidth]{isolated_inverter.eps}
+%%            \caption{\textcolor{blue}{Asymmetrical inverter design with three separated H-bridges.}}
+%%        \label{fig: asymminvwithDCgalvanic transformer}
+%%        \end{figure*}
+%
+%\begin{figure}[h]
+%          \begin{center}
+%                \begin{circuitikz}[scale=.5, european] %% => Itt ne állíts a skálát, inkább a figure-nél!%%
+%                %\draw[help lines] (0,0) grid (16,40);
+%
+%                \draw%[color=magenta]
+%                    %% híd
+%                    (0,0) to[C=$C_{intermediate}$] (0,38)
+%                    (0,0) to[short] (10,0)
+%                    (6,0) node[nigbt, anchor=E](nigbt33){}
+%                    (nigbt33.E) node[circ]{}
+%
+%                    (10,8) node[nigbt, anchor=E,xscale=-1](nigbt32){}
+%
+%                    (6,8) node[nigbt, anchor=E](nigbt31){}
+%                    (nigbt33.C) to[short] (nigbt31.E)
+%
+%                    (10,0) node[nigbt, anchor=E, xscale=-1](nigbt34){}
+%                    (nigbt34.C) to[short] (nigbt32.E)
+%
+%                    (nigbt32.C) to[short] (10,12)
+%                    (nigbt31.C) to[short,-*] (6,12)
+%                    (4,12) to[short] (10,12)
+%                    (4,12) to[short,-*] (4,38)
+%
+%
+%                    %%trafó
+%                    (7,6) node[transformer,rotate=90,transform shape,american](T3){}
+%                    (T3.B1) to[short,-*] (6,7.05)
+%                    (T3.B2) to[short,-*] (10,7.05)
+%                    (T3.A1) to[short] (7,4)
+%                    (7,4) to[short,-o] (13,4) node[anchor=west] {$N$}
+%                    (T3.A2) to[short,-o] (13,4.95) node[anchor=west] {$T$}
+%                    ;
+%
+%                    \draw%[color=blue]
+%                    %% híd
+%                    (3,13) to[short,*-] (10,13)
+%                    (6,13) node[nigbt, anchor=E](nigbt23){}
+%                    (nigbt23.E) node[circ]{}
+%
+%                    (10,21) node[nigbt, anchor=E,xscale=-1](nigbt22){}
+%
+%                    (6,21) node[nigbt, anchor=E](nigbt21){}
+%                    (nigbt23.C) to[short] (nigbt21.E)
+%
+%                    (10,13) node[nigbt, anchor=E, xscale=-1](nigbt24){}
+%                    (nigbt24.C) to[short] (nigbt22.E)
+%
+%                    (nigbt22.C) to[short] (10,25)
+%                    (nigbt21.C) to[short,-*] (6,25)
+%                    (4,25) to[short,*-] (10,25)
+%
+%
+%
+%
+%                    %%trafó
+%                    (7,19) node[transformer,rotate=90,transform shape,american](T2){}
+%                    (T2.B1) to[short,-*] (6,20.05)
+%                    (T2.B2) to[short,-*] (10,20.05)
+%                    (T2.A1) to[short] (7,17)
+%                    (7,17) to[short,-*] (12,17)
+%                    (T2.A2) to[short,-o] (13,17.95) node[anchor=west] {$S$}
+%                    ;
+%
+%                    \draw%[color=cyan]
+%                    %% híd
+%                    (3,26) to[short] (10,26)
+%                    (3,26) to[short,-*] (3,0)
+%
+%                    (6,26) node[nigbt, anchor=E](nigbt13){}
+%                    (nigbt13.E) node[circ]{}
+%
+%                    (10,34) node[nigbt, anchor=E,xscale=-1](nigbt12){}
+%
+%                    (6,34) node[nigbt, anchor=E](nigbt11){}
+%                    (nigbt13.C) to[short] (nigbt11.E)
+%
+%                    (10,26) node[nigbt, anchor=E, xscale=-1](nigbt14){}
+%                    (nigbt14.C) to[short] (nigbt12.E)
+%
+%                    (nigbt12.C) to[short] (10,38)
+%                    (nigbt11.C) to[short,-*] (6,38)
+%                    (0,38) to[short] (10,38)
+%
+%
+%                    %%trafó
+%                    (7,32) node[transformer,rotate=90,transform shape,american](T1){}
+%                    (T1.B1) to[short,-*] (6,33.05)
+%                    (T1.B2) to[short,-*] (10,33.05)
+%                    (T1.A1) to[short] (7,30)
+%                    (7,30) to[short] (12,30)
+%                    (12,30) to[short,-*] (12,4)
+%                    (T1.A2) to[short,-o] (13,30.95) node[anchor=west] {$R$}
+%                    ;
+%                %%
+%                \end{circuitikz}
+%                \caption{\textcolor{blue}{Simplified asymmetrical inverter design employing three galvanically isolated H-bridges with transformers for DC-DC isolation substitution.}}
+%                \label{fig: asymminvwithgalvanic transformer}
+%          \end{center}
+%    \end{figure}
+%
+%        %\begin{figure*}[ht]
+%%            \centering
+%%            \includegraphics[width=0.95\textwidth]{isolated_only_inverter.eps}
+%%            \caption{\textcolor{blue}{Simplified asymmetrical inverter design employing three galvanically isolated H-bridges with transformers for DC-DC isolation substitution.}}
+%%        \label{fig: asymminvwithgalvanic transformer}
+%%        \end{figure*}
+%
+%
+%        \begin{figure*}[ht]
+%        \centering
+%        \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/inverter.eps}
+%        \caption{\textcolor{blue}{The asymmetrical inverter design, which applies three single phase full bridge IGBT current injector to create the injected asymmetrical current shapes for voltage unbalance compensation. }}
+%        \label{fig:inv}
+%        \end{figure*}
+%
+%    \textcolor{blue}{
+%        Of course there is a possibility that there is no renewable power available for a longer period of time and the battery completely looses its charge. In this case the system should work merely with the power of the connection point but with  zero energy balance. This states to operate two controller with semi-opposite control goals. The optimization based controller requires current injection while the intermediate voltage controller (Figure \ref{fig:inv}) keeps the inverters energy balance. Although for this operation some of the control's performance should be sacrificed, unbalance compensation could be achieved even without external renewable power, and energy storage at a minimum power requirement.}
+%        %\subsubsection{The necessity of switching the control off}
+%%
+%%                \textcolor{blue}{Inverter lea\'all\'it\'as\'anak sz\"uks\'egess\'ege.}
+%
+%%
+%        The renewable energy injection is realized increasingly directly to the three phase low voltage grid in domestic size photovoltaic power plants too. This can reduce the voltage and current unbalance caused by the stochastic power production wind and solar sources. More and more manufacturers produce three phase grid synchronized inverters from 5\,kW size. These equipments implement symmetrical power feed with a standard three phase full bridge structure consists of six Isolated Gate Bipolar Transistors (IGBT). This is a cost effective standard structure suitable for symmetric harmonic current injection, but Kirchhoff's current law permits only constant zero-sum current time functions injected with this structure. The proposed control aim assumes the ability of injecting non constant zero-sum currents. As a further generalization step, the injection of no harmonic current shapes will be necessary in order to decrease the extant Total Harmonic Distortion (THD) of the network. These expectations yield an inverter with new structure suitable for arbitrary current injections without limitations. The design lends similar elements like in \cite{gorbe2012reduction} by means of battery charge, renewable power point tracking, intermediate voltage, and IGBT bridge control, but in this case the problem requires a three phase solution for the voltage unbalance reduction. The applied structure based on a full bridge IGBT structure used in single phase current injection. Three different IGBT full bridge were connected at the output point, thus our structure has three phase and neutral connection too, to carry out any current form. The disadvantage of this structure is that it needs 12 IGBTs in the output stage as opposed to the 6 IGBTs needed for a classical full bridge structure and needs three galvanically isolated direct current (DC) voltage source for feeding. \\
+%        The other standard elements, that the inverter design consists:
+%        \begin{itemize}
+%            \item Standard maximum power point tracking (MPPT) input stage, to inject the maximum available power from the renewable source to the intermediate voltage capacitor with a simple controlled boost converter
+%            \item A half bridge current controller to charge or deploy the battery pack connected to the complex energetic system for energy storage and energy unbalance compensation
+%            \item Intermediate voltage controller
+%            \item Universal three phase output stage with 3 single phase full bridge IGBT current injector and 2 high current DC-DC converter
+%        \end{itemize}
+%        This is suitable to inject any necessary current shape to the low voltage three phase grid connection even DC currents too. Later a power loss and production cost analysis will be necessary if the built structure will be suitable for asymmetric compensation of low voltage transformer area.
+%
+%        %\begin{figure*}[ht]
+%%        \centering
+%%        \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/inverter.eps}
+%%        \caption{The asymmetrical inverter design, which implies 3 single phase full bridge IGBT current injector to form the injected asymmetrical current shapes for voltage unbalance compensation. }
+%%        \label{fig:inv}
+%%        \end{figure*}
+%%
+%        Of course there is a possibility that there is no renewable power available for a longer period of time and the battery completely looses its charge. In this case the system should work merely with the power of the connection point but with  zero energy balance. This states to operate two controller with semi-opposite control goals. The optimization based controller requires current injection while the intermediate voltage controller (Figure \ref{fig:inv}) keeps the inverters energy balance. Although for this operation some of the control's performance should be sacrificed, unbalance compensation could be achieved even without external renewable power, and energy storage at a minimum power requirement.
+%        %\subsubsection{The necessity of switching the control off}
+%%
+%%                \textcolor{blue}{Inverter lea\'all\'it\'as\'anak sz\"uks\'egess\'ege.}
+%
+%        \subsubsection{Measurements from a real unbalanced network}
+%
+%            The measurements took place at the Faculty's building, where a common 400\,V connection point was investigated as the behaviour of the network. The three phase 230\,V line-to-ground voltages has been transformed to 6\,V to be effectively measurable time domain with high performance NI-USB DAQ on 10\,ksample/s. Because of the limited computational capacity only a 10 second measurement was made in every hour.  The measurements then has been merged and smoothed to eliminate the inter-measurement transients.\\
+%            Afterwards, the measurement data has been used as the output of a micro-grid segment of the Matlab/Simulink model, to test the controller and inverters structure's performance in quasi-realistic circumstances. The controllers performance on the simulated microgrid's network loss reduction can be observed on (Figure \ref{fig:compare_power}). The measurement output is connected to a modeled three phase load and network system, consisting of symmetrical loads and network segments between them. Further artificial load unbalance is not necessary since the network's unbalance is already present. This structure enables to show that any point the inverter is connected could serve as quality restoration such unbalance compensation at this case. Our future plan is to set up multiple devices on different connection points.
+%
+%
+%
+%    \subsection{Optimization based control algorithm}
+%
+%        \begin{figure*}[ht]
+%        \centering
+%        \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/APPS_grey.eps}
+%        \caption{\textcolor{blue}{The optimization algorithm implemented for current control. A one dimensional linear optimization step is being solved in each dimension of the six dimensional parameter space, iteratively.}}
+%        \label{fig:APPS}
+%        \end{figure*}
+%
+%        The problem is that, the exact mathematical relation is nonlinear because the nonlinear, and highly time variant loads of the network, we should use a control strategy to cope this nonlinear and time variant energy system. For this purpose we chose an asynchronous parallel pattern search method (APPS) which could be able to control our scenario.  We applied a variant of the gradient method that is a first-order optimization (minimization) algorithm for a multivariate function $f(x)$. The point $x(k)$ corresponding to the local minimum can be calculated from the negative gradient $\delta f(x)$, that gives the value and direction of the corresponding step in the parameter space. The next step is made in the direction of gradient with the proper sign. This sequence of steps, ideally, converges to local multivariate extreme value $x(k)$ of the function (\ref{eqn:contstruct1}).
+%
+%        \begin{equation}
+%        \begin{array}{rcl}
+%        \label{eqn:contstruct1}
+%         x^{(k)}&=&x^{(k-1)}-t_k \nabla f(x^{(k-1)})\\
+%         k&\in&\mathbb{N}\\
+%         \end{array}
+%        \end{equation}
+%
+%        The controlled electrical system is described by multivariate non-linear differential equations, the optimization of which is infeasible to derive using the differentiation of an error function. Therefore, the optimization methods based on direct differentiation are not applicable. In such cases, when high computational power is needed for performing long time-consuming simulations, the APPS method can utilized. The search pattern $p$ is based on the sampling of the error function (selected norm) on a "grid", and it corresponds to variables or subsets of variables in each point in the independent variable or parameter space easily. At the same time, the norm values at these points can be calculated independently if $\Delta k>0$, using (\ref{eqn:contstruct2}).
+%        \begin{equation}
+%        \label{eqn:contstruct2}
+%        \begin{array}{rcl}
+%         x^{(k+1)}&=&x^{(k)}+\Delta _kd_i \\
+%         \mathrm{if}&&f(x^{(k)}+\Delta _kd_i) \leq f(x^{(k)})\\
+%         k&\in&\mathbb{N}\\
+%         \end{array}
+%        \end{equation}
+%
+%        The parameter is  $x(k)\in R_n$, and the search pattern $p\in D={d_1,...d_n}$ is taken from a predefined finite set. In this case, the error function values should be calculated for each pattern $p$ in the set $D$. If the error function is not decreasing in any of the directions, then the step size should be reduced (e.g. by half). As the competing directions are different, if there is not enough computing power available for direction vector $p$, synchronization should not be maintained. In this case we are talking about the asynchronous case . In the case of our controller, an individual $p$ vector is defined for each output variable, and the optimization was performed in each direction asynchronously and shifted in time. Most likely, the error function has a single local minimum as a symmetric amplitude and phase values. Approaching the minimal value of norm, the controller uses adaptive increments that are proportional to the norm itself. Because of the complex interactions between the components of the controller, only one parameter is changed at a time, even if the values of the amplitude and phase components in specific time slot changes. The algorithm moves along the six axes of six separate time slots close to the local minimum of the error function.\\
+%        Unlike other similar approaches, e.g. \cite{segui2007approach}, the explained optimal controller does not rely on a measured current signal but rather measuring and analysing the voltage unbalance via the proposed indicator and optimizes the voltage shape, the latter of which depends on the nonlinear distortion of the whole low-voltage transformer area and determines additional power losses. The controller's performance was compared to a non compensated network, and a network consisting synchronised symmetric power intake from a regular inverter.\\
+%        In each iteration only one physical value is changing on the six dimensional parameter field, which consists of the three amplitude and three phase values. If the change effects with cost function reduction (the reference norm's normalised value), the controller holds the new value of amplitude or phase for the controlled current sources. The advantage of this controller structure that is not necessary to know the controlled value's behaviour well, like we could not determine the number and type of the other loads on the network \cite{Neukirchner2015}. There are however two disadvantages. First is the low speed of control, due to the several necessary iterations (depending on the circumstances) to find the optimal directions in the parameter space, and the serial nature of interventions and norm calculations. The second comes from the method itself since the controller may stuck in local minima.
+%
+%    %\subsubsection{Higher level control structure}
+%%
+%%            \begin{itemize}
+%%            \item \textcolor{blue}{Norm\'al \'es z\'er\'o energimam\'erleg \"uzemm\'odok.}
+%%            \item \textcolor{blue}{\"Uzemm\'od v\'altasok.}
+%%            \end{itemize}
+%
+%\subsection{Discussion}
+%    \subsubsection{Dynamical simulation based experiments}
+%    In order to be able to investigate the proposed optimization based unbalance reduction control structure with the three phase inverter on a low voltage local grid, all the elements of this complex electrical system (including the photovoltaic source, the inverter, the battery and the nonlinear local grid with different types of loads) has been modeled in Matlab/Simulink environment. The primary aim of the simulation based experiments were to serve as a proof of concept for the proposed complex control structure.
+%    \subsubsection{Performance analysis}
+%    The aim of performance analysis is twofold. First of all, the proposed voltage unbalance indicator has to be investigated in the control structure as the cost function of the optimization based controller, and on the other hand, the control structure itself has to be exposed against engineering expectations.
+%
+%%     The first experiment is depicted in Figure \ref{fig:compare_asym_VEC}, where the vectorial based voltage unbalance indicator was used as the cost function of the optimization algorithm. The results are far not promising since the value of norm $N$ of the network starts to oscillate when the unbalance reduction controller is active. The cause of this behaviour is \textcolor{red}{WHAT?}
+%%
+%%             % V ==========================
+%%            \begin{figure*}[h]
+%%             \centering
+%%                  \includegraphics{UnbalRedComp_JCP-figure2.pdf}
+%% %                 \pgfplotsset{every tick label/.append style={font=\normalsize}}
+%% %                 \begin{tikzpicture}
+%% %                 \begin{axis}[
+%% %                     width=\textwidth,
+%% %                     height=6cm,
+%% %                     xlabel = {$t$~[s]},
+%% %                     ylabel = {$N$},
+%% %                     grid=major,
+%% %                     xmin=0,
+%% %                     xmax=20,
+%% %                     %ymax=8000,
+%% %                     %ymin=200,
+%% %                     ]
+%% %                     \addplot [dashed, thick] coordinates {(0,38520) (20,38520)};
+%% %                     \addplot[thick] table {VEC_Measurements/VEC_orig.dat};
+%% %                     \legend{Without control, Unbalance compensation}
+%% %                     \end{axis}
+%% %                  \end{tikzpicture}
+%%                  \caption{Compensation control's voltage unbalance reduction, where $N$ indicates the calculation with the vectorial indicator value. The controller starts at $t=0.1s$ and starts oscillating towards unbalance.}
+%%                  \label{fig:compare_asym_VEC}
+%%                 \end{figure*}
+%
+%                The results of the first experiment can be seen in Figure \ref{fig:compare_asym_PV} where the geometrical norm \ref{equ:geom} has been used as the voltage unbalance indicator and the cost function for the optimizer.  The dashed line represents the examined low voltage local network's unbalance norm ($G$) without the proposed controller implemented in the inverter unit of the domestic powerplant while the solid line represents the compensated network'snorm value. The performance of the controller with this norm is apparent, it was able to decrease the network voltage unbalance by approximately 85 \%. In this experimental setup the controller has enough input energy due to the batteries and the available solar power.
+%
+%            % G ========================== +PV
+%            \begin{figure*}[ht]
+%            \centering
+%            \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/UnbalRedComp_JCP-figure3.eps}
+%%                 %\pgfplotsset{every tick label/.append style={font=\tiny},legend style={at={(1,1)},anchor=north east}}
+%%                 \pgfplotsset{every tick label/.append style={font=\normalsize}}
+%%                 \begin{tikzpicture}
+%%                 \begin{axis}[
+%%                     width=\textwidth,
+%%                     height=6cm,
+%%                     xlabel = {$t$~[s]},
+%%                     ylabel = {$G$},
+%%                     grid=major,
+%%                     xmin=0,
+%%                     xmax=19,
+%%                     %ymax=900,
+%%                     %ymin=200,
+%%                     ]
+%%                     \addplot[dashed,thick] table {withPV/GEO_nocont_orig.dat};
+%%                     \addplot[thick] table {withPV/GEO_orig.dat};
+%%                     \legend{Without control, Unbalance compensation}
+%%                     \end{axis}
+%%                  \end{tikzpicture}
+%                 \caption{Unbalance reduction control system performance with half charged battery and photovoltaic power source available. The underlying unbalance norm is the geometrical one ($G$) in this experiment. After starting the controller at $t=0.1s$ the unbalance measure $G$ of the network significantly decrease.}
+%                 \label{fig:compare_asym_PV}
+%                \end{figure*}
+%
+%                % G ========================== -PV
+%            \begin{figure*}[ht]
+%            \centering
+%            \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/UnbalRedComp_JCP-figure4.eps}
+%%                  %\pgfplotsset{every tick label/.append style={font=\tiny},legend style={at={(1,1)},anchor=north east}}
+%%                 \pgfplotsset{every tick label/.append style={font=\normalsize}}
+%%                 \begin{tikzpicture}
+%%                 \begin{axis}[
+%%                     width=\textwidth,
+%%                     height=6cm,
+%%                     xlabel = {$t$~[s]},
+%%                     ylabel = {$G$},
+%%                     grid=major,
+%%                     xmin=0,
+%%                     xmax=20,
+%%                     %ymax=600,
+%%                     %ymin=200,
+%%                     ]
+%%                     \addplot[dashed,thick] table {netw_plot_nocont/GEO_nocont_orig.dat};
+%%                     \addplot[thick] table {netw_plot/GEO_orig.dat};
+%%                     \addplot[dotted,thick] table {netw_plot/GEO_orig_mean.dat};
+%%                     \legend{Without control, Unbalance compensation, Moving average}
+%%                     \end{axis}
+%%                  \end{tikzpicture}
+%                 \caption{Unbalance reduction control system performance without battery and renewable source (zero energy balance operation). The performance reduction is clearly observable compared to the case when external power source is available (Figure \ref{fig:compare_asym_PV}), but as result the voltage unbalance indicator $G$ reduced by the average value of 14.78\%.}
+%                 \label{fig:compare_asym}
+%                \end{figure*}
+%
+%            A slightly more challangeing situation is investigated in Figure \ref{fig:compare_asym} where the controller had had to operate without photovoltaic source and batteries. This is called zero balance operation mode when the energy obtained from the network is reinjected in such a way that the unbalance indicators decrease. It can be seen that the performance of the controller is modest than that of Figure \ref{fig:compare_asym_PV}, but it is still acceptable.
+%
+%      \paragraph{Robustness analysis}
+%
+%            %\textcolor{magenta}{MACI}\\
+%            %\textcolor{blue}{Robosztuss\'agi vizsg\'alat mind norm\'al mind zero balance esetre.}
+%            The robustness of the proposed control structure is an important qualitative property with respect to the time dependent loads present on the network. The robustness of the proposed controller had to be tested via simulation when different types of loads (inductive, capacitive, resistive) had been varied in step changes representing represnting the on/off switching the different types of household appliances (motors, switching mode power supplies, electric heaters, stc.). In the experiment depicted in Figure \ref{fig:robustness}, a load change has been introduced to the network in every 15 seconds causing the voltage unbalance to jump to a different value (measured in the geometrical norm (\ref{equ:geom})). As it can be seen in the figure the controller successfully compensates the unbalance after each transient.
+%
+%              \begin{figure*}[ht]
+%            \centering
+%            \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/UnbalRedComp_JCP-figure5.eps}
+%%             %\pgfplotsset{every tick label/.append style={font=\tiny},legend style={at={(1,1)},anchor=north east}}
+%%             \pgfplotsset{every tick label/.append style={font=\normalsize}}
+%%             \begin{tikzpicture}
+%%             \begin{axis}[
+%%             width=\textwidth,
+%%             height=6cm,
+%%             xlabel = {${t(s)}$},
+%%             ylabel = {${G}$},
+%%             grid=major,
+%%             xmin=0,
+%%             xmax=45,
+%%             %ymax=140,
+%%             ]
+%%             \addplot[thick, dashed] table {robustness_nocont/GEO_nocont_orig.dat};
+%%             \addplot[thick] table {robustness_regular/GEO_orig.dat};
+%%             \legend{Without control, Unbalance compensation}
+%%             \end{axis}
+%%             \end{tikzpicture}
+%            \caption{Robustness analysis with respect to step type changes in the network load (and voltage unbalance). The unbalance reduction controller successfully compensates the changes in the network voltage unbalance norm ($G$) value.}
+%            \label{fig:robustness}
+%            \end{figure*}
+%
+%
+%
+%    \subsubsection{Environmental effect}
+%            favorable effects of the proposed unbalance reduction control algorithm , i.e. increase power quality not only at the connection point but in the whole low voltage transformer area, which causes a reduction of the effective power loss and the reduction in the CO${}_2$ emission.
+%
+%        \paragraph{Power loss reduction on the network}
+%
+%             Network loss reduction due to the unbalance reduction compensation control is investigated on Figure \ref{fig:compare_power} where the simulation experiment was carried out in the circumstance when the renewable source was not shut down (e.g. insufficient amount of sunlight) and additionally the battery was drained completely  \cite{Neukirchner2015}, \cite{neukirchner2015examination}.
+%            \begin{figure*}[ht]
+%            \centering
+%            \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/UnbalRedComp_JCP-figure6.eps}
+%%             %\pgfplotsset{every tick label/.append style={font=\tiny},legend style={at={(1,1)},anchor=north east}}
+%%             \pgfplotsset{every tick label/.append style={font=\normalsize}}
+%%             \begin{tikzpicture}
+%%             \begin{axis}[
+%%             width=\textwidth,
+%%             height=6cm,
+%%             xlabel = {${t(s)}$},
+%%             ylabel = {${W}$},
+%%             grid=major,
+%%             xmin=0,
+%%             xmax=20,
+%%             ymin=1000,
+%%             ]
+%%             \addplot[dashed,thick] table {netw_plot_nocont/P_loss.dat};
+%%             \addplot[thick] table {netw_plot/P_loss.dat};
+%%             \addplot[dotted,thick] table {netw_plot/P_loss_mean.dat};
+%%             \legend{$P_{loss}$,$P^{comp}_{loss}$,Moving average}
+%%             \end{axis}
+%%             \end{tikzpicture}
+%            \caption{Compensation control's loss reduction during zero energy balance operation on the modeled network, where $P_{loss}$ indicates the effective power losses and $P^{comp}_{loss}$ effective power losses during control of the network. As result the network losses reduced by mean $6.5\%$.}
+%            \label{fig:compare_power}
+%            \end{figure*}
+%            The results show that despite of the negative cross effects of the intermediate voltage controller and the unbalance reduction controller it was possible to find the trade-off between the control goals of the different controllers (maintain zero energy balance for the inverter and decrease the unbalance on the network). The estimated loss reduction in the experimental setup is 6.5\%.
+%            \begin{figure*}[ht]
+%            \centering
+%            \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/UnbalRedComp_JCP-figure7.eps}
+%%                  %\pgfplotsset{every tick label/.append style={font=\tiny},legend style={at={(1,1)},anchor=north east}}
+%%                 \pgfplotsset{every tick label/.append style={font=\normalsize}}
+%%                 \begin{tikzpicture}
+%%                 \begin{axis}[
+%%                     width=\textwidth,
+%%                     height=5cm,
+%%                     xlabel = {$t$~[s]},
+%%                     ylabel = {$U_{\textnormal{im}}$~[V]},
+%%                     grid=major,
+%%                     xmin=0,
+%%                     xmax=20,
+%%                     %ymin=0,
+%%                     ]
+%%                     \addplot[thick] table {netw_plot/U_inter.dat};
+%%                     %\legend{\scriptsize$U_{intermediate}$}
+%%                     \end{axis}
+%%                  \end{tikzpicture}
+%                 \caption{Intermediate puffer capacitance's voltage within boundaries ($600\pm10$\,V), during zero energy balance operation mode of the voltage unbalance compensation controller. $U_{\textnormal{im}}$ indicates intermediate the capacitance's voltage.}
+%                 \label{fig:u_inter}
+%                \end{figure*}
+%
+%        \paragraph[CO2 footprint]{CO$_2$ footprint}
+%
+%            The fact that this controller enables the reactive power reduction has a favourable consequence, i.e. the power loss or equivalently CO$_2$ emission and the carbon footprint can also be decreased. The estimated environmental effects of voltage asymmetry compensation can be calculated. Let us assume 3000\,kWh for the yearly electric energy consumption an average household and $9.173\%$ for the loss of the distribution network \cite{MVM2013}. With the controller the losses on the simulated network are reduced by 6.5\%. The calculation follows (\ref{eqn:co_emission})
+%
+%            \begin{equation}
+%                \label{eqn:co_emission}
+%                \begin{array}{rcl}
+%                 P_{loss}&=&3000\,\textnormal{kWh}\cdot9.173\%\\
+%                P^{comp}_{loss}&=&3000\,\textnormal{kWh}\cdot(9.173\cdot0.93)\%\\
+%                 \Delta P_{loss}&=&P_{loss}-P^{comp}_{loss}\\
+%                 \end{array}
+%                \end{equation}
+%
+%            where $P_{loss}$ is the assumed network loss per household and $P^{comp}_{loss}$ is s the assumed network loss with unbalance compensation control and $\Delta P_{loss}$ is the saved energy. According to (\ref{eqn:co_emission}), unbalance compensation results in an energy savings of 19.26 kWh. Taking into account the proportion of power currently generated by fossil fuels (coal 17.3\,\%, gas 38.3\% \cite{MVM2013}, \cite{gorbe2012reduction}) and the rate of $\textnormal{CO}_2$ emission during electric energy production (1,000\,g/kWh from coal and 430\,g/kWh from gas), it can be concluded that voltage unbalance compensation could reduce $\textnormal{CO}_2$ emissions by 6504.9\,g a year, in an average household. %Note that this result reflect only the proof of concept, due the neglected power losses of the inverter and the artificial load of the network.
+%
+%
+%\subsection{Conclusion}
+%
+%    The currently used measures of voltage unbalance has been extended in this work with a norm candidate. It is more demanding from the computational point of view but has an interesting feature namely it checks electrical asymmetry, i.e. the norm of a $\pm120$ degree  rotated version of the ideal three-phase phasor is zero in the geometrical sense.\\
+%    The defined norm is applied as a cost function in the asymmetry reducing controller structure also presented in the paper. Simulations show that the geometrical based unbalance indicator can serve as a basis of further research. The suggested controller structure enables the residential users owning a grid synchronized domestic power plant to reduce voltage unbalance measurable at the connection point. The fundamental element of the system is a modified three phase inverter that is capable of the asymmetric injection of any current waveforms to the network. The optimization based control algorithm injects the available energy (as current waveform) in such a way, that the voltage unbalance decreases. This optimization problem is usually constrained by the available renewable energy supplied by the power plant.\\
+%    The control structure has been tested on a low voltage network model in a dynamical simulation environment consisting of the models of the electrical grid, a domestic power plant,  asymmetrical inverter circuit, and different types of loads. Different simulation experiments has been run for each norm and for both the power constrained and unconstrained case. The preliminary results show that this structure can serve as a residential level voltage quality improvement method for the three phase low voltage network.
+

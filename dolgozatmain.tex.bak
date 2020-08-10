@@ -1,0 +1,235 @@
+\documentclass[12pt, a4paper, twoside]{report}
+%%% Nyomtatásnál Figyelni a kétoldalasságra és a kötésre!!!
+\usepackage{verbatim}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[UTF8]{ctex}     %% kínai karakterekhez
+\usepackage{anysize}
+\usepackage[left=4cm,top=3cm, bottom=3cm, right=3cm]{geometry}
+%\usepackage{cite}
+%\usepackage[square,numbers]{natbib}
+%\bibliographystyle{abbrvnat}
+
+
+
+%\usepackage{xcolor}
+\usepackage[table,xcdraw]{xcolor}
+\colorlet{RED}{red}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\usepackage{amssymb}
+\usepackage{eurosym}
+\usepackage{graphics}
+\usepackage{graphicx} %===!!!=== Ezt én adtam hozzá
+\usepackage{caption} %===!!!=== Ezt én adtam hozzá
+\usepackage{subcaption} %===!!!=== Ezt én adtam hozzá
+%\usepackage{subfig}
+%\usepackage{subfigure}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\usepackage{pgfpages}
+\usepackage{soul}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+\usepackage{xcolor} % changed from \usepackage{xcolor}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{gensymb}
+\usepackage{setspace}
+\usepackage{circuitikz}
+\usepackage{indentfirst}
+\usepackage{pgfplotstable}
+\usepackage{siunitx}
+%\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[RO]{\textsl{\rightmark}}
+\fancyhead[LE]{\textsl{\leftmark}}
+%\usetikzlibrary{external}
+%\tikzexternalize % activate!
+\usepackage{breqn}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{transparent}
+\usepackage{eso-pic}
+\usetikzlibrary{calc}
+\usepackage{lscape}
+\usetikzlibrary{circuits.logic.US,circuits.logic.IEC}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{textpos}
+
+%% Saját package-ek
+\usepackage{textcomp}
+\usepackage{mfirstuc}
+\usepackage{longtable}
+\usepackage{textcomp}
+\usepackage{tabu}
+\usepackage[shortlabels]{enumitem}
+\usepackage{arydshln}
+\setlength{\dashlinedash}{0.2pt}
+\setlength{\dashlinegap}{4.5pt}
+\setlength{\arrayrulewidth}{0.2pt}
+\usepackage{tabularx}
+\usepackage{ltablex}\keepXColumns
+\usepackage{adjustbox}
+%\usepackage{hyperref}
+\usepackage{enumitem}
+\newlist{inparaenum}{enumerate}{2}% allow two levels of nesting in an enumerate-like environment
+\setlist[inparaenum]{nosep}% compact spacing for all nesting levels
+\setlist[inparaenum,1]{label=\bfseries\roman*.}% labels for top level
+\setlist[inparaenum,2]{label=\roman{inparaenumi}\emph{\alph*})}% labels for second level
+
+\usepackage[backend=bibtex, style=ieee, sorting=none, defernumbers=true, url=false, doi=false]{biblatex} %%% true/fals be és kikapcsolás!!
+\addbibresource{dolgozat} %bib fájl
+\input{boldauthorname}
+\usepackage{sectsty}
+
+%\usepackage{ulem}
+%\newcommand{\soutthick}[1]{%
+%    \renewcommand{\ULthickness}{2.4pt}%
+%       \sout{#1}%
+%    \renewcommand{\ULthickness}{.4pt}% Resetting to ulem default
+% \usepackage{MnSymbol,wasysym}
+%\DeclareSourcemap{
+  %\maps[datatype=bibtex]{
+    %\map{
+      %\step[fieldsource=issue, match=\regexp{\A(\d+)\Z}, final]
+      %\step[fieldset=number, fieldvalue={$1}]
+      %\step[fieldset=issue, null]
+    %}
+  %}
+%}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+
+\def\myuni{Universiy of Pannonia}
+\def\myfaculty{Department of Electrical Engineering and Information Systems}
+\def\myschool{Doctoral School of Information Science}
+\def\mytitle{Optimal Current Control for Domestic Power converters}
+\def\myauthor{L\'aszl\'o Rich\'ard Neukirchner}
+\def\mydate{2020}
+\def\mysupervisor{dr. Attila Magyar}
+
+
+%\rhead{L\'aszlo Richard Neukirchner (ZOK4EW) 2014/20}
+\renewcommand{\contentsname}{List of contents}
+\renewcommand{\figurename}{Figure}
+\renewcommand{\tablename}{Table}
+\renewcommand{\chaptername}{Chapter}
+\renewcommand{\bibname}{Bibliography}
+\let\oldref\ref
+\renewcommand{\ref}[1]{(\oldref{#1})}
+%\renewcommand\oldrefdot[1]{\oldref{#1}.}
+%\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\newcommand{\sig}[1]{\begin{tikzpicture} \draw[ultra thick, densely dotted, color=white] (0,0)--(8,0) ;\draw[ultra thick, dotted] (10,0)--(14,0) (12,0) node[below]{#1};  \end{tikzpicture}}
+
+
+\setcounter{secnumdepth}{2}
+\input{subtex/nominations_commmands.tex}          %%
+
+
+\begin{document}
+
+ \pagenumbering{Roman}
+
+        %% első üres oldal
+ \null
+ \thispagestyle{empty}%
+ \addtocounter{page}{-1}%
+ \newpage
+
+%% Title Page
+ \input{subtex/0_cimoldal.tex}
+
+%% Mandatory third page
+ \input{subtex/00_thirdpage.tex}
+
+%% Acknowledgements
+ \input{subtex/000_acknowledgments.tex}
+
+%\chapter*{Compendiary} --> Not required
+% \input{subtex/0000_compendiary.tex}
+%% (max 2500 karakter)
+
+%% Abstract
+\input{subtex/00000_abstracts.tex}
+
+%% Tableofcontents
+\thispagestyle{plain}
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+%% Introduction
+\input{subtex/1_introduction.tex}
+
+ %Not requied:
+ %\input{subtex/1_1_motivation.tex}
+ %\input{subtex/1_2_compendiary.tex}
+
+
+%% Voltage Unbalance
+\input{subtex/2_voltage_unbalance.tex}
+%\input{subtex/3_1_basics_unbalance.tex}
+%\input{subtex/4_3_discussion_results.tex}
+
+%% Unbalance Compensation
+\input{subtex/3_unbalance_compensation.tex}
+
+%% Explicit CSR
+\input{subtex/4_explicit_CSR.tex}
+
+%\input{subtex/3_2_basics_powelectric.tex}
+%\input{subtex/3_3_basics_empc.tex}
+%\input{subtex/3_4_basics_notations.tex}
+%\input{subtex/4_1_discussion_results.tex}
+
+
+
+
+
+%% Summary
+\input{subtex/5_conculsion.tex} %--> List of thesis and own publications moved here <=====
+
+%% Nomenclature
+\input{subtex/7_appendix.tex}
+
+%% Abbreviations
+\input{subtex/8_abbreviations.tex}
+
+%% Appendix
+%\input{subtex/9_appendix.tex}
+
+
+%%% Citations
+ \newpage
+ \pagestyle{plain}
+ %\bibliographystyle{plain}
+ %% \bibliography{dolgozat_own}
+ %\bibliography{dolgozat}
+
+ \boldname{Neukirchner}{L{\'a}szl{\'o}}{L.}   %%%% félkövér kiemeléshez NEM MINDEGY PL. HOGY á VAGY \'a VAN A BIB-BEN !!!!!!!!!!!!
+    %\boldname{}{}{}
+		\printbibheading
+\section*{Publications}
+    \begin{refcontext}[labelprefix={P}]
+        \printbibliography[keyword=sajat, heading=none, title={asd}]        %% keyword alapján szűr, azaz bele kell tenni a bib-be
+    \end{refcontext}
+
+    \section*{Literature}
+    %\boldname{}{}{}
+    \printbibliography[notkeyword=sajat,resetnumbers=true, heading=none, title={veryasd}] % ha egybe kell a másikkal akkor "heading=none," és nincs title
+
+
+
+\end{document}

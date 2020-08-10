@@ -37,7 +37,8 @@
 \def\BState{\State\hskip-\ALG@thistlm}
 \makeatother
 
-\usepackage{color}
+\usepackage{xcolor} % changed from \usepackage{xcolor}
+%\usepackage[dvipsnames]{xcolor}
 \usepackage{gensymb}
 \usepackage{setspace}
 \usepackage{circuitikz}
@@ -177,24 +178,34 @@
  %\input{subtex/1_2_compendiary.tex}
 
 
-%% Basic notions
-\input{subtex/3_1_basics_unbalance.tex}
-\input{subtex/3_2_basics_powelectric.tex}
-\input{subtex/3_3_basics_empc.tex}
-\input{subtex/3_4_basics_notations.tex}
-
-
 %% Voltage Unbalance
-\input{subtex/4_3_discussion_results.tex}
+\input{subtex/2_voltage_unbalance.tex}
+\input{subtex/2_a_notations_voltage_unbalance.tex}
 
-%% Explicit MPC
-\input{subtex/4_1_discussion_results.tex}
+%% Unbalance Compensation
+\input{subtex/3_unbalance_compensation.tex}
+\input{subtex/3_a_notations_unbalance_compensation.tex}
+
+%% Explicit CSR
+\input{subtex/4_explicit_CSR.tex}
+\input{subtex/4_a_notations_explicit_CSR.tex}
+
+%\input{subtex/3_1_basics_unbalance.tex}
+%\input{subtex/3_2_basics_powelectric.tex}
+%\input{subtex/3_3_basics_empc.tex}
+%\input{subtex/3_4_basics_notations.tex}
+%\input{subtex/4_3_discussion_results.tex}
+%\input{subtex/4_1_discussion_results.tex}
+
+
+
+
 
 %% Summary
 \input{subtex/5_conculsion.tex} %--> List of thesis and own publications moved here <=====
 
 %% Nomenclature
-\input{subtex/7_nomenclature.tex}
+\input{subtex/7_appendix.tex}
 
 %% Abbreviations
 \input{subtex/8_abbreviations.tex}
