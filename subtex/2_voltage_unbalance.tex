@@ -1,9 +1,10 @@
 \chapter{Voltage unbalance indication}\label{BASIC:sec:main}
 
 In this chapter the basic topics of the thesis are discussed, as components for further understanding. First the phenomena of voltage unbalance on small distribution networks are shown and the ambiguities though the development of the concept, and at the end the norm currently being in use in the industry. It would be shown how many definitions are currently in use, thus the introduced ambiguity of definition, further validating the proposal in section \ref{VUB:sec:Geom}.\\
-Next a necessary glimpse of power electric background is given to invite to the viewpoint of the modeling and problem breakdown of power converter. The section would introduce the background of current source switching devices with forced commutation, since control based on external situations or according to a cost function is eminent. After the single phase method shall be described, DC-DC conversion would be shown, since in section \ref{VUB:sec:Compensation} non-zero mean asymmetrical power injection was required. The section closes with the three phase rectifier example, for contributing the understating of the modeling in section \ref{EMPC:sec:Modeling}.\\
-Further the basis of controller structures, shall be shown, applied in the thesis. These are the APPS (asynchronous parallel pattern search) method (used in section \ref{VUB:sec:Optimization}) and constrained model based predictive control (MPC) is to be described with the end with the explicit partition of the state space (explicit MPC applied in section \ref{EMPC:sec:DCside}) for a computationally efficient approach.\\
-Lastly a new approach shall be discussed around the phenomena of voltage unbalance in a small domestic network. First the networks structure shall be described, the power electrical system is connected to, as a household supplying, renewable utilizing device. Then a control cost-function candidate, the proposed geometrical approach shall be presented, as an indicator of voltage unbalance.
+After the introduction the proposed geometrical indicator and control cost-function candidate, shall be discussed and compared against the standardised method, the voltage unbalance factor, $VUF$ via correlation investigation.
+%Next a necessary glimpse of power electric background is given to invite to the viewpoint of the modeling and problem breakdown of power converter. The section would introduce the background of current source switching devices with forced commutation, since control based on external situations or according to a cost function is eminent. After the single phase method shall be described, DC-DC conversion would be shown, since in section \ref{VUB:sec:Compensation} non-zero mean asymmetrical power injection was required. The section closes with the three phase rectifier example, for contributing the understating of the modeling in section \ref{EMPC:sec:Modeling}.\\
+%Further the basis of controller structures, shall be shown, applied in the thesis. These are the APPS (asynchronous parallel pattern search) method (used in section \ref{VUB:sec:Optimization}) and constrained model based predictive control (MPC) is to be described with the end with the explicit partition of the state space (explicit MPC applied in section \ref{EMPC:sec:DCside}) for a computationally efficient approach.\\
+%Lastly a new approach shall be discussed around the phenomena of voltage unbalance in a small domestic network. First the networks structure shall be described, the power electrical system is connected to, as a household supplying, renewable utilizing device. Then a control cost-function candidate, the proposed geometrical approach shall be presented, as an indicator of voltage unbalance.
 
 \section{Literature overview}
 
@@ -291,16 +292,16 @@ To clarify this, the regular norm's calculation method needs to be investigated.
 
             \begin{equation}
                 \begin{array}{rcl}
-                       Z_s&=&\frac{1}{3}\begin{bmatrix} 1&1&1\\1&\alpha&\alpha^2\\1&\alpha^2&\alpha \end{bmatrix}\cdot
+                       Z_s&=&\frac{1}{3}\begin{bmatrix} 1&1&1\\1&\upsilon&\upsilon^2\\1&\upsilon^2&\upsilon \end{bmatrix}\cdot
                                         \begin{bmatrix} Z_{aa}&Z_{ab}&Z_{ac}\\Z_{ba}&Z_{bb}&Z_{bc}\\Z_{ca}&Z_{cb}&Z_{cc} \end{bmatrix}\cdot
-                                        \begin{bmatrix} 1&1&1\\1&\alpha^2&\alpha\\1&\alpha&\alpha^2\end{bmatrix}=\\
+                                        \begin{bmatrix} 1&1&1\\1&\upsilon^2&\upsilon\\1&\upsilon\upsilon^2\end{bmatrix}=\\
                           &=&  \begin{bmatrix} Z_{00}&Z_{01}&Z_{02}\\Z_{10}&Z_{11}&Z_{12}\\Z_{20}&Z_{21}&Z_{22} \end{bmatrix},
 
                 \end{array}
                 \label{equ:mutual}
             \end{equation}
 
-where $Z_s$ is the symmetrical component mutual impedance matrix, and $\alpha=e^{j\frac{2}{3}\pi}$. If there are both negative and zero sequence symmetrical components present on the network, the dominant part of the voltage drop's negative and zero sequence can be calculated as follows \ref{equ:drop}.
+where $Z_s$ is the symmetrical component mutual impedance matrix, and $\upsilon=e^{j\frac{2}{3}\pi}$. If there are both negative and zero sequence symmetrical components present on the network, the dominant part of the voltage drop's negative and zero sequence can be calculated as follows \ref{equ:drop}.
 
             \begin{equation}
                 \begin{array}{rcl}
@@ -321,4 +322,6 @@ $\Delta U_0,\,\Delta U_1,\,\Delta U_2$ are the voltage drop's zero positive and 
             \end{equation}
 
 where $m_{21}$ is the negative sequence factor which is identical to the $VUF$, and $m_{01}$ is the zero sequence factor.\\
-At the previously described balanced over- or under-voltage case the positive sequence value is dominant, so the regular indicator will take considerably lower value. In other words, aside from indicating voltage unbalance, the geometrical method incorporates the balanced deviations as well. In a control design perspective, a general case, where notably highly unbalance values may appear, using $VUF$ as cost function could introduce hidden errors in control due error cancellation. Additionally the geometrical solution checks electrical asymmetry, i.e. the norm of a $\pm120$ degree rotated version of the ideal three-phase phasor is zero in the geometrical sense. Moreover, the geometrical norm is more sensitive for small scale unbalance, as opposed to the $VUF$. To summarize, the geometrical indicator a more suitable solution for a more general case indicator, and a good candidate for cost function in optimal control design.
+
+\section{Summary}
+At the previously described balanced over- or under-voltage case the positive sequence value is dominant, so the regular indicator will take considerably lower value. In other words, aside from indicating voltage unbalance, the geometrical method incorporates the balanced deviations as well. In a control design perspective, a general case, where notably highly unbalance values may appear, using $VUF$ as cost function could introduce hidden errors in control due error cancellation. Additionally the geometrical solution checks electrical asymmetry, i.e. the norm of a $\pm120$ degree rotated version of the ideal three-phase phasor is zero in the geometrical sense. Moreover, the geometrical norm is more sensitive for small scale unbalance, as opposed to the $VUF$. To summarize, the geometrical indicator a more suitable solution for a more general case indicator, and a good candidate for cost function in optimal control design. 
