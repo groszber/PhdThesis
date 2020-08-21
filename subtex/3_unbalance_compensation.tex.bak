@@ -30,7 +30,7 @@ The principle of operation of the DC-DC converter is very simple. Two active bri
 
 \begin{equation}
         \begin{array}{rcl}
-            P_D&=&\frac{V_{D1}V_{D2}}{\omega L}\left(\delta-\frac{\delta^2}{\pi}\right)\\
+            P_D&=&\frac{V_{D1}V_{D2}}{\omega L_a}\left(\delta-\frac{\delta^2}{\pi}\right)\\
         \end{array}
         \label{BASICMPC:equ:DCDC}
     \end{equation}
@@ -108,15 +108,14 @@ The ideal waveforms are shown in Fig.\ref{BASICCSR:fig:CSIwave_All}.
                 \label{BASICCSR:fig:CSIwave_All}
             \end{figure}
 
-The states for the switches are defined by the modulating technique, which in this case is a carrier-based PWM, but unipolar output is considered. For the CSIs, different output filters may be employed, in order to provide the fundamental component of the output waveform. Depending on the application, it would be desirable to provide a voltage or current output. 
+The states for the switches are defined by the modulating technique, which in this case is a carrier-based PWM, but unipolar output is considered. For the CSIs, different output filters may be employed, in order to provide the fundamental component of the output waveform. Depending on the application, it would be desirable to provide a voltage or current output.
 
-\section{Applied optimization method}
+\section{Asynchronous parallel pattern search}\label{BASICUNB:sec:APPS}
 
-In the following section, the applied control structure shall be discussed in detail. Optimization (or mathematical optimization) is considered as the mathematical process of finding the best decision for a given problem within a defined set of constraints. In the simplest case, an optimization problem consists of maximizing (or minimizing) a real function by systematically choosing input values from within an allowed input set respective to the given constraints and computing the value of the function. In a controller design case, it deals with the problem of finding the optimal control law for a given system such that a certain optimality criterion is achieved with the best dynamics or lowest amount of energy required. A control problem includes a cost functional that is a function of state and control variables. An optimal control is a set of differential equations describing the paths of the control variables that minimize the cost function. They commonality in this work, is that all of them are designed to search for the optimal control input for a current governing system, should it be voltage unbalance reduction with no applicable network model (due the actors unpredictability), or reaching the fastest reference value with explicit predictive control with the converter's equation's considered.
-
-\subsection{Asynchronous parallel pattern search}\label{BASICUNB:sec:APPS}
-
-This algorithm can rather be described as a linear search program, distributed in a multi-dimensional plane, where the it is only a black box model available \cite{kolda2003understanding}. These variants of pattern search can solve nonlinear unconstrained problems of the form of:
+In the following section, the applied control structure, namely the APPS algorithm shall be discussed in detail. %Optimization (or mathematical optimization) is considered as the mathematical process of finding the best decision for a given problem within a defined set of constraints. In the simplest case, an optimization problem consists of maximizing (or minimizing) a real function by systematically choosing input values from within an allowed input set respective to the given constraints and computing the value of the function. In a controller design case, it deals with the problem of finding the optimal control law for a given system such that a certain optimality criterion is achieved with the best dynamics or lowest amount of energy required. 
+%The control problem includes a cost functional that is a function of state and control variables. An optimal control is a set of differential equations describing the paths of the control variables that minimize the cost function. 
+They commonality in this work, is that all of them are designed to search for the optimal control input for a current governing system, should it be voltage unbalance reduction with no applicable network model (due the actors unpredictability), or reaching the fastest reference value with explicit predictive control with the converter's equation's considered, which shall be discussed in section \ref{BASICCSR:sec:MPC}.\\
+The APPS can rather be described as a linear search program, distributed in a multi-dimensional plane, where the it is only a black box model available \cite{kolda2003understanding}. These variants of pattern search can solve nonlinear unconstrained problems of the form of:
 
 \begin{equation}
         \begin{array}{c}
@@ -125,7 +124,7 @@ This algorithm can rather be described as a linear search program, distributed i
         \label{BASICCSR:eqn:currents}
     \end{equation}
 		
-		where $f:\mathbb{R}^n\longrightarrow\mathbb{R}$. We assume that the evaluation of $f$ is computationally expensive, hence our interest in using either distributed or parallel computing environments to solve the problem. It needs to be concentrated on the parallelization of the search strategy, rather than on the evaluation of $f$, though the techniques we discuss here can be adapted to handle problems for which the computation of $f$ also can be distributed. Additionally is is assumed that $f$ is continuously differentiable. It can be assumed that the gradient $\nabla f$ is unavailable, but the method is applicable as presented in \ref{VUB:sec:Optimization}, where the gradient determines the direction of the next step, further increasing its efficiency. For such problems, pattern search methods are one possible solution technique since they neither require nor explicitly estimate derivatives.\\
+		where $f:\mathbb{R}^n\longrightarrow\mathbb{R}$. We assume that the evaluation of $f$ is computationally expensive, hence our interest in using either distributed or parallel computing environments to solve the problem. It needs to be concentrated on the parallelization of the search strategy, rather than on the evaluation of $f$, though the techniques we discuss here can be adapted to handle problems for which the computation of $f$ also can be distributed. Additionally is is assumed that $f$ is continuously differentiable. It can be assumed that the gradient $\nabla f$ is unavailable, but the method is applicable as presented in section \oldref{VUB:sec:Optimization}, where the gradient determines the direction of the next step, further increasing its efficiency. For such problems, pattern search methods are one possible solution technique since they neither require nor explicitly estimate derivatives.\\
 
 \myparagraph{Parallel pattern search}
 
@@ -167,7 +166,7 @@ Lets adopt an infinite sequence of iterations $\rho=0,1,2,\dots$, with the last 
         \label{BSIC:equ:APPS_Delta}
     \end{equation}
 		
-		with the initialization $\Delta^0_i=\Delta^0$, where $\nu_i(q)$ is  time index for the completion of the function evaluation that produced the update at time step $q$ on process $i$, and $\theta_i^q$ and $\lambda_i^q$ are chosen. With the following pattern followed, the minima of $f$ shall eventually reached, in an undetermined steps. 
+		with the initialization $\Delta^0_i=\Delta^0$, where $\nu_i(q)$ is  time index for the completion of the function evaluation that produced the update at time step $q$ on process $i$, and $\theta_i^q$ and $\lambda_i^q$ are chosen. With the following pattern followed, the minima of $f$ shall eventually reached, in an undetermined steps.
 
 \section{Voltage unbalance compensation with optimization based control algorithm and asymmetrical inverter structure}\label{VUB:sec:Compensation}
 
@@ -184,7 +183,7 @@ Lets adopt an infinite sequence of iterations $\rho=0,1,2,\dots$, with the last 
             the low voltage network. The several regular households are representing the main loads of the network. The transformer and the loads are connected with power line sections infected by inductive and resistive disturbances and capacitive couplings. Domestic powerplants can connect to any connection point within the low voltage network, via an appropriate inverter - either to the three phase sections using a three phase inverter or to a single phase using a single phase inverter.}
             \label{fig:network}
             \end{figure}
-            
+
 
 \subsection{Problem statement}\label{VUB:sec:Statement}
 
@@ -944,31 +943,3 @@ Lets adopt an infinite sequence of iterations $\rho=0,1,2,\dots$, with the last 
 %    The defined norm is applied as a cost function in the asymmetry reducing controller structure also presented in the paper. Simulations show that the geometrical based unbalance indicator can serve as a basis of further research. The suggested controller structure enables the residential users owning a grid synchronized domestic power plant to reduce voltage unbalance measurable at the connection point. The fundamental element of the system is a modified three phase inverter that is capable of the asymmetric injection of any current waveforms to the network. The optimization based control algorithm injects the available energy (as current waveform) in such a way, that the voltage unbalance decreases. This optimization problem is usually constrained by the available renewable energy supplied by the power plant.\\
 %    The control structure has been tested on a low voltage network model in a dynamical simulation environment consisting of the models of the electrical grid, a domestic power plant,  asymmetrical inverter circuit, and different types of loads. Different simulation experiments has been run for each norm and for both the power constrained and unconstrained case. The preliminary results show that this structure can serve as a residential level voltage quality improvement method for the three phase low voltage network.
 
-\section{Notations used in the chapter}
-		
-		%\begin{longtable}{r|l}
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-  \begin{scriptsize}
-\begin{tabularx}{\textwidth}{r|X}
-		%
-$\mathcal{D}$											& Set of directions\\
-$d_i$                             & Direction of the step of process $i$\\
-$G$                               & Geometrical voltage deviation from the balanced state\\
-$I_{0,1,2}$												& Zero positive and negarive sequence of current drop\\	
-$\bigtriangleup_{Ideal}$          & Triangle of Ideal voltage vectors\\
-$P_{loss}$                        & Lost power per household due to network unbalance\\
-  $P^{comp}_{loss}$                 & Assumed network loss with unbalance compensation control\\
-  $\Delta P_{loss}$                 & Saved power with unbalance compensation control\\
-  $\textbf{p}$                      & Direction vector\\
-  $q$                               & Discrete timestep\\
-  $\Delta_q$                        & Step size at $q$\\
-  $\bigtriangleup_{Real}$           & Triangle of real voltage vectors\\
-  $t_q$                             & Timestep of the algorithm at $q$\\
-  $\Delta U$													& Zero positive and negarive sequence of voltage drop\\
-  $VUF$                             & Voltage unbalance factor\\
-  $f(\textbf{x})$										& Multivariate function to minimize\\
-  $\textbf{x}^{q}$                           & Local multivariate state at the $q^th$ timestep\\
-  $Z$																& Symmetrical component mutual impedance\\
-  $\alpha$													& Fortesque operator\\
-\end{tabularx}
-\end{scriptsize} 
