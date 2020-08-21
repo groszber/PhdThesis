@@ -173,7 +173,7 @@
         \label{BASICMPC:equ:MPQP_optimizer}
     \end{equation}
 
-    With this in hand the quiadratic multi parametric program \ref{BASICMPC:equ:MPQP} can be solved the same way as the linear multi parametric program \ref{BASICMPC:equ:MPP_program}, an the optimum value can be calulated for every critical region explicitly, as the affine function of parameters.
+    With this in hand the quadratic multi parametric program \ref{BASICMPC:equ:MPQP} can be solved the same way as the linear multi parametric program \ref{BASICMPC:equ:MPP_program}, an the optimum value can be calculated for every critical region explicitly, as the affine function of parameters.
 
 %
 %    The main idea of multi parametric algorithms is to construct a so called critical region in a neighborhood for a given parameter using necessary and sufficient conditions for optimality, and then recursively explore the parameter space outside of said region, in a geometric fashion.

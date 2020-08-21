@@ -182,7 +182,7 @@ The Park transformation is a tensor that rotates the reference frame of a three-
 
     where $\theta$ is instantaneous angular position of an arbitrary frequency.
 
-\section{Model based predictive conrol}
+\section{Model based predictive control}
 
 \subsection{Quadratic optimization and predictive control}\label{BASICCSR:sec:MPC}
 
@@ -213,17 +213,6 @@ In practice most MPC algorithms use linear models because the dependence of the 
     \end{equation}
 
     where $\textbf{x}(q)\in\mathbb{R}^n$ and $\textbf{u}(q)\in\mathbb{R}^m$ are the state and input vectors respectively. We define a quadratic cost function over a finite horizon of $N$ steps:
-
-  %  \begin{equation}
-%        \begin{array}{rcl}
-%				%&&\norm{asd}
-%         J_0(\textbf{U}_n,\textbf{x}(0))&=&\norm{{\textbf{Px}_N}}_\varsigma+\sum^{N-1}_{k=0}\norm{\textbf{Qx}_k}_\varsigma+\norm{\textbf{Ru}_k}_\varsigma\\
-%        \end{array}
-%        \label{BASICMPC:equ:cost_function}
-%    \end{equation}
-
-    %Let's assume system \ref{BASICMPC:equ:basic_LTI} with applied cost function \ref{BASICMPC:equ:cost_function}, and optimization problem \ref{BASICMPC:equ:optim_problem}. If we assume Euclidian norm ($\varsigma = 2$) the cost function can be written in the following way:
-
 
 \begin{equation}
         \begin{array}{rcl}
@@ -329,7 +318,7 @@ In practice most MPC algorithms use linear models because the dependence of the 
         \label{BASICMPC:equ:batch_simplfy}
     \end{equation}
 
-    Because $\bar{\textbf{R}}\succ 0$, and $\bar{\textbf{H}}\succ 0$, thus $J(\textbf{x}_0,\textbf{U}_0)$ is a positive definite quadratic function of $\textbf{U}_0$, therefore its minimum can be found by computing its gradient and setting it to zero, which yields the optimal vector of future inputs:
+    Because $\bar{\textbf{R}}\succ 0$, and $\textbf{H}\succ 0$, thus $J(\textbf{x}_0,\textbf{U}_0)$ is a positive definite quadratic function of $\textbf{U}_0$, therefore its minimum can be found by computing its gradient and setting it to zero, which yields the optimal vector of future inputs:
 %
     \begin{equation}
         \begin{array}{rcl}
@@ -692,7 +681,7 @@ With considering an LTI system such as \ref{BASICMPC:equ:basic_LTI}, let us assu
         \label{BASICMPC:equ:constrained_Euclidian_matrices}
     \end{equation}
 
-    and the constructed cost matrix $\bar{\textbf{H}}$ as:
+    and the constructed cost matrix $\textbf{H}$ as:
 
     \begin{equation}
     \begin{small}
@@ -816,10 +805,10 @@ repeated on the basis of new measurements or a new estimation of the states.
 
     where $g(0)=0$. The definition of Lyapunov stability is for the equilibrium point $\textbf{x}=0$ of system \ref{BASICMPC:equ:autonom_system} is:
     \begin{itemize}
-    \item stable if, for each $\epsilon>0$, there is a $\delta>0$ such that:
+    \item stable if, for each $\epsilon>0$, there is a $\varphi>0$ such that:
         \begin{equation}
         \begin{array}{c}
-                \norm{\textbf{x}_0}<\delta\textnormal{ s.t.: }\norm{\textbf{x}_k}<\epsilon,\textnormal{ }\forall k\geq0.
+                \norm{\textbf{x}_0}<\varphi\textnormal{ s.t.: }\norm{\textbf{x}_k}<\epsilon,\textnormal{ }\forall k\geq0.
             \end{array}
             \label{BASICMPC:equ:lyapunov_1}
         \end{equation}
@@ -836,10 +825,10 @@ repeated on the basis of new measurements or a new estimation of the states.
 
     \item globally asymptotically stable if it is asymptotically stable and $\boldsymbol{\Omega}=\mathbb{R}^n$
 
-    \item exponentially stable if it is stable and there exist constants $\alpha>0$ and $\gamma\in(0,1)$ such that:
+    \item exponentially stable if it is stable and there exist constants $\chi>0$ and $\psi\in(0,1)$ such that:
     \begin{equation}
         \begin{array}{c}
-                \norm{\textbf{x}_0}<\delta\textnormal{ s.t.: }\norm{\textbf{x}_k}\leq\alpha\norm{\textbf{x}_0}\gamma^k,\textnormal{ }\forall k\geq0.
+                \norm{\textbf{x}_0}<\varphi\textnormal{ s.t.: }\norm{\textbf{x}_k}\leq\chi\norm{\textbf{x}_0}\psi^k,\textnormal{ }\forall k\geq0.
             \end{array}
             \label{BASICMPC:equ:lyapunov_3}
         \end{equation}
@@ -855,11 +844,11 @@ repeated on the basis of new measurements or a new estimation of the states.
         \begin{align}
                 V(0)=0 \label{BASICMPC:equ:lyapunov_4_1_a}\\
                 V(\textbf{x})>0,\textnormal{ }\forall\textbf{x}\in\boldsymbol{\Omega}\textbackslash\{0\} \label{BASICMPC:equ:lyapunov_4_1_b}\\
-                V(\textbf{x}_{k+1})-V(\textbf{x}_{k})\leq-\alpha(\textbf{x}_k),\textnormal{ }\forall\textbf{x}\in\boldsymbol{\Omega}\textbackslash\{0\}, \label{BASICMPC:equ:lyapunov_4_1_c}
+                V(\textbf{x}_{k+1})-V(\textbf{x}_{k})\leq-\chi(\textbf{x}_k),\textnormal{ }\forall\textbf{x}\in\boldsymbol{\Omega}\textbackslash\{0\}, \label{BASICMPC:equ:lyapunov_4_1_c}
         \end{align}
     \end{subequations}
 
-     where $\alpha:\mathbb{R}^n\rightarrow\mathbb{R}$ is a continuous positive definite function, then $\textbf{x}=0$ is asymptotically stable. As such a function satisfying \ref{BASICMPC:equ:lyapunov_4_1} is called a Lyapunov function.\\
+     where $\chi:\mathbb{R}^n\rightarrow\mathbb{R}$ is a continuous positive definite function, then $\textbf{x}=0$ is asymptotically stable. As such a function satisfying \ref{BASICMPC:equ:lyapunov_4_1} is called a Lyapunov function.\\
      A similar theorem can be derived for global asymptotic stability i.e.: $\boldsymbol{\Omega}=\mathbb{R}^n$:
      Consider the equilibrium point $\textbf{x}=0$ of system \ref{BASICMPC:equ:autonom_system}. Let $\boldsymbol{\Omega}\subset\mathbb{R}^n$ be a closed and bounded set containing the origin. Assume there exists a function $V:\mathbb{R}^n\rightarrow\mathbb{R}$ continuous at the origin, finite for every $\textbf{x}\in\boldsymbol{\Omega}$ and such that:
 
@@ -869,10 +858,10 @@ repeated on the basis of new measurements or a new estimation of the states.
                 \norm{\textbf{x}}\rightarrow\infty,\textnormal{ s.t.: }V(\textbf{x})\rightarrow\infty \label{BASICMPC:equ:lyapunov_4_2_a}\\
                 V(0)=0 \label{BASICMPC:equ:lyapunov_4_2_b}\\
                 V(\textbf{x})>0,\textnormal{ }\forall\textbf{x}\neq0 \label{BASICMPC:equ:lyapunov_4_2_c}\\
-                V(\textbf{x}_{k+1})-V(\textbf{x}_{k})\leq-\alpha(\textbf{x}_k),\textnormal{ }\forall\textbf{x}\neq0, \label{BASICMPC:equ:lyapunov_4_2_d}
+                V(\textbf{x}_{k+1})-V(\textbf{x}_{k})\leq-\chi(\textbf{x}_k),\textnormal{ }\forall\textbf{x}\neq0, \label{BASICMPC:equ:lyapunov_4_2_d}
             \end{align}
             \end{subequations}
-     where $\alpha:\mathbb{R}^n\rightarrow\mathbb{R}$ is a continuous positive definite function, then $\textbf{x}=0$ is globally asymptotically stable.\\
+     where $\chi:\mathbb{R}^n\rightarrow\mathbb{R}$ is a continuous positive definite function, then $\textbf{x}=0$ is globally asymptotically stable.\\
      For linear systems a simple and effective Lyapunov function can be:
 
      \begin{equation}
@@ -903,23 +892,6 @@ repeated on the basis of new measurements or a new estimation of the states.
         \end{equation}
 
 which is referred as discrete time Lyapunov equation.
-		
-
-\subsection{Storage of critical regions}\label{BASICCSR:sec:EMPCStorage}
-
-The issue of iterative model based controllers is that they require a lot of computational resource. The CPU load and required ROM consumption could increase exponentially the longer the more steps the control horizon is calculated. For this reason explicit model bssed predictive controllers (EMPC) were developed, where only the storage the critical regions and the signal coefficients for each critical region, so the matrices $\textbf{H}$, $\mathcal{K}$, $\textbf{F}$, $\textbf{G}$ are required. The on-line part of control consists of searching the critical region for the current states and calculating the necessary inputs for them.
-One method of storing entire critical regions in order to calculate them, and that is in the order in which the MP-LP or MP-QP problem is resolved. It has the disadvantage, that the search time can be high, as such starting from the top of the list, a linear search is not effective. The efficient method is to store critical regions already in a binary tree \cite{jones2006logarithmic}, \cite{tondel2003evaluation}, \cite{tondel2003constrained}, \cite{kutasi2008vector}. The method of generating the binary tree is shown in (Fig.\ref{BASICMPC:fig:searchtree}.).\\
- The basic idea is to sort the critical regions depending on their adjacent sides. For example, in (Fig.\ref{BASICMPC:fig:searchtree}.a.) side $j_1$ divides the state space into two, at the right of it are the regions $X_{2,3,4,5}$ and to the left are the regions $X_{1,2,6}$. They make up the nodes adjacent to the base node $I_1$ of the binary tree. Next the another side from the space is chosen defined by each node $I_2$ respectively $I_3$, and the algorithm is continued until all the regions in the current node correspond to the same control signal, denoted by $F$ on the shaft in fig. (Fig.\ref{BASICMPC:fig:searchtree}.b.) Thus with this search pattern logarithmic search time can be achieved.
-
- \begin{figure}[!ht]
-        \centering
-        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/BasicSearchTree.png}
-        \caption{Basic search three of an EMPC where, a) are the critical regions for a space of 2D parameters,
-b) the related binary tree.}
-        \label{BASICMPC:fig:searchtree}
-    \end{figure}
-
-The implementation of MPC in explicit form is very efficient up to a certain number of critical regions, because they do not require calculations but only search in a table. For more complex problems or fast systems the method requires longer search time.
 
 \section[Predictive control of a CSR]{Constrained, explicit predictive control for current source buck-type rectifiers}\label{EMPC:sec:main}
 
@@ -1158,8 +1130,8 @@ Understandably, model based controllers require the system's model the ought to 
 
     \begin{equation}
         \begin{array}{rcl}
-           \displaystyle \min_{U=\{u_t\dots u_t+N_u-1\}}J(\textbf{u},\textbf{x}(t))&=&\sum^{N_y-1}_{k=0}(\textbf{x}^T_{t+N_y|t}\textbf{Q_w}\textbf{x}_{t+N_y|t}+
-           \textbf{u}^T_{t+k}\textbf{R_w}\textbf{u}_{t+k})\\
+           \displaystyle \min_{U=\{u_t\dots u_t+N_u-1\}}J(\textbf{u},\textbf{x}(t))&=&\sum^{N_y-1}_{k=0}(\textbf{x}^T_{t+N_y|t}\textbf{Q}\textbf{x}_{t+N_y|t}+
+           \textbf{u}^T_{t+k}\textbf{R}\textbf{u}_{t+k})\\
         \end{array}
         \label{EMPC:equ:optim_problem}
     \end{equation}
@@ -1426,23 +1398,16 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
         \label{EMPC:fig:SearchTree}
     \end{figure}
 
-    The search for an active critical region starts from the first level and represents the evaluation in each adjacent node of an inequality of the form: $x\leq K$. Thus, in this case a maximum number of 4 inequalities have to be evaluated to reach the active critical region. Implementing the presented algorithm is straightforward on a DSP processor, for instance from the dsPIC33 family by Microchip. Using the MAC (multiply and accumulate) instruction the inequality is evaluated for each node using 4 instructions, thus in 80 ns on a 50 MIPS processor (Fig. \ref{EMPC:fig:Memory}). The active critical region can be reached in a maximum of 400 ns. Compared to the typical sample rate of 10us in the case of a CSR, the real-time implementation on a DSP processor is possible.
-
-   % \begin{table}[]
-%\caption{asd}
-%    \begin{tabular}{ccc}
-%    asd
-%    &asd
-%    &asd    \\
-%    \end{tabular}
-%    \end{table}
-
+    The search for an active critical region starts from the first level and represents the evaluation in each adjacent node of an inequality of the form: $x\leq K$. Thus, in this case a maximum number of 4 inequalities have to be evaluated to reach the active critical region. Implementing the presented algorithm is straightforward on a DSP processor, for instance from the dsPIC33 family by Microchip. Using the MAC (multiply and accumulate) instruction the inequality is evaluated for each node using 4 instructions, thus in 80 ns on a 50 MIPS processor (Fig. \ref{EMPC:fig:Memory}). The active critical region can be reached in a maximum of 400 ns. Compared to the typical sample rate of 10us in the case of a CSR, the real-time implementation on a DSP processor is possible. More information about storing critical regions can be found in \oldref{BASICCSR:sec:EMPCStorage}.
+    
     \begin{figure}[!ht]
         \centering
         \includegraphics[width=\textwidth]{EMPC_PNG_Pics/Memory.png}
         \caption{Data organization in the data memory of a single core DSP and the evaluation of a 2-dimensional inequality}
         \label{EMPC:fig:Memory}
     \end{figure}
+    
+    More information about storing critical regions can be found in \oldref{BASICCSR:sec:EMPCStorage}.
 
     \subsubsection{Horizon performance}\label{EMPC:sec:Performance}
 
@@ -1509,4 +1474,4 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
 \section{Conclusion}\label{EMPC:sec:Conclusions}
 
-    The constrained, model-based optimal control of a current source rectifier has been presented in this dissertation. The dynamic model of a three-phase current source rectifier has been developed in Park frame. The proposed model has been examined from the design and implementation points of view with the purpose of explicit model-based predictive control. It proved to be the case that the regular set of differential equations of the CSR appears to be too complex, and contains non-linearity for such a design approach. To address this issue the usage of separated AC and DC equation sets was suggested to avoid linearization and complexity reduction. This solution eliminates bilinearity and enables the application of linear control design techniques. Current-based SVPWM of the three-phase converter has been used with an emphasis on the reduction of switching losses. Throughout the chapter the explicit model predictive control method is described and the method's effectiveness compared to conventional state feedback control is show. The implementation and simulation experiments have been performed in Matlab/Simulink environment. Moreover, the proper implementation of the system in a modern DSP chip will result in real-time operation.
+    The constrained, model-based optimal control of a current source rectifier has been presented in this dissertation. The dynamic model of a three-phase current source rectifier has been developed in Park frame. The proposed model has been examined from the design and implementation points of view with the purpose of explicit model-based predictive control. It proved to be the case that the regular set of differential equations of the CSR appears to be too complex, and contains non-linearity for such a design approach. To address this issue the usage of separated AC and DC equation sets was suggested to avoid linearization and complexity reduction. This solution eliminates bilinearity and enables the application of linear control design techniques. Current-based SVPWM of the three-phase converter has been used with an emphasis on the reduction of switching losses. Throughout the chapter the explicit model predictive control method is described and the method's effectiveness compared to conventional state feedback control is show. The implementation and simulation experiments have been performed in Matlab/Simulink environment. Moreover, the proper implementation of the system in a modern DSP chip will result in real-time operation. 
