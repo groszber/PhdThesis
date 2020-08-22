@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  21 AUG 2020 21:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  22 AUG 2020 14:14
 entering extended mode
 **C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
 (C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
@@ -2806,48 +2806,65 @@ File: EMPC_PNG_Pics/criticalregions.jpg Graphic file (type jpg)
 Package pdftex.def Info: EMPC_PNG_Pics/criticalregions.jpg  used on input line 
 66.
 (pdftex.def)             Requested size: 358.50229pt x 251.53719pt.
- [78]
-Underfull \vbox (badness 1184) has occurred while \output is active []
-
- [79 <./EMPC_PNG_Pics/criticalregions.jpg>] [80]
+ [78] [79 <./EMPC_PNG_Pics/criticalregions.jpg>] [80]
 <EMPC_PNG_Pics/BasicSearchTree.png, id=459, 985.88326pt x 359.54324pt>
 File: EMPC_PNG_Pics/BasicSearchTree.png Graphic file (type png)
 <use EMPC_PNG_Pics/BasicSearchTree.png>
 Package pdftex.def Info: EMPC_PNG_Pics/BasicSearchTree.png  used on input line 
 396.
 (pdftex.def)             Requested size: 398.3386pt x 145.26859pt.
-) (subtex/8_abbreviations.tex [81 <./EMPC_PNG_Pics/BasicSearchTree.png>]) [82]
+)
+(subtex/8_appendix_notations.tex [81 <./EMPC_PNG_Pics/BasicSearchTree.png>])
+(subtex/9_abbreviations.tex [82]) [83]
 
 Package biblatex Warning: The option 'labelprefix' is limited
 (biblatex)                when used with BibTeX.
 (biblatex)                Consider using Biber instead.
 
-[83
 
-] [84]
-Overfull \hbox (9.29346pt too wide) in paragraph at lines 234--234
-\T1/cmr/m/n/12 op-ti-mal power-flow al-go-rithm to mit-i-gate volt-age un-bal-a
-nce,'' \T1/cmr/m/it/12 IEEE Trans-
+Overfull \hbox (3.63234pt too wide) in paragraph at lines 230--230
+\T1/cmr/m/n/12 ``Con-strained pre-dic-tive con-trol of three-phasebuck rec-ti-f
+iers,'' \T1/cmr/m/it/12 Acta Poly-
  []
 
-[85] [86] [87] [88] [89]
-Overfull \hbox (3.16217pt too wide) in paragraph at lines 234--234
+[84
+
+] [85] [86]
+Overfull \hbox (2.42229pt too wide) in paragraph at lines 235--235
+[] \T1/cmr/m/n/12 A. H. Bon-nett and  G. Soukup, ``Un-der-stand-ing the nema mo
+tor-generator
+ []
+
+[87] [88] [89]
+Overfull \hbox (14.06616pt too wide) in paragraph at lines 235--235
+\T1/cmr/m/it/12 5th In-ter-na-tional Con-fer-ence on Elec-tri-cal Engineering-B
+oumerdes (ICEE-
+ []
+
+[90]
+Overfull \hbox (6.91681pt too wide) in paragraph at lines 235--235
 [] \T1/cmr/m/n/12 N. Muthuku-mar,  S. Srini-vasan,  K. Ramku-mar,  K. Kan-nan, 
 and  V. E. Balas,
  []
 
-[90]
-Overfull \hbox (10.6709pt too wide) in paragraph at lines 234--234
+[91]
+Overfull \hbox (6.06155pt too wide) in paragraph at lines 235--235
+\T1/cmr/m/n/12 rents,'' in \T1/cmr/m/it/12 IEE Pro-ceed-ings B (Elec-tric Power
+ Ap-pli-ca-tions)\T1/cmr/m/n/12 , IET, vol. 136,
+ []
+
+
+Overfull \hbox (14.42554pt too wide) in paragraph at lines 235--235
 [] \T1/cmr/m/n/12 M. Baotic, ``Op-ti-mal con-trol of piece-wise affine sys-tems
 : A multi-parametric
  []
 
-[91]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 234.
+[92]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 235.
 
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [92]
+) [93] [94]
 (dolgozatmain.aux)
 
 LaTeX Warning: There were undefined references.
@@ -2860,13 +2877,13 @@ Package logreq Info: Writing requests to 'dolgozatmain.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 62149 strings out of 492897
- 1505950 string characters out of 3133501
- 2150870 words of memory out of 3000000
- 65125 multiletter control sequences out of 15000+200000
+ 62218 strings out of 492897
+ 1509808 string characters out of 3133501
+ 2151823 words of memory out of 3000000
+ 65191 multiletter control sequences out of 15000+200000
  560468 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,23n,96p,2664b,1437s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,23n,96p,2664b,1439s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
 ctt1200.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec
 /dpi600\eccc1200.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jk
@@ -2901,9 +2918,9 @@ lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 msy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb>
-Output written on dolgozatmain.pdf (103 pages, 4113593 bytes).
+Output written on dolgozatmain.pdf (105 pages, 4117565 bytes).
 PDF statistics:
- 1211 PDF objects out of 1440 (max. 8388607)
+ 1218 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  233 words of extra memory for PDF output out of 10000 (max. 10000000)
 
