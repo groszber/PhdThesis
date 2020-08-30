@@ -2564,33 +2564,6 @@
     \field{year}{2010}
   \endentry
 
-  \entry{venkatraman2018multilevel}{article}{}
-    \name{author}{2}{}{%
-      {{hash=VT}{%
-         family={Venkatraman},
-         familyi={V\bibinitperiod},
-         given={Thiyagarajan},
-         giveni={T\bibinitperiod},
-      }}%
-      {{hash=PS}{%
-         family={Periasamy},
-         familyi={P\bibinitperiod},
-         given={Somasundaram},
-         giveni={S\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{VTPS1}
-    \strng{fullhash}{VTPS1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{2}
-    \field{title}{Multilevel Inverter Topology with Modified Pulse Width
-  Modulation and Reduced Switch Count}
-    \field{volume}{15}
-    \field{journaltitle}{Acta Polytechnica Hungarica}
-    \field{year}{2018}
-  \endentry
-
   \entry{feroura2017finite}{inproceedings}{}
     \name{author}{4}{}{%
       {{hash=FH}{%

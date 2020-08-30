@@ -1,13 +1,13 @@
 \chapter[Explicit predictive current control]{Explicit model predictive control of a current source buck-type rectifier}\label{BASIC:sec:MPC_CSR}
 
-\section{Literature overview}
+\section{Literature overview}\label{BASICCSR:sec:CSR_Literature}
 
 %============ USAGE OF CURRENT SOURCE RECTIFIERS
-Current source rectifiers (CSR) are widely used in frond-end power electronic converter for the uncontrollable or controllable DC-bus in industrial and commercial applications. They have maintained their position through many applications, with uses such as medium-voltage high-power drives \cite{vajda2017limiting}, \cite{ghalem2010six} STATCOMs \cite{gupta2014two} and renewable systems \cite{chen2016single}, \cite{exposto2015predictive}. They have a plain and reliable circuit structure, which makes them attractive for simple control design. The CSRs are traditionally controlled by state feedback, or classic cascaded linear control loops such as PI controllers. These simple control applications are suitable for induction motor control \cite{chebre2011speed}, and other electromechanical actuators \cite{salloum2014robust}, and unusual topologies \cite{neukirchner2017voltage}. Also, worth mentioning of self-tuning variants of PI controllers \cite{tahri2012digital}.\\
+Current source rectifiers (CSR) are widely used in front-end power electronic converter for the uncontrollable or controllable DC-bus in industrial and commercial applications. They have maintained their position through many applications, with uses such as medium-voltage high-power drives \cite{vajda2017limiting}, \cite{ghalem2010six} STATCOMs \cite{gupta2014two} and renewable systems \cite{chen2016single}, \cite{exposto2015predictive}. They have a plain and reliable circuit structure, which makes them attractive for simple control design. The CSRs are traditionally controlled by state feedback, or classic cascaded linear control loops such as PI controllers. These simple control applications are suitable for induction motor control \cite{chebre2011speed}, and other electromechanical actuators \cite{salloum2014robust}, and unusual topologies \cite{neukirchner2017voltage}. Also, worth mentioning of self-tuning variants of PI controllers \cite{tahri2012digital}.\\
 %============ MODULATION OF CSR
  In the past, the modulation methods used were trapezoidal pulse width modulation techniques (TPWM), or application of pulse patterns calculated off-line for selective harmonic elimination (SHE). More recently, current space vector modulation (SVM) has been used for the synthesis of the transistor control signals \cite{gao2017model}. Even so, AC-side harmonic elimination could still be an issue at lower switching frequencies where LCL filtering (inductive-capacitive-inductive) would be advised \cite{han2010control}.\\
 %============ TOPOLOGIES OF CSR
-In order to keep switching frequencies low and to minimize switching losses, new topologies and hybrid modulations are used, mixing TPWM and SHE depending on the grid frequency \cite{venkatraman2018multilevel}.\\
+%In order to keep switching frequencies low and to minimize switching losses, new topologies and hybrid modulations are used, mixing TPWM and SHE depending on the grid frequency \cite{venkatraman2018multilevel}.\\
 %============ BENEFITS OF CSR
     In terms of the amplitude of the grid and DC-link voltages, CSRs exhibit a step-down conversion. When used as DC voltage source, the rectifier can output a lower DC voltage without the need of a grid-side transformer, as is usually employed in voltage source rectifiers (VSR). Because of their current source behavior, CSRs can easily be paralleled and provide inherent short-circuit protection, representing an excellent potential in DC power supply applications \cite{feroura2017finite}, \cite{yan2015study}.\\		
 %============ GENERAL POWER ELECTRIC CONTROL
@@ -895,7 +895,10 @@ which is referred as discrete time Lyapunov equation.
 
 \section[Predictive control of a CSR]{Constrained, explicit predictive control for current source buck-type rectifiers}\label{EMPC:sec:main}
 
-As mentioned in section \oldref{BASICCSR:sec:CSR} current source rectifiers (CSR) play a major role in industrial instrumentation. They are invaluable, in the fields of direct power control, torque control, or power injection is required. In this chapter, the modeling and control of such CSR (or buck-type rectifiers), in a model based predictive manner, with explicit partitioning of the state space. The reason of the regular MPC's insufficiency is that power electronic systems require very low time constant to operate smoothly. As such pre-mapping the state-space with applicable control rules gives a great leverage, thus making the possible computational unit much cheaper.
+As mentioned in section \oldref{BASICCSR:sec:CSR_Literature} current source rectifiers (CSR) play a major role in industrial instrumentation. They are invaluable, in the fields of direct power control, torque control, or power injection is required.\\
+ \hlc[PT]{In the third thesis, I propose an explicit model based predictive control scheme realised on a classic CSR (or buck-type rectifier) control structure. The device as the name suggests utilizes three phase alternating current waveform, obtained from domestic three phase source, to create a steady direct current on the output poles. This structure was described in section} \oldref{BASICCSR:sec:CSR}\hlc[PT]{, where the topology and waveform formulation is written in detail. Also worth mention that the modelled devices's equations (described in section} \oldref{EMPC:sec:ModelofCSR})\hlc[PT]{ are not entirely in the linear domain.}\\
+  \hlc[PT]{The employed control structure (section }\oldref{EMPC:sec:DCside})\hlc[PT]{ is unique in a sense, since classic model based predictive control was not part of the power electronic domain recently. The high frequency switching periods and dynamical demand renders classic MPCs ineffective due to they massive calculation demand. However, if the control space is mapped and an effective search pattern is utilized, the feasibility could be guarantied. Also since the control structure relies on physical parameters the structure of choice supports embedded constraint handling(described in section} \oldref{BASICCSR:sec:OptimalControl}) \hlc[PT]{which is essential in electric power conversion realisations.}\\
+  \hlc[PT]{The goal of the control is two fold. On one hand the goal is to reach the steady state current reference, with minimal overshoot, at the output poles as fast as possible with a resistive load assumed. On the other, the reactive power and process noise on the network's side shall be also minimized.}\\
 		
 \subsection{Modeling}\label{EMPC:sec:Modeling}
 
@@ -903,7 +906,7 @@ Understandably, model based controllers require the system's model the ought to 
 
 \subsubsection{Mathematical modeling of the CSR}\label{EMPC:sec:ModelofCSR}
 
-    The structure of the classical three phase buck-type current source rectifier (CSR) is presented in \ref{EMPC:fig:network}. In continuous current mode, the differential equations corresponding to the CRS’s inductor currents and capacitor voltages are the following:
+    The structure of the classical three phase buck-type current source rectifier (CSR) is presented in \ref{EMPC:fig:network}. \hlc[PT]{The purpose of such a device is provide a continuous direct current at the output ($i_{dc}$) but instead of the widely used boost type counterparts, the voltage can be consideraby lower, making ideal for high current operations like induction heating. The device's detailed contexture can be observed in section} \oldref{BASICCSR:sec:CSR}. \hlc[PT]{Basically, a finite configuration of switching states with high enough frequency consists a continuous current flow of direct- at the output poles and alternating current at the input poles. This is reached via filtering the high dynamic ripples with low pass filtering realised with LC components.} In continuous current mode, the differential equations corresponding to the CRS’s inductor currents and capacitor voltages (\hlc[PT]{obtained straightforwardly via Kirchoff's law.}) are the following:
 
     \begin{figure}[!ht]
         \centering
@@ -922,7 +925,7 @@ Understandably, model based controllers require the system's model the ought to 
         \label{EMPC:equ:abc_eqn}
     \end{equation}
 
-    where $p\in\{1,2,3\}$ is the index of three phases and $\delta_p$ describes the conduction state of the rectifier leg p \ref{EMPC:equ:delta_set}.
+    where $p\in\{1,2,3\}$ is the index of three phases and $\delta_p$ describes the conduction state of the rectifier leg p \ref{EMPC:equ:delta_set}. 
 
     \begin{equation}
         \begin{array}{rcl}
@@ -967,8 +970,7 @@ Understandably, model based controllers require the system's model the ought to 
 
     \subsubsection{Model simplification}\label{EMPC:sec:Simplification}
 
-    Notice, that the sixth-order ODE model \ref{EMPC:equ:abc_dq} is bilinear in its states and
-    inputs because of the product terms (e.g.: $\delta_di_{dc}$). As such, using design methods for linear systems is not straightforward. The high complexity given by the system’s order is another problem to tackle. For designing classic MPC, linear, low-order equation systems are favorable. Hence simplification of the model would bring noteworthy benefits, making the MPC design more straightforward, when a linear system resulted.
+    Notice, that the sixth-order ODE model \ref{EMPC:equ:abc_dq} is bilinear in its states and inputs because of the product terms (e.g.: $\delta_di_{dc}$). As such, using design methods for linear systems is not straightforward. The high complexity given by the system’s order is another problem to tackle. For designing classic MPC, linear, low-order equation systems are favorable. Hence simplification of the model would bring noteworthy benefits, making the MPC design more straightforward, when a linear system resulted.
     Since the three phase alternating current (AC) and the direct current (DC) side’s time constants differ significantly (as in the AC: $\omega_{ac}=\frac{1}{\sqrt{L_{ac} C_{ac}}}\cong5.7\cdot10^3$ rad/s, and on the DC: $\omega_{dc}=\frac{1}{\sqrt{L_dc C_dc}}\cong2.8\cdot10^2$ rad/s, see Table \ref{EMPC:tbl:params}. for reference). Thus, the differential equations can be separated into two sets, and the control of the AC and DC sides can be decoupled as described in \cite{ahmed2014model}. The AC side model results as follows:
 
 
@@ -1074,7 +1076,12 @@ Understandably, model based controllers require the system's model the ought to 
 
 \subsubsection{Control structure}\label{EMPC:sec:ControlStruct}
 
-    Using the separation of the AC side and DC side controllers, the control structure depicted in Fig. \ref{EMPC:fig:ControlStruct}. is proposed.
+    \hlc[PT]{With }\ref{EMPC:equ:mtx_ctrl} \hlc[PT]{in mind the requirements of the closed loop system are the following:}
+    \begin{itemize}
+    \item \hlc[PT]{Minimize THD and reactive power on the AC side, from the network's measurement point (at the voltage sources on the topology).}
+    \item \hlc[PT]{Reach the steady state reference of $i_{dc}$ the fastest possible with minimal overshoot and no oscillation on the resistive load's poles.}
+    \end{itemize}
+    Using the separation of the AC side and DC side controllers, the control structure depicted in Fig. \ref{EMPC:fig:ControlStruct}. is proposed \hlc[PT]{for realizing the control goals}.
 
     \begin{figure}[!ht]
         \centering
@@ -1399,14 +1406,14 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
     \end{figure}
 
     The search for an active critical region starts from the first level and represents the evaluation in each adjacent node of an inequality of the form: $x\leq K$. Thus, in this case a maximum number of 4 inequalities have to be evaluated to reach the active critical region. Implementing the presented algorithm is straightforward on a DSP processor, for instance from the dsPIC33 family by Microchip. Using the MAC (multiply and accumulate) instruction the inequality is evaluated for each node using 4 instructions, thus in 80 ns on a 50 MIPS processor (Fig. \ref{EMPC:fig:Memory}). The active critical region can be reached in a maximum of 400 ns. Compared to the typical sample rate of 10us in the case of a CSR, the real-time implementation on a DSP processor is possible. More information about storing critical regions can be found in \oldref{BASICCSR:sec:EMPCStorage}.
-    
+
     \begin{figure}[!ht]
         \centering
         \includegraphics[width=\textwidth]{EMPC_PNG_Pics/Memory.png}
         \caption{Data organization in the data memory of a single core DSP and the evaluation of a 2-dimensional inequality}
         \label{EMPC:fig:Memory}
     \end{figure}
-    
+
     More information about storing critical regions can be found in \oldref{BASICCSR:sec:EMPCStorage}.
 
     \subsubsection{Horizon performance}\label{EMPC:sec:Performance}
