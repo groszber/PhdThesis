@@ -3928,6 +3928,135 @@
     \field{year}{1990}
   \endentry
 
+  \entry{MPT3}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=HM}{%
+         family={Herceg},
+         familyi={H\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kvasnica},
+         familyi={K\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=JC}{%
+         family={Jones},
+         familyi={J\bibinitperiod},
+         given={C.N.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Morari},
+         familyi={M\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HMKMJC+1}
+    \strng{fullhash}{HMKMJCMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proc.~of the European Control Conference}
+    \field{note}{\url{http://control.ee.ethz.ch/~mpt}}
+    \field{pages}{502\bibrangedash 510}
+    \field{title}{{Multi-Parametric Toolbox 3.0}}
+    \list{location}{1}{%
+      {Z\"urich, Switzerland}%
+    }
+    \field{year}{2013}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{zhang2015simplified}{article}{}
+    \name{author}{5}{}{%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Yu},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yi},
+         familyi={Y\bibinitperiod},
+         given={Yongxian},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=DP}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Peimeng},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=LF}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Fangrui},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=KY}{%
+         family={Kang},
+         familyi={K\bibinitperiod},
+         given={Yong},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{ZYYYDP+1}
+    \strng{fullhash}{ZYYYDPLFKY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{1090\bibrangedash 1099}
+    \field{title}{Simplified model and control strategy of three-phase PWM
+  current source rectifiers for DC voltage power supply applications}
+    \field{volume}{3}
+    \field{journaltitle}{IEEE Journal of Emerging and Selected Topics in Power
+  Electronics}
+    \field{year}{2015}
+  \endentry
+
+  \entry{wiseman2002pwm}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=WJC}{%
+         family={Wiseman},
+         familyi={W\bibinitperiod},
+         given={Jason\bibnamedelima C},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=WB}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Bin},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=CG}{%
+         family={Castle},
+         familyi={C\bibinitperiod},
+         given={GSP},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{WJCWBCG1}
+    \strng{fullhash}{WJCWBCG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2002 IEEE 33rd Annual IEEE Power Electronics Specialists
+  Conference. Proceedings (Cat. No. 02CH37289)}
+    \field{pages}{1930\bibrangedash 1934}
+    \field{title}{A PWM current-source rectifier with active damping for high
+  power medium voltage applications}
+    \field{volume}{4}
+    \field{year}{2002}
+  \endentry
+
   \entry{neukirchner2019linkedmodel}{online}{}
     \name{author}{1}{}{%
       {{hash=NL}{%

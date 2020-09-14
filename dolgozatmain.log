@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  30 AUG 2020 16:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  14 SEP 2020 19:02
 entering extended mode
 **C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
 (C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
@@ -21,6 +21,8 @@ File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+\c@para=\count89
+
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\verbatim.sty"
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks14
@@ -68,9 +70,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/iftex\ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count89
-\Gm@cntv=\count90
-\c@Gm@tempcnt=\count91
+\Gm@cnth=\count90
+\Gm@cntv=\count91
+\c@Gm@tempcnt=\count92
 \Gm@bindingoffset=\dimen107
 \Gm@wd@mp=\dimen108
 \Gm@odd@mp=\dimen109
@@ -109,7 +111,7 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \everycr=\toks21
 \minrowclearance=\skip45
 )
-\rownum=\count92
+\rownum=\count93
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -143,13 +145,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count93
+\inf@bad=\count94
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count94
-\leftroot@=\count95
+\uproot@=\count95
+\leftroot@=\count96
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count96
-\DOTSCASE@=\count97
+\classnum@=\count97
+\DOTSCASE@=\count98
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
@@ -158,15 +160,15 @@ LaTeX Info: Redefining \cdots on input line 606.
 \big@size=\dimen119
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count98
-\c@MaxMatrixCols=\count99
+\macc@depth=\count99
+\c@MaxMatrixCols=\count100
 \dotsspace@=\muskip10
-\c@parentequation=\count100
-\dspbrk@lvl=\count101
+\c@parentequation=\count101
+\dspbrk@lvl=\count102
 \tag@help=\toks23
-\row@=\count102
-\column@=\count103
-\maxfields@=\count104
+\row@=\count103
+\column@=\count104
+\maxfields@=\count105
 \andhelp@=\toks24
 \eqnshift@=\dimen120
 \alignsep@=\dimen121
@@ -186,15 +188,15 @@ Package: mathtools 2019/07/31 v1.22 mathematical typesetting tools
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count105
-\calc@Bcount=\count106
+\calc@Acount=\count106
+\calc@Bcount=\count107
 \calc@Adimen=\dimen126
 \calc@Bdimen=\dimen127
 \calc@Askip=\skip49
 \calc@Bskip=\skip50
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count107
+\calc@Ccount=\count108
 \calc@Cskip=\skip51
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/mathtools\mhsetup.sty
@@ -204,7 +206,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count108
+\g_MT_multlinerow_int=\count109
 \l_MT_multwidth_dim=\dimen128
 \origjot=\skip52
 \l_MT_shortvdotswithinadjustabove_dim=\dimen129
@@ -258,13 +260,13 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen142
 \caption@hangindent=\dimen143
 )
-\c@caption@flags=\count109
-\c@ContinuedFloat=\count110
+\c@caption@flags=\count110
+\c@ContinuedFloat=\count111
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\subcaption.sty
 Package: subcaption 2019/09/01 v1.3a Sub-captions (AR)
-\c@subfigure=\count111
-\c@subtable=\count112
+\c@subfigure=\count112
+\c@subtable=\count113
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/frontendlayer\tikz.sty
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/basiclayer\pgf.sty
@@ -317,14 +319,14 @@ ered.code.tex
 \pgf@yd=\dimen155
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count113
-\c@pgf@countb=\count114
-\c@pgf@countc=\count115
-\c@pgf@countd=\count116
+\c@pgf@counta=\count114
+\c@pgf@countb=\count115
+\c@pgf@countc=\count116
+\c@pgf@countd=\count117
 \t@pgf@toka=\toks31
 \t@pgf@tokb=\toks32
 \t@pgf@tokc=\toks33
-\pgf@sys@id@count=\count117
+\pgf@sys@id@count=\count118
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2019/08/03 v3.1.4b (3.1.4b)
@@ -342,8 +344,8 @@ File: pgfsys-common-pdf.def 2019/08/03 v3.1.4b (3.1.4b)
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/systemlayer\pgfsyssof
 tpath.code.tex
 File: pgfsyssoftpath.code.tex 2019/08/03 v3.1.4b (3.1.4b)
-\pgfsyssoftpath@smallbuffer@items=\count118
-\pgfsyssoftpath@bigbuffer@items=\count119
+\pgfsyssoftpath@smallbuffer@items=\count119
+\pgfsyssoftpath@bigbuffer@items=\count120
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/systemlayer\pgfsyspro
 tocol.code.tex
@@ -362,7 +364,7 @@ Package: pgfcore 2019/08/03 v3.1.4b (3.1.4b)
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathparser.co
 de.tex
 \pgfmath@dimen=\dimen156
-\pgfmath@count=\count120
+\pgfmath@count=\count121
 \pgfmath@box=\box33
 \pgfmath@toks=\toks34
 \pgfmath@stack@operand=\toks35
@@ -388,7 +390,7 @@ de.tex
 .integerarithmetics.code.tex)))
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathfloat.cod
 e.tex
-\c@pgfmathroundto@lastzeros=\count121
+\c@pgfmathroundto@lastzeros=\count122
 ))
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfint.code.tex)
 
@@ -428,7 +430,7 @@ File: pgfcorescopes.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgfpic=\box34
 \pgf@hbox=\box35
 \pgf@layerbox@main=\box36
-\pgf@picture@serial@count=\count122
+\pgf@picture@serial@count=\count123
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcoregra
 phicstate.code.tex
@@ -463,8 +465,8 @@ File: pgfcorearrows.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 de.code.tex
 File: pgfcoreshade.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgf@max=\dimen180
-\pgf@sys@shading@range@num=\count123
-\pgf@shadingcount=\count124
+\pgf@sys@shading@range@num=\count124
+\pgf@shadingcount=\count125
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcoreima
 ge.code.tex
@@ -535,7 +537,7 @@ Package: tikz 2019/08/03 v3.1.4b (3.1.4b)
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries\pgflibraryp
 lothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2019/08/03 v3.1.4b (3.1.4b)
-\pgf@plot@mark@count=\count125
+\pgf@plot@mark@count=\count126
 \pgfplotmarksize=\dimen185
 )
 \tikz@lastx=\dimen186
@@ -550,19 +552,19 @@ File: pgflibraryplothandlers.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \tikz@figbox@bg=\box40
 \tikz@tempbox=\box41
 \tikz@tempbox@bg=\box42
-\tikztreelevel=\count126
-\tikznumberofchildren=\count127
-\tikznumberofcurrentchild=\count128
-\tikz@fig@count=\count129
+\tikztreelevel=\count127
+\tikznumberofchildren=\count128
+\tikznumberofcurrentchild=\count129
+\tikz@fig@count=\count130
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/modules\pgfmodulematr
 ix.code.tex
 File: pgfmodulematrix.code.tex 2019/08/03 v3.1.4b (3.1.4b)
-\pgfmatrixcurrentrow=\count130
-\pgfmatrixcurrentcolumn=\count131
-\pgf@matrix@numberofcolumns=\count132
+\pgfmatrixcurrentrow=\count131
+\pgfmatrixcurrentcolumn=\count132
+\pgf@matrix@numberofcolumns=\count133
 )
-\tikz@expandcount=\count133
+\tikz@expandcount=\count134
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz/li
 braries\tikzlibrarytopaths.code.tex
@@ -581,8 +583,8 @@ e.tex
 \t@pgfplots@tokb=\toks40
 \t@pgfplots@tokc=\toks41
 \pgfplots@tmpa=\dimen194
-\c@pgfplots@coordindex=\count134
-\c@pgfplots@scanlineindex=\count135
+\c@pgfplots@coordindex=\count135
+\c@pgfplots@scanlineindex=\count136
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgfplots/sys\pgfplotssysg
 eneric.code.tex))
@@ -600,13 +602,13 @@ fplotsliststructure.code.tex)
 fplotsliststructureext.code.tex)
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgfplots/liststructure\pg
 fplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count136
+\c@pgfplotsarray@tmp=\count137
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgfplots/liststructure\pg
 fplotsmatrix.code.tex)
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgfplots/numtable\pgfplot
 stableshared.code.tex
-\c@pgfplotstable@counta=\count137
+\c@pgfplotstable@counta=\count138
 \t@pgfplotstable@a=\toks42
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgfplots/liststructure\pg
@@ -619,7 +621,7 @@ ary.data.code.tex))
 l.verb.code.tex)
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgfplots/libs\pgflibraryp
 gfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count138
+\c@pgfplotslibrarysurf@no=\count139
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgfplots/sys\pgflibrarypg
 fplots.surfshading.pgfsys-pdftex.def)))
@@ -656,7 +658,7 @@ rations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen197
 \pgfdecoratedinputsegmentremainingdistance=\dimen198
 \pgf@decorate@distancetomove=\dimen199
-\pgf@decorate@repeatstate=\count139
+\pgf@decorate@repeatstate=\count140
 \pgfdecorationsegmentamplitude=\dimen256
 \pgfdecorationsegmentlength=\dimen257
 )
@@ -670,7 +672,7 @@ braries\tikzlibrarydecorations.pathmorphing.code.tex
 braries\tikzlibrarydecorations.pathreplacing.code.tex
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries/decorations
 \pgflibrarydecorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count140
+\pgfplots@numplots=\count141
 \pgfplots@xmin@reg=\dimen258
 \pgfplots@xmax@reg=\dimen259
 \pgfplots@ymin@reg=\dimen260
@@ -688,12 +690,12 @@ File: pgflibraryplotmarks.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )))
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/utilities\pgfpages.sty
 Package: pgfpages 2011/01/05 ver 0.02
-\pgf@logicalpages=\count141
-\pgf@firstshipout=\count142
-\pgf@lastshipout=\count143
-\pgf@currentshipout=\count144
-\pgf@cpn=\count145
-\pgf@shipoutnextto=\count146
+\pgf@logicalpages=\count142
+\pgf@firstshipout=\count143
+\pgf@lastshipout=\count144
+\pgf@currentshipout=\count145
+\pgf@cpn=\count146
+\pgf@shipoutnextto=\count147
 \pgfphysicalheight=\dimen264
 \pgfphysicalwidth=\dimen265
 \pgfpages@shipoutbox=\box44
@@ -715,7 +717,7 @@ nment
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count147
+\c@float@type=\count148
 \float@exts=\toks48
 \float@box=\box45
 \@float@everytoks=\toks49
@@ -725,7 +727,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks50
-\c@algorithm=\count148
+\c@algorithm=\count149
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/algorithmicx\algpseudocode.
 sty
@@ -736,15 +738,15 @@ ty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count149
-\c@ALG@rem=\count150
-\c@ALG@nested=\count151
+\c@ALG@line=\count150
+\c@ALG@rem=\count151
+\c@ALG@nested=\count152
 \ALG@tlm=\skip54
 \ALG@thistlm=\skip55
-\c@ALG@Lnr=\count152
-\c@ALG@blocknr=\count153
-\c@ALG@storecount=\count154
-\c@ALG@tmpcounter=\count155
+\c@ALG@Lnr=\count153
+\c@ALG@blocknr=\count154
+\c@ALG@storecount=\count155
+\c@ALG@tmpcounter=\count156
 \ALG@tmplength=\skip56
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
@@ -796,9 +798,9 @@ File: pgflibrarycurvilinear.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ))
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/circuitikz\pgfcirc.define
 s.tex
-\pgf@circ@count@a=\count156
-\pgf@circ@count@b=\count157
-\pgf@circ@count@c=\count158
+\pgf@circ@count@a=\count157
+\pgf@circ@count@b=\count158
+\pgf@circ@count@c=\count159
 \pgf@circ@res@up=\dimen280
 \pgf@circ@res@down=\dimen281
 \pgf@circ@res@zero=\dimen282
@@ -821,7 +823,7 @@ es.tex)
 .tex)
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/circuitikz\pgfcirctripole
 s.tex
-\pgf@circ@res@count=\count159
+\pgf@circ@res@count=\count160
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/circuitikz\pgfcircquadpol
 es.tex)
@@ -863,18 +865,18 @@ Package: expl3 2019-09-19 L3 programming layer (loader)
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/l3kernel\expl3-code.tex
 Package: expl3 2019-09-19 L3 programming layer (code)
-\c_max_int=\count160
-\l_tmpa_int=\count161
-\l_tmpb_int=\count162
-\g_tmpa_int=\count163
-\g_tmpb_int=\count164
-\g__kernel_prg_map_int=\count165
-\c__ior_term_noprompt_ior=\count166
-\c_log_iow=\count167
-\l_iow_line_count_int=\count168
-\l__iow_line_target_int=\count169
-\l__iow_one_indent_int=\count170
-\l__iow_indent_int=\count171
+\c_max_int=\count161
+\l_tmpa_int=\count162
+\l_tmpb_int=\count163
+\g_tmpa_int=\count164
+\g_tmpb_int=\count165
+\g__kernel_prg_map_int=\count166
+\c__ior_term_noprompt_ior=\count167
+\c_log_iow=\count168
+\l_iow_line_count_int=\count169
+\l__iow_line_target_int=\count170
+\l__iow_one_indent_int=\count171
+\l__iow_indent_int=\count172
 \c_zero_dim=\dimen291
 \c_max_dim=\dimen292
 \l_tmpa_dim=\dimen293
@@ -893,80 +895,80 @@ Package: expl3 2019-09-19 L3 programming layer (code)
 \l_tmpb_muskip=\muskip14
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
-\l_keys_choice_int=\count172
-\l__intarray_loop_int=\count173
+\l_keys_choice_int=\count173
+\l__intarray_loop_int=\count174
 \c__intarray_sp_dim=\dimen297
-\g__intarray_font_int=\count174
-\c__fp_leading_shift_int=\count175
-\c__fp_middle_shift_int=\count176
-\c__fp_trailing_shift_int=\count177
-\c__fp_big_leading_shift_int=\count178
-\c__fp_big_middle_shift_int=\count179
-\c__fp_big_trailing_shift_int=\count180
-\c__fp_Bigg_leading_shift_int=\count181
-\c__fp_Bigg_middle_shift_int=\count182
-\c__fp_Bigg_trailing_shift_int=\count183
-\c__kernel_randint_max_int=\count184
-\g__fp_array_int=\count185
-\l__fp_array_loop_int=\count186
-\l__sort_length_int=\count187
-\l__sort_min_int=\count188
-\l__sort_top_int=\count189
-\l__sort_max_int=\count190
-\l__sort_true_max_int=\count191
-\l__sort_block_int=\count192
-\l__sort_begin_int=\count193
-\l__sort_end_int=\count194
-\l__sort_A_int=\count195
-\l__sort_B_int=\count196
-\l__sort_C_int=\count197
-\l__str_internal_int=\count198
-\c__str_replacement_char_int=\count199
-\l__tl_analysis_normal_int=\count266
-\l__tl_analysis_index_int=\count267
-\l__tl_analysis_nesting_int=\count268
-\l__tl_analysis_type_int=\count269
-\l__regex_internal_a_int=\count270
-\l__regex_internal_b_int=\count271
-\l__regex_internal_c_int=\count272
-\l__regex_balance_int=\count273
-\l__regex_group_level_int=\count274
-\l__regex_mode_int=\count275
-\c__regex_cs_in_class_mode_int=\count276
-\c__regex_cs_mode_int=\count277
-\l__regex_catcodes_int=\count278
-\l__regex_default_catcodes_int=\count279
-\c__regex_catcode_D_int=\count280
-\c__regex_catcode_S_int=\count281
-\c__regex_catcode_L_int=\count282
-\c__regex_catcode_O_int=\count283
-\c__regex_catcode_A_int=\count284
-\c__regex_all_catcodes_int=\count285
-\l__regex_show_lines_int=\count286
-\l__regex_min_state_int=\count287
-\l__regex_max_state_int=\count288
-\l__regex_left_state_int=\count289
-\l__regex_right_state_int=\count290
-\l__regex_capturing_group_int=\count291
-\l__regex_min_pos_int=\count292
-\l__regex_max_pos_int=\count293
-\l__regex_curr_pos_int=\count294
-\l__regex_start_pos_int=\count295
-\l__regex_success_pos_int=\count296
-\l__regex_curr_char_int=\count297
-\l__regex_curr_catcode_int=\count298
-\l__regex_last_char_int=\count299
-\l__regex_case_changed_char_int=\count300
-\l__regex_curr_state_int=\count301
-\l__regex_step_int=\count302
-\l__regex_min_active_int=\count303
-\l__regex_max_active_int=\count304
-\l__regex_replacement_csnames_int=\count305
-\l__regex_match_count_int=\count306
-\l__regex_min_submatch_int=\count307
-\l__regex_submatch_int=\count308
-\l__regex_zeroth_submatch_int=\count309
-\g__regex_trace_regex_int=\count310
+\g__intarray_font_int=\count175
+\c__fp_leading_shift_int=\count176
+\c__fp_middle_shift_int=\count177
+\c__fp_trailing_shift_int=\count178
+\c__fp_big_leading_shift_int=\count179
+\c__fp_big_middle_shift_int=\count180
+\c__fp_big_trailing_shift_int=\count181
+\c__fp_Bigg_leading_shift_int=\count182
+\c__fp_Bigg_middle_shift_int=\count183
+\c__fp_Bigg_trailing_shift_int=\count184
+\c__kernel_randint_max_int=\count185
+\g__fp_array_int=\count186
+\l__fp_array_loop_int=\count187
+\l__sort_length_int=\count188
+\l__sort_min_int=\count189
+\l__sort_top_int=\count190
+\l__sort_max_int=\count191
+\l__sort_true_max_int=\count192
+\l__sort_block_int=\count193
+\l__sort_begin_int=\count194
+\l__sort_end_int=\count195
+\l__sort_A_int=\count196
+\l__sort_B_int=\count197
+\l__sort_C_int=\count198
+\l__str_internal_int=\count199
+\c__str_replacement_char_int=\count266
+\l__tl_analysis_normal_int=\count267
+\l__tl_analysis_index_int=\count268
+\l__tl_analysis_nesting_int=\count269
+\l__tl_analysis_type_int=\count270
+\l__regex_internal_a_int=\count271
+\l__regex_internal_b_int=\count272
+\l__regex_internal_c_int=\count273
+\l__regex_balance_int=\count274
+\l__regex_group_level_int=\count275
+\l__regex_mode_int=\count276
+\c__regex_cs_in_class_mode_int=\count277
+\c__regex_cs_mode_int=\count278
+\l__regex_catcodes_int=\count279
+\l__regex_default_catcodes_int=\count280
+\c__regex_catcode_D_int=\count281
+\c__regex_catcode_S_int=\count282
+\c__regex_catcode_L_int=\count283
+\c__regex_catcode_O_int=\count284
+\c__regex_catcode_A_int=\count285
+\c__regex_all_catcodes_int=\count286
+\l__regex_show_lines_int=\count287
+\l__regex_min_state_int=\count288
+\l__regex_max_state_int=\count289
+\l__regex_left_state_int=\count290
+\l__regex_right_state_int=\count291
+\l__regex_capturing_group_int=\count292
+\l__regex_min_pos_int=\count293
+\l__regex_max_pos_int=\count294
+\l__regex_curr_pos_int=\count295
+\l__regex_start_pos_int=\count296
+\l__regex_success_pos_int=\count297
+\l__regex_curr_char_int=\count298
+\l__regex_curr_catcode_int=\count299
+\l__regex_last_char_int=\count300
+\l__regex_case_changed_char_int=\count301
+\l__regex_curr_state_int=\count302
+\l__regex_step_int=\count303
+\l__regex_min_active_int=\count304
+\l__regex_max_active_int=\count305
+\l__regex_replacement_csnames_int=\count306
+\l__regex_match_count_int=\count307
+\l__regex_min_submatch_int=\count308
+\l__regex_submatch_int=\count309
+\l__regex_zeroth_submatch_int=\count310
+\g__regex_trace_regex_int=\count311
 \c_empty_box=\box47
 \l_tmpa_box=\box48
 \l_tmpb_box=\box49
@@ -1011,22 +1013,22 @@ Package: expl3 2019-09-19 L3 programming layer (code)
 \l__coffin_display_x_dim=\dimen321
 \l__coffin_display_y_dim=\dimen322
 \g__char_data_ior=\read3
-\l__seq_internal_a_int=\count311
-\l__seq_internal_b_int=\count312
+\l__seq_internal_a_int=\count312
+\l__seq_internal_b_int=\count313
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/l3backend\l3backend-pdfmode
 .def
 File: l3backend-pdfmode.def 2019-04-06 v L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count313
+\l__kernel_color_stack_int=\count314
 \l__pdf_internal_box=\box65
 ))
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/l3packages/xparse\xparse.st
 y
 Package: xparse 2019-05-28 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count314
-\g__xparse_grabber_int=\count315
-\l__xparse_m_args_int=\count316
-\l__xparse_v_nesting_int=\count317
+\l__xparse_current_arg_int=\count315
+\g__xparse_grabber_int=\count316
+\l__xparse_m_args_int=\count317
+\l__xparse_v_nesting_int=\count318
 )
 Package: siunitx 2018/05/17 v2.7s A comprehensive (SI) units package
 
@@ -1036,27 +1038,27 @@ Package: l3keys2e 2019-05-28 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box66
 \l__siunitx_tmp_dim=\dimen323
-\l__siunitx_tmp_int=\count318
-\l__siunitx_number_mantissa_length_int=\count319
-\l__siunitx_number_uncert_length_int=\count320
-\l__siunitx_round_int=\count321
-\l__siunitx_process_decimal_int=\count322
-\l__siunitx_process_uncertainty_int=\count323
-\l__siunitx_process_fixed_int=\count324
-\l__siunitx_process_integer_min_int=\count325
-\l__siunitx_process_precision_int=\count326
-\l__siunitx_group_min_int=\count327
+\l__siunitx_tmp_int=\count319
+\l__siunitx_number_mantissa_length_int=\count320
+\l__siunitx_number_uncert_length_int=\count321
+\l__siunitx_round_int=\count322
+\l__siunitx_process_decimal_int=\count323
+\l__siunitx_process_uncertainty_int=\count324
+\l__siunitx_process_fixed_int=\count325
+\l__siunitx_process_integer_min_int=\count326
+\l__siunitx_process_precision_int=\count327
+\l__siunitx_group_min_int=\count328
 \l__siunitx_angle_marker_box=\box67
 \l__siunitx_angle_unit_box=\box68
 \l__siunitx_angle_marker_dim=\dimen324
 \l__siunitx_angle_unit_dim=\dimen325
-\l__siunitx_unit_int=\count328
-\l__siunitx_unit_denominator_int=\count329
-\l__siunitx_unit_numerator_int=\count330
-\l__siunitx_unit_prefix_int=\count331
-\l__siunitx_unit_prefix_base_int=\count332
-\l__siunitx_unit_prefix_gram_int=\count333
-\l__siunitx_number_product_int=\count334
+\l__siunitx_unit_int=\count329
+\l__siunitx_unit_denominator_int=\count330
+\l__siunitx_unit_numerator_int=\count331
+\l__siunitx_unit_prefix_int=\count332
+\l__siunitx_unit_prefix_base_int=\count333
+\l__siunitx_unit_prefix_gram_int=\count334
+\l__siunitx_number_product_int=\count335
 \c__siunitx_one_fill_skip=\skip63
 \l__siunitx_table_unit_align_skip=\skip64
 \l__siunitx_table_exponent_dim=\dimen326
@@ -1093,7 +1095,7 @@ s
 ("C:\Program Files\MiKTeX 2.9\tex/latex/multirow\multirow.sty"
 Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
 \multirow@colwidth=\skip76
-\multirow@cntb=\count335
+\multirow@cntb=\count336
 \multirow@dima=\skip77
 \bigstrutjot=\dimen335
 )
@@ -1139,8 +1141,8 @@ LaTeX Info: Redefining \scriptstyle on input line 97.
 LaTeX Info: Redefining \scriptscriptstyle on input line 99.
 LaTeX Info: Redefining \genfrac on input line 145.
 ))
-\inf@bad=\count336
-\maxint=\count337
+\inf@bad=\count337
+\maxint=\count338
 \listwidth=\dimen336
 \eqnumsep=\dimen337
 \eqmargin=\dimen338
@@ -1151,12 +1153,12 @@ LaTeX Info: Redefining \genfrac on input line 145.
 \eqdelimoffset=\muskip18
 \eqindentstep=\dimen340
 \eqstyle=\toks51
-\eqbreakdepth=\count338
-\eqinterlinepenalty=\count339
-\intereqpenalty=\count340
+\eqbreakdepth=\count339
+\eqinterlinepenalty=\count340
+\intereqpenalty=\count341
 \intereqskip=\skip80
-\prerelpenalty=\count341
-\prebinoppenalty=\count342
+\prerelpenalty=\count342
+\prebinoppenalty=\count343
 \Dmedmuskip=\muskip19
 \Dthickmuskip=\muskip20
 \eqleftskip=\skip81
@@ -1169,10 +1171,10 @@ LaTeX Info: Redefining \genfrac on input line 145.
 \eq@wdNum=\dimen341
 \GRP@numbox=\box76
 \grp@wdNum=\dimen342
-\eq@lines=\count343
-\eq@curline=\count344
-\eq@badness=\count345
-\EQ@vims=\count346
+\eq@lines=\count344
+\eq@curline=\count345
+\eq@badness=\count346
+\EQ@vims=\count347
 \eq@dp=\dimen343
 \eq@wdL=\dimen344
 \eq@wdT=\dimen345
@@ -1189,16 +1191,16 @@ LaTeX Info: Redefining \genfrac on input line 145.
 \eq@hshift=\dimen356
 \eq@given@sidespace=\dimen357
 \mathindent=\dimen358
-\eq@final@linecount=\count347
+\eq@final@linecount=\count348
 \eq@wdR=\dimen359
 \EQ@continue=\toks52
-\lr@level=\count348
+\lr@level=\count349
 \GRP@queue=\toks53
 \GRP@box=\box77
 \GRP@wholebox=\box78
 \darraycolsep=\skip84
-\cur@row=\count349
-\cur@col=\count350
+\cur@row=\count350
+\cur@col=\count351
 \conditionsep=\skip85
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/textpos\textpos.sty
@@ -1250,7 +1252,7 @@ braries/circuits\tikzlibrarycircuits.code.tex
 braries\tikzlibrarydecorations.markings.code.tex
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries/decorations
 \pgflibrarydecorations.markings.code.tex))
-\tikz@lib@circ@count=\count351
+\tikz@lib@circ@count=\count352
 \tikzcircuitssizeunit=\dimen368
 ))
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries/shapes/circ
@@ -1426,7 +1428,7 @@ Package: mfirstuc 2017/11/14 v2.06 (NLCT)
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count352
+\etb@tempcnta=\count353
 
 
 Package etoolbox Warning: Patching '\end' failed!
@@ -1441,16 +1443,16 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
 \LTright=\skip87
 \LTpre=\skip88
 \LTpost=\skip89
-\LTchunksize=\count353
+\LTchunksize=\count354
 \LTcapwidth=\dimen369
 \LT@head=\box81
 \LT@firsthead=\box82
 \LT@foot=\box83
 \LT@lastfoot=\box84
-\LT@cols=\count354
-\LT@rows=\count355
-\c@LT@tables=\count356
-\c@LT@chunks=\count357
+\LT@cols=\count355
+\LT@rows=\count356
+\c@LT@tables=\count357
+\c@LT@chunks=\count358
 \LT@p@ftn=\toks57
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/tabu\tabu.sty
@@ -1459,16 +1461,16 @@ Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box85
-\sift@deathcycles=\count358
+\sift@deathcycles=\count359
 \@vwid@loff=\dimen370
 \@vwid@roff=\dimen371
 )
-\c@taburow=\count359
-\tabu@nbcols=\count360
-\tabu@cnt=\count361
-\tabu@Xcol=\count362
-\tabu@alloc=\count363
-\tabu@nested=\count364
+\c@taburow=\count360
+\tabu@nbcols=\count361
+\tabu@cnt=\count362
+\tabu@Xcol=\count363
+\tabu@alloc=\count364
+\tabu@nested=\count365
 \tabu@target=\dimen372
 \tabu@spreadtarget=\dimen373
 \tabu@naturalX=\dimen374
@@ -1492,8 +1494,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@outerparindent=\dimen381
 \enit@toks=\toks60
 \enit@inbox=\box90
-\enit@count@id=\count365
-\enitdp@description=\count366
+\enit@count@id=\count366
+\enitdp@description=\count367
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/arydshln\arydshln.sty
 Package: arydshln 2019/02/21 v1.76 
@@ -1505,16 +1507,16 @@ Package: arydshln 2019/02/21 v1.76
 \adl@depth=\dimen386
 \adl@depthsave=\dimen387
 \adl@finaldepth=\dimen388
-\adl@columns=\count367
-\adl@ncol=\count368
-\adl@currentcolumn=\count369
-\adl@currentcolumnsave=\count370
-\adl@totalheight=\count371
-\adl@totalheightsave=\count372
-\adl@dash=\count373
-\adl@gap=\count374
-\adl@cla=\count375
-\adl@clb=\count376
+\adl@columns=\count368
+\adl@ncol=\count369
+\adl@currentcolumn=\count370
+\adl@currentcolumnsave=\count371
+\adl@totalheight=\count372
+\adl@totalheightsave=\count373
+\adl@dash=\count374
+\adl@gap=\count375
+\adl@cla=\count376
+\adl@clb=\count377
 \adl@everyvbox=\toks61
 \adl@LTpagetotal=\dimen389
 )
@@ -1525,7 +1527,7 @@ Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
 \TX@old@col=\dimen392
 \TX@target=\dimen393
 \TX@delta=\dimen394
-\TX@cols=\count377
+\TX@cols=\count378
 \TX@ftn=\toks62
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/ltablex\ltablex.sty
@@ -1542,7 +1544,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks63
 \XKV@tempa@toks=\toks64
 )
-\XKV@depth=\count378
+\XKV@depth=\count379
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/adjustbox\adjcalc.sty
@@ -1576,11 +1578,11 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/ifoddpage\ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count379
+\c@checkoddpage=\count380
 ))
-\c@inparaenumi=\count380
-\c@inparaenumii=\count381
-\enitdp@inparaenum=\count382
+\c@inparaenumi=\count381
+\c@inparaenumii=\count382
+\enitdp@inparaenum=\count383
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
@@ -1606,7 +1608,7 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ))))
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count383
+\lrq@indent=\count384
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -1615,47 +1617,47 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \Urlmuskip=\muskip22
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count384
-\c@listtotal=\count385
-\c@listcount=\count386
-\c@liststart=\count387
-\c@liststop=\count388
-\c@citecount=\count389
-\c@citetotal=\count390
-\c@multicitecount=\count391
-\c@multicitetotal=\count392
-\c@instcount=\count393
-\c@maxnames=\count394
-\c@minnames=\count395
-\c@maxitems=\count396
-\c@minitems=\count397
-\c@citecounter=\count398
-\c@maxcitecounter=\count399
-\c@savedcitecounter=\count400
-\c@uniquelist=\count401
-\c@uniquename=\count402
-\c@refsection=\count403
-\c@refsegment=\count404
-\c@maxextratitle=\count405
-\c@maxextratitleyear=\count406
-\c@maxextraname=\count407
-\c@maxextradate=\count408
-\c@maxextraalpha=\count409
-\c@abbrvpenalty=\count410
-\c@highnamepenalty=\count411
-\c@lownamepenalty=\count412
-\c@maxparens=\count413
-\c@parenlevel=\count414
-\blx@tempcnta=\count415
-\blx@tempcntb=\count416
-\blx@tempcntc=\count417
-\blx@maxsection=\count418
-\blx@maxsegment@0=\count419
-\blx@notetype=\count420
-\blx@parenlevel@text=\count421
-\blx@parenlevel@foot=\count422
-\blx@sectionciteorder@0=\count423
-\blx@entrysetcounter=\count424
+\c@tabx@nest=\count385
+\c@listtotal=\count386
+\c@listcount=\count387
+\c@liststart=\count388
+\c@liststop=\count389
+\c@citecount=\count390
+\c@citetotal=\count391
+\c@multicitecount=\count392
+\c@multicitetotal=\count393
+\c@instcount=\count394
+\c@maxnames=\count395
+\c@minnames=\count396
+\c@maxitems=\count397
+\c@minitems=\count398
+\c@citecounter=\count399
+\c@maxcitecounter=\count400
+\c@savedcitecounter=\count401
+\c@uniquelist=\count402
+\c@uniquename=\count403
+\c@refsection=\count404
+\c@refsegment=\count405
+\c@maxextratitle=\count406
+\c@maxextratitleyear=\count407
+\c@maxextraname=\count408
+\c@maxextradate=\count409
+\c@maxextraalpha=\count410
+\c@abbrvpenalty=\count411
+\c@highnamepenalty=\count412
+\c@lownamepenalty=\count413
+\c@maxparens=\count414
+\c@parenlevel=\count415
+\blx@tempcnta=\count416
+\blx@tempcntb=\count417
+\blx@tempcntc=\count418
+\blx@maxsection=\count419
+\blx@maxsegment@0=\count420
+\blx@notetype=\count421
+\blx@parenlevel@text=\count422
+\blx@parenlevel@foot=\count423
+\blx@sectionciteorder@0=\count424
+\blx@entrysetcounter=\count425
 \labelnumberwidth=\skip92
 \labelalphawidth=\skip93
 \biblabelsep=\skip94
@@ -1667,9 +1669,9 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@bcfin=\read4
 \blx@bcfout=\write4
 \blx@langwohyphens=\language82
-\c@mincomprange=\count425
-\c@maxcomprange=\count426
-\c@mincompwidth=\count427
+\c@mincomprange=\count426
+\c@maxcomprange=\count427
+\c@mincompwidth=\count428
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1680,74 +1682,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count428
-\c@savedafterword=\count429
-\c@annotator=\count430
-\c@savedannotator=\count431
-\c@author=\count432
-\c@savedauthor=\count433
-\c@bookauthor=\count434
-\c@savedbookauthor=\count435
-\c@commentator=\count436
-\c@savedcommentator=\count437
-\c@editor=\count438
-\c@savededitor=\count439
-\c@editora=\count440
-\c@savededitora=\count441
-\c@editorb=\count442
-\c@savededitorb=\count443
-\c@editorc=\count444
-\c@savededitorc=\count445
-\c@foreword=\count446
-\c@savedforeword=\count447
-\c@holder=\count448
-\c@savedholder=\count449
-\c@introduction=\count450
-\c@savedintroduction=\count451
-\c@namea=\count452
-\c@savednamea=\count453
-\c@nameb=\count454
-\c@savednameb=\count455
-\c@namec=\count456
-\c@savednamec=\count457
-\c@translator=\count458
-\c@savedtranslator=\count459
-\c@shortauthor=\count460
-\c@savedshortauthor=\count461
-\c@shorteditor=\count462
-\c@savedshorteditor=\count463
-\c@labelname=\count464
-\c@savedlabelname=\count465
-\c@institution=\count466
-\c@savedinstitution=\count467
-\c@lista=\count468
-\c@savedlista=\count469
-\c@listb=\count470
-\c@savedlistb=\count471
-\c@listc=\count472
-\c@savedlistc=\count473
-\c@listd=\count474
-\c@savedlistd=\count475
-\c@liste=\count476
-\c@savedliste=\count477
-\c@listf=\count478
-\c@savedlistf=\count479
-\c@location=\count480
-\c@savedlocation=\count481
-\c@organization=\count482
-\c@savedorganization=\count483
-\c@origlocation=\count484
-\c@savedoriglocation=\count485
-\c@origpublisher=\count486
-\c@savedorigpublisher=\count487
-\c@publisher=\count488
-\c@savedpublisher=\count489
-\c@language=\count490
-\c@savedlanguage=\count491
-\c@origlanguage=\count492
-\c@savedoriglanguage=\count493
-\c@pageref=\count494
-\c@savedpageref=\count495
+\c@afterword=\count429
+\c@savedafterword=\count430
+\c@annotator=\count431
+\c@savedannotator=\count432
+\c@author=\count433
+\c@savedauthor=\count434
+\c@bookauthor=\count435
+\c@savedbookauthor=\count436
+\c@commentator=\count437
+\c@savedcommentator=\count438
+\c@editor=\count439
+\c@savededitor=\count440
+\c@editora=\count441
+\c@savededitora=\count442
+\c@editorb=\count443
+\c@savededitorb=\count444
+\c@editorc=\count445
+\c@savededitorc=\count446
+\c@foreword=\count447
+\c@savedforeword=\count448
+\c@holder=\count449
+\c@savedholder=\count450
+\c@introduction=\count451
+\c@savedintroduction=\count452
+\c@namea=\count453
+\c@savednamea=\count454
+\c@nameb=\count455
+\c@savednameb=\count456
+\c@namec=\count457
+\c@savednamec=\count458
+\c@translator=\count459
+\c@savedtranslator=\count460
+\c@shortauthor=\count461
+\c@savedshortauthor=\count462
+\c@shorteditor=\count463
+\c@savedshorteditor=\count464
+\c@labelname=\count465
+\c@savedlabelname=\count466
+\c@institution=\count467
+\c@savedinstitution=\count468
+\c@lista=\count469
+\c@savedlista=\count470
+\c@listb=\count471
+\c@savedlistb=\count472
+\c@listc=\count473
+\c@savedlistc=\count474
+\c@listd=\count475
+\c@savedlistd=\count476
+\c@liste=\count477
+\c@savedliste=\count478
+\c@listf=\count479
+\c@savedlistf=\count480
+\c@location=\count481
+\c@savedlocation=\count482
+\c@organization=\count483
+\c@savedorganization=\count484
+\c@origlocation=\count485
+\c@savedoriglocation=\count486
+\c@origpublisher=\count487
+\c@savedorigpublisher=\count488
+\c@publisher=\count489
+\c@savedpublisher=\count490
+\c@language=\count491
+\c@savedlanguage=\count492
+\c@origlanguage=\count493
+\c@savedoriglanguage=\count494
+\c@pageref=\count495
+\c@savedpageref=\count496
 \shorthandwidth=\skip100
 \shortjournalwidth=\skip101
 \shortserieswidth=\skip102
@@ -1783,19 +1785,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-\c@textcitecount=\count496
-\c@textcitetotal=\count497
-\c@textcitemaxnames=\count498
-\c@biburlbigbreakpenalty=\count499
-\c@biburlbreakpenalty=\count500
-\c@biburlnumpenalty=\count501
-\c@biburlucpenalty=\count502
-\c@biburllcpenalty=\count503
+\c@textcitecount=\count497
+\c@textcitetotal=\count498
+\c@textcitemaxnames=\count499
+\c@biburlbigbreakpenalty=\count500
+\c@biburlbreakpenalty=\count501
+\c@biburlnumpenalty=\count502
+\c@biburlucpenalty=\count503
+\c@biburllcpenalty=\count504
 \biburlbigskip=\muskip23
 \biburlnumskip=\muskip24
 \biburlucskip=\muskip25
 \biburllcskip=\muskip26
-\c@smartand=\count504
+\c@smartand=\count505
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -1816,8 +1818,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count505
-\c@bbx:relatedtotal=\count506
+\c@bbx:relatedcount=\count506
+\c@bbx:relatedtotal=\count507
 ))))
 Package biblatex Info: Trying to load citation style 'ieee'...
 Package biblatex Info: ... file 'ieee.cbx' found.
@@ -1829,8 +1831,8 @@ Package biblatex Info: ... file 'numeric-comp.cbx' found.
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex/cbx\numeric-comp.c
 bx
 File: numeric-comp.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count507
-\c@cbx@tempcntb=\count508
+\c@cbx@tempcnta=\count508
+\c@cbx@tempcntb=\count509
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1856,8 +1858,8 @@ Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
 (subtex/nominations_commmands.tex)
-\@quotelevel=\count509
-\@quotereset=\count510
+\@quotelevel=\count510
+\@quotereset=\count511
  (dolgozatmain.aux
 
 LaTeX Warning: Label `BASICUNB:sec:DefinitionsofUNB' multiply defined.
@@ -1868,6 +1870,9 @@ LaTeX Warning: Label `BASICCSR:eqn:currents' multiply defined.
 
 LaTeX Warning: Label `BASICMPC:equ:cost_function_Euclidian_recursive_twoP' mult
 iply defined.
+
+
+LaTeX Warning: Label `EMPC:equ:reduced_ucd' multiply defined.
 
 
 LaTeX Warning: Label `BASICMPC:equ:MPP_KKT_result' multiply defined.
@@ -1881,25 +1886,25 @@ LaTeX Warning: Label `BASICMPC:equ:MPP_KKT_result_3' multiply defined.
 )
 \openout1 = `dolgozatmain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 142.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 142.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 148.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 148.
 
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    ... okay on input line 148.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1937,16 +1942,16 @@ LaTeX Font Info:    ... okay on input line 142.
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count511
+\scratchcounter=\count512
 \scratchdimen=\dimen407
 \scratchbox=\box93
-\nofMPsegments=\count512
-\nofMParguments=\count513
+\nofMPsegments=\count513
+\nofMParguments=\count514
 \everyMPshowfont=\toks65
-\MPscratchCnt=\count514
+\MPscratchCnt=\count515
 \MPscratchDim=\dimen408
-\MPnumerator=\count515
-\makeMPintoPDFobject=\count516
+\MPnumerator=\count516
+\makeMPintoPDFobject=\count517
 \everyMPtoPDFconversion=\toks66
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1979,15 +1984,15 @@ enefit from \pgfplotsset{compat=1.16} (current compat level: 1.9).
 
 \symgns@font=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 142.
-Package gensymb Info: Math companion symbols declared on input line 142.
-LaTeX Info: Redefining \degree on input line 142.
-LaTeX Info: Redefining \celsius on input line 142.
+(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 148.
+Package gensymb Info: Math companion symbols declared on input line 148.
+LaTeX Info: Redefining \degree on input line 148.
+LaTeX Info: Redefining \celsius on input line 148.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 142.
-LaTeX Info: Redefining \ohm on input line 142.
-Package gensymb Info: Using \textohm for \ohm on input line 142.
-Package gensymb Info: Using \textmu for \micro on input line 142.
+erthousand on input line 148.
+LaTeX Info: Redefining \ohm on input line 148.
+Package gensymb Info: Using \textohm for \ohm on input line 148.
+Package gensymb Info: Using \textmu for \micro on input line 148.
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/translator\translator-basic
 -dictionary-English.dict
@@ -2015,14 +2020,20 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'dolgozatmain.bbl' found.
 
-(dolgozatmain.bbl)
-Package biblatex Info: Reference section=0 on input line 142.
-Package biblatex Info: Reference segment=0 on input line 142.
-LaTeX Font Info:    Try loading font information for U+msa on input line 142.
+(dolgozatmain.bbl
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'MPT3':
+(biblatex)                - Invalid format of field 'month'.
+
+)
+Package biblatex Info: Reference section=0 on input line 148.
+Package biblatex Info: Reference segment=0 on input line 148.
+LaTeX Font Info:    Try loading font information for U+msa on input line 148.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 142.
+LaTeX Font Info:    Try loading font information for U+msb on input line 148.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2676,124 +2687,143 @@ Package pdftex.def Info: EMPC_PNG_Pics/ControlStructure.png  used on input line
  193.
 (pdftex.def)             Requested size: 398.3386pt x 289.8498pt.
 [58] [59 <./EMPC_PNG_Pics/ControlStructure.png>] [60]
-<EMPC_PNG_Pics/Regions.png, id=373, 310.4325pt x 151.4385pt>
-File: EMPC_PNG_Pics/Regions.png Graphic file (type png)
-<use EMPC_PNG_Pics/Regions.png>
-Package pdftex.def Info: EMPC_PNG_Pics/Regions.png  used on input line 350.
-(pdftex.def)             Requested size: 398.3386pt x 194.33742pt.
- [61]
+<EMPC_PNG_Pics/Regions2_trans.png, id=373, 806.01125pt x 515.9275pt>
+File: EMPC_PNG_Pics/Regions2_trans.png Graphic file (type png)
+<use EMPC_PNG_Pics/Regions2_trans.png>
+Package pdftex.def Info: EMPC_PNG_Pics/Regions2_trans.png  used on input line 3
+43.
+(pdftex.def)             Requested size: 398.3386pt x 254.9716pt.
+
+Overfull \hbox (1.32483pt too wide) in paragraph at lines 348--351
+\T1/cmr/m/n/12 [106] and uaas-trom2013computeraastrom2013computerzhang2015simpl
+ifiedsed
+ []
+
+[61]
 <EMPC_PNG_Pics/MPCStructure.png, id=377, 599.841pt x 351.714pt>
 File: EMPC_PNG_Pics/MPCStructure.png Graphic file (type png)
 <use EMPC_PNG_Pics/MPCStructure.png>
-Package pdftex.def Info: EMPC_PNG_Pics/MPCStructure.png  used on input line 369
+Package pdftex.def Info: EMPC_PNG_Pics/MPCStructure.png  used on input line 362
 .
 (pdftex.def)             Requested size: 398.3386pt x 233.57024pt.
- [62 <./EMPC_PNG_Pics/Regions.png> <./EMPC_PNG_Pics/MPCStructure.png>]
-<EMPC_PNG_Pics/VectorPhasor.png, id=384, 663.6795pt x 646.8165pt>
+ [62 <./EMPC_PNG_Pics/Regions2_trans.png>] [63 <./EMPC_PNG_Pics/MPCStructure.pn
+g>]
+<EMPC_PNG_Pics/VectorPhasor.png, id=387, 663.6795pt x 646.8165pt>
 File: EMPC_PNG_Pics/VectorPhasor.png Graphic file (type png)
 <use EMPC_PNG_Pics/VectorPhasor.png>
-Package pdftex.def Info: EMPC_PNG_Pics/VectorPhasor.png  used on input line 394
+Package pdftex.def Info: EMPC_PNG_Pics/VectorPhasor.png  used on input line 466
 .
 (pdftex.def)             Requested size: 239.00558pt x 232.93271pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 407.
+               Default added (so using `tbp') on input line 479.
 
 
-Overfull \hbox (2.03748pt too wide) in paragraph at lines 409--426
+Overfull \hbox (2.03748pt too wide) in paragraph at lines 481--498
 [][]
  []
 
-[63]
-<EMPC_PNG_Pics/OnePhasor.png, id=388, 164.03387pt x 137.4081pt>
+[64]
+<EMPC_PNG_Pics/OnePhasor.png, id=391, 164.03387pt x 137.4081pt>
 File: EMPC_PNG_Pics/OnePhasor.png Graphic file (type png)
 <use EMPC_PNG_Pics/OnePhasor.png>
-Package pdftex.def Info: EMPC_PNG_Pics/OnePhasor.png  used on input line 444.
+Package pdftex.def Info: EMPC_PNG_Pics/OnePhasor.png  used on input line 516.
 (pdftex.def)             Requested size: 239.00558pt x 200.2116pt.
- [64 <./EMPC_PNG_Pics/VectorPhasor.png> <./EMPC_PNG_Pics/OnePhasor.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 479--482
+ [65 <./EMPC_PNG_Pics/VectorPhasor.png> <./EMPC_PNG_Pics/OnePhasor.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 551--554
 
  []
 
-<EMPC_PNG_Pics/Sequence.png, id=394, 847.36575pt x 420.3705pt>
+<EMPC_PNG_Pics/Sequence.png, id=397, 847.36575pt x 420.3705pt>
 File: EMPC_PNG_Pics/Sequence.png Graphic file (type png)
 <use EMPC_PNG_Pics/Sequence.png>
-Package pdftex.def Info: EMPC_PNG_Pics/Sequence.png  used on input line 487.
+Package pdftex.def Info: EMPC_PNG_Pics/Sequence.png  used on input line 559.
 (pdftex.def)             Requested size: 318.67209pt x 158.09396pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[65]
-<EMPC_PNG_Pics/SearchTree.png, id=398, 989.94844pt x 213.79875pt>
+[66]
+<EMPC_PNG_Pics/LyapunovPatrition_trans.png, id=401, 592.614pt x 372.79276pt>
+File: EMPC_PNG_Pics/LyapunovPatrition_trans.png Graphic file (type png)
+<use EMPC_PNG_Pics/LyapunovPatrition_trans.png>
+Package pdftex.def Info: EMPC_PNG_Pics/LyapunovPatrition_trans.png  used on inp
+ut line 587.
+(pdftex.def)             Requested size: 398.3386pt x 250.58328pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[67 <./EMPC_PNG_Pics/Sequence.png>]
+<EMPC_PNG_Pics/SearchTree.png, id=406, 989.94844pt x 213.79875pt>
 File: EMPC_PNG_Pics/SearchTree.png Graphic file (type png)
 <use EMPC_PNG_Pics/SearchTree.png>
-Package pdftex.def Info: EMPC_PNG_Pics/SearchTree.png  used on input line 515.
+Package pdftex.def Info: EMPC_PNG_Pics/SearchTree.png  used on input line 599.
 (pdftex.def)             Requested size: 398.3386pt x 86.0269pt.
- [66 <./EMPC_PNG_Pics/Sequence.png> <./EMPC_PNG_Pics/SearchTree.png>]
-<EMPC_PNG_Pics/Memory.png, id=404, 599.841pt x 351.714pt>
+<EMPC_PNG_Pics/Memory.png, id=407, 599.841pt x 351.714pt>
 File: EMPC_PNG_Pics/Memory.png Graphic file (type png)
 <use EMPC_PNG_Pics/Memory.png>
-Package pdftex.def Info: EMPC_PNG_Pics/Memory.png  used on input line 524.
+Package pdftex.def Info: EMPC_PNG_Pics/Memory.png  used on input line 608.
 (pdftex.def)             Requested size: 398.3386pt x 233.57024pt.
-<EMPC_PNG_Pics/MultiHorizon.png, id=405, 526.96875pt x 395.22656pt>
+ [68 <./EMPC_PNG_Pics/LyapunovPatrition_trans.png> <./EMPC_PNG_Pics/SearchTree.
+png>]
+<EMPC_PNG_Pics/MultiHorizon.png, id=414, 526.96875pt x 395.22656pt>
 File: EMPC_PNG_Pics/MultiHorizon.png Graphic file (type png)
 <use EMPC_PNG_Pics/MultiHorizon.png>
-Package pdftex.def Info: EMPC_PNG_Pics/MultiHorizon.png  used on input line 537
+Package pdftex.def Info: EMPC_PNG_Pics/MultiHorizon.png  used on input line 621
 .
 (pdftex.def)             Requested size: 398.3386pt x 298.7651pt.
-
-[67 <./EMPC_PNG_Pics/Memory.png>]
-<EMPC_PNG_Pics/Result_3fEMPC.png, id=410, 333.099pt x 169.506pt>
+<EMPC_PNG_Pics/Result_3fEMPC.png, id=415, 333.099pt x 169.506pt>
 File: EMPC_PNG_Pics/Result_3fEMPC.png Graphic file (type png)
 <use EMPC_PNG_Pics/Result_3fEMPC.png>
-Package pdftex.def Info: EMPC_PNG_Pics/Result_3fEMPC.png  used on input line 54
-8.
+Package pdftex.def Info: EMPC_PNG_Pics/Result_3fEMPC.png  used on input line 63
+2.
 (pdftex.def)             Requested size: 398.3386pt x 202.70525pt.
-<EMPC_PNG_Pics/Result_PerformanceEMPC.png, id=411, 279.882pt x 142.2405pt>
+<EMPC_PNG_Pics/Result_PerformanceEMPC.png, id=416, 279.882pt x 142.2405pt>
 File: EMPC_PNG_Pics/Result_PerformanceEMPC.png Graphic file (type png)
 <use EMPC_PNG_Pics/Result_PerformanceEMPC.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Result_PerformanceEMPC.png  used on inpu
-t line 555.
+t line 639.
 (pdftex.def)             Requested size: 398.3386pt x 202.4452pt.
- [68 <./EMPC_PNG_Pics/MultiHorizon.png> <./EMPC_PNG_Pics/Result_3fEMPC.png>]
-<EMPC_PNG_Pics/SFeedbackDC.png, id=416, 162.936pt x 110.0475pt>
+<EMPC_PNG_Pics/SFeedbackDC.png, id=417, 162.936pt x 110.0475pt>
 File: EMPC_PNG_Pics/SFeedbackDC.png Graphic file (type png)
 <use EMPC_PNG_Pics/SFeedbackDC.png>
-Package pdftex.def Info: EMPC_PNG_Pics/SFeedbackDC.png  used on input line 568.
+Package pdftex.def Info: EMPC_PNG_Pics/SFeedbackDC.png  used on input line 652.
 
 (pdftex.def)             Requested size: 278.83578pt x 188.35948pt.
-
-Underfull \vbox (badness 2735) has occurred while \output is active []
-
- [69 <./EMPC_PNG_Pics/Result_PerformanceEMPC.png> <./EMPC_PNG_Pics/SFeedbackDC.
-png>]
-<EMPC_PNG_Pics/Result_EMPCfinal.png, id=421, 333.099pt x 169.506pt>
+ [69 <./EMPC_PNG_Pics/Memory.png>]
+[70 <./EMPC_PNG_Pics/MultiHorizon.png> <./EMPC_PNG_Pics/Result_3fEMPC.png>]
+<EMPC_PNG_Pics/Result_EMPCfinal.png, id=425, 333.099pt x 169.506pt>
 File: EMPC_PNG_Pics/Result_EMPCfinal.png Graphic file (type png)
 <use EMPC_PNG_Pics/Result_EMPCfinal.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Result_EMPCfinal.png  used on input line
- 589.
+ 673.
 (pdftex.def)             Requested size: 398.3386pt x 202.70525pt.
 )
-(subtex/4_c_explicit_CSR_notations.tex [70 <./EMPC_PNG_Pics/Result_EMPCfinal.pn
-g>] [71] [72]) (subtex/5_conculsion.tex [73]
+(subtex/4_c_explicit_CSR_notations.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [71 <./EMPC_PNG_Pics/Result_PerformanceEMPC.png> <./EMPC_PNG_Pics/SFeedbackDC.
+png>]
+[72 <./EMPC_PNG_Pics/Result_EMPCfinal.png>] [73]) (subtex/5_conculsion.tex
+[74]
 Chapter 5.
 
-LaTeX Warning: Reference `VUB:sec:Main' on page 74 undefined on input line 6.
+LaTeX Warning: Reference `VUB:sec:Main' on page 75 undefined on input line 6.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--9
 
  []
 
-[74
+[75
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 14--17
 
  []
 
-[75]
+[76]
 Underfull \hbox (badness 10000) in paragraph at lines 18--23
 
  []
@@ -2803,79 +2833,79 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--29
 
  []
 
-[76] [77]) (subtex/7_appendix.tex [78]
+[77] [78]) (subtex/7_appendix.tex [79]
 Overfull \hbox (5.55371pt too wide) in paragraph at lines 3--3
 []\T1/cmr/bx/n/17.28 Geometric ap-proach to multi para-met-ric pro-
  []
 
-[79
+[80
 
 ]
-<EMPC_PNG_Pics/criticalregions.jpg, id=454, 415.7934pt x 291.7299pt>
+<EMPC_PNG_Pics/criticalregions.jpg, id=460, 415.7934pt x 291.7299pt>
 File: EMPC_PNG_Pics/criticalregions.jpg Graphic file (type jpg)
 <use EMPC_PNG_Pics/criticalregions.jpg>
 Package pdftex.def Info: EMPC_PNG_Pics/criticalregions.jpg  used on input line 
 66.
 (pdftex.def)             Requested size: 358.50229pt x 251.53719pt.
- [80] [81 <./EMPC_PNG_Pics/criticalregions.jpg>] [82]
-<EMPC_PNG_Pics/BasicSearchTree.png, id=465, 985.88326pt x 359.54324pt>
+ [81] [82 <./EMPC_PNG_Pics/criticalregions.jpg>] [83]
+<EMPC_PNG_Pics/BasicSearchTree.png, id=470, 985.88326pt x 359.54324pt>
 File: EMPC_PNG_Pics/BasicSearchTree.png Graphic file (type png)
 <use EMPC_PNG_Pics/BasicSearchTree.png>
 Package pdftex.def Info: EMPC_PNG_Pics/BasicSearchTree.png  used on input line 
 396.
 (pdftex.def)             Requested size: 398.3386pt x 145.26859pt.
 )
-(subtex/8_appendix_notations.tex [83 <./EMPC_PNG_Pics/BasicSearchTree.png>])
-(subtex/9_abbreviations.tex [84]) [85]
+(subtex/8_appendix_notations.tex [84 <./EMPC_PNG_Pics/BasicSearchTree.png>])
+(subtex/9_abbreviations.tex [85]) [86]
 
 Package biblatex Warning: The option 'labelprefix' is limited
 (biblatex)                when used with BibTeX.
 (biblatex)                Consider using Biber instead.
 
 
-Overfull \hbox (3.63234pt too wide) in paragraph at lines 233--233
+Overfull \hbox (3.63234pt too wide) in paragraph at lines 239--239
 \T1/cmr/m/n/12 ``Con-strained pre-dic-tive con-trol of three-phasebuck rec-ti-f
 iers,'' \T1/cmr/m/it/12 Acta Poly-
  []
 
-[86
+[87
 
-] [87] [88]
-Overfull \hbox (2.42229pt too wide) in paragraph at lines 238--238
+] [88] [89]
+Overfull \hbox (2.42229pt too wide) in paragraph at lines 244--244
 [] \T1/cmr/m/n/12 A. H. Bon-nett and  G. Soukup, ``Un-der-stand-ing the nema mo
 tor-generator
  []
 
-[89] [90] [91]
-Overfull \hbox (14.06616pt too wide) in paragraph at lines 238--238
+[90] [91] [92]
+Overfull \hbox (14.06616pt too wide) in paragraph at lines 244--244
 \T1/cmr/m/it/12 5th In-ter-na-tional Con-fer-ence on Elec-tri-cal Engineering-B
 oumerdes (ICEE-
  []
 
-[92]
-Overfull \hbox (6.91681pt too wide) in paragraph at lines 238--238
+[93]
+Overfull \hbox (6.91681pt too wide) in paragraph at lines 244--244
 [] \T1/cmr/m/n/12 N. Muthuku-mar,  S. Srini-vasan,  K. Ramku-mar,  K. Kan-nan, 
 and  V. E. Balas,
  []
 
-[93]
-Overfull \hbox (6.06155pt too wide) in paragraph at lines 238--238
+[94]
+Overfull \hbox (6.06155pt too wide) in paragraph at lines 244--244
 \T1/cmr/m/n/12 rents,'' in \T1/cmr/m/it/12 IEE Pro-ceed-ings B (Elec-tric Power
  Ap-pli-ca-tions)\T1/cmr/m/n/12 , IET, vol. 136,
  []
 
 
-Overfull \hbox (14.42554pt too wide) in paragraph at lines 238--238
+Overfull \hbox (14.42554pt too wide) in paragraph at lines 244--244
 [] \T1/cmr/m/n/12 M. Baotic, ``Op-ti-mal con-trol of piece-wise affine sys-tems
 : A multi-parametric
  []
 
-[94]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 238.
+[95]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 244.
 
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [95]
+) [96] [97]
 (dolgozatmain.aux)
 
 LaTeX Warning: There were undefined references.
@@ -2888,10 +2918,10 @@ Package logreq Info: Writing requests to 'dolgozatmain.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 62282 strings out of 492897
- 1510287 string characters out of 3133501
- 2155613 words of memory out of 3000000
- 65249 multiletter control sequences out of 15000+200000
+ 62311 strings out of 492897
+ 1511232 string characters out of 3133501
+ 2155929 words of memory out of 3000000
+ 65277 multiletter control sequences out of 15000+200000
  560468 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,23n,96p,2664b,1437s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2929,9 +2959,9 @@ lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 msy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb>
-Output written on dolgozatmain.pdf (106 pages, 4141329 bytes).
+Output written on dolgozatmain.pdf (108 pages, 4211360 bytes).
 PDF statistics:
- 1221 PDF objects out of 1440 (max. 8388607)
+ 1231 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 238 words of extra memory for PDF output out of 10000 (max. 10000000)
 

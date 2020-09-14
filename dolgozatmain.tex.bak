@@ -1,5 +1,6 @@
 \documentclass[12pt, a4paper, twoside]{report}
 %%% Nyomtatásnál Figyelni a kétoldalasságra és a kötésre!!!
+\setcounter{secnumdepth}{5}
 \usepackage{verbatim}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -130,7 +131,9 @@
 %\renewcommand\oldrefdot[1]{\oldref{#1}.}
 %\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\hlc}[2][yellow]{{\sethlcolor{#1}\hl{#2}}}
+\newcommand{\hlcmath}[2]{\colorbox{#1}{$\displaystyle #2$}}
 \definecolor{PT}{RGB}{255,153,204}
+
 
 \newcommand{\sig}[1]{\begin{tikzpicture} \draw[ultra thick, densely dotted, color=white] (0,0)--(8,0) ;\draw[ultra thick, dotted] (10,0)--(14,0) (12,0) node[below]{#1};  \end{tikzpicture}}
 
@@ -189,8 +192,9 @@
 \input{subtex/3_a_notations_unbalance_compensation.tex}
 
 %% Explicit CSR
-\input{subtex/4_explicit_CSR.tex}
-\input{subtex/4_a_notations_explicit_CSR.tex}
+\input{subtex/4_a_explicit_CSR_basics.tex}
+\input{subtex/4_b_explicit_CSR_core.tex}
+\input{subtex/4_c_explicit_CSR_notations.tex}
 
 %\input{subtex/3_1_basics_unbalance.tex}
 %\input{subtex/3_2_basics_powelectric.tex}

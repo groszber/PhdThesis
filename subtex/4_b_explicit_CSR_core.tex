@@ -184,7 +184,7 @@ Understandably, model based controllers require the system's model the ought to 
     \hlc[PT]{With }\ref{EMPC:equ:mtx_ctrl} \hlc[PT]{in mind the requirements of the closed loop system are the following:}
     \begin{itemize}
     \item \hlc[PT]{Minimize THD and reactive power on the AC side, from the network's measurement point (at the voltage sources on the topology).}
-    \item \hlc[PT]{Reach the steady state reference of $i_dc$ the fatest possible with minimal overshoot on the resistive load's poles.}
+    \item \hlc[PT]{Reach the steady state reference of $i_dc$ the fastest possible with minimal overshoot on the resistive load's poles.}
     \end{itemize}
     Using the separation of the AC side and DC side controllers, the control structure depicted in Fig. \ref{EMPC:fig:ControlStruct}. is proposed.
 
@@ -217,7 +217,7 @@ Understandably, model based controllers require the system's model the ought to 
 \subsubsection{DC-side explicit model predictive control} \label{EMPC:sec:DCside}
 
     Model predictive control (MPC) is an efficient and systematic method for solving complex multi-variable constrained optimal control problems \cite{vajda2017limiting}. The basic notions of MPC is explained in section \oldref{BASICCSR:sec:MPC}, where the MPC control law is explained, namely, is based on the “receding horizon formulation”, where the model’s assumed behavior is calculated for a number of $N$ steps, where $N$ stands for the horizon’s length. Only the first step of the computed optimal input is applied in each iteration. The remaining steps of the optimal control input are discarded and a new optimal control problem (explained in section \oldref{BASICCSR:sec:LQR}) is solved at the next sample time. Using this approach, the receding horizon policy provides the controller with the desired feedback characteristics, although with high order systems the computational effort is considerably demanding since all the steps should be taken in to account on the specified horizon in every iteration.\\
-		With Explicit MPC (EMPC), the discrete time constrained optimal control problem is reformulated as multi-parametric linear or quadratic programming. As explained in section \oldref{BASICCSR:sec:OptimalControl}, the optimization problem can be solved offline, making it much more feasible from the perspective of the optimal control task. The optimal control law is a piecewise affine function of the states, and the resulting solution is stored in a pre-calculated lookup table. The parameter space, or the state-space is partitioned into critical regions. The real-time implementation consists in searching for the active critical region, where the measured state variables lie, and in applying the corresponding piecewise affine control law to achieve the desired dynamics.
+		With Explicit MPC (EMPC), the discrete time constrained optimal control problem is reformulated as multi-parametric linear or quadratic programming. As explained in section \oldref{BASICCSR:sec:OptimalControl}, the optimization problem can be solved off-line, making it much more feasible from the perspective of the optimal control task. The optimal control law is a piecewise affine function of the states, and the resulting solution is stored in a pre-calculated lookup table. The parameter space, or the state-space is partitioned into critical regions. The real-time implementation consists in searching for the active critical region, where the measured state variables lie, and in applying the corresponding piecewise affine control law to achieve the desired dynamics.
     In order to introduce the MPC implementation, let us consider a linear discrete time system \ref{EMPC:equ:DiscreteStateSpace} derived with the discretisation of system \ref{EMPC:equ:mtx_DC} with zero-order hold method, where control inputs are assumed piecewise constant over the simulation sample time $T_s=\frac{1}{f_s}$ :
 
     \begin{equation}
@@ -264,13 +264,6 @@ Understandably, model based controllers require the system's model the ought to 
 There the formulation of such problem is described in detail in chapter \ref{BASICCSR:sec:OptimalControl}.\\
     This problem is solved at each time instant $t$, where $\textbf{x}_{t+k\vert t}$ denotes the state vector predicted at time $t+k$, obtained by applying the input sequence $\textbf{u}_{t|t}...\textbf{u}_{t|t+1}$ to model \ref{EMPC:equ:quadratic_regions}, starting from the state $\textbf{x}_{t|t}$. Further, it is assumed that $Q$ and $R$, are symmetric positive semidefinite $(\textbf{Q}_w=\textbf{Q}_w^T\geq0$, $\textbf{R}_w=\textbf{R}_w^T>0)$ and $K$ is a feedback gain. Further, $N_y,N_u,N_c$ are the output, input and constraint horizons, respectively.
     Using the model for predicting the future behavior of the system and with some appropriate substitution and variable manipulation which basic notions showed in section \oldref{BASICCSR:sec:MPC}, the problem \ref{EMPC:equ:optim_problem},\ref{EMPC:equ:optim_problem_constr} can be transformed to the standard multi parametric quadratic programming form, as described in \cite{rivera2013predictive}:
-%
-%    \begin{equation}
-%        \begin{array}{rcl}
-%            J(\textbf{x}(t))&=&\min \textbf{z}'\textbf{H}\textbf{z}
-%        \end{array}
-%        \label{EMPC:equ:quadratic_program}
-%    \end{equation}
 
     \begin{equation}
         \begin{array}{rcl}
@@ -318,17 +311,17 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
     In case of the discrete time system resulting from \ref{EMPC:equ:mtx_ctrl}, for sampling time equal with the switching period $T_s=5\cdot10^{-5}$  s, the problem defined to be solved by MPC is the minimization of the quadratic cost function \ref{EMPC:equ:DiscreteStateSpace} for:
 
     \begin{equation}
+    \hlcmath{PT}{
         \begin{array}{l}
             \textbf{R}_w=\begin{bmatrix}
-                1& 0\\
-                0& 1\\
+                1\\
             \end{bmatrix},
             \textbf{Q}_w=\begin{bmatrix}
-                10^{-6}& 0\\
-                0& 10^{-6}\\
+                5^{-5}& 0\\
+                0& 5^{-5}\\
             \end{bmatrix},
-            N_y=N_u=N_c=2
-        \end{array}
+            N_y=N_u=N_c=4.
+        \end{array}}
         \label{EMPC:equ:quadratic_mtx_set}
     \end{equation}
 
@@ -338,21 +331,21 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
     \begin{equation}
         \begin{array}{rcl}
             0\leq&i_{dc}&\leq 50A\\
-            0\leq&u_{0}&\leq 500V
+            0\leq&u_{0}&\leq 500V.
         \end{array}
         \label{EMPC:equ:numeric_constraints}
     \end{equation}
 
-    The state space partition resulting from this problem has 13 critical regions, which can be observed in Fig. \ref{EMPC:fig:regions}.
+    The state space partition resulting from this problem has \hlcmath{PT}{10} critical regions, which can be observed in Fig. \ref{EMPC:fig:regions}.
 
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/Regions.png}
-        \caption{State space partitioning.}
+        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/Regions2_trans.png}
+        \caption{\hlcmath{PT}{\textnormal{State space partitioning over the determined constraints.}}}
         \label{EMPC:fig:regions}
     \end{figure}
 
-    From the basis of the discretised model \ref{EMPC:equ:DiscreteStateSpace}, the given constraints \ref{EMPC:equ:numeric_constraints}, and horizon \ref{EMPC:equ:numeric_constraints} the cost function \ref{EMPC:equ:optim_problem} is established via the MPT toolbox [30] and used in the generated controller for the EMPC design [29], [31]. The controller is created as a compliable S-function in the Matlab/Simulink environment and its place in the control structure can be observed in Fig. \ref{EMPC:fig:MPCStructure}. as the EMPC controller.
+    From the basis of the discretised model \ref{EMPC:equ:DiscreteStateSpace}, the given constraints \ref{EMPC:equ:numeric_constraints}, and horizon \ref{EMPC:equ:numeric_constraints} the cost function \ref{EMPC:equ:optim_problem} is established via the MPT toolbox \cite{MPT3} and uaastrom2013computeraastrom2013computerzhang2015simplifiedsed in the generated controller for the EMPC design [29], [31]. The controller is created as a compliable S-function in the Matlab/Simulink environment and its place in the control structure can be observed in Fig. \ref{EMPC:fig:MPCStructure}. as the EMPC controller.
     The output of the MPC controller is the control variable obtained via solving \ref{EMPC:equ:optim_problem_constr} and
     $u_{MPC}=(\delta_du_{c_d}+\delta_qu_{c_q})$, from which the current reference can be calculated using \ref{EMPC:equ:numeric_constraints}. The quadrature component $u_{c_q}$ is zero in the synchronous frame of the filter capacitor voltage.
 
@@ -373,16 +366,95 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
 \subsubsection{Active AC-side damping}\label{EMPC:sec:ACdamping}
 
-    The CSR requires a voltage supply on the AC side. Taking the inductive character of the mains into consideration, the presence of a three-phase capacitor bank at the input of the CSR is a must. The most convenient is to use three-phase LC filtering with inductors on the lines and star connected capacitors resembling those in Fig. \ref{EMPC:fig:network}, although the resonance phenomena between these components can still cause difficult problems. The simplest way to dampen the resonance on the AC side LC filter is to add a damping resistor across the capacitor \cite{regaya2014new}. Because these resistors result in high losses, active damping methods have been proposed, which emulate damping resistors by control. This makes the CSR bridge produce an additional high frequency current, equivalent to the presence of virtual damping resistors connected in parallel with the AC capacitors. The resonance of the AC side LC filter produces harmonics in the capacitor voltage with frequency close to $\omega_{ac}=\frac{1}{\sqrt{L_{ac}C_{ac}}}$, which appears as $\omega_{ac}-\omega$ component in $u_{c_d}$, where $\omega=2\pi f$. The fundamental component of the capacitor voltage represents a DC component in the synchronous reference frame. Therefore, a high-pass filter (HPF) is applied to filter out this DC component, with the transfer function:
+    The CSR requires a voltage supply on the AC side. Taking the inductive character of the mains into consideration, the presence of a three-phase capacitor bank at the input of the CSR is a must. The most convenient is to use three-phase LC filtering with inductors on the lines and star connected capacitors resembling those in Fig. \ref{EMPC:fig:network}, although the resonance phenomena between these components can still cause difficult problems.\\
+    \hlc[PT]{Let us consider the AC side differential equation of the CSR from} \ref{EMPC:equ:mtx_AC}:
+
+    \begin{equation}
+    \hlcmath{PT}{
+        \begin{array}{rcl}
+            \begin{bmatrix}
+                \dot{i_{ac_d}}\\
+                \dot{i_{ac_q}}\\
+                \dot{u_{c_d}}\\
+                \dot{u_{c_q}}
+            \end{bmatrix}&=&
+            \begin{bmatrix}
+                -\frac{R}{L_{ac}}   &\omega &-\frac{1}{L_{ac}}  &0\\
+                -\omega   &-\frac{R}{L_{ac}} &0  &-\frac{1}{L_{ac}}\\
+                \frac{1}{C_{ac}}   &0 &0  &\omega\\
+                0   &\frac{1}{C_{ac}} &-\omega  &0
+            \end{bmatrix}
+            \begin{bmatrix}
+                i_{ac_d}\\
+                i_{ac_q}\\
+                u_{c_d}\\
+                u_{c_q}
+            \end{bmatrix}+
+            \begin{bmatrix}
+                \frac{u_d}{L_{ac}}\\
+                \frac{u_q}{L_{ac}}\\
+                -\frac{\delta_di_{dc}}{C_{ac}}\\
+                -\frac{\delta_qi_{dc}}{C_{ac}}
+            \end{bmatrix}\nonumber.
+        \end{array}}
+        %\label{EMPC:equ:mtx_AC}
+    \end{equation}
+
+    \hlc[PT]{The above equation set is representing the AC dynamics well, however, since the physical system is compliant to some boundaries, further simplification can be obtained as displayed by }\cite{zhang2015simplified}\hlc[PT]{. The capacitor's voltage's d-axis can be aligned with the q-axis, as:}
+
+    \begin{equation}
+    \hlcmath{PT}{
+        \begin{array}{rcl}
+        u_{c_q}&=&0\\
+        \end{array}}
+        \label{EMPC:equ:reduced_ucq}
+    \end{equation}
+
+    \hlc[PT]{Since the time constant difference between AC and DC side, described in} \oldref{EMPC:sec:Simplification}\hlc[PT]{, and the large difference between $L_{ac}$ and $L_{dc}$, displayed in Table} \ref{EMPC:tbl:params}\hlc[PT]{. Also $i_{dc}$ can be approximated as an $I_{dc}$ constant (modulated by $\delta_d$), and neglecting small couplings such $\omega L_{ac}$, and $\omega C_{ac}$, the AC side model looks like this:}
+
+    \begin{equation}
+    \hlcmath{PT}{
+        \begin{array}{rcl}
+        L_{ac}\dot{i_{ac_d}}&=&u_d-u_{c_d}\\
+        L_{ac}\dot{i_{ac_q}}&=&u_q\\
+        C_{ac}\dot{u_{c_d}}&=&i_d-\delta_dI_{dc}\\
+        0&=&i_d-\delta_dI_{dc},\\
+        \end{array}}
+        \label{EMPC:equ:reduced_AC}
+    \end{equation}
+
+    \hlc[PT]{Such as in} \ref{EMPC:equ:reduced_AC}\hlc[PT]{ the equation along the q-axis is first order and has good stability, in addition, the d-axis can be extended in frequency domain as:}
+
+    \begin{equation}
+    \hlcmath{PT}{
+        \begin{array}{rcl}
+        u_{c_d}&=&\frac{u_d}{s^2L_{ac}C_{ac}+1}-\frac{sL_{ac}I_{dc}\delta_d}{s^2L_{ac}C_{ac}+1},\\
+        \end{array}}
+        \label{EMPC:equ:reduced_ucd}
+    \end{equation}
+
+    \hlc[PT]{where $u_d$ carries potential disturbance due resonance of the LC filter. Hence, equation} \ref{EMPC:equ:reduced_ucd}\hlc[PT]{ is a second order linear system without any damping, therefore active damping (or resonance suppressing control) can be implemented.}\\
+    The simplest way to dampen the resonance would be to add further damping resistor across the capacitor \cite{regaya2014new}, to dampen the oscillation. Because these resistors result in high losses, active damping method can be utilised as displayed in \cite{wiseman2002pwm}, which emulate damping resistors by control. This makes the CSR bridge produce an additional high frequency current $i_{rHF}$, equivalent to the presence of virtual damping resistor $R_H$ connected in parallel with the AC capacitors. The resonance of the AC side LC filter produces harmonics in the capacitor voltage with frequency close to $\omega_{ac}=\frac{1}{\sqrt{L_{ac}C_{ac}}}$, which appears as $\omega_{ac}-\omega$ component in $u_{c_d}$, where $\omega=2\pi f$. The fundamental component of the capacitor voltage represents a DC component in the synchronous reference frame. Therefore, a high-pass filter (HF) is applied to filter out this DC component, with the transfer function:
 
     \begin{equation}
         \begin{array}{rcl}
-            HPF(s)&=&\frac{s}{s+0.1\cdot(\omega_{ac}-\omega}
+            HF(s)&=&\frac{s}{s+0.1\cdot(\omega_{ac}-\omega)}.\\
         \end{array}
         \label{EMPC:equ:AC_HPF}
     \end{equation}
 
-    A virtual damping resistance $R_H$ has been defined for calculation of the damping current component $i_{HPF}$ from the HPF component of the capacitor voltage.
+    \hlc[PT]{Adding the HF's transfer function and the virtual resistance, the damped dynamics follows:}
+
+    \begin{equation}
+    \hlcmath{PT}{
+        \begin{array}{rcl}
+        u_{c_d}&=&\frac{u_d}{s^2L_{ac}C_{ac}+1}-\frac{sL_{ac}I_{dc}\delta_d}{s^2L_{ac}C_{ac}+1}-\frac{HF(s)}{sC_{ac}R_H},\\
+        \end{array}}
+        \label{EMPC:equ:reduced_ucd}
+    \end{equation}
+
+
+    A virtual damping resistance $R_H$ has been defined for calculation of the damping current component $i_{rHF}$ from the HF component of the capacitor voltage, which can be observed in Fig. \ref{EMPC:fig:ControlStruct}, as well as in Fig. \ref{EMPC:fig:MPCStructure}.
 
 \subsection{Modulation}\label{EMPC:sec:Modulation}
 
@@ -436,9 +508,9 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
         \end{array}
         \label{EMPC:equ:neighbor}
     \end{equation}
-    
+
     which can be observed in Figure \ref{EMPC:fig:OnePhasor}.
-    
+
     \begin{figure}[!h]
         \centering
         \includegraphics[width=0.6\textwidth]{EMPC_PNG_Pics/OnePhasor.png}
@@ -489,7 +561,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
         \label{EMPC:tbl:sequence}
     \end{table}
 
-    
+
     \hlc[PT]{Additionally, the implemented modulation logic prevents the reference from applying currents outside the modulation circle of} \ref{EMPC:fig:VectorPhasor}. \hlc[PT]{This is realised in} (\ref{EMPC:equ:refconstraint}) \hlc[PT]{resulting from the available magnitudes of the current vectors, is applied to the current reference, on top of the controller constraints in} \ref{EMPC:equ:numeric_constraints}.
 
     \begin{equation}
@@ -498,17 +570,29 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
         \end{array}
         \label{EMPC:equ:refconstraint}
     \end{equation}
-    
+
     \hlc[PT]{The modulation formulation is only meant to apply on the control action in the above mentioned ways (realizing and constraining the reference) since the switching frequency $fpwm$ is chosen so high that the controller dynamics match with the SVM state switching frequency. As such no lag or undersampling is assumed, and the system dynamics are already implicit in the controller design.}
 
 
 \subsection{Discussion}\label{EMPC:sec:Discussion}
 
     From the continuous AC \ref{EMPC:equ:mtx_AC}, and DC \ref{EMPC:equ:mtx_DC} model equations described in Ch.X., the controller is formulated form discretised system \ref{EMPC:equ:DiscreteStateSpace}, and it is described via the cost function and control problem of \ref{EMPC:equ:optim_problem}, and \ref{EMPC:equ:optim_problem_constr} in Ch.X$+$1. The evaluated model and control structure are shown on Fig.4. In the following section said EMPC’s computational requirements are evaluated, and the Matlab/Simulink simulation results are compared to a classic state feedback controller’s dynamic performance.
+    
+    \subsubsection{Lyapunov stability}\label{EMPC:sec:LyapStab}
+    
+    \hlc[PT]{The systematic finding of Lyapunov functions is described in detail in section} \oldref{BASICCSR:sec:MPCStability} \hlc[PT]{as well as in} \cite{borrelli2017predictive}. \hlc[PT]{The explicit receding horizon control law formulated in section} \oldref{EMPC:sec:DCside} \hlc[PT]{is mapped according to} \ref{EMPC:equ:quadratic_set}, \hlc[PT]{resulting the partitioning of the constrained state space displayed on Fig.} \ref{EMPC:fig:regions}.\hlc[PT]{ Considering system} \ref{EMPC:equ:DiscreteStateSpace} \hlc[PT]{with the given constraints of} \ref{EMPC:equ:numeric_constraints} and RHC law \ref{EMPC:equ:optim_problem}, \hlc[PT]{the assumption is that a maximal positive-, and control invariant set $\mathcal{X}_f$ can be obtained for the closed loop system, for every defined critical region. For finding and $\mathcal{X}_f$ and the feasibility of constructing the critical region specific Lyapunov function an implemented verification method is available from} \cite{MPT3}, \hlc[PT]{by searching $\mathcal{X}_f$ for the closed loop autonomous PWA system. Then piece-wise Lyapunov function can be constructed displayed on Fig} \ref{EMPC:fig:LyapStab}.
+    
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/LyapunovPatrition_trans.png}
+        \caption{Lyapunov function for EMPC every partition.}
+        \label{EMPC:fig:LyapStab}
+    \end{figure}
+
 
     \subsubsection{Computational effort}\label{EMPC:sec:CompEffort}
 
-    The binary search tree generated for the control problem presented in Fig. \ref{EMPC:fig:SearchTree}. The search method and formulation of the tree is described in chapter \ref{BASICCSR:sec:EMPCStorage}. The depth of the search tree is 5 and it has a total number of 29 nodes. It is utilized with the MPT toolbox \cite{muthukumar2016adaptive}, \cite{kutasi2010constrained}, and it can be used for the computationally optimal real-time implementation of the proposed algorithm on low-cost hardware.
+    The binary search tree generated for the control problem presented in Fig. \ref{EMPC:fig:SearchTree}. The search method and formulation of the tree is described in chapter \ref{BASICCSR:sec:EMPCStorage}. The depth of the search tree is 5 and it has a total number of 29 nodes. It is utilized with the MPT toolbox \cite{MPT3}, and it can be used for the computationally optimal real-time implementation of the proposed algorithm on low-cost hardware.
 
     \begin{figure}[!ht]
         \centering
@@ -581,7 +665,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
         \label{EMPC:equ:tuning}
     \end{equation}
 
-    The state feedback controllers block on the diagram is taking the controller's place, shown on Fig. \ref{EMPC:fig:ControlStruct}. The independent outputs are the high pass filter's output  $i_{rHPF(d)}$ and the controller's output $i_{rcontrol(d)}$. The sum of the independent current values is converted to Clarke frame to be able to govern the switching states of the IGBT's. This can be done because $i_{rHF(d)}$ has only high frequency components and $i_{rcontrol(d)}$ has low frequency components due to the differences in LC time constants, as discussed in the second section. Then the control signal governing the switches is applied in the same manner, described at the start of section \oldref{EMPC:sec:Modulation}.
+    The state feedback controllers block on the diagram is taking the controller's place, shown on Fig. \ref{EMPC:fig:ControlStruct}. The independent outputs are the high pass filter's output  $i_{rHF(d)}$ and the controller's output $i_{rcontrol(d)}$. The sum of the independent current values is converted to Clarke frame to be able to govern the switching states of the IGBT's. This can be done because $i_{rHF(d)}$ has only high frequency components and $i_{rcontrol(d)}$ has low frequency components due to the differences in LC time constants, as discussed in the second section. Then the control signal governing the switches is applied in the same manner, described at the start of section \oldref{EMPC:sec:Modulation}.
     The state feedback control's performance in comparison with the EMPC is shown in Fig. \ref{EMPC:fig:Result_EMPCfinal}.
 
     \begin{figure}[!ht]
