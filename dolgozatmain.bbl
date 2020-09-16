@@ -2654,59 +2654,133 @@
     \field{year}{2015}
   \endentry
 
-  \entry{urmos2017application}{article}{}
+  \entry{bai2013resonance}{article}{}
     \name{author}{6}{}{%
-      {{hash=UA}{%
-         family={{\"U}rm{\"o}s},
-         familyi={{\"U}\bibinitperiod},
-         given={Antal},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=FZ}{%
-         family={Farkas},
-         familyi={F\bibinitperiod},
-         given={Zolt{\'a}n},
+      {{hash=BZ}{%
+         family={Bai},
+         familyi={B\bibinitperiod},
+         given={Zhihong},
          giveni={Z\bibinitperiod},
       }}%
-      {{hash=FM}{%
-         family={Farkas},
+      {{hash=MH}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={Hao},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=XD}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Dewei},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=WB}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Bin},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=FY}{%
+         family={Fang},
          familyi={F\bibinitperiod},
-         given={M{\'a}rk},
-         giveni={M\bibinitperiod},
+         given={Youtong},
+         giveni={Y\bibinitperiod},
       }}%
-      {{hash=ST}{%
-         family={S{\'a}ndor},
-         familyi={S\bibinitperiod},
-         given={Tam{\'a}s},
-         giveni={T\bibinitperiod},
-      }}%
-      {{hash=KLT}{%
-         family={K{\'o}czy},
-         familyi={K\bibinitperiod},
-         given={L{\'a}szl{\'o}\bibnamedelima T},
-         giveni={L\bibinitperiod\bibinitdelim T\bibinitperiod},
-      }}%
-      {{hash=NA}{%
-         family={Nemcsics},
-         familyi={N\bibinitperiod},
-         given={{\'A}kos},
-         giveni={{\'A}\bibinitperiod},
+      {{hash=YY}{%
+         family={Yao},
+         familyi={Y\bibinitperiod},
+         given={Yingying},
+         giveni={Y\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {Obuda University}%
+      {IEEE}%
     }
-    \strng{namehash}{UAFZFM+1}
-    \strng{fullhash}{UAFZFMSTKLTNA1}
+    \strng{namehash}{BZMHXD+1}
+    \strng{fullhash}{BZMHXDWBFYYY1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{number}{4}
-    \field{pages}{207\bibrangedash 224}
-    \field{title}{Application of self-organizing maps for technological support
-  of droplet epitaxy}
-    \field{volume}{14}
-    \field{journaltitle}{Acta Polytechnica Hungarica}
-    \field{year}{2017}
+    \field{number}{7}
+    \field{pages}{3146\bibrangedash 3154}
+    \field{title}{Resonance damping and harmonic suppression for grid-connected
+  current-source converter}
+    \field{volume}{61}
+    \field{journaltitle}{IEEE Transactions on Industrial Electronics}
+    \field{year}{2013}
+  \endentry
+
+  \entry{wiseman2005active}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WJC}{%
+         family={Wiseman},
+         familyi={W\bibinitperiod},
+         given={Jason\bibnamedelima C},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=WB}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Bin},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{WJCWB1}
+    \strng{fullhash}{WJCWB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{758\bibrangedash 764}
+    \field{title}{Active damping control of a high-power PWM current-source
+  rectifier for line-current THD reduction}
+    \field{volume}{52}
+    \field{journaltitle}{IEEE Transactions on Industrial Electronics}
+    \field{year}{2005}
+  \endentry
+
+  \entry{zheng2010current}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=ZH}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Hong},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=ZX}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Xiaodi},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=YN}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Ning},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=DY}{%
+         family={Ding},
+         familyi={D\bibinitperiod},
+         given={Yanhua},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{ZHZXYN+1}
+    \strng{fullhash}{ZHZXYNDY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2010 International Conference on Computer, Mechatronics,
+  Control and Electronic Engineering}
+    \field{pages}{103\bibrangedash 106}
+    \field{title}{Current source rectifier based on fuzzy two closed loop
+  control system}
+    \field{volume}{5}
+    \field{year}{2010}
   \endentry
 
   \entry{chatterjee2008augmented}{article}{}
@@ -2947,6 +3021,35 @@
     \field{volume}{11}
     \field{journaltitle}{Acta Polytechnica Hungarica}
     \field{year}{2014}
+  \endentry
+
+  \entry{correa2008predictive}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=CP}{%
+         family={Correa},
+         familyi={C\bibinitperiod},
+         given={Pablo},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Rodriguez},
+         familyi={R\bibinitperiod},
+         given={Jose},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{CPRJ1}
+    \strng{fullhash}{CPRJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2008 13th International Power Electronics and Motion
+  Control Conference}
+    \field{pages}{699\bibrangedash 702}
+    \field{title}{A predictive control scheme for current source rectifiers}
+    \field{year}{2008}
   \endentry
 
   \entry{kelemen2010constrained}{inproceedings}{}

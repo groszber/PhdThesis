@@ -681,6 +681,14 @@
   publisher={Cambridge University Press},
 }
 
+%@book{wang2009model,
+%  title={Model predictive control system design and implementation using MATLAB{\textregistered}},
+%  author={Wang, Liuping},
+%  year={2009},
+%  publisher={Springer Science \& Business Media}
+%}
+
+
 @inproceedings{kutasi2008vector,
   title={Vector control of induction motor drives with model based predictive current controller},
   author={Kutasi, Nimrod and Kelemen, Andras and Imecs, Maria},
@@ -689,6 +697,17 @@
   year={2008},
   organization={IEEE}
 }
+
+@inproceedings{wiseman2002pwm,
+  title={A PWM current-source rectifier with active damping for high power medium voltage applications},
+  author={Wiseman, Jason C and Wu, Bin and Castle, GSP},
+  booktitle={2002 IEEE 33rd Annual IEEE Power Electronics Specialists Conference. Proceedings (Cat. No. 02CH37289)},
+  volume={4},
+  pages={1930--1934},
+  year={2002},
+  organization={IEEE}
+}
+
 
 
 %===================== BASIC NOITIONS UNBALANCE================

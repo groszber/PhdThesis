@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  14 SEP 2020 19:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  16 SEP 2020 18:24
 entering extended mode
 **C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
 (C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
@@ -1875,6 +1875,9 @@ iply defined.
 LaTeX Warning: Label `EMPC:equ:reduced_ucd' multiply defined.
 
 
+LaTeX Warning: Label `EMPC:equ:quadratic_mtx_set' multiply defined.
+
+
 LaTeX Warning: Label `BASICMPC:equ:MPP_KKT_result' multiply defined.
 
 
@@ -2572,258 +2575,272 @@ RedComp_JCP-figure6-eps-converted-to.pdf> <./Unblance_EPS_Pics/UnbalRedComp_JCP
 -figure7-eps-converted-to.pdf>]) (subtex/4_a_explicit_CSR_basics.tex [37]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--19
+Underfull \hbox (badness 10000) in paragraph at lines 6--29
 
  []
 
 [38
 
-] [39]
-<EMPC_PNG_Pics/BasicCurrentRectifiers.png, id=295, 558.28575pt x 219.82124pt>
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+[40]
+<EMPC_PNG_Pics/BasicCurrentRectifiers.png, id=298, 558.28575pt x 219.82124pt>
 File: EMPC_PNG_Pics/BasicCurrentRectifiers.png Graphic file (type png)
 <use EMPC_PNG_Pics/BasicCurrentRectifiers.png>
 Package pdftex.def Info: EMPC_PNG_Pics/BasicCurrentRectifiers.png  used on inpu
-t line 37.
+t line 47.
 (pdftex.def)             Requested size: 358.50229pt x 141.15805pt.
-<EMPC_PNG_Pics/BasicVoltageRectifiers.png, id=296, 558.28575pt x 211.992pt>
+<EMPC_PNG_Pics/BasicVoltageRectifiers.png, id=299, 558.28575pt x 211.992pt>
 File: EMPC_PNG_Pics/BasicVoltageRectifiers.png Graphic file (type png)
 <use EMPC_PNG_Pics/BasicVoltageRectifiers.png>
 Package pdftex.def Info: EMPC_PNG_Pics/BasicVoltageRectifiers.png  used on inpu
-t line 44.
+t line 54.
 (pdftex.def)             Requested size: 358.50229pt x 136.13051pt.
- [40 <./EMPC_PNG_Pics/BasicCurrentRectifiers.png> <./EMPC_PNG_Pics/BasicVoltage
+ [41 <./EMPC_PNG_Pics/BasicCurrentRectifiers.png> <./EMPC_PNG_Pics/BasicVoltage
 Rectifiers.png>]
-<EMPC_PNG_Pics/Waves.png, id=302, 832.91174pt x 440.24475pt>
+<EMPC_PNG_Pics/Waves.png, id=305, 832.91174pt x 440.24475pt>
 File: EMPC_PNG_Pics/Waves.png Graphic file (type png)
 <use EMPC_PNG_Pics/Waves.png>
-Package pdftex.def Info: EMPC_PNG_Pics/Waves.png  used on input line 102.
+Package pdftex.def Info: EMPC_PNG_Pics/Waves.png  used on input line 112.
 (pdftex.def)             Requested size: 398.3386pt x 210.54256pt.
- [41] [42 <./EMPC_PNG_Pics/Waves.png>]
-Overfull \hbox (4.97731pt too wide) detected at line 181
+ [42] [43 <./EMPC_PNG_Pics/Waves.png>]
+Overfull \hbox (4.97731pt too wide) detected at line 191
 []
  []
 
-[43] [44] [45] [46]
-Overfull \hbox (14.95259pt too wide) detected at line 414
+[44] [45] [46] [47]
+Overfull \hbox (14.95259pt too wide) detected at line 424
 []
  []
 
-[47]
-Overfull \hbox (7.58453pt too wide) in paragraph at lines 498--499
+[48]
+Overfull \hbox (7.58453pt too wide) in paragraph at lines 508--509
 []\T1/cmr/m/n/12 where $[][] \OMS/cmsy/m/n/12  \U/msb/m/n/12 R[]$ \T1/cmr/m/n/
 12 is the ter-mi-nal poly-he-dral re-gion, and $[][] \OT1/cmr/m/n/12 = [[][]\OM
 L/cmm/m/it/12 ; [] ; [][]\OT1/cmr/m/n/12 ][] \OMS/cmsy/m/n/12 2
  []
 
-[48]
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 539.
-
-
-Overfull \hbox (14.25795pt too wide) detected at line 577
-[]
- []
-
-
-Overfull \hbox (0.85146pt too wide) detected at line 591
-[]
- []
-
 [49]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 634.
+LaTeX Font Warning: Command \small invalid in math mode on input line 549.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 687.
-
-[50] [51]
-Underfull \hbox (badness 10000) in paragraph at lines 738--739
-
- []
-
-<EMPC_PNG_Pics/RHC_gray.jpg, id=340, 941.5175pt x 734.745pt>
-File: EMPC_PNG_Pics/RHC_gray.jpg Graphic file (type jpg)
-<use EMPC_PNG_Pics/RHC_gray.jpg>
-Package pdftex.def Info: EMPC_PNG_Pics/RHC_gray.jpg  used on input line 742.
-(pdftex.def)             Requested size: 358.50229pt x 279.76656pt.
-
-Overfull \hbox (3.21584pt too wide) detected at line 760
+Overfull \hbox (14.25795pt too wide) detected at line 587
 []
  []
 
-[52 <./EMPC_PNG_Pics/RHC_gray.jpg>] [53]
 
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 848.
+Overfull \hbox (0.85146pt too wide) detected at line 601
+[]
+ []
+
+[50]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 644.
 
 
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 848.
+LaTeX Font Warning: Command \small invalid in math mode on input line 697.
+
+[51] [52]
+Underfull \hbox (badness 10000) in paragraph at lines 748--749
+
+ []
+
+<EMPC_PNG_Pics/RHC_gray.jpg, id=343, 941.5175pt x 734.745pt>
+File: EMPC_PNG_Pics/RHC_gray.jpg Graphic file (type jpg)
+<use EMPC_PNG_Pics/RHC_gray.jpg>
+Package pdftex.def Info: EMPC_PNG_Pics/RHC_gray.jpg  used on input line 752.
+(pdftex.def)             Requested size: 358.50229pt x 279.76656pt.
+
+Overfull \hbox (3.21584pt too wide) detected at line 770
+[]
+ []
+
+[53 <./EMPC_PNG_Pics/RHC_gray.jpg>] [54]
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 858.
 
 
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 848.
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 858.
 
 
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 848.
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 858.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 858.
 
 ) (subtex/4_b_explicit_CSR_core.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-[54] [55]
-<EMPC_PNG_Pics/circuit.png, id=354, 630.55576pt x 287.8755pt>
+[55] [56]
+<EMPC_PNG_Pics/circuit.png, id=358, 630.55576pt x 287.8755pt>
 File: EMPC_PNG_Pics/circuit.png Graphic file (type png)
 <use EMPC_PNG_Pics/circuit.png>
 Package pdftex.def Info: EMPC_PNG_Pics/circuit.png  used on input line 18.
 (pdftex.def)             Requested size: 398.3386pt x 181.86327pt.
- [56 <./EMPC_PNG_Pics/circuit.png>] [57]
+ [57 <./EMPC_PNG_Pics/circuit.png>] [58]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 163.
 
-<EMPC_PNG_Pics/ControlStructure.png, id=362, 477.58424pt x 347.49825pt>
+<EMPC_PNG_Pics/ControlStructure.png, id=365, 477.58424pt x 347.49825pt>
 File: EMPC_PNG_Pics/ControlStructure.png Graphic file (type png)
 <use EMPC_PNG_Pics/ControlStructure.png>
 Package pdftex.def Info: EMPC_PNG_Pics/ControlStructure.png  used on input line
  193.
 (pdftex.def)             Requested size: 398.3386pt x 289.8498pt.
-[58] [59 <./EMPC_PNG_Pics/ControlStructure.png>] [60]
-<EMPC_PNG_Pics/Regions2_trans.png, id=373, 806.01125pt x 515.9275pt>
+[59] [60 <./EMPC_PNG_Pics/ControlStructure.png>] [61]
+<EMPC_PNG_Pics/Regions2_trans.png, id=376, 806.01125pt x 515.9275pt>
 File: EMPC_PNG_Pics/Regions2_trans.png Graphic file (type png)
 <use EMPC_PNG_Pics/Regions2_trans.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Regions2_trans.png  used on input line 3
 43.
 (pdftex.def)             Requested size: 398.3386pt x 254.9716pt.
 
-Overfull \hbox (1.32483pt too wide) in paragraph at lines 348--351
-\T1/cmr/m/n/12 [106] and uaas-trom2013computeraastrom2013computerzhang2015simpl
-ifiedsed
+Overfull \hbox (1.97745pt too wide) in paragraph at lines 348--351
+\T1/cmr/m/n/12 [0] and uaas-trom2013computeraastrom2013computerzhang2015simplif
+iedsed in
  []
 
-[61]
-<EMPC_PNG_Pics/MPCStructure.png, id=377, 599.841pt x 351.714pt>
+[62]
+<EMPC_PNG_Pics/MPCStructure.png, id=381, 599.841pt x 351.714pt>
 File: EMPC_PNG_Pics/MPCStructure.png Graphic file (type png)
 <use EMPC_PNG_Pics/MPCStructure.png>
 Package pdftex.def Info: EMPC_PNG_Pics/MPCStructure.png  used on input line 362
 .
 (pdftex.def)             Requested size: 398.3386pt x 233.57024pt.
- [62 <./EMPC_PNG_Pics/Regions2_trans.png>] [63 <./EMPC_PNG_Pics/MPCStructure.pn
+ [63 <./EMPC_PNG_Pics/Regions2_trans.png>] [64 <./EMPC_PNG_Pics/MPCStructure.pn
 g>]
-<EMPC_PNG_Pics/VectorPhasor.png, id=387, 663.6795pt x 646.8165pt>
+<EMPC_PNG_Pics/ACdamping.png, id=390, 622.7265pt x 234.8775pt>
+File: EMPC_PNG_Pics/ACdamping.png Graphic file (type png)
+<use EMPC_PNG_Pics/ACdamping.png>
+Package pdftex.def Info: EMPC_PNG_Pics/ACdamping.png  used on input line 442.
+(pdftex.def)             Requested size: 239.00558pt x 90.14677pt.
+<EMPC_PNG_Pics/ACchart.png, id=391, 602.85225pt x 226.446pt>
+File: EMPC_PNG_Pics/ACchart.png Graphic file (type png)
+<use EMPC_PNG_Pics/ACchart.png>
+Package pdftex.def Info: EMPC_PNG_Pics/ACchart.png  used on input line 449.
+(pdftex.def)             Requested size: 239.00558pt x 89.77516pt.
+ [65 <./EMPC_PNG_Pics/ACdamping.png> <./EMPC_PNG_Pics/ACchart.png>]
+<EMPC_PNG_Pics/VectorPhasor.png, id=397, 663.6795pt x 646.8165pt>
 File: EMPC_PNG_Pics/VectorPhasor.png Graphic file (type png)
 <use EMPC_PNG_Pics/VectorPhasor.png>
-Package pdftex.def Info: EMPC_PNG_Pics/VectorPhasor.png  used on input line 466
+Package pdftex.def Info: EMPC_PNG_Pics/VectorPhasor.png  used on input line 486
 .
 (pdftex.def)             Requested size: 239.00558pt x 232.93271pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 479.
+               Default added (so using `tbp') on input line 499.
 
 
-Overfull \hbox (2.03748pt too wide) in paragraph at lines 481--498
+Overfull \hbox (2.03748pt too wide) in paragraph at lines 501--518
 [][]
  []
 
-[64]
-<EMPC_PNG_Pics/OnePhasor.png, id=391, 164.03387pt x 137.4081pt>
+<EMPC_PNG_Pics/OnePhasor.png, id=398, 164.03387pt x 137.4081pt>
 File: EMPC_PNG_Pics/OnePhasor.png Graphic file (type png)
 <use EMPC_PNG_Pics/OnePhasor.png>
-Package pdftex.def Info: EMPC_PNG_Pics/OnePhasor.png  used on input line 516.
+Package pdftex.def Info: EMPC_PNG_Pics/OnePhasor.png  used on input line 536.
 (pdftex.def)             Requested size: 239.00558pt x 200.2116pt.
- [65 <./EMPC_PNG_Pics/VectorPhasor.png> <./EMPC_PNG_Pics/OnePhasor.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 551--554
-
- []
-
-<EMPC_PNG_Pics/Sequence.png, id=397, 847.36575pt x 420.3705pt>
-File: EMPC_PNG_Pics/Sequence.png Graphic file (type png)
-<use EMPC_PNG_Pics/Sequence.png>
-Package pdftex.def Info: EMPC_PNG_Pics/Sequence.png  used on input line 559.
-(pdftex.def)             Requested size: 318.67209pt x 158.09396pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[66]
-<EMPC_PNG_Pics/LyapunovPatrition_trans.png, id=401, 592.614pt x 372.79276pt>
-File: EMPC_PNG_Pics/LyapunovPatrition_trans.png Graphic file (type png)
-<use EMPC_PNG_Pics/LyapunovPatrition_trans.png>
-Package pdftex.def Info: EMPC_PNG_Pics/LyapunovPatrition_trans.png  used on inp
-ut line 587.
-(pdftex.def)             Requested size: 398.3386pt x 250.58328pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[67 <./EMPC_PNG_Pics/Sequence.png>]
-<EMPC_PNG_Pics/SearchTree.png, id=406, 989.94844pt x 213.79875pt>
+[66 <./EMPC_PNG_Pics/VectorPhasor.png>] [67 <./EMPC_PNG_Pics/OnePhasor.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 571--574
+
+ []
+
+<EMPC_PNG_Pics/Sequence.png, id=407, 847.36575pt x 420.3705pt>
+File: EMPC_PNG_Pics/Sequence.png Graphic file (type png)
+<use EMPC_PNG_Pics/Sequence.png>
+Package pdftex.def Info: EMPC_PNG_Pics/Sequence.png  used on input line 579.
+(pdftex.def)             Requested size: 318.67209pt x 158.09396pt.
+[68 <./EMPC_PNG_Pics/Sequence.png>]
+<EMPC_PNG_Pics/LyapunovPatrition_trans.png, id=413, 592.614pt x 372.79276pt>
+File: EMPC_PNG_Pics/LyapunovPatrition_trans.png Graphic file (type png)
+<use EMPC_PNG_Pics/LyapunovPatrition_trans.png>
+Package pdftex.def Info: EMPC_PNG_Pics/LyapunovPatrition_trans.png  used on inp
+ut line 607.
+(pdftex.def)             Requested size: 398.3386pt x 250.58328pt.
+<EMPC_PNG_Pics/SearchTree.png, id=414, 989.94844pt x 213.79875pt>
 File: EMPC_PNG_Pics/SearchTree.png Graphic file (type png)
 <use EMPC_PNG_Pics/SearchTree.png>
-Package pdftex.def Info: EMPC_PNG_Pics/SearchTree.png  used on input line 599.
+Package pdftex.def Info: EMPC_PNG_Pics/SearchTree.png  used on input line 619.
 (pdftex.def)             Requested size: 398.3386pt x 86.0269pt.
-<EMPC_PNG_Pics/Memory.png, id=407, 599.841pt x 351.714pt>
+ [69 <./EMPC_PNG_Pics/LyapunovPatrition_trans.png>]
+<EMPC_PNG_Pics/Memory.png, id=419, 599.841pt x 351.714pt>
 File: EMPC_PNG_Pics/Memory.png Graphic file (type png)
 <use EMPC_PNG_Pics/Memory.png>
-Package pdftex.def Info: EMPC_PNG_Pics/Memory.png  used on input line 608.
+Package pdftex.def Info: EMPC_PNG_Pics/Memory.png  used on input line 628.
 (pdftex.def)             Requested size: 398.3386pt x 233.57024pt.
- [68 <./EMPC_PNG_Pics/LyapunovPatrition_trans.png> <./EMPC_PNG_Pics/SearchTree.
-png>]
-<EMPC_PNG_Pics/MultiHorizon.png, id=414, 526.96875pt x 395.22656pt>
-File: EMPC_PNG_Pics/MultiHorizon.png Graphic file (type png)
-<use EMPC_PNG_Pics/MultiHorizon.png>
-Package pdftex.def Info: EMPC_PNG_Pics/MultiHorizon.png  used on input line 621
-.
-(pdftex.def)             Requested size: 398.3386pt x 298.7651pt.
-<EMPC_PNG_Pics/Result_3fEMPC.png, id=415, 333.099pt x 169.506pt>
-File: EMPC_PNG_Pics/Result_3fEMPC.png Graphic file (type png)
-<use EMPC_PNG_Pics/Result_3fEMPC.png>
-Package pdftex.def Info: EMPC_PNG_Pics/Result_3fEMPC.png  used on input line 63
-2.
-(pdftex.def)             Requested size: 398.3386pt x 202.70525pt.
-<EMPC_PNG_Pics/Result_PerformanceEMPC.png, id=416, 279.882pt x 142.2405pt>
-File: EMPC_PNG_Pics/Result_PerformanceEMPC.png Graphic file (type png)
-<use EMPC_PNG_Pics/Result_PerformanceEMPC.png>
-Package pdftex.def Info: EMPC_PNG_Pics/Result_PerformanceEMPC.png  used on inpu
-t line 639.
-(pdftex.def)             Requested size: 398.3386pt x 202.4452pt.
-<EMPC_PNG_Pics/SFeedbackDC.png, id=417, 162.936pt x 110.0475pt>
-File: EMPC_PNG_Pics/SFeedbackDC.png Graphic file (type png)
-<use EMPC_PNG_Pics/SFeedbackDC.png>
-Package pdftex.def Info: EMPC_PNG_Pics/SFeedbackDC.png  used on input line 652.
 
-(pdftex.def)             Requested size: 278.83578pt x 188.35948pt.
- [69 <./EMPC_PNG_Pics/Memory.png>]
-[70 <./EMPC_PNG_Pics/MultiHorizon.png> <./EMPC_PNG_Pics/Result_3fEMPC.png>]
-<EMPC_PNG_Pics/Result_EMPCfinal.png, id=425, 333.099pt x 169.506pt>
-File: EMPC_PNG_Pics/Result_EMPCfinal.png Graphic file (type png)
-<use EMPC_PNG_Pics/Result_EMPCfinal.png>
-Package pdftex.def Info: EMPC_PNG_Pics/Result_EMPCfinal.png  used on input line
- 673.
-(pdftex.def)             Requested size: 398.3386pt x 202.70525pt.
-)
-(subtex/4_c_explicit_CSR_notations.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71 <./EMPC_PNG_Pics/Result_PerformanceEMPC.png> <./EMPC_PNG_Pics/SFeedbackDC.
-png>]
-[72 <./EMPC_PNG_Pics/Result_EMPCfinal.png>] [73]) (subtex/5_conculsion.tex
-[74]
+ [70 <./EMPC_PNG_Pics/SearchTree.png> <./EMPC_PNG_Pics/Memory.png>]
+<EMPC_PNG_Pics/MultiHorizon2_trans.png, id=425, 1173.38374pt x 712.6625pt>
+File: EMPC_PNG_Pics/MultiHorizon2_trans.png Graphic file (type png)
+<use EMPC_PNG_Pics/MultiHorizon2_trans.png>
+Package pdftex.def Info: EMPC_PNG_Pics/MultiHorizon2_trans.png  used on input l
+ine 642.
+(pdftex.def)             Requested size: 398.3386pt x 241.93231pt.
+<EMPC_PNG_Pics/HorizonPerformace_trans.png, id=426, 1079.03125pt x 440.64626pt>
+
+File: EMPC_PNG_Pics/HorizonPerformace_trans.png Graphic file (type png)
+<use EMPC_PNG_Pics/HorizonPerformace_trans.png>
+Package pdftex.def Info: EMPC_PNG_Pics/HorizonPerformace_trans.png  used on inp
+ut line 649.
+(pdftex.def)             Requested size: 398.3386pt x 162.67348pt.
+
+
+LaTeX Warning: Reference `EMPC:fig:Regions_augment' on page 71 undefined on inp
+ut line 656.
+
+<EMPC_PNG_Pics/Results.png, id=427, 1145.7204pt x 582.978pt>
+File: EMPC_PNG_Pics/Results.png Graphic file (type png)
+<use EMPC_PNG_Pics/Results.png>
+Package pdftex.def Info: EMPC_PNG_Pics/Results.png  used on input line 688.
+(pdftex.def)             Requested size: 398.3386pt x 202.68434pt.
+<EMPC_PNG_Pics/SFeedbackDC.png, id=428, 162.936pt x 110.0475pt>
+File: EMPC_PNG_Pics/SFeedbackDC.png Graphic file (type png)
+<use EMPC_PNG_Pics/SFeedbackDC.png>
+Package pdftex.def Info: EMPC_PNG_Pics/SFeedbackDC.png  used on input line 701.
+
+(pdftex.def)             Requested size: 278.83578pt x 188.35948pt.
+[71] [72 <./EMPC_PNG_Pics/MultiHorizon2_trans.png> <./EMPC_PNG_Pics/HorizonPerf
+ormace_trans.png>]
+<EMPC_PNG_Pics/Compare.png, id=437, 1145.7204pt x 582.978pt>
+File: EMPC_PNG_Pics/Compare.png Graphic file (type png)
+<use EMPC_PNG_Pics/Compare.png>
+Package pdftex.def Info: EMPC_PNG_Pics/Compare.png  used on input line 722.
+(pdftex.def)             Requested size: 398.3386pt x 202.68434pt.
+) (subtex/4_c_explicit_CSR_notations.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [73 <./EMPC_PNG_Pics/Results.png (PNG copy)> <./EMPC_PNG_Pics/SFeedbackDC.png>
+] [74 <./EMPC_PNG_Pics/Compare.png (PNG copy)>] [75]) (subtex/5_conculsion.tex 
+[76]
 Chapter 5.
 
-LaTeX Warning: Reference `VUB:sec:Main' on page 75 undefined on input line 6.
+LaTeX Warning: Reference `VUB:sec:Main' on page 77 undefined on input line 6.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--9
 
  []
 
-[75
+[77
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 14--17
 
  []
 
-[76]
+[78]
 Underfull \hbox (badness 10000) in paragraph at lines 18--23
 
  []
@@ -2833,79 +2850,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--29
 
  []
 
-[77] [78]) (subtex/7_appendix.tex [79]
+[79] [80]) (subtex/7_appendix.tex [81]
 Overfull \hbox (5.55371pt too wide) in paragraph at lines 3--3
 []\T1/cmr/bx/n/17.28 Geometric ap-proach to multi para-met-ric pro-
  []
 
-[80
+[82
 
 ]
-<EMPC_PNG_Pics/criticalregions.jpg, id=460, 415.7934pt x 291.7299pt>
+<EMPC_PNG_Pics/criticalregions.jpg, id=472, 415.7934pt x 291.7299pt>
 File: EMPC_PNG_Pics/criticalregions.jpg Graphic file (type jpg)
 <use EMPC_PNG_Pics/criticalregions.jpg>
 Package pdftex.def Info: EMPC_PNG_Pics/criticalregions.jpg  used on input line 
 66.
 (pdftex.def)             Requested size: 358.50229pt x 251.53719pt.
- [81] [82 <./EMPC_PNG_Pics/criticalregions.jpg>] [83]
-<EMPC_PNG_Pics/BasicSearchTree.png, id=470, 985.88326pt x 359.54324pt>
+ [83]
+Underfull \vbox (badness 1184) has occurred while \output is active []
+
+ [84 <./EMPC_PNG_Pics/criticalregions.jpg>] [85]
+<EMPC_PNG_Pics/BasicSearchTree.png, id=482, 985.88326pt x 359.54324pt>
 File: EMPC_PNG_Pics/BasicSearchTree.png Graphic file (type png)
 <use EMPC_PNG_Pics/BasicSearchTree.png>
 Package pdftex.def Info: EMPC_PNG_Pics/BasicSearchTree.png  used on input line 
 396.
 (pdftex.def)             Requested size: 398.3386pt x 145.26859pt.
-)
-(subtex/8_appendix_notations.tex [84 <./EMPC_PNG_Pics/BasicSearchTree.png>])
-(subtex/9_abbreviations.tex [85]) [86]
+) (subtex/8_appendix_notations.tex [86 <./EMPC_PNG_Pics/BasicSearchTree.png>]) 
+(subtex/9_abbreviations.tex [87]) [88]
 
 Package biblatex Warning: The option 'labelprefix' is limited
 (biblatex)                when used with BibTeX.
 (biblatex)                Consider using Biber instead.
 
+[89
 
-Overfull \hbox (3.63234pt too wide) in paragraph at lines 239--239
-\T1/cmr/m/n/12 ``Con-strained pre-dic-tive con-trol of three-phasebuck rec-ti-f
-iers,'' \T1/cmr/m/it/12 Acta Poly-
+] [90]
+Overfull \hbox (9.29346pt too wide) in paragraph at lines 244--244
+\T1/cmr/m/n/12 op-ti-mal power-flow al-go-rithm to mit-i-gate volt-age un-bal-a
+nce,'' \T1/cmr/m/it/12 IEEE Trans-
  []
 
-[87
-
-] [88] [89]
-Overfull \hbox (2.42229pt too wide) in paragraph at lines 244--244
-[] \T1/cmr/m/n/12 A. H. Bon-nett and  G. Soukup, ``Un-der-stand-ing the nema mo
-tor-generator
- []
-
-[90] [91] [92]
-Overfull \hbox (14.06616pt too wide) in paragraph at lines 244--244
-\T1/cmr/m/it/12 5th In-ter-na-tional Con-fer-ence on Elec-tri-cal Engineering-B
-oumerdes (ICEE-
- []
-
-[93]
-Overfull \hbox (6.91681pt too wide) in paragraph at lines 244--244
+[91] [92] [93] [94] [95]
+Overfull \hbox (3.16217pt too wide) in paragraph at lines 244--244
 [] \T1/cmr/m/n/12 N. Muthuku-mar,  S. Srini-vasan,  K. Ramku-mar,  K. Kan-nan, 
 and  V. E. Balas,
  []
 
-[94]
-Overfull \hbox (6.06155pt too wide) in paragraph at lines 244--244
-\T1/cmr/m/n/12 rents,'' in \T1/cmr/m/it/12 IEE Pro-ceed-ings B (Elec-tric Power
- Ap-pli-ca-tions)\T1/cmr/m/n/12 , IET, vol. 136,
- []
-
-
-Overfull \hbox (14.42554pt too wide) in paragraph at lines 244--244
+[96]
+Overfull \hbox (10.6709pt too wide) in paragraph at lines 244--244
 [] \T1/cmr/m/n/12 M. Baotic, ``Op-ti-mal con-trol of piece-wise affine sys-tems
 : A multi-parametric
  []
 
-[95]
+[97]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 244.
 
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [96] [97]
+) [98] [99]
 (dolgozatmain.aux)
 
 LaTeX Warning: There were undefined references.
@@ -2918,10 +2919,10 @@ Package logreq Info: Writing requests to 'dolgozatmain.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 62311 strings out of 492897
- 1511232 string characters out of 3133501
- 2155929 words of memory out of 3000000
- 65277 multiletter control sequences out of 15000+200000
+ 62301 strings out of 492897
+ 1509951 string characters out of 3133501
+ 2156658 words of memory out of 3000000
+ 65265 multiletter control sequences out of 15000+200000
  560468 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,23n,96p,2664b,1437s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2959,9 +2960,9 @@ lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 msy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb>
-Output written on dolgozatmain.pdf (108 pages, 4211360 bytes).
+Output written on dolgozatmain.pdf (110 pages, 4426705 bytes).
 PDF statistics:
- 1231 PDF objects out of 1440 (max. 8388607)
+ 1254 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 238 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 248 words of extra memory for PDF output out of 10000 (max. 10000000)
 

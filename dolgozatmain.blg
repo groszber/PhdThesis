@@ -2,16 +2,21 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: dolgozatmain.aux
 The style file: biblatex.bst
 Database file #1: dolgozatmain-blx.bib
 Database file #2: dolgozat.bib
-You're missing a field name---line 649 of file dolgozat.bib
+You're missing a field name---line 694 of file dolgozat.bib
  :   
  :   %urldate = {2019-09-01}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 771 of file dolgozat.bib
+You're missing a field name---line 730 of file dolgozat.bib
+ : 
+ : %  title={Model predictive control system design and implementation using MATLAB{\textregistered}},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 824 of file dolgozat.bib
  : %@article{IEEE_936_29053
  :                         ,
 I'm skipping whatever remains of this entry
 Biblatex version: 3.13
 Too many commas in name 1 of "BUDAPEST TECH BECSI UT 96-B, BUDAPEST, H-1034, HUNGARY" for entry ahmed2014model
 while executing---line 2805 of file biblatex.bst
-(There were 3 error messages)
+(There were 4 error messages)

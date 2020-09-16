@@ -317,8 +317,8 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
                 1\\
             \end{bmatrix},
             \textbf{Q}_w=\begin{bmatrix}
-                5^{-5}& 0\\
-                0& 5^{-5}\\
+                5\cdot10^{-5}& 0\\
+                0& 5\cdot10^{-5}\\
             \end{bmatrix},
             N_y=N_u=N_c=4.
         \end{array}}
@@ -418,7 +418,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
         L_{ac}\dot{i_{ac_d}}&=&u_d-u_{c_d}\\
         L_{ac}\dot{i_{ac_q}}&=&u_q\\
         C_{ac}\dot{u_{c_d}}&=&i_d-\delta_dI_{dc}\\
-        0&=&i_d-\delta_dI_{dc},\\
+        0&=&i_q-\delta_qI_{dc},\\
         \end{array}}
         \label{EMPC:equ:reduced_AC}
     \end{equation}
@@ -434,7 +434,27 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
     \end{equation}
 
     \hlc[PT]{where $u_d$ carries potential disturbance due resonance of the LC filter. Hence, equation} \ref{EMPC:equ:reduced_ucd}\hlc[PT]{ is a second order linear system without any damping, therefore active damping (or resonance suppressing control) can be implemented.}\\
-    The simplest way to dampen the resonance would be to add further damping resistor across the capacitor \cite{regaya2014new}, to dampen the oscillation. Because these resistors result in high losses, active damping method can be utilised as displayed in \cite{wiseman2002pwm}, which emulate damping resistors by control. This makes the CSR bridge produce an additional high frequency current $i_{rHF}$, equivalent to the presence of virtual damping resistor $R_H$ connected in parallel with the AC capacitors. The resonance of the AC side LC filter produces harmonics in the capacitor voltage with frequency close to $\omega_{ac}=\frac{1}{\sqrt{L_{ac}C_{ac}}}$, which appears as $\omega_{ac}-\omega$ component in $u_{c_d}$, where $\omega=2\pi f$. The fundamental component of the capacitor voltage represents a DC component in the synchronous reference frame. Therefore, a high-pass filter (HF) is applied to filter out this DC component, with the transfer function:
+    The simplest way to dampen the resonance would be to add further damping resistor across the capacitor \cite{regaya2014new}, to dampen the oscillation. Because these resistors result in high losses, active damping method can be utilised as displayed in \cite{wiseman2002pwm}, which emulate damping resistors by control. \hlc[PT]{The circuit and control schematics of the AC damping can be observed on} Fig. \ref{EMPC:fig:ACdamping}. This makes the CSR bridge produce an additional high frequency current $i_{rHF}$, equivalent to the presence of virtual damping resistor $R_H$ connected in parallel with the AC capacitors.
+
+    \begin{figure}
+                \centering
+                \begin{subfigure}[b]{.6\textwidth}
+                    \includegraphics[width=\textwidth]{EMPC_PNG_Pics/ACdamping.png}
+                    \caption{\centering Circuit schematics of AC damping.}
+                    \label{EMPC:fig:ACdamping_a}
+                \end{subfigure}
+                ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+                  %(or a blank line to force the subfigure onto a new line)
+                \begin{subfigure}[b]{.6\textwidth}
+                    \includegraphics[width=\textwidth]{EMPC_PNG_Pics/ACchart.png}
+                    \caption{\centering Control schematics of AC damping.}
+                    \label{EMPC:fig:ACdamping_b}
+                \end{subfigure}
+                \caption{Circuit, and control schematics of AC damping via virtual damping resistance $R_H$, and high pass filter $HF(s)$.}
+                \label{EMPC:fig:ACdamping}
+            \end{figure}
+
+     The resonance of the AC side LC filter produces harmonics in the capacitor voltage with frequency close to $\omega_{ac}=\frac{1}{\sqrt{L_{ac}C_{ac}}}$, which appears as $\omega_{ac}-\omega$ component in $u_{c_d}$, where $\omega=2\pi f$. The fundamental component of the capacitor voltage represents a DC component in the synchronous reference frame. Therefore, a high-pass filter (HF) is applied to filter out this DC component, with the transfer function:
 
     \begin{equation}
         \begin{array}{rcl}
@@ -577,11 +597,11 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 \subsection{Discussion}\label{EMPC:sec:Discussion}
 
     From the continuous AC \ref{EMPC:equ:mtx_AC}, and DC \ref{EMPC:equ:mtx_DC} model equations described in Ch.X., the controller is formulated form discretised system \ref{EMPC:equ:DiscreteStateSpace}, and it is described via the cost function and control problem of \ref{EMPC:equ:optim_problem}, and \ref{EMPC:equ:optim_problem_constr} in Ch.X$+$1. The evaluated model and control structure are shown on Fig.4. In the following section said EMPC’s computational requirements are evaluated, and the Matlab/Simulink simulation results are compared to a classic state feedback controller’s dynamic performance.
-    
+
     \subsubsection{Lyapunov stability}\label{EMPC:sec:LyapStab}
-    
-    \hlc[PT]{The systematic finding of Lyapunov functions is described in detail in section} \oldref{BASICCSR:sec:MPCStability} \hlc[PT]{as well as in} \cite{borrelli2017predictive}. \hlc[PT]{The explicit receding horizon control law formulated in section} \oldref{EMPC:sec:DCside} \hlc[PT]{is mapped according to} \ref{EMPC:equ:quadratic_set}, \hlc[PT]{resulting the partitioning of the constrained state space displayed on Fig.} \ref{EMPC:fig:regions}.\hlc[PT]{ Considering system} \ref{EMPC:equ:DiscreteStateSpace} \hlc[PT]{with the given constraints of} \ref{EMPC:equ:numeric_constraints} and RHC law \ref{EMPC:equ:optim_problem}, \hlc[PT]{the assumption is that a maximal positive-, and control invariant set $\mathcal{X}_f$ can be obtained for the closed loop system, for every defined critical region. For finding and $\mathcal{X}_f$ and the feasibility of constructing the critical region specific Lyapunov function an implemented verification method is available from} \cite{MPT3}, \hlc[PT]{by searching $\mathcal{X}_f$ for the closed loop autonomous PWA system. Then piece-wise Lyapunov function can be constructed displayed on Fig} \ref{EMPC:fig:LyapStab}.
-    
+
+    \hlc[PT]{The systematic finding of Lyapunov functions is described in detail in section} \oldref{BASICCSR:sec:MPCStability} \hlc[PT]{as well as in} \cite{borrelli2017predictive}. \hlc[PT]{The explicit receding horizon control law formulated in section} \oldref{EMPC:sec:DCside} \hlc[PT]{is mapped according to} \ref{EMPC:equ:quadratic_set}, \hlc[PT]{resulting the partitioning of the constrained state space displayed on Fig.} \ref{EMPC:fig:regions}.\hlc[PT]{ Considering system} \ref{EMPC:equ:DiscreteStateSpace} \hlc[PT]{with the given constraints of} \ref{EMPC:equ:numeric_constraints} and RHC law \ref{EMPC:equ:optim_problem}, \hlc[PT]{the assumption is that a maximal positive-, and control invariant set $\mathcal{X}_f$ can be obtained for the closed loop system, for every defined critical region. For finding and $\mathcal{X}_f$ and the feasibility of constructing the critical region specific Lyapunov function an implemented verification method is available from} \cite{MPT3}, \hlc[PT]{by searching $\mathcal{X}_f$ for the closed loop autonomous PWA system. Then piece-wise quadratic (PWQ) Lyapunov function can be constructed displayed on Fig} \ref{EMPC:fig:LyapStab}.
+
     \begin{figure}[!h]
         \centering
         \includegraphics[width=\textwidth]{EMPC_PNG_Pics/LyapunovPatrition_trans.png}
@@ -614,29 +634,58 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \subsubsection{Horizon performance}\label{EMPC:sec:Performance}
 
-    With the cost function (\ref{EMPC:equ:optim_problem}) employed using (\ref{EMPC:equ:quadratic_mtx_set}), changing the length of the horizon ($N$) affects the system's complexity illustrated by the partition in the state space shown in Fig. \ref{EMPC:fig:regions}., and Fig. \ref{EMPC:fig:MultiHorizon} presents the step response of the controlled system for different lengths of the horizon. It shows, that the response is not affected by the increase of the horizon above $N=2$, supporting the choice of this value for Matlab Simulink implementation.
+    With the cost function \ref{EMPC:equ:optim_problem} employed using \ref{EMPC:equ:quadratic_mtx_set}, changing the length of the horizon $N$ affects the system's complexity illustrated by the partition in the state space shown in Fig. \ref{EMPC:fig:regions}, and Fig. \ref{EMPC:fig:MultiHorizon} presents the step response of the controlled system for different lengths of the horizon. \hlc[PT]{It shows, that the response is heavily affected by the horizon length at the first three iterations, rendering the one step choice useless, whilst by increasing the horizon, the steady state error of the algorithm decreases.}
 
-    \begin{figure}[!ht]
-        \centering
-        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/MultiHorizon.png}
-        \caption{Step response of the system as a function of the horizon length (N).}
-        \label{EMPC:fig:MultiHorizon}
-    \end{figure}
+    \begin{figure}
+                \centering
+                \begin{subfigure}[b]{\textwidth}
+                    \includegraphics[width=\textwidth]{EMPC_PNG_Pics/MultiHorizon2_trans.png}
+                    \caption{\centering Overall performance of the EMPC, with different control horizons.}
+                    \label{EMPC:fig:MultiHorizon_a}
+                \end{subfigure}
+                ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+                  %(or a blank line to force the subfigure onto a new line)
+                \begin{subfigure}[b]{\textwidth}
+                    \includegraphics[width=\textwidth]{EMPC_PNG_Pics/HorizonPerformace_trans.png}
+                    \caption{\centering The projection on the time axis indicates the decrease of steady state error with the horizon length.}
+                    \label{EMPC:fig:MultiHorizon_b}
+                \end{subfigure}
+                \caption{Step response of the system as a function of the horizon length $N$.}\label{EMPC:fig:MultiHorizon}
+            \end{figure}
+
+    \hlc[PT]{Unfortunately, the steady state error is is still present after the computational boundary of \textbf{XY} ns regardless of increasing the horizon. As such an additional integrator component is advised to embed into the model equations of} \ref{EMPC:equ:mtx_DC}\hlc[PT]{, aka. augment the model, and The results can be observed in the next section and on Fig.} \ref{EMPC:fig:Regions_augment}.
 
     \subsubsection{Simulation results}\label{EMPC:sec:Results}
 
-    The simulation results are produced with Matlab/Simulik. The discrete model's (\ref{EMPC:equ:DiscreteStateSpace}) simulation frequency was 1 MHz, with the model parameters represented in Table \ref{EMPC:tbl:params}., and with the control structure shown on Fig. \ref{EMPC:fig:ControlStruct}. The EMPC performance is shown below:
+    The simulation results are produced with Matlab/Simulik. The discrete model's \ref{EMPC:equ:DiscreteStateSpace} simulation frequency was 1 MHz, with the model parameters represented in Table \ref{EMPC:tbl:params}. \hlc[PT]{As mentioned the base control structure has considerable steady state error, which can be mitigated, by increasing the control horizon, but the computation cost is NP-heavy. The solution is to augment the model with an additional integrator. As such, with some re-parametrisation with the const function weights:}
+
+     \begin{equation}
+    \hlcmath{PT}{
+        \begin{array}{l}
+            \textbf{R}_w=\begin{bmatrix}
+                1\cdot10^{-6}\\
+            \end{bmatrix},
+            \textbf{Q}_w=\begin{bmatrix}
+                1& 0\\
+                0& 1\\
+            \end{bmatrix},
+            N=4,
+        \end{array}}
+        \label{EMPC:equ:quadratic_mtx_set}
+    \end{equation}
+
+    \hlc[PT]{the partition space grows to 49 regions but the steady state error lessens significantly. The comparison of the EMPC performances is shown on Fig. }\ref{EMPC:fig:Result_PerformanceEMPC}.
+
+%    \begin{figure}[!ht]
+%        \centering
+%        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/Result_3fEMPC.png}
+%        \caption{Three-phase voltage and current intake of the CSR with EMPC}
+%        \label{EMPC:fig:Result_3fEMPC}
+%    \end{figure}
 
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/Result_3fEMPC.png}
-        \caption{Three-phase voltage and current intake of the CSR with EMPC}
-        \label{EMPC:fig:Result_3fEMPC}
-    \end{figure}
-
-    \begin{figure}[!ht]
-        \centering
-        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/Result_PerformanceEMPC.png}
+        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/Results.png}
         \caption{Resulting current and voltage trajectories of the CSR with (EMPC).}
         \label{EMPC:fig:Result_PerformanceEMPC}
     \end{figure}
@@ -645,7 +694,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \subsubsection{Comparison with a state feedback control}\label{EMPC:sec:Comparison}
 
-    On the DC side, not only the output voltage $u_0$ but also the inductor current $i_{dc}$ needs to be controlled. Described in [28], a state feedback control with optimal parameters can be used as a reference based on the model properties listed in Table \ref{EMPC:tbl:params}, with output voltage $u_0$ and DC bus current $i_{dc}$ chosen as the state variables. Since $u_0$ is a DC quantity in steady state, an integrator signal is introduced to diminish the steady-state error. The structure of the controller is represented in Fig. \ref{EMPC:fig:SFeedbackDC}.
+    On the DC side, not only the output voltage $u_0$ but also the inductor current $i_{dc}$ needs to be controlled. Described in \cite{zhang2015simplified}, a state feedback control with optimal parameters can be used as a reference based on the model properties listed in Table \ref{EMPC:tbl:params}, with output voltage $u_0$ and DC bus current $i_{dc}$ chosen as the state variables. Since $u_0$ is a DC quantity in steady state, an integrator signal is introduced to diminish the steady-state error. The structure of the controller is represented in Fig. \ref{EMPC:fig:SFeedbackDC}.
 
     \begin{figure}[!ht]
         \centering
@@ -670,8 +719,8 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/Result_EMPCfinal.png}
-        \caption{Resulting current and voltage trajectories of the CSR with explicit model predictive control (MPC) compared state feedback control (LIN).}
+        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/Compare.png}
+        \caption{Resulting current and voltage trajectories of the CSR with explicit model predictive control (MPC) compared to the $N=10$ case (MPCN10), the augemnted model (MPCAUG), and the state feedback control (SF).}
         \label{EMPC:fig:Result_EMPCfinal}
     \end{figure}
 
