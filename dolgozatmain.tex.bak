@@ -1,6 +1,9 @@
 \documentclass[12pt, a4paper, twoside]{report}
 %%% Nyomtatásnál Figyelni a kétoldalasságra és a kötésre!!!
-\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\newcounter{para}
+\newcommand\mypara{\par\refstepcounter{para}\thepara\space}
 \usepackage{verbatim}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}

@@ -181,10 +181,12 @@ Understandably, model based controllers require the system's model the ought to 
 
 \subsubsection{Control structure}\label{EMPC:sec:ControlStruct}
 
-    \hlc[PT]{With }\ref{EMPC:equ:mtx_ctrl} \hlc[PT]{in mind the requirements of the closed loop system are the following:}
+    \hlc[PT]{The described structure of the CSR naturally can only be interpreted in a power electric context. As such the control requirements of the system is shifted respectfully in such a direction that those requirements are met within physical constrains also, within the dissertation's scope. As mentioned in the previous chapter, the modeling of the CSR enables to handle the control goal from two somewhat disjunct perspective. With this in mind, the control requirements can be placed on three categories. }\hlc[PT]{With }\ref{EMPC:equ:mtx_ctrl} \hlc[PT]{in mind these are the following:}
+    
     \begin{itemize}
-    \item \hlc[PT]{Minimize THD and reactive power on the AC side, from the network's measurement point (at the voltage sources on the topology).}
-    \item \hlc[PT]{Reach the steady state reference of $i_dc$ the fastest possible with minimal overshoot on the resistive load's poles.}
+    \item \hlc[PT]{\textbf{On the AC side:} Minimize current ripple and reactive power from the network's measurement point (at the voltage sources on the topology). In this scenario the domestic network is assumed ideal, aka. the source voltage is an ideal three phase sinusoidal waveform with $50Hz$ network frequency. The disturbance is coming exclusively form the LC filter's oscillation, and from the PWM switching behaviour.}
+    \item \hlc[PT]{\textbf{On the DC side:} Reach the steady state reference of $i_dc$ the fastest possible with minimal overshoot on the resistive load's poles.}
+    \item \hlc[PT]{\textbf{On in between or on PWM side:}
     \end{itemize}
     Using the separation of the AC side and DC side controllers, the control structure depicted in Fig. \ref{EMPC:fig:ControlStruct}. is proposed.
 
@@ -435,7 +437,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \hlc[PT]{where $u_d$ carries potential disturbance due resonance of the LC filter. Hence, equation} \ref{EMPC:equ:reduced_ucd}\hlc[PT]{ is a second order linear system without any damping, therefore active damping (or resonance suppressing control) can be implemented.}\\
     The simplest way to dampen the resonance would be to add further damping resistor across the capacitor \cite{regaya2014new}, to dampen the oscillation. Because these resistors result in high losses, active damping method can be utilised as displayed in \cite{wiseman2002pwm}, which emulate damping resistors by control. \hlc[PT]{The circuit and control schematics of the AC damping can be observed on} Fig. \ref{EMPC:fig:ACdamping}. This makes the CSR bridge produce an additional high frequency current $i_{rHF}$, equivalent to the presence of virtual damping resistor $R_H$ connected in parallel with the AC capacitors.
-    
+
     \begin{figure}
                 \centering
                 \begin{subfigure}[b]{.6\textwidth}
@@ -453,7 +455,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
                 \caption{Circuit, and control schematics of AC damping via virtual damping resistance $R_H$, and high pass filter $HF(s)$.}
                 \label{EMPC:fig:ACdamping}
             \end{figure}
-     
+
      The resonance of the AC side LC filter produces harmonics in the capacitor voltage with frequency close to $\omega_{ac}=\frac{1}{\sqrt{L_{ac}C_{ac}}}$, which appears as $\omega_{ac}-\omega$ component in $u_{c_d}$, where $\omega=2\pi f$. The fundamental component of the capacitor voltage represents a DC component in the synchronous reference frame. Therefore, a high-pass filter (HF) is applied to filter out this DC component, with the transfer function:
 
     \begin{equation}
@@ -600,7 +602,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \subsubsection{Lyapunov stability}\label{EMPC:sec:LyapStab}
 
-    \hlc[PT]{The systematic finding of Lyapunov functions is described in detail in section} \oldref{BASICCSR:sec:MPCStability} \hlc[PT]{as well as in} \cite{borrelli2017predictive}. \hlc[PT]{The explicit receding horizon control law formulated in section} \oldref{EMPC:sec:DCside} \hlc[PT]{is mapped according to} \ref{EMPC:equ:quadratic_set}, \hlc[PT]{resulting the partitioning of the constrained state space displayed on Fig.} \ref{EMPC:fig:regions}.\hlc[PT]{ Considering system} \ref{EMPC:equ:DiscreteStateSpace} \hlc[PT]{with the given constraints of} \ref{EMPC:equ:numeric_constraints} and RHC law \ref{EMPC:equ:optim_problem}, \hlc[PT]{the assumption is that a maximal positive-, and control invariant set $\mathcal{X}_f$ can be obtained for the closed loop system, for every defined critical region. For finding and $\mathcal{X}_f$ and the feasibility of constructing the critical region specific Lyapunov function an implemented verification method is available from} \cite{MPT3}, \hlc[PT]{by searching $\mathcal{X}_f$ for the closed loop autonomous PWA system. Then piece-wise Lyapunov function can be constructed displayed on Fig} \ref{EMPC:fig:LyapStab}.
+    \hlc[PT]{The systematic finding of Lyapunov functions is described in detail in section} \oldref{BASICCSR:sec:MPCStability} \hlc[PT]{as well as in} \cite{borrelli2017predictive}. \hlc[PT]{The explicit receding horizon control law formulated in section} \oldref{EMPC:sec:DCside} \hlc[PT]{is mapped according to} \ref{EMPC:equ:quadratic_set}, \hlc[PT]{resulting the partitioning of the constrained state space displayed on Fig.} \ref{EMPC:fig:regions}.\hlc[PT]{ Considering system} \ref{EMPC:equ:DiscreteStateSpace} \hlc[PT]{with the given constraints of} \ref{EMPC:equ:numeric_constraints} and RHC law \ref{EMPC:equ:optim_problem}, \hlc[PT]{the assumption is that a maximal positive-, and control invariant set $\mathcal{X}_f$ can be obtained for the closed loop system, for every defined critical region. For finding and $\mathcal{X}_f$ and the feasibility of constructing the critical region specific Lyapunov function an implemented verification method is available from} \cite{MPT3}, \hlc[PT]{by searching $\mathcal{X}_f$ for the closed loop autonomous PWA system. Then piece-wise quadratic (PWQ) Lyapunov function can be constructed displayed on Fig} \ref{EMPC:fig:LyapStab}.
 
     \begin{figure}[!h]
         \centering
