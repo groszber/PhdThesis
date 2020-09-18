@@ -182,11 +182,11 @@ Understandably, model based controllers require the system's model the ought to 
 \subsubsection{Control structure}\label{EMPC:sec:ControlStruct}
 
     \hlc[PT]{The described structure of the CSR naturally can only be interpreted in a power electric context. As such the control requirements of the system is shifted respectfully in such a direction that those requirements are met within physical constrains also, within the dissertation's scope. As mentioned in the previous chapter, the modeling of the CSR enables to handle the control goal from two somewhat disjunct perspective. With this in mind, the control requirements can be placed on three categories. }\hlc[PT]{With }\ref{EMPC:equ:mtx_ctrl} \hlc[PT]{in mind these are the following:}
-    
+
     \begin{itemize}
-    \item \hlc[PT]{\textbf{On the AC side:} Minimize current ripple and reactive power from the network's measurement point (at the voltage sources on the topology). In this scenario the domestic network is assumed ideal, aka. the source voltage is an ideal three phase sinusoidal waveform with $50Hz$ network frequency. The disturbance is coming exclusively form the LC filter's oscillation, and from the PWM switching behaviour.}
-    \item \hlc[PT]{\textbf{On the DC side:} Reach the steady state reference of $i_dc$ the fastest possible with minimal overshoot on the resistive load's poles.}
-    \item \hlc[PT]{\textbf{On in between or on PWM side:}
+    \item \hlc[PT]{\textbf{AC side:} Minimize current ripple and reactive power from the network's measurement point (at the voltage sources on the topology). In this scenario the domestic network is assumed ideal, aka. the voltage source is an ideal three phase sinusoidal waveform with $50Hz$ network frequency. The disturbance is coming exclusively form the LC filter's oscillation, and from the PWM switching behaviour.}
+    \item \hlc[PT]{\textbf{DC side:} Reach the reference of $u_0^*$ the fastest possible with minimal overshoot, and steady state error on the resistive load's poles. The fewer number of critical regions, and less horizon length of the EMPC shall be chosen, since these are correlating between the calculation requirements of possible experimental setup.}
+    \item \hlc[PT]{\textbf{Modulation:} The modulation shall transform the reference current into the optimal switching state, which was permitted by the modulation table. Also, the desired switching sequence shall be conducted with minimum amount of switching used.}
     \end{itemize}
     Using the separation of the AC side and DC side controllers, the control structure depicted in Fig. \ref{EMPC:fig:ControlStruct}. is proposed.
 

@@ -680,7 +680,7 @@
     \field{year}{2014}
   \endentry
 
-  \entry{uimethod}{inproceedings}{}
+  \entry{korovkin2016uimethod}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=KN}{%
          family={Korovkin},
@@ -1471,6 +1471,165 @@
     \field{journaltitle}{International Journal of Electrical Power \& Energy
   Systems}
     \field{year}{1997}
+  \endentry
+
+  \entry{wang2001method}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WYJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yaw-Juen},
+         giveni={Y\bibinithyphendelim J\bibinitperiod},
+      }}%
+      {{hash=PL}{%
+         family={Pierrat},
+         familyi={P\bibinitperiod},
+         given={Lambert},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{WYJPL1}
+    \strng{fullhash}{WYJPL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{241\bibrangedash 246}
+    \field{title}{A method integrating deterministic and stochastic approaches
+  for the simulation of voltage unbalance in electric power distribution
+  systems}
+    \field{volume}{16}
+    \field{journaltitle}{IEEE Transactions on Power Systems}
+    \field{year}{2001}
+  \endentry
+
+  \entry{schwanz2016stochastic}{article}{}
+    \name{author}{5}{}{%
+      {{hash=SD}{%
+         family={Schwanz},
+         familyi={S\bibinitperiod},
+         given={Daphne},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=MF}{%
+         family={M{\"o}ller},
+         familyi={M\bibinitperiod},
+         given={Friedemann},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=RSK}{%
+         family={R{\"o}nnberg},
+         familyi={R\bibinitperiod},
+         given={Sarah\bibnamedelima K},
+         giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Meyer},
+         familyi={M\bibinitperiod},
+         given={Jan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BMH}{%
+         family={Bollen},
+         familyi={B\bibinitperiod},
+         given={Math\bibnamedelima HJ},
+         giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{SDMFRSK+1}
+    \strng{fullhash}{SDMFRSKMJBMH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{852\bibrangedash 861}
+    \field{title}{Stochastic assessment of voltage unbalance due to
+  single-phase-connected solar power}
+    \field{volume}{32}
+    \field{journaltitle}{IEEE Transactions on Power Delivery}
+    \field{year}{2016}
+  \endentry
+
+  \entry{xu2018stochastic}{article}{}
+    \name{author}{10}{}{%
+      {{hash=XJ}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Jian},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Jing},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Liao},
+         familyi={L\bibinitperiod},
+         given={Siyang},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SY}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Yuanzhang},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Ke},
+         familyi={K\bibinitperiod},
+         given={Deping},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=LX}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Xiong},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Ji},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=JY}{%
+         family={Jiang},
+         familyi={J\bibinitperiod},
+         given={Yibo},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=WC}{%
+         family={Wei},
+         familyi={W\bibinitperiod},
+         given={Congying},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=TB}{%
+         family={Tang},
+         familyi={T\bibinitperiod},
+         given={Bowen},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{XJWJLS+1}
+    \strng{fullhash}{XJWJLSSYKDLXLJJYWCTB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{985\bibrangedash 996}
+    \field{title}{Stochastic multi-objective optimization of photovoltaics
+  integrated three-phase distribution network based on dynamic scenarios}
+    \field{volume}{231}
+    \field{journaltitle}{Applied Energy}
+    \field{year}{2018}
   \endentry
 
   \entry{lee2009new}{article}{}
@@ -3052,6 +3211,52 @@
     \field{year}{2008}
   \endentry
 
+  \entry{muthukumar2016adaptive}{article}{}
+    \name{author}{5}{}{%
+      {{hash=MN}{%
+         family={Muthukumar},
+         familyi={M\bibinitperiod},
+         given={N.},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Srinivasan},
+         familyi={S\bibinitperiod},
+         given={Seshadhri},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=RK}{%
+         family={Ramkumar},
+         familyi={R\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Kannan},
+         familyi={K\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=BVE}{%
+         family={Balas},
+         familyi={B\bibinitperiod},
+         given={Valentina\bibnamedelima Emilia},
+         giveni={V\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MNSSRK+1}
+    \strng{fullhash}{MNSSRKKKBVE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{181\bibrangedash 194}
+    \field{title}{Adaptive model predictive controller for web transport
+  systems}
+    \field{volume}{13}
+    \field{journaltitle}{Acta Polytechnica Hungarica}
+    \field{year}{2016}
+  \endentry
+
   \entry{kelemen2010constrained}{inproceedings}{}
     \name{author}{4}{}{%
       {{hash=KA}{%
@@ -3181,52 +3386,6 @@
     \field{pages}{1\bibrangedash 6}
     \field{title}{Predictive control of current source rectifier}
     \field{year}{2015}
-  \endentry
-
-  \entry{muthukumar2016adaptive}{article}{}
-    \name{author}{5}{}{%
-      {{hash=MN}{%
-         family={Muthukumar},
-         familyi={M\bibinitperiod},
-         given={N.},
-         giveni={N\bibinitperiod},
-      }}%
-      {{hash=SS}{%
-         family={Srinivasan},
-         familyi={S\bibinitperiod},
-         given={Seshadhri},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=RK}{%
-         family={Ramkumar},
-         familyi={R\bibinitperiod},
-         given={K.},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=KK}{%
-         family={Kannan},
-         familyi={K\bibinitperiod},
-         given={K.},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=BVE}{%
-         family={Balas},
-         familyi={B\bibinitperiod},
-         given={Valentina\bibnamedelima Emilia},
-         giveni={V\bibinitperiod\bibinitdelim E\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{MNSSRK+1}
-    \strng{fullhash}{MNSSRKKKBVE1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{3}
-    \field{pages}{181\bibrangedash 194}
-    \field{title}{Adaptive model predictive controller for web transport
-  systems}
-    \field{volume}{13}
-    \field{journaltitle}{Acta Polytechnica Hungarica}
-    \field{year}{2016}
   \endentry
 
   \entry{kutasi2010constrained}{inproceedings}{}

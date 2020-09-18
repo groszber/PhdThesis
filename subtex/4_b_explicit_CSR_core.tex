@@ -182,11 +182,11 @@ Understandably, model based controllers require the system's model the ought to 
 \subsubsection{Control structure}\label{EMPC:sec:ControlStruct}
 
     \hlc[PT]{The described structure of the CSR naturally can only be interpreted in a power electric context. As such the control requirements of the system is shifted respectfully in such a direction that those requirements are met within physical constrains also, within the dissertation's scope. As mentioned in the previous chapter, the modeling of the CSR enables to handle the control goal from two somewhat disjunct perspective. With this in mind, the control requirements can be placed on three categories. }\hlc[PT]{With }\ref{EMPC:equ:mtx_ctrl} \hlc[PT]{in mind these are the following:}
-    
+
     \begin{itemize}
     \item \hlc[PT]{\textbf{AC side:} Minimize current ripple and reactive power from the network's measurement point (at the voltage sources on the topology). In this scenario the domestic network is assumed ideal, aka. the voltage source is an ideal three phase sinusoidal waveform with $50Hz$ network frequency. The disturbance is coming exclusively form the LC filter's oscillation, and from the PWM switching behaviour.}
     \item \hlc[PT]{\textbf{DC side:} Reach the reference of $u_0^*$ the fastest possible with minimal overshoot, and steady state error on the resistive load's poles. The fewer number of critical regions, and less horizon length of the EMPC shall be chosen, since these are correlating between the calculation requirements of possible experimental setup.}
-    \item \hlc[PT]{\textbf{Modulation:} The modulation shall transform the reference current into the optimal switching state, which was permitted by the modulation table. Also, the desired optimal switching sequence shall be reached with minimum amount of switching used.}
+    \item \hlc[PT]{\textbf{Modulation:} The modulation shall transform the reference current into the optimal switching state, which was permitted by the modulation table. Also, the desired switching sequence shall be conducted with minimum amount of switching used.}
     \end{itemize}
     Using the separation of the AC side and DC side controllers, the control structure depicted in Fig. \ref{EMPC:fig:ControlStruct}. is proposed.
 
@@ -575,11 +575,9 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
     The switching scheme represented in Table \ref{EMPC:tbl:fundamental_vect}. is aimed at reducing the number of commutations in a switching cycle, resulting in the reduction of the switching losses \cite{moussaoui2005open}.\\
 
     \begin{table}[h]
-
 		\caption{Representation of switching sequences for SECTOR I.}
 		\centering
         \includegraphics[width=0.8\textwidth]{EMPC_PNG_Pics/Sequence.png}
-
         \label{EMPC:tbl:sequence}
     \end{table}
 
@@ -700,7 +698,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=0.7\textwidth]{EMPC_PNG_Pics/SFeedbackDC.png}
+        \includegraphics[width=0.7\textwidth]{EMPC_PNG_Pics/SFchart.png}
         \caption{Simple DC side state feedback control structure.}
         \label{EMPC:fig:SFeedbackDC}
     \end{figure}
@@ -708,15 +706,14 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
     The tuning constants applied and calculated according to \cite{godlewska2015predictive} are:
 
     \begin{equation}
+    \hlcmath{PT}{
         \begin{array}{l}
-            k1=\frac{\omega^3_n}{1.5U_n\omega^2_{dc}},\,k2=\frac{1.9\omega_n L_{dc}}{1.5U_n},\,k3=\frac{2.2\omega^2_n}{1.5U_n(\omega^2_{dc}-1)},\\
-            \textnormal{where,}\\
-            \omega_n=1.1,\,\omega_{ac}=\frac{1}{\sqrt{L_{ac}C_{ac}}},\,\omega_{dc}=\frac{1}{\sqrt{L_{dc}C_{dc}}}
-        \end{array}
+            k1=\frac{\omega^3_n}{1.5U_n\omega^2_{dc}},\,k2=\frac{2.2\omega^2_n}{1.5U_n(\omega^2_{dc}-1)},k3=\frac{1.9\omega_n L_{dc}}{1.5U_n},\,\\
+        \end{array}}
         \label{EMPC:equ:tuning}
     \end{equation}
 
-    The state feedback controllers block on the diagram is taking the controller's place, shown on Fig. \ref{EMPC:fig:ControlStruct}. The independent outputs are the high pass filter's output  $i_{rHF(d)}$ and the controller's output $i_{rcontrol(d)}$. The sum of the independent current values is converted to Clarke frame to be able to govern the switching states of the IGBT's. This can be done because $i_{rHF(d)}$ has only high frequency components and $i_{rcontrol(d)}$ has low frequency components due to the differences in LC time constants, as discussed in the second section. Then the control signal governing the switches is applied in the same manner, described at the start of section \oldref{EMPC:sec:Modulation}.
+    where $\omega_n=1.1,\,\omega_{ac}=\frac{1}{\sqrt{L_{ac}C_{ac}}},\,\omega_{dc}=\frac{1}{\sqrt{L_{dc}C_{dc}}}$. The state feedback controllers block on the diagram is taking the controller's place, shown on Fig. \ref{EMPC:fig:ControlStruct}. The independent outputs are the high pass filter's output  $i_{rHF(d)}$ and the controller's output $i_{ref}=i_{rcontrol(d)}$. The sum of the independent current values is converted to Clarke frame to be able to govern the switching states of the IGBT's. This can be done because $i_{rHF(d)}$ has only high frequency components and $i_{rcontrol(d)}$ has low frequency components due to the differences in LC time constants, as discussed in the second section. Then the control signal governing the switches is applied in the same manner, described at the start of section \oldref{EMPC:sec:Modulation}.
     The state feedback control's performance in comparison with the EMPC is shown in Fig. \ref{EMPC:fig:Result_EMPCfinal}.
 
     \begin{figure}[!ht]

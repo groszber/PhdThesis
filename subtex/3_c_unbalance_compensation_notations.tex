@@ -1,0 +1,217 @@
+\newpage
+\section{Notations used in the chapter}
+		
+		%\begin{longtable}{r|l}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  \begin{scriptsize}
+\begin{tabularx}{\textwidth}{r|X}
+
+
+
+  
+
+  %% A
+%%$\textbf{A}$																& State matrix of a linear time invariant model\\
+%%$\textbf{A}_x$              & Constraint state matrix\\
+%%$\textbf{A}_u$              & Constraint input matrix\\
+%%$\textbf{A}_f$              & Constraint state matrix at the end of the horizon\\
+%%$\mathcal{A}$               & Set if indices in states where the constraints are active\\
+%%$\mathcal{A}^N$               & Set if indices in states where the constraints are inactive\\
+%%
+%%
+%%% B
+%%$\textbf{B}$																& Input matrix of a linear time invariant model\\
+%%$\textbf{b}_x$              & Constraint state coefficient\\
+%%$\textbf{b}_u$              & Constraint input coefficient\\
+%%$\textbf{b}_f$              & Constraint state coefficient at the end of the horizon\\
+%%
+%%% C
+%$CVUF$  													& Complex Voltage Unbalance Factor\\
+%%$\textbf{C}$																& Output matrix of a linear time invariant model\\
+$C_{snub}$ 												& Capacitance to reduce switching loss and to damp out over-voltage\\
+%%$C_D$															& Capacitance for filtering the output voltage of the VSR\\
+%%$C_S$															& Input filter capacitance of the three phase alternating current in CSR\\
+$\mathcal{C}$                           & APPS steps where $\Delta^t_i$ is reduced\\
+%%$\mathcal{C}_{\mathcal{A}}$               & Critical region associated with the active constraints\\
+%%
+%%% D
+$D_{1+},D_{2+}$										& CSI Higher diodes\\
+$D_{1+},D_{2+}$										& CSI Lower diodes\\
+$\mathcal{D}$                                       & APPS set of step directions\\
+$d_i$												& APPS direction of active process\\
+%%
+%%% E
+%%$\textbf{E}$                & Unified constraint state matrix \\
+$\mathcal{E}$               & APPS set of external sucesses\\
+%%
+%%% F
+%%$\textbf{F}$                & State coefficient matrix for calculating the optimal input \\
+  $f(\textbf{x})$										& Multivariate function to minimize\\
+%%
+%%% G
+$G$                               & Geometrical voltage unbalance indicator \\
+%%$\textbf{G}$                & Unified constraint input matrix \\
+%%$\mathcal{D}$               & Set of directions\\
+%%$g$                         & Autonomous function where there are no inputs\\
+%%$g_l$                       & Equality constraints of a Lagrange function\\
+%%
+%%% H
+%%$\textbf{H}$                & Supplementary quadratic optimizer matrix\\
+$h$                                                             & DC-DC transformer turn ratio\\
+%%
+%%% I
+
+%$I_{0,1,2}$												& Zero positive and negarive sequence of current drop\\	
+%%$I_D$															& Direct output current\\
+$\mathcal{I}$               & APPS set if internal sucesses\\
+%%$\mathcal{I}_c$               & Set if indices of constraints\\
+%%$i_{abc}$                   & Generic three phase current\\
+%%$i_i$															& Constant input inductor current\\
+%%$i_o$															& Alternating output current\\
+%%$i_{dq0}$                   & Three phase current converted to Park frame\\
+%%$i_{\alpha\beta\gamma}$                   & Three phase current converted to Clarke frame\\
+%%$\vec{i}$													& Rectifier input current\\
+%%$\vec{i}_ref$											& Reference rectifier input current\\
+%%
+%%
+%%% J
+%%$J_0$                           & Cost (or value) function to optimize at the initial state\\
+%%$J^*_0$            & Optimal cost value at the initial state\\
+%%$\mathcal{J}$               & Set if indices of active constraints\\
+%%
+%%% K
+%%$\textbf{K}$                & Controller gain\\
+%%$\mathcal{K}$               & Set of states respective to constraints\\
+%%$\mathcal{K}^*$               & Set of feasible states respective to constraints\\
+%$k_v$  														& Magnitude of CVUF\\
+%%$k$																& Time step on the horizon $N$ \\
+%%
+%%% L
+$L_+,L_-$													& CSI current filter inductors\\
+$L_a$															& DC-DC transformer leakage inductance\\
+%%$L_S$															& Input filter inductance of the three phase alternating current in VSR\\
+%%$L_D$															& Inductor for filtering the output current of the CSR (Choke)\\
+%$LVUR$														& Voltage unbalance notation based on NEMA standard\\
+%%
+%%% M
+%%$m$                             & Dimension of the input vector\\
+%$m_{21}$                        & negative sequence factor, identical to $VUF$\\
+%$m_{01}$                        & zero sequence factor\\
+%%
+%%
+%%% N
+%%$N$											& Defined horizon of MPC\\
+%%$N_c,N_u,N_y$											& Defined control, input, and output horizon respectively\\
+%%$n$                             & Dimension of the state vector\\
+%%
+%%% O
+%%
+%%% P
+%%$\textbf{P}$                    & Terminal penalising weight matrix\\
+$\mathcal{P}$                   & APPS set of processes\\
+%%$\mathcal{P}^c$               & Set of all (input and state) constraints at time instance\\
+%%$\mathcal{P}_p$             & Set of primary feasibility conditions\\
+%%$\mathcal{P}_d$             & Set of dual feasibility conditions\\
+$P_D$                           & DC-DC power transfer under idealized conditions\\
+$P_{loss}$                        & Lost power per household due to network unbalance\\
+  $P^{comp}_{loss}$                 & Assumed network loss with unbalance compensation control\\
+  $\Delta P_{loss}$                 & Saved power with unbalance compensation control\\
+  $\textbf{p}$                  & APPS search pattern\\
+$p$                             & APPS process index\\
+
+
+%$PVUR_{IEEE-141},PVUR_{IEEE-936}$	& Voltage unbalance notation based on IEEE-141, and IEEE-936 standard\\
+%%$p$																& Process number\\
+%%
+%%% Q
+%%$\textbf{Q}$                    & State penalising weight matrix\\
+$\mathcal{Q}$                   & APPS set of sidestep indices\\
+$q$																& Discrete time step\\
+%%
+%%% R
+
+%%$\textbf{R}$                    & Input penalising weight matrix\\
+%%
+%%% S
+$S_{1+},S_{2+}$										& CSI higher switches\\
+$S_{1+},S_{2+}$										& CSI lower switches\\
+%%$\textbf{S}$              & General state constraint coefficient\\
+$\mathcal{S}$                   & APPS set of successful iterations\\
+%%$\mathcal{S}^x$             & Set of all possible future state matrices stepping through the horizon\\
+%%$\mathcal{S}^u$             & Set of all possible future input matrices stepping through the horizon\\
+$s$                             & Dimension of the decision vector\\
+%%
+%%% T
+$t_q$                             & Timestep of the algorithm at $q$\\
+%%% U
+%%$\textbf{U}^*_0$            & Optimal vector of future inputs starting from the initial state\\
+$\mathcal{U}$              & APPS set of unsuccessful steps\\
+%%$\mathcal{U}^u$             & Set of inputs not violating constraints\\
+%%$\textbf{u}^*$            & Optimal vector of input\\
+%%$\widehat{u}$				& Peak value of AC-side capacitor voltage\\
+%%
+%%% V
+%%$V$                         & Lyapunov function\\
+%$V_{ab},V_{bc},V_{ca}$  					& Line-to-line voltages\\
+%$V_{avg_{line}}$  								& Average of line voltages\\	
+%$V_{a},V_{b},V_{c}$  							& Phase-to-neutral voltages\\
+$V_{an},V_{bn}$  									& Designated point's potential to ground \\
+%$V_{avg_{phase}}$  								& Average of phase voltages\\
+$V_i$															& Constant input voltage\\
+$V_o$															& Alternating output voltage\\
+%$V_{0},V_{p},V_{n}$  							& Zero, negative and positive sequence voltages based on symmetrical components theorem\\
+$V_{D1},V_{D2}$ 									& Two end's voltage on the DC-DC converter\\
+%%$V_d$															& Output voltage\\
+%$\hat{V}$															& Voltage peak\\
+%$\vec{V}_a, \vec{V}_b, \vec{V}_c,$										& Voltage vectors in the three phase phasor\\
+$VUF$  														& Voltage Unbalance Factor\\
+%$VUFactor,VU,VUR$                	& Non standardized voltage unbalance factor based on manufacturer standards\\
+%%$v_{c_p}$													& AC-side capacitor voltage, where $p\in\{1,2,3\}$\\
+$v_1,v_2$                         & DC-DC transformer voltages\\
+%%$v_D$															& Output voltage before the choke inductor $L_D$\\
+%%$v_{i,j}$													& Three phase phase-to-neutral voltage $i,j\in\{R,S,T\}$\\
+%%$v_{N,RS}$												& Three phase line-to-line voltage of $R$ and $S$\\
+%%
+%%% W
+%%$\textbf{w}$                & Unified constraint vector \\
+%%
+%%% X
+%%$\mathcal{X}^x$             & Set of all possible future states stepping through the horizon\\
+%%$\textbf{x}$											& State vector of a linear time invariant model\\
+%%$\bar{\textbf{x}}$											& Minimum state value of the objective function\\
+%%$\textbf{x}(0)$                 & Initial state\\
+$\textbf{x}^{q}$                           & Local multivariate state at the $q^{th}$ timestep\\
+$x_i^{best}$											& APPS best reached state, where $x_i^{best}$ is a minima\\
+%%
+%%% Y
+%% $\textbf{Y}$ & Supplementary matrices\\
+%%
+%%% Z
+%$Z$												& Symmetrical component mutual impedance\\
+%%$\textbf{Z}^*$              & Set of optimizers leading to feasible states\\
+%%$\textbf{z}$											& Optimizer of linear multi parametric problem\\
+%%$\tilde{\textbf{z}}$        & Set of all future states and inputs over the horizon\\
+%%
+%%% Greek
+$\alpha$													& Fortesque operator\\
+%$\Delta U$													& Zero positive and negative sequence of voltage drop\\
+$\Delta$													& APPS step length control parameter\\
+$\Delta_i^{best}$											& APPS best reached step size\\
+$\delta$                    & DC-DC modulation coefficient\\
+$\Delta_q$                        & Step size at $q$\\
+%$\theta$                    & Angular displacement of the voltage or current vector\\
+%$\theta_v$  											& Angle of CVUF\\
+$\lambda$                   & APPS system specific tunable parameter\\
+$\theta$                    & APPS system specific tunable parameter\\
+$\nu_i(q)$ 												& Time index for the completion of the function evaluation that produced the update at time step $q$ on process $i$\\
+$\rho$																& APPS infinite sequence iterator\\
+%%$\varphi_N$												& Angle of phase voltage\\
+%$\upsilon$  											& Fortesque operator\\
+$\tau_i(q)$												& Time index for initialization of the function evaluation, that produced the update at time $q$ on process $i$\\
+$\omega$													& Angular velocity of output sinusoidal voltage or current\\
+$\omega_i(q)$ 										& Generating process index for the update time at step $q$ on process $i$\\
+$\bigtriangleup_{Ideal}$          & Triangle of Ideal voltage vectors\\
+  $\bigtriangleup_{Real}$           & Triangle of real voltage vectors\\
+  
+\end{tabularx}
+\end{scriptsize} 

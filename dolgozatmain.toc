@@ -14,57 +14,57 @@
 \contentsline {section}{\numberline {2.5}Summary}{15}% 
 \contentsline {chapter}{\numberline {3}Voltage unbalance compensation}{18}% 
 \contentsline {section}{\numberline {3.1}Literature overview}{18}% 
-\contentsline {section}{\numberline {3.2}Power electronic components for current control}{19}% 
-\contentsline {subsection}{\numberline {3.2.1}Galvanic decoupled bi-directional DC-DC converters}{19}% 
-\contentsline {subsection}{\numberline {3.2.2}Current source inverters}{20}% 
-\contentsline {section}{\numberline {3.3}Asynchronous parallel pattern search}{22}% 
-\contentsline {paragraph}{Parallel pattern search}{23}% 
-\contentsline {paragraph}{Adding asynchronicity}{23}% 
+\contentsline {section}{\numberline {3.2}Power electronic components for current control}{20}% 
+\contentsline {subsection}{\numberline {3.2.1}Galvanic decoupled bi-directional DC-DC converters}{20}% 
+\contentsline {subsection}{\numberline {3.2.2}Current source inverters}{21}% 
+\contentsline {section}{\numberline {3.3}Asynchronous parallel pattern search}{23}% 
+\contentsline {paragraph}{Parallel pattern search}{24}% 
+\contentsline {paragraph}{Adding asynchronicity}{24}% 
 \contentsline {section}{\numberline {3.4}Unbalance compensation with asym. inverter}{25}% 
-\contentsline {subsection}{\numberline {3.4.1}Network structure}{25}% 
-\contentsline {subsection}{\numberline {3.4.2}Problem statement}{25}% 
-\contentsline {subsection}{\numberline {3.4.3}Control problem}{26}% 
-\contentsline {subsubsection}{Asymmetrical inverter structure}{27}% 
+\contentsline {subsection}{\numberline {3.4.1}Network structure}{26}% 
+\contentsline {subsection}{\numberline {3.4.2}Problem statement}{26}% 
+\contentsline {subsection}{\numberline {3.4.3}Control problem}{27}% 
+\contentsline {subsubsection}{Asymmetrical inverter structure}{28}% 
 \contentsline {subsubsection}{Measurements from a real unbalanced network}{29}% 
 \contentsline {subsection}{\numberline {3.4.4}Optimization based control algorithm}{30}% 
-\contentsline {section}{\numberline {3.5}Discussion}{32}% 
-\contentsline {subsection}{\numberline {3.5.1}Dynamical simulation based experiments}{32}% 
-\contentsline {subsection}{\numberline {3.5.2}Performance analysis}{32}% 
-\contentsline {subsubsection}{Robustness analysis}{33}% 
-\contentsline {subsection}{\numberline {3.5.3}Environmental effect}{33}% 
-\contentsline {subsubsection}{Power loss reduction on the network}{33}% 
-\contentsline {subsubsection}{CO2 footprint}{34}% 
-\contentsline {section}{\numberline {3.6}Conclusion}{35}% 
-\contentsline {section}{\numberline {3.7}Notations used in the chapter}{37}% 
-\contentsline {chapter}{\numberline {4}Explicit predictive current control}{38}% 
-\contentsline {section}{\numberline {4.1}Literature overview}{38}% 
-\contentsline {section}{\numberline {4.2}Three-phase buck-type rectifiers}{40}% 
-\contentsline {paragraph}{Basic operation principles}{42}% 
-\contentsline {subsection}{\numberline {4.2.1}Coordinate transformations}{44}% 
-\contentsline {subsubsection}{Clarke transformation}{44}% 
-\contentsline {subsubsection}{Park transformation}{44}% 
-\contentsline {section}{\numberline {4.3}Model based predictive control}{45}% 
-\contentsline {subsection}{\numberline {4.3.1}Quadratic optimization and predictive control}{45}% 
-\contentsline {paragraph}{Linear quadratic optimal control}{46}% 
-\contentsline {paragraph}{Constrained optimal control}{49}% 
-\contentsline {subsubsection}{Receiding horizon control}{52}% 
-\contentsline {subsubsection}{Stability of MPC}{54}% 
-\contentsline {section}{\numberline {4.4}Predictive control of a CSR}{56}% 
-\contentsline {subsection}{\numberline {4.4.1}Modeling}{56}% 
-\contentsline {subsubsection}{Mathematical modeling of the CSR}{56}% 
-\contentsline {subsubsection}{Model simplification}{58}% 
-\contentsline {subsubsection}{Control structure}{59}% 
-\contentsline {subsection}{\numberline {4.4.2}Control}{61}% 
-\contentsline {subsubsection}{DC-side explicit model predictive control}{61}% 
-\contentsline {subsubsection}{Active AC-side damping}{64}% 
-\contentsline {subsection}{\numberline {4.4.3}Modulation}{66}% 
-\contentsline {subsection}{\numberline {4.4.4}Discussion}{69}% 
-\contentsline {subsubsection}{Lyapunov stability}{69}% 
-\contentsline {subsubsection}{Computational effort}{69}% 
-\contentsline {subsubsection}{Horizon performance}{70}% 
-\contentsline {subsubsection}{Simulation results}{71}% 
-\contentsline {subsubsection}{Comparison with a state feedback control}{73}% 
-\contentsline {section}{\numberline {4.5}Conclusion}{74}% 
+\contentsline {section}{\numberline {3.5}Discussion}{33}% 
+\contentsline {subsection}{\numberline {3.5.1}Dynamical simulation based experiments}{33}% 
+\contentsline {subsection}{\numberline {3.5.2}Performance analysis}{33}% 
+\contentsline {subsubsection}{Robustness analysis}{34}% 
+\contentsline {subsection}{\numberline {3.5.3}Environmental effect}{34}% 
+\contentsline {subsubsection}{Power loss reduction on the network}{35}% 
+\contentsline {subsubsection}{CO2 footprint}{36}% 
+\contentsline {section}{\numberline {3.6}Conclusion}{36}% 
+\contentsline {section}{\numberline {3.7}Notations used in the chapter}{38}% 
+\contentsline {chapter}{\numberline {4}Explicit predictive current control}{39}% 
+\contentsline {section}{\numberline {4.1}Literature overview}{39}% 
+\contentsline {section}{\numberline {4.2}Three-phase buck-type rectifiers}{41}% 
+\contentsline {paragraph}{Basic operation principles}{43}% 
+\contentsline {subsection}{\numberline {4.2.1}Coordinate transformations}{45}% 
+\contentsline {subsubsection}{Clarke transformation}{45}% 
+\contentsline {subsubsection}{Park transformation}{45}% 
+\contentsline {section}{\numberline {4.3}Model based predictive control}{46}% 
+\contentsline {subsection}{\numberline {4.3.1}Quadratic optimization and predictive control}{46}% 
+\contentsline {paragraph}{Linear quadratic optimal control}{47}% 
+\contentsline {paragraph}{Constrained optimal control}{50}% 
+\contentsline {subsubsection}{Receiding horizon control}{53}% 
+\contentsline {subsubsection}{Stability of MPC}{55}% 
+\contentsline {section}{\numberline {4.4}Predictive control of a CSR}{57}% 
+\contentsline {subsection}{\numberline {4.4.1}Modeling}{57}% 
+\contentsline {subsubsection}{Mathematical modeling of the CSR}{57}% 
+\contentsline {subsubsection}{Model simplification}{59}% 
+\contentsline {subsubsection}{Control structure}{60}% 
+\contentsline {subsection}{\numberline {4.4.2}Control}{62}% 
+\contentsline {subsubsection}{DC-side explicit model predictive control}{62}% 
+\contentsline {subsubsection}{Active AC-side damping}{65}% 
+\contentsline {subsection}{\numberline {4.4.3}Modulation}{67}% 
+\contentsline {subsection}{\numberline {4.4.4}Discussion}{70}% 
+\contentsline {subsubsection}{Lyapunov stability}{70}% 
+\contentsline {subsubsection}{Computational effort}{70}% 
+\contentsline {subsubsection}{Horizon performance}{71}% 
+\contentsline {subsubsection}{Simulation results}{72}% 
+\contentsline {subsubsection}{Comparison with a state feedback control}{74}% 
+\contentsline {section}{\numberline {4.5}Conclusion}{75}% 
 \contentsline {section}{\numberline {4.6}Notations used in the chapter}{76}% 
 \contentsline {chapter}{\numberline {5}Thesis and Summary}{78}% 
 \contentsline {section}{\numberline {5.1}Summary}{78}% 
