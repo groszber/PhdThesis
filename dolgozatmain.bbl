@@ -1632,6 +1632,43 @@
     \field{year}{2018}
   \endentry
 
+  \entry{li2005microgrid}{article}{}
+    \name{author}{3}{}{%
+      {{hash=LY}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Yunwei},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=VDM}{%
+         family={Vilathgamuwa},
+         familyi={V\bibinitperiod},
+         given={D\bibnamedelima Mahinda},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=LPC}{%
+         family={Loh},
+         familyi={L\bibinitperiod},
+         given={Poh\bibnamedelima Chiang},
+         giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{LYVDMLPC1}
+    \strng{fullhash}{LYVDMLPC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{1707\bibrangedash 1719}
+    \field{title}{Microgrid power quality enhancement using a three-phase
+  four-wire grid-interfacing compensator}
+    \field{volume}{41}
+    \field{journaltitle}{IEEE transactions on industry applications}
+    \field{year}{2005}
+  \endentry
+
   \entry{lee2009new}{article}{}
     \name{author}{4}{}{%
       {{hash=LK}{%
@@ -1718,90 +1755,42 @@
     \field{year}{2010}
   \endentry
 
-  \entry{li2005microgrid}{article}{}
+  \entry{vekhande2015control}{article}{}
     \name{author}{3}{}{%
-      {{hash=LY}{%
-         family={Li},
-         familyi={L\bibinitperiod},
-         given={Yunwei},
-         giveni={Y\bibinitperiod},
-      }}%
-      {{hash=VDM}{%
-         family={Vilathgamuwa},
+      {{hash=VV}{%
+         family={Vekhande},
          familyi={V\bibinitperiod},
-         given={D\bibnamedelima Mahinda},
-         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={Vishal},
+         giveni={V\bibinitperiod},
       }}%
-      {{hash=LPC}{%
-         family={Loh},
-         familyi={L\bibinitperiod},
-         given={Poh\bibnamedelima Chiang},
-         giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod},
+      {{hash=KV}{%
+         family={Kanakesh},
+         familyi={K\bibinitperiod},
+         given={VK},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=FBG}{%
+         family={Fernandes},
+         familyi={F\bibinitperiod},
+         given={Baylon\bibnamedelima G},
+         giveni={B\bibinitperiod\bibinitdelim G\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
       {IEEE}%
     }
-    \strng{namehash}{LYVDMLPC1}
-    \strng{fullhash}{LYVDMLPC1}
+    \strng{namehash}{VVKVFBG1}
+    \strng{fullhash}{VVKVFBG1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{number}{6}
-    \field{pages}{1707\bibrangedash 1719}
-    \field{title}{Microgrid power quality enhancement using a three-phase
-  four-wire grid-interfacing compensator}
-    \field{volume}{41}
-    \field{journaltitle}{IEEE transactions on industry applications}
-    \field{year}{2005}
-  \endentry
-
-  \entry{Hu2016264}{article}{}
-    \name{author}{5}{}{%
-      {{hash=HJ}{%
-         family={Hu},
-         familyi={H\bibinitperiod},
-         given={Junjie},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=MM}{%
-         family={Marinelli},
-         familyi={M\bibinitperiod},
-         given={Mattia},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=CM}{%
-         family={Coppo},
-         familyi={C\bibinitperiod},
-         given={Massimiliano},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=ZA}{%
-         family={Zecchino},
-         familyi={Z\bibinitperiod},
-         given={Antonio},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=BHW}{%
-         family={Bindner},
-         familyi={B\bibinitperiod},
-         given={Henrik\bibnamedelima W},
-         giveni={H\bibinitperiod\bibinitdelim W\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{HJMMCM+1}
-    \strng{fullhash}{HJMMCMZABHW1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{pages}{264\bibrangedash 274}
-    \field{title}{Coordinated voltage control of a decoupled three-phase
-  on-load tap changer transformer and photovoltaic inverters for managing
-  unbalanced networks}
-    \field{volume}{131}
-    \field{journaltitle}{Electric Power Systems Research}
-    \field{year}{2016}
+    \field{number}{9}
+    \field{pages}{6719\bibrangedash 6737}
+    \field{title}{Control of three-phase bidirectional current-source converter
+  to inject balanced three-phase currents under unbalanced grid voltage
+  condition}
+    \field{volume}{31}
+    \field{journaltitle}{IEEE Transactions on power electronics}
+    \field{year}{2015}
   \endentry
 
   \entry{wang2016dc}{article}{}
@@ -1853,49 +1842,6 @@
     \field{year}{2016}
   \endentry
 
-  \entry{wang2014virtual}{article}{}
-    \name{author}{4}{}{%
-      {{hash=WX}{%
-         family={Wang},
-         familyi={W\bibinitperiod},
-         given={Xiongfei},
-         giveni={X\bibinitperiod},
-      }}%
-      {{hash=LYW}{%
-         family={Li},
-         familyi={L\bibinitperiod},
-         given={Yun\bibnamedelima Wei},
-         giveni={Y\bibinitperiod\bibinitdelim W\bibinitperiod},
-      }}%
-      {{hash=BF}{%
-         family={Blaabjerg},
-         familyi={B\bibinitperiod},
-         given={Frede},
-         giveni={F\bibinitperiod},
-      }}%
-      {{hash=LPC}{%
-         family={Loh},
-         familyi={L\bibinitperiod},
-         given={Poh\bibnamedelima Chiang},
-         giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{WXLYWBF+1}
-    \strng{fullhash}{WXLYWBFLPC1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{12}
-    \field{pages}{7019\bibrangedash 7037}
-    \field{title}{Virtual-impedance-based control for voltage-source and
-  current-source converters}
-    \field{volume}{30}
-    \field{journaltitle}{IEEE Transactions on Power Electronics}
-    \field{year}{2014}
-  \endentry
-
   \entry{guo2018advanced}{article}{}
     \name{author}{3}{}{%
       {{hash=GX}{%
@@ -1933,42 +1879,115 @@
     \field{year}{2018}
   \endentry
 
-  \entry{vekhande2015control}{article}{}
-    \name{author}{3}{}{%
-      {{hash=VV}{%
-         family={Vekhande},
-         familyi={V\bibinitperiod},
-         given={Vishal},
-         giveni={V\bibinitperiod},
+  \entry{Hu2016264}{article}{}
+    \name{author}{5}{}{%
+      {{hash=HJ}{%
+         family={Hu},
+         familyi={H\bibinitperiod},
+         given={Junjie},
+         giveni={J\bibinitperiod},
       }}%
-      {{hash=KV}{%
-         family={Kanakesh},
+      {{hash=MM}{%
+         family={Marinelli},
+         familyi={M\bibinitperiod},
+         given={Mattia},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Coppo},
+         familyi={C\bibinitperiod},
+         given={Massimiliano},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=ZA}{%
+         family={Zecchino},
+         familyi={Z\bibinitperiod},
+         given={Antonio},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BHW}{%
+         family={Bindner},
+         familyi={B\bibinitperiod},
+         given={Henrik\bibnamedelima W},
+         giveni={H\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{HJMMCM+1}
+    \strng{fullhash}{HJMMCMZABHW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{264\bibrangedash 274}
+    \field{title}{Coordinated voltage control of a decoupled three-phase
+  on-load tap changer transformer and photovoltaic inverters for managing
+  unbalanced networks}
+    \field{volume}{131}
+    \field{journaltitle}{Electric Power Systems Research}
+    \field{year}{2016}
+  \endentry
+
+  \entry{el2016control}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ENA}{%
+         family={El-Naggar},
+         familyi={E\bibinithyphendelim N\bibinitperiod},
+         given={Ahmed},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=EI}{%
+         family={Erlich},
+         familyi={E\bibinitperiod},
+         given={Istv{\`a}n},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IET}%
+    }
+    \strng{namehash}{ENAEI1}
+    \strng{fullhash}{ENAEI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{10}
+    \field{pages}{1577\bibrangedash 1586}
+    \field{title}{Control approach of three-phase grid connected PV inverters
+  for voltage unbalance mitigation in low-voltage distribution grids}
+    \field{volume}{10}
+    \field{journaltitle}{IET Renewable Power Generation}
+    \field{year}{2016}
+  \endentry
+
+  \entry{dash2011dynamic}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DPP}{%
+         family={Dash},
+         familyi={D\bibinitperiod},
+         given={Prajna\bibnamedelima Paramita},
+         giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kazerani},
          familyi={K\bibinitperiod},
-         given={VK},
-         giveni={V\bibinitperiod},
-      }}%
-      {{hash=FBG}{%
-         family={Fernandes},
-         familyi={F\bibinitperiod},
-         given={Baylon\bibnamedelima G},
-         giveni={B\bibinitperiod\bibinitdelim G\bibinitperiod},
+         given={Mehrdad},
+         giveni={M\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
       {IEEE}%
     }
-    \strng{namehash}{VVKVFBG1}
-    \strng{fullhash}{VVKVFBG1}
+    \strng{namehash}{DPPKM1}
+    \strng{fullhash}{DPPKM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{number}{9}
-    \field{pages}{6719\bibrangedash 6737}
-    \field{title}{Control of three-phase bidirectional current-source converter
-  to inject balanced three-phase currents under unbalanced grid voltage
-  condition}
-    \field{volume}{31}
-    \field{journaltitle}{IEEE Transactions on power electronics}
-    \field{year}{2015}
+    \field{number}{4}
+    \field{pages}{443\bibrangedash 450}
+    \field{title}{Dynamic modeling and performance analysis of a grid-connected
+  current-source inverter-based photovoltaic system}
+    \field{volume}{2}
+    \field{journaltitle}{IEEE Transactions on Sustainable Energy}
+    \field{year}{2011}
   \endentry
 
   \entry{kheraluwala1992performance}{article}{}

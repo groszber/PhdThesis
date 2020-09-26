@@ -1125,7 +1125,7 @@ ISSN={null},
 %  power minimization in three-phase systems, Mathematics and Computers in
 %  Science and Engineering Series, INASE-Saint Petersburg State Politechnical
 %  University, Russia, 2014, pp. 134--137.
-@inproceedings{uimethod,
+@inproceedings{korovkin2016uimethod,
   title={A method for minimization of unbalanced mode in three-phase power systems},
   author={Korovkin, NV and Vu, QS and Yazenin, RA},
   booktitle={2016 IEEE NW Russia Young Researchers in Electrical and Electronic Engineering Conference (EIConRusNW)},
