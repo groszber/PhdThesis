@@ -1,5 +1,6 @@
 \section[Unbalance compensation with asym. inverter]{Voltage unbalance compensation with optimization based control algorithm and asymmetrical inverter structure}\label{VUB:sec:Compensation}
 
+\textcolor{blue}{Ezt újra kell írni, jobban összefoglalva hogy mi van és letenni a scope-ot.}
  First the networks structure shall be described, the power electrical device is connected to, as a household supplying, renewable utilizing device, followed by the aforementioned device's topology and control shall be presented based on the geometrical voltage unbalance norm (described in section \ref{VUB:sec:Geom}), with the performance results on an unbalanced network. It shall be shown, that it is possible to formulate some power quality related aims, or demands for the domestic size generator units implemented in a complex power electrical system, capable of supplying a household, with both renewable and network supplied energy, and lowering voltage unbalance as well, considering a network with unpredictable impedance.
 		
 \subsection{Network structure}\label{VUB:sec:Network}
