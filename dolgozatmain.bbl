@@ -2093,69 +2093,6 @@
     \field{year}{2003}
   \endentry
 
-  \entry{Patnaik2013topologies}{article}{}
-    \name{author}{2}{}{%
-      {{hash=PSS}{%
-         family={Patnaik},
-         familyi={P\bibinitperiod},
-         given={Sushree\bibnamedelima Sangita},
-         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-      {{hash=PAK}{%
-         family={Panda},
-         familyi={P\bibinitperiod},
-         given={Anup\bibnamedelima Kumar},
-         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{PSSPAK1}
-    \strng{fullhash}{PSSPAK1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{pages}{298\bibrangedash 306}
-    \field{title}{Three-level H-bridge and three H-bridges-based three-phase
-  four-wire shunt active power filter topologies for high voltage applications}
-    \field{volume}{51}
-    \field{journaltitle}{International Journal of Electrical Power \& Energy
-  Systems}
-    \field{year}{2013}
-  \endentry
-
-  \entry{Ninad2014control}{article}{}
-    \name{author}{2}{}{%
-      {{hash=NNA}{%
-         family={Ninad},
-         familyi={N\bibinitperiod},
-         given={Nayeem\bibnamedelima Ahmed},
-         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=LL}{%
-         family={Lopes},
-         familyi={L\bibinitperiod},
-         given={Luiz},
-         giveni={L\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{NNALL1}
-    \strng{fullhash}{NNALL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{pages}{449\bibrangedash 459}
-    \field{title}{Per-phase vector control strategy for a four-leg voltage
-  source inverter operating with highly unbalanced loads in stand-alone hybrid
-  systems}
-    \field{volume}{55}
-    \field{journaltitle}{International Journal of Electrical Power \& Energy
-  Systems}
-    \field{year}{2014}
-  \endentry
-
   \entry{hough2001asynchronous}{article}{}
     \name{author}{3}{}{%
       {{hash=HPD}{%
@@ -2253,6 +2190,69 @@
     \field{journaltitle}{International Journal of Electrical Power \& Energy
   Systems}
     \field{year}{2007}
+  \endentry
+
+  \entry{Patnaik2013topologies}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PSS}{%
+         family={Patnaik},
+         familyi={P\bibinitperiod},
+         given={Sushree\bibnamedelima Sangita},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=PAK}{%
+         family={Panda},
+         familyi={P\bibinitperiod},
+         given={Anup\bibnamedelima Kumar},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{PSSPAK1}
+    \strng{fullhash}{PSSPAK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{298\bibrangedash 306}
+    \field{title}{Three-level H-bridge and three H-bridges-based three-phase
+  four-wire shunt active power filter topologies for high voltage applications}
+    \field{volume}{51}
+    \field{journaltitle}{International Journal of Electrical Power \& Energy
+  Systems}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Ninad2014control}{article}{}
+    \name{author}{2}{}{%
+      {{hash=NNA}{%
+         family={Ninad},
+         familyi={N\bibinitperiod},
+         given={Nayeem\bibnamedelima Ahmed},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=LL}{%
+         family={Lopes},
+         familyi={L\bibinitperiod},
+         given={Luiz},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{NNALL1}
+    \strng{fullhash}{NNALL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{449\bibrangedash 459}
+    \field{title}{Per-phase vector control strategy for a four-leg voltage
+  source inverter operating with highly unbalanced loads in stand-alone hybrid
+  systems}
+    \field{volume}{55}
+    \field{journaltitle}{International Journal of Electrical Power \& Energy
+  Systems}
+    \field{year}{2014}
   \endentry
 
   \entry{MVM2013}{article}{}

@@ -21,19 +21,17 @@
 \contentsline {paragraph}{Parallel pattern search}{24}% 
 \contentsline {paragraph}{Adding asynchronicity}{25}% 
 \contentsline {section}{\numberline {3.4}Unbalance compensation with asym. inverter}{26}% 
-\contentsline {subsection}{\numberline {3.4.1}Network structure}{27}% 
-\contentsline {subsection}{\numberline {3.4.2}Problem statement}{27}% 
-\contentsline {subsection}{\numberline {3.4.3}Control problem}{28}% 
-\contentsline {subsubsection}{Asymmetrical inverter structure}{29}% 
-\contentsline {subsubsection}{Measurements from a real unbalanced network}{30}% 
-\contentsline {subsection}{\numberline {3.4.4}Optimization based control algorithm}{31}% 
+\contentsline {subsection}{\numberline {3.4.1}Problem statement}{26}% 
+\contentsline {subsection}{\numberline {3.4.2}Optimization based control algorithm}{29}% 
+\contentsline {subsubsection}{Asymmetrical inverter structure}{31}% 
+\contentsline {subsubsection}{Measurements from a real unbalanced network}{33}% 
 \contentsline {section}{\numberline {3.5}Discussion}{34}% 
 \contentsline {subsection}{\numberline {3.5.1}Dynamical simulation based experiments}{34}% 
 \contentsline {subsection}{\numberline {3.5.2}Performance analysis}{34}% 
-\contentsline {subsubsection}{Robustness analysis}{35}% 
+\contentsline {subsubsection}{Robustness analysis}{34}% 
 \contentsline {subsection}{\numberline {3.5.3}Environmental effect}{35}% 
-\contentsline {subsubsection}{Power loss reduction on the network}{36}% 
-\contentsline {subsubsection}{CO2 footprint}{37}% 
+\contentsline {subsubsection}{Power loss reduction on the network}{35}% 
+\contentsline {subsubsection}{CO2 footprint}{36}% 
 \contentsline {section}{\numberline {3.6}Conclusion}{37}% 
 \contentsline {section}{\numberline {3.7}Notations used in the chapter}{39}% 
 \contentsline {chapter}{\numberline {4}Explicit predictive current control}{40}% 
