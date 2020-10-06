@@ -1134,6 +1134,30 @@ ISSN={null},
   organization={IEEE},
 }
 
+@article{el2016control,
+  title={Control approach of three-phase grid connected PV inverters for voltage unbalance mitigation in low-voltage distribution grids},
+  author={El-Naggar, Ahmed and Erlich, Istv{\`a}n},
+  journal={IET Renewable Power Generation},
+  volume={10},
+  number={10},
+  pages={1577--1586},
+  year={2016},
+  publisher={IET}
+}
+
+@article{dash2011dynamic,
+  title={Dynamic modeling and performance analysis of a grid-connected current-source inverter-based photovoltaic system},
+  author={Dash, Prajna Paramita and Kazerani, Mehrdad},
+  journal={IEEE Transactions on Sustainable Energy},
+  volume={2},
+  number={4},
+  pages={443--450},
+  year={2011},
+  publisher={IEEE}
+}
+
+
+
 %\bibitem[{Lee et~al.(1998)}]{lee1998effects}
 %C.-Y. Lee, B.-K. Chen, W.-J. Lee, Y.-F. Hsu, Effects of various unbalanced
 %  voltages on the operation performance of an induction motor under the same

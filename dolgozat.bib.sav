@@ -320,6 +320,18 @@
   publisher={Springer},
 }
 
+@article{hough2001asynchronous,
+  title={Asynchronous parallel pattern search for nonlinear optimization},
+  author={Hough, Patricia D and Kolda, Tamara G and Torczon, Virginia J},
+  journal={SIAM Journal on Scientific Computing},
+  volume={23},
+  number={1},
+  pages={134--156},
+  year={2001},
+  publisher={SIAM}
+}
+
+
 
 
 
@@ -1125,7 +1137,7 @@ ISSN={null},
 %  power minimization in three-phase systems, Mathematics and Computers in
 %  Science and Engineering Series, INASE-Saint Petersburg State Politechnical
 %  University, Russia, 2014, pp. 134--137.
-@inproceedings{uimethod,
+@inproceedings{korovkin2016uimethod,
   title={A method for minimization of unbalanced mode in three-phase power systems},
   author={Korovkin, NV and Vu, QS and Yazenin, RA},
   booktitle={2016 IEEE NW Russia Young Researchers in Electrical and Electronic Engineering Conference (EIConRusNW)},
@@ -1133,6 +1145,42 @@ ISSN={null},
   year={2016},
   organization={IEEE},
 }
+
+@article{el2016control,
+  title={Control approach of three-phase grid connected PV inverters for voltage unbalance mitigation in low-voltage distribution grids},
+  author={El-Naggar, Ahmed and Erlich, Istv{\`a}n},
+  journal={IET Renewable Power Generation},
+  volume={10},
+  number={10},
+  pages={1577--1586},
+  year={2016},
+  publisher={IET}
+}
+
+@article{dash2011dynamic,
+  title={Dynamic modeling and performance analysis of a grid-connected current-source inverter-based photovoltaic system},
+  author={Dash, Prajna Paramita and Kazerani, Mehrdad},
+  journal={IEEE Transactions on Sustainable Energy},
+  volume={2},
+  number={4},
+  pages={443--450},
+  year={2011},
+  publisher={IEEE}
+}
+
+@article{el2011active,
+  title={Active power filter controller for harmonic suppression in industrial distribution system},
+  author={El-Mamlouk, Wael M and Mostafa, Hossam E and El-Sharkawy, Metwally A},
+  journal={Ain Shams Engineering Journal},
+  volume={2},
+  number={3-4},
+  pages={161--172},
+  year={2011},
+  publisher={Elsevier}
+}
+
+
+
 
 %\bibitem[{Lee et~al.(1998)}]{lee1998effects}
 %C.-Y. Lee, B.-K. Chen, W.-J. Lee, Y.-F. Hsu, Effects of various unbalanced

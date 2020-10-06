@@ -81,6 +81,7 @@
 \usepackage{tabularx}
 \usepackage{ltablex}\keepXColumns
 \usepackage{adjustbox}
+\usepackage[ruled,vlined]{algorithm2e}
 %\usepackage{hyperref}
 \usepackage{enumitem}
 \newlist{inparaenum}{enumerate}{2}% allow two levels of nesting in an enumerate-like environment
@@ -189,8 +190,9 @@
 \input{subtex/2_a_notations_voltage_unbalance.tex}
 
 %% Unbalance Compensation
-\input{subtex/3_unbalance_compensation.tex}
-\input{subtex/3_a_notations_unbalance_compensation.tex}
+\input{subtex/3_a_unbalance_compensation_basics.tex}
+\input{subtex/3_b_unbalance_compensation_core.tex}
+\input{subtex/3_c_unbalance_compensation_notations.tex}
 
 %% Explicit CSR
 \input{subtex/4_a_explicit_CSR_basics.tex}

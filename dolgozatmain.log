@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  3 OCT 2020 18:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  6 OCT 2020 21:17
 entering extended mode
 **C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
 (C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
@@ -711,42 +711,26 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen267
 \SOUL@ulht=\dimen268
 )
-(C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/algorithms\algorithm.sty
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
-nment
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty"
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count148
-\float@exts=\toks48
-\float@box=\box45
-\@float@everytoks=\toks49
-\@floatcapt=\box46
-)
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\ifthen.sty"
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\@float@every@algorithm=\toks50
-\c@algorithm=\count149
-)
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/algorithmicx\algpseudocode.
 sty
 Package: algpseudocode 
-
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/algorithmicx\algorithmicx.s
 ty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count150
-\c@ALG@rem=\count151
-\c@ALG@nested=\count152
+\c@ALG@line=\count148
+\c@ALG@rem=\count149
+\c@ALG@nested=\count150
 \ALG@tlm=\skip54
 \ALG@thistlm=\skip55
-\c@ALG@Lnr=\count153
-\c@ALG@blocknr=\count154
-\c@ALG@storecount=\count155
-\c@ALG@tmpcounter=\count156
+\c@ALG@Lnr=\count151
+\c@ALG@blocknr=\count152
+\c@ALG@storecount=\count153
+\c@ALG@tmpcounter=\count154
 \ALG@tmplength=\skip56
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
@@ -798,9 +782,9 @@ File: pgflibrarycurvilinear.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ))
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/circuitikz\pgfcirc.define
 s.tex
-\pgf@circ@count@a=\count157
-\pgf@circ@count@b=\count158
-\pgf@circ@count@c=\count159
+\pgf@circ@count@a=\count155
+\pgf@circ@count@b=\count156
+\pgf@circ@count@c=\count157
 \pgf@circ@res@up=\dimen280
 \pgf@circ@res@down=\dimen281
 \pgf@circ@res@zero=\dimen282
@@ -823,7 +807,7 @@ es.tex)
 .tex)
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/circuitikz\pgfcirctripole
 s.tex
-\pgf@circ@res@count=\count160
+\pgf@circ@res@count=\count158
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/circuitikz\pgfcircquadpol
 es.tex)
@@ -865,18 +849,18 @@ Package: expl3 2019-09-19 L3 programming layer (loader)
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/l3kernel\expl3-code.tex
 Package: expl3 2019-09-19 L3 programming layer (code)
-\c_max_int=\count161
-\l_tmpa_int=\count162
-\l_tmpb_int=\count163
-\g_tmpa_int=\count164
-\g_tmpb_int=\count165
-\g__kernel_prg_map_int=\count166
-\c__ior_term_noprompt_ior=\count167
-\c_log_iow=\count168
-\l_iow_line_count_int=\count169
-\l__iow_line_target_int=\count170
-\l__iow_one_indent_int=\count171
-\l__iow_indent_int=\count172
+\c_max_int=\count159
+\l_tmpa_int=\count160
+\l_tmpb_int=\count161
+\g_tmpa_int=\count162
+\g_tmpb_int=\count163
+\g__kernel_prg_map_int=\count164
+\c__ior_term_noprompt_ior=\count165
+\c_log_iow=\count166
+\l_iow_line_count_int=\count167
+\l__iow_line_target_int=\count168
+\l__iow_one_indent_int=\count169
+\l__iow_indent_int=\count170
 \c_zero_dim=\dimen291
 \c_max_dim=\dimen292
 \l_tmpa_dim=\dimen293
@@ -895,85 +879,85 @@ Package: expl3 2019-09-19 L3 programming layer (code)
 \l_tmpb_muskip=\muskip14
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
-\l_keys_choice_int=\count173
-\l__intarray_loop_int=\count174
+\l_keys_choice_int=\count171
+\l__intarray_loop_int=\count172
 \c__intarray_sp_dim=\dimen297
-\g__intarray_font_int=\count175
-\c__fp_leading_shift_int=\count176
-\c__fp_middle_shift_int=\count177
-\c__fp_trailing_shift_int=\count178
-\c__fp_big_leading_shift_int=\count179
-\c__fp_big_middle_shift_int=\count180
-\c__fp_big_trailing_shift_int=\count181
-\c__fp_Bigg_leading_shift_int=\count182
-\c__fp_Bigg_middle_shift_int=\count183
-\c__fp_Bigg_trailing_shift_int=\count184
-\c__kernel_randint_max_int=\count185
-\g__fp_array_int=\count186
-\l__fp_array_loop_int=\count187
-\l__sort_length_int=\count188
-\l__sort_min_int=\count189
-\l__sort_top_int=\count190
-\l__sort_max_int=\count191
-\l__sort_true_max_int=\count192
-\l__sort_block_int=\count193
-\l__sort_begin_int=\count194
-\l__sort_end_int=\count195
-\l__sort_A_int=\count196
-\l__sort_B_int=\count197
-\l__sort_C_int=\count198
-\l__str_internal_int=\count199
-\c__str_replacement_char_int=\count266
-\l__tl_analysis_normal_int=\count267
-\l__tl_analysis_index_int=\count268
-\l__tl_analysis_nesting_int=\count269
-\l__tl_analysis_type_int=\count270
-\l__regex_internal_a_int=\count271
-\l__regex_internal_b_int=\count272
-\l__regex_internal_c_int=\count273
-\l__regex_balance_int=\count274
-\l__regex_group_level_int=\count275
-\l__regex_mode_int=\count276
-\c__regex_cs_in_class_mode_int=\count277
-\c__regex_cs_mode_int=\count278
-\l__regex_catcodes_int=\count279
-\l__regex_default_catcodes_int=\count280
-\c__regex_catcode_D_int=\count281
-\c__regex_catcode_S_int=\count282
-\c__regex_catcode_L_int=\count283
-\c__regex_catcode_O_int=\count284
-\c__regex_catcode_A_int=\count285
-\c__regex_all_catcodes_int=\count286
-\l__regex_show_lines_int=\count287
-\l__regex_min_state_int=\count288
-\l__regex_max_state_int=\count289
-\l__regex_left_state_int=\count290
-\l__regex_right_state_int=\count291
-\l__regex_capturing_group_int=\count292
-\l__regex_min_pos_int=\count293
-\l__regex_max_pos_int=\count294
-\l__regex_curr_pos_int=\count295
-\l__regex_start_pos_int=\count296
-\l__regex_success_pos_int=\count297
-\l__regex_curr_char_int=\count298
-\l__regex_curr_catcode_int=\count299
-\l__regex_last_char_int=\count300
-\l__regex_case_changed_char_int=\count301
-\l__regex_curr_state_int=\count302
-\l__regex_step_int=\count303
-\l__regex_min_active_int=\count304
-\l__regex_max_active_int=\count305
-\l__regex_replacement_csnames_int=\count306
-\l__regex_match_count_int=\count307
-\l__regex_min_submatch_int=\count308
-\l__regex_submatch_int=\count309
-\l__regex_zeroth_submatch_int=\count310
-\g__regex_trace_regex_int=\count311
-\c_empty_box=\box47
-\l_tmpa_box=\box48
-\l_tmpb_box=\box49
-\g_tmpa_box=\box50
-\g_tmpb_box=\box51
+\g__intarray_font_int=\count173
+\c__fp_leading_shift_int=\count174
+\c__fp_middle_shift_int=\count175
+\c__fp_trailing_shift_int=\count176
+\c__fp_big_leading_shift_int=\count177
+\c__fp_big_middle_shift_int=\count178
+\c__fp_big_trailing_shift_int=\count179
+\c__fp_Bigg_leading_shift_int=\count180
+\c__fp_Bigg_middle_shift_int=\count181
+\c__fp_Bigg_trailing_shift_int=\count182
+\c__kernel_randint_max_int=\count183
+\g__fp_array_int=\count184
+\l__fp_array_loop_int=\count185
+\l__sort_length_int=\count186
+\l__sort_min_int=\count187
+\l__sort_top_int=\count188
+\l__sort_max_int=\count189
+\l__sort_true_max_int=\count190
+\l__sort_block_int=\count191
+\l__sort_begin_int=\count192
+\l__sort_end_int=\count193
+\l__sort_A_int=\count194
+\l__sort_B_int=\count195
+\l__sort_C_int=\count196
+\l__str_internal_int=\count197
+\c__str_replacement_char_int=\count198
+\l__tl_analysis_normal_int=\count199
+\l__tl_analysis_index_int=\count266
+\l__tl_analysis_nesting_int=\count267
+\l__tl_analysis_type_int=\count268
+\l__regex_internal_a_int=\count269
+\l__regex_internal_b_int=\count270
+\l__regex_internal_c_int=\count271
+\l__regex_balance_int=\count272
+\l__regex_group_level_int=\count273
+\l__regex_mode_int=\count274
+\c__regex_cs_in_class_mode_int=\count275
+\c__regex_cs_mode_int=\count276
+\l__regex_catcodes_int=\count277
+\l__regex_default_catcodes_int=\count278
+\c__regex_catcode_D_int=\count279
+\c__regex_catcode_S_int=\count280
+\c__regex_catcode_L_int=\count281
+\c__regex_catcode_O_int=\count282
+\c__regex_catcode_A_int=\count283
+\c__regex_all_catcodes_int=\count284
+\l__regex_show_lines_int=\count285
+\l__regex_min_state_int=\count286
+\l__regex_max_state_int=\count287
+\l__regex_left_state_int=\count288
+\l__regex_right_state_int=\count289
+\l__regex_capturing_group_int=\count290
+\l__regex_min_pos_int=\count291
+\l__regex_max_pos_int=\count292
+\l__regex_curr_pos_int=\count293
+\l__regex_start_pos_int=\count294
+\l__regex_success_pos_int=\count295
+\l__regex_curr_char_int=\count296
+\l__regex_curr_catcode_int=\count297
+\l__regex_last_char_int=\count298
+\l__regex_case_changed_char_int=\count299
+\l__regex_curr_state_int=\count300
+\l__regex_step_int=\count301
+\l__regex_min_active_int=\count302
+\l__regex_max_active_int=\count303
+\l__regex_replacement_csnames_int=\count304
+\l__regex_match_count_int=\count305
+\l__regex_min_submatch_int=\count306
+\l__regex_submatch_int=\count307
+\l__regex_zeroth_submatch_int=\count308
+\g__regex_trace_regex_int=\count309
+\c_empty_box=\box45
+\l_tmpa_box=\box46
+\l_tmpb_box=\box47
+\g_tmpa_box=\box48
+\g_tmpb_box=\box49
 \l__box_top_dim=\dimen298
 \l__box_bottom_dim=\dimen299
 \l__box_left_dim=\dimen300
@@ -982,8 +966,8 @@ Package: expl3 2019-09-19 L3 programming layer (code)
 \l__box_bottom_new_dim=\dimen303
 \l__box_left_new_dim=\dimen304
 \l__box_right_new_dim=\dimen305
-\l__box_internal_box=\box52
-\l__coffin_internal_box=\box53
+\l__box_internal_box=\box50
+\l__coffin_internal_box=\box51
 \l__coffin_internal_dim=\dimen306
 \l__coffin_offset_x_dim=\dimen307
 \l__coffin_offset_y_dim=\dimen308
@@ -991,13 +975,13 @@ Package: expl3 2019-09-19 L3 programming layer (code)
 \l__coffin_y_dim=\dimen310
 \l__coffin_x_prime_dim=\dimen311
 \l__coffin_y_prime_dim=\dimen312
-\c_empty_coffin=\box54
-\l__coffin_aligned_coffin=\box55
-\l__coffin_aligned_internal_coffin=\box56
-\l_tmpa_coffin=\box57
-\l_tmpb_coffin=\box58
-\g_tmpa_coffin=\box59
-\g_tmpb_coffin=\box60
+\c_empty_coffin=\box52
+\l__coffin_aligned_coffin=\box53
+\l__coffin_aligned_internal_coffin=\box54
+\l_tmpa_coffin=\box55
+\l_tmpb_coffin=\box56
+\g_tmpa_coffin=\box57
+\g_tmpb_coffin=\box58
 \l__coffin_bounding_shift_dim=\dimen313
 \l__coffin_left_corner_dim=\dimen314
 \l__coffin_right_corner_dim=\dimen315
@@ -1005,30 +989,30 @@ Package: expl3 2019-09-19 L3 programming layer (code)
 \l__coffin_top_corner_dim=\dimen317
 \l__coffin_scaled_total_height_dim=\dimen318
 \l__coffin_scaled_width_dim=\dimen319
-\c__coffin_empty_coffin=\box61
-\l__coffin_display_coffin=\box62
-\l__coffin_display_coord_coffin=\box63
-\l__coffin_display_pole_coffin=\box64
+\c__coffin_empty_coffin=\box59
+\l__coffin_display_coffin=\box60
+\l__coffin_display_coord_coffin=\box61
+\l__coffin_display_pole_coffin=\box62
 \l__coffin_display_offset_dim=\dimen320
 \l__coffin_display_x_dim=\dimen321
 \l__coffin_display_y_dim=\dimen322
 \g__char_data_ior=\read3
-\l__seq_internal_a_int=\count312
-\l__seq_internal_b_int=\count313
+\l__seq_internal_a_int=\count310
+\l__seq_internal_b_int=\count311
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/l3backend\l3backend-pdfmode
 .def
 File: l3backend-pdfmode.def 2019-04-06 v L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count314
-\l__pdf_internal_box=\box65
+\l__kernel_color_stack_int=\count312
+\l__pdf_internal_box=\box63
 ))
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/l3packages/xparse\xparse.st
 y
 Package: xparse 2019-05-28 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count315
-\g__xparse_grabber_int=\count316
-\l__xparse_m_args_int=\count317
-\l__xparse_v_nesting_int=\count318
+\l__xparse_current_arg_int=\count313
+\g__xparse_grabber_int=\count314
+\l__xparse_m_args_int=\count315
+\l__xparse_v_nesting_int=\count316
 )
 Package: siunitx 2018/05/17 v2.7s A comprehensive (SI) units package
 
@@ -1036,29 +1020,29 @@ Package: siunitx 2018/05/17 v2.7s A comprehensive (SI) units package
 e.sty
 Package: l3keys2e 2019-05-28 LaTeX2e option processing using LaTeX3 keys
 )
-\l__siunitx_tmp_box=\box66
+\l__siunitx_tmp_box=\box64
 \l__siunitx_tmp_dim=\dimen323
-\l__siunitx_tmp_int=\count319
-\l__siunitx_number_mantissa_length_int=\count320
-\l__siunitx_number_uncert_length_int=\count321
-\l__siunitx_round_int=\count322
-\l__siunitx_process_decimal_int=\count323
-\l__siunitx_process_uncertainty_int=\count324
-\l__siunitx_process_fixed_int=\count325
-\l__siunitx_process_integer_min_int=\count326
-\l__siunitx_process_precision_int=\count327
-\l__siunitx_group_min_int=\count328
-\l__siunitx_angle_marker_box=\box67
-\l__siunitx_angle_unit_box=\box68
+\l__siunitx_tmp_int=\count317
+\l__siunitx_number_mantissa_length_int=\count318
+\l__siunitx_number_uncert_length_int=\count319
+\l__siunitx_round_int=\count320
+\l__siunitx_process_decimal_int=\count321
+\l__siunitx_process_uncertainty_int=\count322
+\l__siunitx_process_fixed_int=\count323
+\l__siunitx_process_integer_min_int=\count324
+\l__siunitx_process_precision_int=\count325
+\l__siunitx_group_min_int=\count326
+\l__siunitx_angle_marker_box=\box65
+\l__siunitx_angle_unit_box=\box66
 \l__siunitx_angle_marker_dim=\dimen324
 \l__siunitx_angle_unit_dim=\dimen325
-\l__siunitx_unit_int=\count329
-\l__siunitx_unit_denominator_int=\count330
-\l__siunitx_unit_numerator_int=\count331
-\l__siunitx_unit_prefix_int=\count332
-\l__siunitx_unit_prefix_base_int=\count333
-\l__siunitx_unit_prefix_gram_int=\count334
-\l__siunitx_number_product_int=\count335
+\l__siunitx_unit_int=\count327
+\l__siunitx_unit_denominator_int=\count328
+\l__siunitx_unit_numerator_int=\count329
+\l__siunitx_unit_prefix_int=\count330
+\l__siunitx_unit_prefix_base_int=\count331
+\l__siunitx_unit_prefix_gram_int=\count332
+\l__siunitx_number_product_int=\count333
 \c__siunitx_one_fill_skip=\skip63
 \l__siunitx_table_unit_align_skip=\skip64
 \l__siunitx_table_exponent_dim=\dimen326
@@ -1070,10 +1054,10 @@ Package: l3keys2e 2019-05-28 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_table_fill_pre_dim=\dimen332
 \l__siunitx_table_fill_post_dim=\dimen333
 \l__siunitx_table_fill_mid_dim=\dimen334
-\l__siunitx_table_pre_box=\box69
-\l__siunitx_table_post_box=\box70
-\l__siunitx_table_mantissa_box=\box71
-\l__siunitx_table_result_box=\box72
+\l__siunitx_table_pre_box=\box67
+\l__siunitx_table_post_box=\box68
+\l__siunitx_table_mantissa_box=\box69
+\l__siunitx_table_result_box=\box70
 \l__siunitx_table_number_align_skip=\skip65
 \l__siunitx_table_text_align_skip=\skip66
 
@@ -1095,7 +1079,7 @@ s
 ("C:\Program Files\MiKTeX 2.9\tex/latex/multirow\multirow.sty"
 Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
 \multirow@colwidth=\skip76
-\multirow@cntb=\count336
+\multirow@cntb=\count334
 \multirow@dima=\skip77
 \bigstrutjot=\dimen335
 )
@@ -1141,8 +1125,8 @@ LaTeX Info: Redefining \scriptstyle on input line 97.
 LaTeX Info: Redefining \scriptscriptstyle on input line 99.
 LaTeX Info: Redefining \genfrac on input line 145.
 ))
-\inf@bad=\count337
-\maxint=\count338
+\inf@bad=\count335
+\maxint=\count336
 \listwidth=\dimen336
 \eqnumsep=\dimen337
 \eqmargin=\dimen338
@@ -1152,29 +1136,29 @@ LaTeX Info: Redefining \genfrac on input line 145.
 \eqbinoffset=\muskip17
 \eqdelimoffset=\muskip18
 \eqindentstep=\dimen340
-\eqstyle=\toks51
-\eqbreakdepth=\count339
-\eqinterlinepenalty=\count340
-\intereqpenalty=\count341
+\eqstyle=\toks48
+\eqbreakdepth=\count337
+\eqinterlinepenalty=\count338
+\intereqpenalty=\count339
 \intereqskip=\skip80
-\prerelpenalty=\count342
-\prebinoppenalty=\count343
+\prerelpenalty=\count340
+\prebinoppenalty=\count341
 \Dmedmuskip=\muskip19
 \Dthickmuskip=\muskip20
 \eqleftskip=\skip81
 \eqrightskip=\skip82
 \eq@vspan=\skip83
 \eq@binoffset=\muskip21
-\EQ@box=\box73
-\EQ@copy=\box74
-\EQ@numbox=\box75
+\EQ@box=\box71
+\EQ@copy=\box72
+\EQ@numbox=\box73
 \eq@wdNum=\dimen341
-\GRP@numbox=\box76
+\GRP@numbox=\box74
 \grp@wdNum=\dimen342
-\eq@lines=\count344
-\eq@curline=\count345
-\eq@badness=\count346
-\EQ@vims=\count347
+\eq@lines=\count342
+\eq@curline=\count343
+\eq@badness=\count344
+\EQ@vims=\count345
 \eq@dp=\dimen343
 \eq@wdL=\dimen344
 \eq@wdT=\dimen345
@@ -1191,24 +1175,24 @@ LaTeX Info: Redefining \genfrac on input line 145.
 \eq@hshift=\dimen356
 \eq@given@sidespace=\dimen357
 \mathindent=\dimen358
-\eq@final@linecount=\count348
+\eq@final@linecount=\count346
 \eq@wdR=\dimen359
-\EQ@continue=\toks52
-\lr@level=\count349
-\GRP@queue=\toks53
-\GRP@box=\box77
-\GRP@wholebox=\box78
+\EQ@continue=\toks49
+\lr@level=\count347
+\GRP@queue=\toks50
+\GRP@box=\box75
+\GRP@wholebox=\box76
 \darraycolsep=\skip84
-\cur@row=\count350
-\cur@col=\count351
+\cur@row=\count348
+\cur@col=\count349
 \conditionsep=\skip85
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/textpos\textpos.sty
 Package: textpos 2019/04/15 v1.9.1
 
 Package: textpos 2019/04/15 1.9.1, absolute positioning of text on the page
-\TP@textbox=\box79
-\TP@holdbox=\box80
+\TP@textbox=\box77
+\TP@holdbox=\box78
 \TPHorizModule=\dimen360
 \TPVertModule=\dimen361
 \TP@margin=\dimen362
@@ -1217,7 +1201,7 @@ Grid set 16 x 16 = 37.34424pt x 52.81541pt
 \TPboxrulesize=\dimen364
 \TP@ox=\dimen365
 \TP@oy=\dimen366
-\TP@tbargs=\toks54
+\TP@tbargs=\toks51
 \TP@prevdepth=\dimen367
 TextBlockOrigin set to 0pt x 0pt
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\transparent.sty"
@@ -1252,7 +1236,7 @@ braries/circuits\tikzlibrarycircuits.code.tex
 braries\tikzlibrarydecorations.markings.code.tex
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries/decorations
 \pgflibrarydecorations.markings.code.tex))
-\tikz@lib@circ@count=\count352
+\tikz@lib@circ@count=\count350
 \tikzcircuitssizeunit=\dimen368
 ))
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries/shapes/circ
@@ -1428,49 +1412,49 @@ Package: mfirstuc 2017/11/14 v2.06 (NLCT)
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count353
+\etb@tempcnta=\count351
 
 
 Package etoolbox Warning: Patching '\end' failed!
 (etoolbox)                '\AfterEndEnvironment' will not work.
 
 )
-\@glsmfirst=\toks55
-\@glsmrest=\toks56
+\@glsmfirst=\toks52
+\@glsmrest=\toks53
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\longtable.sty"
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
 \LTleft=\skip86
 \LTright=\skip87
 \LTpre=\skip88
 \LTpost=\skip89
-\LTchunksize=\count354
+\LTchunksize=\count352
 \LTcapwidth=\dimen369
-\LT@head=\box81
-\LT@firsthead=\box82
-\LT@foot=\box83
-\LT@lastfoot=\box84
-\LT@cols=\count355
-\LT@rows=\count356
-\c@LT@tables=\count357
-\c@LT@chunks=\count358
-\LT@p@ftn=\toks57
+\LT@head=\box79
+\LT@firsthead=\box80
+\LT@foot=\box81
+\LT@lastfoot=\box82
+\LT@cols=\count353
+\LT@rows=\count354
+\c@LT@tables=\count355
+\c@LT@chunks=\count356
+\LT@p@ftn=\toks54
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/tabu\tabu.sty
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box85
-\sift@deathcycles=\count359
+\@vwid@box=\box83
+\sift@deathcycles=\count357
 \@vwid@loff=\dimen370
 \@vwid@roff=\dimen371
 )
-\c@taburow=\count360
-\tabu@nbcols=\count361
-\tabu@cnt=\count362
-\tabu@Xcol=\count363
-\tabu@alloc=\count364
-\tabu@nested=\count365
+\c@taburow=\count358
+\tabu@nbcols=\count359
+\tabu@cnt=\count360
+\tabu@Xcol=\count361
+\tabu@alloc=\count362
+\tabu@nested=\count363
 \tabu@target=\dimen372
 \tabu@spreadtarget=\dimen373
 \tabu@naturalX=\dimen374
@@ -1480,44 +1464,44 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \abovetabulinesep=\dimen378
 \belowtabulinesep=\dimen379
 \tabustrutrule=\dimen380
-\tabu@thebody=\toks58
-\tabu@footnotes=\toks59
-\tabu@box=\box86
-\tabu@arstrutbox=\box87
-\tabu@hleads=\box88
-\tabu@vleads=\box89
+\tabu@thebody=\toks55
+\tabu@footnotes=\toks56
+\tabu@box=\box84
+\tabu@arstrutbox=\box85
+\tabu@hleads=\box86
+\tabu@vleads=\box87
 \tabu@cellskip=\skip90
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip91
 \enit@outerparindent=\dimen381
-\enit@toks=\toks60
-\enit@inbox=\box90
-\enit@count@id=\count366
-\enitdp@description=\count367
+\enit@toks=\toks57
+\enit@inbox=\box88
+\enit@count@id=\count364
+\enitdp@description=\count365
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/arydshln\arydshln.sty
 Package: arydshln 2019/02/21 v1.76 
 \dashlinedash=\dimen382
 \dashlinegap=\dimen383
-\adl@box=\box91
+\adl@box=\box89
 \adl@height=\dimen384
 \adl@heightsave=\dimen385
 \adl@depth=\dimen386
 \adl@depthsave=\dimen387
 \adl@finaldepth=\dimen388
-\adl@columns=\count368
-\adl@ncol=\count369
-\adl@currentcolumn=\count370
-\adl@currentcolumnsave=\count371
-\adl@totalheight=\count372
-\adl@totalheightsave=\count373
-\adl@dash=\count374
-\adl@gap=\count375
-\adl@cla=\count376
-\adl@clb=\count377
-\adl@everyvbox=\toks61
+\adl@columns=\count366
+\adl@ncol=\count367
+\adl@currentcolumn=\count368
+\adl@currentcolumnsave=\count369
+\adl@totalheight=\count370
+\adl@totalheightsave=\count371
+\adl@dash=\count372
+\adl@gap=\count373
+\adl@cla=\count374
+\adl@clb=\count375
+\adl@everyvbox=\toks58
 \adl@LTpagetotal=\dimen389
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\tabularx.sty"
@@ -1527,8 +1511,8 @@ Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
 \TX@old@col=\dimen392
 \TX@target=\dimen393
 \TX@delta=\dimen394
-\TX@cols=\count378
-\TX@ftn=\toks62
+\TX@cols=\count376
+\TX@ftn=\toks59
 )
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/ltablex\ltablex.sty
 Package: ltablex 2014/08/13 v1.1 Modified tabularx
@@ -1541,10 +1525,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.tex"
-\XKV@toks=\toks63
-\XKV@tempa@toks=\toks64
+\XKV@toks=\toks60
+\XKV@tempa@toks=\toks61
 )
-\XKV@depth=\count379
+\XKV@depth=\count377
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/adjustbox\adjcalc.sty
@@ -1556,7 +1540,7 @@ Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/collectbox\collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box92
+\collectedbox=\box90
 )
 \tc@llx=\dimen395
 \tc@lly=\dimen396
@@ -1578,11 +1562,57 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/ifoddpage\ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count380
+\c@checkoddpage=\count378
 ))
-\c@inparaenumi=\count381
-\c@inparaenumii=\count382
-\enitdp@inparaenum=\count383
+(C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/algorithm2e\algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count379
+\algocf@hangindent=\skip92
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\xspace.sty"
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/relsize\relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip93
+\skiplinenumber=\skip94
+\skiprule=\skip95
+\skiphlne=\skip96
+\skiptext=\skip97
+\skiplength=\skip98
+\algomargin=\skip99
+\skipalgocfslide=\skip100
+\algowidth=\dimen407
+\inoutsize=\dimen408
+\inoutindent=\dimen409
+\interspacetitleruled=\dimen410
+\interspacealgoruled=\dimen411
+\interspacetitleboxruled=\dimen412
+\algocf@ruledwidth=\skip101
+\algocf@inoutbox=\box91
+\algocf@inputbox=\box92
+\AlCapSkip=\skip102
+\AlCapHSkip=\skip103
+\algoskipindent=\skip104
+\algocf@nlbox=\box93
+\algocf@hangingbox=\box94
+\algocf@untilbox=\box95
+\algocf@skipuntil=\skip105
+\algocf@capbox=\box96
+\algocf@lcaptionbox=\skip106
+\algoheightruledefault=\skip107
+\algoheightrule=\skip108
+\algotitleheightruledefault=\skip109
+\algotitleheightrule=\skip110
+\c@algocfline=\count380
+\c@algocfproc=\count381
+\c@algocf=\count382
+\algocf@algoframe=\box97
+\algocf@algobox=\box98
+)
+\c@inparaenumi=\count383
+\c@inparaenumii=\count384
+\enitdp@inparaenum=\count385
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
@@ -1608,7 +1638,7 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ))))
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count384
+\lrq@indent=\count386
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -1617,61 +1647,61 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \Urlmuskip=\muskip22
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count385
-\c@listtotal=\count386
-\c@listcount=\count387
-\c@liststart=\count388
-\c@liststop=\count389
-\c@citecount=\count390
-\c@citetotal=\count391
-\c@multicitecount=\count392
-\c@multicitetotal=\count393
-\c@instcount=\count394
-\c@maxnames=\count395
-\c@minnames=\count396
-\c@maxitems=\count397
-\c@minitems=\count398
-\c@citecounter=\count399
-\c@maxcitecounter=\count400
-\c@savedcitecounter=\count401
-\c@uniquelist=\count402
-\c@uniquename=\count403
-\c@refsection=\count404
-\c@refsegment=\count405
-\c@maxextratitle=\count406
-\c@maxextratitleyear=\count407
-\c@maxextraname=\count408
-\c@maxextradate=\count409
-\c@maxextraalpha=\count410
-\c@abbrvpenalty=\count411
-\c@highnamepenalty=\count412
-\c@lownamepenalty=\count413
-\c@maxparens=\count414
-\c@parenlevel=\count415
-\blx@tempcnta=\count416
-\blx@tempcntb=\count417
-\blx@tempcntc=\count418
-\blx@maxsection=\count419
-\blx@maxsegment@0=\count420
-\blx@notetype=\count421
-\blx@parenlevel@text=\count422
-\blx@parenlevel@foot=\count423
-\blx@sectionciteorder@0=\count424
-\blx@entrysetcounter=\count425
-\labelnumberwidth=\skip92
-\labelalphawidth=\skip93
-\biblabelsep=\skip94
-\bibitemsep=\skip95
-\bibnamesep=\skip96
-\bibinitsep=\skip97
-\bibparsep=\skip98
-\bibhang=\skip99
+\c@tabx@nest=\count387
+\c@listtotal=\count388
+\c@listcount=\count389
+\c@liststart=\count390
+\c@liststop=\count391
+\c@citecount=\count392
+\c@citetotal=\count393
+\c@multicitecount=\count394
+\c@multicitetotal=\count395
+\c@instcount=\count396
+\c@maxnames=\count397
+\c@minnames=\count398
+\c@maxitems=\count399
+\c@minitems=\count400
+\c@citecounter=\count401
+\c@maxcitecounter=\count402
+\c@savedcitecounter=\count403
+\c@uniquelist=\count404
+\c@uniquename=\count405
+\c@refsection=\count406
+\c@refsegment=\count407
+\c@maxextratitle=\count408
+\c@maxextratitleyear=\count409
+\c@maxextraname=\count410
+\c@maxextradate=\count411
+\c@maxextraalpha=\count412
+\c@abbrvpenalty=\count413
+\c@highnamepenalty=\count414
+\c@lownamepenalty=\count415
+\c@maxparens=\count416
+\c@parenlevel=\count417
+\blx@tempcnta=\count418
+\blx@tempcntb=\count419
+\blx@tempcntc=\count420
+\blx@maxsection=\count421
+\blx@maxsegment@0=\count422
+\blx@notetype=\count423
+\blx@parenlevel@text=\count424
+\blx@parenlevel@foot=\count425
+\blx@sectionciteorder@0=\count426
+\blx@entrysetcounter=\count427
+\labelnumberwidth=\skip111
+\labelalphawidth=\skip112
+\biblabelsep=\skip113
+\bibitemsep=\skip114
+\bibnamesep=\skip115
+\bibinitsep=\skip116
+\bibparsep=\skip117
+\bibhang=\skip118
 \blx@bcfin=\read4
 \blx@bcfout=\write4
 \blx@langwohyphens=\language82
-\c@mincomprange=\count426
-\c@maxcomprange=\count427
-\c@mincompwidth=\count428
+\c@mincomprange=\count428
+\c@maxcomprange=\count429
+\c@mincompwidth=\count430
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1682,88 +1712,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count429
-\c@savedafterword=\count430
-\c@annotator=\count431
-\c@savedannotator=\count432
-\c@author=\count433
-\c@savedauthor=\count434
-\c@bookauthor=\count435
-\c@savedbookauthor=\count436
-\c@commentator=\count437
-\c@savedcommentator=\count438
-\c@editor=\count439
-\c@savededitor=\count440
-\c@editora=\count441
-\c@savededitora=\count442
-\c@editorb=\count443
-\c@savededitorb=\count444
-\c@editorc=\count445
-\c@savededitorc=\count446
-\c@foreword=\count447
-\c@savedforeword=\count448
-\c@holder=\count449
-\c@savedholder=\count450
-\c@introduction=\count451
-\c@savedintroduction=\count452
-\c@namea=\count453
-\c@savednamea=\count454
-\c@nameb=\count455
-\c@savednameb=\count456
-\c@namec=\count457
-\c@savednamec=\count458
-\c@translator=\count459
-\c@savedtranslator=\count460
-\c@shortauthor=\count461
-\c@savedshortauthor=\count462
-\c@shorteditor=\count463
-\c@savedshorteditor=\count464
-\c@labelname=\count465
-\c@savedlabelname=\count466
-\c@institution=\count467
-\c@savedinstitution=\count468
-\c@lista=\count469
-\c@savedlista=\count470
-\c@listb=\count471
-\c@savedlistb=\count472
-\c@listc=\count473
-\c@savedlistc=\count474
-\c@listd=\count475
-\c@savedlistd=\count476
-\c@liste=\count477
-\c@savedliste=\count478
-\c@listf=\count479
-\c@savedlistf=\count480
-\c@location=\count481
-\c@savedlocation=\count482
-\c@organization=\count483
-\c@savedorganization=\count484
-\c@origlocation=\count485
-\c@savedoriglocation=\count486
-\c@origpublisher=\count487
-\c@savedorigpublisher=\count488
-\c@publisher=\count489
-\c@savedpublisher=\count490
-\c@language=\count491
-\c@savedlanguage=\count492
-\c@origlanguage=\count493
-\c@savedoriglanguage=\count494
-\c@pageref=\count495
-\c@savedpageref=\count496
-\shorthandwidth=\skip100
-\shortjournalwidth=\skip101
-\shortserieswidth=\skip102
-\shorttitlewidth=\skip103
-\shortauthorwidth=\skip104
-\shorteditorwidth=\skip105
-\locallabelnumberwidth=\skip106
-\locallabelalphawidth=\skip107
-\localshorthandwidth=\skip108
-\localshortjournalwidth=\skip109
-\localshortserieswidth=\skip110
-\localshorttitlewidth=\skip111
-\localshortauthorwidth=\skip112
-\localshorteditorwidth=\skip113
+\c@afterword=\count431
+\c@savedafterword=\count432
+\c@annotator=\count433
+\c@savedannotator=\count434
+\c@author=\count435
+\c@savedauthor=\count436
+\c@bookauthor=\count437
+\c@savedbookauthor=\count438
+\c@commentator=\count439
+\c@savedcommentator=\count440
+\c@editor=\count441
+\c@savededitor=\count442
+\c@editora=\count443
+\c@savededitora=\count444
+\c@editorb=\count445
+\c@savededitorb=\count446
+\c@editorc=\count447
+\c@savededitorc=\count448
+\c@foreword=\count449
+\c@savedforeword=\count450
+\c@holder=\count451
+\c@savedholder=\count452
+\c@introduction=\count453
+\c@savedintroduction=\count454
+\c@namea=\count455
+\c@savednamea=\count456
+\c@nameb=\count457
+\c@savednameb=\count458
+\c@namec=\count459
+\c@savednamec=\count460
+\c@translator=\count461
+\c@savedtranslator=\count462
+\c@shortauthor=\count463
+\c@savedshortauthor=\count464
+\c@shorteditor=\count465
+\c@savedshorteditor=\count466
+\c@labelname=\count467
+\c@savedlabelname=\count468
+\c@institution=\count469
+\c@savedinstitution=\count470
+\c@lista=\count471
+\c@savedlista=\count472
+\c@listb=\count473
+\c@savedlistb=\count474
+\c@listc=\count475
+\c@savedlistc=\count476
+\c@listd=\count477
+\c@savedlistd=\count478
+\c@liste=\count479
+\c@savedliste=\count480
+\c@listf=\count481
+\c@savedlistf=\count482
+\c@location=\count483
+\c@savedlocation=\count484
+\c@organization=\count485
+\c@savedorganization=\count486
+\c@origlocation=\count487
+\c@savedoriglocation=\count488
+\c@origpublisher=\count489
+\c@savedorigpublisher=\count490
+\c@publisher=\count491
+\c@savedpublisher=\count492
+\c@language=\count493
+\c@savedlanguage=\count494
+\c@origlanguage=\count495
+\c@savedoriglanguage=\count496
+\c@pageref=\count497
+\c@savedpageref=\count498
+\shorthandwidth=\skip119
+\shortjournalwidth=\skip120
+\shortserieswidth=\skip121
+\shorttitlewidth=\skip122
+\shortauthorwidth=\skip123
+\shorteditorwidth=\skip124
+\locallabelnumberwidth=\skip125
+\locallabelalphawidth=\skip126
+\localshorthandwidth=\skip127
+\localshortjournalwidth=\skip128
+\localshortserieswidth=\skip129
+\localshorttitlewidth=\skip130
+\localshortauthorwidth=\skip131
+\localshorteditorwidth=\skip132
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1785,19 +1815,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-\c@textcitecount=\count497
-\c@textcitetotal=\count498
-\c@textcitemaxnames=\count499
-\c@biburlbigbreakpenalty=\count500
-\c@biburlbreakpenalty=\count501
-\c@biburlnumpenalty=\count502
-\c@biburlucpenalty=\count503
-\c@biburllcpenalty=\count504
+\c@textcitecount=\count499
+\c@textcitetotal=\count500
+\c@textcitemaxnames=\count501
+\c@biburlbigbreakpenalty=\count502
+\c@biburlbreakpenalty=\count503
+\c@biburlnumpenalty=\count504
+\c@biburlucpenalty=\count505
+\c@biburllcpenalty=\count506
 \biburlbigskip=\muskip23
 \biburlnumskip=\muskip24
 \biburlucskip=\muskip25
 \biburllcskip=\muskip26
-\c@smartand=\count505
+\c@smartand=\count507
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -1818,8 +1848,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count506
-\c@bbx:relatedtotal=\count507
+\c@bbx:relatedcount=\count508
+\c@bbx:relatedtotal=\count509
 ))))
 Package biblatex Info: Trying to load citation style 'ieee'...
 Package biblatex Info: ... file 'ieee.cbx' found.
@@ -1831,8 +1861,8 @@ Package biblatex Info: ... file 'numeric-comp.cbx' found.
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex/cbx\numeric-comp.c
 bx
 File: numeric-comp.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count508
-\c@cbx@tempcntb=\count509
+\c@cbx@tempcnta=\count510
+\c@cbx@tempcntb=\count511
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1858,8 +1888,8 @@ Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
 (subtex/nominations_commmands.tex)
-\@quotelevel=\count510
-\@quotereset=\count511
+\@quotelevel=\count512
+\@quotereset=\count513
  (dolgozatmain.aux
 
 LaTeX Warning: Label `BASICUNB:sec:DefinitionsofUNB' multiply defined.
@@ -1889,25 +1919,25 @@ LaTeX Warning: Label `BASICMPC:equ:MPP_KKT_result_3' multiply defined.
 )
 \openout1 = `dolgozatmain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 146.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 146.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 147.
 
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    ... okay on input line 147.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1945,17 +1975,17 @@ LaTeX Font Info:    ... okay on input line 146.
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count512
-\scratchdimen=\dimen407
-\scratchbox=\box93
-\nofMPsegments=\count513
-\nofMParguments=\count514
-\everyMPshowfont=\toks65
-\MPscratchCnt=\count515
-\MPscratchDim=\dimen408
-\MPnumerator=\count516
-\makeMPintoPDFobject=\count517
-\everyMPtoPDFconversion=\toks66
+\scratchcounter=\count514
+\scratchdimen=\dimen413
+\scratchbox=\box99
+\nofMPsegments=\count515
+\nofMParguments=\count516
+\everyMPshowfont=\toks62
+\MPscratchCnt=\count517
+\MPscratchDim=\dimen414
+\MPnumerator=\count518
+\makeMPintoPDFobject=\count519
+\everyMPtoPDFconversion=\toks63
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1973,7 +2003,6 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: float package is loaded.
 Package caption Info: longtable package is loaded.
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\ltcaption.sty
@@ -1987,15 +2016,15 @@ enefit from \pgfplotsset{compat=1.16} (current compat level: 1.9).
 
 \symgns@font=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 146.
-Package gensymb Info: Math companion symbols declared on input line 146.
-LaTeX Info: Redefining \degree on input line 146.
-LaTeX Info: Redefining \celsius on input line 146.
+(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 147.
+Package gensymb Info: Math companion symbols declared on input line 147.
+LaTeX Info: Redefining \degree on input line 147.
+LaTeX Info: Redefining \celsius on input line 147.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 146.
-LaTeX Info: Redefining \ohm on input line 146.
-Package gensymb Info: Using \textohm for \ohm on input line 146.
-Package gensymb Info: Using \textmu for \micro on input line 146.
+erthousand on input line 147.
+LaTeX Info: Redefining \ohm on input line 147.
+Package gensymb Info: Using \textohm for \ohm on input line 147.
+Package gensymb Info: Using \textmu for \micro on input line 147.
 
 (C:\Users\Laci\AppData\Roaming\MiKTeX\2.9\tex/latex/translator\translator-basic
 -dictionary-English.dict
@@ -2005,7 +2034,7 @@ Dictionary: translator-basic-dictionary, Language: English
 ns.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-\AtBeginShipoutBox=\box94
+\AtBeginShipoutBox=\box100
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -2030,13 +2059,13 @@ Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                - Invalid format of field 'month'.
 
 )
-Package biblatex Info: Reference section=0 on input line 146.
-Package biblatex Info: Reference segment=0 on input line 146.
-LaTeX Font Info:    Try loading font information for U+msa on input line 146.
+Package biblatex Info: Reference section=0 on input line 147.
+Package biblatex Info: Reference segment=0 on input line 147.
+LaTeX Font Info:    Try loading font information for U+msa on input line 147.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 146.
+LaTeX Font Info:    Try loading font information for U+msb on input line 147.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2423,7 +2452,11 @@ File: Unblance_EPS_Pics/VUCompensator_minichart.png Graphic file (type png)
 Package pdftex.def Info: Unblance_EPS_Pics/VUCompensator_minichart.png  used on
  input line 40.
 (pdftex.def)             Requested size: 239.00558pt x 166.73193pt.
-[28 <./Unblance_EPS_Pics/VUCompensator_minichart.png>]
+[28 <./Unblance_EPS_Pics/VUCompensator_minichart.png>] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/APPS_1_2_.eps>
 (epstopdf)                    date: 2016-05-05 13:08:58
 (epstopdf)                    size: 3341246 bytes
@@ -2433,20 +2466,19 @@ to.pdf>
 (epstopdf)                    size: 36997 bytes
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/APPS_1_2_
 -eps-converted-to.pdf Unblance_EPS_Pics/APPS_1_2_.eps>
-(epstopdf)             \includegraphics on input line 65.
+(epstopdf)             \includegraphics on input line 90.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf, id=231, 884.30376pt x 625.33
+<Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf, id=234, 884.30376pt x 625.33
 624pt>
 File: Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf Graphic file (type pdf)
 <use Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf  used
- on input line 65.
+ on input line 90.
 (pdftex.def)             Requested size: 378.42044pt x 267.6012pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[29] [30 <./Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf>] [31]
+[30] [31 <./Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf>] [32]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/inverter.eps>
 (epstopdf)                    date: 2016-04-12 15:30:24
 (epstopdf)                    size: 993540 bytes
@@ -2456,17 +2488,17 @@ o.pdf>
 (epstopdf)                    size: 26399 bytes
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/inverter-
 eps-converted-to.pdf Unblance_EPS_Pics/inverter.eps>
-(epstopdf)             \includegraphics on input line 220.
+(epstopdf)             \includegraphics on input line 245.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/inverter-eps-converted-to.pdf, id=244, 823.075pt x 596.2275p
+<Unblance_EPS_Pics/inverter-eps-converted-to.pdf, id=249, 823.075pt x 596.2275p
 t>
 File: Unblance_EPS_Pics/inverter-eps-converted-to.pdf Graphic file (type pdf)
 <use Unblance_EPS_Pics/inverter-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/inverter-eps-converted-to.pdf  used 
-on input line 220.
+on input line 245.
 (pdftex.def)             Requested size: 378.42044pt x 274.1224pt.
- [32]
-[33 <./Unblance_EPS_Pics/inverter-eps-converted-to.pdf>]
+ [33]
+[34 <./Unblance_EPS_Pics/inverter-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure3
 .eps>
 (epstopdf)                    date: 2016-01-28 13:20:08
@@ -2478,15 +2510,15 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure3
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure3-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure3
 .eps>
-(epstopdf)             \includegraphics on input line 249.
+(epstopdf)             \includegraphics on input line 274.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf, id=256, 376.4
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf, id=260, 376.4
 0625pt x 175.65625pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-convert
-ed-to.pdf  used on input line 249.
+ed-to.pdf  used on input line 274.
 (pdftex.def)             Requested size: 378.42044pt x 176.60999pt.
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure4
 .eps>
@@ -2499,17 +2531,17 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure4
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure4-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure4
 .eps>
-(epstopdf)             \includegraphics on input line 256.
+(epstopdf)             \includegraphics on input line 281.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf, id=257, 394.4
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf, id=261, 394.4
 7375pt x 175.65625pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-convert
-ed-to.pdf  used on input line 256.
+ed-to.pdf  used on input line 281.
 (pdftex.def)             Requested size: 378.42044pt x 168.50745pt.
- [34]
+ [35]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure5
 .eps>
 (epstopdf)                    date: 2016-01-28 13:20:50
@@ -2521,15 +2553,15 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure5
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure5-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure5
 .eps>
-(epstopdf)             \includegraphics on input line 269.
+(epstopdf)             \includegraphics on input line 294.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf, id=261, 385.4
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf, id=265, 385.4
 4pt x 175.65625pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-convert
-ed-to.pdf  used on input line 269.
+ed-to.pdf  used on input line 294.
 (pdftex.def)             Requested size: 378.42044pt x 172.45552pt.
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure6
 .eps>
@@ -2542,15 +2574,15 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure6
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure6-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure6
 .eps>
-(epstopdf)             \includegraphics on input line 284.
+(epstopdf)             \includegraphics on input line 309.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf, id=262, 406.5
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf, id=266, 406.5
 1875pt x 162.6075pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-convert
-ed-to.pdf  used on input line 284.
+ed-to.pdf  used on input line 309.
 (pdftex.def)             Requested size: 378.42044pt x 151.37476pt.
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure7
 .eps>
@@ -2563,76 +2595,79 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure7
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure7-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure7
 .eps>
-(epstopdf)             \includegraphics on input line 293.
+(epstopdf)             \includegraphics on input line 318.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf, id=263, 401.5
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf, id=267, 401.5
 pt x 133.49875pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-convert
-ed-to.pdf  used on input line 293.
+ed-to.pdf  used on input line 318.
 (pdftex.def)             Requested size: 378.42044pt x 125.83307pt.
- [35 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf>]
+
+Underfull \vbox (badness 2293) has occurred while \output is active []
+
+ [36 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf>]
 Underfull \vbox (badness 1728) has occurred while \output is active []
 
- [36 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf>]
+ [37 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf>]
 Underfull \vbox (badness 3333) has occurred while \output is active []
 
- [37 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf>])
-(subtex/3_c_unbalance_compensation_notations.tex [38 <./Unblance_EPS_Pics/Unbal
+ [38 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf>])
+(subtex/3_c_unbalance_compensation_notations.tex [39 <./Unblance_EPS_Pics/Unbal
 RedComp_JCP-figure6-eps-converted-to.pdf> <./Unblance_EPS_Pics/UnbalRedComp_JCP
--figure7-eps-converted-to.pdf>]) (subtex/4_a_explicit_CSR_basics.tex [39]
+-figure7-eps-converted-to.pdf>]) (subtex/4_a_explicit_CSR_basics.tex [40]
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--29
 
  []
 
-[40
+[41
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41]
-[42]
-<EMPC_PNG_Pics/BasicCurrentRectifiers.png, id=305, 558.28575pt x 219.82124pt>
+ [42]
+[43]
+<EMPC_PNG_Pics/BasicCurrentRectifiers.png, id=309, 558.28575pt x 219.82124pt>
 File: EMPC_PNG_Pics/BasicCurrentRectifiers.png Graphic file (type png)
 <use EMPC_PNG_Pics/BasicCurrentRectifiers.png>
 Package pdftex.def Info: EMPC_PNG_Pics/BasicCurrentRectifiers.png  used on inpu
 t line 47.
 (pdftex.def)             Requested size: 358.50229pt x 141.15805pt.
-<EMPC_PNG_Pics/BasicVoltageRectifiers.png, id=306, 558.28575pt x 211.992pt>
+<EMPC_PNG_Pics/BasicVoltageRectifiers.png, id=310, 558.28575pt x 211.992pt>
 File: EMPC_PNG_Pics/BasicVoltageRectifiers.png Graphic file (type png)
 <use EMPC_PNG_Pics/BasicVoltageRectifiers.png>
 Package pdftex.def Info: EMPC_PNG_Pics/BasicVoltageRectifiers.png  used on inpu
 t line 54.
 (pdftex.def)             Requested size: 358.50229pt x 136.13051pt.
- [43 <./EMPC_PNG_Pics/BasicCurrentRectifiers.png> <./EMPC_PNG_Pics/BasicVoltage
+ [44 <./EMPC_PNG_Pics/BasicCurrentRectifiers.png> <./EMPC_PNG_Pics/BasicVoltage
 Rectifiers.png>]
-<EMPC_PNG_Pics/Waves.png, id=312, 832.91174pt x 440.24475pt>
+<EMPC_PNG_Pics/Waves.png, id=317, 832.91174pt x 440.24475pt>
 File: EMPC_PNG_Pics/Waves.png Graphic file (type png)
 <use EMPC_PNG_Pics/Waves.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Waves.png  used on input line 112.
 (pdftex.def)             Requested size: 398.3386pt x 210.54256pt.
- [44] [45 <./EMPC_PNG_Pics/Waves.png>]
+ [45] [46 <./EMPC_PNG_Pics/Waves.png>]
 Overfull \hbox (4.97731pt too wide) detected at line 191
 []
  []
 
-[46] [47] [48] [49]
+[47] [48] [49] [50]
 Overfull \hbox (14.95259pt too wide) detected at line 424
 []
  []
 
-[50]
+[51]
 Overfull \hbox (7.58453pt too wide) in paragraph at lines 508--509
 []\T1/cmr/m/n/12 where $[][] \OMS/cmsy/m/n/12  \U/msb/m/n/12 R[]$ \T1/cmr/m/n/
 12 is the ter-mi-nal poly-he-dral re-gion, and $[][] \OT1/cmr/m/n/12 = [[][]\OM
 L/cmm/m/it/12 ; [] ; [][]\OT1/cmr/m/n/12 ][] \OMS/cmsy/m/n/12 2
  []
 
-[51]
+[52]
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 549.
 
@@ -2646,19 +2681,19 @@ Overfull \hbox (0.85146pt too wide) detected at line 601
 []
  []
 
-[52]
+[53]
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 644.
 
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 697.
 
-[53] [54]
+[54] [55]
 Underfull \hbox (badness 10000) in paragraph at lines 748--749
 
  []
 
-<EMPC_PNG_Pics/RHC_gray.jpg, id=350, 941.5175pt x 734.745pt>
+<EMPC_PNG_Pics/RHC_gray.jpg, id=354, 941.5175pt x 734.745pt>
 File: EMPC_PNG_Pics/RHC_gray.jpg Graphic file (type jpg)
 <use EMPC_PNG_Pics/RHC_gray.jpg>
 Package pdftex.def Info: EMPC_PNG_Pics/RHC_gray.jpg  used on input line 752.
@@ -2668,7 +2703,7 @@ Overfull \hbox (3.21584pt too wide) detected at line 770
 []
  []
 
-[55 <./EMPC_PNG_Pics/RHC_gray.jpg>] [56]
+[56 <./EMPC_PNG_Pics/RHC_gray.jpg>] [57]
 
 LaTeX Warning: Command \textbackslash invalid in math mode on input line 858.
 
@@ -2686,57 +2721,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-[57] [58]
-<EMPC_PNG_Pics/circuit.png, id=365, 630.55576pt x 287.8755pt>
+[58] [59]
+<EMPC_PNG_Pics/circuit.png, id=369, 630.55576pt x 287.8755pt>
 File: EMPC_PNG_Pics/circuit.png Graphic file (type png)
 <use EMPC_PNG_Pics/circuit.png>
 Package pdftex.def Info: EMPC_PNG_Pics/circuit.png  used on input line 18.
 (pdftex.def)             Requested size: 398.3386pt x 181.86327pt.
- [59 <./EMPC_PNG_Pics/circuit.png>] [60]
+ [60 <./EMPC_PNG_Pics/circuit.png>] [61]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 163.
 
-[61]
-<EMPC_PNG_Pics/ControlStructure.png, id=375, 477.58424pt x 347.49825pt>
+[62]
+<EMPC_PNG_Pics/ControlStructure.png, id=380, 477.58424pt x 347.49825pt>
 File: EMPC_PNG_Pics/ControlStructure.png Graphic file (type png)
 <use EMPC_PNG_Pics/ControlStructure.png>
 Package pdftex.def Info: EMPC_PNG_Pics/ControlStructure.png  used on input line
  195.
 (pdftex.def)             Requested size: 398.3386pt x 289.8498pt.
- [62 <./EMPC_PNG_Pics/ControlStructure.png>] [63] [64]
-<EMPC_PNG_Pics/Regions2_trans.png, id=387, 806.01125pt x 515.9275pt>
+ [63 <./EMPC_PNG_Pics/ControlStructure.png>] [64] [65]
+<EMPC_PNG_Pics/Regions2_trans.png, id=391, 806.01125pt x 515.9275pt>
 File: EMPC_PNG_Pics/Regions2_trans.png Graphic file (type png)
 <use EMPC_PNG_Pics/Regions2_trans.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Regions2_trans.png  used on input line 3
 45.
 (pdftex.def)             Requested size: 398.3386pt x 254.9716pt.
 
-Overfull \hbox (1.32483pt too wide) in paragraph at lines 350--353
-\T1/cmr/m/n/12 [113] and uaas-trom2013computeraastrom2013computerzhang2015simpl
-ifiedsed
+Overfull \hbox (1.97745pt too wide) in paragraph at lines 350--353
+\T1/cmr/m/n/12 [0] and uaas-trom2013computeraastrom2013computerzhang2015simplif
+iedsed in
  []
 
-[65 <./EMPC_PNG_Pics/Regions2_trans.png>]
-<EMPC_PNG_Pics/MPCStructure.png, id=392, 599.841pt x 351.714pt>
+[66 <./EMPC_PNG_Pics/Regions2_trans.png>]
+<EMPC_PNG_Pics/MPCStructure.png, id=396, 599.841pt x 351.714pt>
 File: EMPC_PNG_Pics/MPCStructure.png Graphic file (type png)
 <use EMPC_PNG_Pics/MPCStructure.png>
 Package pdftex.def Info: EMPC_PNG_Pics/MPCStructure.png  used on input line 364
 .
 (pdftex.def)             Requested size: 398.3386pt x 233.57024pt.
- [66 <./EMPC_PNG_Pics/MPCStructure.png>]
-<EMPC_PNG_Pics/ACdamping.png, id=397, 622.7265pt x 234.8775pt>
+ [67 <./EMPC_PNG_Pics/MPCStructure.png>]
+<EMPC_PNG_Pics/ACdamping.png, id=401, 622.7265pt x 234.8775pt>
 File: EMPC_PNG_Pics/ACdamping.png Graphic file (type png)
 <use EMPC_PNG_Pics/ACdamping.png>
 Package pdftex.def Info: EMPC_PNG_Pics/ACdamping.png  used on input line 444.
 (pdftex.def)             Requested size: 239.00558pt x 90.14677pt.
-<EMPC_PNG_Pics/ACchart.png, id=398, 602.85225pt x 226.446pt>
+<EMPC_PNG_Pics/ACchart.png, id=402, 602.85225pt x 226.446pt>
 File: EMPC_PNG_Pics/ACchart.png Graphic file (type png)
 <use EMPC_PNG_Pics/ACchart.png>
 Package pdftex.def Info: EMPC_PNG_Pics/ACchart.png  used on input line 451.
 (pdftex.def)             Requested size: 239.00558pt x 89.77516pt.
- [67 <./EMPC_PNG_Pics/ACdamping.png> <./EMPC_PNG_Pics/ACchart.png>]
-<EMPC_PNG_Pics/VectorPhasor.png, id=404, 663.6795pt x 646.8165pt>
+ [68 <./EMPC_PNG_Pics/ACdamping.png> <./EMPC_PNG_Pics/ACchart.png>]
+<EMPC_PNG_Pics/VectorPhasor.png, id=409, 663.6795pt x 646.8165pt>
 File: EMPC_PNG_Pics/VectorPhasor.png Graphic file (type png)
 <use EMPC_PNG_Pics/VectorPhasor.png>
 Package pdftex.def Info: EMPC_PNG_Pics/VectorPhasor.png  used on input line 488
@@ -2752,7 +2787,7 @@ Overfull \hbox (2.03748pt too wide) in paragraph at lines 503--520
 [][]
  []
 
-<EMPC_PNG_Pics/OnePhasor.png, id=405, 164.03387pt x 137.4081pt>
+<EMPC_PNG_Pics/OnePhasor.png, id=410, 164.03387pt x 137.4081pt>
 File: EMPC_PNG_Pics/OnePhasor.png Graphic file (type png)
 <use EMPC_PNG_Pics/OnePhasor.png>
 Package pdftex.def Info: EMPC_PNG_Pics/OnePhasor.png  used on input line 538.
@@ -2760,18 +2795,18 @@ Package pdftex.def Info: EMPC_PNG_Pics/OnePhasor.png  used on input line 538.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[68] [69 <./EMPC_PNG_Pics/VectorPhasor.png> <./EMPC_PNG_Pics/OnePhasor.png>]
+[69] [70 <./EMPC_PNG_Pics/VectorPhasor.png> <./EMPC_PNG_Pics/OnePhasor.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 573--576
 
  []
 
-<EMPC_PNG_Pics/Sequence.png, id=415, 847.36575pt x 420.3705pt>
+<EMPC_PNG_Pics/Sequence.png, id=419, 847.36575pt x 420.3705pt>
 File: EMPC_PNG_Pics/Sequence.png Graphic file (type png)
 <use EMPC_PNG_Pics/Sequence.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Sequence.png  used on input line 580.
 (pdftex.def)             Requested size: 318.67209pt x 158.09396pt.
-[70 <./EMPC_PNG_Pics/Sequence.png>]
-<EMPC_PNG_Pics/LyapunovPatrition_trans.png, id=420, 592.614pt x 372.79276pt>
+[71 <./EMPC_PNG_Pics/Sequence.png>]
+<EMPC_PNG_Pics/LyapunovPatrition_trans.png, id=424, 592.614pt x 372.79276pt>
 File: EMPC_PNG_Pics/LyapunovPatrition_trans.png Graphic file (type png)
 <use EMPC_PNG_Pics/LyapunovPatrition_trans.png>
 Package pdftex.def Info: EMPC_PNG_Pics/LyapunovPatrition_trans.png  used on inp
@@ -2781,26 +2816,26 @@ ut line 607.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<EMPC_PNG_Pics/SearchTree.png, id=421, 989.94844pt x 213.79875pt>
+<EMPC_PNG_Pics/SearchTree.png, id=425, 989.94844pt x 213.79875pt>
 File: EMPC_PNG_Pics/SearchTree.png Graphic file (type png)
 <use EMPC_PNG_Pics/SearchTree.png>
 Package pdftex.def Info: EMPC_PNG_Pics/SearchTree.png  used on input line 619.
 (pdftex.def)             Requested size: 398.3386pt x 86.0269pt.
-[71]
-<EMPC_PNG_Pics/Memory.png, id=425, 599.841pt x 351.714pt>
+[72]
+<EMPC_PNG_Pics/Memory.png, id=429, 599.841pt x 351.714pt>
 File: EMPC_PNG_Pics/Memory.png Graphic file (type png)
 <use EMPC_PNG_Pics/Memory.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Memory.png  used on input line 628.
 (pdftex.def)             Requested size: 398.3386pt x 233.57024pt.
- [72 <./EMPC_PNG_Pics/LyapunovPatrition_trans.png> <./EMPC_PNG_Pics/SearchTree.
+ [73 <./EMPC_PNG_Pics/LyapunovPatrition_trans.png> <./EMPC_PNG_Pics/SearchTree.
 png>]
-<EMPC_PNG_Pics/MultiHorizon2_trans.png, id=431, 1173.38374pt x 712.6625pt>
+<EMPC_PNG_Pics/MultiHorizon2_trans.png, id=435, 1173.38374pt x 712.6625pt>
 File: EMPC_PNG_Pics/MultiHorizon2_trans.png Graphic file (type png)
 <use EMPC_PNG_Pics/MultiHorizon2_trans.png>
 Package pdftex.def Info: EMPC_PNG_Pics/MultiHorizon2_trans.png  used on input l
 ine 642.
 (pdftex.def)             Requested size: 398.3386pt x 241.93231pt.
-<EMPC_PNG_Pics/HorizonPerformace_trans.png, id=432, 1079.03125pt x 440.64626pt>
+<EMPC_PNG_Pics/HorizonPerformace_trans.png, id=436, 1079.03125pt x 440.64626pt>
 
 File: EMPC_PNG_Pics/HorizonPerformace_trans.png Graphic file (type png)
 <use EMPC_PNG_Pics/HorizonPerformace_trans.png>
@@ -2809,47 +2844,47 @@ ut line 649.
 (pdftex.def)             Requested size: 398.3386pt x 162.67348pt.
 
 
-LaTeX Warning: Reference `EMPC:fig:Regions_augment' on page 73 undefined on inp
+LaTeX Warning: Reference `EMPC:fig:Regions_augment' on page 74 undefined on inp
 ut line 656.
 
-<EMPC_PNG_Pics/Results.png, id=433, 1145.7204pt x 582.978pt>
+<EMPC_PNG_Pics/Results.png, id=437, 1145.7204pt x 582.978pt>
 File: EMPC_PNG_Pics/Results.png Graphic file (type png)
 <use EMPC_PNG_Pics/Results.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Results.png  used on input line 688.
 (pdftex.def)             Requested size: 398.3386pt x 202.68434pt.
-[73 <./EMPC_PNG_Pics/Memory.png>] [74 <./EMPC_PNG_Pics/MultiHorizon2_trans.png>
+[74 <./EMPC_PNG_Pics/Memory.png>] [75 <./EMPC_PNG_Pics/MultiHorizon2_trans.png>
  <./EMPC_PNG_Pics/HorizonPerformace_trans.png>]
-<EMPC_PNG_Pics/SFchart.png, id=444, 877.47826pt x 224.63925pt>
+<EMPC_PNG_Pics/SFchart.png, id=448, 877.47826pt x 224.63925pt>
 File: EMPC_PNG_Pics/SFchart.png Graphic file (type png)
 <use EMPC_PNG_Pics/SFchart.png>
 Package pdftex.def Info: EMPC_PNG_Pics/SFchart.png  used on input line 701.
 (pdftex.def)             Requested size: 278.83578pt x 71.38214pt.
- [75 <./EMPC_PNG_Pics/Results.png (PNG copy)> <./EMPC_PNG_Pics/SFchart.png>]
-<EMPC_PNG_Pics/Compare.png, id=449, 1145.7204pt x 582.978pt>
+ [76 <./EMPC_PNG_Pics/Results.png (PNG copy)> <./EMPC_PNG_Pics/SFchart.png>]
+<EMPC_PNG_Pics/Compare.png, id=453, 1145.7204pt x 582.978pt>
 File: EMPC_PNG_Pics/Compare.png Graphic file (type png)
 <use EMPC_PNG_Pics/Compare.png>
 Package pdftex.def Info: EMPC_PNG_Pics/Compare.png  used on input line 721.
 (pdftex.def)             Requested size: 398.3386pt x 202.68434pt.
 )
-(subtex/4_c_explicit_CSR_notations.tex [76 <./EMPC_PNG_Pics/Compare.png (PNG co
-py)>] [77]) (subtex/5_conculsion.tex [78]
+(subtex/4_c_explicit_CSR_notations.tex [77 <./EMPC_PNG_Pics/Compare.png (PNG co
+py)>] [78]) (subtex/5_conculsion.tex [79]
 Chapter 5.
 
-LaTeX Warning: Reference `VUB:sec:Main' on page 79 undefined on input line 6.
+LaTeX Warning: Reference `VUB:sec:Main' on page 80 undefined on input line 6.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--9
 
  []
 
-[79
+[80
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 14--17
 
  []
 
-[80]
+[81]
 Underfull \hbox (badness 10000) in paragraph at lines 18--23
 
  []
@@ -2859,85 +2894,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--29
 
  []
 
-[81] [82]) (subtex/7_appendix.tex [83]
+[82] [83]) (subtex/7_appendix.tex [84]
 Overfull \hbox (5.55371pt too wide) in paragraph at lines 3--3
 []\T1/cmr/bx/n/17.28 Geometric ap-proach to multi para-met-ric pro-
  []
 
-[84
+[85
 
 ]
-<EMPC_PNG_Pics/criticalregions.jpg, id=479, 415.7934pt x 291.7299pt>
+<EMPC_PNG_Pics/criticalregions.jpg, id=483, 415.7934pt x 291.7299pt>
 File: EMPC_PNG_Pics/criticalregions.jpg Graphic file (type jpg)
 <use EMPC_PNG_Pics/criticalregions.jpg>
 Package pdftex.def Info: EMPC_PNG_Pics/criticalregions.jpg  used on input line 
 66.
 (pdftex.def)             Requested size: 358.50229pt x 251.53719pt.
- [85] [86 <./EMPC_PNG_Pics/criticalregions.jpg>] [87]
-<EMPC_PNG_Pics/BasicSearchTree.png, id=490, 985.88326pt x 359.54324pt>
+ [86]
+Underfull \vbox (badness 1184) has occurred while \output is active []
+
+ [87 <./EMPC_PNG_Pics/criticalregions.jpg>] [88]
+<EMPC_PNG_Pics/BasicSearchTree.png, id=494, 985.88326pt x 359.54324pt>
 File: EMPC_PNG_Pics/BasicSearchTree.png Graphic file (type png)
 <use EMPC_PNG_Pics/BasicSearchTree.png>
 Package pdftex.def Info: EMPC_PNG_Pics/BasicSearchTree.png  used on input line 
 396.
 (pdftex.def)             Requested size: 398.3386pt x 145.26859pt.
-)
-(subtex/8_appendix_notations.tex [88 <./EMPC_PNG_Pics/BasicSearchTree.png>])
-(subtex/9_abbreviations.tex [89]) [90]
+) (subtex/8_appendix_notations.tex [89 <./EMPC_PNG_Pics/BasicSearchTree.png>]) 
+(subtex/9_abbreviations.tex [90]) [91]
 
 Package biblatex Warning: The option 'labelprefix' is limited
 (biblatex)                when used with BibTeX.
 (biblatex)                Consider using Biber instead.
 
+[92
 
-Overfull \hbox (3.63234pt too wide) in paragraph at lines 238--238
-\T1/cmr/m/n/12 ``Con-strained pre-dic-tive con-trol of three-phasebuck rec-ti-f
-iers,'' \T1/cmr/m/it/12 Acta Poly-
+] [93]
+Overfull \hbox (9.29346pt too wide) in paragraph at lines 244--244
+\T1/cmr/m/n/12 op-ti-mal power-flow al-go-rithm to mit-i-gate volt-age un-bal-a
+nce,'' \T1/cmr/m/it/12 IEEE Trans-
  []
 
-[91
-
-] [92] [93]
-Overfull \hbox (2.42229pt too wide) in paragraph at lines 243--243
-[] \T1/cmr/m/n/12 A. H. Bon-nett and  G. Soukup, ``Un-der-stand-ing the nema mo
-tor-generator
- []
-
-[94]
-Overfull \hbox (10.66003pt too wide) in paragraph at lines 243--243
+[94] [95]
+Overfull \hbox (6.9054pt too wide) in paragraph at lines 244--244
 \T1/cmr/m/n/12 ``Stochas-tic as-sess-ment of volt-age un-bal-ance due to single
 -phase-connected
  []
 
-[95] [96]
-Overfull \hbox (14.06616pt too wide) in paragraph at lines 243--243
-\T1/cmr/m/it/12 5th In-ter-na-tional Con-fer-ence on Elec-tri-cal Engineering-B
-oumerdes (ICEE-
- []
-
-[97]
-Overfull \hbox (6.91681pt too wide) in paragraph at lines 243--243
+[96] [97] [98]
+Overfull \hbox (3.16217pt too wide) in paragraph at lines 244--244
 [] \T1/cmr/m/n/12 N. Muthuku-mar,  S. Srini-vasan,  K. Ramku-mar,  K. Kan-nan, 
 and  V. E. Balas,
  []
 
-[98]
-Overfull \hbox (6.06155pt too wide) in paragraph at lines 243--243
-\T1/cmr/m/n/12 rents,'' in \T1/cmr/m/it/12 IEE Pro-ceed-ings B (Elec-tric Power
- Ap-pli-ca-tions)\T1/cmr/m/n/12 , IET, vol. 136,
- []
-
-[99]
-Overfull \hbox (14.42554pt too wide) in paragraph at lines 243--243
+[99] [100]
+Overfull \hbox (10.6709pt too wide) in paragraph at lines 244--244
 [] \T1/cmr/m/n/12 M. Baotic, ``Op-ti-mal con-trol of piece-wise affine sys-tems
 : A multi-parametric
  []
 
-[100]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 243.
+[101]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 244.
 
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [101]
+) [102]
 (dolgozatmain.aux)
 
 LaTeX Warning: There were undefined references.
@@ -2954,50 +2973,51 @@ Package logreq Info: Writing requests to 'dolgozatmain.run.xml'.
 ### simple group (level 1) entered at line 14 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 62372 strings out of 492897
- 1513925 string characters out of 3133501
- 2245686 words of memory out of 3000000
- 65332 multiletter control sequences out of 15000+200000
- 560468 words of font info for 97 fonts, out of 3000000 for 9000
+ 63124 strings out of 492897
+ 1523786 string characters out of 3133501
+ 2268438 words of memory out of 3000000
+ 66082 multiletter control sequences out of 15000+200000
+ 561167 words of font info for 98 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,23n,96p,2602b,1511s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,23n,96p,2602b,1509s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknapp
 en/ec/dpi600\ectt1200.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfo
 ur/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\font
 s/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Laci\AppData\Local\MiKTeX
 \2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\Laci\AppData\Loc
 al\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Laci\Ap
-pData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\User
-s\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk>
+pData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\User
+s\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk>
  <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecr
-m1095.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecbx1440.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkna
-ppen/ec/dpi600\ecbx1728.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/lj
-four/jknappen/ec/dpi600\ecsl1200.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fo
-nts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Laci\AppData\Local\MiKT
-eX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Laci\AppData\L
-ocal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1440.pk> <C:\Users\Laci\
-AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2488.pk> <C:\Us
-ers\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.p
-k><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/symbols/msbm10.pfb>
-Output written on dolgozatmain.pdf (112 pages, 4588142 bytes).
+m0800.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecrm1095.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecbx1440.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/lj
+four/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fo
+nts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk> <C:\Users\Laci\AppData\Local\MiKT
+eX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Laci\AppData\L
+ocal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Laci\
+AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1440.pk> <C:\Us
+ers\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2488.p
+k> <C:\Users\Laci\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
+crm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/symbols/msbm10.pfb>
+Output written on dolgozatmain.pdf (113 pages, 4601247 bytes).
 PDF statistics:
- 1262 PDF objects out of 1440 (max. 8388607)
+ 1271 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  253 words of extra memory for PDF output out of 10000 (max. 10000000)
 
