@@ -73,17 +73,16 @@
          \While{$f_{grid}(\textbf{x}_i^{q}+\Delta_i^*d_i)\neq0$}{
           evaluate $f_{grid}(\textbf{x}_i^{(q)}+\Delta_i^{(q)}d_i)$\;
           \eIf{$f_{grid}(\textbf{x}_i^{(q)}+\Delta_i^{(q)}d_i)<f_{grid}(\textbf{x}_i^{(q)})$}{
-          \textbf{x}_i^{(q+1)}=\textbf{x}_i^{(q)}+\Delta_i^{(q)}d_i\;
+          $\Delta_i^{(q)}=p_{normgain}N^{(q-1)}\Delta_i^{(q-1)}+q_{normgain}Nd_i$
+          $\textbf{x}_i^{(q+1)}=\textbf{x}_i^{(q)}+\Delta_i^{(q)}d_i$\;
            <bradcast new result of $f_{grid}$ to other processes>\;
-           update $\textbf{x}_i^*$\;
-           update $\Delta_i^*$\;
            }{
           }
           }
          \caption{Asynchronous Parallel Pattern Search}
          \label{algo:APPS}
         \end{algorithm}
-        where f_{grid} representing the multi variate voltage response function of the grid of which VU cost function could be calculated, based on current injection. The function arguments are $\textbf{x}_i$, the actuator for the $i^{th}$ process aka. the amplitude or phase of the three phase current phasor, needs to be applied on the system, for VU reduction, $\Delta_i$ is the process step lenght aka. the value of the current vector's amplitude or angle needs to be changed for a successful step, and $d_i$ is the corresponding step's signed direction vector, which specifies the applied changes direction. The algorithm is initialised with $\textbf{x}_i^0=0$, $\Delta_i^0=0$ for a smooth start, due to lack of prior network knowledge.\\
+        where $f_{grid}$ representing the multi variate voltage response function of the grid of which VU($VUF$ or $G$) based cost function could be calculated, based on current injection. The function arguments are $\textbf{x}_i$, the actuator for the $i^{th}$ process aka. the amplitude or phase of the three phase current phasor, needs to be applied on the system, for VU reduction, $\Delta_i$ the process step lenght aka. the value of the current vector's amplitude or angle needs to be changed for a successful step, and $d_i$ is the corresponding step's signed direction vector, which specifies the applied changes direction. The algorithm is initialised with $\textbf{x}_i^0=0$, $\Delta_i^0=0$ for a smooth start, due to lack of prior network knowledge.\\
 
 
 
@@ -93,8 +92,9 @@
         \caption{The optimization algorithm implemented for current control. A one dimensional linear optimization step is being solved in each dimension of the six dimensional parameter space, iteratively.}
         \label{fig:APPS}
         \end{figure*}
-
-         The search pattern $p$ is based on the sampling of the error function (selected norm) on a "grid", and it corresponds to variables or subsets of variables in each point in the independent variable or parameter space easily. At the same time, the norm values at these points can be calculated independently if $\Delta_q>0$, using \ref{eqn:contstruct2}.
+        
+        \textbf{red}{régi részek:}\\
+         The search pattern $p$ is based on the sampling of the error function (selected norm) on $f_{grid}$, and it corresponds to variables or subsets of variables in each point in the independent variable or parameter space. At the same time, the norm values at these points can be calculated independently if $\Delta_q>0$, using \ref{eqn:contstruct2}.
 				
         \begin{equation}
         \label{eqn:contstruct2}
@@ -105,7 +105,7 @@
          \end{array}
         \end{equation}
 
-        The parameter is $\textbf{x}^q\in\mathbb{R}^n$, and the search pattern $\textbf{p}\in\mathcal{D}={d_1,...d_n}$ is taken from a predefined finite set. In this case, the error function values should be calculated for each pattern $\textbf{p}$ in the set $\mathcal{D}$. If the error function is not decreasing in any of the directions, then the step size should be reduced (e.g. by half). As the competing directions are different, if there is not enough computing power available for direction vector $\textbf{p}$, synchronization should not be maintained. In this case we are talking about the asynchronous case . In the case of our controller, an individual $\textbf{p}$ vector is defined for each output variable, and the optimization was performed in each direction asynchronously and shifted in time. Most likely, the error function has a single local minimum as a symmetric amplitude and phase values. Approaching the minimal value of norm, the controller uses adaptive increments that are proportional to the norm itself. Because of the complex interactions between the components of the controller, only one parameter is changed at a time, even if the values of the amplitude and phase components in specific time slot changes. The algorithm moves along the six axes of six separate time slots close to the local minimum of the error function.\\
+        The parameter is $\textbf{x}^q\in\mathbb{R}^n$, and the search pattern $\textbf{p}\in\mathcal{D}={d_1,...d_n}$ is taken from a predefined finite set. In this case, the error function values should be calculated for each pattern $\textbf{p}$ in the set $\mathcal{D}$. If the error function is not decreasing in any of the directions, then the step size should be reduced (e.g. by half). As the competing directions are different, if there is not enough computing power available for direction vector $\textbf{p}$, synchronization should not be maintained. In this case we are talking about the asynchronous case. In the case of our controller, an individual $\textbf{p}$ vector is defined for each output variable, and the optimization was performed in each direction asynchronously and shifted in time. Most likely, the error function has a single local minimum as a symmetric amplitude and phase values. Approaching the minimal value of norm, the controller uses adaptive increments that are proportional to the norm itself. Because of the complex interactions between the components of the controller, only one parameter is changed at a time, even if the values of the amplitude and phase components in specific time slot changes. The algorithm moves along the six axes of six separate time slots close to the local minimum of the error function.\\
         Unlike other similar approaches, e.g. \cite{segui2007approach}, the explained optimal controller does not rely on a measured current signal (which varies according where the measurement took place on the grid and renders the global optimization unreliable) but rather measuring and analyzing the voltage unbalance via the proposed indicator and optimizes the voltage shape, the latter of which depends on the nonlinear distortion of the whole low-voltage transformer area and determines additional power losses. The controller's performance was compared to a non compensated network, and a network consisting synchronized symmetric power intake from a regular inverter.\\
         In each iteration only one physical value is changing on the six dimensional parameter field, which consists of the three amplitude and three phase values. If the change effects with cost function reduction (the reference norm's normalized value), the controller holds the new value of amplitude or phase for the controlled current sources (Figure \ref{fig:APPS}). The advantage of this controller structure that is not necessary to know the controlled value's behavior well, like we could not determine the number and type of the other loads on the network \cite{Neukirchner2015}. There are however two disadvantages. First is the low speed of control, due to the several necessary iterations (depending on the circumstances) to find the optimal directions in the parameter space, and the serial nature of interventions and norm calculations. The second comes from the method itself since the controller may stuck in local minima.
 

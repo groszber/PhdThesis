@@ -48,31 +48,7 @@
 
     \subsection{Optimization based control algorithm}\label{VUB:sec:Optimization}
 
-        %
-        \hlc[PT]{There is a long history for identifying VU on the network as presented in section}\oldref{BASICUNB:sec:DefinitionsofUNB}\hlc[PT]{ As such the basis of the const function is well defined in} \ref{eqn:VU_costfcn}. \hlc[PT]{Since the network is assumed not only non linear and  time variant, with unknown stochastic distribution function, the mathematical representation of the network from the device's perspective would be a difficult task. As such the network's voltage response to a certain current injection is hard to predict, and could make the situation even worse, distorting the voltage phasor even further. Wit this in mind regular PID controllers are not sufficient, although there were attempts to solve similar control problems with artificial intelligence} \cite{el2011active}.\\
-        For this purpose I choose an asynchronous parallel pattern search method (APPS) to control our scenario \cite{hough2001asynchronous}, \cite{kolda2003understanding}. The methodology and formulation of the APPS method is described in more detail in section \oldref{BASICUNB:sec:APPS}. 
-        
-        It can be assumed, that the network function $f_{grid}$ from \ref{eqn:VU_costfcn} is hard to estimate, as such, the best approach is to use parallel computing environment to solve the problem, instead of function evaluation. Since $f_{grid}$ is continuously differentiable, it can be further assumed, that it's gradient $\nabla f_{grid}$ unavailable and also unreliable to approximate to the non linear time variant network operation. For this type of problems, so called pattern search methods are one possible solution, since they neither require nor explicitly estimate derivatives.  Pattern search methods also have a long history of success when applied to non linear problems \cite{hough2001asynchronous}.\\
-        With this in mind the list of processes which could be parallelized, comes from shape of the voltage phasor itself (observed in Fig. \ref{fig:threephase}). The ideal phasor is deviating in terms of voltage amplitudes and angles. As such, if the first phase $V_a$ is is locked by angle, it can be assumed, that the ideal phasor can deviate by two phases and three amplitudes. As such the search algorythm has five processes (or axes) to optimize along. Basically the general strategy for the APPS method, from a single process perspective follows:
-        
-        \begin{algorithm}[H]
-        \SetAlgoLined
-        \KwResult{Write here the result }
-         $x_i^*=x_i^0$, \Delta_i^*=\Delta_i^0\;
-         \While{$f(x_i^*+\Delta_i^*d_i)\neq0$}{
-          instructions\;
-          \eIf{condition}{
-           instructions1\;
-           instructions2\;
-           }{
-           instructions3\;
-          }
-          }
-         \caption{Asynchronous Parallel Pattern Search}
-         \label{algo:APPS}
-        \end{algorithm}
-        
-        I applied a variant of the gradient method that is a first-order optimization (minimization) algorithm for a multivariate function $f(\textbf{x})$. The point $\textbf{x}^q$ corresponding to the local minimum can be calculated from the negative gradient $\nabla f(\textbf{x})$, that gives the value and direction of the corresponding step in the parameter space. The next step is made in the direction of gradient with the proper sign. This sequence of steps, ideally, converges to local multivariate extreme value $\textbf{x}^q$ of the function \ref{eqn:contstruct1}.
+        Ideally, the point $\textbf{x}^q$ corresponding to the local minimum, which can be calculated from the negative gradient $\nabla f(\textbf{x})$, that gives the value and direction of the corresponding step in the parameter space, as such making the optimization straightforward. The next step is made in the direction of gradient with the proper sign. Most of the time, this sequence of steps, converges to local multivariate extreme value $\textbf{x}^q$ of the function \ref{eqn:contstruct1}.
 
         \begin{equation}
         \begin{array}{rcl}
@@ -82,7 +58,33 @@
          \end{array}
         \end{equation}
 
-        where $q\in\mathbb{N}$, and $t_q$ resembles the step time of the algorithm.
+        where $q\in\mathbb{N}$, and $t_q$ resembles the step time of the algorithm.%
+        Unfortunately, the controlled electrical system is described by multivariate non-linear differential equations, the optimization of which is infeasible to derive using the differentiation of an error function. Therefore, the optimization methods based on direct differentiation are not applicable. In such cases, when high computational power is needed for performing long time-consuming simulations, the so called asynchronous paralell pattern search or APPS method can utilized.\\
+        \hlc[PT]{There is a long history for identifying VU on the network as presented in section}\oldref{BASICUNB:sec:DefinitionsofUNB}\hlc[PT]{ As such the basis of the const function is well defined in} \ref{eqn:VU_costfcn}. \hlc[PT]{Since the network is assumed not only non linear and  time variant, with unknown stochastic distribution function, the mathematical representation of the network from the device's perspective would be a difficult task. As such the network's voltage response to a certain current injection is hard to predict, and could make the situation even worse, distorting the voltage phasor even further. Wit this in mind regular PID controllers are not sufficient, although there were attempts to solve similar control problems with artificial intelligence} \cite{el2011active}.\\
+        For this purpose I choose an asynchronous parallel pattern search method (APPS) to control our scenario \cite{hough2001asynchronous}, \cite{kolda2003understanding}. The methodology and formulation of the APPS method is described in more detail in section \oldref{BASICUNB:sec:APPS}.
+
+        It can be assumed, that the network function $f_{grid}$ from \ref{eqn:VU_costfcn} is hard to estimate, as such, the best approach is to use parallel computing environment to solve the problem, instead of function evaluation. Since $f_{grid}$ is continuously differentiable, it can be further assumed, that it's gradient $\nabla f_{grid}$ unavailable and also unreliable to approximate to the non linear time variant network operation. For this type of problems, so called pattern search methods are one possible solution, since they neither require nor explicitly estimate derivatives.  Pattern search methods also have a long history of success when applied to non linear problems \cite{hough2001asynchronous}.\\
+        With this in mind the list of processes which could be parallelized, comes from shape of the voltage phasor itself (observed in Fig. \ref{fig:threephase}). The ideal phasor is deviating in terms of voltage amplitudes and angles. As such, if the first phase $V_a$ is is locked by angle, it can be assumed, that the ideal phasor can deviate by two phases and three amplitudes. As such the search algorythm has five processes (or axes) to optimize along. Basically the general strategy for the APPS method, from a single process perspective follows:
+
+        \begin{algorithm}[H]
+        \SetAlgoLined
+        %\KwResult{Write here the result }
+         $\textbf{x}_i^0=0$, $\Delta_i^0=0$\;
+         \While{$f_{grid}(\textbf{x}_i^{q}+\Delta_i^*d_i)\neq0$}{
+          evaluate $f_{grid}(\textbf{x}_i^{(q)}+\Delta_i^{(q)}d_i)$\;
+          \eIf{$f_{grid}(\textbf{x}_i^{(q)}+\Delta_i^{(q)}d_i)<f_{grid}(\textbf{x}_i^{(q)})$}{
+          $\Delta_i^{(q)}=$
+          $\textbf{x}_i^{(q+1)}=\textbf{x}_i^{(q)}+\Delta_i^{(q)}d_i$\;
+           <bradcast new result of $f_{grid}$ to other processes>\;
+           }{
+          }
+          }
+         \caption{Asynchronous Parallel Pattern Search}
+         \label{algo:APPS}
+        \end{algorithm}
+        where $f_{grid}$ representing the multi variate voltage response function of the grid of which VU($VUF$ or $G$) based cost function could be calculated, based on current injection. The function arguments are $\textbf{x}_i$, the actuator for the $i^{th}$ process aka. the amplitude or phase of the three phase current phasor, needs to be applied on the system, for VU reduction, $\Delta_i$ the process step lenght aka. the value of the current vector's amplitude or angle needs to be changed for a successful step, and $d_i$ is the corresponding step's signed direction vector, which specifies the applied changes direction. The algorithm is initialised with $\textbf{x}_i^0=0$, $\Delta_i^0=0$ for a smooth start, due to lack of prior network knowledge.\\
+
+
 
         \begin{figure*}[h]
         \centering
@@ -90,8 +92,9 @@
         \caption{The optimization algorithm implemented for current control. A one dimensional linear optimization step is being solved in each dimension of the six dimensional parameter space, iteratively.}
         \label{fig:APPS}
         \end{figure*}
-
-         The controlled electrical system is described by multivariate non-linear differential equations, the optimization of which is infeasible to derive using the differentiation of an error function. Therefore, the optimization methods based on direct differentiation are not applicable. In such cases, when high computational power is needed for performing long time-consuming simulations, the APPS method can utilized. The search pattern $p$ is based on the sampling of the error function (selected norm) on a "grid", and it corresponds to variables or subsets of variables in each point in the independent variable or parameter space easily. At the same time, the norm values at these points can be calculated independently if $\Delta_q>0$, using \ref{eqn:contstruct2}.
+        
+        \textbf{red}{régi részek:}\\
+         The search pattern $p$ is based on the sampling of the error function (selected norm) on $f_{grid}$, and it corresponds to variables or subsets of variables in each point in the independent variable or parameter space. At the same time, the norm values at these points can be calculated independently if $\Delta_q>0$, using \ref{eqn:contstruct2}.
 				
         \begin{equation}
         \label{eqn:contstruct2}
@@ -102,7 +105,7 @@
          \end{array}
         \end{equation}
 
-        The parameter is $\textbf{x}^q\in\mathbb{R}^n$, and the search pattern $\textbf{p}\in\mathcal{D}={d_1,...d_n}$ is taken from a predefined finite set. In this case, the error function values should be calculated for each pattern $\textbf{p}$ in the set $\mathcal{D}$. If the error function is not decreasing in any of the directions, then the step size should be reduced (e.g. by half). As the competing directions are different, if there is not enough computing power available for direction vector $\textbf{p}$, synchronization should not be maintained. In this case we are talking about the asynchronous case . In the case of our controller, an individual $\textbf{p}$ vector is defined for each output variable, and the optimization was performed in each direction asynchronously and shifted in time. Most likely, the error function has a single local minimum as a symmetric amplitude and phase values. Approaching the minimal value of norm, the controller uses adaptive increments that are proportional to the norm itself. Because of the complex interactions between the components of the controller, only one parameter is changed at a time, even if the values of the amplitude and phase components in specific time slot changes. The algorithm moves along the six axes of six separate time slots close to the local minimum of the error function.\\
+        The parameter is $\textbf{x}^q\in\mathbb{R}^n$, and the search pattern $\textbf{p}\in\mathcal{D}={d_1,...d_n}$ is taken from a predefined finite set. In this case, the error function values should be calculated for each pattern $\textbf{p}$ in the set $\mathcal{D}$. If the error function is not decreasing in any of the directions, then the step size should be reduced (e.g. by half). As the competing directions are different, if there is not enough computing power available for direction vector $\textbf{p}$, synchronization should not be maintained. In this case we are talking about the asynchronous case. In the case of our controller, an individual $\textbf{p}$ vector is defined for each output variable, and the optimization was performed in each direction asynchronously and shifted in time. Most likely, the error function has a single local minimum as a symmetric amplitude and phase values. Approaching the minimal value of norm, the controller uses adaptive increments that are proportional to the norm itself. Because of the complex interactions between the components of the controller, only one parameter is changed at a time, even if the values of the amplitude and phase components in specific time slot changes. The algorithm moves along the six axes of six separate time slots close to the local minimum of the error function.\\
         Unlike other similar approaches, e.g. \cite{segui2007approach}, the explained optimal controller does not rely on a measured current signal (which varies according where the measurement took place on the grid and renders the global optimization unreliable) but rather measuring and analyzing the voltage unbalance via the proposed indicator and optimizes the voltage shape, the latter of which depends on the nonlinear distortion of the whole low-voltage transformer area and determines additional power losses. The controller's performance was compared to a non compensated network, and a network consisting synchronized symmetric power intake from a regular inverter.\\
         In each iteration only one physical value is changing on the six dimensional parameter field, which consists of the three amplitude and three phase values. If the change effects with cost function reduction (the reference norm's normalized value), the controller holds the new value of amplitude or phase for the controlled current sources (Figure \ref{fig:APPS}). The advantage of this controller structure that is not necessary to know the controlled value's behavior well, like we could not determine the number and type of the other loads on the network \cite{Neukirchner2015}. There are however two disadvantages. First is the low speed of control, due to the several necessary iterations (depending on the circumstances) to find the optimal directions in the parameter space, and the serial nature of interventions and norm calculations. The second comes from the method itself since the controller may stuck in local minima.
 

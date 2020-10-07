@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  6 OCT 2020 21:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  7 OCT 2020 22:57
 entering extended mode
 **C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
 (C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
@@ -2363,6 +2363,9 @@ Package pdftex.def Info: EMPC_PNG_Pics/DC_DC_galvanic.png  used on input line 3
 4.
 (pdftex.def)             Requested size: 278.83578pt x 107.9656pt.
 
+Underfull \vbox (badness 1571) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
 Make it at least 27.11469pt.
@@ -2453,10 +2456,6 @@ Package pdftex.def Info: Unblance_EPS_Pics/VUCompensator_minichart.png  used on
  input line 40.
 (pdftex.def)             Requested size: 239.00558pt x 166.73193pt.
 [28 <./Unblance_EPS_Pics/VUCompensator_minichart.png>] [29]
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-
- []
-
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/APPS_1_2_.eps>
 (epstopdf)                    date: 2016-05-05 13:08:58
 (epstopdf)                    size: 3341246 bytes
@@ -2466,15 +2465,16 @@ to.pdf>
 (epstopdf)                    size: 36997 bytes
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/APPS_1_2_
 -eps-converted-to.pdf Unblance_EPS_Pics/APPS_1_2_.eps>
-(epstopdf)             \includegraphics on input line 90.
+(epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
 <Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf, id=234, 884.30376pt x 625.33
 624pt>
 File: Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf Graphic file (type pdf)
 <use Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/APPS_1_2_-eps-converted-to.pdf  used
- on input line 90.
+ on input line 91.
 (pdftex.def)             Requested size: 378.42044pt x 267.6012pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2488,14 +2488,14 @@ o.pdf>
 (epstopdf)                    size: 26399 bytes
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/inverter-
 eps-converted-to.pdf Unblance_EPS_Pics/inverter.eps>
-(epstopdf)             \includegraphics on input line 245.
+(epstopdf)             \includegraphics on input line 247.
 Package epstopdf Info: Output file is already uptodate.
 <Unblance_EPS_Pics/inverter-eps-converted-to.pdf, id=249, 823.075pt x 596.2275p
 t>
 File: Unblance_EPS_Pics/inverter-eps-converted-to.pdf Graphic file (type pdf)
 <use Unblance_EPS_Pics/inverter-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/inverter-eps-converted-to.pdf  used 
-on input line 245.
+on input line 247.
 (pdftex.def)             Requested size: 378.42044pt x 274.1224pt.
  [33]
 [34 <./Unblance_EPS_Pics/inverter-eps-converted-to.pdf>]
@@ -2510,7 +2510,7 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure3
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure3-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure3
 .eps>
-(epstopdf)             \includegraphics on input line 274.
+(epstopdf)             \includegraphics on input line 276.
 Package epstopdf Info: Output file is already uptodate.
 <Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf, id=260, 376.4
 0625pt x 175.65625pt>
@@ -2518,7 +2518,7 @@ File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-convert
-ed-to.pdf  used on input line 274.
+ed-to.pdf  used on input line 276.
 (pdftex.def)             Requested size: 378.42044pt x 176.60999pt.
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure4
 .eps>
@@ -2531,7 +2531,7 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure4
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure4-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure4
 .eps>
-(epstopdf)             \includegraphics on input line 281.
+(epstopdf)             \includegraphics on input line 283.
 Package epstopdf Info: Output file is already uptodate.
 <Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf, id=261, 394.4
 7375pt x 175.65625pt>
@@ -2539,7 +2539,7 @@ File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-convert
-ed-to.pdf  used on input line 281.
+ed-to.pdf  used on input line 283.
 (pdftex.def)             Requested size: 378.42044pt x 168.50745pt.
  [35]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure5
@@ -2553,7 +2553,7 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure5
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure5-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure5
 .eps>
-(epstopdf)             \includegraphics on input line 294.
+(epstopdf)             \includegraphics on input line 296.
 Package epstopdf Info: Output file is already uptodate.
 <Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf, id=265, 385.4
 4pt x 175.65625pt>
@@ -2561,7 +2561,7 @@ File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-convert
-ed-to.pdf  used on input line 294.
+ed-to.pdf  used on input line 296.
 (pdftex.def)             Requested size: 378.42044pt x 172.45552pt.
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure6
 .eps>
@@ -2574,7 +2574,7 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure6
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure6-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure6
 .eps>
-(epstopdf)             \includegraphics on input line 309.
+(epstopdf)             \includegraphics on input line 311.
 Package epstopdf Info: Output file is already uptodate.
 <Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf, id=266, 406.5
 1875pt x 162.6075pt>
@@ -2582,7 +2582,7 @@ File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-convert
-ed-to.pdf  used on input line 309.
+ed-to.pdf  used on input line 311.
 (pdftex.def)             Requested size: 378.42044pt x 151.37476pt.
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure7
 .eps>
@@ -2595,7 +2595,7 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure7
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure7-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure7
 .eps>
-(epstopdf)             \includegraphics on input line 318.
+(epstopdf)             \includegraphics on input line 320.
 Package epstopdf Info: Output file is already uptodate.
 <Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf, id=267, 401.5
 pt x 133.49875pt>
@@ -2603,7 +2603,7 @@ File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-convert
-ed-to.pdf  used on input line 318.
+ed-to.pdf  used on input line 320.
 (pdftex.def)             Requested size: 378.42044pt x 125.83307pt.
 
 Underfull \vbox (badness 2293) has occurred while \output is active []
@@ -2973,10 +2973,10 @@ Package logreq Info: Writing requests to 'dolgozatmain.run.xml'.
 ### simple group (level 1) entered at line 14 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 63124 strings out of 492897
- 1523786 string characters out of 3133501
- 2268438 words of memory out of 3000000
- 66082 multiletter control sequences out of 15000+200000
+ 63087 strings out of 492897
+ 1521756 string characters out of 3133501
+ 2267927 words of memory out of 3000000
+ 66045 multiletter control sequences out of 15000+200000
  561167 words of font info for 98 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,23n,96p,2602b,1509s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3015,9 +3015,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb>
-Output written on dolgozatmain.pdf (113 pages, 4601247 bytes).
+Output written on dolgozatmain.pdf (113 pages, 4600740 bytes).
 PDF statistics:
- 1271 PDF objects out of 1440 (max. 8388607)
+ 1268 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  253 words of extra memory for PDF output out of 10000 (max. 10000000)
 
