@@ -22,8 +22,9 @@
 \contentsline {paragraph}{Adding asynchronicity}{25}% 
 \contentsline {section}{\numberline {3.4}Unbalance compensation with asym. inverter}{26}% 
 \contentsline {subsection}{\numberline {3.4.1}Problem statement}{26}% 
-\contentsline {subsection}{\numberline {3.4.2}Optimization based control algorithm}{29}% 
-\contentsline {subsubsection}{Asymmetrical inverter structure}{32}% 
+\contentsline {subsection}{\numberline {3.4.2}Optimization based control algorithm}{28}% 
+\contentsline {subsection}{\numberline {3.4.3}Asymmetrical inverter structure}{32}% 
+\contentsline {subsubsection}{Topology}{33}% 
 \contentsline {subsubsection}{Measurements from a real unbalanced network}{34}% 
 \contentsline {section}{\numberline {3.5}Discussion}{35}% 
 \contentsline {subsection}{\numberline {3.5.1}Dynamical simulation based experiments}{35}% 
@@ -31,47 +32,47 @@
 \contentsline {subsubsection}{Robustness analysis}{35}% 
 \contentsline {subsection}{\numberline {3.5.3}Environmental effect}{36}% 
 \contentsline {subsubsection}{Power loss reduction on the network}{36}% 
-\contentsline {subsubsection}{CO2 footprint}{37}% 
-\contentsline {section}{\numberline {3.6}Conclusion}{38}% 
-\contentsline {section}{\numberline {3.7}Notations used in the chapter}{40}% 
-\contentsline {chapter}{\numberline {4}Explicit predictive current control}{41}% 
-\contentsline {section}{\numberline {4.1}Literature overview}{41}% 
-\contentsline {section}{\numberline {4.2}Three-phase buck-type rectifiers}{43}% 
-\contentsline {paragraph}{Basic operation principles}{45}% 
-\contentsline {subsection}{\numberline {4.2.1}Coordinate transformations}{47}% 
-\contentsline {subsubsection}{Clarke transformation}{47}% 
-\contentsline {subsubsection}{Park transformation}{47}% 
-\contentsline {section}{\numberline {4.3}Model based predictive control}{48}% 
-\contentsline {subsection}{\numberline {4.3.1}Quadratic optimization and predictive control}{48}% 
-\contentsline {paragraph}{Linear quadratic optimal control}{49}% 
-\contentsline {paragraph}{Constrained optimal control}{52}% 
-\contentsline {subsubsection}{Receiding horizon control}{55}% 
-\contentsline {subsubsection}{Stability of MPC}{57}% 
-\contentsline {section}{\numberline {4.4}Predictive control of a CSR}{59}% 
-\contentsline {subsection}{\numberline {4.4.1}Modeling}{59}% 
-\contentsline {subsubsection}{Mathematical modeling of the CSR}{59}% 
-\contentsline {subsubsection}{Model simplification}{61}% 
-\contentsline {subsubsection}{Control structure}{62}% 
-\contentsline {subsection}{\numberline {4.4.2}Control}{64}% 
-\contentsline {subsubsection}{DC-side explicit model predictive control}{64}% 
-\contentsline {subsubsection}{Active AC-side damping}{67}% 
-\contentsline {subsection}{\numberline {4.4.3}Modulation}{69}% 
-\contentsline {subsection}{\numberline {4.4.4}Discussion}{72}% 
-\contentsline {subsubsection}{Lyapunov stability}{72}% 
-\contentsline {subsubsection}{Computational effort}{72}% 
-\contentsline {subsubsection}{Horizon performance}{73}% 
-\contentsline {subsubsection}{Simulation results}{74}% 
-\contentsline {subsubsection}{Comparison with a state feedback control}{76}% 
-\contentsline {section}{\numberline {4.5}Conclusion}{77}% 
-\contentsline {section}{\numberline {4.6}Notations used in the chapter}{78}% 
-\contentsline {chapter}{\numberline {5}Thesis and Summary}{80}% 
-\contentsline {section}{\numberline {5.1}Summary}{80}% 
-\contentsline {section}{\numberline {5.2}New scientific results}{81}% 
-\contentsline {section}{\numberline {5.3}Applications and future work}{83}% 
-\contentsline {subsection}{\numberline {5.3.1}Geometrical voltage unbalance norm}{83}% 
-\contentsline {subsection}{\numberline {5.3.2}Voltage unbalance reducing inverter structure}{84}% 
-\contentsline {subsection}{\numberline {5.3.3}Explicit model predictive control for buck-type rectifier}{84}% 
-\contentsline {section}{\numberline {5.4}Geometric approach to multi parametric programming}{85}% 
-\contentsline {subsection}{\numberline {5.4.1}Storage of critical regions}{89}% 
-\contentsline {section}{\numberline {5.5}Notations used in the appendix}{90}% 
-\contentsline {section}{\numberline {5.6}Abbrevations}{91}% 
+\contentsline {subsubsection}{CO2 footprint}{36}% 
+\contentsline {section}{\numberline {3.6}Conclusion}{37}% 
+\contentsline {section}{\numberline {3.7}Notations used in the chapter}{38}% 
+\contentsline {chapter}{\numberline {4}Explicit predictive current control}{42}% 
+\contentsline {section}{\numberline {4.1}Literature overview}{42}% 
+\contentsline {section}{\numberline {4.2}Three-phase buck-type rectifiers}{44}% 
+\contentsline {paragraph}{Basic operation principles}{46}% 
+\contentsline {subsection}{\numberline {4.2.1}Coordinate transformations}{48}% 
+\contentsline {subsubsection}{Clarke transformation}{48}% 
+\contentsline {subsubsection}{Park transformation}{48}% 
+\contentsline {section}{\numberline {4.3}Model based predictive control}{49}% 
+\contentsline {subsection}{\numberline {4.3.1}Quadratic optimization and predictive control}{49}% 
+\contentsline {paragraph}{Linear quadratic optimal control}{50}% 
+\contentsline {paragraph}{Constrained optimal control}{53}% 
+\contentsline {subsubsection}{Receiding horizon control}{56}% 
+\contentsline {subsubsection}{Stability of MPC}{58}% 
+\contentsline {section}{\numberline {4.4}Predictive control of a CSR}{60}% 
+\contentsline {subsection}{\numberline {4.4.1}Modeling}{60}% 
+\contentsline {subsubsection}{Mathematical modeling of the CSR}{60}% 
+\contentsline {subsubsection}{Model simplification}{62}% 
+\contentsline {subsubsection}{Control structure}{63}% 
+\contentsline {subsection}{\numberline {4.4.2}Control}{65}% 
+\contentsline {subsubsection}{DC-side explicit model predictive control}{65}% 
+\contentsline {subsubsection}{Active AC-side damping}{68}% 
+\contentsline {subsection}{\numberline {4.4.3}Modulation}{70}% 
+\contentsline {subsection}{\numberline {4.4.4}Discussion}{73}% 
+\contentsline {subsubsection}{Lyapunov stability}{73}% 
+\contentsline {subsubsection}{Computational effort}{73}% 
+\contentsline {subsubsection}{Horizon performance}{74}% 
+\contentsline {subsubsection}{Simulation results}{75}% 
+\contentsline {subsubsection}{Comparison with a state feedback control}{77}% 
+\contentsline {section}{\numberline {4.5}Conclusion}{78}% 
+\contentsline {section}{\numberline {4.6}Notations used in the chapter}{79}% 
+\contentsline {chapter}{\numberline {5}Thesis and Summary}{81}% 
+\contentsline {section}{\numberline {5.1}Summary}{81}% 
+\contentsline {section}{\numberline {5.2}New scientific results}{82}% 
+\contentsline {section}{\numberline {5.3}Applications and future work}{84}% 
+\contentsline {subsection}{\numberline {5.3.1}Geometrical voltage unbalance norm}{84}% 
+\contentsline {subsection}{\numberline {5.3.2}Voltage unbalance reducing inverter structure}{85}% 
+\contentsline {subsection}{\numberline {5.3.3}Explicit model predictive control for buck-type rectifier}{85}% 
+\contentsline {section}{\numberline {5.4}Geometric approach to multi parametric programming}{86}% 
+\contentsline {subsection}{\numberline {5.4.1}Storage of critical regions}{90}% 
+\contentsline {section}{\numberline {5.5}Notations used in the appendix}{91}% 
+\contentsline {section}{\numberline {5.6}Abbrevations}{92}% 
