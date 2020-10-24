@@ -102,7 +102,7 @@
 \abx@aux@cite{eugene1986new}
 \abx@aux@segm{0}{0}{eugene1986new}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Types of voltage deviations and norms}{8}\protected@file@percent }
-\newlabel{BASICUNB:sec:DefinitionsofUNB}{{2.2.2}{8}}
+\newlabel{BASICUNB:sec:DefinitionsofUNB2}{{2.2.2}{8}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Non standardized approximation formulas}{8}\protected@file@percent }
 \newlabel{BASICUNB:sec:ApproxFormula}{{2.2.3}{8}}
 \citation{robert1992assessing}
@@ -258,14 +258,14 @@
 \@writefile{loa}{\addvspace {10\p@ }}
 \newlabel{BASIC:sec:unbalance_compensation}{{3}{18}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Literature overview}{18}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Power electronic components for current control}{20}\protected@file@percent }
+\newlabel{BASICCSR:sec:PowerGeneral}{{3.2}{20}}
 \citation{kheraluwala1992performance}
 \abx@aux@cite{kheraluwala1992performance}
 \abx@aux@segm{0}{0}{kheraluwala1992performance}
 \citation{inoue2007bidirectional}
 \abx@aux@cite{inoue2007bidirectional}
 \abx@aux@segm{0}{0}{inoue2007bidirectional}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Power electronic components for current control}{20}\protected@file@percent }
-\newlabel{BASICCSR:sec:PowerGeneral}{{3.2}{20}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Galvanic decoupled bi-directional DC-DC converters}{21}\protected@file@percent }
 \newlabel{BASICCSR:sec:DCDC}{{3.2.1}{21}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Bidirectional isolated DC-DC converter, where $V_{D1}$, and $V_{D2}$ are the two end's voltage (in- and output depends on the power flow), $v_1$ and $v_2$ are the transformer voltages, $C_{snub}$ are to reduce switching loss and to damp out over-voltage, and $h$ is the transformer turn ratio.\relax }}{21}\protected@file@percent }
@@ -302,17 +302,13 @@
 \newlabel{VUB:sec:Compensation}{{3.4}{26}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Problem statement}{26}\protected@file@percent }
 \newlabel{VUB:sec:Statement}{{3.4.1}{26}}
-<<<<<<< HEAD
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces The simplified structure of a three phase four wire low voltage network. Several regular households are representing the main loads, and connected with power line sections, subject to inductive and resistive disturbances and capacitive couplings. Domestic powerplants may connect to any connection point within the low voltage section, via an appropriate inverter - either to the three phase sections using a three phase inverter or to a sing
-=======
 \@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces The simplified structure of a three phase four wire low voltage network. Several regular households are representing the main loads, and connected with power line sections, subject to inductive and resistive disturbances and capacitive couplings. Domestic powerplants may connect to any connection point within the low voltage section, via an appropriate inverter - either to the three phase sections using a three phase inverter or to a single phase using a single phase inverter.\relax }}{27}\protected@file@percent }
 \newlabel{fig:network}{{3.4}{27}}
 \citation{gorbe2012reduction}
 \abx@aux@cite{gorbe2012reduction}
 \abx@aux@segm{0}{0}{gorbe2012reduction}
-\newlabel{eqn:VU_costfcn}{{3.5}{28}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Simplified compensator perspective and overview.\relax }}{28}\protected@file@percent }
-\newlabel{fig:mininetwork}{{3.5}{28}}
+\newlabel{eqn:VU_netwfcn}{{3.5}{28}}
+\newlabel{eqn:VU_costfcn}{{3.6}{28}}
 \citation{el2011active}
 \abx@aux@cite{el2011active}
 \abx@aux@segm{0}{0}{el2011active}
@@ -325,17 +321,19 @@
 \citation{hough2001asynchronous}
 \abx@aux@cite{hough2001asynchronous}
 \abx@aux@segm{0}{0}{hough2001asynchronous}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Simplified compensator perspective and overview.\relax }}{29}\protected@file@percent }
+\newlabel{fig:mininetwork}{{3.5}{29}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Optimization based control algorithm}{29}\protected@file@percent }
 \newlabel{VUB:sec:Optimization}{{3.4.2}{29}}
-\newlabel{eqn:contstruct1}{{3.6}{29}}
+\newlabel{eqn:contstruct1}{{3.7}{29}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Asynchronous Parallel Pattern Search\relax }}{30}\protected@file@percent }
+\newlabel{algo:APPS}{{1}{30}}
 \citation{segui2007approach}
 \abx@aux@cite{segui2007approach}
 \abx@aux@segm{0}{0}{segui2007approach}
 \citation{Neukirchner2015}
 \abx@aux@cite{Neukirchner2015}
 \abx@aux@segm{0}{0}{Neukirchner2015}
-\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Asynchronous Parallel Pattern Search\relax }}{30}\protected@file@percent }
-\newlabel{algo:APPS}{{1}{30}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces The optimization algorithm implemented for current control. A one dimensional linear optimization step is being solved in each dimension of the six dimensional parameter space, iteratively.\relax }}{31}\protected@file@percent }
 \newlabel{fig:APPS}{{3.6}{31}}
 \citation{lee2009new}
@@ -352,18 +350,25 @@
 \abx@aux@segm{0}{0}{gorbe2012reduction}
 \@writefile{toc}{\contentsline {subsubsection}{Asymmetrical inverter structure}{32}\protected@file@percent }
 \newlabel{VUB:sec:Inverter}{{3.4.2}{32}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces The asymmetrical inverter design, which applies three single phase full bridge IGBT current injector to create the injected asymmetrical current shapes for voltage unbalance compensation. \relax }}{34}\protected@file@percent }
-\newlabel{fig:inv}{{3.7}{34}}
-\@writefile{toc}{\contentsline {subsubsection}{Measurements from a real unbalanced network}{34}\protected@file@percent }
-\newlabel{VUB:sec:Measurement}{{3.4.2}{34}}
+\@writefile{toc}{\contentsline {subsubsection}{Topology and main components}{32}\protected@file@percent }
+\newlabel{VUB:sec:topology}{{3.4.2}{32}}
+\citation{ali2012survey}
+\abx@aux@cite{ali2012survey}
+\abx@aux@segm{0}{0}{ali2012survey}
+\@writefile{toc}{\contentsline {subsubsection}{\hlc [PT]{PV energy source}}{35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\hlc [PT]{Energy storage}}{35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\hlc [PT]{Intermediate buffer}}{35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\hlc [PT]{Current source inverters and dynamic network}}{35}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.5}Discussion}{35}\protected@file@percent }
 \newlabel{VUB:sec:Discussion}{{3.5}{35}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Dynamical simulation based experiments}{35}\protected@file@percent }
 \newlabel{VUB:sec:Results}{{3.5.1}{35}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Performance analysis}{35}\protected@file@percent }
 \newlabel{VUB:sec:Performance}{{3.5.2}{35}}
-\@writefile{toc}{\contentsline {subsubsection}{Robustness analysis}{35}\protected@file@percent }
-\newlabel{VUB:sec:Robustness}{{3.5.2}{35}}
+\@writefile{toc}{\contentsline {subsubsection}{Robustness analysis}{36}\protected@file@percent }
+\newlabel{VUB:sec:Robustness}{{3.5.2}{36}}
+\@writefile{toc}{\contentsline {subsubsection}{Measurements from a real unbalanced network}{36}\protected@file@percent }
+\newlabel{VUB:sec:Measurement}{{3.5.2}{36}}
 \citation{Neukirchner2015}
 \abx@aux@cite{Neukirchner2015}
 \abx@aux@segm{0}{0}{Neukirchner2015}
@@ -376,12 +381,6 @@
 \citation{MVM2018}
 \abx@aux@cite{MVM2018}
 \abx@aux@segm{0}{0}{MVM2018}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Unbalance reduction control system performance with half charged battery and photovoltaic power source available. The underlying unbalance norm is the geometrical one ($G$) in this experiment. After starting the controller at $t=0.1s$ the unbalance measure $G$ of the network significantly decrease.\relax }}{36}\protected@file@percent }
-\newlabel{fig:compare_asym_PV}{{3.8}{36}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Environmental effect}{36}\protected@file@percent }
-\newlabel{VUB:sec:Environment}{{3.5.3}{36}}
-\@writefile{toc}{\contentsline {subsubsection}{Power loss reduction on the network}{36}\protected@file@percent }
-\newlabel{VUB:sec:Powerloss}{{3.5.3}{36}}
 \citation{MVM2013}
 \abx@aux@cite{MVM2013}
 \abx@aux@segm{0}{0}{MVM2013}
@@ -391,23 +390,34 @@
 \citation{MVM2018}
 \abx@aux@cite{MVM2018}
 \abx@aux@segm{0}{0}{MVM2018}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Unbalance reduction control system performance without battery and renewable source (zero energy balance operation). The performance reduction is clearly observable compared to the case when external power source is available (Figure (3.8\hbox {})), but as result the voltage unbalance indicator $G$ reduced by the average value of 14.78\%.\relax }}{37}\protected@file@percent }
-\newlabel{fig:compare_asym}{{3.9}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Environmental effect}{37}\protected@file@percent }
+\newlabel{VUB:sec:Environment}{{3.5.3}{37}}
+\@writefile{toc}{\contentsline {subsubsection}{Power loss reduction on the network}{37}\protected@file@percent }
+\newlabel{VUB:sec:Powerloss}{{3.5.3}{37}}
 \@writefile{toc}{\contentsline {subsubsection}{CO2 footprint}{37}\protected@file@percent }
 \newlabel{VUB:sec:CO2}{{3.5.3}{37}}
-\newlabel{eqn:co_emission}{{3.7}{37}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Robustness analysis with respect to step type changes in the network load (and voltage unbalance). The unbalance reduction controller successfully compensates the changes in the network voltage unbalance norm ($G$) value.\relax }}{38}\protected@file@percent }
-\newlabel{fig:robustness}{{3.10}{38}}
+\newlabel{eqn:co_emission}{{3.8}{37}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.6}Conclusion}{38}\protected@file@percent }
 \newlabel{VUB:sec:Conclusion}{{3.6}{38}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Compensation control's loss reduction during zero energy balance operation on the modeled network, where $P_{loss}$ indicates the effective power losses and $P^{comp}_{loss}$ effective power losses during control of the network. As result the network losses reduced by mean $6.5\%$.\relax }}{39}\protected@file@percent }
-\newlabel{fig:compare_power}{{3.11}{39}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Intermediate puffer capacitance's voltage within boundaries ($600\pm 10$\tmspace  +\thinmuskip {.1667em}V), during zero energy balance operation mode of the voltage unbalance compensation controller. $U_{\textnormal  {im}}$ indicates intermediate the capacitance's voltage.\relax }}{39}\protected@file@percent }
-\newlabel{fig:u_inter}{{3.12}{39}}
 \gdef \LT@ii {\LT@entry 
     {1}{49.48pt}\LT@entry 
     {1}{348.8586pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.7}Notations used in the chapter}{40}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Notations used in the chapter}{39}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Full topology of the VU compensator. The device is segmented into PV plant as a renewable energy source with added MPPT unit, power storage with a Li-ion battery extended with charger/discharge half bridge, buffer capacitance with intermediate voltage controller, three separated CSI with DC-DC isolators, and the network substituting voltage sources.\relax }}{40}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces The asymmetrical inverter design, which applies three single phase full bridge IGBT current injector to create the injected asymmetrical current shapes for voltage unbalance compensation. \relax }}{40}\protected@file@percent }
+\newlabel{fig:inv}{{3.8}{40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces asd\relax }}{41}\protected@file@percent }
+\newlabel{fig:interV}{{3.9}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Unbalance reduction control system performance with half charged battery and photovoltaic power source available. The underlying unbalance norm is the geometrical one ($G$) in this experiment. After starting the controller at $t=0.1s$ the unbalance measure $G$ of the network significantly decrease.\relax }}{41}\protected@file@percent }
+\newlabel{fig:compare_asym_PV}{{3.10}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Unbalance reduction control system performance without battery and renewable source (zero energy balance operation). The performance reduction is clearly observable compared to the case when external power source is available (Figure (3.10\hbox {})), but as result the voltage unbalance indicator $G$ reduced by the average value of 14.78\%.\relax }}{41}\protected@file@percent }
+\newlabel{fig:compare_asym}{{3.11}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Robustness analysis with respect to step type changes in the network load (and voltage unbalance). The unbalance reduction controller successfully compensates the changes in the network voltage unbalance norm ($G$) value.\relax }}{42}\protected@file@percent }
+\newlabel{fig:robustness}{{3.12}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Compensation control's loss reduction during zero energy balance operation on the modeled network, where $P_{loss}$ indicates the effective power losses and $P^{comp}_{loss}$ effective power losses during control of the network. As result the network losses reduced by mean $6.5\%$.\relax }}{42}\protected@file@percent }
+\newlabel{fig:compare_power}{{3.13}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces Intermediate puffer capacitance's voltage within boundaries ($600\pm 10$\tmspace  +\thinmuskip {.1667em}V), during zero energy balance operation mode of the voltage unbalance compensation controller. $U_{\textnormal  {im}}$ indicates intermediate the capacitance's voltage.\relax }}{42}\protected@file@percent }
+\newlabel{fig:u_inter}{{3.14}{42}}
 \citation{vajda2017limiting}
 \abx@aux@cite{vajda2017limiting}
 \abx@aux@segm{0}{0}{vajda2017limiting}
@@ -495,15 +505,15 @@
 \citation{kutasi2010constrained}
 \abx@aux@cite{kutasi2010constrained}
 \abx@aux@segm{0}{0}{kutasi2010constrained}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Explicit predictive current control}{41}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Explicit predictive current control}{43}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{BASIC:sec:MPC_CSR}{{4}{41}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Literature overview}{41}\protected@file@percent }
-\newlabel{BASICCSR:sec:CSR_Literature}{{4.1}{41}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Three-phase buck-type rectifiers}{43}\protected@file@percent }
-\newlabel{BASICCSR:sec:CSR}{{4.2}{43}}
+\newlabel{BASIC:sec:MPC_CSR}{{4}{43}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Literature overview}{43}\protected@file@percent }
+\newlabel{BASICCSR:sec:CSR_Literature}{{4.1}{43}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Three-phase buck-type rectifiers}{45}\protected@file@percent }
+\newlabel{BASICCSR:sec:CSR}{{4.2}{45}}
 \citation{kolar1996design}
 \abx@aux@cite{kolar1996design}
 \abx@aux@segm{0}{0}{kolar1996design}
@@ -531,34 +541,34 @@
 \citation{baumannnew}
 \abx@aux@cite{baumannnew}
 \abx@aux@segm{0}{0}{baumannnew}
-\newlabel{BASICMPC:fig:CSR}{{4.1a}{44}}
-\newlabel{sub@BASICMPC:fig:CSR}{{a}{44}}
-\newlabel{BASICMPC:fig:VSR}{{4.1b}{44}}
-\newlabel{sub@BASICMPC:fig:VSR}{{b}{44}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Basic topologies of force commuted rectifiers.\relax }}{44}\protected@file@percent }
+\newlabel{BASICMPC:fig:CSR}{{4.1a}{46}}
+\newlabel{sub@BASICMPC:fig:CSR}{{a}{46}}
+\newlabel{BASICMPC:fig:VSR}{{4.1b}{46}}
+\newlabel{sub@BASICMPC:fig:VSR}{{b}{46}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Basic topologies of force commuted rectifiers.\relax }}{46}\protected@file@percent }
 \citation{baumann2005novel}
 \abx@aux@cite{baumann2005novel}
 \abx@aux@segm{0}{0}{baumann2005novel}
 \citation{nussbaumer2007comprehensive}
 \abx@aux@cite{nussbaumer2007comprehensive}
 \abx@aux@segm{0}{0}{nussbaumer2007comprehensive}
-\@writefile{toc}{\contentsline {paragraph}{Basic operation principles}{45}\protected@file@percent }
-\newlabel{BASICCSR:sec:OperationPrinciple}{{4.2}{45}}
-\newlabel{BASICMPC:equ:phasorvect}{{4.1}{45}}
+\@writefile{toc}{\contentsline {paragraph}{Basic operation principles}{47}\protected@file@percent }
+\newlabel{BASICCSR:sec:OperationPrinciple}{{4.2}{47}}
+\newlabel{BASICMPC:equ:phasorvect}{{4.1}{47}}
 \citation{moussaoui2005open}
 \abx@aux@cite{moussaoui2005open}
 \abx@aux@segm{0}{0}{moussaoui2005open}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Phase voltages $v_{i}$, where line-to-line voltages $v_{N,ij}=v_{N,i}-v_{N,j}$, $(i,j)\in \{R,S,T\}$ and sectors $1$ to $12$ being defined by the different relations of the instantaneous values of the mains phase voltages for $v = 400 V$\relax }}{46}\protected@file@percent }
-\newlabel{BASICCSR:fig:waves}{{4.2}{46}}
-\newlabel{BASICCSR:eqn:currents_all}{{4.2}{46}}
-\newlabel{BASICCSR:eqn:currents}{{4.3}{46}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Coordinate transformations}{47}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Clarke transformation}{47}\protected@file@percent }
-\newlabel{BASICCSR:sec:Clarke}{{4.2.1}{47}}
-\newlabel{BASICCSR:eqn:Clarke}{{4.4}{47}}
-\@writefile{toc}{\contentsline {subsubsection}{Park transformation}{47}\protected@file@percent }
-\newlabel{BASICCSR:sec:Park}{{4.2.1}{47}}
-\newlabel{BASICCSR:eqn:Park}{{4.5}{47}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Phase voltages $v_{i}$, where line-to-line voltages $v_{N,ij}=v_{N,i}-v_{N,j}$, $(i,j)\in \{R,S,T\}$ and sectors $1$ to $12$ being defined by the different relations of the instantaneous values of the mains phase voltages for $v = 400 V$\relax }}{48}\protected@file@percent }
+\newlabel{BASICCSR:fig:waves}{{4.2}{48}}
+\newlabel{BASICCSR:eqn:currents_all}{{4.2}{48}}
+\newlabel{BASICCSR:eqn:currents}{{4.3}{48}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Coordinate transformations}{49}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Clarke transformation}{49}\protected@file@percent }
+\newlabel{BASICCSR:sec:Clarke}{{4.2.1}{49}}
+\newlabel{BASICCSR:eqn:Clarke}{{4.4}{49}}
+\@writefile{toc}{\contentsline {subsubsection}{Park transformation}{49}\protected@file@percent }
+\newlabel{BASICCSR:sec:Park}{{4.2.1}{49}}
+\newlabel{BASICCSR:eqn:Park}{{4.5}{49}}
 \citation{rossiter2017model}
 \abx@aux@cite{rossiter2017model}
 \abx@aux@segm{0}{0}{rossiter2017model}
@@ -580,60 +590,60 @@
 \citation{geyer2005low}
 \abx@aux@cite{geyer2005low}
 \abx@aux@segm{0}{0}{geyer2005low}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Model based predictive control}{48}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Quadratic optimization and predictive control}{48}\protected@file@percent }
-\newlabel{BASICCSR:sec:MPC}{{4.3.1}{48}}
-\@writefile{toc}{\contentsline {paragraph}{Linear quadratic optimal control}{49}\protected@file@percent }
-\newlabel{BASICCSR:sec:LQR}{{4.3.1}{49}}
-\newlabel{BASICMPC:equ:basic_LTI}{{4.6}{49}}
-\newlabel{BASICMPC:equ:cost_function_Euclidian}{{4.7}{49}}
-\newlabel{BASICMPC:equ:basic_horizon model}{{4.8}{49}}
-\newlabel{BASICMPC:equ:optimal_control_problem_Euclidian}{{4.9}{49}}
-\newlabel{BASICMPC:equ:batch_allstates}{{4.10}{49}}
-\newlabel{BASICMPC:equ:batch_allstates_compact}{{4.11}{50}}
-\newlabel{BASICMPC:equ:batch_object}{{4.12}{50}}
-\newlabel{BASICMPC:equ:batch_simplfy}{{4.13}{50}}
-\newlabel{BASICMPC:equ:batch_optimal_solution}{{4.14}{50}}
-\newlabel{BASICMPC:equ:batch_optimal_cost}{{4.15}{50}}
-\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive}{{4.16}{50}}
-\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_onestep}{{4.17}{50}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Model based predictive control}{50}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Quadratic optimization and predictive control}{50}\protected@file@percent }
+\newlabel{BASICCSR:sec:MPC}{{4.3.1}{50}}
+\@writefile{toc}{\contentsline {paragraph}{Linear quadratic optimal control}{51}\protected@file@percent }
+\newlabel{BASICCSR:sec:LQR}{{4.3.1}{51}}
+\newlabel{BASICMPC:equ:basic_LTI}{{4.6}{51}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian}{{4.7}{51}}
+\newlabel{BASICMPC:equ:basic_horizon model}{{4.8}{51}}
+\newlabel{BASICMPC:equ:optimal_control_problem_Euclidian}{{4.9}{51}}
+\newlabel{BASICMPC:equ:batch_allstates}{{4.10}{51}}
+\newlabel{BASICMPC:equ:batch_allstates_compact}{{4.11}{52}}
+\newlabel{BASICMPC:equ:batch_object}{{4.12}{52}}
+\newlabel{BASICMPC:equ:batch_simplfy}{{4.13}{52}}
+\newlabel{BASICMPC:equ:batch_optimal_solution}{{4.14}{52}}
+\newlabel{BASICMPC:equ:batch_optimal_cost}{{4.15}{52}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive}{{4.16}{52}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_onestep}{{4.17}{52}}
 \citation{borrelli2017predictive}
 \abx@aux@cite{borrelli2017predictive}
 \abx@aux@segm{0}{0}{borrelli2017predictive}
-\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_substituted}{{4.18}{51}}
-\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_optimum}{{4.19}{51}}
-\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_stepback}{{4.20}{51}}
-\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_P}{{4.21}{51}}
-\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_twostep}{{4.22}{51}}
-\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_optimum_twostep}{{4.23}{51}}
-\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_twostepback}{{4.24}{51}}
-\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_twoP}{{4.25}{51}}
-\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_optimum_anystep}{{4.26}{51}}
-\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_twoP}{{4.27}{51}}
-\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_anystepback}{{4.28}{52}}
-\@writefile{toc}{\contentsline {paragraph}{Constrained optimal control}{52}\protected@file@percent }
-\newlabel{BASICCSR:sec:OptimalControl}{{4.3.1}{52}}
-\newlabel{BASICMPC:equ:basic_LTI_constrained}{{4.29}{52}}
-\newlabel{BASICMPC:equ:constrained_optimal_control_problem}{{4.30}{52}}
-\newlabel{BASICMPC:equ:constrained_initial_set}{{4.31}{52}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_substituted}{{4.18}{53}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_optimum}{{4.19}{53}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_stepback}{{4.20}{53}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_P}{{4.21}{53}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_twostep}{{4.22}{53}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_optimum_twostep}{{4.23}{53}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_twostepback}{{4.24}{53}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_twoP}{{4.25}{53}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_optimum_anystep}{{4.26}{53}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_twoP}{{4.27}{53}}
+\newlabel{BASICMPC:equ:cost_function_Euclidian_recursive_anystepback}{{4.28}{54}}
+\@writefile{toc}{\contentsline {paragraph}{Constrained optimal control}{54}\protected@file@percent }
+\newlabel{BASICCSR:sec:OptimalControl}{{4.3.1}{54}}
+\newlabel{BASICMPC:equ:basic_LTI_constrained}{{4.29}{54}}
+\newlabel{BASICMPC:equ:constrained_optimal_control_problem}{{4.30}{54}}
+\newlabel{BASICMPC:equ:constrained_initial_set}{{4.31}{54}}
 \citation{borrelli2017predictive}
 \abx@aux@cite{borrelli2017predictive}
 \abx@aux@segm{0}{0}{borrelli2017predictive}
-\newlabel{BASICMPC:equ:constrained_feasible_set}{{4.32}{53}}
-\newlabel{BASICMPC:equ:constrained_constraint_set}{{4.33}{53}}
-\newlabel{BASICMPC:equ:constrained_constraint_matrices}{{4.34}{53}}
-\newlabel{BASICMPC:equ:constrained_optimal_control_problem_Euclidian}{{4.35}{53}}
-\newlabel{BASICMPC:equ:constrained_optimal_control_problem_Euclidian_second form}{{4.36}{54}}
-\newlabel{BASICMPC:equ:constrained_Euclidian_mergedconstraint}{{4.37}{54}}
-\newlabel{BASICMPC:equ:constrained_Euclidian_matrices}{{4.38}{54}}
+\newlabel{BASICMPC:equ:constrained_feasible_set}{{4.32}{55}}
+\newlabel{BASICMPC:equ:constrained_constraint_set}{{4.33}{55}}
+\newlabel{BASICMPC:equ:constrained_constraint_matrices}{{4.34}{55}}
+\newlabel{BASICMPC:equ:constrained_optimal_control_problem_Euclidian}{{4.35}{55}}
+\newlabel{BASICMPC:equ:constrained_optimal_control_problem_Euclidian_second form}{{4.36}{56}}
+\newlabel{BASICMPC:equ:constrained_Euclidian_mergedconstraint}{{4.37}{56}}
+\newlabel{BASICMPC:equ:constrained_Euclidian_matrices}{{4.38}{56}}
 \citation{bemporad2002explicit}
 \abx@aux@cite{bemporad2002explicit}
 \abx@aux@segm{0}{0}{bemporad2002explicit}
-\newlabel{BASICMPC:equ:constrained_Euclidian_costmatrix}{{4.39}{55}}
-\newlabel{BASICMPC:equ:constrained_substitute_z}{{4.40}{55}}
-\newlabel{BASICMPC:equ:constrained_substitute_J}{{4.41}{55}}
-\@writefile{toc}{\contentsline {subsubsection}{Receiding horizon control}{55}\protected@file@percent }
-\newlabel{BASICCSR:sec:RHC}{{4.3.1}{55}}
+\newlabel{BASICMPC:equ:constrained_Euclidian_costmatrix}{{4.39}{57}}
+\newlabel{BASICMPC:equ:constrained_substitute_z}{{4.40}{57}}
+\newlabel{BASICMPC:equ:constrained_substitute_J}{{4.41}{57}}
+\@writefile{toc}{\contentsline {subsubsection}{Receiding horizon control}{57}\protected@file@percent }
+\newlabel{BASICCSR:sec:RHC}{{4.3.1}{57}}
 \citation{borrelli2017predictive}
 \abx@aux@cite{borrelli2017predictive}
 \abx@aux@segm{0}{0}{borrelli2017predictive}
@@ -643,9 +653,9 @@
 \citation{goodwin2006constrained}
 \abx@aux@cite{goodwin2006constrained}
 \abx@aux@segm{0}{0}{goodwin2006constrained}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Graphycal display of receiding horison control (RHC) idea \cite {borrelli2017predictive}.\relax }}{56}\protected@file@percent }
-\newlabel{BASICCSR:fig:RHC}{{4.3}{56}}
-\newlabel{BASICMPC:equ:receiding_horison_problem}{{4.42}{56}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Graphycal display of receiding horison control (RHC) idea \cite {borrelli2017predictive}.\relax }}{58}\protected@file@percent }
+\newlabel{BASICCSR:fig:RHC}{{4.3}{58}}
+\newlabel{BASICMPC:equ:receiding_horison_problem}{{4.42}{58}}
 \citation{mayne2000constrained}
 \abx@aux@cite{mayne2000constrained}
 \abx@aux@segm{0}{0}{mayne2000constrained}
@@ -658,125 +668,125 @@
 \citation{mayne1990receding}
 \abx@aux@cite{mayne1990receding}
 \abx@aux@segm{0}{0}{mayne1990receding}
-\newlabel{BASICMPC:equ:receiding_horison_Lyapunov}{{4.43}{57}}
-\newlabel{BASICMPC:equ:receiding_optimal_sequence}{{4.44}{57}}
-\newlabel{BASICMPC:equ:receiding_optimal_first}{{4.45}{57}}
-\@writefile{toc}{\contentsline {subsubsection}{Stability of MPC}{57}\protected@file@percent }
-\newlabel{BASICCSR:sec:MPCStability}{{4.3.1}{57}}
-\newlabel{BASICMPC:equ:autonom_system}{{4.46}{57}}
-\newlabel{BASICMPC:equ:lyapunov_1}{{4.47}{57}}
-\newlabel{BASICMPC:equ:lyapunov_2}{{4.48}{57}}
-\newlabel{BASICMPC:equ:lyapunov_3}{{4.49}{58}}
-\newlabel{BASICMPC:equ:lyapunov_4_1}{{4.50}{58}}
-\newlabel{BASICMPC:equ:lyapunov_4_1_a}{{4.50a}{58}}
-\newlabel{BASICMPC:equ:lyapunov_4_1_b}{{4.50b}{58}}
-\newlabel{BASICMPC:equ:lyapunov_4_1_c}{{4.50c}{58}}
-\newlabel{BASICMPC:equ:lyapunov_4_2}{{4.51}{58}}
-\newlabel{BASICMPC:equ:lyapunov_4_2_a}{{4.51a}{58}}
-\newlabel{BASICMPC:equ:lyapunov_4_2_b}{{4.51b}{58}}
-\newlabel{BASICMPC:equ:lyapunov_4_2_c}{{4.51c}{58}}
-\newlabel{BASICMPC:equ:lyapunov_4_2_d}{{4.51d}{58}}
-\newlabel{BASICMPC:equ:lyapunov_5}{{4.52}{58}}
-\newlabel{BASICMPC:equ:lyapunov_6}{{4.53}{58}}
-\newlabel{BASICMPC:equ:lyapunov_7}{{4.54}{58}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Predictive control of a CSR}{59}\protected@file@percent }
-\newlabel{EMPC:sec:main}{{4.4}{59}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Modeling}{59}\protected@file@percent }
-\newlabel{EMPC:sec:Modeling}{{4.4.1}{59}}
-\@writefile{toc}{\contentsline {subsubsection}{Mathematical modeling of the CSR}{59}\protected@file@percent }
-\newlabel{EMPC:sec:ModelofCSR}{{4.4.1}{59}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Circuit diagram of the three-phase buck-type rectifier with insulated gate bipolar transistors (IGBTs).\relax }}{60}\protected@file@percent }
-\newlabel{EMPC:fig:network}{{4.4}{60}}
-\newlabel{EMPC:equ:abc_eqn}{{4.55}{60}}
-\newlabel{EMPC:equ:delta_set}{{4.56}{60}}
-\newlabel{EMPC:equ:abc_alfabeta}{{4.57}{60}}
+\newlabel{BASICMPC:equ:receiding_horison_Lyapunov}{{4.43}{59}}
+\newlabel{BASICMPC:equ:receiding_optimal_sequence}{{4.44}{59}}
+\newlabel{BASICMPC:equ:receiding_optimal_first}{{4.45}{59}}
+\@writefile{toc}{\contentsline {subsubsection}{Stability of MPC}{59}\protected@file@percent }
+\newlabel{BASICCSR:sec:MPCStability}{{4.3.1}{59}}
+\newlabel{BASICMPC:equ:autonom_system}{{4.46}{59}}
+\newlabel{BASICMPC:equ:lyapunov_1}{{4.47}{59}}
+\newlabel{BASICMPC:equ:lyapunov_2}{{4.48}{59}}
+\newlabel{BASICMPC:equ:lyapunov_3}{{4.49}{60}}
+\newlabel{BASICMPC:equ:lyapunov_4_1}{{4.50}{60}}
+\newlabel{BASICMPC:equ:lyapunov_4_1_a}{{4.50a}{60}}
+\newlabel{BASICMPC:equ:lyapunov_4_1_b}{{4.50b}{60}}
+\newlabel{BASICMPC:equ:lyapunov_4_1_c}{{4.50c}{60}}
+\newlabel{BASICMPC:equ:lyapunov_4_2}{{4.51}{60}}
+\newlabel{BASICMPC:equ:lyapunov_4_2_a}{{4.51a}{60}}
+\newlabel{BASICMPC:equ:lyapunov_4_2_b}{{4.51b}{60}}
+\newlabel{BASICMPC:equ:lyapunov_4_2_c}{{4.51c}{60}}
+\newlabel{BASICMPC:equ:lyapunov_4_2_d}{{4.51d}{60}}
+\newlabel{BASICMPC:equ:lyapunov_5}{{4.52}{60}}
+\newlabel{BASICMPC:equ:lyapunov_6}{{4.53}{60}}
+\newlabel{BASICMPC:equ:lyapunov_7}{{4.54}{60}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Predictive control of a CSR}{61}\protected@file@percent }
+\newlabel{EMPC:sec:main}{{4.4}{61}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Modeling}{61}\protected@file@percent }
+\newlabel{EMPC:sec:Modeling}{{4.4.1}{61}}
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical modeling of the CSR}{61}\protected@file@percent }
+\newlabel{EMPC:sec:ModelofCSR}{{4.4.1}{61}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Circuit diagram of the three-phase buck-type rectifier with insulated gate bipolar transistors (IGBTs).\relax }}{62}\protected@file@percent }
+\newlabel{EMPC:fig:network}{{4.4}{62}}
+\newlabel{EMPC:equ:abc_eqn}{{4.55}{62}}
+\newlabel{EMPC:equ:delta_set}{{4.56}{62}}
+\newlabel{EMPC:equ:abc_alfabeta}{{4.57}{62}}
 \citation{ahmed2014model}
 \abx@aux@cite{ahmed2014model}
 \abx@aux@segm{0}{0}{ahmed2014model}
-\newlabel{EMPC:equ:abc_dq}{{4.58}{61}}
-\@writefile{toc}{\contentsline {subsubsection}{Model simplification}{61}\protected@file@percent }
-\newlabel{EMPC:sec:Simplification}{{4.4.1}{61}}
-\newlabel{EMPC:equ:mtx_AC}{{4.59}{61}}
-\newlabel{EMPC:equ:mtx_DC}{{4.60}{61}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces The applied parameters in model and controller design\relax }}{62}\protected@file@percent }
-\newlabel{EMPC:tbl:params}{{4.1}{62}}
-\newlabel{EMPC:equ:mtx_ctrl}{{4.61}{62}}
-\@writefile{toc}{\contentsline {subsubsection}{Control structure}{62}\protected@file@percent }
-\newlabel{EMPC:sec:ControlStruct}{{4.4.1}{62}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Block diagram of the control structure.\relax }}{63}\protected@file@percent }
-\newlabel{EMPC:fig:ControlStruct}{{4.5}{63}}
-\newlabel{EMPC:equ:sync_ctrl}{{4.62}{63}}
+\newlabel{EMPC:equ:abc_dq}{{4.58}{63}}
+\@writefile{toc}{\contentsline {subsubsection}{Model simplification}{63}\protected@file@percent }
+\newlabel{EMPC:sec:Simplification}{{4.4.1}{63}}
+\newlabel{EMPC:equ:mtx_AC}{{4.59}{63}}
+\newlabel{EMPC:equ:mtx_DC}{{4.60}{63}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces The applied parameters in model and controller design\relax }}{64}\protected@file@percent }
+\newlabel{EMPC:tbl:params}{{4.1}{64}}
+\newlabel{EMPC:equ:mtx_ctrl}{{4.61}{64}}
+\@writefile{toc}{\contentsline {subsubsection}{Control structure}{64}\protected@file@percent }
+\newlabel{EMPC:sec:ControlStruct}{{4.4.1}{64}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Block diagram of the control structure.\relax }}{65}\protected@file@percent }
+\newlabel{EMPC:fig:ControlStruct}{{4.5}{65}}
+\newlabel{EMPC:equ:sync_ctrl}{{4.62}{65}}
 \citation{vajda2017limiting}
 \abx@aux@cite{vajda2017limiting}
 \abx@aux@segm{0}{0}{vajda2017limiting}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Control}{64}\protected@file@percent }
-\newlabel{EMPC:sec:Control}{{4.4.2}{64}}
-\@writefile{toc}{\contentsline {subsubsection}{DC-side explicit model predictive control}{64}\protected@file@percent }
-\newlabel{EMPC:sec:DCside}{{4.4.2}{64}}
-\newlabel{EMPC:equ:DiscreteStateSpace}{{4.63}{64}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Control}{66}\protected@file@percent }
+\newlabel{EMPC:sec:Control}{{4.4.2}{66}}
+\@writefile{toc}{\contentsline {subsubsection}{DC-side explicit model predictive control}{66}\protected@file@percent }
+\newlabel{EMPC:sec:DCside}{{4.4.2}{66}}
+\newlabel{EMPC:equ:DiscreteStateSpace}{{4.63}{66}}
 \citation{rivera2013predictive}
 \abx@aux@cite{rivera2013predictive}
 \abx@aux@segm{0}{0}{rivera2013predictive}
 \citation{rivera2013predictive}
 \abx@aux@cite{rivera2013predictive}
 \abx@aux@segm{0}{0}{rivera2013predictive}
-\newlabel{EMPC:equ:contraint_desc}{{4.64}{65}}
-\newlabel{EMPC:equ:optim_problem}{{4.65}{65}}
-\newlabel{EMPC:equ:optim_problem_constr}{{4.66}{65}}
-\newlabel{EMPC:equ:quadratic_program}{{4.67}{65}}
-\newlabel{EMPC:equ:quadratic_inequality}{{4.68}{65}}
-\newlabel{EMPC:equ:quadratic_regions}{{4.69}{65}}
-\newlabel{EMPC:equ:quadratic_critical}{{4.70}{65}}
-\newlabel{EMPC:equ:quadratic_set}{{4.71}{65}}
+\newlabel{EMPC:equ:contraint_desc}{{4.64}{67}}
+\newlabel{EMPC:equ:optim_problem}{{4.65}{67}}
+\newlabel{EMPC:equ:optim_problem_constr}{{4.66}{67}}
+\newlabel{EMPC:equ:quadratic_program}{{4.67}{67}}
+\newlabel{EMPC:equ:quadratic_inequality}{{4.68}{67}}
+\newlabel{EMPC:equ:quadratic_regions}{{4.69}{67}}
+\newlabel{EMPC:equ:quadratic_critical}{{4.70}{67}}
+\newlabel{EMPC:equ:quadratic_set}{{4.71}{67}}
 \citation{MPT3}
 \abx@aux@cite{MPT3}
 \abx@aux@segm{0}{0}{MPT3}
-\newlabel{EMPC:equ:quadratic_mtx_set}{{4.72}{66}}
-\newlabel{EMPC:equ:numeric_constraints}{{4.73}{66}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces \color@box {}{PT}{$\displaystyle  \textnormal  {State space partitioning over the determined constraints.}$}\relax }}{66}\protected@file@percent }
-\newlabel{EMPC:fig:regions}{{4.6}{66}}
+\newlabel{EMPC:equ:quadratic_mtx_set}{{4.72}{68}}
+\newlabel{EMPC:equ:numeric_constraints}{{4.73}{68}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces \color@box {}{PT}{$\displaystyle  \textnormal  {State space partitioning over the determined constraints.}$}\relax }}{68}\protected@file@percent }
+\newlabel{EMPC:fig:regions}{{4.6}{68}}
 \citation{zhang2015simplified}
 \abx@aux@cite{zhang2015simplified}
 \abx@aux@segm{0}{0}{zhang2015simplified}
-\newlabel{EMPC:equ:direct_controlval}{{4.74}{67}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces The control structure of the CSR, with MPC controller on the DC side.\relax }}{67}\protected@file@percent }
-\newlabel{EMPC:fig:MPCStructure}{{4.7}{67}}
-\@writefile{toc}{\contentsline {subsubsection}{Active AC-side damping}{67}\protected@file@percent }
-\newlabel{EMPC:sec:ACdamping}{{4.4.2}{67}}
-\newlabel{EMPC:equ:reduced_ucq}{{4.75}{67}}
+\newlabel{EMPC:equ:direct_controlval}{{4.74}{69}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces The control structure of the CSR, with MPC controller on the DC side.\relax }}{69}\protected@file@percent }
+\newlabel{EMPC:fig:MPCStructure}{{4.7}{69}}
+\@writefile{toc}{\contentsline {subsubsection}{Active AC-side damping}{69}\protected@file@percent }
+\newlabel{EMPC:sec:ACdamping}{{4.4.2}{69}}
+\newlabel{EMPC:equ:reduced_ucq}{{4.75}{69}}
 \citation{regaya2014new}
 \abx@aux@cite{regaya2014new}
 \abx@aux@segm{0}{0}{regaya2014new}
 \citation{wiseman2002pwm}
 \abx@aux@cite{wiseman2002pwm}
 \abx@aux@segm{0}{0}{wiseman2002pwm}
-\newlabel{EMPC:fig:ACdamping_a}{{4.8a}{68}}
-\newlabel{sub@EMPC:fig:ACdamping_a}{{a}{68}}
-\newlabel{EMPC:fig:ACdamping_b}{{4.8b}{68}}
-\newlabel{sub@EMPC:fig:ACdamping_b}{{b}{68}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Circuit, and control schematics of AC damping via virtual damping resistance $R_H$, and high pass filter $HF(s)$.\relax }}{68}\protected@file@percent }
-\newlabel{EMPC:fig:ACdamping}{{4.8}{68}}
-\newlabel{EMPC:equ:reduced_AC}{{4.76}{68}}
-\newlabel{EMPC:equ:reduced_ucd}{{4.77}{68}}
-\newlabel{EMPC:equ:AC_HPF}{{4.78}{69}}
-\newlabel{EMPC:equ:reduced_ucd}{{4.79}{69}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Modulation}{69}\protected@file@percent }
-\newlabel{EMPC:sec:Modulation}{{4.4.3}{69}}
-\newlabel{EMPC:equ:neighbor}{{4.80}{69}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{70}\protected@file@percent }
-\newlabel{EMPC:fig:VectorPhasor}{{4.9}{70}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Synthesis of $\overrightarrow {i_{ref}}$ by $\overrightarrow {i_{1}}$, $\overrightarrow {i_{2}}$, and $\overrightarrow {i_{0}}$\relax }}{70}\protected@file@percent }
-\newlabel{EMPC:fig:OnePhasor}{{4.10}{70}}
-\newlabel{EMPC:equ:i_ref}{{4.81}{70}}
+\newlabel{EMPC:fig:ACdamping_a}{{4.8a}{70}}
+\newlabel{sub@EMPC:fig:ACdamping_a}{{a}{70}}
+\newlabel{EMPC:fig:ACdamping_b}{{4.8b}{70}}
+\newlabel{sub@EMPC:fig:ACdamping_b}{{b}{70}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Circuit, and control schematics of AC damping via virtual damping resistance $R_H$, and high pass filter $HF(s)$.\relax }}{70}\protected@file@percent }
+\newlabel{EMPC:fig:ACdamping}{{4.8}{70}}
+\newlabel{EMPC:equ:reduced_AC}{{4.76}{70}}
+\newlabel{EMPC:equ:reduced_ucd}{{4.77}{70}}
+\newlabel{EMPC:equ:AC_HPF}{{4.78}{71}}
+\newlabel{EMPC:equ:reduced_ucd}{{4.79}{71}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Modulation}{71}\protected@file@percent }
+\newlabel{EMPC:sec:Modulation}{{4.4.3}{71}}
+\newlabel{EMPC:equ:neighbor}{{4.80}{71}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{72}\protected@file@percent }
+\newlabel{EMPC:fig:VectorPhasor}{{4.9}{72}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Synthesis of $\overrightarrow {i_{ref}}$ by $\overrightarrow {i_{1}}$, $\overrightarrow {i_{2}}$, and $\overrightarrow {i_{0}}$\relax }}{72}\protected@file@percent }
+\newlabel{EMPC:fig:OnePhasor}{{4.10}{72}}
+\newlabel{EMPC:equ:i_ref}{{4.81}{72}}
 \citation{moussaoui2005open}
 \abx@aux@cite{moussaoui2005open}
 \abx@aux@segm{0}{0}{moussaoui2005open}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{71}\protected@file@percent }
-\newlabel{EMPC:tbl:fundamental_vect}{{4.2}{71}}
-\newlabel{EMPC:equ:dwelltime}{{4.82}{71}}
-\newlabel{EMPC:equ:angle}{{4.83}{71}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Representation of switching sequences for SECTOR I.\relax }}{71}\protected@file@percent }
-\newlabel{EMPC:tbl:sequence}{{4.3}{71}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces The fundamental input current vectors corresponding to the active switching states of the CSR.\relax }}{73}\protected@file@percent }
+\newlabel{EMPC:tbl:fundamental_vect}{{4.2}{73}}
+\newlabel{EMPC:equ:dwelltime}{{4.82}{73}}
+\newlabel{EMPC:equ:angle}{{4.83}{73}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Representation of switching sequences for SECTOR I.\relax }}{73}\protected@file@percent }
+\newlabel{EMPC:tbl:sequence}{{4.3}{73}}
 \citation{borrelli2017predictive}
 \abx@aux@cite{borrelli2017predictive}
 \abx@aux@segm{0}{0}{borrelli2017predictive}
@@ -786,66 +796,66 @@
 \citation{MPT3}
 \abx@aux@cite{MPT3}
 \abx@aux@segm{0}{0}{MPT3}
-\newlabel{EMPC:equ:refconstraint}{{4.84}{72}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}Discussion}{72}\protected@file@percent }
-\newlabel{EMPC:sec:Discussion}{{4.4.4}{72}}
-\@writefile{toc}{\contentsline {subsubsection}{Lyapunov stability}{72}\protected@file@percent }
-\newlabel{EMPC:sec:LyapStab}{{4.4.4}{72}}
-\@writefile{toc}{\contentsline {subsubsection}{Computational effort}{72}\protected@file@percent }
-\newlabel{EMPC:sec:CompEffort}{{4.4.4}{72}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Lyapunov function for EMPC every partition.\relax }}{73}\protected@file@percent }
-\newlabel{EMPC:fig:LyapStab}{{4.11}{73}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Binary search tree of the controller for a horizon of $N = 4$. The leaf nodes are depicted with filled squares. The depth of the tree is 5.\relax }}{73}\protected@file@percent }
-\newlabel{EMPC:fig:SearchTree}{{4.12}{73}}
-\@writefile{toc}{\contentsline {subsubsection}{Horizon performance}{73}\protected@file@percent }
-\newlabel{EMPC:sec:Performance}{{4.4.4}{73}}
+\newlabel{EMPC:equ:refconstraint}{{4.84}{74}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}Discussion}{74}\protected@file@percent }
+\newlabel{EMPC:sec:Discussion}{{4.4.4}{74}}
+\@writefile{toc}{\contentsline {subsubsection}{Lyapunov stability}{74}\protected@file@percent }
+\newlabel{EMPC:sec:LyapStab}{{4.4.4}{74}}
+\@writefile{toc}{\contentsline {subsubsection}{Computational effort}{74}\protected@file@percent }
+\newlabel{EMPC:sec:CompEffort}{{4.4.4}{74}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Lyapunov function for EMPC every partition.\relax }}{75}\protected@file@percent }
+\newlabel{EMPC:fig:LyapStab}{{4.11}{75}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Binary search tree of the controller for a horizon of $N = 4$. The leaf nodes are depicted with filled squares. The depth of the tree is 5.\relax }}{75}\protected@file@percent }
+\newlabel{EMPC:fig:SearchTree}{{4.12}{75}}
+\@writefile{toc}{\contentsline {subsubsection}{Horizon performance}{75}\protected@file@percent }
+\newlabel{EMPC:sec:Performance}{{4.4.4}{75}}
 \citation{neukirchner2019linkedmodel}
 \abx@aux@cite{neukirchner2019linkedmodel}
 \abx@aux@segm{0}{0}{neukirchner2019linkedmodel}
 \citation{zhang2015simplified}
 \abx@aux@cite{zhang2015simplified}
 \abx@aux@segm{0}{0}{zhang2015simplified}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces Data organization in the data memory of a single core DSP and the evaluation of a 2-dimensional inequality\relax }}{74}\protected@file@percent }
-\newlabel{EMPC:fig:Memory}{{4.13}{74}}
-\@writefile{toc}{\contentsline {subsubsection}{Simulation results}{74}\protected@file@percent }
-\newlabel{EMPC:sec:Results}{{4.4.4}{74}}
-\newlabel{EMPC:equ:quadratic_mtx_set}{{4.85}{74}}
-\newlabel{EMPC:fig:MultiHorizon_a}{{4.14a}{75}}
-\newlabel{sub@EMPC:fig:MultiHorizon_a}{{a}{75}}
-\newlabel{EMPC:fig:MultiHorizon_b}{{4.14b}{75}}
-\newlabel{sub@EMPC:fig:MultiHorizon_b}{{b}{75}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces Step response of the system as a function of the horizon length $N$.\relax }}{75}\protected@file@percent }
-\newlabel{EMPC:fig:MultiHorizon}{{4.14}{75}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces Data organization in the data memory of a single core DSP and the evaluation of a 2-dimensional inequality\relax }}{76}\protected@file@percent }
+\newlabel{EMPC:fig:Memory}{{4.13}{76}}
+\@writefile{toc}{\contentsline {subsubsection}{Simulation results}{76}\protected@file@percent }
+\newlabel{EMPC:sec:Results}{{4.4.4}{76}}
+\newlabel{EMPC:equ:quadratic_mtx_set}{{4.85}{76}}
+\newlabel{EMPC:fig:MultiHorizon_a}{{4.14a}{77}}
+\newlabel{sub@EMPC:fig:MultiHorizon_a}{{a}{77}}
+\newlabel{EMPC:fig:MultiHorizon_b}{{4.14b}{77}}
+\newlabel{sub@EMPC:fig:MultiHorizon_b}{{b}{77}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces Step response of the system as a function of the horizon length $N$.\relax }}{77}\protected@file@percent }
+\newlabel{EMPC:fig:MultiHorizon}{{4.14}{77}}
 \citation{godlewska2015predictive}
 \abx@aux@cite{godlewska2015predictive}
 \abx@aux@segm{0}{0}{godlewska2015predictive}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces Resulting current and voltage trajectories of the CSR with (EMPC).\relax }}{76}\protected@file@percent }
-\newlabel{EMPC:fig:Result_PerformanceEMPC}{{4.15}{76}}
-\@writefile{toc}{\contentsline {subsubsection}{Comparison with a state feedback control}{76}\protected@file@percent }
-\newlabel{EMPC:sec:Comparison}{{4.4.4}{76}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces Simple DC side state feedback control structure.\relax }}{76}\protected@file@percent }
-\newlabel{EMPC:fig:SFeedbackDC}{{4.16}{76}}
-\newlabel{EMPC:equ:tuning}{{4.86}{76}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Resulting current and voltage trajectories of the CSR with explicit model predictive control (MPC) compared to the $N=10$ case (MPCN10), the augemnted model (MPCAUG), and the state feedback control (SF).\relax }}{77}\protected@file@percent }
-\newlabel{EMPC:fig:Result_EMPCfinal}{{4.17}{77}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Conclusion}{77}\protected@file@percent }
-\newlabel{EMPC:sec:Conclusions}{{4.5}{77}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces Resulting current and voltage trajectories of the CSR with (EMPC).\relax }}{78}\protected@file@percent }
+\newlabel{EMPC:fig:Result_PerformanceEMPC}{{4.15}{78}}
+\@writefile{toc}{\contentsline {subsubsection}{Comparison with a state feedback control}{78}\protected@file@percent }
+\newlabel{EMPC:sec:Comparison}{{4.4.4}{78}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces Simple DC side state feedback control structure.\relax }}{78}\protected@file@percent }
+\newlabel{EMPC:fig:SFeedbackDC}{{4.16}{78}}
+\newlabel{EMPC:equ:tuning}{{4.86}{78}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Resulting current and voltage trajectories of the CSR with explicit model predictive control (MPC) compared to the $N=10$ case (MPCN10), the augemnted model (MPCAUG), and the state feedback control (SF).\relax }}{79}\protected@file@percent }
+\newlabel{EMPC:fig:Result_EMPCfinal}{{4.17}{79}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Conclusion}{79}\protected@file@percent }
+\newlabel{EMPC:sec:Conclusions}{{4.5}{79}}
 \gdef \LT@iii {\LT@entry 
     {1}{53.28783pt}\LT@entry 
     {1}{345.05077pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Notations used in the chapter}{78}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Thesis and Summary}{80}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Notations used in the chapter}{80}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Thesis and Summary}{82}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Summary}{80}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Summary}{82}\protected@file@percent }
 \citation{neukirchner2015examination}
 \abx@aux@cite{neukirchner2015examination}
 \abx@aux@segm{0}{0}{neukirchner2015examination}
 \citation{Neukirchner2015}
 \abx@aux@cite{Neukirchner2015}
 \abx@aux@segm{0}{0}{Neukirchner2015}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}New scientific results}{81}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}New scientific results}{83}\protected@file@percent }
 \citation{Neukirchner2015}
 \abx@aux@cite{Neukirchner2015}
 \abx@aux@segm{0}{0}{Neukirchner2015}
@@ -870,39 +880,39 @@
 \citation{neukirchner2016modelling}
 \abx@aux@cite{neukirchner2016modelling}
 \abx@aux@segm{0}{0}{neukirchner2016modelling}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Applications and future work}{83}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Geometrical voltage unbalance norm}{83}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Voltage unbalance reducing inverter structure}{84}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Explicit model predictive control for buck-type rectifier}{84}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Applications and future work}{85}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Geometrical voltage unbalance norm}{85}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Voltage unbalance reducing inverter structure}{86}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Explicit model predictive control for buck-type rectifier}{86}\protected@file@percent }
 \citation{borrelli2017predictive}
 \abx@aux@cite{borrelli2017predictive}
 \abx@aux@segm{0}{0}{borrelli2017predictive}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Geometric approach to multi parametric programming}{85}\protected@file@percent }
-\newlabel{BASICCSR:sec:MPP}{{5.4}{85}}
-\newlabel{BASICMPC:equ:MPP_program}{{5.1}{85}}
-\newlabel{BASICMPC:equ:MPP_parameterset}{{5.2}{85}}
-\newlabel{BASICMPC:equ:MPP_stateset_optimal partition}{{5.3}{86}}
-\newlabel{BASICMPC:equ:MPP_stateset_optimal critical}{{5.4}{86}}
-\newlabel{BASICMPC:equ:MPQP}{{5.5}{86}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Geometric approach to multi parametric programming}{87}\protected@file@percent }
+\newlabel{BASICCSR:sec:MPP}{{5.4}{87}}
+\newlabel{BASICMPC:equ:MPP_program}{{5.1}{87}}
+\newlabel{BASICMPC:equ:MPP_parameterset}{{5.2}{87}}
+\newlabel{BASICMPC:equ:MPP_stateset_optimal partition}{{5.3}{88}}
+\newlabel{BASICMPC:equ:MPP_stateset_optimal critical}{{5.4}{88}}
+\newlabel{BASICMPC:equ:MPQP}{{5.5}{88}}
 \citation{borrelli2017predictive}
 \abx@aux@cite{borrelli2017predictive}
 \abx@aux@segm{0}{0}{borrelli2017predictive}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Partitioning incrementally the two dimensional parameter space to critical regions from $C0$ to $C11$.\relax }}{87}\protected@file@percent }
-\newlabel{BASICCSR:fig:Crit}{{5.1}{87}}
-\newlabel{BASICMPC:equ:MPP_KKT}{{5.6}{87}}
-\newlabel{BASICMPC:equ:MPP_KKT_a}{{5.6a}{88}}
-\newlabel{BASICMPC:equ:MPP_KKT_b}{{5.6b}{88}}
-\newlabel{BASICMPC:equ:MPP_KKT_c}{{5.6c}{88}}
-\newlabel{BASICMPC:equ:MPP_KKT_d}{{5.6d}{88}}
-\newlabel{BASICMPC:equ:MPP_KKT_result}{{5.7}{88}}
-\newlabel{BASICMPC:equ:MPP_KKT_result}{{5.4}{88}}
-\newlabel{BASICMPC:equ:KKT_active}{{5.8}{88}}
-\newlabel{BASICMPC:equ:MPP_KKT_result_2}{{5.9}{88}}
-\newlabel{BASICMPC:equ:MPP_KKT_result_3}{{5.10}{88}}
-\newlabel{BASICMPC:equ:KKT_active}{{5.4}{88}}
-\newlabel{BASICMPC:equ:MPP_KKT_result_3}{{5.4}{88}}
-\newlabel{BASICMPC:equ:MPP_KKT_result_4}{{5.11}{88}}
-\newlabel{BASICMPC:equ:MPQP_optimizer}{{5.12}{88}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Partitioning incrementally the two dimensional parameter space to critical regions from $C0$ to $C11$.\relax }}{89}\protected@file@percent }
+\newlabel{BASICCSR:fig:Crit}{{5.1}{89}}
+\newlabel{BASICMPC:equ:MPP_KKT}{{5.6}{89}}
+\newlabel{BASICMPC:equ:MPP_KKT_a}{{5.6a}{90}}
+\newlabel{BASICMPC:equ:MPP_KKT_b}{{5.6b}{90}}
+\newlabel{BASICMPC:equ:MPP_KKT_c}{{5.6c}{90}}
+\newlabel{BASICMPC:equ:MPP_KKT_d}{{5.6d}{90}}
+\newlabel{BASICMPC:equ:MPP_KKT_result}{{5.7}{90}}
+\newlabel{BASICMPC:equ:MPP_KKT_result}{{5.4}{90}}
+\newlabel{BASICMPC:equ:KKT_active}{{5.8}{90}}
+\newlabel{BASICMPC:equ:MPP_KKT_result_2}{{5.9}{90}}
+\newlabel{BASICMPC:equ:MPP_KKT_result_3}{{5.10}{90}}
+\newlabel{BASICMPC:equ:KKT_active}{{5.4}{90}}
+\newlabel{BASICMPC:equ:MPP_KKT_result_3}{{5.4}{90}}
+\newlabel{BASICMPC:equ:MPP_KKT_result_4}{{5.11}{90}}
+\newlabel{BASICMPC:equ:MPQP_optimizer}{{5.12}{90}}
 \citation{jones2006logarithmic}
 \abx@aux@cite{jones2006logarithmic}
 \abx@aux@segm{0}{0}{jones2006logarithmic}
@@ -915,41 +925,149 @@
 \citation{kutasi2008vector}
 \abx@aux@cite{kutasi2008vector}
 \abx@aux@segm{0}{0}{kutasi2008vector}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Storage of critical regions}{89}\protected@file@percent }
-\newlabel{BASICCSR:sec:EMPCStorage}{{5.4.1}{89}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Basic search three of an EMPC where, a) are the critical regions for a space of 2D parameters, b) the related binary tree.\relax }}{89}\protected@file@percent }
-\newlabel{BASICMPC:fig:searchtree}{{5.2}{89}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Storage of critical regions}{91}\protected@file@percent }
+\newlabel{BASICCSR:sec:EMPCStorage}{{5.4.1}{91}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Basic search three of an EMPC where, a) are the critical regions for a space of 2D parameters, b) the related binary tree.\relax }}{91}\protected@file@percent }
+\newlabel{BASICMPC:fig:searchtree}{{5.2}{91}}
 \gdef \LT@iv {\LT@entry 
     {1}{25.9456pt}\LT@entry 
     {1}{372.39299pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Notations used in the appendix}{90}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Notations used in the appendix}{92}\protected@file@percent }
 \gdef \LT@v {\LT@entry 
     {2}{58.15816pt}\LT@entry 
     {1}{221.48622pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Abbrevations}{91}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Abbrevations}{93}\protected@file@percent }
 \abx@aux@refcontext{none/global//global/global}
-\abx@aux@number{178}{shezan2016}{0}{none/global//global/global}{1}
-\abx@aux@number{179}{cucchiella2013environmental}{0}{none/global//global/global}{2}
-\abx@aux@number{180}{kaldellis2009optimum}{0}{none/global//global/global}{3}
-\abx@aux@number{181}{ortega2013measurement}{0}{none/global//global/global}{4}
-\abx@aux@number{182}{huat2015integration}{0}{none/global//global/global}{5}
-\abx@aux@number{183}{lund2015smart}{0}{none/global//global/global}{6}
-\abx@aux@number{184}{gnacinski2019induction}{0}{none/global//global/global}{7}
-\abx@aux@number{185}{savaghebi2012secondary}{0}{none/global//global/global}{8}
-\abx@aux@number{186}{siddique2004effects}{0}{none/global//global/global}{9}
-\abx@aux@number{187}{brekken2005control}{0}{none/global//global/global}{10}
-\abx@aux@number{188}{lee1998effects}{0}{none/global//global/global}{11}
-\abx@aux@number{189}{meersman2011three}{0}{none/global//global/global}{12}
-\abx@aux@number{190}{ates2016}{0}{none/global//global/global}{13}
-\abx@aux@number{191}{bina2011three}{0}{none/global//global/global}{14}
-\abx@aux@number{192}{gorbe2012reduction}{0}{none/global//global/global}{15}
-\abx@aux@number{193}{Gorbe2014experimental}{0}{none/global//global/global}{16}
-\abx@aux@number{194}{korovkin2016uimethod}{0}{none/global//global/global}{17}
-\abx@aux@number{195}{martin2015unbalance}{0}{none/global//global/global}{18}
-\abx@aux@number{196}{kini2007novel}{0}{none/global//global/global}{19}
-\abx@aux@number{197}{wen2014approximate}{0}{none/global//global/global}{20}
-\abx@aux@number{198}{araujo2013three}{0}{none/global//global/global}{21}
-\abx@aux@number{199}{von2006electric}{0}{none/global//global/global}{22}
+\abx@aux@number{170}{Neukirchner2015}{0}{none/global//global/global}{1}
+\abx@aux@number{171}{neukirchner2015examination}{0}{none/global//global/global}{2}
+\abx@aux@number{172}{neukirchner2017voltage}{0}{none/global//global/global}{3}
+\abx@aux@number{173}{neukirchner2016voltage}{0}{none/global//global/global}{4}
+\abx@aux@number{174}{neukirchner2020constrained}{0}{none/global//global/global}{5}
+\abx@aux@number{175}{neukirchner2011modeling}{0}{none/global//global/global}{6}
+\abx@aux@number{176}{neukirchner2014quasi}{0}{none/global//global/global}{7}
+\abx@aux@number{177}{gollei2014measurement}{0}{none/global//global/global}{8}
+\abx@aux@number{178}{neukirchner2016modelling}{0}{none/global//global/global}{9}
+\abx@aux@number{179}{shezan2016}{0}{none/global//global/global}{1}
+\abx@aux@number{180}{cucchiella2013environmental}{0}{none/global//global/global}{2}
+\abx@aux@number{181}{kaldellis2009optimum}{0}{none/global//global/global}{3}
+\abx@aux@number{182}{ortega2013measurement}{0}{none/global//global/global}{4}
+\abx@aux@number{183}{huat2015integration}{0}{none/global//global/global}{5}
+\abx@aux@number{184}{lund2015smart}{0}{none/global//global/global}{6}
+\abx@aux@number{185}{gnacinski2019induction}{0}{none/global//global/global}{7}
+\abx@aux@number{186}{savaghebi2012secondary}{0}{none/global//global/global}{8}
+\abx@aux@number{187}{siddique2004effects}{0}{none/global//global/global}{9}
+\abx@aux@number{188}{brekken2005control}{0}{none/global//global/global}{10}
+\abx@aux@number{189}{lee1998effects}{0}{none/global//global/global}{11}
+\abx@aux@number{190}{meersman2011three}{0}{none/global//global/global}{12}
+\abx@aux@number{191}{ates2016}{0}{none/global//global/global}{13}
+\abx@aux@number{192}{bina2011three}{0}{none/global//global/global}{14}
+\abx@aux@number{193}{gorbe2012reduction}{0}{none/global//global/global}{15}
+\abx@aux@number{194}{Gorbe2014experimental}{0}{none/global//global/global}{16}
+\abx@aux@number{195}{korovkin2016uimethod}{0}{none/global//global/global}{17}
+\abx@aux@number{196}{martin2015unbalance}{0}{none/global//global/global}{18}
+\abx@aux@number{197}{kini2007novel}{0}{none/global//global/global}{19}
+\abx@aux@number{198}{wen2014approximate}{0}{none/global//global/global}{20}
+\abx@aux@number{199}{araujo2013three}{0}{none/global//global/global}{21}
+\abx@aux@number{200}{von2006electric}{0}{none/global//global/global}{22}
+\abx@aux@number{201}{eugene1986new}{0}{none/global//global/global}{23}
+\abx@aux@number{202}{robert1992assessing}{0}{none/global//global/global}{24}
+\abx@aux@number{203}{fortescue1918method}{0}{none/global//global/global}{25}
+\abx@aux@number{204}{bonnett1997understanding}{0}{none/global//global/global}{26}
+\abx@aux@number{205}{IEEE_141_35071}{0}{none/global//global/global}{27}
+\abx@aux@number{206}{IEEE_112_8635630}{0}{none/global//global/global}{28}
+\abx@aux@number{207}{IEEE_936_29053}{0}{none/global//global/global}{29}
+\abx@aux@number{208}{pillay2001definitions}{0}{none/global//global/global}{30}
+\abx@aux@number{209}{dugan1996electrical}{0}{none/global//global/global}{31}
+\abx@aux@number{210}{wang2000analytical}{0}{none/global//global/global}{32}
+\abx@aux@number{211}{pierrat1987unbalance}{0}{none/global//global/global}{33}
+\abx@aux@number{212}{wang2001analysis}{0}{none/global//global/global}{34}
+\abx@aux@number{213}{singh2007some}{0}{none/global//global/global}{35}
+\abx@aux@number{214}{chen2013examination}{0}{none/global//global/global}{36}
+\abx@aux@number{215}{betz2006symmetry}{0}{none/global//global/global}{37}
+\abx@aux@number{216}{hang2015online}{0}{none/global//global/global}{38}
+\abx@aux@number{217}{arn1997under-voltage}{0}{none/global//global/global}{39}
+\abx@aux@number{218}{wang2001method}{0}{none/global//global/global}{40}
+\abx@aux@number{219}{schwanz2016stochastic}{0}{none/global//global/global}{41}
+\abx@aux@number{220}{xu2018stochastic}{0}{none/global//global/global}{42}
+\abx@aux@number{221}{li2005microgrid}{0}{none/global//global/global}{43}
+\abx@aux@number{222}{lee2009new}{0}{none/global//global/global}{44}
+\abx@aux@number{223}{xu2010voltage}{0}{none/global//global/global}{45}
+\abx@aux@number{224}{vekhande2015control}{0}{none/global//global/global}{46}
+\abx@aux@number{225}{wang2016dc}{0}{none/global//global/global}{47}
+\abx@aux@number{226}{guo2018advanced}{0}{none/global//global/global}{48}
+\abx@aux@number{227}{Hu2016264}{0}{none/global//global/global}{49}
+\abx@aux@number{228}{el2016control}{0}{none/global//global/global}{50}
+\abx@aux@number{229}{dash2011dynamic}{0}{none/global//global/global}{51}
+\abx@aux@number{230}{kheraluwala1992performance}{0}{none/global//global/global}{52}
+\abx@aux@number{231}{inoue2007bidirectional}{0}{none/global//global/global}{53}
+\abx@aux@number{232}{kolda2003understanding}{0}{none/global//global/global}{54}
+\abx@aux@number{233}{el2011active}{0}{none/global//global/global}{55}
+\abx@aux@number{234}{hough2001asynchronous}{0}{none/global//global/global}{56}
+\abx@aux@number{235}{segui2007approach}{0}{none/global//global/global}{57}
+\abx@aux@number{236}{Patnaik2013topologies}{0}{none/global//global/global}{58}
+\abx@aux@number{237}{Ninad2014control}{0}{none/global//global/global}{59}
+\abx@aux@number{239}{MVM2013}{0}{none/global//global/global}{60}
+\abx@aux@number{240}{MVM2018}{0}{none/global//global/global}{61}
+\abx@aux@number{241}{vajda2017limiting}{0}{none/global//global/global}{62}
+\abx@aux@number{242}{ghalem2010six}{0}{none/global//global/global}{63}
+\abx@aux@number{243}{gupta2014two}{0}{none/global//global/global}{64}
+\abx@aux@number{244}{chen2016single}{0}{none/global//global/global}{65}
+\abx@aux@number{245}{exposto2015predictive}{0}{none/global//global/global}{66}
+\abx@aux@number{246}{chebre2011speed}{0}{none/global//global/global}{67}
+\abx@aux@number{247}{salloum2014robust}{0}{none/global//global/global}{68}
+\abx@aux@number{248}{tahri2012digital}{0}{none/global//global/global}{69}
+\abx@aux@number{249}{gao2017model}{0}{none/global//global/global}{70}
+\abx@aux@number{250}{han2010control}{0}{none/global//global/global}{71}
+\abx@aux@number{251}{feroura2017finite}{0}{none/global//global/global}{72}
+\abx@aux@number{252}{yan2015study}{0}{none/global//global/global}{73}
+\abx@aux@number{253}{bai2013resonance}{0}{none/global//global/global}{74}
+\abx@aux@number{254}{wiseman2005active}{0}{none/global//global/global}{75}
+\abx@aux@number{255}{zheng2010current}{0}{none/global//global/global}{76}
+\abx@aux@number{256}{chatterjee2008augmented}{0}{none/global//global/global}{77}
+\abx@aux@number{257}{haidegger2012simulation}{0}{none/global//global/global}{78}
+\abx@aux@number{258}{vrkalovic2018model}{0}{none/global//global/global}{79}
+\abx@aux@number{259}{regaya2014new}{0}{none/global//global/global}{80}
+\abx@aux@number{260}{szell2014mathematical}{0}{none/global//global/global}{81}
+\abx@aux@number{261}{ahmed2014model}{0}{none/global//global/global}{82}
+\abx@aux@number{262}{correa2008predictive}{0}{none/global//global/global}{83}
+\abx@aux@number{263}{muthukumar2016adaptive}{0}{none/global//global/global}{84}
+\abx@aux@number{264}{kelemen2010constrained}{0}{none/global//global/global}{85}
+\abx@aux@number{265}{rivera2013predictive}{0}{none/global//global/global}{86}
+\abx@aux@number{266}{godlewska2015predictive}{0}{none/global//global/global}{87}
+\abx@aux@number{267}{kutasi2010constrained}{0}{none/global//global/global}{88}
+\abx@aux@number{268}{kolar1996design}{0}{none/global//global/global}{89}
+\abx@aux@number{269}{zargari1993current}{0}{none/global//global/global}{90}
+\abx@aux@number{270}{sato1993state}{0}{none/global//global/global}{91}
+\abx@aux@number{271}{nussbaumer2007comprehensive}{0}{none/global//global/global}{92}
+\abx@aux@number{272}{malesani1987three}{0}{none/global//global/global}{93}
+\abx@aux@number{273}{itoh1989steady}{0}{none/global//global/global}{94}
+\abx@aux@number{274}{tooth2000effects}{0}{none/global//global/global}{95}
+\abx@aux@number{275}{salo2005three}{0}{none/global//global/global}{96}
+\abx@aux@number{276}{baumannnew}{0}{none/global//global/global}{97}
+\abx@aux@number{277}{baumann2005novel}{0}{none/global//global/global}{98}
+\abx@aux@number{278}{moussaoui2005open}{0}{none/global//global/global}{99}
+\abx@aux@number{279}{rossiter2017model}{0}{none/global//global/global}{100}
+\abx@aux@number{280}{kwon2006receding}{0}{none/global//global/global}{101}
+\abx@aux@number{281}{baotic2005optimal}{0}{none/global//global/global}{102}
+\abx@aux@number{282}{herceg2009real}{0}{none/global//global/global}{103}
+\abx@aux@number{283}{grancharova2005survey}{0}{none/global//global/global}{104}
+\abx@aux@number{284}{antoniewicz2009predictive}{0}{none/global//global/global}{105}
+\abx@aux@number{285}{geyer2005low}{0}{none/global//global/global}{106}
+\abx@aux@number{286}{borrelli2017predictive}{0}{none/global//global/global}{107}
+\abx@aux@number{287}{bemporad2002explicit}{0}{none/global//global/global}{108}
+\abx@aux@number{288}{goodwin2006constrained}{0}{none/global//global/global}{109}
+\abx@aux@number{289}{mayne2000constrained}{0}{none/global//global/global}{110}
+\abx@aux@number{290}{grieder2005stabilizing}{0}{none/global//global/global}{111}
+\abx@aux@number{291}{keerthi1988optimal}{0}{none/global//global/global}{112}
+\abx@aux@number{292}{mayne1990receding}{0}{none/global//global/global}{113}
+\abx@aux@number{293}{MPT3}{0}{none/global//global/global}{114}
+\abx@aux@number{294}{zhang2015simplified}{0}{none/global//global/global}{115}
+\abx@aux@number{295}{wiseman2002pwm}{0}{none/global//global/global}{116}
+\abx@aux@number{296}{neukirchner2019linkedmodel}{0}{none/global//global/global}{117}
+\abx@aux@number{297}{jones2006logarithmic}{0}{none/global//global/global}{118}
+\abx@aux@number{298}{tondel2003evaluation}{0}{none/global//global/global}{119}
+\abx@aux@number{299}{tondel2003constrained}{0}{none/global//global/global}{120}
+\abx@aux@number{300}{kutasi2008vector}{0}{none/global//global/global}{121}
 \abx@aux@refcontextdefaultsdone
 \abx@aux@defaultrefcontext{0}{Neukirchner2015}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{neukirchner2015examination}{none/global//global/global}
@@ -1019,6 +1137,7 @@
 \abx@aux@defaultrefcontext{0}{segui2007approach}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{Patnaik2013topologies}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{Ninad2014control}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{ali2012survey}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{MVM2013}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{MVM2018}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{vajda2017limiting}{none/global//global/global}
@@ -1149,6 +1268,7 @@
 \abx@aux@defaultlabelprefix{0}{segui2007approach}{}
 \abx@aux@defaultlabelprefix{0}{Patnaik2013topologies}{}
 \abx@aux@defaultlabelprefix{0}{Ninad2014control}{}
+\abx@aux@defaultlabelprefix{0}{ali2012survey}{}
 \abx@aux@defaultlabelprefix{0}{MVM2013}{}
 \abx@aux@defaultlabelprefix{0}{MVM2018}{}
 \abx@aux@defaultlabelprefix{0}{vajda2017limiting}{}
@@ -1211,4 +1331,3 @@
 \abx@aux@defaultlabelprefix{0}{tondel2003evaluation}{}
 \abx@aux@defaultlabelprefix{0}{tondel2003constrained}{}
 \abx@aux@defaultlabelprefix{0}{kutasi2008vector}{}
->>>>>>> parent of a96f066... PT Findingfix Topology + APPS

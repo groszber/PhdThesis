@@ -2,6 +2,10 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: dolgozatmain.aux
 The style file: biblatex.bst
 Database file #1: dolgozatmain-blx.bib
 Database file #2: dolgozat.bib
+Repeated entry---line 323 of file dolgozat.bib
+ : @article{hough2001asynchronous
+ :                               ,
+I'm skipping whatever remains of this entry
 You're missing a field name---line 716 of file dolgozat.bib
  :   
  :   %urldate = {2019-09-01}
@@ -17,4 +21,6 @@ Repeated entry---line 846 of file dolgozat.bib
  :                         ,
 I'm skipping whatever remains of this entry
 Biblatex version: 3.13
-(There were 3 error messages)
+Too many commas in name 1 of "BUDAPEST TECH BECSI UT 96-B, BUDAPEST, H-1034, HUNGARY" for entry ahmed2014model
+while executing---line 2805 of file biblatex.bst
+(There were 5 error messages)
