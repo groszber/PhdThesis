@@ -135,6 +135,7 @@
 \newcommand{\hlc}[2][yellow]{{\sethlcolor{#1}\hl{#2}}}
 \newcommand{\hlcmath}[2]{\colorbox{#1}{$\displaystyle #2$}}
 \definecolor{PT}{RGB}{255,153,204}
+\definecolor{MA}{RGB}{200,200,253}
 
 
 \newcommand{\sig}[1]{\begin{tikzpicture} \draw[ultra thick, densely dotted, color=white] (0,0)--(8,0) ;\draw[ultra thick, dotted] (10,0)--(14,0) (12,0) node[below]{#1};  \end{tikzpicture}}
@@ -154,30 +155,30 @@
  \addtocounter{page}{-1}%
  \newpage
 
-%% Title Page
+% Title Page
  \input{subtex/0_cimoldal.tex}
 
-%% Mandatory third page
+% Mandatory third page
  \input{subtex/00_thirdpage.tex}
 
-%% Acknowledgements
+% Acknowledgements
  \input{subtex/000_acknowledgments.tex}
 
-%\chapter*{Compendiary} --> Not required
-% \input{subtex/0000_compendiary.tex}
-%% (max 2500 karakter)
+\chapter*{Compendiary} --> Not required
+ \input{subtex/0000_compendiary.tex}
+% (max 2500 karakter)
 
-%% Abstract
+% Abstract
 \input{subtex/00000_abstracts.tex}
 
-%% Tableofcontents
+% Tableofcontents
 \thispagestyle{plain}
 \tableofcontents
 \newpage
 
 \pagenumbering{arabic}
 
-%% Introduction
+% Introduction
 \input{subtex/1_introduction.tex}
 
  %Not requied:
@@ -185,7 +186,7 @@
  %\input{subtex/1_2_compendiary.tex}
 
 
-%% Voltage Unbalance
+% Voltage Unbalance
 \input{subtex/2_voltage_unbalance.tex}
 \input{subtex/2_a_notations_voltage_unbalance.tex}
 
@@ -194,23 +195,12 @@
 \input{subtex/3_b_unbalance_compensation_core.tex}
 \input{subtex/3_c_unbalance_compensation_notations.tex}
 
-%% Explicit CSR
+% Explicit CSR
 \input{subtex/4_a_explicit_CSR_basics.tex}
 \input{subtex/4_b_explicit_CSR_core.tex}
 \input{subtex/4_c_explicit_CSR_notations.tex}
 
-%\input{subtex/3_1_basics_unbalance.tex}
-%\input{subtex/3_2_basics_powelectric.tex}
-%\input{subtex/3_3_basics_empc.tex}
-%\input{subtex/3_4_basics_notations.tex}
-%\input{subtex/4_3_discussion_results.tex}
-%\input{subtex/4_1_discussion_results.tex}
-
-
-
-
-
-%% Summary
+% Summary
 \input{subtex/5_conculsion.tex} %--> List of thesis and own publications moved here <=====
 
 %% Appendix
@@ -220,8 +210,6 @@
 %% Abbreviations
 \input{subtex/9_abbreviations.tex}
 
-%% Appendix
-%\input{subtex/9_appendix.tex}
 
 
 %%% Citations

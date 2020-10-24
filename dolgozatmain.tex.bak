@@ -33,7 +33,7 @@
 \pgfplotsset{compat=1.9}
 \usepackage{pgfpages}
 \usepackage{soul}
-\usepackage{algorithm}
+%\usepackage{algorithm}
 \usepackage{algpseudocode}
 \makeatletter
 \def\BState{\State\hskip-\ALG@thistlm}
@@ -135,6 +135,7 @@
 \newcommand{\hlc}[2][yellow]{{\sethlcolor{#1}\hl{#2}}}
 \newcommand{\hlcmath}[2]{\colorbox{#1}{$\displaystyle #2$}}
 \definecolor{PT}{RGB}{255,153,204}
+\definecolor{MA}{RGB}{200,200,253}
 
 
 \newcommand{\sig}[1]{\begin{tikzpicture} \draw[ultra thick, densely dotted, color=white] (0,0)--(8,0) ;\draw[ultra thick, dotted] (10,0)--(14,0) (12,0) node[below]{#1};  \end{tikzpicture}}
@@ -186,13 +187,13 @@
 
 
 %% Voltage Unbalance
-\input{subtex/2_voltage_unbalance.tex}
-\input{subtex/2_a_notations_voltage_unbalance.tex}
-
-%% Unbalance Compensation
-\input{subtex/3_a_unbalance_compensation_basics.tex}
-\input{subtex/3_b_unbalance_compensation_core.tex}
-\input{subtex/3_c_unbalance_compensation_notations.tex}
+%\input{subtex/2_voltage_unbalance.tex}
+%\input{subtex/2_a_notations_voltage_unbalance.tex}
+%
+%%% Unbalance Compensation
+%\input{subtex/3_a_unbalance_compensation_basics.tex}
+%\input{subtex/3_b_unbalance_compensation_core.tex}
+%\input{subtex/3_c_unbalance_compensation_notations.tex}
 
 %% Explicit CSR
 \input{subtex/4_a_explicit_CSR_basics.tex}

@@ -320,6 +320,18 @@
   publisher={Springer},
 }
 
+@article{hough2001asynchronous,
+  title={Asynchronous parallel pattern search for nonlinear optimization},
+  author={Hough, Patricia D and Kolda, Tamara G and Torczon, Virginia J},
+  journal={SIAM Journal on Scientific Computing},
+  volume={23},
+  number={1},
+  pages={134--156},
+  year={2001},
+  publisher={SIAM}
+}
+
+
 
 
 
@@ -1155,6 +1167,18 @@ ISSN={null},
   year={2011},
   publisher={IEEE}
 }
+
+@article{el2011active,
+  title={Active power filter controller for harmonic suppression in industrial distribution system},
+  author={El-Mamlouk, Wael M and Mostafa, Hossam E and El-Sharkawy, Metwally A},
+  journal={Ain Shams Engineering Journal},
+  volume={2},
+  number={3-4},
+  pages={161--172},
+  year={2011},
+  publisher={Elsevier}
+}
+
 
 
 
