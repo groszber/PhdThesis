@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  24 OCT 2020 21:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.1)  3 NOV 2020 22:14
 entering extended mode
 **C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
 (C:/Users/Laci/Dropbox/Tesis_InTemplate/PhdThesis/dolgozatmain.tex
@@ -2486,19 +2486,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--150
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 151.
 
-[34]
-<Unblance_EPS_Pics/Intermediate.png, id=256, 148.1535pt x 43.00066pt>
+[34] [35]
+<Unblance_EPS_Pics/Intermediate.png, id=259, 148.1535pt x 43.00066pt>
 File: Unblance_EPS_Pics/Intermediate.png Graphic file (type png)
 <use Unblance_EPS_Pics/Intermediate.png>
 Package pdftex.def Info: Unblance_EPS_Pics/Intermediate.png  used on input line
- 186.
+ 191.
 (pdftex.def)             Requested size: 398.3386pt x 115.63676pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
-
- []
-
-[35]
+ [36]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure3
 .eps>
 (epstopdf)                    date: 2016-01-28 13:20:08
@@ -2510,15 +2505,15 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure3
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure3-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure3
 .eps>
-(epstopdf)             \includegraphics on input line 214.
+(epstopdf)             \includegraphics on input line 218.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf, id=260, 376.4
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf, id=263, 376.4
 0625pt x 175.65625pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure3-eps-convert
-ed-to.pdf  used on input line 214.
+ed-to.pdf  used on input line 218.
 (pdftex.def)             Requested size: 378.42044pt x 176.60999pt.
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure4
 .eps>
@@ -2531,17 +2526,16 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure4
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure4-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure4
 .eps>
-(epstopdf)             \includegraphics on input line 221.
+(epstopdf)             \includegraphics on input line 225.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf, id=261, 394.4
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf, id=264, 394.4
 7375pt x 175.65625pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure4-eps-convert
-ed-to.pdf  used on input line 221.
+ed-to.pdf  used on input line 225.
 (pdftex.def)             Requested size: 378.42044pt x 168.50745pt.
- [36]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure5
 .eps>
 (epstopdf)                    date: 2016-01-28 13:20:50
@@ -2553,7 +2547,7 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure5
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure5-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure5
 .eps>
-(epstopdf)             \includegraphics on input line 234.
+(epstopdf)             \includegraphics on input line 238.
 Package epstopdf Info: Output file is already uptodate.
 <Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf, id=265, 385.4
 4pt x 175.65625pt>
@@ -2561,8 +2555,9 @@ File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure5-eps-convert
-ed-to.pdf  used on input line 234.
+ed-to.pdf  used on input line 238.
 (pdftex.def)             Requested size: 378.42044pt x 172.45552pt.
+ [37]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure6
 .eps>
 (epstopdf)                    date: 2016-01-28 13:21:12
@@ -2574,17 +2569,16 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure6
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure6-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure6
 .eps>
-(epstopdf)             \includegraphics on input line 254.
+(epstopdf)             \includegraphics on input line 258.
 Package epstopdf Info: Output file is already uptodate.
-<Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf, id=266, 406.5
+<Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf, id=269, 406.5
 1875pt x 162.6075pt>
 File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-eps-convert
-ed-to.pdf  used on input line 254.
+ed-to.pdf  used on input line 258.
 (pdftex.def)             Requested size: 378.42044pt x 151.37476pt.
- [37]
 Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure7
 .eps>
 (epstopdf)                    date: 2016-01-28 13:21:34
@@ -2596,7 +2590,7 @@ Package epstopdf Info: Source file: <Unblance_EPS_Pics/UnbalRedComp_JCP-figure7
 (epstopdf)             Command: <epstopdf --outfile=Unblance_EPS_Pics/UnbalRedC
 omp_JCP-figure7-eps-converted-to.pdf Unblance_EPS_Pics/UnbalRedComp_JCP-figure7
 .eps>
-(epstopdf)             \includegraphics on input line 263.
+(epstopdf)             \includegraphics on input line 267.
 Package epstopdf Info: Output file is already uptodate.
 <Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf, id=270, 401.5
 pt x 133.49875pt>
@@ -2604,16 +2598,16 @@ File: Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converted-to.pdf>
 Package pdftex.def Info: Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-convert
-ed-to.pdf  used on input line 263.
+ed-to.pdf  used on input line 267.
 (pdftex.def)             Requested size: 378.42044pt x 125.83307pt.
- [38]) (subtex/3_c_unbalance_compensation_notations.tex [39])
-(subtex/4_a_explicit_CSR_basics.tex [40] [41 <./Unblance_EPS_Pics/PowerTopology
-_full.png>] [42 <./Unblance_EPS_Pics/Intermediate.png> <./Unblance_EPS_Pics/Unb
-alRedComp_JCP-figure3-eps-converted-to.pdf>] [43 <./Unblance_EPS_Pics/UnbalRedC
-omp_JCP-figure4-eps-converted-to.pdf> <./Unblance_EPS_Pics/UnbalRedComp_JCP-fig
-ure5-eps-converted-to.pdf>] [44 <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure6-e
-ps-converted-to.pdf> <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-converte
-d-to.pdf>]
+ [38]) (subtex/3_c_unbalance_compensation_notations.tex
+[39]) (subtex/4_a_explicit_CSR_basics.tex [40] [41 <./Unblance_EPS_Pics/PowerTo
+pology_full.png>] [42 <./Unblance_EPS_Pics/Intermediate.png> <./Unblance_EPS_Pi
+cs/UnbalRedComp_JCP-figure3-eps-converted-to.pdf>] [43 <./Unblance_EPS_Pics/Unb
+alRedComp_JCP-figure4-eps-converted-to.pdf> <./Unblance_EPS_Pics/UnbalRedComp_J
+CP-figure5-eps-converted-to.pdf>] [44 <./Unblance_EPS_Pics/UnbalRedComp_JCP-fig
+ure6-eps-converted-to.pdf> <./Unblance_EPS_Pics/UnbalRedComp_JCP-figure7-eps-co
+nverted-to.pdf>]
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--29
@@ -3007,7 +3001,7 @@ type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
 ols/msbm10.pfb>
-Output written on dolgozatmain.pdf (117 pages, 4685185 bytes).
+Output written on dolgozatmain.pdf (117 pages, 4699139 bytes).
 PDF statistics:
  1279 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

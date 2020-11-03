@@ -27,16 +27,16 @@
 \contentsline {subsubsection}{\hlc [PT]{PV energy source}}{34}% 
 \contentsline {subsubsection}{\hlc [PT]{Energy storage}}{35}% 
 \contentsline {subsubsection}{\hlc [PT]{Intermediate buffer}}{35}% 
-\contentsline {subsubsection}{\hlc [PT]{Current source inverters and dynamic network}}{35}% 
+\contentsline {subsubsection}{\hlc [PT]{Current source inverters and dynamic network}}{36}% 
 \contentsline {section}{\numberline {3.5}Discussion}{36}% 
 \contentsline {subsection}{\numberline {3.5.1}Dynamical simulation based experiments}{36}% 
 \contentsline {subsection}{\numberline {3.5.2}Performance analysis}{36}% 
-\contentsline {subsubsection}{Robustness analysis}{36}% 
+\contentsline {subsubsection}{Robustness analysis}{37}% 
 \contentsline {subsubsection}{Measurements from a real unbalanced network}{37}% 
-\contentsline {subsection}{\numberline {3.5.3}Environmental effect}{37}% 
-\contentsline {subsubsection}{Power loss reduction on the network}{37}% 
+\contentsline {subsection}{\numberline {3.5.3}Environmental effect}{38}% 
+\contentsline {subsubsection}{Power loss reduction on the network}{38}% 
 \contentsline {subsubsection}{CO2 footprint}{38}% 
-\contentsline {section}{\numberline {3.6}Conclusion}{38}% 
+\contentsline {section}{\numberline {3.6}Conclusion}{39}% 
 \contentsline {section}{\numberline {3.7}Notations used in the chapter}{40}% 
 \contentsline {chapter}{\numberline {4}Explicit predictive current control}{45}% 
 \contentsline {section}{\numberline {4.1}Literature overview}{45}% 
