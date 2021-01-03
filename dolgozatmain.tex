@@ -31,6 +31,9 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.9}
+\usepackage{pgfkeys}
+\usepgfplotslibrary{polar}
+\usetikzlibrary{patterns}
 \usepackage{pgfpages}
 \usepackage{soul}
 %\usepackage{algorithm}
@@ -136,6 +139,8 @@
 \newcommand{\hlcmath}[2]{\colorbox{#1}{$\displaystyle #2$}}
 \definecolor{PT}{RGB}{255,153,204}
 \definecolor{MA}{RGB}{200,200,253}
+\definecolor{KP}{RGB}{255,204,153}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
 
 \newcommand{\sig}[1]{\begin{tikzpicture} \draw[ultra thick, densely dotted, color=white] (0,0)--(8,0) ;\draw[ultra thick, dotted] (10,0)--(14,0) (12,0) node[below]{#1};  \end{tikzpicture}}

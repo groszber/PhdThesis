@@ -265,6 +265,50 @@
     \field{year}{2015}
   \endentry
 
+  \entry{paz2010system}{article}{}
+    \name{author}{4}{}{%
+      {{hash=PMCR}{%
+         family={Paz},
+         familyi={P\bibinitperiod},
+         given={Mart{\'\i}n C\bibnamedelima Rodr{\'\i}guez},
+         giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim
+  R\bibinitperiod},
+      }}%
+      {{hash=FRG}{%
+         family={Ferraz},
+         familyi={F\bibinitperiod},
+         given={Renato\bibnamedelima G},
+         giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=BAS}{%
+         family={Bretas},
+         familyi={B\bibinitperiod},
+         given={Arturo\bibnamedelima Suman},
+         giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=LRC}{%
+         family={Leborgne},
+         familyi={L\bibinitperiod},
+         given={Roberto\bibnamedelima Chouhy},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{PMCRFRGBAS+1}
+    \strng{fullhash}{PMCRFRGBASLRC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{1105\bibrangedash 1114}
+    \field{title}{System unbalance and fault impedance effect on faulted
+  distribution networks}
+    \field{volume}{60}
+    \field{journaltitle}{Computers \& Mathematics with Applications}
+    \field{year}{2010}
+  \endentry
+
   \entry{gnacinski2019induction}{article}{}
     \name{author}{4}{}{%
       {{hash=GP}{%
@@ -912,6 +956,26 @@
     \field{labeltitlesource}{title}
     \field{title}{Electric power systems: a conceptual introduction}
     \field{year}{2006}
+  \endentry
+
+  \entry{cobben2012power}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CJ}{%
+         family={Cobben},
+         familyi={C\bibinitperiod},
+         given={JFG},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {CO-ED}%
+    }
+    \strng{namehash}{CJ1}
+    \strng{fullhash}{CJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Power quality: about the problems and solutions}
+    \field{year}{2012}
   \endentry
 
   \entry{eugene1986new}{inproceedings}{}
@@ -2093,6 +2157,72 @@
     \field{year}{2003}
   \endentry
 
+  \entry{von2001assessment}{article}{}
+    \name{author}{2}{}{%
+      {{hash=VJA}{%
+         family={Von\bibnamedelima Jouanne},
+         familyi={V\bibinitperiod\bibinitdelim J\bibinitperiod},
+         given={Annette},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BB}{%
+         family={Banerjee},
+         familyi={B\bibinitperiod},
+         given={Basudeb},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{VJABB1}
+    \strng{fullhash}{VJABB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{782\bibrangedash 790}
+    \field{title}{Assessment of voltage unbalance}
+    \field{volume}{16}
+    \field{journaltitle}{IEEE transactions on power delivery}
+    \field{year}{2001}
+  \endentry
+
+  \entry{smith1988voltage}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SD}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={DR},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BH}{%
+         family={Braunstein},
+         familyi={B\bibinitperiod},
+         given={HR},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=BJ}{%
+         family={Borst},
+         familyi={B\bibinitperiod},
+         given={JD},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{SDBHBJ1}
+    \strng{fullhash}{SDBHBJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{733\bibrangedash 741}
+    \field{title}{Voltage unbalance in 3-and 4-wire delta secondary systems}
+    \field{volume}{3}
+    \field{journaltitle}{IEEE transactions on power delivery}
+    \field{year}{1988}
+  \endentry
+
   \entry{el2011active}{article}{}
     \name{author}{3}{}{%
       {{hash=EMWM}{%
@@ -2331,52 +2461,6 @@
     \field{pages}{1\bibrangedash 17}
     \field{title}{A survey of maximum PPT techniques of PV systems}
     \field{year}{2012}
-  \endentry
-
-  \entry{MVM2013}{article}{}
-    \name{author}{1}{}{%
-      {{hash=AFMH}{%
-         family={A.\bibnamedelima F\'abi\'an},
-         familyi={A\bibinitperiod\bibinitdelim F\bibinitperiod},
-         given={M.\bibnamedelima Hackl},
-         giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {MVM group}%
-    }
-    \strng{namehash}{AFMH1}
-    \strng{fullhash}{AFMH1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{pages}{899\bibrangedash 906}
-    \field{title}{Statistical data of the Hungarian electricity system}
-    \field{journaltitle}{Mavir Hungarian Independent Transmission Operator
-  Company, Ltd.}
-    \field{year}{2013}
-  \endentry
-
-  \entry{MVM2018}{article}{}
-    \name{author}{1}{}{%
-      {{hash=BA}{%
-         family={Bicz\'ok},
-         familyi={B\bibinitperiod},
-         given={A.},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {MVM group}%
-    }
-    \strng{namehash}{BA1}
-    \strng{fullhash}{BA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{pages}{1\bibrangedash 100}
-    \field{title}{Statistical data of the Hungarian electricity system}
-    \field{journaltitle}{Mavir Hungarian Independent Transmission Operator
-  Company, Ltd.}
-    \field{year}{2018}
   \endentry
 
   \entry{vajda2017limiting}{article}{}

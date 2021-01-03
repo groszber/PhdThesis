@@ -1,5 +1,34 @@
 \chapter*{Appendix}
 
+\section{Network substitute model}\label{APPENDIX:sec:Network_substitute}
+
+For the voltage unbalance compensation setup, a substitute network model was used, to be able to recreate said phenomena. The network is a very simplified version of a low voltage residual area with two symmetric loads, a symmetric ohmic load, and one asymmetrical load, for decreasing the voltage quality. See Figure \ref{fig:expnetwork} for details.
+
+\begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.95\textwidth]{Unblance_EPS_Pics/Network.png}
+            \caption{Network model, for creating an environment for voltage unbalance compensation setup.}
+            \label{fig:expnetwork}
+            \end{figure}
+
+The network has the following components:
+
+\begin{itemize}
+\item \textbf{Voltage measurement:} Either could be an ideal three phase sine wave or the measured voltage at the university laboratory. See section \oldref{VUB:sec:Measurement} for further details. The voltage values $V_a$, $V_b$, and $V_c$ are representing the measurable network voltage, and $R_s=0.4\Omega$ is representing the source resistance.
+\item Line multiplexer: substitutes the three phase four wire connection with one representative line between the actors.
+\item Network segment: Influences the network topology, and represents the line between actors. The network segment is modelled with $0.4\Omega$ wire resistance on each of the four lines. The network's power loss is measured in these line segments.
+\item Symmetric Ohmic load: Symmetrical resistive component at the end of the main branch, with $50\Omega$ on each phase.
+\item Three phase parallel RLC load: Represents an unbalance-neutral actor, with balanced RLC loads on each phase in star connection, where the load's active power is $\frac{10000}{3}W$, inductive reactive power is $\frac{2000}{3}VAr$, and the capacitive reactive power is $0VAr$.
+\item Asymmetrical load: The load mainly responsible for the network unbalance. There loads connected to the phases are:
+\begin{itemize}
+    \item Active power: $5kW$, Inductive reactive power: $1kVAr$, Capacitive reactive power: $0.5kVAr$.
+    \item Active power: $5kW$, Inductive reactive power: $0.555kVAr$, Capacitive reactive power: $0.111kVAr$.
+    \item Active power: $5kW$, Inductive reactive power: $0.277kVAr$, Capacitive reactive power: $0.055kVAr$.
+\end{itemize}
+\item Unbalance compensator: The device responsible for decreasing the network unbalance. Setup and function was detailed in chapter \oldref{VUB:sec:Compensation}.
+\end{itemize}       
+
+
 \section{Geometric approach to multi parametric programming}\label{BASICCSR:sec:MPP}
     % Section's main text due to more comprehensible source
 
