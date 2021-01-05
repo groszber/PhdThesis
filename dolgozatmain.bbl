@@ -1482,8 +1482,8 @@
       {IEEE}%
     }
     \keyw{sajat}
-    \strng{namehash}{NLGPMA1}
-    \strng{fullhash}{NLGPMA1}
+    \strng{namehash}{NLGPMA2}
+    \strng{fullhash}{NLGPMA2}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{booktitle}{PowerTech, 2015 IEEE Eindhoven}
@@ -2763,7 +2763,7 @@
       {{hash=MA}{%
          family={Magyar},
          familyi={M\bibinitperiod},
-         given={Attila},
+         given={A.},
          giveni={A\bibinitperiod},
       }}%
     }

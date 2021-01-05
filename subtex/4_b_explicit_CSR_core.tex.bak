@@ -591,7 +591,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
         \label{EMPC:equ:refconstraint}
     \end{equation}
 
-    \hlc[PT]{The modulation formulation is only meant to apply on the control action in the above mentioned ways (realizing and constraining the reference) since the switching frequency $fpwm$ is chosen so high that the controller dynamics match with the SVM state switching frequency. As such no lag or undersampling is assumed, and the system dynamics are already implicit in the controller design.}
+    \hlc[PT]{The modulation formulation is only meant to apply on the control action in the above mentioned ways (realizing and constraining the reference) since the switching frequency $fpwm$ is chosen so high that the controller dynamics match with the SVM state switching frequency. As such no lag or under-sampling is assumed, and the system dynamics are already implicit in the controller design.}
 
 
 \subsection{Discussion}\label{EMPC:sec:Discussion}
@@ -616,12 +616,12 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
 
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/SearchTree.png}
-        \caption{Binary search tree of the controller for a horizon of $N = 4$. The leaf nodes are depicted with filled squares. The depth of the tree is 5.}
+        \includegraphics[width=\textwidth]{EMPC_PNG_Pics/Tree_normal.png}
+        \caption{Binary search tree of the controller for a horizon of $N = 4$. The leaf nodes are depicted with filled squares. The depth of the tree is 4.}
         \label{EMPC:fig:SearchTree}
     \end{figure}
 
-    The search for an active critical region starts from the first level and represents the evaluation in each adjacent node of an inequality of the form: $x\leq K$. Thus, in this case a maximum number of 4 inequalities have to be evaluated to reach the active critical region. Implementing the presented algorithm is straightforward on a DSP processor, for instance from the dsPIC33 family by Microchip. Using the MAC (multiply and accumulate) instruction the inequality is evaluated for each node using 4 instructions, thus in 80 ns on a 50 MIPS processor (Fig. \ref{EMPC:fig:Memory}). The active critical region can be reached in a maximum of 400 ns. Compared to the typical sample rate of 10us in the case of a CSR, the real-time implementation on a DSP processor is possible. More information about storing critical regions can be found in \oldref{BASICCSR:sec:EMPCStorage}.
+    The search for an active critical region starts from the first level and represents the evaluation in each adjacent node of an inequality of the form: $x\leq K$. Thus, in this case a maximum number of 3 inequalities have to be evaluated to reach the active critical region. Implementing the presented algorithm is straightforward on a DSP processor, for instance from the dsPIC33 family by Microchip. Using the MAC (multiply and accumulate) instruction the inequality is evaluated for each node using 3 instructions, thus in 60 ns on a 50 MIPS processor (Fig. \ref{EMPC:fig:Memory}). The active critical region can be reached in a maximum of 300 ns. Compared to the typical sample rate of 10us in the case of a CSR, the real-time implementation on a DSP processor is possible. More information about storing critical regions can be found in \oldref{BASICCSR:sec:EMPCStorage}.
 
     \begin{figure}[!ht]
         \centering
@@ -653,7 +653,7 @@ There the formulation of such problem is described in detail in chapter \ref{BAS
                 \caption{Step response of the system as a function of the horizon length $N$.}\label{EMPC:fig:MultiHorizon}
             \end{figure}
 
-    \hlc[PT]{Unfortunately, the steady state error is is still present after the computational boundary of \textbf{XY} ns regardless of increasing the horizon. As such an additional integrator component is advised to embed into the model equations of} \ref{EMPC:equ:mtx_DC}\hlc[PT]{, aka. augment the model, and The results can be observed in the next section and on Fig.} \ref{EMPC:fig:Regions_augment}.
+    \hlc[PT]{Unfortunately, the steady state error is is still present after the computational boundary of \textbf{XY} ns regardless of increasing the horizon. As such an additional integrator component is advised to embed into the model equations of} \ref{EMPC:equ:mtx_DC}\hlc[PT]{, aka. augment the model. The results can be observed in the next section and on Fig.} \ref{EMPC:fig:Result_PerformanceEMPC}.
 
     \subsubsection{Simulation results}\label{EMPC:sec:Results}
 
