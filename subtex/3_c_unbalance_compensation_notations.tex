@@ -8,7 +8,7 @@
 
 
 
-  
+
 
   %% A
 %%$\textbf{A}$																& State matrix of a linear time invariant model\\
@@ -28,6 +28,8 @@
 %%% C
 %$CVUF$  													& Complex Voltage Unbalance Factor\\
 %%$\textbf{C}$																& Output matrix of a linear time invariant model\\
+$C_{Batt}$ 												& Capacitance of the power storage\\
+$C_{inter}$ 												& Capacitance of the intermediate buffer\\
 $C_{snub}$ 												& Capacitance to reduce switching loss and to damp out over-voltage\\
 %%$C_D$															& Capacitance for filtering the output voltage of the VSR\\
 %%$C_S$															& Input filter capacitance of the three phase alternating current in CSR\\
@@ -46,6 +48,10 @@ $\mathcal{E}$               & APPS set of external sucesses\\
 %%
 %%% F
 %%$\textbf{F}$                & State coefficient matrix for calculating the optimal input \\
+$f_{grid}$										& Network function at the device's connection point\\
+$f_{norm}$										& Function of voltage unbalance\\
+$f_{inter}$										& Function intermediate voltage controller\\
+$f_{current}$										& Function of current injection\\
   $f(\textbf{x})$										& Multivariate function to minimize\\
 %%
 %%% G
@@ -61,7 +67,7 @@ $h$                                                             & DC-DC transfor
 %%
 %%% I
 
-%$I_{0,1,2}$												& Zero positive and negarive sequence of current drop\\	
+$i_{APPS}$												& The APPS controller's instantaneous current output\\	
 %%$I_D$															& Direct output current\\
 $\mathcal{I}$               & APPS set if internal sucesses\\
 %%$\mathcal{I}_c$               & Set if indices of constraints\\
@@ -80,7 +86,9 @@ $\mathcal{I}$               & APPS set if internal sucesses\\
 %%$\mathcal{J}$               & Set if indices of active constraints\\
 %%
 %%% K
-%%$\textbf{K}$                & Controller gain\\
+$K_D$                & Intermediate voltage controller's derivative gain\\
+$K_I$                & Intermediate voltage controller's integrator gain\\
+$K_P$                & Intermediate voltage controller's proportional gain\\
 %%$\mathcal{K}$               & Set of states respective to constraints\\
 %%$\mathcal{K}^*$               & Set of feasible states respective to constraints\\
 %$k_v$  														& Magnitude of CVUF\\
@@ -89,18 +97,22 @@ $\mathcal{I}$               & APPS set if internal sucesses\\
 %%% L
 $L_+,L_-$													& CSI current filter inductors\\
 $L_a$															& DC-DC transformer leakage inductance\\
+$L_{CSI}$															& Filter inductance of the current source inverter\\
+$L_{Batt}$															& Filter inductance of the power storage\\
+$L_{PV}$															& Filter inductance of the PV stage\\
 %%$L_S$															& Input filter inductance of the three phase alternating current in VSR\\
 %%$L_D$															& Inductor for filtering the output current of the CSR (Choke)\\
 %$LVUR$														& Voltage unbalance notation based on NEMA standard\\
 %%
 %%% M
-%%$m$                             & Dimension of the input vector\\
+$m$                             & Tuning parameter\\
 %$m_{21}$                        & negative sequence factor, identical to $VUF$\\
 %$m_{01}$                        & zero sequence factor\\
 %%
 %%
 %%% N
-%%$N$											& Defined horizon of MPC\\
+$N$											& represents the chosen norm's value as the network's\\
+$n$                             & Tuning parameter\\
 %%$N_c,N_u,N_y$											& Defined control, input, and output horizon respectively\\
 %%$n$                             & Dimension of the state vector\\
 %%
@@ -112,6 +124,7 @@ $\mathcal{P}$                   & APPS set of processes\\
 %%$\mathcal{P}^c$               & Set of all (input and state) constraints at time instance\\
 %%$\mathcal{P}_p$             & Set of primary feasibility conditions\\
 %%$\mathcal{P}_d$             & Set of dual feasibility conditions\\
+$Q_{hh}$                       & Household load's active power\\
 $P_D$                           & DC-DC power transfer under idealized conditions\\
 $P_{loss}$                        & Lost power per household due to network unbalance\\
   $P^{comp}_{loss}$                 & Assumed network loss with unbalance compensation control\\
@@ -125,12 +138,15 @@ $p$                             & APPS process index\\
 %%
 %%% Q
 %%$\textbf{Q}$                    & State penalising weight matrix\\
+$Q_{Lhh}$                       & Household load's inductive reactive power\\
+$Q_{Lhh}$                       & Household load's capacitive reactive power\\
 $\mathcal{Q}$                   & APPS set of sidestep indices\\
 $q$																& Discrete time step\\
 %%
 %%% R
-
-%%$\textbf{R}$                    & Input penalising weight matrix\\
+$R_{line}$                    & Resistance of the transmission line section\\
+$R_{PV}$                    & Resistance of the PV source\\
+$R_{virt}$                    & Virtual resistance as tuning parameter for the intermediate voltage controller\\
 %%
 %%% S
 $S_{1+},S_{2+}$										& CSI higher switches\\
@@ -152,7 +168,8 @@ $\mathcal{U}$              & APPS set of unsuccessful steps\\
 %%
 %%% V
 %%$V$                         & Lyapunov function\\
-%$V_{ab},V_{bc},V_{ca}$  					& Line-to-line voltages\\
+$V_{a},V_{b},V_{c}$  					& Phase-to-line voltages\\
+$V_{Batt}$  					& Power storage voltage\\
 %$V_{avg_{line}}$  								& Average of line voltages\\	
 %$V_{a},V_{b},V_{c}$  							& Phase-to-neutral voltages\\
 $V_{an},V_{bn}$  									& Designated point's potential to ground \\
@@ -161,8 +178,8 @@ $V_i$															& Constant input voltage\\
 $V_o$															& Alternating output voltage\\
 %$V_{0},V_{p},V_{n}$  							& Zero, negative and positive sequence voltages based on symmetrical components theorem\\
 $V_{D1},V_{D2}$ 									& Two end's voltage on the DC-DC converter\\
-%%$V_d$															& Output voltage\\
-%$\hat{V}$															& Voltage peak\\
+$V_{inter}$															& The intermediate buffer capacitance's voltage\\
+$\hat{V}_{PV}$															& Voltage peak of the PV source\\
 %$\vec{V}_a, \vec{V}_b, \vec{V}_c,$										& Voltage vectors in the three phase phasor\\
 $VUF$  														& Voltage Unbalance Factor\\
 %$VUFactor,VU,VUR$                	& Non standardized voltage unbalance factor based on manufacturer standards\\
@@ -212,6 +229,11 @@ $\omega$													& Angular velocity of output sinusoidal voltage or current\
 $\omega_i(q)$ 										& Generating process index for the update time at step $q$ on process $i$\\
 $\bigtriangleup_{Ideal}$          & Triangle of Ideal voltage vectors\\
   $\bigtriangleup_{Real}$           & Triangle of real voltage vectors\\
-  
+
 \end{tabularx}
-\end{scriptsize} 
+\end{scriptsize}
+
+\newpage
+\null
+\thispagestyle{empty}%
+\newpage 

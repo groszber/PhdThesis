@@ -24,7 +24,8 @@
 \usepackage{eurosym}
 \usepackage{graphics}
 \usepackage{graphicx} %===!!!=== Ezt én adtam hozzá
-\usepackage{caption} %===!!!=== Ezt én adtam hozzá
+%\usepackage{caption} %===!!!=== Ezt én adtam hozzá
+\usepackage[font=small,labelfont=bf]{caption}
 \usepackage{subcaption} %===!!!=== Ezt én adtam hozzá
 %\usepackage{subfig}
 %\usepackage{subfigure}
@@ -96,6 +97,7 @@
 \addbibresource{dolgozat} %bib fájl
 \input{boldauthorname}
 \usepackage{sectsty}
+%\usepackage{transparent}
 
 %\usepackage{ulem}
 %\newcommand{\soutthick}[1]{%
@@ -113,13 +115,21 @@
   %}
 %}
 
+\usepackage{afterpage}
+\newcommand\myemptypage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage
+    }
+
 \newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
 
 
 \def\myuni{Universiy of Pannonia}
 \def\myfaculty{Faculty of Information Technology}
 \def\myschool{Doctoral School of Information Science}
-\def\mytitle{Optimal Current Control for Domestic Power converters}
+\def\mytitle{Optimal Current Control for Domestic Power Converters}
 \def\myauthor{L\'aszl\'o Rich\'ard Neukirchner}
 \def\mydate{2021}
 \def\mysupervisor{dr. Attila Magyar}
@@ -137,9 +147,12 @@
 %\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\hlc}[2][yellow]{{\sethlcolor{#1}\hl{#2}}}
 \newcommand{\hlcmath}[2]{\colorbox{#1}{$\displaystyle #2$}}
-\definecolor{PT}{RGB}{255,153,204}
-\definecolor{MA}{RGB}{200,200,253}
-\definecolor{KP}{RGB}{255,204,153}
+\definecolor{PT}{RGB}{253,214,236}
+\definecolor{MA}{RGB}{204,230,255}
+\definecolor{KP}{RGB}{253,238,204}
+%\definecolor{PT}{RGB}{255,255,255}
+%\definecolor{MA}{RGB}{255,255,255}
+%\definecolor{KP}{RGB}{255,255,255}
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
 
@@ -151,6 +164,18 @@
 
 
 \begin{document}
+%\null
+% \thispagestyle{empty}
+% \pagecolor{black!90!white}\afterpage{\nopagecolor}%
+%     \begin{center}
+%        \vspace{4cm}
+%        \textbf{ \textsc{\textcolor{yellow!50!orange}{\LARGE DOCTORAL (PhD) THESIS }}}\\[4cm]
+%        \textbf{ \textsc{\textcolor{yellow!50!orange}{\Large \myauthor}}} \\[10cm]
+%        %\textbf{ \textsc{\textcolor{yellow!50!orange}{\large \myuni }}} \\ \textbf{ \textsc{\textcolor{yellow!50!orange}{\large \myschool}}} \\[0.5cm]
+%        \textbf{ \textsc{\textcolor{yellow!50!orange}{\large Veszprém}}} \\
+%        \textbf{ \textsc{\textcolor{yellow!50!orange}{\large \mydate }}}
+%    \end{center}
+% \newpage
 
  \pagenumbering{Roman}
 
@@ -161,13 +186,15 @@
  \newpage
 
 % Title Page
- \input{subtex/0_cimoldal.tex}
+ %\input{subtex/0_borito.tex}
+ % Title Page
+ \input{subtex/00_cimoldal.tex}
 
 % Mandatory third page
- \input{subtex/00_thirdpage.tex}
+ \input{subtex/000_thirdpage.tex}
 
 % Acknowledgements
- \input{subtex/000_acknowledgments.tex}
+ \input{subtex/0000_acknowledgments.tex}
 
 % Abstract
 \input{subtex/00000_abstracts.tex}

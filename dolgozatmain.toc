@@ -12,28 +12,28 @@
 \contentsline {section}{\numberline {2.3}Proposed geometrical indicator}{13}% 
 \contentsline {section}{\numberline {2.4}The method's novelty compared to VUF}{14}% 
 \contentsline {section}{\numberline {2.5}Summary}{18}% 
-\contentsline {chapter}{\numberline {3}Voltage unbalance compensation}{20}% 
-\contentsline {section}{\numberline {3.1}Literature overview}{20}% 
-\contentsline {section}{\numberline {3.2}Power electronic components for current control}{22}% 
-\contentsline {subsection}{\numberline {3.2.1}Galvanic decoupled bi-directional DC-DC converters}{23}% 
-\contentsline {subsection}{\numberline {3.2.2}Current source inverters}{24}% 
-\contentsline {section}{\numberline {3.3}Asynchronous parallel pattern search}{25}% 
-\contentsline {paragraph}{Parallel pattern search}{26}% 
-\contentsline {paragraph}{Adding asynchronicity}{27}% 
-\contentsline {section}{\numberline {3.4}Unbalance compensation with asym. inverter}{28}% 
-\contentsline {subsection}{\numberline {3.4.1}Problem statement}{28}% 
-\contentsline {subsection}{\numberline {3.4.2}Optimization based control algorithm}{31}% 
-\contentsline {subsection}{\numberline {3.4.3}Asymmetrical inverter topology}{34}% 
+\contentsline {chapter}{\numberline {3}Voltage unbalance compensation}{19}% 
+\contentsline {section}{\numberline {3.1}Literature overview}{19}% 
+\contentsline {section}{\numberline {3.2}Power electronic components for current control}{21}% 
+\contentsline {subsection}{\numberline {3.2.1}Galvanic decoupled bi-directional DC-DC converters}{22}% 
+\contentsline {subsection}{\numberline {3.2.2}Current source inverters}{23}% 
+\contentsline {section}{\numberline {3.3}Asynchronous parallel pattern search}{24}% 
+\contentsline {paragraph}{Parallel pattern search}{25}% 
+\contentsline {paragraph}{Adding asynchronicity}{26}% 
+\contentsline {section}{\numberline {3.4}Unbalance compensation with asym. inverter}{27}% 
+\contentsline {subsection}{\numberline {3.4.1}Problem statement}{27}% 
+\contentsline {subsection}{\numberline {3.4.2}Optimization based control algorithm}{30}% 
+\contentsline {subsection}{\numberline {3.4.3}Asymmetrical inverter topology}{33}% 
 \contentsline {subsubsection}{\hlc [PT]{PV energy source}}{37}% 
 \contentsline {subsubsection}{\hlc [PT]{Energy storage}}{37}% 
-\contentsline {subsubsection}{\hlc [PT]{Intermediate buffer}}{37}% 
+\contentsline {subsubsection}{\hlc [PT]{Intermediate buffer}}{38}% 
 \contentsline {subsubsection}{\hlc [PT]{Current source inverters and dynamic network}}{38}% 
-\contentsline {section}{\numberline {3.5}Dynamical simulation based experiments}{38}% 
+\contentsline {section}{\numberline {3.5}Dynamical simulation based experiments}{39}% 
 \contentsline {subsection}{\numberline {3.5.1}\hlc [KP]{Performance analysis}}{39}% 
 \contentsline {subsubsection}{Robustness analysis}{39}% 
-\contentsline {subsubsection}{\hlc [KP]{Measurements from a real unbalanced network}}{39}% 
-\contentsline {section}{\numberline {3.6}Conclusion}{40}% 
-\contentsline {section}{\numberline {3.7}Notations used in the chapter}{42}% 
+\contentsline {subsubsection}{\hlc [KP]{Measurements from a real unbalanced network}}{40}% 
+\contentsline {section}{\numberline {3.6}Conclusion}{42}% 
+\contentsline {section}{\numberline {3.7}Notations used in the chapter}{44}% 
 \contentsline {chapter}{\numberline {4}Explicit predictive current control}{47}% 
 \contentsline {section}{\numberline {4.1}Literature overview}{47}% 
 \contentsline {section}{\numberline {4.2}Three-phase buck-type rectifiers}{49}% 

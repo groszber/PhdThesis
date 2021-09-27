@@ -1,0 +1,19 @@
+\begin{center}
+    %\myuni \\
+    %\myfaculty \\
+    %\myschool \\[0.6cm]
+    %\includegraphics[width=4cm]{img/MIK_cimer.jpg}\\[1.2cm]
+    \begin{spacing}{2} \fontsize{25}{15}\textbf{ Doctoral (PhD) Thesis }\end{spacing} %\\[1cm]
+    %DOI:.................... \\[1.5cm]
+    %Doctoral (PhD) Thesis \\
+    \myauthor \\[1cm]
+    %Supervisor: \mysupervisor \\[1.5cm]
+    %Made at:\\ \myuni\\ \myschool  \\[1.5cm]
+    %Veszpr\'em \\
+    \mydate
+\end{center}
+
+\newpage
+\null
+\thispagestyle{empty}%
+\newpage 

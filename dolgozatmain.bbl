@@ -2223,43 +2223,6 @@
     \field{year}{1988}
   \endentry
 
-  \entry{el2011active}{article}{}
-    \name{author}{3}{}{%
-      {{hash=EMWM}{%
-         family={El-Mamlouk},
-         familyi={E\bibinithyphendelim M\bibinitperiod},
-         given={Wael\bibnamedelima M},
-         giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-      {{hash=MHE}{%
-         family={Mostafa},
-         familyi={M\bibinitperiod},
-         given={Hossam\bibnamedelima E},
-         giveni={H\bibinitperiod\bibinitdelim E\bibinitperiod},
-      }}%
-      {{hash=ESMA}{%
-         family={El-Sharkawy},
-         familyi={E\bibinithyphendelim S\bibinitperiod},
-         given={Metwally\bibnamedelima A},
-         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{EMWMMHEESMA1}
-    \strng{fullhash}{EMWMMHEESMA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{3-4}
-    \field{pages}{161\bibrangedash 172}
-    \field{title}{Active power filter controller for harmonic suppression in
-  industrial distribution system}
-    \field{volume}{2}
-    \field{journaltitle}{Ain Shams Engineering Journal}
-    \field{year}{2011}
-  \endentry
-
   \entry{hough2001asynchronous}{article}{}
     \name{author}{3}{}{%
       {{hash=HPD}{%
@@ -2295,6 +2258,43 @@
     \field{volume}{23}
     \field{journaltitle}{SIAM Journal on Scientific Computing}
     \field{year}{2001}
+  \endentry
+
+  \entry{el2011active}{article}{}
+    \name{author}{3}{}{%
+      {{hash=EMWM}{%
+         family={El-Mamlouk},
+         familyi={E\bibinithyphendelim M\bibinitperiod},
+         given={Wael\bibnamedelima M},
+         giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MHE}{%
+         family={Mostafa},
+         familyi={M\bibinitperiod},
+         given={Hossam\bibnamedelima E},
+         giveni={H\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=ESMA}{%
+         family={El-Sharkawy},
+         familyi={E\bibinithyphendelim S\bibinitperiod},
+         given={Metwally\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{EMWMMHEESMA1}
+    \strng{fullhash}{EMWMMHEESMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3-4}
+    \field{pages}{161\bibrangedash 172}
+    \field{title}{Active power filter controller for harmonic suppression in
+  industrial distribution system}
+    \field{volume}{2}
+    \field{journaltitle}{Ain Shams Engineering Journal}
+    \field{year}{2011}
   \endentry
 
   \entry{segui2007approach}{article}{}
